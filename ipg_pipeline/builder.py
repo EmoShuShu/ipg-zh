@@ -9,7 +9,20 @@ from .core import sha256_bytes
 
 
 def _annotation_markdown(annotation: dict[str, Any]) -> list[str]:
-    return ["> **AIPG 注解**", f"> {annotation['text']['zh']}", ""]
+    lines = ["> **AIPG 注解**"]
+    for group in annotation["groups"]:
+        for index, block in enumerate(group["blocks"], 1):
+            target = block["text"]["zh"] or f"**[CANDIDATE 缺译]** {block['text']['en']}"
+            if group["kind"] == "unordered-list":
+                lines.append(f"> - {target}")
+            elif group["kind"] == "ordered-list":
+                lines.append(f"> {index}. {target}")
+            else:
+                if len(lines) > 1:
+                    lines.append(">")
+                lines.append(f"> {target}")
+    lines.append("")
+    return lines
 
 
 def render_markdown(
@@ -26,7 +39,7 @@ def render_markdown(
             key = (annotation["anchor"]["type"], annotation["anchor"]["id"], annotation["position"])
             annotations[key].append(annotation)
     for anchored in annotations.values():
-        anchored.sort(key=lambda item: item["id"])
+        anchored.sort(key=lambda item: item["order"])
 
     def add_annotations(lines: list[str], anchor_type: str, anchor_id: str, position: str) -> None:
         for annotation in annotations.get((anchor_type, anchor_id, position), []):

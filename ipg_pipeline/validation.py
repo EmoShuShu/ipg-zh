@@ -3,7 +3,28 @@ from __future__ import annotations
 from collections import Counter
 from typing import Any
 
-from .core import ROOT, anchor_position_is_legal, validate_schema, walk_nodes
+from .core import ROOT, anchor_position_is_legal, sha256_text, validate_schema, walk_nodes
+
+
+def _review_units(documents: list[dict[str, Any]], display_values: dict[str, Any]) -> dict[str, tuple[str, str]]:
+    units = {
+        f"display:{code}": (value["en"], value["zh"])
+        for code, value in display_values.get("values", {}).items()
+    }
+    for document in documents:
+        for section in document["sections"]:
+            units[f"title:{section['id']}"] = (section["title"]["en"], section["title"]["zh"])
+            for kind, node in walk_nodes([{"sections": [section]}]):
+                if kind == "block":
+                    units[f"block:{node['id']}"] = (node["text"]["en"], node["text"]["zh"])
+        for annotation in document.get("publicationAnnotations", []):
+            for group in annotation["groups"]:
+                for block in group["blocks"]:
+                    units[f"annotation-block:{block['id']}"] = (
+                        block["text"]["en"],
+                        block["text"]["zh"],
+                    )
+    return units
 
 
 def validate_release(
@@ -28,12 +49,38 @@ def validate_release(
     annotations = [item for document in documents for item in document.get("publicationAnnotations", [])]
     id_counts = Counter(item.get("id") for _, item in nodes)
     id_counts.update(item.get("id") for item in annotations)
+    for annotation in annotations:
+        for group in annotation.get("groups", []):
+            id_counts[group.get("id")] += 1
+            for block in group.get("blocks", []):
+                id_counts[block.get("id")] += 1
     for item_id, count in sorted(id_counts.items()):
         if count > 1:
             structural.append({"code": "duplicate-id", "targetId": item_id, "count": count})
 
     known_ids = {node["id"] for _, node in nodes}
     valid_codes = set(display_values.get("values", {}))
+    annotation_orders = Counter(
+        (
+            item["anchor"]["type"],
+            item["anchor"]["id"],
+            item["position"],
+            item["order"],
+        )
+        for item in annotations
+    )
+    for key, count in annotation_orders.items():
+        if count > 1:
+            structural.append(
+                {
+                    "code": "duplicate-annotation-order",
+                    "anchorType": key[0],
+                    "anchorId": key[1],
+                    "position": key[2],
+                    "order": key[3],
+                    "count": count,
+                }
+            )
     for kind, node in nodes:
         for field in ("labelCode", "penaltyCode", "displayCode"):
             if field in node and node[field] not in valid_codes:
@@ -63,8 +110,19 @@ def validate_release(
                     "position": annotation["position"],
                 }
             )
-        if not annotation["text"]["zh"]:
-            readiness.append({"code": "missing-translation", "targetId": annotation["id"]})
+        for applies_to in annotation.get("appliesTo", []):
+            if applies_to not in known_ids:
+                structural.append(
+                    {
+                        "code": "invalid-annotation-applies-to",
+                        "targetId": annotation["id"],
+                        "appliesTo": applies_to,
+                    }
+                )
+        for group in annotation["groups"]:
+            for block in group["blocks"]:
+                if not block["text"]["zh"]:
+                    readiness.append({"code": "missing-translation", "targetId": block["id"]})
 
     coverage = migration_report.get("coverage", {})
     if coverage.get("rawUnitCount") != coverage.get("disposedUnitCount"):
@@ -101,10 +159,35 @@ def validate_release(
     ):
         readiness.append({"code": "annotation-license-pending", "targetId": "versions.annotations"})
 
-    if review_ledger:
-        for entry in review_ledger.get("entries", []):
+    current_units = _review_units(documents, display_values)
+    if review_ledger is None:
+        readiness.append({"code": "missing-review-ledger", "targetId": "review-ledger"})
+    else:
+        entries = review_ledger.get("entries", [])
+        by_id: dict[str, list[dict[str, Any]]] = {}
+        for entry in entries:
+            by_id.setdefault(entry.get("unitId", ""), []).append(entry)
+        for unit_id, (source, target) in sorted(current_units.items()):
+            matches = by_id.get(unit_id, [])
+            if not matches:
+                readiness.append({"code": "missing-review-record", "targetId": unit_id})
+                continue
+            if len(matches) != 1:
+                readiness.append(
+                    {"code": "duplicate-review-record", "targetId": unit_id, "count": len(matches)}
+                )
+                continue
+            entry = matches[0]
+            if entry.get("status") == "unreviewed":
+                readiness.append({"code": "unreviewed", "targetId": unit_id})
             if entry.get("status") == "stale":
-                readiness.append({"code": "stale-review", "targetId": entry["unitId"]})
+                readiness.append({"code": "stale-review", "targetId": unit_id})
+            if entry.get("sourceHash") != sha256_text(source):
+                readiness.append({"code": "review-source-hash-mismatch", "targetId": unit_id})
+            if entry.get("targetHash") != sha256_text(target):
+                readiness.append({"code": "review-target-hash-mismatch", "targetId": unit_id})
+        for unit_id in sorted(set(by_id) - set(current_units)):
+            readiness.append({"code": "orphan-review-record", "targetId": unit_id})
 
     def count_codes(items: list[dict[str, Any]]) -> dict[str, int]:
         return dict(sorted(Counter(item["code"] for item in items).items()))
@@ -118,6 +201,10 @@ def validate_release(
             item.get("count", 1) for item in readiness if item["code"] in mapping_codes
         ),
         "duplicateConsumption": duplicate_consumption,
+        "unreviewed": sum(item["code"] == "unreviewed" for item in readiness),
+        "stale": sum(item["code"] == "stale-review" for item in readiness),
+        "reviewLedgerMissing": sum(item["code"] == "missing-review-ledger" for item in readiness),
+        "orphanReviewRecord": sum(item["code"] == "orphan-review-record" for item in readiness),
     }
     valid = not structural and (profile == "candidate" or not readiness)
     return {

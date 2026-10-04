@@ -1,19 +1,24 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "required": ["schemaVersion", "notes"],
+  "required": ["schemaVersion", "releaseId", "translationRevision", "notes"],
   "additionalProperties": false,
   "properties": {
     "schemaVersion": {"const": 1},
+    "releaseId": {"type": "string", "minLength": 1},
+    "translationRevision": {"type": "string", "minLength": 1},
     "notes": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["unitId", "sourceHash", "note", "recordedAt"],
+        "required": ["unitId", "sourceHash", "targetHash", "releaseId", "translationRevision", "note", "recordedAt", "stale"],
         "additionalProperties": false,
         "properties": {
           "unitId": {"type": "string"},
           "sourceHash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "targetHash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "releaseId": {"type": "string", "minLength": 1},
+          "translationRevision": {"type": "string", "minLength": 1},
           "note": {"type": "string", "minLength": 1},
           "recordedAt": {"type": "string"},
           "stale": {"type": "boolean"}

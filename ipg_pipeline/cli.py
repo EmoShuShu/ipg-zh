@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 from pathlib import Path
 from typing import Any
 
@@ -15,12 +16,15 @@ from .omegat import (
     preview_writeback,
 )
 from .pilot_parser import OFFICIAL_SHA256, parse_pilot
+from .pilot_parser import extract_pilot
+from .reconcile import reconcile_pilot
 from .review import (
     build_review_ledger,
     extract_translation_notes,
     review_status_report,
     terminology_audit,
 )
+from .review_pack import build_p2_review_pack
 from .validation import validate_release
 
 
@@ -31,7 +35,15 @@ OFFICIAL_PDF = (
     / "MTG_IPG_2024Sep23_EN.pdf"
 )
 RELEASE_DIR = ROOT / "src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001"
-PARSED_JSON = ROOT / "work/parsed/official-pilot.json"
+OUTPUT_ROOT = ROOT / "outputs"
+EXTRACTED_JSON = OUTPUT_ROOT / "work/parsed/extracted-pilot.json"
+PARSED_JSON = OUTPUT_ROOT / "work/parsed/official-pilot.json"
+REPORTS_DIR = OUTPUT_ROOT / "reports"
+OMEGAT_DIR = OUTPUT_ROOT / "omegat/ipg-pilot"
+WRITEBACK_DIR = OUTPUT_ROOT / "work/omegat-candidate"
+TRANSLATION_REVISION = "zh-r0001"
+TRANSLATION_NOTES = ROOT / f"review/translation-notes/{TRANSLATION_REVISION}.json"
+REVIEW_LEDGER = ROOT / f"review/status/{TRANSLATION_REVISION}.json"
 
 
 def _write_text(path: Path, text: str) -> None:
@@ -44,9 +56,32 @@ def _write_json(path: Path, data: Any) -> None:
 
 
 def command_parse(_: argparse.Namespace) -> int:
-    parsed = parse_pilot(OFFICIAL_PDF)
-    _write_json(PARSED_JSON, parsed)
-    print(f"parsed approved pilot pages -> {PARSED_JSON.relative_to(ROOT)}")
+    extracted = extract_pilot(OFFICIAL_PDF)
+    _write_json(EXTRACTED_JSON, extracted)
+    print(f"parsed approved pilot pages with temporary ids -> {EXTRACTED_JSON.relative_to(ROOT)}")
+    return 0
+
+
+def command_reconcile(_: argparse.Namespace) -> int:
+    if not EXTRACTED_JSON.exists():
+        raise SystemExit("run 'ipg-pilot parse' first")
+    previous = {
+        filename: load_yaml(RELEASE_DIR / filename)
+        for filename in ("chapter-02.yaml", "appendix-a.yaml", "appendix-b.yaml")
+    }
+    reconciled = reconcile_pilot(
+        load_json(EXTRACTED_JSON),
+        previous,
+        load_yaml(ROOT / "src/ipg/mapping-overrides.yaml"),
+        load_yaml(ROOT / "src/ipg/id-registry.yaml"),
+    )
+    _write_json(PARSED_JSON, reconciled)
+    _write_json(REPORTS_DIR / "reconciliation-report.json", {
+        "idStatus": reconciled["idStatus"],
+        "findingCount": len(reconciled["reconciliationFindings"]),
+        "findings": reconciled["reconciliationFindings"],
+    })
+    print(f"reconciled stable ids -> {PARSED_JSON.relative_to(ROOT)}")
     return 0
 
 
@@ -62,15 +97,16 @@ def command_migrate(_: argparse.Namespace) -> int:
     for filename, document in result["documents"].items():
         _write_text(RELEASE_DIR / filename, dump_yaml(document))
     _write_text(ROOT / "src/ipg/id-registry.yaml", dump_yaml(result["registry"]))
-    _write_json(ROOT / "work/migration/raw-units.json", result["rawUnits"])
-    _write_json(ROOT / "work/migration/raw-unit-ledger.json", result["coverageLedger"])
+    _write_json(OUTPUT_ROOT / "work/migration/raw-units.json", result["rawUnits"])
+    _write_json(OUTPUT_ROOT / "work/migration/raw-unit-ledger.json", result["coverageLedger"])
     _write_json(
-        ROOT / "reports/migration-report.json",
+        REPORTS_DIR / "migration-report.json",
         {
             "scope": "pilot-only",
             "coverage": result["coverage"],
             "findingCounts": result["findingCounts"],
             "findings": result["findings"],
+            "blockMappings": result["blockMappings"],
         },
     )
     print(
@@ -85,7 +121,7 @@ def _release_inputs() -> tuple[dict[str, Any], list[dict[str, Any]], dict[str, A
     manifest = load_yaml(RELEASE_DIR / "manifest.yaml")
     documents = [load_yaml(RELEASE_DIR / filename) for filename in manifest["documents"]]
     display_values = load_yaml(ROOT / "src/ipg/display-values.yaml")
-    migration_report = load_json(ROOT / "reports/migration-report.json")
+    migration_report = load_json(REPORTS_DIR / "migration-report.json")
     return manifest, documents, display_values, migration_report
 
 
@@ -97,7 +133,7 @@ def _document_tuples() -> tuple[list[tuple[str, dict[str, Any]]], dict[str, Any]
 
 def command_validate(args: argparse.Namespace) -> int:
     manifest, documents, display_values, migration_report = _release_inputs()
-    review_path = ROOT / "review/review-ledger.json"
+    review_path = REVIEW_LEDGER
     report = validate_release(
         profile=args.profile,
         manifest=manifest,
@@ -106,7 +142,7 @@ def command_validate(args: argparse.Namespace) -> int:
         migration_report=migration_report,
         review_ledger=load_json(review_path) if review_path.exists() else None,
     )
-    path = ROOT / f"reports/validation-{args.profile}.json"
+    path = REPORTS_DIR / f"validation-{args.profile}.json"
     _write_json(path, report)
     print(
         f"{args.profile}: {'valid' if report['valid'] else 'failed'}; "
@@ -117,7 +153,7 @@ def command_validate(args: argparse.Namespace) -> int:
 
 def command_build(args: argparse.Namespace) -> int:
     manifest, documents, display_values, migration_report = _release_inputs()
-    review_path = ROOT / "review/review-ledger.json"
+    review_path = REVIEW_LEDGER
     report = validate_release(
         profile=args.profile,
         manifest=manifest,
@@ -129,26 +165,31 @@ def command_build(args: argparse.Namespace) -> int:
     if not report["valid"]:
         raise SystemExit(f"{args.profile} validation failed; build refused")
     build = build_outputs(
-        ROOT / "dist",
+        ROOT / ("pilot/output" if args.profile == "candidate" else "dist"),
         manifest,
         documents,
         display_values,
         candidate=args.profile == "candidate",
         profile=args.profile,
     )
-    _write_json(ROOT / f"reports/validation-{args.profile}.json", report)
-    print(f"built {'candidate' if build['candidate'] else 'release'} outputs -> dist")
+    _write_json(REPORTS_DIR / f"validation-{args.profile}.json", report)
+    destination = "pilot/output" if build["candidate"] else "dist"
+    print(f"built {'candidate' if build['candidate'] else 'release'} outputs -> {destination}")
     return 0
 
 
 def command_omegat_export(_: argparse.Namespace) -> int:
     documents, display_values = _document_tuples()
     mapping = export_project(
-        ROOT / "omegat/ipg-pilot",
+        OMEGAT_DIR,
         ROOT,
         documents,
         display_values,
         ROOT / "terminology/ipg-glossary.txt",
+    )
+    shutil.copyfile(
+        ROOT / "tests/fixtures/pilot/translation-notes.tmx",
+        OMEGAT_DIR / "tm/translation-notes.tmx",
     )
     print(f"exported {len(mapping['units'])} OmegaT units")
     return 0
@@ -156,24 +197,25 @@ def command_omegat_export(_: argparse.Namespace) -> int:
 
 def command_omegat_preview(_: argparse.Namespace) -> int:
     preview = preview_writeback(
-        ROOT / "omegat/ipg-pilot",
+        OMEGAT_DIR,
         ROOT,
-        ROOT / "work/omegat-candidate",
+        WRITEBACK_DIR,
     )
-    _write_json(ROOT / "reports/omegat-writeback-preview.json", preview)
+    _write_json(REPORTS_DIR / "omegat-writeback-preview.json", preview)
     print(f"previewed {preview['expectedChangeCount']} isolated candidate changes")
     return 0
 
 
 def command_omegat_apply(args: argparse.Namespace) -> int:
-    preview = load_json(ROOT / "reports/omegat-writeback-preview.json")
-    apply_writeback(
-        ROOT / "omegat/ipg-pilot",
+    preview = load_json(REPORTS_DIR / "omegat-writeback-preview.json")
+    applied = apply_writeback(
+        OMEGAT_DIR,
         ROOT,
-        ROOT / "work/omegat-candidate",
+        WRITEBACK_DIR,
         preview,
         expected_change_count=args.expected_change_count,
     )
+    _write_json(REPORTS_DIR / "omegat-writeback-apply.json", applied)
     print(f"applied {args.expected_change_count} previewed changes")
     return 0
 
@@ -181,11 +223,14 @@ def command_omegat_apply(args: argparse.Namespace) -> int:
 def command_translation_notes(_: argparse.Namespace) -> int:
     documents, display_values = _document_tuples()
     units = collect_units(documents, display_values)
+    manifest = load_yaml(RELEASE_DIR / "manifest.yaml")
     notes = extract_translation_notes(
-        ROOT / "omegat/ipg-pilot/tm/translation-notes.tmx",
+        OMEGAT_DIR / "tm/translation-notes.tmx",
         units,
+        release_id=manifest["releaseId"],
+        translation_revision=manifest["versions"]["translation"]["revision"],
     )
-    _write_json(ROOT / "review/translation-notes.json", notes)
+    _write_json(TRANSLATION_NOTES, notes)
     print(f"imported {len(notes['notes'])} translation notes")
     return 0
 
@@ -193,10 +238,16 @@ def command_translation_notes(_: argparse.Namespace) -> int:
 def command_review(_: argparse.Namespace) -> int:
     documents, display_values = _document_tuples()
     units = collect_units(documents, display_values)
-    actions = load_yaml(ROOT / "review/review-actions.yaml")["actions"]
-    ledger = build_review_ledger(units, actions)
-    _write_json(ROOT / "review/review-ledger.json", ledger)
-    _write_json(ROOT / "reports/review-status.json", review_status_report(ledger))
+    manifest = load_yaml(RELEASE_DIR / "manifest.yaml")
+    actions = load_yaml(ROOT / f"review/actions/{TRANSLATION_REVISION}.yaml")["actions"]
+    ledger = build_review_ledger(
+        units,
+        actions,
+        release_id=manifest["releaseId"],
+        translation_revision=manifest["versions"]["translation"]["revision"],
+    )
+    _write_json(REVIEW_LEDGER, ledger)
+    _write_json(REPORTS_DIR / "review-status.json", review_status_report(ledger))
     print(f"recorded {len(ledger['entries'])} review states")
     return 0
 
@@ -207,10 +258,29 @@ def command_terms(_: argparse.Namespace) -> int:
         ROOT / "terminology/ipg-glossary.txt",
         collect_units(documents, display_values),
     )
-    _write_json(ROOT / "reports/terminology-audit.json", report)
+    _write_json(REPORTS_DIR / "terminology-audit.json", report)
     print(
         f"terminology audit (non-blocking): {report['findingCount']} findings, "
         f"{report['glossaryIssueCount']} glossary issues"
+    )
+    return 0
+
+
+def command_p2_pack(_: argparse.Namespace) -> int:
+    manifest = load_yaml(RELEASE_DIR / "manifest.yaml")
+    documents, display_values = _document_tuples()
+    summary = build_p2_review_pack(
+        root=ROOT,
+        manifest=manifest,
+        documents=documents,
+        display_values=display_values,
+        migration_report=load_json(REPORTS_DIR / "migration-report.json"),
+        report_dir=REPORTS_DIR,
+    )
+    print(
+        "P2 review pack: "
+        f"2.5 annotations={summary['section2_5PublicationAnnotations']['annotationCount']}; "
+        f"deterministic={summary['deterministicBuild']}"
     )
     return 0
 
@@ -219,6 +289,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="ipg-pilot")
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("parse", help="parse only the approved PDF pilot pages").set_defaults(func=command_parse)
+    subparsers.add_parser("reconcile", help="reconcile temporary extraction ids to stable ids").set_defaults(func=command_reconcile)
     subparsers.add_parser("migrate", help="migrate legacy pilot content and write coverage ledger").set_defaults(func=command_migrate)
     validate = subparsers.add_parser("validate", help="validate with an explicit profile")
     validate.add_argument("--profile", required=True, choices=("candidate", "release"))
@@ -243,6 +314,9 @@ def build_parser() -> argparse.ArgumentParser:
     )
     subparsers.add_parser("terms", help="run the non-blocking terminology audit").set_defaults(
         func=command_terms
+    )
+    subparsers.add_parser("p2-pack", help="regenerate the compact P2 review evidence").set_defaults(
+        func=command_p2_pack
     )
     return parser
 

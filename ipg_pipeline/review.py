@@ -9,7 +9,12 @@ from .core import sha256_text
 
 
 def extract_translation_notes(
-    tmx_path: Path, units: list[dict[str, Any]]
+    tmx_path: Path,
+    units: list[dict[str, Any]],
+    *,
+    release_id: str,
+    translation_revision: str,
+    recorded_at: str | None = None,
 ) -> dict[str, Any]:
     known = {unit["id"]: unit for unit in units}
     notes: list[dict[str, Any]] = []
@@ -24,26 +29,51 @@ def extract_translation_notes(
         if not note:
             continue
         source = ""
+        target = ""
         for variant in translation_unit.findall("tuv"):
-            if variant.attrib.get("{http://www.w3.org/XML/1998/namespace}lang", "").startswith("en"):
-                segment = variant.find("seg")
-                source = "" if segment is None else "".join(segment.itertext())
-                break
+            language = variant.attrib.get("{http://www.w3.org/XML/1998/namespace}lang", "")
+            segment = variant.find("seg")
+            value = "" if segment is None else "".join(segment.itertext())
+            if language.startswith("en"):
+                source = value
+            elif language.startswith("zh"):
+                target = value
+        timestamp = props.get("x-recorded-at", "").strip() or recorded_at
+        if not timestamp:
+            raise ValueError(
+                f"TMX note {unit_id!r} has no x-recorded-at; provide recorded_at explicitly"
+            )
         source_hash = sha256_text(source)
+        target_hash = sha256_text(target)
+        current = known.get(unit_id)
         notes.append(
             {
                 "unitId": unit_id,
                 "sourceHash": source_hash,
+                "targetHash": target_hash,
+                "releaseId": release_id,
+                "translationRevision": translation_revision,
                 "note": note,
-                "recordedAt": props.get("x-recorded-at", "2026-10-04"),
-                "stale": unit_id not in known or source_hash != sha256_text(known[unit_id]["source"]),
+                "recordedAt": timestamp,
+                "stale": current is None
+                or source_hash != sha256_text(current["source"])
+                or target_hash != sha256_text(current["target"]),
             }
         )
-    return {"schemaVersion": 1, "notes": notes}
+    return {
+        "schemaVersion": 1,
+        "releaseId": release_id,
+        "translationRevision": translation_revision,
+        "notes": notes,
+    }
 
 
 def build_review_ledger(
-    units: list[dict[str, Any]], actions: list[dict[str, Any]]
+    units: list[dict[str, Any]],
+    actions: list[dict[str, Any]],
+    *,
+    release_id: str | None = None,
+    translation_revision: str | None = None,
 ) -> dict[str, Any]:
     actions_by_id = {action["unitId"]: action for action in actions}
     entries: list[dict[str, Any]] = []
@@ -69,7 +99,12 @@ def build_review_ledger(
                 "reviewedAt": reviewed_at,
             }
         )
-    return {"schemaVersion": 1, "entries": entries}
+    ledger = {"schemaVersion": 1, "entries": entries}
+    if release_id is not None:
+        ledger["releaseId"] = release_id
+    if translation_revision is not None:
+        ledger["translationRevision"] = translation_revision
+    return ledger
 
 
 def review_status_report(ledger: dict[str, Any]) -> dict[str, Any]:

@@ -63,16 +63,27 @@ def collect_units(
                             }
                         )
         for annotation_index, annotation in enumerate(document["publicationAnnotations"]):
-            units.append(
-                {
-                    "id": f"annotation:{annotation['id']}",
-                    "kind": "publication-annotation",
-                    "source": annotation["text"]["en"],
-                    "target": annotation["text"]["zh"],
-                    "file": relative,
-                    "pointer": ["publicationAnnotations", annotation_index, "text", "zh"],
-                }
-            )
+            for group_index, group in enumerate(annotation["groups"]):
+                for block_index, block in enumerate(group["blocks"]):
+                    units.append(
+                        {
+                            "id": f"annotation-block:{block['id']}",
+                            "kind": "publication-annotation",
+                            "source": block["text"]["en"],
+                            "target": block["text"]["zh"],
+                            "file": relative,
+                            "pointer": [
+                                "publicationAnnotations",
+                                annotation_index,
+                                "groups",
+                                group_index,
+                                "blocks",
+                                block_index,
+                                "text",
+                                "zh",
+                            ],
+                        }
+                    )
     ids = [unit["id"] for unit in units]
     if len(ids) != len(set(ids)):
         raise ValueError("duplicate OmegaT unit id generated")
@@ -288,7 +299,7 @@ def apply_writeback(
     preview: dict[str, Any],
     *,
     expected_change_count: int,
-) -> None:
+) -> dict[str, Any]:
     if preview["expectedChangeCount"] != expected_change_count:
         raise ValueError("expected change count does not match preview")
     target_hash = sha256_bytes((project_dir / "target/ipg-pilot.po").read_bytes())
@@ -300,5 +311,15 @@ def apply_writeback(
         candidate_file = candidate_root / relative
         if sha256_bytes(candidate_file.read_bytes()) != preview["candidateFiles"][relative]:
             raise ValueError(f"candidate file changed after preview: {relative}")
+    before = {relative: sha256_bytes((source_root / relative).read_bytes()) for relative in sorted(preview["candidateFiles"])}
     for relative in sorted(preview["candidateFiles"]):
         shutil.copyfile(candidate_root / relative, source_root / relative)
+    after = {relative: sha256_bytes((source_root / relative).read_bytes()) for relative in sorted(preview["candidateFiles"])}
+    return {
+        "schemaVersion": 1,
+        "appliedChangeCount": expected_change_count,
+        "files": {
+            relative: {"beforeSha256": before[relative], "afterSha256": after[relative]}
+            for relative in sorted(after)
+        },
+    }

@@ -1,4 +1,6 @@
 schemaVersion: 1
+releaseId: ipg-2024-09-23__ann-aipg-legacy__zh-r0001
+translationRevision: zh-r0001
 scope: p2-workflow-demonstration
 actor: pilot-fixture
 actions:
@@ -12,9 +14,8 @@ actions:
     targetHash: bdd8fe03becd8e9ddabdbdbc2f46f25cb2494dc87be0e220505c3b3e2fad1d3c
     modified: false
     reviewedAt: "2026-10-04"
-  - unitId: annotation:ipg-ann-2-5-philosophy-consistency
+  - unitId: annotation-block:ipg-ann-2-5-philosophy-consistency-g01-b01
     sourceHash: 0000000000000000000000000000000000000000000000000000000000000000
     targetHash: 1588b3b0ea2b8734d19e2b43e086233e7ff20f1513be60319c31a6318adcc204
     modified: false
     reviewedAt: "2026-10-04"
-
