@@ -74,6 +74,14 @@ def reconcile_full_document(
     """
     result = copy.deepcopy(parsed)
     registry = copy.deepcopy(registry)
+    for entry in registry.get("entries", []):
+        if entry.get("kind") != "block":
+            continue
+        evidence = entry.get("evidence", {})
+        digest = evidence.get("englishHash", "")
+        for event in entry.get("history", []):
+            if event.get("event") == "allocated" and event.get("atVersion") == version and digest:
+                event["label"] = f"{evidence.get('section', evidence.get('context', 'official'))} block {digest[:12]}"
     prior = _all_prior_nodes(previous_documents)
     findings: list[dict[str, Any]] = []
     preserved: set[str] = set()
@@ -244,7 +252,7 @@ def reconcile_full_document(
                         block["id"] = allocate(
                             "block",
                             key,
-                            block["text"]["en"],
+                            f"{section['id']} block {evidence[:12]}",
                             {"section": section["id"], "component": component["id"], "englishHash": evidence},
                         )
 

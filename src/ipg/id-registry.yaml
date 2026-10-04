@@ -2170,12 +2170,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: 'The Magic: The Gathering™ (“Magic”) Infraction Procedure Guide provides judges the appropriate
-      penalties and procedures to handle rules violations that occur during a tournament held at Competitive
-      or Professional Rules Enforcement Level (REL), as well as the underlying philosophy that guides
-      their implementation. It exists to protect players from potential misconduct and to protect the
-      integrity of the tournament itself. Rules violations usually require a penalty or they are unenforceable.
-      Tournaments run at Regular REL use the Judging at Regular REL document.'
+    label: ipg-introduction block 55953b5f4fbe
 - id: ipg-framework
   kind: section
   status: active
@@ -2222,9 +2217,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: 'This document is divided into two major parts: General Definitions and Philosophy (section
-      1), and Infractions (sections 2-4). Infractions are broken down into general classes (Game Play
-      Errors, Tournament Errors, and Unsporting Conduct), and further into subclasses for specific infractions.'
+    label: ipg-framework block 6a5c2c6ca755
 - id: ipg-b000003
   kind: block
   status: active
@@ -2236,7 +2229,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: See the Magic Tournament Rules for further definitions of terms in this document.
+    label: ipg-framework block 3eaa47295f79
 - id: ipg-b000004
   kind: block
   status: active
@@ -2248,9 +2241,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: This document is published in multiple languages. If a discrepancy exists between the English
-      version and a non-English version of this document, tournament participants must refer to the English
-      version to settle disputes concerning interpretations of the Infraction Procedure Guide.
+    label: ipg-framework block cc12b402e1b1
 - id: ipg-b000005
   kind: block
   status: active
@@ -2262,7 +2253,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: This document is updated periodically. Please obtain the most current version at https://wpn.wizards.com/en/rules-documents.
+    label: ipg-framework block aac7cf2757be
 - id: ipg-s1
   kind: section
   status: active
@@ -2309,13 +2300,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Judges are neutral arbiters and enforcers of policy and rules. A judge shouldn’t intervene
-      in a game unless they believe a rules violation has occurred, a player with a concern or question
-      requests assistance, or the judge wishes to prevent a situation from escalating. Judges don’t stop
-      play errors from occurring, but instead deal with errors that have occurred, penalize those who
-      violate rules or policy, and promote fair play and sporting conduct by example and diplomacy. Judges
-      may intervene to prevent or preempt errors occurring outside of a game. Knowledge of a player’s
-      history or skill does not alter an infraction, but it may be taken into account during an investigation.
+    label: ipg-s1 block 5bd65cef3571
 - id: ipg-b000007
   kind: block
   status: active
@@ -2327,10 +2312,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The purpose of a penalty is to educate the player not to make similar mistakes in the future.
-      This is done through both an explanation of where the rules or policies were violated and a penalty
-      to reinforce the education. Penalties are also for the deterrence and education of every other player
-      in the event and are also used to track player behavior over time.
+    label: ipg-s1 block c435f9f29aa5
 - id: ipg-b000008
   kind: block
   status: active
@@ -2342,12 +2324,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If a minor violation is quickly handled by the players to their mutual satisfaction, a judge
-      does not need to intervene. If the players are playing in a way that is clear to both players, but
-      might cause confusion to an external observer, judges are encouraged to request that the players
-      make the situation clear, but not assess an infraction or issue any penalty. In both these situations,
-      the judge should ensure that the game progresses normally. More significant violations are addressed
-      by first identifying what infraction applies, then proceeding with the corresponding instructions.
+    label: ipg-s1 block 934b7bb2222e
 - id: ipg-b000009
   kind: block
   status: active
@@ -2359,13 +2336,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Only the Head Judge is authorized to issue penalties that deviate from these guidelines. The
-      Head Judge may not deviate from this guide’s procedures except in significant and exceptional circumstances
-      or a situation that has no applicable philosophy for guidance. Significant and exceptional circumstances
-      are rare—a table collapses, a booster contains cards from a different set, etc. The Rules Enforcement
-      Level, round of the tournament, age or experience-level of the player, desire to educate the player,
-      and certification level of the judge are NOT exceptional circumstances. If another judge feels deviation
-      is appropriate, they must consult with the Head Judge.
+    label: ipg-s1 block fd4fd24e9ba6
 - id: ipg-b000010
   kind: block
   status: active
@@ -2377,15 +2348,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Judges are human and make mistakes. When a judge makes a mistake, they should acknowledge the
-      mistake, apologize to the players, and fix it if it is not too late. If a member of the tournament
-      staff gives a player erroneous information that causes them to commit a violation, the Head Judge
-      is authorized to downgrade the penalty. For example, a player asks a judge whether a card is legal
-      for a format and is told yes. When that player’s deck is found to be illegal because of these cards,
-      the Head Judge applies the normal procedure for fixing the decklist, but may downgrade the penalty
-      to a Warning because of the direct error of the judge. If a player clearly acts on erroneous information
-      provided by a judge during the game, the Head Judge may consider a backup to the point of the action
-      taken, even if that action did not lead to a violation.
+    label: ipg-s1 block 4c9ab0436c8f
 - id: ipg-s1-1
   kind: section
   status: active
@@ -2432,10 +2395,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Warnings are used in situations of incorrect play when a small amount of time is needed to
-      implement the corrective procedure. The purpose of a Warning is to alert judges and players involved
-      that a problem has occurred and to keep a permanent record of the infraction. A time extension should
-      be issued if the ruling has taken more than a minute.
+    label: ipg-s1-1 block 2117efb7091d
 - id: ipg-c000005
   kind: component
   status: active
@@ -2471,11 +2431,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A Game Loss ends the current game immediately and the player who committed the infraction is
-      considered to have lost the game for the purpose of match reporting. The player receiving a Game
-      Loss chooses whether to play or draw in the next game of that match, if applicable. If a Game Loss
-      is issued before the match begins, neither player in that match may use sideboards (if the tournament
-      uses them) for the first game they play.
+    label: ipg-s1-1 block 47583e083997
 - id: ipg-b000013
   kind: block
   status: active
@@ -2487,10 +2443,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Game Losses are applied immediately if the game is still ongoing, or to the player’s next game
-      if it is not, unless otherwise specified. If a player would receive multiple Game Losses at the
-      same time, they only receive one. If simultaneous Game Loss penalties are issued to each player,
-      they are recorded, but do not affect the match score.
+    label: ipg-s1-1 block 8eca47060a50
 - id: ipg-c000006
   kind: component
   status: active
@@ -2526,7 +2479,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A Match Loss is a severe penalty that is usually issued when the match itself has been compromised.
+    label: ipg-s1-1 block 0b51f270b218
 - id: ipg-b000015
   kind: block
   status: active
@@ -2538,8 +2491,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Match Losses are applied to the match during which the offense occurred unless the offender’s
-      match has already ended, in which case the penalty will be applied to that player’s next match.
+    label: ipg-s1-1 block 54e589569837
 - id: ipg-c000007
   kind: component
   status: active
@@ -2575,8 +2527,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A Disqualification is issued for activity that damages the integrity of a tournament as a whole
-      or for severe unsporting conduct.
+    label: ipg-s1-1 block f3170390cfc9
 - id: ipg-b000017
   kind: block
   status: active
@@ -2588,8 +2539,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The recipient of a Disqualification does not need to be a player in the tournament. They may
-      be a spectator or other bystander.
+    label: ipg-s1-1 block 72f99a3fa1ac
 - id: ipg-b000018
   kind: block
   status: active
@@ -2601,9 +2551,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Disqualification can occur without proof of action so long as the Head Judge determines sufficient
-      information exists to believe the tournament’s integrity may have been compromised. It is recommended
-      that the Head Judge’s report reflect this fact.
+    label: ipg-s1-1 block 434b966a5ed3
 - id: ipg-b000019
   kind: block
   status: active
@@ -2615,9 +2563,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: When this penalty is applied, the player loses their current match and is dropped from the
-      tournament. If a player has already received prizes at the time they are disqualified, that player
-      may keep those prizes but does not receive any additional prizes or awards they may be due.
+    label: ipg-s1-1 block 2e2f974d1057
 - id: ipg-b000020
   kind: block
   status: active
@@ -2629,13 +2575,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: When a player is disqualified during a tournament, they are removed from the tournament and
-      do not take up a place in the standings. This means that all players in the tournament will advance
-      one spot in the standings and are entitled to any prizes the new standing would offer. If the Disqualification
-      takes place after a cut is made, no additional players advance in place of the disqualified player
-      although they do move up a spot in the standings. For example, if a player is disqualified during
-      the quarterfinal round of a Magic Tabletop Mythic Qualifier, the former 9th place finisher does
-      not advance into the single elimination top 8, but they do move into 8th place in the standings.
+    label: ipg-s1-1 block feaea9e95600
 - id: ipg-b000021
   kind: block
   status: active
@@ -2647,8 +2587,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Disqualifications should be reported here. Please include the Wizards Account email address
-      of the disqualified player and that player’s opponent.
+    label: ipg-s1-1 block f181d7071791
 - id: ipg-s1-2
   kind: section
   status: active
@@ -2695,9 +2634,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Any penalty of Game Loss or higher should be reported to the Head Judge, and it is recommended
-      that only the Head Judge issue penalties of this nature (with the exception of Tardiness (3.1) and
-      Decklist Problems (3.4)).
+    label: ipg-s1-2 block 72a6e4e020f9
 - id: ipg-b000023
   kind: block
   status: active
@@ -2709,10 +2646,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Being enrolled in the tournament is not a requirement to receive a penalty. Although these
-      guidelines refer to players, other people in the venue, such as spectators, staff, or judges may
-      be enrolled into (and dropped from) the tournament in order to receive a penalty. Penalties are
-      still issued even if a player drops from the tournament before it would take effect.
+    label: ipg-s1-2 block 7afffe1ad3af
 - id: ipg-b000024
   kind: block
   status: active
@@ -2724,10 +2658,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Any time a penalty is issued, the judge must explain the infraction, the procedure for fixing
-      the situation, and the penalty to all players involved. If the Head Judge chooses to deviate from
-      the Infraction Procedure Guide, the Head Judge is expected to explain the standard penalty and the
-      reason for deviation.
+    label: ipg-s1-2 block dadcd5df8662
 - id: ipg-b000025
   kind: block
   status: active
@@ -2739,15 +2670,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Some infractions include remedies to handle the offense beyond the base penalty. These procedures
-      exist to protect officials from accusations of unfairness, bias, or favoritism. If a judge makes
-      a ruling that is consistent with quoted text, then the complaints of a player shift from accusation
-      of unfairness by the judge to accusations of unfair policy. Deviations from these procedures may
-      raise accusations against the judge from the player(s) involved, or from those who hear about it.
-      These procedures do not, and should not, take into account the game being played, the current situation
-      that the game is in, or who will benefit strategically from the procedure associated with a penalty.
-      While it is tempting to try to “fix” game situations, the danger of missing a subtle detail or showing
-      favoritism to a player (even unintentionally) makes it a bad idea.
+    label: ipg-s1-2 block 30e935ceb151
 - id: ipg-b000026
   kind: block
   status: active
@@ -2759,7 +2682,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If an error leads to multiple related infractions, only issue one with the most severe penalty.
+    label: ipg-s1-2 block d4c731b0271e
 - id: ipg-s1-3
   kind: section
   status: active
@@ -2806,12 +2729,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The remedy for some infractions in this document includes shuffling the randomized portion
-      of the library. This requires first determining whether any portion of the library is non-random,
-      such as cards that have been manipulated on the top or bottom of the library, and separating those.
-      Check with both players to verify this, and check the graveyard, exile, and battlefield for library
-      manipulation cards, such as Brainstorm and cards with the scry mechanic. Once the library has been
-      shuffled, any manipulated cards are returned to their correct locations.
+    label: ipg-s1-3 block c2e8e78b7788
 - id: ipg-b000028
   kind: block
   status: active
@@ -2823,7 +2741,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Shuffles performed by a judge as part of a remedy are not considered shuffles for game purposes.
+    label: ipg-s1-3 block db43b5c93c38
 - id: ipg-s1-4
   kind: section
   status: active
@@ -2870,13 +2788,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Some infractions in this document permit the judge to consider the possibility of a backup.
-      Due to the amount of information that may become available to players and might affect their play,
-      backups are regarded as a solution of last resort, only applied in situations where leaving the
-      game in the current state is a substantially worse solution. A good backup will result in a situation
-      where the gained information makes no difference and the line of play remains the same (excepting
-      the error, which has been fixed). This means limiting backups to situations with minimal decision
-      trees.
+    label: ipg-s1-4 block b0f5c419498c
 - id: ipg-b000030
   kind: block
   status: active
@@ -2888,8 +2800,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Only the Head Judge may authorize a backup. At large tournaments, they may choose to delegate
-      this responsibility to Team Leaders.
+    label: ipg-s1-4 block 156eff014a65
 - id: ipg-b000031
   kind: block
   status: active
@@ -2901,14 +2812,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: To perform a backup, each individual action since the point of the error is reversed, starting
-      with the most recent ones and working backwards. Every action must be reversed; no parts of the
-      sequence should be omitted or reordered. If the identity of a card involved in reversing an action
-      is unknown to one of the players (usually because it was drawn), a random card is chosen from the
-      possible candidates. Actions that caused a player to learn the identity of cards at a specific location
-      in the library are reversed by shuffling those cards into the random portion of the library unless
-      they were subsequently drawn; cards being returned to the library as part of the backup should not
-      be shuffled at that stage if their identity was known to only one player.
+    label: ipg-s1-4 block 69adb8856451
 - id: ipg-b000032
   kind: block
   status: active
@@ -2920,11 +2824,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Backups involving random/unknown elements should be approached with extreme caution, especially
-      if they cause or threaten to cause a situation in which a player will end up with different cards
-      than they would once they have correctly drawn those cards. For example, returning cards to the
-      library when a player has the ability to shuffle their library is not something that should be done
-      except in extreme situations.
+    label: ipg-s1-4 block 3cae4f39818c
 - id: ipg-b000033
   kind: block
   status: active
@@ -2936,9 +2836,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Some remedies state a simple backup may be performed. A simple backup is backing up the last
-      action completed (or one currently in progress) and is sometimes used to make another portion of
-      the prescribed remedy smoother. A simple backup should not involve any random elements.
+    label: ipg-s1-4 block ec42908e82e5
 - id: ipg-s1-5
   kind: section
   status: active
@@ -2985,9 +2883,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Some infractions in this document refer to “sets” of cards. A set is a physically distinct
-      group of cards defined by a game rule or effect. It may correspond to a specific zone, or may only
-      represent a part of a zone. A set may consist of a single card.
+    label: ipg-s1-5 block e6d856f96a71
 - id: ipg-b000035
   kind: block
   status: active
@@ -2999,9 +2895,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Cards are considered to be part of a set until they join another set. There is no in-between
-      state and any card that has not yet been seen is part of the previous set (unless the new set is
-      hidden).
+    label: ipg-s1-5 block 7dc0895fa53d
 - id: ipg-c000012
   kind: component
   status: active
@@ -3096,8 +2990,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Tournament errors are violations of the Magic Tournament Rules. If the judge believes that
-      the error was intentional, they should consider Unsporting Conduct — Cheating.
+    label: ipg-s3 block 9677e9d571d3
 - id: ipg-b000037
   kind: block
   status: active
@@ -3109,9 +3002,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If a player violates the Magic Tournament Rules in a way that is not covered by one of the
-      infractions listed below, the judge should explain the appropriate procedure to the player, but
-      not issue a penalty. Continued or willful disregard of these rules may require further investigation.
+    label: ipg-s3 block 2778865ca140
 - id: ipg-b000038
   kind: block
   status: active
@@ -3123,9 +3014,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A Warning for a Tournament Error offense is upgraded to a Game Loss if the player has already
-      received a Warning for an offense in the same category. For multi-day tournaments, the penalty count
-      for these infractions resets between days.
+    label: ipg-s3 block 9ed796420934
 - id: ipg-s3-1
   kind: section
   status: active
@@ -3172,9 +3061,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player is not in their seat at the beginning of a round, or has not completed tasks assigned
-      within the time allocated. If a round begins before the previous round would have ended (due to
-      all players finishing early), tardiness does not apply until the scheduled end of the previous round.
+    label: ipg-s3-1 block 4d8b3fd5716e
 - id: ipg-b000040
   kind: block
   status: active
@@ -3186,11 +3073,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If, before or during a match, a player requests and receives permission from a judge for a
-      delay for a legitimate task, such as a bathroom break or finding replacements for missing cards,
-      that player has up to 10 minutes to perform that task before they are considered tardy. If the player
-      takes more than 10 minutes, a Match Loss will be applied. Otherwise, no penalty will be applied
-      and a time extension given for the time taken.
+    label: ipg-s3-1 block bce6ae9c228b
 - id: ipg-c000016
   kind: component
   status: active
@@ -3226,7 +3109,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player arrives to their seat 5 minutes after the round begins.
+    label: ipg-s3-1 block 877e826c37d2
 - id: ipg-b000042
   kind: block
   status: active
@@ -3238,7 +3121,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player hands in their decklist after the time designated by the judge or organizer.
+    label: ipg-s3-1 block 98d2345f1764
 - id: ipg-b000043
   kind: block
   status: active
@@ -3250,8 +3133,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player loses their deck and cannot find replacement cards within the first 10 minutes of
-      the round.
+    label: ipg-s3-1 block 75bbe7abf4c5
 - id: ipg-b000044
   kind: block
   status: active
@@ -3263,7 +3145,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player sits at an incorrect table and plays the wrong opponent.
+    label: ipg-s3-1 block e61de96bfbb5
 - id: ipg-c000017
   kind: component
   status: active
@@ -3299,10 +3181,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Players are responsible for being on time and in the correct seat for their matches, and for
-      completing registrations in a timely manner. The Tournament Organizer may announce that they are
-      giving the players some additional time before a penalty is issued. Otherwise, the penalty is issued
-      as soon as the round begins.
+    label: ipg-s3-1 block 31d98e9bb5c0
 - id: ipg-c000018
   kind: component
   status: active
@@ -3338,7 +3217,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The players are given a time extension corresponding to the length of the tardiness.
+    label: ipg-s3-1 block 9231506f7ff0
 - id: ipg-c000019
   kind: component
   status: active
@@ -3374,9 +3253,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player not in their seat 10 minutes into the round will receive a Match Loss and will be
-      dropped from the tournament unless they report to the Head Judge or Scorekeeper before the end of
-      the round.
+    label: ipg-s3-1 block 24b75af42735
 - id: ipg-c000020
   kind: component
   status: active
@@ -3412,7 +3289,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player who arrives at their seat before 1 minute has elapsed in the round receives a Warning.
+    label: ipg-s3-1 block 3f54be8b9f4f
 - id: ipg-s3-2
   kind: section
   status: active
@@ -3459,7 +3336,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: 'A player, spectator, or other tournament participant does any of the following:'
+    label: ipg-s3-2 block e9933795345d
 - id: ipg-g000022
   kind: group
   status: active
@@ -3483,8 +3360,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Seeks play advice or private information about their match from others once they have sat for
-      their match.
+    label: ipg-s3-2 block d5828efae2f3
 - id: ipg-b000051
   kind: block
   status: active
@@ -3496,7 +3372,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Gives play advice or reveals private information to players who have sat for their match.
+    label: ipg-s3-2 block 13effd521135
 - id: ipg-b000052
   kind: block
   status: active
@@ -3508,8 +3384,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: During a game, refers to notes (other than Oracle™ pages) made before the official beginning
-      of the current match.
+    label: ipg-s3-2 block 2616ef2bbbfb
 - id: ipg-g000023
   kind: group
   status: active
@@ -3533,9 +3408,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: These criteria also apply to any deck construction and draft portions of a limited tournament.
-      Additionally, no notes of any kind may be made during a draft. Some team formats have additional
-      communication rules that may modify the definition of this infraction.
+    label: ipg-s3-2 block 8d9ef194b775
 - id: ipg-b000054
   kind: block
   status: active
@@ -3547,8 +3420,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Notes made outside the current match may only be referenced between games, and must have been
-      in the player’s possession since the beginning of the match.
+    label: ipg-s3-2 block f5685156c095
 - id: ipg-c000022
   kind: component
   status: active
@@ -3584,7 +3456,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: During a game, a player references play notes that were created before the tournament.
+    label: ipg-s3-2 block 01312612cff8
 - id: ipg-b000056
   kind: block
   status: active
@@ -3596,7 +3468,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A spectator points out the correct play to a player who had not solicited the information.
+    label: ipg-s3-2 block 12b4d1620ba2
 - id: ipg-c000023
   kind: component
   status: active
@@ -3632,9 +3504,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Tournaments test the skill of a player, not their ability to follow external advice or directions.
-      Any strategy advice, play advice, or construction advice from an external source is considered outside
-      assistance.
+    label: ipg-s3-2 block 11752c2d4ead
 - id: ipg-b000058
   kind: block
   status: active
@@ -3646,11 +3516,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Visual modifications to cards, including brief text, that provide minor strategic information
-      or hints are acceptable and not considered notes. Detailed instructions or complex strategic advice
-      may not be written on cards. The Head Judge is the final arbiter on what cards and notes are acceptable
-      for a tournament. Spectators who commit this infraction may be asked to leave the venue if they
-      are not enrolled in the tournament.
+    label: ipg-s3-2 block d38b676c5f70
 - id: ipg-c000024
   kind: component
   status: active
@@ -3686,8 +3552,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If the information acquired is information that the player would have access to between games,
-      the penalty is a Game Loss.
+    label: ipg-s3-2 block f8c7da831894
 - id: ipg-s3-3
   kind: section
   status: active
@@ -3734,9 +3599,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player takes longer than is reasonably required to complete game actions. If a judge believes
-      a player is intentionally playing slowly to take advantage of a time limit, the infraction is Unsporting
-      Conduct — Stalling.
+    label: ipg-s3-3 block f663d838b9b5
 - id: ipg-b000061
   kind: block
   status: active
@@ -3748,8 +3611,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: It is also slow play if a player continues to execute a loop without being able to provide
-      an exact number of iterations and the expected resulting game state.
+    label: ipg-s3-3 block 603b0240aa07
 - id: ipg-c000026
   kind: component
   status: active
@@ -3785,8 +3647,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player repeatedly reviews their opponent’s graveyard without any significant change in game
-      state.
+    label: ipg-s3-3 block 5f5e80cad6a0
 - id: ipg-b000063
   kind: block
   status: active
@@ -3798,8 +3659,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player spends time writing down the contents of an opponent’s library while resolving Thought
-      Hemorrhage.
+    label: ipg-s3-3 block d78b2f2986f1
 - id: ipg-b000064
   kind: block
   status: active
@@ -3811,7 +3671,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player takes an excessive amount of time to shuffle their deck between games.
+    label: ipg-s3-3 block fef8d186b2e9
 - id: ipg-b000065
   kind: block
   status: active
@@ -3823,8 +3683,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player gets up from their seat to look at standings or goes to the bathroom without permission
-      of an official.
+    label: ipg-s3-3 block 63f557cf894a
 - id: ipg-c000027
   kind: component
   status: active
@@ -3860,10 +3719,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: All players have the responsibility to play quickly enough so that their opponents are not
-      at a significant disadvantage because of the time limit. A player may be playing slowly without
-      realizing it. A comment of “I need you to play faster” is often appropriate and all that is needed.
-      Further slow play should be penalized.
+    label: ipg-s3-3 block f5485bf749d6
 - id: ipg-c000028
   kind: component
   status: active
@@ -3899,9 +3755,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: In the event that the match exceeds the time limit, two additional turns are added to the number
-      of additional turns played. This turn extension occurs before any end-of-match procedure can begin
-      and after any time extensions that may have been issued.
+    label: ipg-s3-3 block e553a8ff072b
 - id: ipg-b000068
   kind: block
   status: active
@@ -3913,8 +3767,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: No additional turns are awarded if the match is already in additional turns, though the Warning
-      still applies.
+    label: ipg-s3-3 block 2f97441bd127
 - id: ipg-s3-4
   kind: section
   status: active
@@ -3961,9 +3814,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The decklist is illegal, doesn’t match what the player intended to play, needs to be modified
-      due to card loss over the course of the tournament, or is presented to the opponent with errors
-      in it.
+    label: ipg-s3-4 block 09b8f1708227
 - id: ipg-b000070
   kind: block
   status: active
@@ -3975,8 +3826,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: This infraction does not cover errors in registration made by another participant prior to
-      a sealed pool swap. Those should be corrected at the discretion of the judge.
+    label: ipg-s3-4 block f1e57a587e1a
 - id: ipg-c000030
   kind: component
   status: active
@@ -4012,7 +3862,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player in a Legacy tournament lists Mana Drain (a banned card) on their decklist.
+    label: ipg-s3-4 block bc625cf6f4a5
 - id: ipg-b000072
   kind: block
   status: active
@@ -4024,8 +3874,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player has a 56-card decklist. Their actual deck contains 60 cards, with four Dispels not
-      listed.
+    label: ipg-s3-4 block c3dcb41b3f94
 - id: ipg-b000073
   kind: block
   status: active
@@ -4037,7 +3886,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player lists ‘Sarkhan’ in a format with both Sarkhan, the Dragonspeaker and Sarkhan Unbroken.
+    label: ipg-s3-4 block ef96318c1b8c
 - id: ipg-b000074
   kind: block
   status: active
@@ -4049,8 +3898,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player loses some cards and is unable to find replacement copies, making them unable to play
-      a deck that matches their decklist.
+    label: ipg-s3-4 block 5997aa90245b
 - id: ipg-b000075
   kind: block
   status: active
@@ -4062,7 +3910,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player registers Ajani, Valiant Protector, but they are playing Ajani Unyielding.
+    label: ipg-s3-4 block 10785e437991
 - id: ipg-c000031
   kind: component
   status: active
@@ -4098,10 +3946,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Decklists are used to ensure that decks are not altered in the course of a tournament. Judges
-      and other tournament officials should be vigilant about reminding players before the tournament
-      begins of the importance of submitting a legal decklist, and playing with a legal deck. A player
-      normally receives a Game Loss if their decklist is altered after tournament play has begun.
+    label: ipg-s3-4 block d4a1ce6c298d
 - id: ipg-b000077
   kind: block
   status: active
@@ -4113,9 +3958,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Penalties for decklist errors discovered outside the context of the match and its procedures
-      (such as those discovered through decklist counting) are issued at the start of the next match unless
-      the judge believes there is strong evidence the deck itself is illegal.
+    label: ipg-s3-4 block ec95a22c0e81
 - id: ipg-b000078
   kind: block
   status: active
@@ -4127,11 +3970,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Ambiguous or unclear names on a decklist may allow a player to manipulate the contents of their
-      deck up until the point at which they are discovered. Truncated names of storyline characters on
-      decklists (planeswalkers and other legendary permanents) are acceptable as long as they are the
-      only representation of that character in the format and are treated as referring to that card, even
-      if other cards begin with the same name.
+    label: ipg-s3-4 block 9245e09d9fbe
 - id: ipg-b000079
   kind: block
   status: active
@@ -4143,12 +3982,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The Head Judge may choose to not issue this penalty if they believe that what the player wrote
-      on their decklist is obvious and unambiguous, even if not entirely accurate. In Limited tournaments,
-      the Head Judge may choose not to issue this penalty for incorrectly marked basic land counts if
-      they believe the correct land count is obvious. This should be determined solely by what is written
-      on the decklist, and not based on intent or the actual contents of the deck; needing to check the
-      deck for confirmation is a sign that the entry is not obvious.
+    label: ipg-s3-4 block 9c691db84bcf
 - id: ipg-b000080
   kind: block
   status: active
@@ -4160,9 +3994,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Companions affect what the player intended to play, and may produce a situation in which the
-      deck and decklist match, but violate the restriction on the intended companion. In these situations,
-      it is acceptable to alter the deck and sideboard configuration to meet the restriction.
+    label: ipg-s3-4 block a9cb2c218604
 - id: ipg-b000081
   kind: block
   status: active
@@ -4174,9 +4006,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: In tournaments with open decklists, if the wrong decklist is provided to an opponent and it
-      is discovered during the game, the opponent may have made strategic decisions throughout the game
-      based on the error, and that cannot be fully assessed or offset.
+    label: ipg-s3-4 block 2cf9ea627d6e
 - id: ipg-c000032
   kind: component
   status: active
@@ -4212,9 +4042,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If the decklist contains illegal cards, remove them. If the decklist is being adjusted to allow
-      for an intended companion, the player exchanges cards between the deck and sideboard until the restriction
-      is met.
+    label: ipg-s3-4 block ae782e9629e9
 - id: ipg-b000083
   kind: block
   status: active
@@ -4226,10 +4054,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Alter the decklist to match the deck the player is actually playing. If the deck/sideboard
-      and decklist both violate a maximum cards restriction (usually too many cards in a sideboard, more
-      than four of a card, or the same card in two decks in a Unified Constructed format), remove cards
-      as directed by the player to make the decklist legal.
+    label: ipg-s3-4 block 00d680d8c040
 - id: ipg-b000084
   kind: block
   status: active
@@ -4241,10 +4066,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If the deck contains too few cards, the player chooses to add any combination of cards named
-      Plains, Island, Swamp, Mountain or Forest to reach the minimum number. Alter the decklist to reflect
-      this. These changes may be reverted without penalty if the player is subsequently able to locate
-      identical replacements to legal original cards.
+    label: ipg-s3-4 block aa862181493a
 - id: ipg-s3-5
   kind: section
   status: active
@@ -4291,8 +4113,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The contents of a deck or sideboard do not match the decklist registered and the decklist represents
-      what the player intended to play.
+    label: ipg-s3-5 block 21233fd0b294
 - id: ipg-b000086
   kind: block
   status: active
@@ -4304,8 +4125,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: 'If there are extra cards stored with the sideboard that could conceivably be played in the
-      player’s deck, they will be considered a part of the sideboard unless they are:'
+    label: ipg-s3-5 block d59a6760e9c6
 - id: ipg-g000036
   kind: group
   status: active
@@ -4329,7 +4149,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Promotional cards that have been handed out as part of the event.
+    label: ipg-s3-5 block d5526a485ed9
 - id: ipg-b000088
   kind: block
   status: active
@@ -4341,7 +4161,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Double-faced cards represented by substitute cards in the deck.
+    label: ipg-s3-5 block fc871aa5a2cd
 - id: ipg-b000089
   kind: block
   status: active
@@ -4353,7 +4173,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Damaged cards that have been officially proxied for the tournament.
+    label: ipg-s3-5 block b43e948168d1
 - id: ipg-b000090
   kind: block
   status: active
@@ -4365,8 +4185,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Double-faced cards being used to represent the back side of cards in the deck. These cards
-      must not be sleeved in the same way as cards in the main deck and/or sideboard.
+    label: ipg-s3-5 block 6eb3aee8b18d
 - id: ipg-g000037
   kind: group
   status: active
@@ -4390,8 +4209,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Cards in different sleeves, tokens, and double-faced cards for which substitute cards are being
-      used are ignored when determining deck (not sideboard) legality.
+    label: ipg-s3-5 block 64d268842cb4
 - id: ipg-b000092
   kind: block
   status: active
@@ -4403,9 +4221,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If a player is unable to locate cards (or identical equivalents) from their main deck, treat
-      it as a Decklist Problem instead. If sideboard cards are missing, make a note of this, but issue
-      no penalty.
+    label: ipg-s3-5 block 2ddebac0ac0c
 - id: ipg-b000093
   kind: block
   status: active
@@ -4417,8 +4233,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The discovery of a card that violates a companion restriction is a Deck Problem if the player
-      does not wish to modify their decklist to accommodate the companion restriction.
+    label: ipg-s3-5 block b3806c34a852
 - id: ipg-c000034
   kind: component
   status: active
@@ -4454,7 +4269,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player has 59 cards in their deck, but 60 listed on their decklist.
+    label: ipg-s3-5 block 5331f7bb72e4
 - id: ipg-b000095
   kind: block
   status: active
@@ -4466,7 +4281,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player has a Pacifism in their deck from a previous opponent.
+    label: ipg-s3-5 block 75ae621f4643
 - id: ipg-b000096
   kind: block
   status: active
@@ -4478,8 +4293,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: In game one of a match, A player has Pithing Needle in their deck, but only has one registered
-      in their sideboard.
+    label: ipg-s3-5 block 97e48ec5c092
 - id: ipg-c000035
   kind: component
   status: active
@@ -4515,8 +4329,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Players are expected to call attention to deck errors immediately, and not gain any potential
-      advantage from having the cards in their deck.
+    label: ipg-s3-5 block 3ec62f1ab9c3
 - id: ipg-b000098
   kind: block
   status: active
@@ -4528,11 +4341,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The most common forms of deck error are failure to desideboard and having a card in the wrong
-      deck. Both of these are difficult to gain advantage from without obvious cheating. Allowing the
-      opponent to choose which card they would otherwise be working with is sufficient to compensate for
-      the easily discovered situations. Duplicates of cards that begin in the main deck are more problematic,
-      as they are not as easy to realize and catch, and thus mandate an upgraded penalty.
+    label: ipg-s3-5 block 420cfeb1df48
 - id: ipg-b000099
   kind: block
   status: active
@@ -4544,10 +4353,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A window in which the error is a Game Loss is necessary to discourage intentional abuse of
-      the minimum number of cards in the deck. Once that point has passed, the opponent agrees that the
-      deck is valid. Judges should always be mindful of the abuse possibilities when investigating these
-      infractions.
+    label: ipg-s3-5 block cc6d5f44ddc3
 - id: ipg-c000036
   kind: component
   status: active
@@ -4583,15 +4389,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Locate any cards missing from the deck and any incorrect cards in any game zone. Reveal those
-      cards to the opponent. If the game has started, the opponent chooses whether to fix the problem
-      now or when a player would next get priority. Then, at the appropriatre time, they specify which
-      of the missing cards replaces each incorrect card; any extras are shuffled into the random portion
-      of the library. If more cards are being removed than added, prioritize ones not in the library first.
-      If there are still additional cards not in the library that need replacing, they are replaced by
-      cards from the random portion of the library. If the missing card(s) are with the sideboard and
-      it isn’t the first game, choose the ones to be returned to the deck at random from main deck cards
-      in the sideboard.
+    label: ipg-s3-5 block 10e80a49fc81
 - id: ipg-b000101
   kind: block
   status: active
@@ -4603,12 +4401,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If the error caused a violation of a companion restriction and it is a post-sideboard game
-      (or a pre-sideboard game and the player has elected to continue with the deck they registered that
-      does not match the revealed companion condition), locate all cards violating the restriction. Then,
-      reveal all cards in the sideboard that meet the companion restriction. The opponent decides which
-      of those cards replaces each illegal card. If making the deck match the companion condition is impossible,
-      upgrade the penalty to a Game Loss.
+    label: ipg-s3-5 block eddb654fb916
 - id: ipg-b000102
   kind: block
   status: active
@@ -4620,8 +4413,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If the missing card(s) were in a previous or current opponent’s deck, issue penalties to both
-      players.
+    label: ipg-s3-5 block 0bd085129a1a
 - id: ipg-c000037
   kind: component
   status: active
@@ -4657,10 +4449,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: In games before sideboarding, while the deck is presented to the opponent for pre-game shuffling
-      or during a deckcheck, if the deck contains fewer cards than registered (and any missing cards are
-      not in the opponent’s deck) or the sideboard contains more cards than registered, the penalty is
-      a Game Loss.
+    label: ipg-s3-5 block 9633c61f44b5
 - id: ipg-b000104
   kind: block
   status: active
@@ -4672,10 +4461,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: In games after sideboarding, while the deck is presented to the opponent for pre-game shuffling
-      or during a deckcheck, if the deck contains fewer cards than the format minimum (and any missing
-      cards are not in the opponent’s deck) or the sideboard contains more cards than the format maximum,
-      the penalty is a Game Loss.
+    label: ipg-s3-5 block b86f86b437dc
 - id: ipg-c000038
   kind: component
   status: active
@@ -4711,8 +4497,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If an opponent may have made strategic decisions based on the presence of a sideboard card
-      (such as having seen it in the hand or library during a search effect), the penalty is a Game Loss.
+    label: ipg-s3-5 block 9c162ed74f60
 - id: ipg-c000039
   kind: component
   status: active
@@ -4748,11 +4533,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If an error resulted in more copies of a main deck card being played than were registered or
-      allowed by companion restriction, the penalty is a Game Loss unless all copies of the card are still
-      in the random portion of the library. For example if the decklist has two copies of Shock in the
-      main deck and two in the sideboard, but a search finds two copies of Shock in the library with another
-      already in the graveyard, the penalty is upgraded.
+    label: ipg-s3-5 block ce1860c24763
 - id: ipg-s3-6
   kind: section
   status: active
@@ -4799,7 +4580,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player commits a technical error during a draft.
+    label: ipg-s3-6 block 5a410f607872
 - id: ipg-c000041
   kind: component
   status: active
@@ -4835,7 +4616,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player passes a booster to their left when it is supposed to go to their right.
+    label: ipg-s3-6 block 71407952f978
 - id: ipg-b000109
   kind: block
   status: active
@@ -4847,7 +4628,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player exceeds the amount of time allotted for a draft pick.
+    label: ipg-s3-6 block 5bb9b699a54c
 - id: ipg-b000110
   kind: block
   status: active
@@ -4859,7 +4640,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player puts a card on top of their draft pile, then pulls it back.
+    label: ipg-s3-6 block 118763122f94
 - id: ipg-b000111
   kind: block
   status: active
@@ -4871,7 +4652,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player moves their head to the side at inappropriate times.
+    label: ipg-s3-6 block 12f7d80c34f0
 - id: ipg-c000042
   kind: component
   status: active
@@ -4907,9 +4688,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Errors in draft are disruptive and may become more so if they are not caught quickly. Announcements
-      prior to the draft or the specific tournament rules for the format may specify additional penalties
-      for Limited Procedure Violations.
+    label: ipg-s3-6 block 0d3f794069fb
 - id: ipg-s3-7
   kind: section
   status: active
@@ -4956,10 +4735,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player violates the Communication policies detailed in section 4 of the Magic Tournament
-      Rules and the judge believes their opponent has taken an in-game action or clearly chosen not to
-      act based on the erroneous information. This infraction only applies to violations of that policy
-      and not to general communication confusion.
+    label: ipg-s3-7 block 98ebe99e8cc9
 - id: ipg-c000044
   kind: component
   status: active
@@ -4995,8 +4771,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player is asked how many cards they have in their hand and answers “Three.” A few moments
-      later, their opponent casts a discard spell and they realize that they have four.
+    label: ipg-s3-7 block 323fa3dc7a62
 - id: ipg-b000115
   kind: block
   status: active
@@ -5008,8 +4783,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player keeps their Llanowar Elf in with their land, and their opponent attacks thinking they
-      have no blockers.
+    label: ipg-s3-7 block 6a3ee303367d
 - id: ipg-b000116
   kind: block
   status: active
@@ -5021,8 +4795,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player casts Path to Exile, forgets to remind their opponent that they have the opportunity
-      to search for a basic land and, as a result, they don’t.
+    label: ipg-s3-7 block 606ac7c38b4f
 - id: ipg-c000045
   kind: component
   status: active
@@ -5058,9 +4831,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Clear communication is essential when playing Magic. Though many offenses will be intentional,
-      it is possible for a player to make a genuine mistake that causes confusion and these should not
-      be penalized harshly.
+    label: ipg-s3-7 block 04b867517fff
 - id: ipg-b000118
   kind: block
   status: active
@@ -5072,9 +4843,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player may commit this infraction in situations where they have not spoken. A physically
-      ambiguous board state is not automatically a penalty, but judges are encouraged to tell players
-      to fix ambiguous placements before they might become problematic.
+    label: ipg-s3-7 block 8535ad59ac37
 - id: ipg-b000119
   kind: block
   status: active
@@ -5086,9 +4855,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Misapplication of a shortcut is usually not a Communication Policy Violation, as the default
-      interpretation applies in ambiguous situations and the opponent is able to act on that shortcut.
-      Any deviation from a tournament shortcut requires a clear explanation.
+    label: ipg-s3-7 block 3d05ddac710c
 - id: ipg-c000046
   kind: component
   status: active
@@ -5124,7 +4891,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A backup may be considered to the point of the action, not the erroneous communication.
+    label: ipg-s3-7 block 9af796475b06
 - id: ipg-s3-8
   kind: section
   status: active
@@ -5171,9 +4938,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Cards or sleeves in a player’s deck have inconsistencies on them that might allow them to be
-      differentiated from each other while in the library. This includes scuff marks, nail marks, discoloration,
-      bent corners, and curving from foils.
+    label: ipg-s3-8 block 477b56d35ae9
 - id: ipg-c000048
   kind: component
   status: active
@@ -5209,8 +4974,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player has small marks on a few of their sleeves. The markings are on a Mountain, a Loxodon
-      Hierarch, and a Lightning Helix.
+    label: ipg-s3-8 block 4c540f11550a
 - id: ipg-b000123
   kind: block
   status: active
@@ -5222,7 +4986,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player has several foil cards that stand out significantly from the rest of their deck.
+    label: ipg-s3-8 block 1a0817a3b2ad
 - id: ipg-b000124
   kind: block
   status: active
@@ -5234,7 +4998,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The basic lands in a player’s unsleeved deck are from a set with notably lighter backs.
+    label: ipg-s3-8 block 7fb8575797f9
 - id: ipg-c000049
   kind: component
   status: active
@@ -5270,11 +5034,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Sleeves and cards often become worn over the course of a tournament, and, as long as the player
-      is not attempting to take advantage of this, addressing the situation is sufficient in most cases.
-      Note that almost all sleeves can be considered marked in some way; judges should keep this in mind
-      when determining penalties. In cases of marked cards, educating players to shuffle their cards and
-      sleeves before sleeving the cards is very important.
+    label: ipg-s3-8 block 9e5df65a379a
 - id: ipg-b000126
   kind: block
   status: active
@@ -5286,9 +5046,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: This infraction applies only to cards in a player’s deck. Differently-marked sleeves in the
-      sideboard are not illegal unless they are put into the deck without being changed. Unless investigating,
-      judges are encouraged to alert players about concerns with marked sideboard cards.
+    label: ipg-s3-8 block 873626b1cfdd
 - id: ipg-c000050
   kind: component
   status: active
@@ -5324,9 +5082,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The player needs to replace the card(s) or sleeve(s) with an unmarked version or, if no sleeves
-      are being used, use sleeves that conceal the markings. If the cards themselves have become marked
-      through play in the tournament, the Head Judge may decide to issue a proxy.
+    label: ipg-s3-8 block 769e182c4bfb
 - id: ipg-c000051
   kind: component
   status: active
@@ -5362,10 +5118,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If the player is unable to find replacement cards, they may replace those cards with any combination
-      of cards named Plains, Island, Swamp, Mountain or Forest. As the decklist is being changed to match
-      the new contents of the deck, the penalty is a Game Loss. This change may be reverted at a later
-      point without further penalty if replacements for marked cards are found.
+    label: ipg-s3-8 block 776b5abfb7c9
 - id: ipg-c000052
   kind: component
   status: active
@@ -5401,8 +5154,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If the Head Judge believes that a deck’s owner noticing the pattern of markings would be able
-      to gain substantial advantage from this knowledge, the penalty is a Game Loss.
+    label: ipg-s3-8 block 17384a3e686d
 - id: ipg-s3-9
   kind: section
   status: active
@@ -5449,10 +5201,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player unintentionally fails to sufficiently shuffle their deck or a portion of their deck
-      before presenting it to their opponent, or fails to present it to their opponent for further randomization.
-      A deck is not shuffled if the judge believes a player could know the position or distribution of
-      one or more cards in their deck.
+    label: ipg-s3-9 block 941610cb9480
 - id: ipg-c000054
   kind: component
   status: active
@@ -5488,7 +5237,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player forgets to shuffle their library after searching for a card.
+    label: ipg-s3-9 block e295d41a8511
 - id: ipg-b000132
   kind: block
   status: active
@@ -5500,8 +5249,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player searches for a card, then gives the library a single riffle-shuffle before presenting
-      the library to their opponent.
+    label: ipg-s3-9 block 582b44bbc47d
 - id: ipg-b000133
   kind: block
   status: active
@@ -5513,8 +5261,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player fails to shuffle the portion of their library revealed during the resolution of a
-      cascade ability.
+    label: ipg-s3-9 block 51116e4ef522
 - id: ipg-c000055
   kind: component
   status: active
@@ -5550,10 +5297,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Players are expected to shuffle their deck thoroughly when it is required and are expected
-      to have the skill and understanding of randomization to do so. However, as the opponent has the
-      opportunity to shuffle after the player does, the potential for advantage is lowered if tournament
-      policy is followed.
+    label: ipg-s3-9 block 4de50bca0b22
 - id: ipg-b000135
   kind: block
   status: active
@@ -5565,9 +5309,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Any time cards in a deck could be seen, including during shuffling, it is no longer shuffled,
-      even if the player only knows the position of one or two cards. Players are expected to take care
-      in shuffling not to reveal cards to themselves, their teammates, or their opponents.
+    label: ipg-s3-9 block e34c4c1b35c3
 - id: ipg-b000136
   kind: block
   status: active
@@ -5579,9 +5321,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player should shuffle their deck using multiple methods. Patterned pile-shuffling is only
-      allowed at the start of a game. Any manipulation, weaving, or stacking prior to randomization is
-      acceptable, as long as the deck is thoroughly shuffled afterwards.
+    label: ipg-s3-9 block 8582299fa398
 - id: ipg-c000056
   kind: component
   status: active
@@ -5617,7 +5357,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Shuffle the appropriate portion of the deck thoroughly.
+    label: ipg-s3-9 block 1a6223a1d80d
 - id: ipg-s4
   kind: section
   status: active
@@ -5664,8 +5404,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Unsporting conduct is disruptive behavior that may affect the safety, competitiveness, enjoyment,
-      or integrity of a tournament in a significantly negative fashion.
+    label: ipg-s4 block 3a3efbdee278
 - id: ipg-b000139
   kind: block
   status: active
@@ -5677,9 +5416,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Unsporting behavior is not the same as a lack of sporting behavior. There is a wide middle
-      ground of “competitive” behavior that is certainly neither “nice” nor “sporting” but still doesn’t
-      qualify as “unsporting.” The Head Judge is the final arbiter on what constitutes unsporting conduct.
+    label: ipg-s4 block a2e30c950c63
 - id: ipg-b000140
   kind: block
   status: active
@@ -5691,10 +5428,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Judges should inform the player how their conduct is disruptive. The player is expected to
-      correct the situation and behavior immediately. However, while making sure that the player understands
-      the severity of their actions is important, judges should focus first on calming a situation, and
-      deal with infractions and penalties afterwards.
+    label: ipg-s4 block 134f7ae5642a
 - id: ipg-s4-1
   kind: section
   status: active
@@ -5741,9 +5475,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player takes action that is disruptive to the tournament or its participants. It may affect
-      the comfort level of those around the individual, but determining whether this is the case is not
-      required.
+    label: ipg-s4-1 block cb41dd1e7a72
 - id: ipg-c000059
   kind: component
   status: active
@@ -5779,7 +5511,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player uses excessively vulgar and profane language.
+    label: ipg-s4-1 block 2f6dc19e2d58
 - id: ipg-b000143
   kind: block
   status: active
@@ -5791,7 +5523,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player inappropriately demands to a judge that their opponent receive a penalty.
+    label: ipg-s4-1 block 70e5ff3a0766
 - id: ipg-b000144
   kind: block
   status: active
@@ -5803,7 +5535,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player appeals to the Head Judge before waiting for the floor judge to issue a ruling.
+    label: ipg-s4-1 block 032b81d83fea
 - id: ipg-b000145
   kind: block
   status: active
@@ -5815,7 +5547,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player throws their deck on the ground after losing a game.
+    label: ipg-s4-1 block d36de192c66b
 - id: ipg-b000146
   kind: block
   status: active
@@ -5827,7 +5559,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player leaves excessive trash in the play area after leaving the table.
+    label: ipg-s4-1 block c3ad8e2deddf
 - id: ipg-b000147
   kind: block
   status: active
@@ -5839,7 +5571,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player fails to follow the request of a tournament official to leave the play area.
+    label: ipg-s4-1 block d20cad92950f
 - id: ipg-c000060
   kind: component
   status: active
@@ -5875,8 +5607,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: All participants should expect a safe and enjoyable environment at a tournament, and a player
-      needs to be made aware if their behavior is unacceptable so that this environment may be maintained.
+    label: ipg-s4-1 block fda859be8691
 - id: ipg-c000061
   kind: component
   status: active
@@ -5912,10 +5643,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The player must correct the problem immediately. Subsequent Unsporting Conduct — Minor infractions,
-      even for different offenses, will result in a Game Loss. If a Game Loss is issued for repeated infractions,
-      and it occurs at the end of a game, it is acceptable for the judge to apply the penalty to the next
-      game instead.
+    label: ipg-s4-1 block fcfc535036ad
 - id: ipg-s4-2
   kind: section
   status: active
@@ -5962,10 +5690,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player takes action towards one or more individuals that could reasonably be expected to
-      create a feeling of being harassed, threatened, bullied, or stalked. This may include insults based
-      on race, color, religion, national origin, age, gender, disability, or sexual orientation. Threats
-      of physical violence should be treated as Unsporting Conduct – Aggressive Behavior.
+    label: ipg-s4-2 block 15cbf091c9f0
 - id: ipg-b000151
   kind: block
   status: active
@@ -5977,8 +5702,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: It is possible for an offender to commit this infraction without intending malice or harm to
-      the subject of the harassment.
+    label: ipg-s4-2 block 29a025b1d6e0
 - id: ipg-c000063
   kind: component
   status: active
@@ -6014,7 +5738,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player uses a racial slur against their opponent.
+    label: ipg-s4-2 block f367f6e6b6d1
 - id: ipg-b000153
   kind: block
   status: active
@@ -6026,7 +5750,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player intentionally misgenders their opponent.
+    label: ipg-s4-2 block c1fbef771b75
 - id: ipg-b000154
   kind: block
   status: active
@@ -6038,7 +5762,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player takes inappropriate photos of another player without express permission.
+    label: ipg-s4-2 block 692e41998f2c
 - id: ipg-b000155
   kind: block
   status: active
@@ -6050,7 +5774,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player asks a spectator for a date, is denied, and continues to press the issue.
+    label: ipg-s4-2 block 28b76d00961f
 - id: ipg-b000156
   kind: block
   status: active
@@ -6062,7 +5786,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player purposefully obstructs another player with the intent of inducing physical contact.
+    label: ipg-s4-2 block a8136846727a
 - id: ipg-b000157
   kind: block
   status: active
@@ -6074,7 +5798,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A spectator uses social media to bully another player.
+    label: ipg-s4-2 block e149cd1d8000
 - id: ipg-c000064
   kind: component
   status: active
@@ -6110,10 +5834,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A safe environment is a basic expectation of any tournament attendee. Harassment undermines
-      the safety and integrity of a tournament. Players who purposefully create harmful or unwelcoming
-      situations in a tournament are expected to immediately correct the behavior and demonstrate remorse
-      or be removed.
+    label: ipg-s4-2 block 110844ca9a3b
 - id: ipg-b000159
   kind: block
   status: active
@@ -6125,12 +5846,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Because of the confrontational nature of this infraction, judges need to end any match in progress
-      and separate the players. Care should be taken not to escalate the situation if at all possible.
-      The offender will be removed from the area to receive the penalty, and education about why the behavior
-      is unacceptable regardless of excuse. They may need a few moments to cool down afterwards. Apologizing
-      is encouraged, but the desire of the other individuals to not interact with their harasser must
-      be respected.
+    label: ipg-s4-2 block f82af4dd8dec
 - id: ipg-b000160
   kind: block
   status: active
@@ -6142,9 +5858,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Officials must investigate these matters as soon as they are brought to their attention. If
-      they determine that the infraction does not meet the criteria for Unsporting Conduct – Major, it
-      is still recommended that the players be talked to to avoid future misunderstandings.
+    label: ipg-s4-2 block bc0ee46900cd
 - id: ipg-c000065
   kind: component
   status: active
@@ -6180,8 +5894,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The player must correct the behavior immediately. If the offense occurs at the end of a match,
-      it is acceptable for the judge to apply the penalty to the next match instead.
+    label: ipg-s4-2 block 992daf13f91f
 - id: ipg-c000066
   kind: component
   status: active
@@ -6217,8 +5930,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If the offense was committed with malicious intent, the player displays no remorse, or the
-      offense is repeated at a later time, the penalty is Disqualification and removal from the venue.
+    label: ipg-s4-2 block 2366a10a3a06
 - id: ipg-s4-3
   kind: section
   status: active
@@ -6265,9 +5977,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player uses or offers to use a method that is not part of the current game (including actions
-      not legal in the current game) to determine the outcome of a game or match, or uses language designed
-      to trick someone who may not know it’s against the rules to make such an offer.
+    label: ipg-s4-3 block 3eeea5f46a59
 - id: ipg-b000164
   kind: block
   status: active
@@ -6279,8 +5989,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If the player was aware that what they were doing was against the rules, the infraction is
-      Unsporting Conduct — Cheating.
+    label: ipg-s4-3 block 5b3242f560b6
 - id: ipg-c000068
   kind: component
   status: active
@@ -6316,7 +6025,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: As time is called, two players about to draw roll a die to determine the winner.
+    label: ipg-s4-3 block 69372b856c82
 - id: ipg-b000166
   kind: block
   status: active
@@ -6328,7 +6037,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player offers to flip a coin to determine the winner of a match.
+    label: ipg-s4-3 block 29afca3e6bb1
 - id: ipg-b000167
   kind: block
   status: active
@@ -6340,7 +6049,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Two players arm wrestle to determine the winner of the match.
+    label: ipg-s4-3 block 4ac81daeb088
 - id: ipg-b000168
   kind: block
   status: active
@@ -6352,7 +6061,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Two players play rock-paper-scissors to decide if they should play the match or draw.
+    label: ipg-s4-3 block d8e06137299c
 - id: ipg-b000169
   kind: block
   status: active
@@ -6364,8 +6073,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Two players compare the converted mana costs of the top cards of their libraries to determine
-      the winner of a game at the end of extra turns.
+    label: ipg-s4-3 block a8a6993d5f68
 - id: ipg-b000170
   kind: block
   status: active
@@ -6377,8 +6085,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Two players reveal cards from the top of their libraries to see “who would win” after extra
-      turns.
+    label: ipg-s4-3 block 788f51b33fa0
 - id: ipg-b000171
   kind: block
   status: active
@@ -6390,8 +6097,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player says “Oh no, we’re going to draw, that’s terrible for us. If only there were something
-      we could do about it.”
+    label: ipg-s4-3 block 0417f8974146
 - id: ipg-c000069
   kind: component
   status: active
@@ -6427,7 +6133,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Using an outside-the-game method to determine a winner compromises the integrity of the tournament.
+    label: ipg-s4-3 block 95d9da6a0b46
 - id: ipg-b000173
   kind: block
   status: active
@@ -6439,8 +6145,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Matches that result in a draw due to time are expected to be reported as such and are not excluded
-      from this penalty if the players use an illegal method to determine the outcome.
+    label: ipg-s4-3 block 1784930a06f2
 - id: ipg-s4-4
   kind: section
   status: active
@@ -6487,9 +6192,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player offers an incentive to entice an opponent into conceding, drawing, or changing the
-      results of a match, encourages such an offer, or accepts such an offer. Refer to section 5.2 of
-      the Magic Tournament Rules for a more detailed description of what constitutes bribery.
+    label: ipg-s4-4 block b442b8b99472
 - id: ipg-b000175
   kind: block
   status: active
@@ -6501,9 +6204,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Wagering occurs when a player or spectator at a tournament places or offers to place a bet
-      on the outcome of a tournament, match or any portion of a tournament or match. The wager does not
-      need to be monetary, nor is it relevant if a player is not betting on their own match.
+    label: ipg-s4-4 block 977d6e4208ed
 - id: ipg-b000176
   kind: block
   status: active
@@ -6515,8 +6216,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If the player was aware that what they were doing was against the rules, the infraction is
-      Unsporting Conduct — Cheating.
+    label: ipg-s4-4 block 5b3242f560b6
 - id: ipg-c000071
   kind: component
   status: active
@@ -6552,7 +6252,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player in a Swiss round offers their opponent $100 to concede the match.
+    label: ipg-s4-4 block 890dd8fa5d1e
 - id: ipg-b000178
   kind: block
   status: active
@@ -6564,7 +6264,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player offers their opponent a card in exchange for a draw.
+    label: ipg-s4-4 block 9f5c2f626b75
 - id: ipg-b000179
   kind: block
   status: active
@@ -6576,7 +6276,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player asks for a concession in exchange for a prize split.
+    label: ipg-s4-4 block 460ef48b5146
 - id: ipg-b000180
   kind: block
   status: active
@@ -6588,8 +6288,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Two players agree that the winner of the match will be able to choose a rare card out of the
-      other person’s deck after the match.
+    label: ipg-s4-4 block eb6355a9c53c
 - id: ipg-b000181
   kind: block
   status: active
@@ -6601,7 +6300,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Two spectators place a bet on the number of games that will be needed to decide a match.
+    label: ipg-s4-4 block 423f30fcccc8
 - id: ipg-c000072
   kind: component
   status: active
@@ -6637,7 +6336,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Bribery and wagering disrupt the integrity of the tournament and are strictly forbidden.
+    label: ipg-s4-4 block fab017e0d9c4
 - id: ipg-s4-5
   kind: section
   status: active
@@ -6684,7 +6383,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player acts in a threatening way towards others or their property.
+    label: ipg-s4-5 block f03ccd81e3ce
 - id: ipg-c000074
   kind: component
   status: active
@@ -6720,7 +6419,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player threatens to hit another player who won’t concede to them.
+    label: ipg-s4-5 block e559188ceccb
 - id: ipg-b000185
   kind: block
   status: active
@@ -6732,7 +6431,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player pulls a chair out from under another player, causing them to fall to the ground.
+    label: ipg-s4-5 block e993813a6f25
 - id: ipg-b000186
   kind: block
   status: active
@@ -6744,7 +6443,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player makes threats against a judge after receiving a ruling.
+    label: ipg-s4-5 block eea9456f313d
 - id: ipg-b000187
   kind: block
   status: active
@@ -6756,7 +6455,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player tears up a card belonging to another player.
+    label: ipg-s4-5 block dcd914a9d778
 - id: ipg-b000188
   kind: block
   status: active
@@ -6768,7 +6467,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player intentionally turns over a table.
+    label: ipg-s4-5 block ca4089762cff
 - id: ipg-c000075
   kind: component
   status: active
@@ -6804,8 +6503,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The safety of all people at a tournament is of paramount importance. There will be no tolerance
-      of physical abuse or intimidation.
+    label: ipg-s4-5 block 7b795addcc08
 - id: ipg-c000076
   kind: component
   status: active
@@ -6841,7 +6539,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The offender should be asked to leave the venue by the organizer.
+    label: ipg-s4-5 block 59803f42ac18
 - id: ipg-s4-6
   kind: section
   status: active
@@ -6888,8 +6586,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player steals materials from the tournament, including but not limited to cards or tournament
-      equipment.
+    label: ipg-s4-6 block 3c523ee277d8
 - id: ipg-c000078
   kind: component
   status: active
@@ -6925,7 +6622,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player steals cards from the sideboard of their opponent.
+    label: ipg-s4-6 block 5d5808e89eaf
 - id: ipg-b000193
   kind: block
   status: active
@@ -6937,7 +6634,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player steals the table number from a table.
+    label: ipg-s4-6 block 4ab90dd3012f
 - id: ipg-b000194
   kind: block
   status: active
@@ -6949,8 +6646,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player realizes they have a previous opponent’s card, but they hide it instead of telling
-      a tournament official.
+    label: ipg-s4-6 block bb2d13cfc759
 - id: ipg-c000079
   kind: component
   status: active
@@ -6986,11 +6682,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Players enter a tournament expecting that their materials will be protected. This does not
-      absolve the players from their responsibility to keep an eye on their possessions, but they should
-      expect to be able to retain the product they began with or were given for the tournament. Other
-      instances of theft not involving tournament materials are the responsibility of the Tournament Organizer,
-      though judges are encouraged to help in any way possible.
+    label: ipg-s4-6 block 2b0d9ccfcaa0
 - id: ipg-c000080
   kind: component
   status: active
@@ -7026,7 +6718,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The offender should be asked to leave the venue by the organizer.
+    label: ipg-s4-6 block 59803f42ac18
 - id: ipg-s4-7
   kind: section
   status: active
@@ -7073,8 +6765,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player intentionally plays slowly in order to take advantage of the time limit. If the slow
-      play is not intentional, please refer to Tournament Error — Slow Play instead.
+    label: ipg-s4-7 block 0a0acddfbace
 - id: ipg-c000082
   kind: component
   status: active
@@ -7110,8 +6801,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player has two lands in their hand, no options available to significantly affect the game,
-      and spends excessive time “thinking” about what to do to eat up time on the clock.
+    label: ipg-s4-7 block e0469cfa5324
 - id: ipg-b000199
   kind: block
   status: active
@@ -7123,8 +6813,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player is ahead in games and significantly slows down their pace of play so the opponent
-      has little chance to catch up.
+    label: ipg-s4-7 block 88298d43b919
 - id: ipg-b000200
   kind: block
   status: active
@@ -7136,8 +6825,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player playing slowly appeals a warning in an attempt to gain advantage by having more time
-      to make a decision.
+    label: ipg-s4-7 block 93fd0cc38035
 - id: ipg-b000201
   kind: block
   status: active
@@ -7149,8 +6837,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player intentionally mulligans slowly before the third game in an attempt to make it harder
-      for their opponent to win in time.
+    label: ipg-s4-7 block 0350370223e9
 - id: ipg-b000202
   kind: block
   status: active
@@ -7162,7 +6849,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player losing a game starts slowing down the pace of play in an attempt to run out the clock.
+    label: ipg-s4-7 block c7e752c13aa1
 - id: ipg-s4-8
   kind: section
   status: active
@@ -7209,9 +6896,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A person breaks a rule defined by the tournament documents, lies to a tournament official,
-      or notices an offense committed in their (or a teammate's) match and does not call attention to
-      it.
+    label: ipg-s4-8 block 5ffcaab01bc9
 - id: ipg-b000204
   kind: block
   status: active
@@ -7223,7 +6908,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: 'Additionally, the offense must meet the following criteria for it to be considered Cheating:'
+    label: ipg-s4-8 block ffcd43c104ee
 - id: ipg-g000088
   kind: group
   status: active
@@ -7247,7 +6932,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The player must be attempting to gain advantage from their action.
+    label: ipg-s4-8 block f37e50c2385e
 - id: ipg-b000206
   kind: block
   status: active
@@ -7259,7 +6944,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: The player must be aware that they are doing something illegal.
+    label: ipg-s4-8 block 6490a998db4a
 - id: ipg-g000089
   kind: group
   status: active
@@ -7283,9 +6968,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: If all criteria are not met, the offense is not Cheating and is handled by a different infraction.
-      Cheating will often appear on the surface as a Game Play Error or Tournament Error, and must be
-      investigated by the judge to make a determination of intent and awareness.
+    label: ipg-s4-8 block 4c03c5a0fb25
 - id: ipg-c000084
   kind: component
   status: active
@@ -7321,7 +7004,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player alters the results on a match slip without their opponent’s knowledge.
+    label: ipg-s4-8 block f543c89f62eb
 - id: ipg-b000209
   kind: block
   status: active
@@ -7333,7 +7016,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player lies to a tournament official about what happened in a game to make their case stronger.
+    label: ipg-s4-8 block ae2b7cd967a0
 - id: ipg-b000210
   kind: block
   status: active
@@ -7345,8 +7028,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player allows their opponent to put a creature into the graveyard even though the creature
-      has not been dealt lethal damage.
+    label: ipg-s4-8 block 48252a669b02
 - id: ipg-b000211
   kind: block
   status: active
@@ -7358,8 +7040,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player notices that their opponent resolved only half of the triggered ability of Sword of
-      Feast and Famine and decides not to call attention to the error.
+    label: ipg-s4-8 block aa5f5aaa8c13
 - id: ipg-b000212
   kind: block
   status: active
@@ -7371,7 +7052,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player peeks at another player’s picks during the draft.
+    label: ipg-s4-8 block 41010e118c29
 - id: ipg-b000213
   kind: block
   status: active
@@ -7383,7 +7064,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player adds cards to their Sealed Deck pool.
+    label: ipg-s4-8 block 75d6bd02e2c0
 - id: ipg-b000214
   kind: block
   status: active
@@ -7395,8 +7076,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: A player realizes they have accidentally drawn an extra card, then fails to call a judge in
-      order to avoid a penalty.
+    label: ipg-s4-8 block 49975c3aac97
 - id: ipg-b000215
   kind: block
   status: active
@@ -7408,7 +7088,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Looking at Extra Cards
+    label: ipg-app-a block 148063e0322a
 - id: ipg-b000216
   kind: block
   status: active
@@ -7420,7 +7100,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Hidden Card Error
+    label: ipg-app-a block e07e22c70cd7
 - id: ipg-b000217
   kind: block
   status: active
@@ -7432,7 +7112,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Mulligan Procedure Error
+    label: ipg-app-a block 01c3dc53e3db
 - id: ipg-b000218
   kind: block
   status: active
@@ -7444,7 +7124,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Failure to Maintain Game State
+    label: ipg-app-a block 87f79875c971
 - id: ipg-b000219
   kind: block
   status: active
@@ -7456,7 +7136,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Outside Assistance
+    label: ipg-app-a block 781e7d91c535
 - id: ipg-b000220
   kind: block
   status: active
@@ -7468,7 +7148,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Slow Play
+    label: ipg-app-a block 03b08e0861da
 - id: ipg-b000221
   kind: block
   status: active
@@ -7480,7 +7160,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Decklist Problem
+    label: ipg-app-a block a5b2c3682393
 - id: ipg-b000222
   kind: block
   status: active
@@ -7492,7 +7172,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Deck Problem
+    label: ipg-app-a block e0e9445c7f16
 - id: ipg-b000223
   kind: block
   status: active
@@ -7504,7 +7184,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Limited Procedure Violation
+    label: ipg-app-a block 227f1d8a70c0
 - id: ipg-b000224
   kind: block
   status: active
@@ -7516,7 +7196,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Communication Policy Violation
+    label: ipg-app-a block 8a0f9623cef9
 - id: ipg-b000225
   kind: block
   status: active
@@ -7528,7 +7208,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Marked Cards
+    label: ipg-app-a block 8dd7c6822528
 - id: ipg-b000226
   kind: block
   status: active
@@ -7540,7 +7220,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Insufficient Shuffling
+    label: ipg-app-a block 03b627902ca5
 - id: ipg-b000227
   kind: block
   status: active
@@ -7552,7 +7232,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Unsporting Conduct — Minor
+    label: ipg-app-a block b677d3f3dd22
 - id: ipg-b000228
   kind: block
   status: active
@@ -7564,7 +7244,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Unsporting Conduct — Major
+    label: ipg-app-a block 05c3f5b5a22c
 - id: ipg-b000229
   kind: block
   status: active
@@ -7576,7 +7256,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Improperly Determining a Winner
+    label: ipg-app-a block 5d4c6f008957
 - id: ipg-b000230
   kind: block
   status: active
@@ -7588,7 +7268,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Bribery and Wagering
+    label: ipg-app-a block 5467f6d15abd
 - id: ipg-b000231
   kind: block
   status: active
@@ -7600,7 +7280,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Aggressive Behavior
+    label: ipg-app-a block 6c6b6bff39c2
 - id: ipg-b000232
   kind: block
   status: active
@@ -7612,7 +7292,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Theft of Tournament Material
+    label: ipg-app-a block bd149cf8a8de
 - id: ipg-b000233
   kind: block
   status: active
@@ -7624,7 +7304,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: Stalling
+    label: ipg-app-a block c112f7699171
 - id: ipg-g000091
   kind: group
   status: active
@@ -7648,8 +7328,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: '2.3: Made it clearer that a morph returned to hand without reveal is not part of the upgrade
-      path.'
+    label: ipg-app-b block ffbcc39a0d23
 - id: ipg-b000235
   kind: block
   status: active
@@ -7661,8 +7340,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: '2.3: Added a clarification that the player needs to identify a morph problem before it is
-      about to be discovered by the opponent.'
+    label: ipg-app-b block 062725a5fe43
 - id: ipg-b000236
   kind: block
   status: active
@@ -7674,7 +7352,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: '3.4: Added wording to make presenting the wrong decklist to an opponent a Decklist Problem.'
+    label: ipg-app-b block aa4f658704fe
 - id: ipg-b000237
   kind: block
   status: active
@@ -7686,7 +7364,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: '3.5: Clarity on the order of when things happen once a problem has been discovered.'
+    label: ipg-app-b block ddea7f33fc36
 - id: ipg-b000238
   kind: block
   status: active
@@ -7698,7 +7376,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: '3.5: Companion restriction fix now parallels the normal error fix.'
+    label: ipg-app-b block fdf3b2fac894
 - id: ipg-b000239
   kind: block
   status: active
@@ -7710,8 +7388,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: '3.5: Removed the requirement that multiple copies of the card have to be discovered after
-      the game has begun (can now happen during pregame procedures).'
+    label: ipg-app-b block a15eabcf7cc4
 - id: ipg-g000092
   kind: group
   status: active
@@ -7735,7 +7412,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: '2.3: Upgrade language changed to account for disguise ability.'
+    label: ipg-app-b block 0d88e8e0bb73
 - id: ipg-g000093
   kind: group
   status: active
@@ -7759,7 +7436,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: '3.5: Rephrased first sentences in the remedy to make the order of actions clearer.'
+    label: ipg-app-b block cb5ad94c5097
 - id: ipg-b000242
   kind: block
   status: active
@@ -7771,7 +7448,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: '4.2: Added intentional misgendering as an example of USC-Major.'
+    label: ipg-app-b block 066e893aae6f
 - id: ipg-g000094
   kind: group
   status: active
@@ -7795,7 +7472,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: '1.1: Added link to report disqualifications. Removed outdated link to additional DQ information.'
+    label: ipg-app-b block beb30e398b78
 - id: ipg-b000244
   kind: block
   status: active
@@ -7807,7 +7484,7 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: '2.1: Missed triggers can now do a simple backup in limited situations.'
+    label: ipg-app-b block 8f27ece004f8
 - id: ipg-b000245
   kind: block
   status: active
@@ -7819,4 +7496,4 @@ entries:
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-p3
-    label: '3.5: Opponent chooses the timing of when to return the cards to the deck.'
+    label: ipg-app-b block 92276b4d8267
