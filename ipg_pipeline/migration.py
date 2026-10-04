@@ -145,8 +145,12 @@ def _map_title(
     _consume(dispositions, source, "mapped-bilingual-title", section["id"])
 
 
-def _body_pairs(units: list[dict[str, Any]], number: str) -> list[dict[str, Any]]:
-    start, end = SECTION_RANGES[number]
+def _body_pairs(
+    units: list[dict[str, Any]],
+    number: str,
+    section_ranges: dict[str, tuple[int, int]] | None = None,
+) -> list[dict[str, Any]]:
+    start, end = (section_ranges or SECTION_RANGES)[number]
     pairs: list[dict[str, Any]] = []
     line = start
     while line <= end:
@@ -198,6 +202,7 @@ def _align_block(
     findings: list[dict[str, Any]],
     mappings: list[dict[str, Any]],
     manual: dict[str, Any] | None = None,
+    section_ranges: dict[str, tuple[int, int]] | None = None,
 ) -> None:
     wanted = _match_norm(block["text"]["en"])
     if manual is not None:
@@ -257,7 +262,7 @@ def _align_block(
                     "code": "missing-legacy-mapping",
                     "targetId": block["id"],
                     "officialText": block["text"]["en"],
-                    "searchRange": list(SECTION_RANGES[number]),
+                    "searchRange": list((section_ranges or SECTION_RANGES)[number]),
                     "topCandidates": evidence,
                 },
                 {"code": "missing-translation", "targetId": block["id"]},
@@ -272,7 +277,7 @@ def _align_block(
                     "code": "ambiguous-mapping",
                     "targetId": block["id"],
                     "officialText": block["text"]["en"],
-                    "searchRange": list(SECTION_RANGES[number]),
+                    "searchRange": list((section_ranges or SECTION_RANGES)[number]),
                     "topCandidates": evidence,
                 },
                 {"code": "missing-translation", "targetId": block["id"]},

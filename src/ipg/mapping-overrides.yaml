@@ -3,7 +3,39 @@ reconciliation:
   englishHashToStableId:
     0e14c7fd4e78fe1c92e1cf6cd196558b59e544ad78300b1b868816936e9c9ed6: ipg-s2-1-c-philosophy-g01-b002
     eee96477a61a24f298b047887eaba62ab80d22f673642ac386554b7c0156609a: ipg-s2-3-c-additional-remedy-g01-b004
+    d60e4f4aebae3298ffa20f90ff1953260d8208165ba17f73f757bf0f323d272d: ipg-s2-3-c-additional-remedy-g01-b004
 applied:
+  - id: p4-body-4-2-upgrade-context
+    kind: legacy-official-context
+    targetId: ipg-b000162
+    legacyRawUnits: [raw-L003246, raw-L003248]
+    confidence: high
+    rationale: These paired lines reproduce obsolete official-body context immediately under the 4.2 Upgrade heading; they are retained as body provenance and must not be converted into a publication annotation.
+  - id: p4-ann-2-1-simple-backup-guide
+    kind: publication-annotation-boundaries
+    targetId: ipg-s2-1-c-additional-remedy-g01-b005
+    startLine: 1206
+    legacyRawUnits: [raw-L001206, raw-L001207, raw-L001209, raw-L001211, raw-L001213, raw-L001215, raw-L001217, raw-L001219, raw-L001221, raw-L001222, raw-L001224, raw-L001226, raw-L001228, raw-L001230, raw-L001232, raw-L001234, raw-L001236, raw-L001238, raw-L001240, raw-L001242, raw-L001244, raw-L001246, raw-L001248, raw-L001250, raw-L001252, raw-L001254, raw-L001256, raw-L001258, raw-L001260]
+    anchor: {type: block, id: ipg-s2-1-c-additional-remedy-g01-b005}
+    position: after
+    order: 10
+    confidence: high
+    rationale: The legacy annotation has missing quote markers and combines two English example paragraphs into one Chinese paragraph; explicit bilingual boundaries preserve every fragment without guessing or splitting the old translation.
+    legacyBlocks:
+      - {enLines: [1206], zhLines: [1234]}
+      - {enLines: [1207], zhLines: [1236]}
+      - {enLines: [1209], zhLines: [1238], marker: bullet}
+      - {enLines: [1211], zhLines: [1240], marker: bullet}
+      - {enLines: [1213], zhLines: [1242], marker: bullet}
+      - {enLines: [1215, 1217], zhLines: [1244]}
+      - {enLines: [1219], zhLines: [1246]}
+      - {enLines: [1221], zhLines: [1248], marker: bullet}
+      - {enLines: [1222], zhLines: [1250], marker: bullet}
+      - {enLines: [1224], zhLines: [1252], marker: bullet}
+      - {enLines: [1226], zhLines: [1254]}
+      - {enLines: [1228], zhLines: [1256]}
+      - {enLines: [1230], zhLines: [1258]}
+      - {enLines: [1232], zhLines: [1260]}
   - id: pilot-body-2-1-delayed-copy
     kind: body-interval
     targetId: ipg-s2-1-c-definition-g03-b003

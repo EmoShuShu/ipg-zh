@@ -281,6 +281,179 @@ def reconcile_full_document(
     return result
 
 
+def reconcile_frozen_full_document(
+    parsed: dict[str, Any], registry: dict[str, Any], overrides: dict[str, Any]
+) -> dict[str, Any]:
+    """Resolve the frozen P3 structure exclusively from registry evidence.
+
+    P4 must be reproducible without an ignored P3 work file or a mutable source
+    document acting as an identity seed.  This resolver never allocates: every
+    official node must already be represented by the frozen 649-entry registry.
+    """
+    result = copy.deepcopy(parsed)
+    active = [entry for entry in registry.get("entries", []) if entry.get("status") == "active"]
+    by_id = {entry["id"]: entry for entry in active}
+    by_key = {entry["canonicalKey"]: entry for entry in active}
+    block_entries = [entry for entry in active if entry.get("kind") == "block"]
+
+    def registry_block_hashes(entry: dict[str, Any]) -> set[str]:
+        hashes = {entry.get("evidence", {}).get("englishHash", "")}
+        hashes.update(
+            identity_evidence(event["label"])
+            for event in entry.get("history", [])
+            if event.get("event") == "allocated" and event.get("label")
+        )
+        return hashes - {""}
+    findings: list[dict[str, Any]] = []
+    id_remap: dict[str, str] = {}
+    resolved: set[str] = set()
+    forced_blocks = overrides.get("reconciliation", {}).get("englishHashToStableId", {})
+
+    def choose(kind: str, candidates: list[dict[str, Any]], context: dict[str, Any]) -> str | None:
+        unique = {entry["id"]: entry for entry in candidates if entry.get("kind") == kind}
+        if len(unique) == 1:
+            entry_id = next(iter(unique))
+            if entry_id in resolved:
+                findings.append({"code": "registry-id-reused", "id": entry_id, **context})
+                return None
+            resolved.add(entry_id)
+            return entry_id
+        findings.append(
+            {
+                "code": "registry-identity-missing" if not unique else "registry-identity-ambiguous",
+                "kind": kind,
+                "candidateIds": sorted(unique),
+                **context,
+            }
+        )
+        return None
+
+    for section in result["document"]["sections"]:
+        number = section["number"]
+        temporary_section_id = section["id"]
+        semantic_section_id = {
+            "introduction": "ipg-introduction",
+            "framework": "ipg-framework",
+            "A": "ipg-app-a",
+            "B": "ipg-app-b",
+        }.get(number, f"ipg-s{number.replace('.', '-')}")
+        section_candidates = [
+            entry
+            for entry in (
+                by_key.get(f"official:section:{number}"),
+                by_key.get(f"section:{number}"),
+                by_id.get(semantic_section_id),
+            )
+            if entry is not None
+        ]
+        stable_section_id = choose("section", section_candidates, {"section": number})
+        if stable_section_id is None:
+            continue
+        section["id"] = stable_section_id
+        id_remap[temporary_section_id] = stable_section_id
+
+        for component_ordinal, component in enumerate(section["components"], 1):
+            role = component["role"]
+            role_suffix = {"appendix-table": "table"}.get(role, role)
+            semantic_component_id = f"{stable_section_id}-c-{role_suffix}"
+            component_candidates = [
+                entry
+                for entry in (
+                    by_key.get(
+                        f"official:component:{stable_section_id}:{role}:{component_ordinal}"
+                    ),
+                    by_id.get(semantic_component_id),
+                )
+                if entry is not None
+            ]
+            stable_component_id = choose(
+                "component",
+                component_candidates,
+                {"section": number, "role": role, "ordinal": component_ordinal},
+            )
+            if stable_component_id is None:
+                continue
+            component["id"] = stable_component_id
+
+            for group_ordinal, group in enumerate(component["groups"], 1):
+                hashes = {identity_evidence(block["text"]["en"]) for block in group["blocks"]}
+                signature = sha256_text("|".join(sorted(hashes)))
+                semantic_group_id = f"{stable_component_id}-g{group_ordinal:02d}"
+                group_candidates = [
+                    entry
+                    for entry in (
+                        by_key.get(
+                            f"official:group:{stable_component_id}:{group['kind']}:{signature}"
+                        ),
+                        by_id.get(semantic_group_id),
+                    )
+                    if entry is not None
+                ]
+                stable_group_id = choose(
+                    "group",
+                    group_candidates,
+                    {
+                        "section": number,
+                        "component": stable_component_id,
+                        "kind": group["kind"],
+                        "ordinal": group_ordinal,
+                    },
+                )
+                if stable_group_id is None:
+                    continue
+                group["id"] = stable_group_id
+
+                for block in group["blocks"]:
+                    evidence = identity_evidence(block["text"]["en"])
+                    forced_id = forced_blocks.get(evidence)
+                    exact_candidates = [by_id[forced_id]] if forced_id in by_id else []
+                    for entry in block_entries:
+                        if forced_id:
+                            continue
+                        item_evidence = entry.get("evidence", {})
+                        if evidence not in registry_block_hashes(entry):
+                            continue
+                        exact_candidates.append(entry)
+                    candidates = []
+                    for entry in exact_candidates:
+                        item_evidence = entry.get("evidence", {})
+                        contexts = {
+                            item_evidence.get("context"),
+                            item_evidence.get("component"),
+                            item_evidence.get("section"),
+                        }
+                        if stable_component_id in contexts or stable_section_id in contexts:
+                            candidates.append(entry)
+                    if not candidates and len(exact_candidates) == 1:
+                        candidates = exact_candidates
+                    stable_block_id = choose(
+                        "block",
+                        candidates,
+                        {
+                            "section": number,
+                            "component": stable_component_id,
+                            "englishHash": evidence,
+                        },
+                    )
+                    if stable_block_id is not None:
+                        block["id"] = stable_block_id
+
+    for _, node in walk_nodes([result["document"]]):
+        if node.get("referenceId") in id_remap:
+            node["referenceId"] = id_remap[node["referenceId"]]
+
+    result["document"]["documentId"] = "ipg-full-official-2024-09-23"
+    result["document"]["publicationAnnotations"] = []
+    result["idStatus"] = "reconciled-frozen-registry-ids"
+    result["reconciliation"] = {
+        "resolvedRegistryIds": sorted(resolved),
+        "resolvedRegistryIdCount": len(resolved),
+        "findings": findings,
+    }
+    result["registry"] = copy.deepcopy(registry)
+    return result
+
+
 def reconcile_block_sequence(
     extracted: list[dict[str, Any]],
     registry: dict[str, Any],
