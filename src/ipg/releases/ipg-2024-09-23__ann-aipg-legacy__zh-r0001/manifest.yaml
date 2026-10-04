@@ -1,6 +1,18 @@
 schemaVersion: 1
 releaseId: ipg-2024-09-23__ann-aipg-legacy__zh-r0001
-scope: pilot-vertical-slice
+scope:
+  officialContent:
+    mode: pilot
+    included:
+      - chapter-2
+      - appendix-a-sample
+      - appendix-b-sample
+  publicationAnnotations:
+    mode: pilot
+    includedSections: ["2.5"]
+    deferredGroups: 86
+    deferredRawUnits: 338
+publishable: false
 versions:
   official:
     effectiveDate: "2024-09-23"

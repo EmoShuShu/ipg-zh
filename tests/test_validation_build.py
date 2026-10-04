@@ -31,6 +31,14 @@ def _complete_manifest(manifest: dict) -> dict:
     result = copy.deepcopy(manifest)
     result["versions"]["annotations"]["licenseStatus"] = "complete"
     result["versions"]["annotations"]["attribution"] = "test-fixture-attribution"
+    result["scope"] = {
+        "officialContent": {"mode": "full-document", "included": ["synthetic-test"]},
+        "publicationAnnotations": {
+            "mode": "full-document", "includedSections": ["synthetic-test"],
+            "deferredGroups": 0, "deferredRawUnits": 0,
+        },
+    }
+    result["publishable"] = True
     return result
 
 
@@ -49,6 +57,30 @@ def test_candidate_succeeds_while_same_content_fails_release() -> None:
     assert release["valid"] is False
     assert release["releaseGateCounts"]["missingTranslation"] == 0
     assert release["releaseGateCounts"]["reviewLedgerMissing"] == 1
+    assert "manifest-not-full-document" in release["readinessFindingCounts"]
+    assert "manifest-not-publishable" in release["readinessFindingCounts"]
+    assert "deferred-publication-annotations" in release["readinessFindingCounts"]
+
+
+def test_actual_manifest_has_machine_verifiable_nonpublishable_scope() -> None:
+    manifest, _, _, _ = _inputs()
+    assert manifest["scope"]["officialContent"]["mode"] == "pilot"
+    assert manifest["scope"]["publicationAnnotations"] == {
+        "mode": "pilot", "includedSections": ["2.5"], "deferredGroups": 86, "deferredRawUnits": 338,
+    }
+    assert manifest["publishable"] is False
+
+
+def test_full_document_with_deferred_annotations_still_fails_release() -> None:
+    manifest, documents, display, migration = _inputs(); manifest = _complete_manifest(manifest)
+    manifest["scope"]["publicationAnnotations"]["deferredGroups"] = 86
+    manifest["scope"]["publicationAnnotations"]["deferredRawUnits"] = 338
+    report = validate_release(
+        profile="release", manifest=manifest, documents=documents, display_values=display,
+        migration_report=migration, review_ledger=_reviewed_ledger(documents, display),
+    )
+    assert report["valid"] is False
+    assert report["readinessFindingCounts"]["deferred-publication-annotations"] == 1
 
 
 def test_clean_2_5_fixture_requires_and_passes_with_complete_ledger() -> None:
@@ -155,3 +187,6 @@ def test_build_is_byte_deterministic_and_rules_hash_is_external(tmp_path) -> Non
     assert rules["candidate"] is True and "rulesSha256" not in str(rules)
     assert validate_schema(rules, ROOT / "schema/ipg-output.schema.json") == []
     assert (first / "IPG.md").read_text(encoding="utf-8").startswith("<!-- CANDIDATE: NOT FOR RELEASE -->")
+    notice = (first / "IPG.md").read_text(encoding="utf-8").splitlines()[1]
+    assert "范围尚不完整" in notice and "尚未完成完整审校" in notice
+    assert "包含明确标记的缺译" not in notice

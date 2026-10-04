@@ -159,6 +159,30 @@ def validate_release(
     ):
         readiness.append({"code": "annotation-license-pending", "targetId": "versions.annotations"})
 
+    scope = manifest.get("scope", {})
+    official_scope = scope.get("officialContent", {})
+    annotation_scope = scope.get("publicationAnnotations", {})
+    if official_scope.get("mode") not in {"pilot", "full-document"}:
+        structural.append({"code": "invalid-manifest-scope", "targetId": "scope.officialContent.mode"})
+    if annotation_scope.get("mode") not in {"pilot", "full-document"}:
+        structural.append({"code": "invalid-manifest-scope", "targetId": "scope.publicationAnnotations.mode"})
+    if profile == "release":
+        if official_scope.get("mode") != "full-document":
+            readiness.append({"code": "manifest-not-full-document", "targetId": "scope.officialContent.mode"})
+        if manifest.get("publishable") is not True:
+            readiness.append({"code": "manifest-not-publishable", "targetId": "publishable"})
+        deferred_groups = int(annotation_scope.get("deferredGroups", 0))
+        deferred_raw_units = int(annotation_scope.get("deferredRawUnits", 0))
+        if deferred_groups or deferred_raw_units:
+            readiness.append(
+                {
+                    "code": "deferred-publication-annotations",
+                    "targetId": "scope.publicationAnnotations",
+                    "groups": deferred_groups,
+                    "rawUnits": deferred_raw_units,
+                }
+            )
+
     current_units = _review_units(documents, display_values)
     if review_ledger is None:
         readiness.append({"code": "missing-review-ledger", "targetId": "review-ledger"})

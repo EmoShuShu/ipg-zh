@@ -35,6 +35,16 @@ def build_p2_review_pack(
     clean_manifest = copy.deepcopy(manifest)
     clean_manifest["versions"]["annotations"]["licenseStatus"] = "complete"
     clean_manifest["versions"]["annotations"]["attribution"] = "fixture-only-attribution"
+    clean_manifest["scope"] = {
+        "officialContent": {"mode": "full-document", "included": ["synthetic-clean-fixture"]},
+        "publicationAnnotations": {
+            "mode": "full-document",
+            "includedSections": ["synthetic-clean-fixture"],
+            "deferredGroups": 0,
+            "deferredRawUnits": 0,
+        },
+    }
+    clean_manifest["publishable"] = True
     units = collect_units([("chapter-02.yaml", chapter)], display_values)
     actions = [
         {
