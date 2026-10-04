@@ -1,0 +1,20 @@
+schemaVersion: 1
+applied: []
+examples:
+  rename:
+    from: {id: ipg-s2-5, title: Old title}
+    to: {id: ipg-s2-5, title: Game Rule Violation}
+    identity: preserve
+  renumber:
+    from: {id: ipg-example-renumber, number: "2.x"}
+    to: {id: ipg-example-renumber, number: "2.y"}
+    identity: preserve
+  split:
+    from: [ipg-example-old-block]
+    to: [ipg-example-new-block-a, ipg-example-new-block-b]
+    translationInheritance: manual
+  merge:
+    from: [ipg-example-old-block-a, ipg-example-old-block-b]
+    to: [ipg-example-new-block]
+    translationInheritance: manual
+

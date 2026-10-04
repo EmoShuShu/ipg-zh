@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/ipg-output.schema.json",
+  "title": "IPG output v1",
+  "type": "object",
+  "required": ["schema", "releaseId", "versions", "candidate", "displayValues", "sections", "publicationAnnotations"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "ipg-output-v1"},
+    "releaseId": {"type": "string"},
+    "versions": {"type": "object"},
+    "candidate": {"type": "boolean"},
+    "displayValues": {"type": "object"},
+    "sections": {"type": "array"},
+    "publicationAnnotations": {"type": "array"}
+  }
+}
+

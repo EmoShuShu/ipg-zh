@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/ipg-source.schema.json",
+  "title": "IPG structured source v1 pilot",
+  "type": "object",
+  "required": ["schemaVersion", "documentId", "sections", "publicationAnnotations"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "documentId": {"type": "string", "pattern": "^ipg-"},
+    "sections": {"type": "array", "items": {"$ref": "#/$defs/section"}},
+    "publicationAnnotations": {"type": "array", "items": {"$ref": "#/$defs/annotation"}}
+  },
+  "$defs": {
+    "localized": {
+      "type": "object",
+      "required": ["en", "zh"],
+      "additionalProperties": false,
+      "properties": {"en": {"type": "string"}, "zh": {"type": "string"}}
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["pdfSha256", "page", "bbox", "extractionUnit"],
+      "additionalProperties": false,
+      "properties": {
+        "pdfSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "page": {"type": "integer", "minimum": 1},
+        "bbox": {"type": "array", "prefixItems": [{"type": "number"}, {"type": "number"}, {"type": "number"}, {"type": "number"}], "items": false},
+        "extractionUnit": {"type": "string", "minLength": 1}
+      }
+    },
+    "block": {
+      "type": "object",
+      "required": ["id", "type", "text", "officialPdfUnit"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^ipg-"},
+        "type": {"enum": ["paragraph", "list-item", "appendix-row", "change-entry"]},
+        "text": {"$ref": "#/$defs/localized"},
+        "marker": {"type": "string"},
+        "displayCode": {"type": "string"},
+        "officialPdfUnit": {"$ref": "#/$defs/provenance"}
+      }
+    },
+    "group": {
+      "type": "object",
+      "required": ["id", "kind", "blocks"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^ipg-"},
+        "kind": {"enum": ["paragraphs", "ordered-list", "unordered-list", "appendix-table", "change-list"]},
+        "blocks": {"type": "array", "items": {"$ref": "#/$defs/block"}}
+      }
+    },
+    "component": {
+      "type": "object",
+      "required": ["id", "role", "labelCode", "groups"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^ipg-"},
+        "role": {"enum": ["body", "definition", "examples", "philosophy", "additional-remedy", "appendix-table", "change-log"]},
+        "labelCode": {"type": "string"},
+        "groups": {"type": "array", "items": {"$ref": "#/$defs/group"}}
+      }
+    },
+    "section": {
+      "type": "object",
+      "required": ["id", "kind", "number", "title", "components"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^ipg-"},
+        "kind": {"enum": ["chapter", "infraction", "appendix"]},
+        "number": {"type": "string"},
+        "title": {"$ref": "#/$defs/localized"},
+        "penaltyCode": {"type": "string"},
+        "components": {"type": "array", "items": {"$ref": "#/$defs/component"}}
+      }
+    },
+    "annotation": {
+      "type": "object",
+      "required": ["id", "anchor", "position", "text", "sourceRawUnits"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^ipg-ann-"},
+        "anchor": {
+          "type": "object",
+          "required": ["type", "id"],
+          "additionalProperties": false,
+          "properties": {
+            "type": {"enum": ["section", "component", "group", "block"]},
+            "id": {"type": "string", "pattern": "^ipg-"}
+          }
+        },
+        "position": {"enum": ["before", "after", "inside-start", "inside-end"]},
+        "text": {"$ref": "#/$defs/localized"},
+        "sourceRawUnits": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^raw-"}}
+      }
+    }
+  }
+}
+

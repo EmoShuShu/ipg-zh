@@ -1,0 +1,27 @@
+schemaVersion: 1
+officialPdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+pageSizePoints: [612, 792]
+regions:
+  chapter-02:
+    pages: [7, 8, 9, 10, 11, 12, 13, 14]
+    bbox: [48, 64, 564, 756]
+  section-2.5-page-13:
+    pages: [13]
+    bbox: [48, 76, 564, 756]
+  section-2.5-page-14:
+    pages: [14]
+    bbox: [48, 64, 564, 203]
+  appendix-a:
+    pages: [30]
+    bbox: [48, 64, 564, 756]
+  appendix-b:
+    pages: [31]
+    bbox: [48, 64, 564, 756]
+legacyRegression:
+  fileSha256: acce82ca7224d5d741609807a2d95697337e56110354efec370938dea51b75fb
+  formatAnomaly:
+    englishLine: 3246
+    chineseLine: 3248
+    expectedEnglishPrefix: ">As explained below"
+    expectedChinesePrefix: "如下所述"
+

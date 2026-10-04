@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "entries"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["unitId", "sourceHash", "targetHash", "status"],
+        "additionalProperties": false,
+        "properties": {
+          "unitId": {"type": "string"},
+          "sourceHash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "targetHash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "status": {"enum": ["unreviewed", "reviewed-unchanged", "reviewed-modified", "stale"]},
+          "reviewedAt": {"type": ["string", "null"]}
+        }
+      }
+    }
+  }
+}
+

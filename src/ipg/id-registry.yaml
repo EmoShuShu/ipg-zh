@@ -1,0 +1,38 @@
+schemaVersion: 1
+policy:
+  allocation: monotonic-explicit
+  reuseRetiredIds: false
+  registryIsAuthority: true
+entries:
+  - id: ipg-s2
+    kind: section
+    status: active
+    canonicalKey: section:2
+    history:
+      - {event: allocated, atVersion: ipg-2024-09-23, label: Game Play Errors}
+  - id: ipg-s2-5
+    kind: section
+    status: active
+    canonicalKey: section:2.5
+    history:
+      - {event: allocated, atVersion: ipg-2024-09-23, label: Game Rule Violation}
+  - id: ipg-app-a
+    kind: section
+    status: active
+    canonicalKey: appendix:A
+    history:
+      - {event: allocated, atVersion: ipg-2024-09-23, label: Penalty Quick Reference}
+  - id: ipg-app-b
+    kind: section
+    status: active
+    canonicalKey: appendix:B
+    history:
+      - {event: allocated, atVersion: ipg-2024-09-23, label: Changes from Previous Versions}
+  - id: ipg-retired-example-0001
+    kind: block
+    status: retired
+    canonicalKey: retired-example:0001
+    history:
+      - {event: allocated, atVersion: example-v1, label: Historical example}
+      - {event: retired, atVersion: example-v2, reason: Demonstrates permanent tombstone}
+

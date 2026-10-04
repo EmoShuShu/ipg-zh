@@ -1,0 +1,15 @@
+schemaVersion: 1
+values:
+  component.body: {en: Body, zh: 正文}
+  component.definition: {en: Definition, zh: 定义}
+  component.examples: {en: Examples, zh: 范例}
+  component.philosophy: {en: Philosophy, zh: 原则}
+  component.additional-remedy: {en: Additional Remedy, zh: 进一步的修正}
+  component.appendix-table: {en: Penalty Quick Reference, zh: 处罚快速查询}
+  component.change-log: {en: Changes from Previous Versions, zh: 与之前版本的更动}
+  penalty.none: {en: No Penalty, zh: 无处罚}
+  penalty.warning: {en: Warning, zh: 警告}
+  penalty.game-loss: {en: Game Loss, zh: 一盘负}
+  penalty.match-loss: {en: Match Loss, zh: 一局负}
+  penalty.disqualification: {en: Disqualification, zh: 取消资格}
+
