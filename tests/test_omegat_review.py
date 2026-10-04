@@ -21,7 +21,7 @@ def _export(tmp_path):
 def test_omegat_boundaries_split_annotation_blocks_and_display_values_once(tmp_path) -> None:
     project, mapping, _, display = _export(tmp_path)
     ids = [unit["id"] for unit in mapping["units"]]
-    assert len(ids) == len(set(ids)) == 128
+    assert len(ids) == len(set(ids)) == 131
     display_ids = [unit_id for unit_id in ids if unit_id.startswith("display:")]
     assert sorted(display_ids) == sorted(f"display:{code}" for code in display["values"])
     assert all(display_ids.count(f"display:{code}") == 1 for code in display["values"])
