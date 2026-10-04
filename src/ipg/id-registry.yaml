@@ -71,6 +71,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: Missed Trigger
+  evidence:
+    context: ipg-app-a-c-table
+    englishHash: 1592d83f759599317be82e40e0566bd24388edf5f039a7f9c1582bd3676c5767
 - id: ipg-app-a-row-05
   kind: block
   status: active
@@ -79,6 +82,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: Game Rule Violation
+  evidence:
+    context: ipg-app-a-c-table
+    englishHash: 4ee347f5ce6c58f114927c4befa4ea5abb5eb0384e2303ce5b8d01c6727d4937
 - id: ipg-app-a-row-07
   kind: block
   status: active
@@ -87,6 +93,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: Tardiness
+  evidence:
+    context: ipg-app-a-c-table
+    englishHash: a5cf8d36a16d78ec1831c28dbd4cd1fb0f258db7d3c9dd2bb4658345e73279da
 - id: ipg-app-a-row-23
   kind: block
   status: active
@@ -95,6 +104,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: Cheating
+  evidence:
+    context: ipg-app-a-c-table
+    englishHash: f3b643eead27d2d8c49d6b0421ff9ccafb51de6d96b96d683799aa402593ca5a
 - id: ipg-app-b-c-change-log
   kind: component
   status: active
@@ -120,6 +132,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: '1.2: Removed specific details of how penalties are collected and stored, as it varies depending
       on the software being used.'
+  evidence:
+    context: ipg-app-b-c-change-log
+    englishHash: c6ed440f9c443c2d59fe424e95f69974e77173318e9a655412e422aa7a5138a5
 - id: ipg-app-b-change-02
   kind: block
   status: active
@@ -128,6 +143,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: '2.1: Treat missed Saga turn actions as missed triggers.'
+  evidence:
+    context: ipg-app-b-c-change-log
+    englishHash: 23168271284431b51d51f7d499fb05f2d8f4a47185114df99aa2f9ad429ce870
 - id: ipg-app-b-change-03
   kind: block
   status: active
@@ -136,6 +154,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: '2.1: Missed triggers still count as having triggered.'
+  evidence:
+    context: ipg-app-b-c-change-log
+    englishHash: 0840dd2d978c2bb7fadb7a609443869abca1c7162ef1cc7d8ae3ef98f451699c
 - id: ipg-app-b-change-04
   kind: block
   status: active
@@ -145,6 +166,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: '2.5: Object-in-wrong-zone changed to always be a partial fix, but only when the incorrect
       zone is the root GRV.'
+  evidence:
+    context: ipg-app-b-c-change-log
+    englishHash: e41290431923c240a87e053d1e64f41510c340a37cb577983eded8895baf5fe8
 - id: ipg-app-b-change-05
   kind: block
   status: active
@@ -154,6 +178,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: '3.5: Wrong number of cards upgrade has been split into two paragraphs for clarity, as it has
       slightly different criteris for pre- and post-sideboard games.'
+  evidence:
+    context: ipg-app-b-c-change-log
+    englishHash: d87dc6ff168d88015628fb0484f141f2d1e1a93db9187980ba2e8e5fb638288a
 - id: ipg-s2-c-body
   kind: component
   status: active
@@ -181,6 +208,9 @@ entries:
       in violations of the Magic Comprehensive Rules. Many offenses fit into this category and it would
       be impossible to list them all. The guide below is designed to give judges a framework for assessing
       how to handle a Game Play Error.
+  evidence:
+    context: ipg-s2-c-body
+    englishHash: cfac46638034e8043964bb9293ae7306880017fc0301f8160f0c17742122f422
 - id: ipg-s2-c-body-g01-b002
   kind: block
   status: active
@@ -191,6 +221,9 @@ entries:
     label: Most Game Play Error infractions are assumed to have been committed unintentionally. If the
       judge believes that the error was intentional, they should first consider whether an Unsporting
       Conduct — Cheating infraction has occurred.
+  evidence:
+    context: ipg-s2-c-body
+    englishHash: a3a2ea915118f85f1fa7b77f8ba9084ce708b6e953850b1e8eee1566fafc01f4
 - id: ipg-s2-c-body-g01-b003
   kind: block
   status: active
@@ -201,6 +234,9 @@ entries:
     label: With the exception of Failure to Maintain Game State, which is never upgraded, the third or
       subsequent Warning for a Game Play Error offense in the same category is upgraded to a Game Loss.
       For multi-day tournaments, the penalty count for these infractions resets between days.
+  evidence:
+    context: ipg-s2-c-body
+    englishHash: fa833afee79249e3573a44be3e244556dba0463cbeacef19e15b41d570a00af0
 - id: ipg-s2-1
   kind: section
   status: active
@@ -234,6 +270,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: A triggered ability triggers, but the player controlling the ability doesn’t demonstrate awareness
       of the trigger’s existence by the first time that it would affect the game in a visible fashion.
+  evidence:
+    context: ipg-s2-1-c-definition
+    englishHash: cc1ddd4f8df887f0275b6036a3f4bad508b3204b27aa97fcc082781df4d22619
 - id: ipg-s2-1-c-definition-g01-b002
   kind: block
   status: active
@@ -243,6 +282,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: 'The point by which the player needs to demonstrate this awareness depends on the impact that
       the trigger would have on the game:'
+  evidence:
+    context: ipg-s2-1-c-definition
+    englishHash: 3b0631fcddad71a0b6a9081b469a4da937ff9f824ec0cb8f548cf148ccdee03d
 - id: ipg-s2-1-c-definition-g02
   kind: group
   status: active
@@ -261,6 +303,9 @@ entries:
     label: 'A triggered ability that requires its controller to choose targets (other than ''target opponent''),
       modes, or other choices made when the ability is put onto the stack: The controller must announce
       those choices before they next pass priority.'
+  evidence:
+    context: ipg-s2-1-c-definition
+    englishHash: 19a653ed942023432ac6e63a76143b4b32a77c7a2fdfdf00b5f747b5fe8ff632
 - id: ipg-s2-1-c-definition-g02-b002
   kind: block
   status: active
@@ -274,6 +319,9 @@ entries:
       or explicitly taking an action in the next step or phase) that can be taken only after the triggered
       ability should have resolved. Note that passing priority, casting an instant spell or activating
       an ability doesn’t mean a triggered ability has been forgotten, as it could still be on the stack.'
+  evidence:
+    context: ipg-s2-1-c-definition
+    englishHash: 418fc79458959e18be1ee97b9bd45e5e023863b58d63a9d16421853fa987c5a3
 - id: ipg-s2-1-c-definition-g02-b003
   kind: block
   status: active
@@ -283,6 +331,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: 'A triggered ability that changes the rules of the game: The controller must acknowledge the
       trigger or stop an opponent who tries to take any resulting illegal action.'
+  evidence:
+    context: ipg-s2-1-c-definition
+    englishHash: 3d0f994721b947ce707d3fbe1dcabe69e1b98d41cd8e952ee73494d3030691f9
 - id: ipg-s2-1-c-definition-g02-b004
   kind: block
   status: active
@@ -292,6 +343,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: 'A triggered ability that affects the game state in non-visible ways: The controller must make
       the change known by the first time the change has an effect on the visible game state.'
+  evidence:
+    context: ipg-s2-1-c-definition
+    englishHash: 2c6480c0b42165b9cc739da799cf0113d0cc2837f1e0a58539b1be827d7aa620
 - id: ipg-s2-1-c-definition-g03
   kind: group
   status: active
@@ -309,6 +363,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: Once any of the above obligations has been fulfilled, further problems are treated as a Game
       Play Error — Game Rule Violation.
+  evidence:
+    context: ipg-s2-1-c-definition
+    englishHash: f24e8d38ddc498479d38cbdd926ca54e93b8889924a8456f7219f91326138fab
 - id: ipg-s2-1-c-definition-g03-b002
   kind: block
   status: active
@@ -318,6 +375,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: If the turn-based action of putting a lore counter on a Saga is missed, it should be handled
       as though it was a missed trigger.
+  evidence:
+    context: ipg-s2-1-c-definition
+    englishHash: 076908937eba4deab1e11c1a7b9edab9ad6a4984768f1f4836839a8b49297311
 - id: ipg-s2-1-c-definition-g03-b003
   kind: block
   status: active
@@ -331,6 +391,9 @@ entries:
       a spell or ability (such as storm or cipher) automatically resolve, but awareness of the resulting
       objects must be demonstrated using the same requirements as described above (even though the objects
       may not be triggered abilities).
+  evidence:
+    context: ipg-s2-1-c-definition
+    englishHash: cac2c8c37fb1104ed4240701bc423a4d0f81d23e0d535919e97be46638201fa2
 - id: ipg-s2-1-c-definition-g03-b004
   kind: block
   status: active
@@ -341,6 +404,9 @@ entries:
     label: Abilities consisting of an action followed by “when you do” in the same ability are considered
       communicated by the announcement of the action. This is most commonly the case for exert and similar
       abilities.
+  evidence:
+    context: ipg-s2-1-c-definition
+    englishHash: d25847acac0415272641e4641b49abbcb9ecf5fafee1c2aa86c03a204a8deafc
 - id: ipg-s2-1-c-definition-g03-b005
   kind: block
   status: active
@@ -353,6 +419,9 @@ entries:
       to sacrifice a creature, a player who controls no creatures isn’t required to demonstrate awareness
       of the ability. Similarly, a player demonstrating awareness of an optional trigger with no visible
       effect is assumed to have made the affirmative choice unless the opponent responds.
+  evidence:
+    context: ipg-s2-1-c-definition
+    englishHash: f77601ce9af330e532d56c8e0019457b0e317312b112e47977197399bd00d93c
 - id: ipg-s2-1-c-definition-g03-b006
   kind: block
   status: active
@@ -362,6 +431,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: Judges do not intervene in a missed trigger situation unless they intend to issue a Warning
       or have reason to suspect that the controller is intentionally missing their triggered abilities.
+  evidence:
+    context: ipg-s2-1-c-definition
+    englishHash: 137f35ff1f24a41c1a5e8437e6a61228ab13e2db7909801b62491f967224055c
 - id: ipg-s2-1-c-definition-g03-b007
   kind: block
   status: active
@@ -371,6 +443,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: A player controlling another player is responsible for that player’s triggers in addition to
       their own.
+  evidence:
+    context: ipg-s2-1-c-definition
+    englishHash: f7ef3d380ac1a3f285a0b752d4e72675e96784f39a190f2849603843fa06df22
 - id: ipg-s2-1-c-examples
   kind: component
   status: active
@@ -395,6 +470,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: Knight of Infamy (a 2/1 creature with exalted) attacks alone. Its controller says “Take two.”
+  evidence:
+    context: ipg-s2-1-c-examples
+    englishHash: e8888b584ea20f67d2d34019ac872d0225f8a5c5586fe8a1ecd4599698b0d806
 - id: ipg-s2-1-c-examples-g01-b002
   kind: block
   status: active
@@ -404,6 +482,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: A player forgets to remove the final time counter from a suspended spell and then draws a card
       during their draw step.
+  evidence:
+    context: ipg-s2-1-c-examples
+    englishHash: 07912fb2c6fb378ce4f7021ac95b162098c16900f1cb86269d752c93bd141fb6
 - id: ipg-s2-1-c-examples-g01-b003
   kind: block
   status: active
@@ -413,6 +494,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: A player casts Manic Vandal, then forgets its triggered ability by not choosing a target for
       it. They realize this only after casting another spell.
+  evidence:
+    context: ipg-s2-1-c-examples
+    englishHash: 7e971f3674dd2dfecc2c141229738cb06cb05827d792410ce7a608b4b6e323be
 - id: ipg-s2-1-c-examples-g01-b004
   kind: block
   status: active
@@ -422,6 +506,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: A player forgets to exile the Angel token created by Geist of Saint Traft at end of combat.
       They realize the error when declaring blockers during the next turn.
+  evidence:
+    context: ipg-s2-1-c-examples
+    englishHash: 730370099d51a58c5c21b81b85b863111444fdf0dcd5a8a1f6c5e2853e40a371
 - id: ipg-s2-1-c-philosophy
   kind: component
   status: active
@@ -452,6 +539,9 @@ entries:
       ability, the controller is still responsible for ensuring the opponents make the appropriate choices
       and take the appropriate actions. Opponents are not required to point out triggered abilities that
       they do not control, though they may do so if they wish.
+  evidence:
+    context: ipg-s2-1-c-philosophy
+    englishHash: a83581218689e99ae7387aeca214fc775c68d9c4631cad30330f4f478c9c47c8
 - id: ipg-s2-1-c-philosophy-g01-b002
   kind: block
   status: active
@@ -464,9 +554,12 @@ entries:
       out triggered abilities, although this does not mean that they can cause triggers to be missed.
       If an opponent requires information about the precise timing of a triggered ability or needs details
       about a game object that may be affected by a resolved triggered ability, that player may need to
+  evidence:
+    context: ipg-s2-1-c-philosophy
+    englishHash: 0e14c7fd4e78fe1c92e1cf6cd196558b59e544ad78300b1b868816936e9c9ed6
 - id: ipg-s2-1-c-philosophy-g01-b003
   kind: block
-  status: active
+  status: retired
   canonicalKey: pilot:ipg-s2-1-c-philosophy-g01-b003
   history:
   - event: allocated
@@ -475,6 +568,9 @@ entries:
       that may or may not be legal depending on whether an opponent’s uncommunicated trigger has been
       remembered has not committed an infraction; their play either succeeds, confirming that the trigger
       has been missed, or is rewound.
+  - event: retired
+    atVersion: ipg-2024-09-23-pilot
+    reason: pilot structure corrected; id permanently tombstoned
 - id: ipg-s2-1-c-philosophy-g01-b004
   kind: block
   status: active
@@ -488,6 +584,9 @@ entries:
       an action or explicitly passing priority), the trigger is remembered. The Out-of-Order Sequencing
       rules (MTR section 4.3) may also be applicable, especially as they relate to batches of actions
       or resolving items on the stack in an improper order.
+  evidence:
+    context: ipg-s2-1-c-philosophy
+    englishHash: 8a85af88b2f93526b41698dfaf680ef1888d99732bfb602ea14e7c367bb3aafc
 - id: ipg-s2-1-c-philosophy-g01-b005
   kind: block
   status: active
@@ -498,6 +597,9 @@ entries:
     label: A triggered ability is considered to have triggered even if it was subsequently missed. Effects
       that count or restrict the number of times a triggered ability can trigger will count the missed
       one.
+  evidence:
+    context: ipg-s2-1-c-philosophy
+    englishHash: 67fa326336e98e5c4627555a3dfe1a6a0920e07d8dc9df382878cdaf73b2a3c8
 - id: ipg-s2-1-c-additional-remedy
   kind: component
   status: active
@@ -523,6 +625,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: If the triggered ability is an enters-the-battlefield trigger of an Aura that affects only
       the enchanted permanent and causes a visible change to that permanent, resolve the ability immediately.
+  evidence:
+    context: ipg-s2-1-c-additional-remedy
+    englishHash: a645b8f0c35fc306dd26d5b0cb3d9c8187e1d8d61c4df59aa93f46a38ee35124
 - id: ipg-s2-1-c-additional-remedy-g01-b002
   kind: block
   status: active
@@ -535,6 +640,9 @@ entries:
       whether to resolve the ability the next time a player would get priority or when a player would
       get priority at the start of the next phase. The new zone does not need to be the same as the one
       the card was originally moved from.
+  evidence:
+    context: ipg-s2-1-c-additional-remedy
+    englishHash: 3ad8d4ab2751a92ae23850170190552f6ecf9382cc0a8f1962cb087318b8452b
 - id: ipg-s2-1-c-additional-remedy-g01-b003
   kind: block
   status: active
@@ -545,6 +653,9 @@ entries:
     label: For all other triggered abilities, if the ability was missed prior to the current phase in
       the previous turn, instruct the players to continue playing. If the triggered ability created an
       effect whose duration has already expired, instruct the players to continue playing.
+  evidence:
+    context: ipg-s2-1-c-additional-remedy
+    englishHash: 8db550c3956d49bdfb2d63dea5bef32ce0ff2e6d3de377adb4afc7f442cee848
 - id: ipg-s2-1-c-additional-remedy-g01-b004
   kind: block
   status: active
@@ -558,6 +669,9 @@ entries:
       ability involving objects that would not have been legal choices when the ability should have triggered.
       For example, if the ability instructs a player to sacrifice a creature, that player can't sacrifice
       a creature that wasn't on the battlefield when the ability should have triggered.
+  evidence:
+    context: ipg-s2-1-c-additional-remedy
+    englishHash: 005227dffa5fdd4a9a2075deccf0f78234c6a36158e7962eda98f41dd0eca5b5
 - id: ipg-s2-1-c-additional-remedy-g01-b005
   kind: block
   status: active
@@ -568,6 +682,9 @@ entries:
     label: If the player is in the process of, or has just completed, an action that indicates the trigger
       has been missed, and completing that action would change the effect of the trigger, a simple backup
       may be performed on that action.
+  evidence:
+    context: ipg-s2-1-c-additional-remedy
+    englishHash: 5c3a62c14d95c49b88e81fc93ae0c91011c0ccf918cb752a31dd1d061528a0da
 - id: ipg-s2-1-c-additional-remedy-g01-b006
   kind: block
   status: active
@@ -579,6 +696,9 @@ entries:
       and they own the card responsible for the existence of the trigger, the penalty is a Warning. The
       current game state is not a factor in determining this, though symmetrical abilities (such as Howling
       Mine) may be considered usually detrimental or not depending on who is being affected.'
+  evidence:
+    context: ipg-s2-1-c-additional-remedy
+    englishHash: 1fb88ceb47f9cd61005c3a8de528f2db1466dd300ed874d6a3f9aef016dbb789
 - id: ipg-s2-2
   kind: section
   status: active
@@ -612,6 +732,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: A player takes an action that may have enabled them to see the faces of cards that they were
       not entitled to see.
+  evidence:
+    context: ipg-s2-2-c-definition
+    englishHash: a49a62e4b0269aa0015edba9e0f563b0ccfb9aabde57efb5798766cc0736519a
 - id: ipg-s2-2-c-definition-g01-b002
   kind: block
   status: active
@@ -621,6 +744,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: This penalty is applied only once if one or more cards are seen in the same action or sequence
       of actions.
+  evidence:
+    context: ipg-s2-2-c-definition
+    englishHash: 0b62629fbd4122e45aa4639b94ba6ce64b84e4de2cfcb3b918ad1aa402d44aaf
 - id: ipg-s2-2-c-examples
   kind: component
   status: active
@@ -645,6 +771,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: A player accidentally reveals (drops, flips over) a card while shuffling their opponent’s library.
+  evidence:
+    context: ipg-s2-2-c-examples
+    englishHash: ba16111faa7a43528b2929c47d5f71d510aca8b536d4c1c2f1232e7cf17ed315
 - id: ipg-s2-2-c-examples-g01-b002
   kind: block
   status: active
@@ -653,6 +782,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: A player pulls up an extra card while drawing from their library.
+  evidence:
+    context: ipg-s2-2-c-examples
+    englishHash: 6baa2e509fe3e946f29bb2c7609c29f9e88b0f38820aaf02d90f6079c1b1341c
 - id: ipg-s2-2-c-examples-g01-b003
   kind: block
   status: active
@@ -661,6 +793,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: A player sees the bottom card of their deck when presenting it to their opponent for cutting/shuffling.
+  evidence:
+    context: ipg-s2-2-c-examples
+    englishHash: 390677745061d813cd231795868c2b8061774c6452735c5d6b06304d926bf54b
 - id: ipg-s2-2-c-philosophy
   kind: component
   status: active
@@ -688,6 +823,9 @@ entries:
       where a dexterity or rules error has led to a player seeing cards that they shouldn’t have. Cards
       in a library are considered to be there until they touch cards in another hidden set. Once those
       cards have joined another hidden set, the infraction is Hidden Card Error or Game Rule Violation.
+  evidence:
+    context: ipg-s2-2-c-philosophy
+    englishHash: 7d02abf6b49f20a18e84fdcd2b249c8d5ce095a3fcdb506add9efa67d2341a48
 - id: ipg-s2-2-c-philosophy-g01-b002
   kind: block
   status: active
@@ -699,6 +837,9 @@ entries:
       they don’t want to draw; doing so may be Unsporting Conduct — Cheating. Players also are not allowed
       to use this penalty as a stalling mechanism. The library is already randomized, so shuffling in
       the revealed cards should not involve excessive effort.
+  evidence:
+    context: ipg-s2-2-c-philosophy
+    englishHash: 2527d7178d20159952eda810532f934407175c834fc856d1d158f4d2d3c3e88c
 - id: ipg-s2-2-c-additional-remedy
   kind: component
   status: active
@@ -724,6 +865,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: If the cards were in the library, shuffle any previously unknown cards from a deck back into
       the random portion of the library, then put any previously known cards back in their correct locations.
+  evidence:
+    context: ipg-s2-2-c-additional-remedy
+    englishHash: 0946d09cde4fed9739fe52bc6b618eb87d38ab5964dba5a521752eeceb9c6f44
 - id: ipg-s2-3
   kind: section
   status: active
@@ -760,6 +904,9 @@ entries:
       effect modifying the game rule that made the action illegal. This infraction only applies when a
       card whose identity is known to only one player is in a hidden set of cards both before and after
       the error.
+  evidence:
+    context: ipg-s2-3-c-definition
+    englishHash: 611327bb10a3d5bf4600a6ef2aa660b1f5f29b7566807e2174e0f573c28fb6c0
 - id: ipg-s2-3-c-definition-g01-b002
   kind: block
   status: active
@@ -769,6 +916,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: If an additional card is seen but not added to the set, the infraction is Game Play Error —
       Looking at Extra Cards.
+  evidence:
+    context: ipg-s2-3-c-definition
+    englishHash: 4f18734946bf9a9e83308069b1931936eee817d05ec53af6f735a267609aabd0
 - id: ipg-s2-3-c-examples
   kind: component
   status: active
@@ -793,6 +943,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: A player draws four cards after casting Ancestral Recall.
+  evidence:
+    context: ipg-s2-3-c-examples
+    englishHash: c72a95a8fe223d4b44cf8d5d4502110d60092d8deaafccf800791062edf006a0
 - id: ipg-s2-3-c-examples-g01-b002
   kind: block
   status: active
@@ -801,6 +954,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: A player scries two cards when they should only have scried one.
+  evidence:
+    context: ipg-s2-3-c-examples
+    englishHash: 9cd064a359d898c58cd17b491538d621b2469699be266f3bca41d35069a3f4ab
 - id: ipg-s2-3-c-examples-g01-b003
   kind: block
   status: active
@@ -810,6 +966,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: A player resolves a Dark Confidant trigger, but forgets to reveal the card before putting it
       into their hand.
+  evidence:
+    context: ipg-s2-3-c-examples
+    englishHash: 14369df259a51d1a776e5d3867073276b7b15e41a76a3085943e89e825a685fe
 - id: ipg-s2-3-c-examples-g01-b004
   kind: block
   status: active
@@ -818,6 +977,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: A player has more cards in their hand than can be accounted for.
+  evidence:
+    context: ipg-s2-3-c-examples
+    englishHash: b0c8c067c658ba1b1f3b7ecc612ca8fa08dd2df6d9e80088c397938130895f5b
 - id: ipg-s2-3-c-examples-g01-b005
   kind: block
   status: active
@@ -826,6 +988,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: A player casts Anticipate and picks up the top four cards of their library.
+  evidence:
+    context: ipg-s2-3-c-examples
+    englishHash: 139de43d1361b38b63758eb29877ae9c357135a06ebc842f3f0c2bfbdade8e02
 - id: ipg-s2-3-c-examples-g01-b006
   kind: block
   status: active
@@ -834,6 +999,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: A player, going first, draws for their turn.
+  evidence:
+    context: ipg-s2-3-c-examples
+    englishHash: 2425bf587043fa22f83495277fb43a5876079cb3a797962c4ff2d4ea8bd34591
 - id: ipg-s2-3-c-philosophy
   kind: component
   status: active
@@ -860,6 +1028,9 @@ entries:
     label: Though the game state cannot be reversed to the ‘correct’ state, this error can be mitigated
       by giving the opponent sufficient knowledge and ability to offset the error so that it is less likely
       to generate advantage.
+  evidence:
+    context: ipg-s2-3-c-philosophy
+    englishHash: 08cd865cd6ec30eb100ea222bc704e7f34d7cf0458c62845a342027663cac58e
 - id: ipg-s2-3-c-philosophy-g01-b002
   kind: block
   status: active
@@ -871,6 +1042,9 @@ entries:
       handled as a Game Rule Violation. Order cannot be determined from card faces only visible to one
       player unless the card is in a uniquely identifiable position (such as on top of the library, or
       as the only card in hand.)
+  evidence:
+    context: ipg-s2-3-c-philosophy
+    englishHash: 04da4ca8473c73ea59c18de02ac81c5d239a1cc9fc6ae3e91c033f0d181cc935
 - id: ipg-s2-3-c-philosophy-g01-b003
   kind: block
   status: active
@@ -881,6 +1055,9 @@ entries:
     label: Be careful not to apply this infraction in situations where a publicly-correctable error subsequently
       leads to an uncorrectable situation such as a Brainstorm cast using green mana. In these situations,
       the infraction is based on that root cause.
+  evidence:
+    context: ipg-s2-3-c-philosophy
+    englishHash: 09b51b0d07de3dde0d1e6f3fe303b81830493d2607e8269e4237c08aa1acdd69
 - id: ipg-s2-3-c-philosophy-g01-b004
   kind: block
   status: active
@@ -891,6 +1068,9 @@ entries:
     label: Information about cards previously known by the opponent, such as cards previously revealed
       while on the top of the library or by a previous look at the hand, may be taken into account while
       determining the set of cards to which the remedy applies.
+  evidence:
+    context: ipg-s2-3-c-philosophy
+    englishHash: b1bd9daee25601e533b28b62f1f361c596248af3a51a96c3e75e89ae8b35be5e
 - id: ipg-s2-3-c-philosophy-g01-b005
   kind: block
   status: active
@@ -902,6 +1082,9 @@ entries:
       remedy to only part of a set defined by an instruction. For example, if a player resolves Collected
       Company, picks up three cards with one hand and then four cards with the other, the last drawn set
       of four cards should be used for the remedy, instead of the full set of seven cards..
+  evidence:
+    context: ipg-s2-3-c-philosophy
+    englishHash: 25d60e1f333e3904694f1d84df9f89d679f5e5289039d4419df0b5bd79d75720
 - id: ipg-s2-3-c-additional-remedy
   kind: component
   status: active
@@ -928,6 +1111,9 @@ entries:
     label: In cases where the infraction was immediately followed by moving a card from the affected set
       to a known location, such as by discarding, putting cards on top of the library, or playing a land,
       a simple backup to the point just after the error may be performed.
+  evidence:
+    context: ipg-s2-3-c-additional-remedy
+    englishHash: 62d9b90cfbfd5207f54122ce49966ff6625898c9b44336962a9b3eb85a7ff372
 - id: ipg-s2-3-c-additional-remedy-g01-b002
   kind: block
   status: active
@@ -936,6 +1122,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: If the set of cards that contained the problem no longer exists, there is no remedy to be applied.
+  evidence:
+    context: ipg-s2-3-c-additional-remedy
+    englishHash: 7d0d7f56870cfa02bae842abfb4b546eeac6ab1eaae38f2c6a9c0011f13007a0
 - id: ipg-s2-3-c-additional-remedy-g01-b003
   kind: block
   status: active
@@ -947,6 +1136,9 @@ entries:
       should have been performed first, the player reveals the set of cards that contains the excess and
       their opponent chooses a number of previously-unknown cards. Put those cards aside until the point
       at which they should have been legally added, then return them to the set.
+  evidence:
+    context: ipg-s2-3-c-additional-remedy
+    englishHash: 118f3c9da0813ae8b2d6bf0a1468573e65d9828d1b1dfb5b53a5d1932fffd711
 - id: ipg-s2-3-c-additional-remedy-g01-b004
   kind: block
   status: active
@@ -957,15 +1149,21 @@ entries:
     label: If the error involves one or more cards that were supposed to be revealed, the player reveals
       the set of cards that contains the unrevealed cards and their opponent chooses that many previously-
       unknown cards. Treat those as the cards that were ‘revealed’ and return them to the set that was
+  evidence:
+    context: ipg-s2-3-c-additional-remedy
+    englishHash: eee96477a61a24f298b047887eaba62ab80d22f673642ac386554b7c0156609a
 - id: ipg-s2-3-c-additional-remedy-g01-b005
   kind: block
-  status: active
+  status: retired
   canonicalKey: pilot:ipg-s2-3-c-additional-remedy-g01-b005
   history:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: being selected from; the player then reperforms the action. If recreating the original selection
       set and reperforming the action would be too disruptive, leave the selected cards in hand.
+  - event: retired
+    atVersion: ipg-2024-09-23-pilot
+    reason: pilot structure corrected; id permanently tombstoned
 - id: ipg-s2-3-c-additional-remedy-g01-b006
   kind: block
   status: active
@@ -981,6 +1179,9 @@ entries:
       cards, chosen by the opponent, are returned to the original location instead. For example, if a
       player playing with Sphinx of Jwar Isle illegally draws a card, that card should be returned to
       the top of the library.
+  evidence:
+    context: ipg-s2-3-c-additional-remedy
+    englishHash: d71d66b09e6bf1c8241ceaf0d2238bf618aa632b39ca4c6443e4b794a9a8e0c7
 - id: ipg-s2-3-c-additional-remedy-g01-b007
   kind: block
   status: active
@@ -994,6 +1195,9 @@ entries:
       unknown cards to their hand since casting the card found in violation, and has self-reported the
       error before an effect that would reveal it is played, the upgrade does not apply and they may swap
       the card for a card with the appropriate ability in hand.'
+  evidence:
+    context: ipg-s2-3-c-additional-remedy
+    englishHash: 5d8a538cce0380f03f8313a1ba063d2bdb822844bac0023b6248833372ea9752
 - id: ipg-s2-4
   kind: section
   status: active
@@ -1028,6 +1232,9 @@ entries:
     label: A player makes an error in one of the steps of the mulligan process. Once the mulligan process
       is complete and the game begins, excess cards arising from an improper mulligan is a Game Play Error
       — Hidden Card Error and too few cards is a Game Play Error — Game Rule Violation.
+  evidence:
+    context: ipg-s2-4-c-definition
+    englishHash: f485177273168472f0abd5e556975331ae58540f9ca91bf330887ee539613277
 - id: ipg-s2-4-c-definition-g01-b002
   kind: block
   status: active
@@ -1037,6 +1244,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: Unintentional process errors that provide no advantage, such as declaring an intent to mulligan
       early or exiling too many cards to Serum Powder, are not an infraction.
+  evidence:
+    context: ipg-s2-4-c-definition
+    englishHash: d4ee8b8934eb3c51915935829e22215367f3e81b7c1b342b1c68c4bca7cdfb6d
 - id: ipg-s2-4-c-examples
   kind: component
   status: active
@@ -1061,6 +1271,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: A player draws eight cards at the start of the game (instead of seven).
+  evidence:
+    context: ipg-s2-4-c-examples
+    englishHash: df8ac17b4235914195a00f1155c9498e093077dae619484170eaa67eb0ab3efc
 - id: ipg-s2-4-c-examples-g01-b002
   kind: block
   status: active
@@ -1070,6 +1283,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: A player chooses to not take a mulligan then takes a mulligan after seeing their opponent choose
       to take a mulligan.
+  evidence:
+    context: ipg-s2-4-c-examples
+    englishHash: 98f7930448d4ebd08765f6ed287da961fea4c237fffdaa75ec9747838ec26728
 - id: ipg-s2-4-c-philosophy
   kind: component
   status: active
@@ -1095,6 +1311,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: Errors prior to the beginning of the game have a less disruptive option—a forced mulligan—that
       is not available at any other point during the game.
+  evidence:
+    context: ipg-s2-4-c-philosophy
+    englishHash: c9c28ac9066110004c9aafd98032eb849dd5c921c62664bced1ed5397633b4c6
 - id: ipg-s2-4-c-additional-remedy
   kind: component
   status: active
@@ -1119,6 +1338,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: The player takes an additional mulligan.
+  evidence:
+    context: ipg-s2-4-c-additional-remedy
+    englishHash: e6e73873d7143b8589937cedae27d1d013f01b9b54265d19edea4a847ec12e8d
 - id: ipg-s2-5-c-definition
   kind: component
   status: active
@@ -1145,6 +1367,9 @@ entries:
     label: This infraction covers the majority of game situations in which a player makes an error or
       fails to follow a game procedure correctly. It handles violations of the Comprehensive Rules that
       are not covered by the other Game Play Errors.
+  evidence:
+    context: ipg-s2-5-c-definition
+    englishHash: ee60803a3b8e56fef1001aafa401a5b4bed630a6eabbd0e603b873b9c5cd6c5e
 - id: ipg-s2-5-c-examples
   kind: component
   status: active
@@ -1169,6 +1394,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: A player casts Wrath of God for 3W (actual cost 2WW).
+  evidence:
+    context: ipg-s2-5-c-examples
+    englishHash: f93c39bc1f3a2156910ed47b000035bdc634681d49eea580181e02bc7d0f29b9
 - id: ipg-s2-5-c-examples-g01-b002
   kind: block
   status: active
@@ -1177,6 +1405,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: A player does not attack with a creature that must attack each turn.
+  evidence:
+    context: ipg-s2-5-c-examples
+    englishHash: 915eb7953459e8a428586b09741981f36718515c21c74b682c3e93a53f9000a2
 - id: ipg-s2-5-c-examples-g01-b003
   kind: block
   status: active
@@ -1186,6 +1417,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: A player fails to put a creature with lethal damage into a graveyard and it is not noticed
       until several turns later.
+  evidence:
+    context: ipg-s2-5-c-examples
+    englishHash: f8836f3030c341989a2074970707b3227a491e3a1868cd57c3d2bfbce4f508c3
 - id: ipg-s2-5-c-examples-g01-b004
   kind: block
   status: active
@@ -1194,6 +1428,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: A Phyrexian Revoker is on the battlefield that should have had a card named for it.
+  evidence:
+    context: ipg-s2-5-c-examples
+    englishHash: d7af2b3c008354cf1ee9783a9b98d912265ffbdab05fbc3e5a83012bde9fa670
 - id: ipg-s2-5-c-examples-g01-b005
   kind: block
   status: active
@@ -1202,6 +1439,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: A player casts Brainstorm and forgets to put two cards back on top of their library.
+  evidence:
+    context: ipg-s2-5-c-examples
+    englishHash: a3080e9505cd5c8dbbe2925ce2a550aae00da9671f853f40b1a82c51ea3874a8
 - id: ipg-s2-5-c-philosophy
   kind: component
   status: active
@@ -1229,6 +1469,9 @@ entries:
       both players are expected to be mindful of what is happening in the game. It is tempting to try
       and “fix” these errors, but it is important that they be handled consistently, regardless of their
       impact on the game.
+  evidence:
+    context: ipg-s2-5-c-philosophy
+    englishHash: a42c7ef508189835f82a3f5e8abed5b45d3d095374aed6145cecb46f681325c6
 - id: ipg-s2-5-c-additional-remedy
   kind: component
   status: active
@@ -1253,6 +1496,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: First, consider a simple backup (see section 1.4).
+  evidence:
+    context: ipg-s2-5-c-additional-remedy
+    englishHash: 3494be9dd7600d7c5453790528050d91cb382a69ad21f3b3f9cccbc51adb8bbe
 - id: ipg-s2-5-c-additional-remedy-g01-b002
   kind: block
   status: active
@@ -1262,6 +1508,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: 'If a simple backup is not sufficient and the infraction falls into one or more of the following
       categories, and only into those categories, perform the appropriate partial fix:'
+  evidence:
+    context: ipg-s2-5-c-additional-remedy
+    englishHash: 91e669e180e46ee8d151b28005da92e20165ce9d644b3074445a7384584103e1
 - id: ipg-s2-5-c-additional-remedy-g02
   kind: group
   status: active
@@ -1279,6 +1528,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: If a player forgot to untap one or more permanents at the start of their turn and it is still
       the same turn, untap them.
+  evidence:
+    context: ipg-s2-5-c-additional-remedy
+    englishHash: 90b3a802914338feac6bffbc1384402d311c717a45738a36f7b5be577b265e83
 - id: ipg-s2-5-c-additional-remedy-g02-b002
   kind: block
   status: active
@@ -1288,6 +1540,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: If a player made an illegal choice (including no choice where required) for a static ability
       generating a continuous effect still on the battlefield, that player makes a legal choice.
+  evidence:
+    context: ipg-s2-5-c-additional-remedy
+    englishHash: 94c3897365483229064ceb6949f83fa2dac7e0c860e05f300d5586853ae8c199
 - id: ipg-s2-5-c-additional-remedy-g02-b003
   kind: block
   status: active
@@ -1297,6 +1552,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: If a player failed to draw cards, discard cards, or return cards from their hand to another
       zone, that player does so.
+  evidence:
+    context: ipg-s2-5-c-additional-remedy
+    englishHash: b6d412534fccec50cb3bd4c89cc586b99281ccaf180cea77357170c979c43098
 - id: ipg-s2-5-c-additional-remedy-g02-b004
   kind: block
   status: active
@@ -1308,6 +1566,9 @@ entries:
       it can be moved with only minor disruption to the current state of the game, put the object in the
       correct zone. This only applies if the object being in the wrong zone is the Game Rule Violation,
       and not if it is the consequence of a different error.
+  evidence:
+    context: ipg-s2-5-c-additional-remedy
+    englishHash: ce91fcf258e97ec8064ab7720f668423a3f6f4701af8ad81752d27a4ec263549
 - id: ipg-s2-5-c-additional-remedy-g02-b005
   kind: block
   status: active
@@ -1316,6 +1577,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: If damage assignment order has not been declared, the appropriate player chooses that order.
+  evidence:
+    context: ipg-s2-5-c-additional-remedy
+    englishHash: 318ed9158e9819b5c9a9b15a0975cabd3e2bb0ace4a3402c580af484fd7071b8
 - id: ipg-s2-5-c-additional-remedy-g03
   kind: group
   status: active
@@ -1334,6 +1598,9 @@ entries:
     label: For each of these fixes, a simple backup may be performed beforehand if it makes applying the
       fix smoother. Triggered abilities are generated from these partial fixes only if they would have
       occurred had the action been taken at the correct time.
+  evidence:
+    context: ipg-s2-5-c-additional-remedy
+    englishHash: 73b053eea2b6edf1908c4f1febb58cd6e68096793f64c1fa878e4a7d2484223b
 - id: ipg-s2-5-c-additional-remedy-g03-b002
   kind: block
   status: active
@@ -1342,6 +1609,9 @@ entries:
   - event: allocated
     atVersion: ipg-2024-09-23-pilot
     label: Otherwise, a full backup may be considered or the game state may be left as is.
+  evidence:
+    context: ipg-s2-5-c-additional-remedy
+    englishHash: edd19fba7b82490eff4b928ab4ca0452b1ab24d2c944297413aea80acc634545
 - id: ipg-s2-5-c-additional-remedy-g03-b003
   kind: block
   status: active
@@ -1358,6 +1628,9 @@ entries:
       Violation. For example, if a player casts Path to Exile on an opponent’s creature and the opponent
       puts the creature into the graveyard, once the game has continued both players will have committed
       a Game Rule Violation.
+  evidence:
+    context: ipg-s2-5-c-additional-remedy
+    englishHash: cc7eb5f527aab67de7b258e37bb3dfbff2ea7c4f6978d1f7f8e23a119394fe6e
 - id: ipg-s2-6
   kind: section
   status: active
@@ -1394,6 +1667,9 @@ entries:
       actions, either for their own advantage, or in the hope of bringing it up at a more strategically
       advantageous time, they should consider an Unsporting Conduct — Cheating infraction. Not reminding
       an opponent about their triggered abilities is never Failure to Maintain Game State nor Cheating.
+  evidence:
+    context: ipg-s2-6-c-definition
+    englishHash: acc6abba6f294227f035339e511753f0483a74089302ea9614b5367cf161a696
 - id: ipg-s2-6-c-examples
   kind: component
   status: active
@@ -1419,6 +1695,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: A player’s opponent forgets to reveal the card searched for by Worldly Tutor. It is not noticed
       until the end of turn.
+  evidence:
+    context: ipg-s2-6-c-examples
+    englishHash: 4f493e0579dfa015a25eefddc1ee8f87929d72f77c3c7c01ac1b5740729722c1
 - id: ipg-s2-6-c-examples-g01-b002
   kind: block
   status: active
@@ -1428,6 +1707,9 @@ entries:
     atVersion: ipg-2024-09-23-pilot
     label: A player does not notice that their opponent has Armadillo Cloak on a creature with protection
       from green.
+  evidence:
+    context: ipg-s2-6-c-examples
+    englishHash: 9808edf8a7a9543e940c208e3c4bfcf0ce420a297e552564d39b8d27ca128fa2
 - id: ipg-s2-6-c-philosophy
   kind: component
   status: active
@@ -1454,6 +1736,9 @@ entries:
     label: If an error is caught before a player could gain advantage, then the dangers of the ongoing
       game state becoming corrupted are much lower. If the error is allowed to persist, at least some
       of the fault lies with the opponent, who has also failed to notice the error.
+  evidence:
+    context: ipg-s2-6-c-philosophy
+    englishHash: 3a4cc6eeb498d15e4b45e69207227cd1a1b4edceefc260bee7ff95ce6fcc41b4
 - id: ipg-ann-section-2-5-definition-context
   kind: publication-annotation
   status: active
@@ -1510,3 +1795,332 @@ entries:
       as the top of a library. 3) The movement of the card (or lack of movement) is the error, not the
       result of some other error. For example, if a Path to Exile was case for {C}, and the card was put
       in exile; that is not eligible for this partial fix because the error was in casting Path for {C}.
+- id: ipg-ann-section-2-5-definition-context-g01
+  kind: publication-annotation-group
+  status: active
+  canonicalKey: pilot:ipg-ann-section-2-5-definition-context-g01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-section-2-5-definition-context-g01
+- id: ipg-ann-section-2-5-definition-context-g01-b01
+  kind: publication-annotation-block
+  status: active
+  canonicalKey: pilot:ipg-ann-section-2-5-definition-context-g01-b01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: “Game Rule Violation” does not refer to any particular type of error. Rather, Game Rule Violations
+      are specifically defined as errors that aren’t another infraction. Newer judges will sometimes talk
+      about how “mis-resolving a spell” is a Game Rule Violation. In actuality, resolving a spell improperly
+      could result in one of several different infractions, such as Looking at Extra Cards (e.g. forgetting
+      that Courser of Kruphix left the battlefield) to Hidden Card Error (e.g. mis-reading Divination
+      and drawing three cards).
+- id: ipg-ann-2-5-philosophy-consistency-g01
+  kind: publication-annotation-group
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-philosophy-consistency-g01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-philosophy-consistency-g01
+- id: ipg-ann-2-5-philosophy-consistency-g01-b01
+  kind: publication-annotation-block
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-philosophy-consistency-g01-b01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: Consistency is a core principle of the IPG. Even though there are thousands of judges adjudicating
+      tournaments across the world, it is important for each of these tournaments to be run and judged
+      to the same standard. For this reason, we strive to handle penalties neutrally. Fundamentally, both
+      players are responsible for maintaining a proper game state. Our core role as judges is not to “correct”
+      or “fix” the players’ mistakes, but to dispassionately interpret and apply the fixes prescribed
+      by the IPG.
+- id: ipg-ann-2-5-partial-fix-list-g01
+  kind: publication-annotation-group
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-partial-fix-list-g01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-partial-fix-list-g01
+- id: ipg-ann-2-5-partial-fix-list-g01-b01
+  kind: publication-annotation-block
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-partial-fix-list-g01-b01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: So right here we are going to have a list of partial fixes. Try to do a simple backup (see
+      Backing Up 1.4 for more information about back ups) then, if you can’t, you can try to do a partial
+      fix. If you cannot apply a simple backup or a partial fix  you evaluate if you need to do a back
+      up or leave alone. If the error fits more than one of these categories, it’s ok to partial fix,
+      but be careful that the error only fits into those categories. If there are multiple fixes within
+      the same bullet point, you’re still fine to use that partial fix.
+- id: ipg-ann-2-5-untap
+  kind: publication-annotation
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-untap
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-untap
+- id: ipg-ann-2-5-untap-g01
+  kind: publication-annotation-group
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-untap-g01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-untap-g01
+- id: ipg-ann-2-5-untap-g01-b01
+  kind: publication-annotation-block
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-untap-g01-b01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: Out-of-Order-Sequencing has always been a viable option when this type of situation arises,
+      and it does so with some regularity. Players get excited, or simply lose focus and forget to untap
+      everything before advancing into the turn. If that happens, we simply issue the warning and fix
+      the mistake, by untapping those permanents now.
+- id: ipg-ann-2-5-illegal-choice
+  kind: publication-annotation
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-illegal-choice
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-illegal-choice
+- id: ipg-ann-2-5-illegal-choice-g01
+  kind: publication-annotation-group
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-illegal-choice-g01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-illegal-choice-g01
+- id: ipg-ann-2-5-illegal-choice-g01-b01
+  kind: publication-annotation-block
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-illegal-choice-g01-b01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: This partial fix refers to cards such as True-Name Nemesis, Voice of All or a Siege from Fate
+      Reforged, which require the choice of a player or color as they enter the battlefield. The reasoning
+      for this is similar to why we apply state-based actions — it is impossible for these cards to exist
+      on the battlefield without a choice being made for them, so we correct that immediately. While this
+      could lead to the perception of advantage for one player, such errors always occur publicly, so
+      it is in both player’s interest to be attentive.So, if Nick casts Doom Blade on Albert’s Voice of
+      All, we can have Albert chose a color now. If Albert chooses Black, Doom Blade is now illegal. Then,
+      we can do a simple backup to just before Doom Blade was cast.
+- id: ipg-ann-2-5-hand-zone
+  kind: publication-annotation
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-hand-zone
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-hand-zone
+- id: ipg-ann-2-5-hand-zone-g01
+  kind: publication-annotation-group
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-hand-zone-g01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-hand-zone-g01
+- id: ipg-ann-2-5-hand-zone-g01-b01
+  kind: publication-annotation-block
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-hand-zone-g01-b01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: Players will generally be able to determine with high accuracy if they failed to draw or discard
+      cards. Note that this partial fix does not expire, even if the error was many turns ago.
+- id: ipg-ann-2-5-wrong-zone-g01
+  kind: publication-annotation-group
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-wrong-zone-g01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-wrong-zone-g01
+- id: ipg-ann-2-5-wrong-zone-g01-b01
+  kind: publication-annotation-block
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-wrong-zone-g01-b01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: There is a fair amount to consider here. There are four tests to determine if this partial
+      fix is relevant. 1) Is the object not in the correct zone.  This covers when a creature died but
+      shouldn’t have, or when a creatures shouldn’t have died but did.  It also covers if a card was supposed
+      to be bounced as wasn’t or a card was put in the GY when it should have been exiled.  Basically,
+      if the game was played correctly, that card should be somewhere else. 2) The identity of the object
+      was known to all players. This means that all players know what the object is. This could be because
+      the card was revealed or it could be because the card is in a location known by both players such
+      as the top of a library. 3) The movement of the card (or lack of movement) is the error, not the
+      result of some other error.  For example, if a Path to Exile was case for {C}, and the card was
+      put in exile; that is not eligible for this partial fix because the error was in casting Path for
+      {C}.
+- id: ipg-ann-2-5-wrong-zone-g01-b02
+  kind: publication-annotation-block
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-wrong-zone-g01-b02
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: '– “and it can be moved with only minor disruption to the current game state”: Things disappearing
+      from the battlefield mid-combat tends to be disruptive. Same with things disappearing from the GY
+      while certain spells are on the stack. Be sure to look at what decisions and actions are currently
+      being made based on that card being where it is.'
+- id: ipg-ann-2-5-damage-order
+  kind: publication-annotation
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-damage-order
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-damage-order
+- id: ipg-ann-2-5-damage-order-g01
+  kind: publication-annotation-group
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-damage-order-g01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-damage-order-g01
+- id: ipg-ann-2-5-damage-order-g01-b01
+  kind: publication-annotation-block
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-damage-order-g01-b01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: This is a dead partial fix.  Damage assignment order has been removed from the CR.  The IPG
+      just hasn’t had an update since then.
+- id: ipg-ann-2-5-partial-fix-backup
+  kind: publication-annotation
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-partial-fix-backup
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-partial-fix-backup
+- id: ipg-ann-2-5-partial-fix-backup-g01
+  kind: publication-annotation-group
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-partial-fix-backup-g01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-partial-fix-backup-g01
+- id: ipg-ann-2-5-partial-fix-backup-g01-b01
+  kind: publication-annotation-block
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-partial-fix-backup-g01-b01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: A simple backup is backing up the last action completed (or one currently in progress) and
+      is sometimes used to make another portion of the prescribed remedy smoother. A simple backup should
+      not involve any random elements. Also while applying a partial fix consider the triggered abilities
+      if they would have occurred while taking the action at the correct time.
+- id: ipg-ann-2-5-full-backup
+  kind: publication-annotation
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-full-backup
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-full-backup
+- id: ipg-ann-2-5-full-backup-g01
+  kind: publication-annotation-group
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-full-backup-g01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-full-backup-g01
+- id: ipg-ann-2-5-full-backup-g01-b01
+  kind: publication-annotation-block
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-full-backup-g01-b01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: So, we look to see if any of the partial fixes apply, and if not, we either rewind or don’t.
+      Please see 1.4 Backing Up for information on if it’s appropriate to back up. For example, if players
+      missed a Day/Night change in the game, it may make since to back up to the point of day/night transformation.
+      However, if a full backup is ill advised, the day/night state will remain as it is.
+- id: ipg-ann-2-5-opponent-responsibility
+  kind: publication-annotation
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-opponent-responsibility
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-opponent-responsibility
+- id: ipg-ann-2-5-opponent-responsibility-g01
+  kind: publication-annotation-group
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-opponent-responsibility-g01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-opponent-responsibility-g01
+- id: ipg-ann-2-5-opponent-responsibility-g01-b01
+  kind: publication-annotation-block
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-opponent-responsibility-g01-b01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: This is simply the definition of Game Play Error – Failure to Maintain Game State, and goes
+      back to the concept that keeping the game in a legal and clear state is both players responsibility.
+- id: ipg-ann-2-5-shared-grv
+  kind: publication-annotation
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-shared-grv
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-shared-grv
+- id: ipg-ann-2-5-shared-grv-g01
+  kind: publication-annotation-group
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-shared-grv-g01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: ipg-ann-2-5-shared-grv-g01
+- id: ipg-ann-2-5-shared-grv-g01-b01
+  kind: publication-annotation-block
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-shared-grv-g01-b01
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: As always, both players are responsible for maintaining a clear game state. If my card tells
+      you to take an action, and you do it incorrectly, whose fault is it? Yours for doing the action
+      incorrectly, or mine for not making sure my spell resolved correctly? Turns out, in this case, it’s
+      reasonable to say we are both equally at fault. Fundamentally if the judge thinks that both players
+      share the responsibility for the error, because of continuous effects or both participating in the
+      action, then both players receive this penalty. Another example of a situation that both players
+      are responsible for, is the transition from day/night or night/day, provided there are permanents
+      on the battlefield that care about night/day
+- id: ipg-ann-2-5-shared-grv-g01-b02
+  kind: publication-annotation-block
+  status: active
+  canonicalKey: pilot:ipg-ann-2-5-shared-grv-g01-b02
+  history:
+  - event: allocated
+    atVersion: ipg-2024-09-23-pilot
+    label: Note that this double GRV only applies *after* the game has moved on from the point of the
+      error. If, in the example above, one player puts the creature into the graveyard, it’s not a double
+      GRV until the game continues on. Instead, if one player points out the error, play can continue
+      on with the error corrected and no infraction assessed.

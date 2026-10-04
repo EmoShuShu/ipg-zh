@@ -1,5 +1,0 @@
-Game Rule Violation	违反游戏规则	IPG infraction name
-Warning	警告	Penalty name
-No Penalty	无	Penalty display value
-Comprehensive Rules	《万智牌完整规则》	Rules document name
-

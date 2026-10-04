@@ -6,8 +6,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-app-b-change-01
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 54.0
           - 109.76
           - 537.77
@@ -20,9 +20,11 @@ sections:
             on the software being used.'
           zh: 1.2：由于记录和收集方式因软件而异，故取消此方面的特别说明。
         type: change-entry
+        legacyRawUnits:
+        - raw-L004069
       - id: ipg-app-b-change-02
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 54.0
           - 137.36
           - 314.64
@@ -34,9 +36,11 @@ sections:
           en: '2.1: Treat missed Saga turn actions as missed triggers.'
           zh: 2.1：遗忘传纪的回合动作，视为遗漏触发来处理。
         type: change-entry
+        legacyRawUnits:
+        - raw-L004070
       - id: ipg-app-b-change-03
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 54.0
           - 151.16
           - 298.3
@@ -48,9 +52,11 @@ sections:
           en: '2.1: Missed triggers still count as having triggered.'
           zh: 2.1：被遗漏的触发式异能仍认为已触发过。
         type: change-entry
+        legacyRawUnits:
+        - raw-L004071
       - id: ipg-app-b-change-04
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 54.0
           - 164.96
           - 538.49
@@ -63,9 +69,11 @@ sections:
             zone is the root GRV.'
           zh: 2.5：物件处于错误区域中的情况始终适用于部分修正，但仅当该GRV是由处于错误区域本身导致的。
         type: change-entry
+        legacyRawUnits:
+        - raw-L004072
       - id: ipg-app-b-change-05
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 54.0
           - 192.56
           - 532.32
@@ -78,6 +86,8 @@ sections:
             has slightly different criteris for pre- and post-sideboard games.'
           zh: 3.5：牌张数量错误的升级被分为两段内容，以厘清换备前与换备后对局两种不同情况之判断标准的区别。
         type: change-entry
+        legacyRawUnits:
+        - raw-L004073
       id: ipg-app-b-c-change-log-g01
       kind: change-list
     id: ipg-app-b-c-change-log

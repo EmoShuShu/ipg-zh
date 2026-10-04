@@ -31,7 +31,7 @@
     },
     "block": {
       "type": "object",
-      "required": ["id", "type", "text", "officialPdfUnit"],
+      "required": ["id", "type", "text", "officialPdfUnits"],
       "additionalProperties": false,
       "properties": {
         "id": {"type": "string", "pattern": "^ipg-"},
@@ -39,7 +39,17 @@
         "text": {"$ref": "#/$defs/localized"},
         "marker": {"type": "string"},
         "displayCode": {"type": "string"},
-        "officialPdfUnit": {"$ref": "#/$defs/provenance"}
+        "officialPdfUnits": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/provenance"}
+        },
+        "legacyRawUnits": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^raw-"}
+        }
       }
     },
     "group": {
@@ -76,9 +86,40 @@
         "components": {"type": "array", "items": {"$ref": "#/$defs/component"}}
       }
     },
+    "annotationBlock": {
+      "type": "object",
+      "required": ["id", "type", "text", "sourceRawUnits"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^ipg-ann-.*-b[0-9]{2,}$"},
+        "type": {"enum": ["paragraph", "list-item"]},
+        "marker": {"type": "string"},
+        "text": {"$ref": "#/$defs/localized"},
+        "sourceRawUnits": {
+          "type": "array",
+          "minItems": 2,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^raw-"}
+        }
+      }
+    },
+    "annotationGroup": {
+      "type": "object",
+      "required": ["id", "kind", "blocks"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^ipg-ann-.*-g[0-9]{2,}$"},
+        "kind": {"enum": ["paragraphs", "ordered-list", "unordered-list"]},
+        "blocks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/annotationBlock"}
+        }
+      }
+    },
     "annotation": {
       "type": "object",
-      "required": ["id", "anchor", "position", "text", "sourceRawUnits"],
+      "required": ["id", "anchor", "position", "order", "groups"],
       "additionalProperties": false,
       "properties": {
         "id": {"type": "string", "pattern": "^ipg-ann-"},
@@ -92,8 +133,18 @@
           }
         },
         "position": {"enum": ["before", "after", "inside-start", "inside-end"]},
-        "text": {"$ref": "#/$defs/localized"},
-        "sourceRawUnits": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^raw-"}}
+        "order": {"type": "integer", "minimum": 0},
+        "appliesTo": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^ipg-"}
+        },
+        "groups": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/annotationGroup"}
+        }
       }
     }
   }

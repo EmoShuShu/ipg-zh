@@ -3,10 +3,12 @@ from __future__ import annotations
 import copy
 import re
 from collections import Counter
+from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any
 
-from .core import allocate_registry_id, load_yaml, sha256_bytes, sha256_text, walk_nodes
+from .core import allocate_registry_id, sha256_bytes, sha256_text, walk_nodes
+from .reconcile import english_evidence
 
 
 LEGACY_SHA256 = "acce82ca7224d5d741609807a2d95697337e56110354efec370938dea51b75fb"
@@ -21,7 +23,17 @@ SECTION_RANGES = {
     "A": (4034, 4064),
     "B": (4065, 4086),
 }
-TITLE_LINES = {"2": 651, "2.1": 721, "2.2": 1306, "2.3": 1438, "2.4": 1638, "2.5": 1707, "2.6": 1843, "A": 4034, "B": 4065}
+TITLE_LINES = {
+    "2": 651,
+    "2.1": 721,
+    "2.2": 1306,
+    "2.3": 1438,
+    "2.4": 1638,
+    "2.5": 1707,
+    "2.6": 1843,
+    "A": 4034,
+    "B": 4065,
+}
 LEGACY_TITLE_EN = {
     "2": "Game Play Errors",
     "2.1": "Missed Trigger",
@@ -32,6 +44,9 @@ LEGACY_TITLE_EN = {
     "2.6": "Failure to Maintain Game State",
 }
 CJK_RE = re.compile(r"[\u3400-\u9fff]")
+COMPONENT_LABEL_RE = re.compile(
+    r"^\*\*(DEFINITION|EXAMPLES?|PHILOSOPHY|ADDITIONAL REMEDY).+\*\*$", re.I
+)
 
 
 def tokenize_legacy(path: Path) -> tuple[list[dict[str, Any]], str]:
@@ -69,33 +84,33 @@ def tokenize_legacy(path: Path) -> tuple[list[dict[str, Any]], str]:
     return units, actual_hash
 
 
-def _normalized(text: str) -> str:
-    value = text.strip()
-    value = re.sub(r"^>+", "", value).strip()
-    value = re.sub(r"^\*\s+", "", value).strip()
-    value = re.sub(r"^[A-Z]\.\s+", "", value).strip()
-    return " ".join(value.split())
-
-
 def _unit(units: list[dict[str, Any]], line: int) -> dict[str, Any]:
     return units[line - 1]
 
 
-def _next_chinese_unit(
-    units: list[dict[str, Any]], start_line: int, end_line: int, *, allow_quote: bool = False
-) -> dict[str, Any] | None:
-    for line_number in range(start_line + 1, end_line + 1):
-        candidate = _unit(units, line_number)
-        text = candidate["text"].strip()
-        if not text:
-            continue
-        if text.startswith(">") and not allow_quote:
-            continue
-        if CJK_RE.search(text):
-            return candidate
-        if not text.startswith(">"):
-            return None
-    return None
+def _content(text: str) -> str:
+    value = re.sub(r"^>+", "", text.strip()).strip()
+    value = re.sub(r"^\*\s+", "", value).strip()
+    value = re.sub(r"^[A-Z]\.\s+", "", value).strip()
+    return value
+
+
+def _match_norm(text: str) -> str:
+    value = _content(text).casefold()
+    value = value.replace("��", " ").replace("’", "'").replace("—", " ").replace("–", " ")
+    value = re.sub(r"[^\w']+", " ", value, flags=re.UNICODE)
+    return " ".join(value.split())
+
+
+def _is_structural(text: str) -> bool:
+    value = text.strip()
+    return bool(
+        value.startswith("#")
+        or value.lower().startswith("*penalty")
+        or COMPONENT_LABEL_RE.match(value)
+        or value.startswith("|---")
+        or value in {"| 违规 | 处罚 |", "| 日期及章节 | 变更 |"}
+    )
 
 
 def _consume(
@@ -130,41 +145,179 @@ def _map_title(
     _consume(dispositions, source, "mapped-bilingual-title", section["id"])
 
 
-def _map_regular_block(
-    block: dict[str, Any], number: str, units: list[dict[str, Any]], dispositions: dict[str, dict[str, Any]], findings: list[dict[str, Any]]
-) -> None:
+def _body_pairs(units: list[dict[str, Any]], number: str) -> list[dict[str, Any]]:
     start, end = SECTION_RANGES[number]
-    wanted = _normalized(block["text"]["en"])
-    candidates = [
-        unit
-        for unit in units[start - 1 : end]
-        if not unit["text"].lstrip().startswith(">") and _normalized(unit["text"]) == wanted
-    ]
-    if len(candidates) != 1:
-        finding = "missing-legacy-mapping" if not candidates else "ambiguous-mapping"
-        findings.append(
+    pairs: list[dict[str, Any]] = []
+    line = start
+    while line <= end:
+        en = _unit(units, line)
+        text = en["text"].strip()
+        if not text or text.startswith(">") or CJK_RE.search(text) or _is_structural(text):
+            line += 1
+            continue
+        following = line + 1
+        translation = None
+        while following <= end:
+            candidate = _unit(units, following)
+            candidate_text = candidate["text"].strip()
+            if not candidate_text or candidate_text == ">" or candidate_text.startswith(">"):
+                following += 1
+                continue
+            if _is_structural(candidate_text):
+                following += 1
+                continue
+            if CJK_RE.search(candidate_text):
+                translation = candidate
+            break
+        if translation is not None:
+            pairs.append({"en": en, "zh": translation})
+            line = translation["line"] + 1
+        else:
+            line += 1
+    return pairs
+
+
+def _window_score(wanted: str, pairs: list[dict[str, Any]]) -> float:
+    candidate = " ".join(_match_norm(pair["en"]["text"]) for pair in pairs)
+    ratio = SequenceMatcher(None, wanted, candidate).ratio()
+    wanted_words = set(wanted.split())
+    coverage = len(wanted_words & set(candidate.split())) / max(1, len(wanted_words))
+    if candidate == wanted:
+        return 1.0
+    if candidate in wanted or wanted in candidate:
+        ratio = max(ratio, min(len(candidate), len(wanted)) / max(len(candidate), len(wanted)))
+    return 0.7 * ratio + 0.3 * coverage
+
+
+def _align_block(
+    block: dict[str, Any],
+    number: str,
+    pairs: list[dict[str, Any]],
+    used: set[int],
+    dispositions: dict[str, dict[str, Any]],
+    findings: list[dict[str, Any]],
+    mappings: list[dict[str, Any]],
+    manual: dict[str, Any] | None = None,
+) -> None:
+    wanted = _match_norm(block["text"]["en"])
+    if manual is not None:
+        selected = []
+        for legacy_pair in manual["legacyPairs"]:
+            index = next(
+                (
+                    index
+                    for index, pair in enumerate(pairs)
+                    if pair["en"]["line"] == legacy_pair["enLine"]
+                    and pair["zh"]["line"] == legacy_pair["zhLine"]
+                ),
+                None,
+            )
+            if index is None or index in used:
+                raise ValueError(f"manual body interval no longer resolves: {manual['id']}")
+            selected.append(index)
+        chosen = [pairs[index] for index in selected]
+        translations = [_content(pair["zh"]["text"]) for pair in chosen]
+        block["text"]["zh"] = "\n\n".join(translations)
+        raw_ids = [item["id"] for pair in chosen for item in (pair["en"], pair["zh"])]
+        block["legacyRawUnits"] = raw_ids
+        mappings.append(
             {
-                "code": finding,
                 "targetId": block["id"],
-                "candidateRawUnits": [unit["id"] for unit in candidates],
+                "score": "manual-high-confidence",
+                "sourceRawUnits": raw_ids,
+                "translationSegmentCount": len(translations),
+                "chineseCoverage": "complete",
+                "overrideId": manual["id"],
             }
         )
-        findings.append({"code": "missing-translation", "targetId": block["id"]})
+        for index in selected:
+            used.add(index)
+            _consume(dispositions, pairs[index]["en"], "mapped-official-en", block["id"])
+            _consume(dispositions, pairs[index]["zh"], "mapped-translation", block["id"])
         return
-    source = candidates[0]
-    translation = _next_chinese_unit(units, source["line"], end)
-    if translation is None:
-        findings.append({"code": "missing-translation", "targetId": block["id"]})
-        _consume(dispositions, source, "mapped-official-en", block["id"])
+    candidates: list[tuple[float, int, int]] = []
+    for start in range(len(pairs)):
+        for length in range(1, min(6, len(pairs) - start) + 1):
+            indexes = range(start, start + length)
+            if any(index in used for index in indexes):
+                continue
+            candidates.append((_window_score(wanted, pairs[start : start + length]), start, length))
+    candidates.sort(key=lambda item: (-item[0], item[2], item[1]))
+    evidence = [
+        {
+            "score": round(score, 4),
+            "rawUnits": [pairs[index]["en"]["id"] for index in range(start, start + length)],
+        }
+        for score, start, length in candidates[:3]
+    ]
+    if not candidates or candidates[0][0] < 0.58:
+        findings.extend(
+            [
+                {
+                    "code": "missing-legacy-mapping",
+                    "targetId": block["id"],
+                    "officialText": block["text"]["en"],
+                    "searchRange": list(SECTION_RANGES[number]),
+                    "topCandidates": evidence,
+                },
+                {"code": "missing-translation", "targetId": block["id"]},
+            ]
+        )
         return
-    block["text"]["zh"] = re.sub(r"^\*\s+", "", translation["text"].strip())
-    block["text"]["zh"] = re.sub(r"^[A-Z]\.\s+", "", block["text"]["zh"])
-    _consume(dispositions, source, "mapped-official-en", block["id"])
-    _consume(dispositions, translation, "mapped-translation", block["id"])
+    best_score, start, length = candidates[0]
+    if len(candidates) > 1 and candidates[1][0] >= 0.75 and best_score - candidates[1][0] < 0.01:
+        findings.extend(
+            [
+                {
+                    "code": "ambiguous-mapping",
+                    "targetId": block["id"],
+                    "officialText": block["text"]["en"],
+                    "searchRange": list(SECTION_RANGES[number]),
+                    "topCandidates": evidence,
+                },
+                {"code": "missing-translation", "targetId": block["id"]},
+            ]
+        )
+        return
+
+    selected = list(range(start, start + length))
+    # A legacy line sometimes contains the complete new paragraph and is followed by
+    # separately translated repeated fragments. Include those fragments so no Chinese
+    # sentence is silently dropped (the Chapter 2 introduction is the regression case).
+    cursor = start + length
+    while cursor < len(pairs) and cursor not in used:
+        fragment = _match_norm(pairs[cursor]["en"]["text"])
+        if fragment and fragment in wanted:
+            selected.append(cursor)
+            cursor += 1
+            continue
+        break
+
+    chosen = [pairs[index] for index in selected]
+    translations = [_content(pair["zh"]["text"]) for pair in chosen]
+    block["text"]["zh"] = "\n\n".join(translations)
+    raw_ids = [item["id"] for pair in chosen for item in (pair["en"], pair["zh"])]
+    block["legacyRawUnits"] = raw_ids
+    mappings.append(
+        {
+            "targetId": block["id"],
+            "score": round(best_score, 4),
+            "sourceRawUnits": raw_ids,
+            "translationSegmentCount": len(translations),
+            "chineseCoverage": "complete",
+        }
+    )
+    for index in selected:
+        used.add(index)
+        _consume(dispositions, pairs[index]["en"], "mapped-official-en", block["id"])
+        _consume(dispositions, pairs[index]["zh"], "mapped-translation", block["id"])
 
 
 def _map_appendix_a(
-    block: dict[str, Any], units: list[dict[str, Any]], dispositions: dict[str, dict[str, Any]], findings: list[dict[str, Any]]
+    block: dict[str, Any],
+    units: list[dict[str, Any]],
+    dispositions: dict[str, dict[str, Any]],
+    findings: list[dict[str, Any]],
 ) -> None:
     start, end = SECTION_RANGES["A"]
     candidates = []
@@ -173,34 +326,56 @@ def _map_appendix_a(
         if len(cells) >= 2 and cells[1] == block["text"]["en"]:
             candidates.append((unit, cells[0]))
     if len(candidates) != 1:
-        findings.append({"code": "ambiguous-mapping" if candidates else "missing-legacy-mapping", "targetId": block["id"]})
+        findings.append(
+            {
+                "code": "ambiguous-mapping" if candidates else "missing-legacy-mapping",
+                "targetId": block["id"],
+            }
+        )
         findings.append({"code": "missing-translation", "targetId": block["id"]})
         return
     source, chinese = candidates[0]
     block["text"]["zh"] = chinese
+    block["legacyRawUnits"] = [source["id"]]
     _consume(dispositions, source, "mapped-bilingual-appendix-row", block["id"])
 
 
 def _map_appendix_b(
-    document: dict[str, Any], units: list[dict[str, Any]], dispositions: dict[str, dict[str, Any]], findings: list[dict[str, Any]]
+    document: dict[str, Any],
+    units: list[dict[str, Any]],
+    dispositions: dict[str, dict[str, Any]],
+    findings: list[dict[str, Any]],
 ) -> None:
-    blocks = next(iter(next(iter(document["sections"]))["components"]))["groups"][0]["blocks"]
+    blocks = document["sections"][0]["components"][0]["groups"][0]["blocks"]
     candidates = [
         unit
         for unit in units[4065 - 1 : 4086]
         if unit["text"].lstrip().startswith("*") and CJK_RE.search(unit["text"])
     ][:5]
     if len(candidates) != len(blocks):
-        findings.append({"code": "unresolved-mapping", "targetId": "ipg-app-b", "detail": "2024-09-23 entry count changed"})
+        findings.append(
+            {
+                "code": "unresolved-mapping",
+                "targetId": "ipg-app-b",
+                "detail": "2024-09-23 entry count changed",
+            }
+        )
         return
     for block, source in zip(blocks, candidates, strict=True):
         official_prefix = block["text"]["en"].split(":", 1)[0]
         translated_prefix = source["text"].lstrip("* ").split("：", 1)[0]
         if official_prefix != translated_prefix:
-            findings.append({"code": "unresolved-mapping", "targetId": block["id"], "candidateRawUnits": [source["id"]]})
+            findings.append(
+                {
+                    "code": "unresolved-mapping",
+                    "targetId": block["id"],
+                    "candidateRawUnits": [source["id"]],
+                }
+            )
             findings.append({"code": "missing-translation", "targetId": block["id"]})
             continue
         block["text"]["zh"] = source["text"].lstrip("* ")
+        block["legacyRawUnits"] = [source["id"]]
         _consume(dispositions, source, "mapped-translation-date-and-number", block["id"])
 
 
@@ -219,36 +394,71 @@ def _resolve_anchor(document: dict[str, Any], anchor: dict[str, Any]) -> dict[st
 
 
 def _map_annotations(
-    document: dict[str, Any], units: list[dict[str, Any]], dispositions: dict[str, dict[str, Any]], overrides: dict[str, Any]
+    document: dict[str, Any],
+    units: list[dict[str, Any]],
+    dispositions: dict[str, dict[str, Any]],
+    overrides: dict[str, Any],
 ) -> None:
     for item in overrides.get("applied", []):
         if item.get("kind") != "publication-annotation-anchor":
             continue
-        en_unit = _unit(units, item["legacyLines"][0])
-        zh_unit = _unit(units, item["legacyLines"][1])
         annotation_id = f"ipg-ann-{item['id'].removeprefix('pilot-ann-')}"
+        blocks = []
+        for index, legacy_block in enumerate(item["legacyBlocks"], 1):
+            en_units = [_unit(units, line) for line in legacy_block["enLines"]]
+            zh_units = [_unit(units, line) for line in legacy_block["zhLines"]]
+            block_id = f"{annotation_id}-g01-b{index:02d}"
+            blocks.append(
+                {
+                    "id": block_id,
+                    "type": "paragraph",
+                    "text": {
+                        "en": "\n\n".join(_content(unit["text"]) for unit in en_units),
+                        "zh": "\n\n".join(_content(unit["text"]) for unit in zh_units),
+                    },
+                    "sourceRawUnits": [unit["id"] for unit in (*en_units, *zh_units)],
+                }
+            )
+            for unit in en_units:
+                _consume(dispositions, unit, "mapped-publication-annotation", block_id)
+            for unit in zh_units:
+                _consume(
+                    dispositions, unit, "mapped-publication-annotation-translation", block_id
+                )
         annotation = {
             "id": annotation_id,
             "anchor": _resolve_anchor(document, item["anchor"]),
             "position": item["position"],
-            "text": {"en": _normalized(en_unit["text"]), "zh": _normalized(zh_unit["text"])},
-            "sourceRawUnits": [en_unit["id"], zh_unit["id"]],
+            "order": item["order"],
+            "groups": [{"id": f"{annotation_id}-g01", "kind": "paragraphs", "blocks": blocks}],
         }
+        if item.get("appliesTo"):
+            annotation["appliesTo"] = item["appliesTo"]
         document["publicationAnnotations"].append(annotation)
-        _consume(dispositions, en_unit, "mapped-publication-annotation", annotation_id)
-        _consume(dispositions, zh_unit, "mapped-publication-annotation-translation", annotation_id)
+
+
+def _annotation_nodes(document: dict[str, Any]) -> list[tuple[str, dict[str, Any]]]:
+    nodes: list[tuple[str, dict[str, Any]]] = []
+    for annotation in document["publicationAnnotations"]:
+        nodes.append(("publication-annotation", annotation))
+        for group in annotation["groups"]:
+            nodes.append(("publication-annotation-group", group))
+            nodes.extend(("publication-annotation-block", block) for block in group["blocks"])
+    return nodes
 
 
 def _register_nodes(registry: dict[str, Any], documents: list[dict[str, Any]]) -> None:
     existing = {entry["id"] for entry in registry.get("entries", [])}
-    live_ids = {
-        node["id"]
+    all_nodes = [node for document in documents for node in [*walk_nodes([document]), *_annotation_nodes(document)]]
+    block_context = {
+        block["id"]: component["id"]
         for document in documents
-        for _, node in (
-            list(walk_nodes([document]))
-            + [("publication-annotation", item) for item in document["publicationAnnotations"]]
-        )
+        for section in document["sections"]
+        for component in section["components"]
+        for group in component["groups"]
+        for block in group["blocks"]
     }
+    live_ids = {node["id"] for _, node in all_nodes}
     for entry in registry.get("entries", []):
         if (
             entry.get("status") == "active"
@@ -263,21 +473,90 @@ def _register_nodes(registry: dict[str, Any], documents: list[dict[str, Any]]) -
                     "reason": "pilot structure corrected; id permanently tombstoned",
                 }
             )
-    for document in documents:
-        nodes = list(walk_nodes([document]))
-        nodes.extend(("publication-annotation", item) for item in document["publicationAnnotations"])
-        for kind, node in nodes:
-            if node["id"] in existing:
-                continue
-            allocate_registry_id(
-                registry,
-                entry_id=node["id"],
-                kind=kind,
-                canonical_key=f"pilot:{node['id']}",
-                version="ipg-2024-09-23-pilot",
-                label=node.get("title", node.get("text", {})).get("en", node["id"]),
+    for kind, node in all_nodes:
+        if node["id"] in existing:
+            if kind == "block":
+                entry = next(item for item in registry["entries"] if item["id"] == node["id"])
+                entry["evidence"] = {
+                    "context": block_context[node["id"]],
+                    "englishHash": english_evidence(node["text"]["en"]),
+                }
+            continue
+        label = node.get("title", node.get("text", {})).get("en", node["id"])
+        allocate_registry_id(
+            registry,
+            entry_id=node["id"],
+            kind=kind,
+            canonical_key=f"pilot:{node['id']}",
+            version="ipg-2024-09-23-pilot",
+            label=label,
+        )
+        if kind == "block":
+            registry["entries"][-1]["evidence"] = {
+                "context": block_context[node["id"]],
+                "englishHash": english_evidence(node["text"]["en"]),
+            }
+        existing.add(node["id"])
+
+
+def _classify_remaining(
+    units: list[dict[str, Any]], dispositions: dict[str, dict[str, Any]]
+) -> None:
+    line_to_section = {
+        line: number
+        for number, (start, end) in SECTION_RANGES.items()
+        for line in range(start, end + 1)
+    }
+
+    def next_nonblank(line: int, direction: int) -> str:
+        cursor = line + direction
+        while 1 <= cursor <= len(units):
+            value = _unit(units, cursor)["text"].strip()
+            if value:
+                return value
+            cursor += direction
+        return ""
+
+    for unit in units:
+        if unit["id"] in dispositions:
+            continue
+        text = unit["text"].strip()
+        number = line_to_section.get(unit["line"])
+        if unit["line"] in {3246, 3248}:
+            disposition = "regression-observed-unpaired-quote-format"
+        elif number is None:
+            disposition = "out-of-scope"
+        elif not text:
+            disposition = "ignored-layout"
+        elif text == ">":
+            disposition = "ignored-quote-separator"
+        elif _is_structural(text):
+            disposition = "mapped-structural" if number == "2.5" else "ignored-with-reason"
+        elif text.startswith(">"):
+            disposition = (
+                "unresolved-mapping"
+                if number == "2.5"
+                else "deferred-other-chapter-publication-annotation"
             )
-            existing.add(node["id"])
+        elif number in {"2", "2.1", "2.2", "2.3", "2.4", "2.6"}:
+            adjacent_to_quote = next_nonblank(unit["line"], -1).startswith(">") or next_nonblank(
+                unit["line"], 1
+            ).startswith(">")
+            disposition = (
+                "deferred-other-chapter-publication-annotation"
+                if adjacent_to_quote
+                else "deferred-other-chapter-body"
+            )
+        elif number in {"A", "B"}:
+            disposition = "ignored-with-reason"
+        else:
+            disposition = "unresolved-mapping"
+        dispositions[unit["id"]] = {
+            "rawUnitId": unit["id"],
+            "line": unit["line"],
+            "disposition": disposition,
+            "targetId": None,
+        }
 
 
 def migrate_pilot(
@@ -287,74 +566,95 @@ def migrate_pilot(
     documents = copy.deepcopy(parsed["documents"])
     dispositions: dict[str, dict[str, Any]] = {}
     findings: list[dict[str, Any]] = []
+    mappings: list[dict[str, Any]] = []
+    body_overrides = {
+        item["targetId"]: item
+        for item in overrides.get("applied", [])
+        if item.get("kind") == "body-interval"
+    }
 
     for document in documents.values():
         for section in document["sections"]:
             _map_title(section, units, dispositions)
-            for _, node in walk_nodes([{"sections": [section]}]):
-                if "officialPdfUnit" not in node:
-                    continue
-                if section["number"] == "A":
-                    _map_appendix_a(node, units, dispositions, findings)
-                elif section["number"] != "B":
-                    _map_regular_block(node, section["number"], units, dispositions, findings)
+            if section["number"] in {"A", "B"}:
+                continue
+            pairs = _body_pairs(units, section["number"])
+            used: set[int] = set()
+            blocks = [
+                node
+                for kind, node in walk_nodes([{"sections": [section]}])
+                if kind == "block"
+            ]
+            for block in blocks:
+                _align_block(
+                    block,
+                    section["number"],
+                    pairs,
+                    used,
+                    dispositions,
+                    findings,
+                    mappings,
+                    body_overrides.get(block["id"]),
+                )
 
+    for _, block in walk_nodes([documents["appendix-a.yaml"]]):
+        if "officialPdfUnits" in block:
+            _map_appendix_a(block, units, dispositions, findings)
     _map_appendix_b(documents["appendix-b.yaml"], units, dispositions, findings)
     _map_annotations(documents["chapter-02.yaml"], units, dispositions, overrides)
 
-    anomaly_lines = {3246, 3248}
-    slice_lines = set()
-    for start, end in SECTION_RANGES.values():
-        slice_lines.update(range(start, min(end, len(units)) + 1))
-    for unit in units:
-        if unit["id"] in dispositions:
-            continue
-        text = unit["text"].strip()
-        if not text or text == ">":
-            disposition = "ignored-layout"
-        elif unit["line"] in anomaly_lines:
-            disposition = "regression-observed-unpaired-quote-format"
-        elif unit["line"] in slice_lines:
-            disposition = "deferred-pilot-content"
-        else:
-            disposition = "out-of-scope"
-        dispositions[unit["id"]] = {
-            "rawUnitId": unit["id"],
-            "line": unit["line"],
-            "disposition": disposition,
-            "targetId": None,
-        }
-
-    if len(dispositions) != len(units):
-        raise AssertionError("not every raw unit received exactly one disposition")
-    if len(set(dispositions)) != len(units):
-        raise AssertionError("raw unit was consumed more than once")
+    _classify_remaining(units, dispositions)
+    if len(dispositions) != len(units) or len(set(dispositions)) != len(units):
+        raise AssertionError("every raw unit must receive exactly one disposition")
     if not _unit(units, 3246)["text"].startswith(">As explained below"):
         raise ValueError("known line 3246 regression fixture changed")
     if not _unit(units, 3248)["text"].startswith("如下所述"):
         raise ValueError("known line 3248 regression fixture changed")
 
     for document in documents.values():
-        for _, node in walk_nodes([document]):
-            if "officialPdfUnit" in node and not node["text"]["zh"]:
-                if not any(finding.get("targetId") == node["id"] and finding["code"] == "missing-translation" for finding in findings):
+        for kind, node in walk_nodes([document]):
+            if kind == "block" and not node["text"]["zh"]:
+                if not any(
+                    finding.get("targetId") == node["id"]
+                    and finding["code"] == "missing-translation"
+                    for finding in findings
+                ):
                     findings.append({"code": "missing-translation", "targetId": node["id"]})
 
     _register_nodes(registry, list(documents.values()))
     ordered_dispositions = [dispositions[unit["id"]] for unit in units]
+    pilot_2_5 = [item for item in ordered_dispositions if 1707 <= item["line"] <= 1842]
+    deferred_annotation_groups = 0
+    in_deferred_annotation = False
+    for item in ordered_dispositions:
+        in_chapter_two = 651 <= item["line"] <= 1904 and not 1707 <= item["line"] <= 1842
+        if not in_chapter_two:
+            in_deferred_annotation = False
+        elif item["disposition"] == "deferred-other-chapter-publication-annotation":
+            if not in_deferred_annotation:
+                deferred_annotation_groups += 1
+            in_deferred_annotation = True
+        elif item["disposition"] not in {"ignored-layout", "ignored-quote-separator"}:
+            in_deferred_annotation = False
     return {
         "documents": documents,
         "registry": registry,
         "rawUnits": units,
         "coverageLedger": ordered_dispositions,
+        "blockMappings": mappings,
         "coverage": {
             "legacySha256": legacy_hash,
             "rawUnitCount": len(units),
             "disposedUnitCount": len(ordered_dispositions),
             "duplicateConsumption": 0,
-            "dispositions": dict(sorted(Counter(item["disposition"] for item in ordered_dispositions).items())),
+            "dispositions": dict(
+                sorted(Counter(item["disposition"] for item in ordered_dispositions).items())
+            ),
+            "section2_5Dispositions": dict(
+                sorted(Counter(item["disposition"] for item in pilot_2_5).items())
+            ),
+            "otherChapterDeferredPublicationAnnotationGroups": deferred_annotation_groups,
         },
         "findings": findings,
         "findingCounts": dict(sorted(Counter(item["code"] for item in findings).items())),
     }
-

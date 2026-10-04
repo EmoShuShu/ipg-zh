@@ -2,80 +2,302 @@ documentId: ipg-chapter-02-pilot
 publicationAnnotations:
 - id: ipg-ann-section-2-5-definition-context
   anchor:
-    type: section
-    id: ipg-s2-5
-  position: inside-start
-  text:
-    en: “Game Rule Violation” does not refer to any particular type of error. Rather, Game Rule Violations
-      are specifically defined as errors that aren’t another infraction. Newer judges will sometimes talk
-      about how “mis-resolving a spell” is a Game Rule Violation. In actuality, resolving a spell improperly
-      could result in one of several different infractions, such as Looking at Extra Cards (e.g. forgetting
-      that Courser of Kruphix left the battlefield) to Hidden Card Error (e.g. mis-reading Divination
-      and drawing three cards).
-    zh: “违反游戏规则”不指代任何特定类型的错误。然而，违反游戏规则明确定义为所有不能归类为其他违规的错误。新裁判有时会讨论“错误地结算一个咒语”是否应当是违反游戏规则。事实上，不正确的结算咒语可能会导致另一些违规，像是额外看牌（如忘记了克罗芬斯的骏马已经离开战场）及非公开牌张失误（看错了卜卦的叙述而抓了3张牌）等。
-  sourceRawUnits:
-  - raw-L001717
-  - raw-L001719
+    type: block
+    id: ipg-s2-5-c-definition-g01-b001
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-section-2-5-definition-context-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-section-2-5-definition-context-g01-b01
+      type: paragraph
+      text:
+        en: “Game Rule Violation” does not refer to any particular type of error. Rather, Game Rule Violations
+          are specifically defined as errors that aren’t another infraction. Newer judges will sometimes
+          talk about how “mis-resolving a spell” is a Game Rule Violation. In actuality, resolving a spell
+          improperly could result in one of several different infractions, such as Looking at Extra Cards
+          (e.g. forgetting that Courser of Kruphix left the battlefield) to Hidden Card Error (e.g. mis-reading
+          Divination and drawing three cards).
+        zh: “违反游戏规则”不指代任何特定类型的错误。然而，违反游戏规则明确定义为所有不能归类为其他违规的错误。新裁判有时会讨论“错误地结算一个咒语”是否应当是违反游戏规则。事实上，不正确的结算咒语可能会导致另一些违规，像是额外看牌（如忘记了克罗芬斯的骏马已经离开战场）及非公开牌张失误（看错了卜卦的叙述而抓了3张牌）等。
+      sourceRawUnits:
+      - raw-L001717
+      - raw-L001719
 - id: ipg-ann-2-5-philosophy-consistency
   anchor:
-    type: component
-    id: ipg-s2-5-c-philosophy
-  position: inside-end
-  text:
-    en: Consistency is a core principle of the IPG. Even though there are thousands of judges adjudicating
-      tournaments across the world, it is important for each of these tournaments to be run and judged
-      to the same standard. For this reason, we strive to handle penalties neutrally. Fundamentally, both
-      players are responsible for maintaining a proper game state. Our core role as judges is not to “correct”
-      or “fix” the players’ mistakes, but to dispassionately interpret and apply the fixes prescribed
-      by the IPG.
-    zh: 一致性是IPG的核心原则。以同样的标准执法世界各地的比赛是很重要的事，即使这些比赛由数以千计的不同裁判来执法。因此，我们致力于处理处罚的中立性。从根本上来说，双方牌手都有责任保持正确的游戏状态。作为裁判，我们的核心作用不是改正或者修复牌手的错误，而是冷静地解释并应用IPG中规定的修正。
-  sourceRawUnits:
-  - raw-L001749
-  - raw-L001751
+    type: block
+    id: ipg-s2-5-c-philosophy-g01-b001
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-2-5-philosophy-consistency-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-2-5-philosophy-consistency-g01-b01
+      type: paragraph
+      text:
+        en: Consistency is a core principle of the IPG. Even though there are thousands of judges adjudicating
+          tournaments across the world, it is important for each of these tournaments to be run and judged
+          to the same standard. For this reason, we strive to handle penalties neutrally. Fundamentally,
+          both players are responsible for maintaining a proper game state. Our core role as judges is
+          not to “correct” or “fix” the players’ mistakes, but to dispassionately interpret and apply
+          the fixes prescribed by the IPG.
+        zh: 一致性是IPG的核心原则。以同样的标准执法世界各地的比赛是很重要的事，即使这些比赛由数以千计的不同裁判来执法。因此，我们致力于处理处罚的中立性。从根本上来说，双方牌手都有责任保持正确的游戏状态。作为裁判，我们的核心作用不是改正或者修复牌手的错误，而是冷静地解释并应用IPG中规定的修正。
+      sourceRawUnits:
+      - raw-L001749
+      - raw-L001751
 - id: ipg-ann-2-5-partial-fix-list
   anchor:
-    type: group
-    id: ipg-s2-5-c-additional-remedy-g02
-  position: inside-start
-  text:
-    en: So right here we are going to have a list of partial fixes. Try to do a simple backup (see Backing
-      Up 1.4 for more information about back ups) then, if you can’t, you can try to do a partial fix.
-      If you cannot apply a simple backup or a partial fix you evaluate if you need to do a back up or
-      leave alone. If the error fits more than one of these categories, it’s ok to partial fix, but be
-      careful that the error only fits into those categories. If there are multiple fixes within the same
-      bullet point, you’re still fine to use that partial fix.
-    zh: 以下是部分修正的列表。首先试着进行简易倒回（关于倒回，详见一节）；如果简易倒回不够，你可以试着执行部分修正。如果你既不能进行简易倒回、也不能执行部分修正，那么你可以考虑倒回或者保留当前状态不修正。如果失误属于一种类别以上，可以使用部分修正，但必须小心注意该失误只属于这些类别。如果在同一条目中满足了多个修正条件，你仍然可以使用这种部分修正。
-  sourceRawUnits:
-  - raw-L001763
-  - raw-L001765
+    type: block
+    id: ipg-s2-5-c-additional-remedy-g01-b002
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-2-5-partial-fix-list-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-2-5-partial-fix-list-g01-b01
+      type: paragraph
+      text:
+        en: So right here we are going to have a list of partial fixes. Try to do a simple backup (see
+          Backing Up 1.4 for more information about back ups) then, if you can’t, you can try to do a
+          partial fix. If you cannot apply a simple backup or a partial fix  you evaluate if you need
+          to do a back up or leave alone. If the error fits more than one of these categories, it’s ok
+          to partial fix, but be careful that the error only fits into those categories. If there are
+          multiple fixes within the same bullet point, you’re still fine to use that partial fix.
+        zh: 以下是部分修正的列表。首先试着进行简易倒回（关于倒回，详见一节）；如果简易倒回不够，你可以试着执行部分修正。如果你既不能进行简易倒回、也不能执行部分修正，那么你可以考虑倒回或者保留当前状态不修正。如果失误属于一种类别以上，可以使用部分修正，但必须小心注意该失误只属于这些类别。如果在同一条目中满足了多个修正条件，你仍然可以使用这种部分修正。
+      sourceRawUnits:
+      - raw-L001763
+      - raw-L001765
+- id: ipg-ann-2-5-untap
+  anchor:
+    type: block
+    id: ipg-s2-5-c-additional-remedy-g02-b001
+  position: after
+  order: 40
+  groups:
+  - id: ipg-ann-2-5-untap-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-2-5-untap-g01-b01
+      type: paragraph
+      text:
+        en: Out-of-Order-Sequencing has always been a viable option when this type of situation arises,
+          and it does so with some regularity. Players get excited, or simply lose focus and forget to
+          untap everything before advancing into the turn. If that happens, we simply issue the warning
+          and fix the mistake, by untapping those permanents now.
+        zh: 发生这种情况时，判定为“次序不当的行事顺序”也是一个合适的选项，过去我们也一直这样做。在进入回合之前，牌手容易因为激动或者注意力不集中而忘记对场面进行重置。发生这种情况时，我们只需给予警告并通过重置本该重置的永久物来修正错误。
+      sourceRawUnits:
+      - raw-L001771
+      - raw-L001773
+- id: ipg-ann-2-5-illegal-choice
+  anchor:
+    type: block
+    id: ipg-s2-5-c-additional-remedy-g02-b002
+  position: after
+  order: 50
+  groups:
+  - id: ipg-ann-2-5-illegal-choice-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-2-5-illegal-choice-g01-b01
+      type: paragraph
+      text:
+        en: This partial fix refers to cards such as True-Name Nemesis, Voice of All or a Siege from Fate
+          Reforged, which require the choice of a player or color as they enter the battlefield. The reasoning
+          for this is similar to why we apply state-based actions — it is impossible for these cards to
+          exist on the battlefield without a choice being made for them, so we correct that immediately.
+          While this could lead to the perception of advantage for one player, such errors always occur
+          publicly, so it is in both player’s interest to be attentive.So, if Nick casts Doom Blade on
+          Albert’s Voice of All, we can have Albert chose a color now. If Albert chooses Black, Doom Blade
+          is now illegal. Then, we can do a simple backup to just before Doom Blade was cast.
+        zh: 这种部分修正是指像真名宿敌、万物使者或是龙命殊途™中的围攻牌，这些需要于其进场时选择牌手或颜色之类选项的牌。这样做的原因与我们执行状态动作的原因差不多——这些牌没有做出选择的话就无法进入战场，所以我们应当立刻纠正。虽然这可能会让人产生其中一个牌手会获得优势的看法，但错误是公开发生的，所以双方牌手都需要注意。所以，如果Nick对Albert的万物使者施放送终刀锋，我们可以让Albert现在选择一种颜色。如果Albert选择了黑色，送终刀锋的目标就会变得不合法。接着，我们可以进行一次简易倒回，回到送终刀锋被施放之前的状态。
+      sourceRawUnits:
+      - raw-L001779
+      - raw-L001781
+- id: ipg-ann-2-5-hand-zone
+  anchor:
+    type: block
+    id: ipg-s2-5-c-additional-remedy-g02-b003
+  position: after
+  order: 60
+  groups:
+  - id: ipg-ann-2-5-hand-zone-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-2-5-hand-zone-g01-b01
+      type: paragraph
+      text:
+        en: Players will generally be able to determine with high accuracy if they failed to draw or discard
+          cards. Note that this partial fix does not expire, even if the error was many turns ago.
+        zh: 牌手如果未能抓牌或者弃牌他们一般都能较为准确地确定。注意，这种部分修正没有时效限制，即使错误是数回合前发生的，也应执行修正。
+      sourceRawUnits:
+      - raw-L001787
+      - raw-L001789
 - id: ipg-ann-2-5-wrong-zone
   anchor:
     type: block
     id: ipg-s2-5-c-additional-remedy-g02-b004
   position: after
-  text:
-    en: There is a fair amount to consider here. There are four tests to determine if this partial fix
-      is relevant. 1) Is the object not in the correct zone. This covers when a creature died but shouldn’t
-      have, or when a creatures shouldn’t have died but did. It also covers if a card was supposed to
-      be bounced as wasn’t or a card was put in the GY when it should have been exiled. Basically, if
-      the game was played correctly, that card should be somewhere else. 2) The identity of the object
-      was known to all players. This means that all players know what the object is. This could be because
-      the card was revealed or it could be because the card is in a location known by both players such
-      as the top of a library. 3) The movement of the card (or lack of movement) is the error, not the
-      result of some other error. For example, if a Path to Exile was case for {C}, and the card was put
-      in exile; that is not eligible for this partial fix because the error was in casting Path for {C}.
-    zh: 这里有不少需要考量的因素。要确定此项部分修正是否适用，需要进行四项测试：该物件是否不在正确的区域？这涵盖了生物本不该死却死了，或者生物本该死却没死的情况。这也包括牌本该被回手却没移回，或者牌本该被放逐却进了坟墓场的情况。简而言之，如果游戏进行正确，该牌应当处于其他位置。是否所有牌手都知晓该物件的身份？这意味着所有牌手都知道那个物件具体是什么。这可能是因为该牌曾被展示过，或者因为它处于双方都知道的位置，例如已知的牌库顶。失误是否是牌的移动（或未移动）本身，而非其他失误导致的后果？例如，如果某人用方片施放了流放之径并将目标牌放逐了；这种情况就不适用此项部分修正，因为错误的根源在于用方片施放了流放之径。
-  sourceRawUnits:
-  - raw-L001795
-  - raw-L001799
+  order: 70
+  groups:
+  - id: ipg-ann-2-5-wrong-zone-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-2-5-wrong-zone-g01-b01
+      type: paragraph
+      text:
+        en: There is a fair amount to consider here. There are four tests to determine if this partial
+          fix is relevant. 1) Is the object not in the correct zone.  This covers when a creature died
+          but shouldn’t have, or when a creatures shouldn’t have died but did.  It also covers if a card
+          was supposed to be bounced as wasn’t or a card was put in the GY when it should have been exiled.  Basically,
+          if the game was played correctly, that card should be somewhere else. 2) The identity of the
+          object was known to all players. This means that all players know what the object is. This could
+          be because the card was revealed or it could be because the card is in a location known by both
+          players such as the top of a library. 3) The movement of the card (or lack of movement) is the
+          error, not the result of some other error.  For example, if a Path to Exile was case for {C},
+          and the card was put in exile; that is not eligible for this partial fix because the error was
+          in casting Path for {C}.
+        zh: 这里有不少需要考量的因素。要确定此项部分修正是否适用，需要进行四项测试：该物件是否不在正确的区域？这涵盖了生物本不该死却死了，或者生物本该死却没死的情况。这也包括牌本该被回手却没移回，或者牌本该被放逐却进了坟墓场的情况。简而言之，如果游戏进行正确，该牌应当处于其他位置。是否所有牌手都知晓该物件的身份？这意味着所有牌手都知道那个物件具体是什么。这可能是因为该牌曾被展示过，或者因为它处于双方都知道的位置，例如已知的牌库顶。失误是否是牌的移动（或未移动）本身，而非其他失误导致的后果？例如，如果某人用方片施放了流放之径并将目标牌放逐了；这种情况就不适用此项部分修正，因为错误的根源在于用方片施放了流放之径。
+      sourceRawUnits:
+      - raw-L001795
+      - raw-L001799
+    - id: ipg-ann-2-5-wrong-zone-g01-b02
+      type: paragraph
+      text:
+        en: '– “and it can be moved with only minor disruption to the current game state”: Things disappearing
+          from the battlefield mid-combat tends to be disruptive. Same with things disappearing from the
+          GY while certain spells are on the stack. Be sure to look at what decisions and actions are
+          currently being made based on that card being where it is.'
+        zh: ——“移动此物件仅会对游戏当前状态造成轻微影响”：在战斗阶段中让东西从战场消失往往会造成严重的干扰。当堆叠上有特定咒语时，让东西从坟墓场消失也是如此。务必审视当前正在做出的决定和动作是否基于该牌当前所处的位置。
+      sourceRawUnits:
+      - raw-L001797
+      - raw-L001801
+- id: ipg-ann-2-5-damage-order
+  anchor:
+    type: block
+    id: ipg-s2-5-c-additional-remedy-g02-b005
+  position: after
+  order: 80
+  groups:
+  - id: ipg-ann-2-5-damage-order-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-2-5-damage-order-g01-b01
+      type: paragraph
+      text:
+        en: This is a dead partial fix.  Damage assignment order has been removed from the CR.  The IPG
+          just hasn’t had an update since then.
+        zh: 这是一个已经失效的部分修正。伤害分配顺序已经从CR中移除了。只是 IPG 自那以后还没有进行更新。
+      sourceRawUnits:
+      - raw-L001807
+      - raw-L001809
+- id: ipg-ann-2-5-partial-fix-backup
+  anchor:
+    type: block
+    id: ipg-s2-5-c-additional-remedy-g03-b001
+  position: after
+  order: 90
+  groups:
+  - id: ipg-ann-2-5-partial-fix-backup-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-2-5-partial-fix-backup-g01-b01
+      type: paragraph
+      text:
+        en: A simple backup is backing up the last action completed (or one currently in progress) and
+          is sometimes used to make another portion of the prescribed remedy smoother. A simple backup
+          should not involve any random elements. Also while applying a partial fix consider the triggered
+          abilities if they would have occurred while taking the action at the correct time.
+        zh: 简易倒回意指倒回上一个已完成的（或正在进行的）游戏动作，有时可用来使前述之修正的某一部分更加平滑。简易倒回不应涉及任何随机元素。另外，在执行部分修正时，应将在正确的时点作该动作时本应发生的触发式异能考虑在内。
+      sourceRawUnits:
+      - raw-L001815
+      - raw-L001817
+- id: ipg-ann-2-5-full-backup
+  anchor:
+    type: block
+    id: ipg-s2-5-c-additional-remedy-g03-b002
+  position: after
+  order: 100
+  groups:
+  - id: ipg-ann-2-5-full-backup-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-2-5-full-backup-g01-b01
+      type: paragraph
+      text:
+        en: So, we look to see if any of the partial fixes apply, and if not, we either rewind or don’t.
+          Please see 1.4 Backing Up for information on if it’s appropriate to back up. For example, if
+          players missed a Day/Night change in the game, it may make since to back up to the point of
+          day/night transformation. However, if a full backup is ill advised, the day/night state will
+          remain as it is.
+        zh: 所以，我们先试图执行简易倒回；如果简易倒回不能适用，再看看是否有任何一个部分修正能够适用，如果没有，我们可以选择是否倒回。关于如何确定倒回是否恰当的信息，请参阅IPG 1.4节。例如，如果牌手遗漏了游戏中的白昼/黑夜转换，那么倒回到转换发生的那个时间点可能是合理的。然而，如果不建议进行完全倒回，那么白昼/黑夜状态将保持现状。
+      sourceRawUnits:
+      - raw-L001823
+      - raw-L001825
+- id: ipg-ann-2-5-opponent-responsibility
+  anchor:
+    type: block
+    id: ipg-s2-5-c-additional-remedy-g03-b003
+  position: after
+  order: 110
+  groups:
+  - id: ipg-ann-2-5-opponent-responsibility-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-2-5-opponent-responsibility-g01-b01
+      type: paragraph
+      text:
+        en: This is simply the definition of Game Play Error – Failure to Maintain Game State, and goes
+          back to the concept that keeping the game in a legal and clear state is both players responsibility.
+        zh: 这就是游戏行动失误～未维护游戏状态的定义。它涉及的概念就是双方牌手都有责任去维护合法、清晰的游戏状态。
+      sourceRawUnits:
+      - raw-L001831
+      - raw-L001833
+- id: ipg-ann-2-5-shared-grv
+  anchor:
+    type: block
+    id: ipg-s2-5-c-additional-remedy-g03-b003
+  position: after
+  order: 120
+  groups:
+  - id: ipg-ann-2-5-shared-grv-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-2-5-shared-grv-g01-b01
+      type: paragraph
+      text:
+        en: As always, both players are responsible for maintaining a clear game state. If my card tells
+          you to take an action, and you do it incorrectly, whose fault is it? Yours for doing the action
+          incorrectly, or mine for not making sure my spell resolved correctly? Turns out, in this case,
+          it’s reasonable to say we are both equally at fault. Fundamentally if the judge thinks that
+          both players share the responsibility for the error, because of continuous effects or both participating
+          in the action, then both players receive this penalty. Another example of a situation that both
+          players are responsible for, is the transition from day/night or night/day, provided there are
+          permanents on the battlefield that care about night/day
+        zh: 一如既往地，双方牌手都有责任维护清晰的游戏状态。如果我的牌要求你做一个动作，而你做错了，那是谁的错？是你错误的动作还是我没有确保咒语正确结算？事实上，我们有理由说，在这种情况下双方都是有过错的。基本上，如果裁判认为两位牌手对失误都有责任，无论是因为持续性效应还是因为两人均参与了动作，两位牌手都会受到此判罚。另一个双方牌手都要负责的例子是白昼/黑夜的转换，前提是战场上有在意白昼/黑夜的永久物。
+      sourceRawUnits:
+      - raw-L001835
+      - raw-L001839
+    - id: ipg-ann-2-5-shared-grv-g01-b02
+      type: paragraph
+      text:
+        en: Note that this double GRV only applies *after* the game has moved on from the point of the
+          error. If, in the example above, one player puts the creature into the graveyard, it’s not a
+          double GRV until the game continues on. Instead, if one player points out the error, play can
+          continue on with the error corrected and no infraction assessed.
+        zh: 请注意，这种双方都判GRV仅在游戏从错误发生点继续进行之后才适用。在上述例子中，如果一名牌手将生物放入坟墓场，在游戏继续进行之前，这还不算双方都判GRV。相反，如果当时有一名牌手指出了错误，游戏可以在纠正错误后继续，而不判处违规。
+      sourceRawUnits:
+      - raw-L001837
+      - raw-L001841
 schemaVersion: 1
 sections:
 - components:
   - groups:
     - blocks:
       - id: ipg-s2-c-body-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 85.64
           - 551.64
@@ -88,11 +310,24 @@ sections:
             in violations of the Magic Comprehensive Rules. Many offenses fit into this category and it
             would be impossible to list them all. The guide below is designed to give judges a framework
             for assessing how to handle a Game Play Error.
-          zh: 游戏行动失误是以不正确或是不精准的行动来进行游戏，而导致违反《万智牌完整规则》的结果。
+          zh: '游戏行动失误是以不正确或是不精准的行动来进行游戏，而导致违反《万智牌完整规则》的结果。
+
+
+            许多违规都属于此类情况，但不可能全数详列。
+
+
+            以下的方针是设计给裁判参考的构架，用来决定如何处理游戏行动失误。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L000653
+        - raw-L000655
+        - raw-L000665
+        - raw-L000667
+        - raw-L000673
+        - raw-L000675
       - id: ipg-s2-c-body-g01-b002
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 154.64
           - 540.53
@@ -104,11 +339,19 @@ sections:
           en: Most Game Play Error infractions are assumed to have been committed unintentionally. If
             the judge believes that the error was intentional, they should first consider whether an Unsporting
             Conduct — Cheating infraction has occurred.
-          zh: ''
+          zh: '大部分游戏行动失误的违规都假设该违规是无意间发生的。
+
+
+            假如裁判认为系蓄意造成该失误，则应该先考虑此违规是否属于“举止违背运动道德～作弊”。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L000681
+        - raw-L000683
+        - raw-L000693
+        - raw-L000695
       - id: ipg-s2-c-body-g01-b003
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 209.84
           - 549.17
@@ -121,8 +364,16 @@ sections:
             or subsequent Warning for a Game Play Error offense in the same category is upgraded to a
             Game Loss. For multi-day tournaments, the penalty count for these infractions resets between
             days.
-          zh: ''
+          zh: '除了始终不会升级的“未维护游戏状态”之外，第三次或更多次犯下同类型游戏行动失误而得到的警告，均应升级为一盘负。
+
+
+            对于历时多日的比赛而言，牌手当天的此类违规处罚累犯计数会在次日清零。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L000701
+        - raw-L000703
+        - raw-L000713
+        - raw-L000715
       id: ipg-s2-c-body-g01
       kind: paragraphs
     id: ipg-s2-c-body
@@ -138,8 +389,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-1-c-definition-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 320.6
           - 549.35
@@ -151,11 +402,14 @@ sections:
           en: A triggered ability triggers, but the player controlling the ability doesn’t demonstrate
             awareness of the trigger’s existence by the first time that it would affect the game in a
             visible fashion.
-          zh: ''
+          zh: 某个触发式异能触发，但于该异能将首度对游戏产生可见影响时，操控该异能的牌手未能表明自己认识到此触发的存在。
         type: paragraph
+        legacyRawUnits:
+        - raw-L000727
+        - raw-L000729
       - id: ipg-s2-1-c-definition-g01-b002
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 362.0
           - 542.86
@@ -168,13 +422,16 @@ sections:
             that the trigger would have on the game:'
           zh: 根据不同的触发对游戏产生之影响不同，牌手需要表明自己认识触发存在的最迟时点也有所差异：
         type: paragraph
+        legacyRawUnits:
+        - raw-L000743
+        - raw-L000745
       id: ipg-s2-1-c-definition-g01
       kind: paragraphs
     - blocks:
       - id: ipg-s2-1-c-definition-g02-b001
         marker: bullet
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 403.2
           - 553.92
@@ -188,10 +445,13 @@ sections:
             must announce those choices before they next pass priority.'
           zh: 对于需要其操控者选择目标（注记“目标对手”者除外）、模式，或具在将异能放进堆叠时便需作出决定之其他选择的触发式异能而言：其操控者必须在其下一次让出优先权之前宣告该些决定。
         type: list-item
+        legacyRawUnits:
+        - raw-L000751
+        - raw-L000753
       - id: ipg-s2-1-c-definition-g02-b002
         marker: bullet
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 445.44
           - 552.53
@@ -207,12 +467,20 @@ sections:
             the triggered ability should have resolved. Note that passing priority, casting an instant
             spell or activating an ability doesn’t mean a triggered ability has been forgotten, as it
             could still be on the stack.'
-          zh: ''
+          zh: '对于会对游戏的可见状态（包括牌手的总生命）产生影响，或是需要在结算时作出决定的触发式异能而言：其操控者在执行只有在该触发式异能结算完毕之后才有可能进行的任何游戏动作（例如施放法术咒语，或明确执行了下一个步骤或阶段中的动作）之前，就必须作出与此类触发式异能相对应的实际动作，或表明自己认识此触发的存在。
+
+
+            请注意，让过优先权、施放瞬间咒语或起动异能这类动作并不表明牌手已遗忘触发式异能，因为在此情况下该触发式异能可能仍在堆叠之上。'
         type: list-item
+        legacyRawUnits:
+        - raw-L000767
+        - raw-L000769
+        - raw-L000783
+        - raw-L000785
       - id: ipg-s2-1-c-definition-g02-b003
         marker: bullet
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 542.88
           - 556.2
@@ -225,10 +493,13 @@ sections:
             the trigger or stop an opponent who tries to take any resulting illegal action.'
           zh: 对于改变了游戏规则的触发式异能而言：其操控者必须认识此触发，或在对手尝试执行因此变为不合法的动作时阻止之。
         type: list-item
+        legacyRawUnits:
+        - raw-L000791
+        - raw-L000793
       - id: ipg-s2-1-c-definition-g02-b004
         marker: bullet
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 571.44
           - 533.78
@@ -241,12 +512,15 @@ sections:
             make the change known by the first time the change has an effect on the visible game state.'
           zh: 对于会以不可见的方式对游戏状态产生影响的触发式异能而言：其操控者必须于此类触发首度对游戏的可见状态造成影响时，让所有人知晓影响为何。
         type: list-item
+        legacyRawUnits:
+        - raw-L000811
+        - raw-L000813
       id: ipg-s2-1-c-definition-g02
       kind: unordered-list
     - blocks:
       - id: ipg-s2-1-c-definition-g03-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 627.68
           - 557.52
@@ -259,9 +533,12 @@ sections:
             Game Play Error — Game Rule Violation.
           zh: 只要牌手履行了上述各项义务的任意一项，由此产生的其他问题便应按照“游戏行动失误～违反游戏规则”来处理。
         type: paragraph
+        legacyRawUnits:
+        - raw-L000827
+        - raw-L000829
       - id: ipg-s2-1-c-definition-g03-b002
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 669.08
           - 533.39
@@ -274,9 +551,12 @@ sections:
             as though it was a missed trigger.
           zh: 如果在传纪上放置学问指示物的回合动作被遗忘了，将这个问题视作遗漏触发来处理。
         type: paragraph
+        legacyRawUnits:
+        - raw-L000840
+        - raw-L000842
       - id: ipg-s2-1-c-definition-g03-b003
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 56.84
           - 556.84
@@ -291,11 +571,19 @@ sections:
             one or more copies of a spell or ability (such as storm or cipher) automatically resolve,
             but awareness of the resulting objects must be demonstrated using the same requirements as
             described above (even though the objects may not be triggered abilities).
-          zh: ''
+          zh: '对于只会产生延时触发式异能，而没有其他效应的触发式异能而言，此类触发会自动结算，牌手不需特别指出此类触发的存在。牌手必须在恰当的时点，表明自己认识到因此产生之延时触发式异能的存在。
+
+
+            对于只会产生咒语或异能之一个或数个复制品，而没有其他效应的触发式异能（例如风暴或暗码）而言，此类触发会自动结算，但牌手仍需依照上文所述的要求，在相应时点表明自己认识到由此产生之各物件的存在（就算此类物件不属于触发式异能也是一样）。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L000852
+        - raw-L000854
+        - raw-L000860
+        - raw-L000862
       - id: ipg-s2-1-c-definition-g03-b004
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 153.44
           - 553.8
@@ -309,9 +597,12 @@ sections:
             similar abilities.
           zh: 一些异能包括一个动作以及紧跟其后的“当你如此作”异能。此类异能视为在宣告该动作之后就已声明。这种情形通常包括耗竭和其他一些类似的异能。
         type: paragraph
+        legacyRawUnits:
+        - raw-L000868
+        - raw-L000870
       - id: ipg-s2-1-c-definition-g03-b005
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 208.64
           - 554.69
@@ -326,11 +617,24 @@ sections:
             to demonstrate awareness of the ability. Similarly, a player demonstrating awareness of an
             optional trigger with no visible effect is assumed to have made the affirmative choice unless
             the opponent responds.
-          zh: ''
+          zh: '如果某个触发式异能不会对游戏造成影响，则就算牌手没有认识到此触发的存在，也不会算作违规。
+
+
+            举例来说，若某触发式异能的效应要求此异能的操控者牺牲一个生物，则未操控生物的牌手并不需要特别指出该触发的存在。
+
+
+            类似地，如果某牌手表明自己认识到无可见效应之非强制性触发的存在，则除非对手有回应，否则便应视为其已选择依可选项行事。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L000876
+        - raw-L000878
+        - raw-L000884
+        - raw-L000886
+        - raw-L000892
+        - raw-L000894
       - id: ipg-s2-1-c-definition-g03-b006
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 291.44
           - 535.24
@@ -343,9 +647,12 @@ sections:
             or have reason to suspect that the controller is intentionally missing their triggered abilities.
           zh: 除非认为应给予警告，或有理由怀疑异能的操控者系蓄意遗忘自己的触发，否则裁判在观察到牌手遗漏触发时不应干预比赛。
         type: paragraph
+        legacyRawUnits:
+        - raw-L000900
+        - raw-L000902
       - id: ipg-s2-1-c-definition-g03-b007
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 332.84
           - 539.32
@@ -358,6 +665,9 @@ sections:
             to their own.
           zh: 若某牌手正在操控其他牌手之回合，则他除了需留意自己的触发外，还有责任准确处理其所操控之牌手的触发。
         type: paragraph
+        legacyRawUnits:
+        - raw-L000912
+        - raw-L000914
       id: ipg-s2-1-c-definition-g03
       kind: paragraphs
     id: ipg-s2-1-c-definition
@@ -367,8 +677,8 @@ sections:
     - blocks:
       - id: ipg-s2-1-c-examples-g01-b001
         marker: A
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 389.24
           - 537.05
@@ -381,10 +691,13 @@ sections:
             two.”
           zh: 恶名骑士/Knight of Infamy（2/1生物，具颂威异能）单独攻击。其操控者说“中两点。”
         type: list-item
+        legacyRawUnits:
+        - raw-L000922
+        - raw-L000924
       - id: ipg-s2-1-c-examples-g01-b002
         marker: B
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 416.84
           - 550.07
@@ -397,10 +710,13 @@ sections:
             a card during their draw step.
           zh: 牌手忘记从已延缓的咒语上移去最后一个计时指示物，并在其抓牌步骤中抓了一张牌。
         type: list-item
+        legacyRawUnits:
+        - raw-L000930
+        - raw-L000932
       - id: ipg-s2-1-c-examples-g01-b003
         marker: C
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 444.44
           - 557.8
@@ -413,10 +729,13 @@ sections:
             for it. They realize this only after casting another spell.
           zh: 牌手施放了疯狂莽夫/Manic Vandal，但并未为其触发式异能选择目标，遗忘了此触发。等到施放另外一个咒语的时候，他们才发现遗忘了此触发。
         type: list-item
+        legacyRawUnits:
+        - raw-L000938
+        - raw-L000940
       - id: ipg-s2-1-c-examples-g01-b004
         marker: D
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 472.04
           - 557.04
@@ -429,6 +748,9 @@ sections:
             They realize the error when declaring blockers during the next turn.
           zh: 在战斗结束的时候，牌手忘记放逐圣沙弗的游魂/Geist of Saint Traft产生的天使衍生物。等到下一个回合宣告阻挡者的时候，他们才发现这个失误。
         type: list-item
+        legacyRawUnits:
+        - raw-L000946
+        - raw-L000948
       id: ipg-s2-1-c-examples-g01
       kind: ordered-list
     id: ipg-s2-1-c-examples
@@ -437,8 +759,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-1-c-philosophy-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 528.44
           - 543.72
@@ -454,11 +776,24 @@ sections:
             or resolution of the ability, the controller is still responsible for ensuring the opponents
             make the appropriate choices and take the appropriate actions. Opponents are not required
             to point out triggered abilities that they do not control, though they may do so if they wish.
-          zh: ''
+          zh: '触发式异能属于常见异能，且其机制较为隐蔽，因此不应在牌手忘记处理该类异能时即对其采取严厉的惩罚措施。
+
+
+            牌手应记得属于自己的触发式异能；蓄意忽略触发式异能的行为应视作“举止违背运动道德～作弊”（除非该异能如上文所述，对游戏没有任何影响）。
+
+
+            就算在异能宣告或结算的时候，需要对手进行相应选择，该异能的操控者也应对此负责，确保对手作出恰当的决定或执行了合适的动作。对手不需指出不由自己操控的遗漏触发，不过如果他们希望指出的话，也可以如此作。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L000956
+        - raw-L000958
+        - raw-L000964
+        - raw-L000966
+        - raw-L000972
+        - raw-L000974
       - id: ipg-s2-1-c-philosophy-g01-b002
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 652.64
           - 557.02
@@ -466,18 +801,7 @@ sections:
           extractionUnit: page-8-line-block
           page: 8
           pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
-        text:
-          en: Triggered abilities are assumed to be remembered until otherwise indicated, and the impact
-            on the game state may not be immediately apparent. The opponent’s benefit is in not having
-            to point out triggered abilities, although this does not mean that they can cause triggers
-            to be missed. If an opponent requires information about the precise timing of a triggered
-            ability or needs details about a game object that may be affected by a resolved triggered
-            ability, that player may need to
-          zh: ''
-        type: paragraph
-      - id: ipg-s2-1-c-philosophy-g01-b003
-        officialPdfUnit:
-          bbox:
+        - bbox:
           - 90.0
           - 56.84
           - 551.76
@@ -486,15 +810,38 @@ sections:
           page: 9
           pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
         text:
-          en: acknowledge that ability’s existence before its controller does. A player who makes a play
-            that may or may not be legal depending on whether an opponent’s uncommunicated trigger has
-            been remembered has not committed an infraction; their play either succeeds, confirming that
-            the trigger has been missed, or is rewound.
-          zh: ''
+          en: Triggered abilities are assumed to be remembered until otherwise indicated, and the impact
+            on the game state may not be immediately apparent. The opponent’s benefit is in not having
+            to point out triggered abilities, although this does not mean that they can cause triggers
+            to be missed. If an opponent requires information about the precise timing of a triggered
+            ability or needs details about a game object that may be affected by a resolved triggered
+            ability, that player may need to acknowledge that ability’s existence before its controller
+            does. A player who makes a play that may or may not be legal depending on whether an opponent’s
+            uncommunicated trigger has been remembered has not committed an infraction; their play either
+            succeeds, confirming that the trigger has been missed, or is rewound.
+          zh: '除非有迹象表明触发式异能已遭遗忘，否则应视作牌手始终记得触发式异能的存在，同时触发式异能对游戏状态产生的影响也有可能不会即刻显现出来。
+
+
+            对于对手而言，虽然无须指出触发式异能这点对己有利，但这并不意味着可以主动致使他人遗漏触发。
+
+
+            如果对手要求知道某个触发式异能的确切触发时机，或需要了解可能会受到已结算之触发式异能影响的某个游戏物件的详细信息，则该牌手便可能需要在该异能的操控者尚未表明自己认识到该异能存在的情况下，提前指出这个触发式异能。
+
+
+            如果牌手做出的某个游戏动作，其结果需根据是否记得未进行过沟通的对手的触发式异能才能判断是否合法，则这位牌手的行为并未触犯任何违规；他们这一游戏动作或就此成功～同时确认该触发确已遗漏～或会被倒回。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L000988
+        - raw-L000990
+        - raw-L001004
+        - raw-L001006
+        - raw-L001012
+        - raw-L001014
+        - raw-L001032
+        - raw-L001034
       - id: ipg-s2-1-c-philosophy-g01-b004
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 125.84
           - 557.04
@@ -509,11 +856,24 @@ sections:
             (such as taking an action or explicitly passing priority), the trigger is remembered. The
             Out-of-Order Sequencing rules (MTR section 4.3) may also be applicable, especially as they
             relate to batches of actions or resolving items on the stack in an improper order.
-          zh: ''
+          zh: '牌手不得通过执行游戏动作或其他贸然推进游戏进程的手段，以致使对手遗漏由其操控的触发式异能。
+
+
+            在对手的回合中，如果触发的操控者在他们担任主动角色之前（例如进行游戏动作或明确让过优先权）表明自己认识到触发存在，便视作他们记得此触发。
+
+
+            次序不当的行事顺序之相关规则（MTR第4.3节）亦应纳入考量，因为这部分规则与未以恰当顺序进行一系列动作或结算堆叠上的多个物件有关。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L001040
+        - raw-L001042
+        - raw-L001060
+        - raw-L001062
+        - raw-L001068
+        - raw-L001070
       - id: ipg-s2-1-c-philosophy-g01-b005
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 222.44
           - 557.76
@@ -527,6 +887,9 @@ sections:
             the missed one.
           zh: 即使一个触发式异能在触发后被遗忘，它仍被视作已触发。计算或限制异能触发次数的效应，会将被遗漏的触发计算在内。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001100
+        - raw-L001102
       id: ipg-s2-1-c-philosophy-g01
       kind: paragraphs
     id: ipg-s2-1-c-philosophy
@@ -535,8 +898,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-1-c-additional-remedy-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 278.84
           - 511.13
@@ -550,9 +913,12 @@ sections:
             immediately.
           zh: 若该触发式异能系由进战场之灵气触发，仅影响其所结附的永久物并对其产生可见变化，则立即结算之。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001114
+        - raw-L001116
       - id: ipg-s2-1-c-additional-remedy-g01-b002
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 334.04
           - 546.57
@@ -568,9 +934,12 @@ sections:
             the same as the one the card was originally moved from.
           zh: 若该触发式异能系由改变某物件区域（包括派出衍生物）之效应产生、用于复原前述区域改变的延迟式触发异能，则由对手选择是令其在下一次将有牌手获得优先权时结算，还是在下一个阶段开始、有牌手将获得优先权时结算。新的区域不需要与牌原本来自的区域相同。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001122
+        - raw-L001124
       - id: ipg-s2-1-c-additional-remedy-g01-b003
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 416.84
           - 557.28
@@ -582,11 +951,19 @@ sections:
           en: For all other triggered abilities, if the ability was missed prior to the current phase
             in the previous turn, instruct the players to continue playing. If the triggered ability created
             an effect whose duration has already expired, instruct the players to continue playing.
-          zh: ''
+          zh: '对所有其他触发式异能而言，以前一回合中相同的阶段为限，如果发生遗漏异能此事的时机早于此限，则令牌手继续游戏。
+
+
+            如果属于该触发式异能产生之效应的持续时限已结束的情况，则令牌手继续游戏。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L001146
+        - raw-L001148
+        - raw-L001154
+        - raw-L001156
       - id: ipg-s2-1-c-additional-remedy-g01-b004
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 472.04
           - 557.4
@@ -602,11 +979,29 @@ sections:
             should have triggered. For example, if the ability instructs a player to sacrifice a creature,
             that player can't sacrifice a creature that wasn't on the battlefield when the ability should
             have triggered.
-          zh: ''
+          zh: '如果该触发式异能不属于前面段落所述之情况，则由对手选择是否要将该触发式异能加入堆叠。
+
+
+            如果要将异能加入堆叠，则将该异能插入堆叠中其原本应处的位置（若能如此作）或是堆叠底。
+
+
+            牌手在为该触发式异能作选择时，不得涉及于此异能原本应触发的时点尚不在相应区域当中的物件。
+
+
+            举例来说，如果该异能令牌手牺牲一个生物，则该牌手不得牺牲于此异能本应触发之时点尚不在战场上的生物。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L001166
+        - raw-L001168
+        - raw-L001178
+        - raw-L001180
+        - raw-L001186
+        - raw-L001188
+        - raw-L001194
+        - raw-L001196
       - id: ipg-s2-1-c-additional-remedy-g01-b005
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 568.64
           - 550.08
@@ -620,9 +1015,12 @@ sections:
             a simple backup may be performed on that action.
           zh: 如果牌手正在进行或刚刚完成一个动作表明其遗漏了触发，并且完成该动作会改变该触发式异能的效应，则可以对该动作进行简易倒回。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001202
+        - raw-L001204
       - id: ipg-s2-1-c-additional-remedy-g01-b006
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 623.84
           - 551.52
@@ -636,8 +1034,16 @@ sections:
             a Warning. The current game state is not a factor in determining this, though symmetrical
             abilities (such as Howling Mine) may be considered usually detrimental or not depending on
             who is being affected.'
-          zh: ''
+          zh: '升级：如果该触发式异能属于“通常认为对其操控牌手不利”，且由操控牌手拥有的牌张产生，则罚则为警告。
+
+
+            在判断异能性质时，不应考虑当前的游戏状态，但对于对等触发的异能而言（例如嚎叫的矿井/Howling Mine），则可根据当前受其影响的牌手来判断此异能是否属于通常认为之不利异能。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L001262
+        - raw-L001264
+        - raw-L001286
+        - raw-L001288
       id: ipg-s2-1-c-additional-remedy-g01
       kind: paragraphs
     id: ipg-s2-1-c-additional-remedy
@@ -654,8 +1060,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-2-c-definition-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 126.2
           - 549.91
@@ -668,9 +1074,12 @@ sections:
             were not entitled to see.
           zh: 牌手采取之行动让他们看到了本不应能检视的牌。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001312
+        - raw-L001314
       - id: ipg-s2-2-c-definition-g01-b002
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 167.6
           - 553.36
@@ -683,6 +1092,9 @@ sections:
             of actions.
           zh: 在同一动作或同一系列动作中看到了一张牌或数张牌，此处罚也只适用一次。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001360
+        - raw-L001362
       id: ipg-s2-2-c-definition-g01
       kind: paragraphs
     id: ipg-s2-2-c-definition
@@ -692,8 +1104,8 @@ sections:
     - blocks:
       - id: ipg-s2-2-c-examples-g01-b001
         marker: A
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 224.0
           - 544.16
@@ -706,10 +1118,13 @@ sections:
             library.
           zh: 牌手在洗对手牌库时意外地翻开（掉落，翻转）一张牌。
         type: list-item
+        legacyRawUnits:
+        - raw-L001370
+        - raw-L001372
       - id: ipg-s2-2-c-examples-g01-b002
         marker: B
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 251.6
           - 435.12
@@ -721,10 +1136,13 @@ sections:
           en: A player pulls up an extra card while drawing from their library.
           zh: 牌手抓牌时多带起了一张牌。
         type: list-item
+        legacyRawUnits:
+        - raw-L001374
+        - raw-L001376
       - id: ipg-s2-2-c-examples-g01-b003
         marker: C
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 265.4
           - 526.09
@@ -736,6 +1154,9 @@ sections:
           en: A player sees the bottom card of their deck when presenting it to their opponent for cutting/shuffling.
           zh: 牌手在将套牌给对手洗或切时看到了牌库底的牌。
         type: list-item
+        legacyRawUnits:
+        - raw-L001378
+        - raw-L001380
       id: ipg-s2-2-c-examples-g01
       kind: ordered-list
     id: ipg-s2-2-c-examples
@@ -744,8 +1165,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-2-c-philosophy-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 321.8
           - 554.09
@@ -759,11 +1180,19 @@ sections:
             Cards in a library are considered to be there until they touch cards in another hidden set.
             Once those cards have joined another hidden set, the infraction is Hidden Card Error or Game
             Rule Violation.
-          zh: ''
+          zh: '牌手容易不慎看到多余的牌。此违规用于处理牌手因手脚笨拙或规则失误导致其看到本不应看到牌张的情况。
+
+
+            只要牌库中的牌张尚未触碰到其他非公开牌叠中之牌张，均视为在牌库之中。一旦相关牌张已加入其他非公开牌叠中，便应按照“非公开牌张失误”或“违反游戏规则”来处理此违规。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L001388
+        - raw-L001390
+        - raw-L001396
+        - raw-L001398
       - id: ipg-s2-2-c-philosophy-g01-b002
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 390.8
           - 556.44
@@ -776,8 +1205,21 @@ sections:
             cards they don’t want to draw; doing so may be Unsporting Conduct — Cheating. Players also
             are not allowed to use this penalty as a stalling mechanism. The library is already randomized,
             so shuffling in the revealed cards should not involve excessive effort.
-          zh: ''
+          zh: '牌手不应该利用此处罚来得到“免费洗牌”，或是企图将不想抓的牌洗到别处去；如此会被视为是“举止违背运动道德~作弊”。
+
+
+            牌手也不应该将此处罚当做拖延的手段。
+
+
+            由于牌库都已经充分随机化，所以将展示的牌洗回去并不会造成太大的影响。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L001404
+        - raw-L001406
+        - raw-L001412
+        - raw-L001414
+        - raw-L001420
+        - raw-L001422
       id: ipg-s2-2-c-philosophy-g01
       kind: paragraphs
     id: ipg-s2-2-c-philosophy
@@ -786,8 +1228,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-2-c-additional-remedy-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 474.8
           - 549.94
@@ -801,6 +1243,9 @@ sections:
             correct locations.
           zh: 如果额外看的牌在牌库中，则将此前套牌中未知的牌张洗入牌库的随机部分，然后将此前已知牌张置于正确位置。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001430
+        - raw-L001432
       id: ipg-s2-2-c-additional-remedy-g01
       kind: paragraphs
     id: ipg-s2-2-c-additional-remedy
@@ -817,8 +1262,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-3-c-definition-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 585.56
           - 546.12
@@ -832,11 +1277,24 @@ sections:
             the continuous effect modifying the game rule that made the action illegal. This infraction
             only applies when a card whose identity is known to only one player is in a hidden set of
             cards both before and after the error.
-          zh: ''
+          zh: '牌手在游戏中发生失误，但此类失误仅凭可公开获知的信息无法修正。
+
+
+            如果牌手的行动得到对手许可或由对手操控改变游戏规则的持续性效应使牌手的行动不合法，则这不是一个非公开牌张失误。
+
+
+            仅在只有一位牌手知晓内容之牌张在发生失误前后均处于非公开牌叠当中的情况下，此违规才适用。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L001444
+        - raw-L001446
+        - raw-L001452
+        - raw-L001454
+        - raw-L001468
+        - raw-L001470
       - id: ipg-s2-3-c-definition-g01-b002
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 668.36
           - 517.44
@@ -847,8 +1305,11 @@ sections:
         text:
           en: If an additional card is seen but not added to the set, the infraction is Game Play Error
             — Looking at Extra Cards.
-          zh: ''
+          zh: 如果牌手看到了额外的牌，但并未将其加入任何牌叠，这属于游戏行动失误～额外看牌。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001476
+        - raw-L001478
       id: ipg-s2-3-c-definition-g01
       kind: paragraphs
     id: ipg-s2-3-c-definition
@@ -858,8 +1319,8 @@ sections:
     - blocks:
       - id: ipg-s2-3-c-examples-g01-b001
         marker: A
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 73.64
           - 398.36
@@ -871,10 +1332,13 @@ sections:
           en: A player draws four cards after casting Ancestral Recall.
           zh: 牌手施放Ancestral Recall之后抓了四张牌。
         type: list-item
+        legacyRawUnits:
+        - raw-L001494
+        - raw-L001496
       - id: ipg-s2-3-c-examples-g01-b002
         marker: B
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 87.44
           - 439.8
@@ -886,10 +1350,13 @@ sections:
           en: A player scries two cards when they should only have scried one.
           zh: 牌手在只该占卜一张牌的情况下占卜了两张牌。
         type: list-item
+        legacyRawUnits:
+        - raw-L001498
+        - raw-L001500
       - id: ipg-s2-3-c-examples-g01-b003
         marker: C
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 101.24
           - 555.29
@@ -902,10 +1369,13 @@ sections:
             it into their hand.
           zh: 牌手结算了黑暗亲信/Dark Confidant的触发，但在将牌张置入手中之前忘了展示。
         type: list-item
+        legacyRawUnits:
+        - raw-L001502
+        - raw-L001504
       - id: ipg-s2-3-c-examples-g01-b004
         marker: D
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 128.84
           - 435.48
@@ -917,10 +1387,13 @@ sections:
           en: A player has more cards in their hand than can be accounted for.
           zh: 牌手的手牌数量比其应有的数量多。
         type: list-item
+        legacyRawUnits:
+        - raw-L001506
+        - raw-L001508
       - id: ipg-s2-3-c-examples-g01-b005
         marker: E
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 142.64
           - 473.81
@@ -932,10 +1405,13 @@ sections:
           en: A player casts Anticipate and picks up the top four cards of their library.
           zh: 牌手施放预先考虑/Anticipate，并拿起了其牌库顶的四张牌。
         type: list-item
+        legacyRawUnits:
+        - raw-L001510
+        - raw-L001512
       - id: ipg-s2-3-c-examples-g01-b006
         marker: F
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 156.44
           - 325.18
@@ -947,6 +1423,9 @@ sections:
           en: A player, going first, draws for their turn.
           zh: 先手的牌手在第一回合开始时抓了牌。
         type: list-item
+        legacyRawUnits:
+        - raw-L001514
+        - raw-L001516
       id: ipg-s2-3-c-examples-g01
       kind: ordered-list
     id: ipg-s2-3-c-examples
@@ -955,8 +1434,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-3-c-philosophy-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 199.04
           - 549.7
@@ -970,9 +1449,12 @@ sections:
             less likely to generate advantage.
           zh: 虽然犯下此失误之后，没有办法将游戏状态倒回至“正确”的状态，但此类失误也有弥补之法，即是让对手充分获取信息，依其意愿来减轻失误造成的影响，从而使牌手较难从中渔利。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001532
+        - raw-L001534
       - id: ipg-s2-3-c-philosophy-g01-b002
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 254.24
           - 556.84
@@ -985,11 +1467,19 @@ sections:
             be handled as a Game Rule Violation. Order cannot be determined from card faces only visible
             to one player unless the card is in a uniquely identifiable position (such as on top of the
             library, or as the only card in hand.)
-          zh: ''
+          zh: '如果牌张被置入公开区域，这样就能够知晓其顺序，之后便可依照“违反游戏规则”处理此违规。
+
+
+            如果仅有一位牌手能看到牌面，便无法确定牌张之顺序，但牌张处于可唯一辨识之位置时（例如牌库顶、手上唯一的一张手牌）除外。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L001540
+        - raw-L001542
+        - raw-L001548
+        - raw-L001550
       - id: ipg-s2-3-c-philosophy-g01-b003
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 323.24
           - 548.28
@@ -1003,9 +1493,12 @@ sections:
             In these situations, the infraction is based on that root cause.
           zh: 但应注意，如果是原本可通过公开方式修正的失误引致无法修复之状况的情形（例如利用绿色法术力来施放脑力激荡/Brainstorm），不要适用此违规。应根据这类情形的根本原因来适用对应的违规。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001556
+        - raw-L001558
       - id: ipg-s2-3-c-philosophy-g01-b004
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 378.44
           - 555.53
@@ -1019,9 +1512,12 @@ sections:
             while determining the set of cards to which the remedy applies.
           zh: 若存在对手先前已知晓的牌张,例如之前展示过的牌库顶牌或检视手牌时看到的牌,则可考虑在此信息的基础上来确定要对哪部分牌叠适用修正。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001564
+        - raw-L001566
       - id: ipg-s2-3-c-philosophy-g01-b005
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 433.64
           - 556.8
@@ -1035,8 +1531,11 @@ sections:
             Collected Company, picks up three cards with one hand and then four cards with the other,
             the last drawn set of four cards should be used for the remedy, instead of the full set of
             seven cards..
-          zh: ''
+          zh: 修正失误时,应尽量从相关牌叠中牌张数量最少者入手。这可能意味着仅对叙述规定之牌叠中的某一部分适用修正。举例来说,如果某牌手在结算征召军伍/Collected Company时用一只手拿起了三张牌，再用另一只手拿起了四张牌，则应对后抓起的这四张牌进行修正，而不是对全部七张。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001572
+        - raw-L001574
       id: ipg-s2-3-c-philosophy-g01
       kind: paragraphs
     id: ipg-s2-3-c-philosophy
@@ -1045,8 +1544,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-3-c-additional-remedy-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 517.64
           - 551.16
@@ -1060,9 +1559,12 @@ sections:
             a land, a simple backup to the point just after the error may be performed.
           zh: 如果属于违规发生后会立即将牌张从相关牌叠移至已知位置，例如弃牌、将牌置于牌库顶或是使用地，则可以简易倒回至错误刚发生的时点。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001582
+        - raw-L001584
       - id: ipg-s2-3-c-additional-remedy-g01-b002
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 572.84
           - 546.48
@@ -1075,9 +1577,12 @@ sections:
             applied.
           zh: 如果存在问题之牌叠已不存在，则无需应用修正。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001594
+        - raw-L001596
       - id: ipg-s2-3-c-additional-remedy-g01-b003
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 600.44
           - 555.7
@@ -1092,9 +1597,12 @@ sections:
             until the point at which they should have been legally added, then return them to the set.
           zh: 如果错误属于未进行本应对相关牌叠中的牌张执行其他行动的情况下，便先行将牌张置入该牌叠中的情形，则该牌手展示包含过量牌张的牌叠，其对手从中选出先前未知的牌张。将这些选出的牌张放在一旁，直到进行到他们应能合乎规则地加入牌叠之后，再将他们移回牌叠。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001602
+        - raw-L001604
       - id: ipg-s2-3-c-additional-remedy-g01-b004
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 669.44
           - 552.52
@@ -1102,16 +1610,7 @@ sections:
           extractionUnit: page-11-line-block
           page: 11
           pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
-        text:
-          en: If the error involves one or more cards that were supposed to be revealed, the player reveals
-            the set of cards that contains the unrevealed cards and their opponent chooses that many previously-
-            unknown cards. Treat those as the cards that were ‘revealed’ and return them to the set that
-            was
-          zh: ''
-        type: paragraph
-      - id: ipg-s2-3-c-additional-remedy-g01-b005
-        officialPdfUnit:
-          bbox:
+        - bbox:
           - 90.0
           - 56.84
           - 552.82
@@ -1120,13 +1619,20 @@ sections:
           page: 12
           pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
         text:
-          en: being selected from; the player then reperforms the action. If recreating the original selection
-            set and reperforming the action would be too disruptive, leave the selected cards in hand.
-          zh: ''
+          en: If the error involves one or more cards that were supposed to be revealed, the player reveals
+            the set of cards that contains the unrevealed cards and their opponent chooses that many previously-
+            unknown cards. Treat those as the cards that were ‘revealed’ and return them to the set that
+            was being selected from; the player then reperforms the action. If recreating the original
+            selection set and reperforming the action would be too disruptive, leave the selected cards
+            in hand.
+          zh: 如果错误涉及本应展示但实际未展示之牌张，则该牌手展示包含此类牌张之牌叠，其对手从中选出等量之先前未知的牌张。将选出的这些牌视作需“展示”的部分，并将它们移回其原本所在之牌叠，然后该牌手重新执行有关动作。如果复原待选牌叠并重新执行动作会对游戏产生过量干扰，则将所选牌张留在手上。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001610
+        - raw-L001612
       - id: ipg-s2-3-c-additional-remedy-g01-b006
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 98.24
           - 557.88
@@ -1143,11 +1649,14 @@ sections:
             that many cards, chosen by the opponent, are returned to the original location instead. For
             example, if a player playing with Sphinx of Jwar Isle illegally draws a card, that card should
             be returned to the top of the library.
-          zh: ''
+          zh: 如果受失误影响之牌叠中包含的牌张数量较其应有数量为多，则该牌手向对手展示包含过量牌张的牌叠，其对手从中选出适量之先前未知的牌张，修正牌叠中的牌张数量。将过量牌张移回其原本所处位置。如果将移回的位置为牌库，则应将其洗回随机的部分；但如果其拥有者先前知道错误移动之牌张的内容，则改为由对手选择同等数量之牌张，并将其移至原本的位置。举例来说，如果某牌手场上有爪尔岛史芬斯，但他错误地抓了一张牌，则应将该牌移回牌库顶。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001618
+        - raw-L001620
       - id: ipg-s2-3-c-additional-remedy-g01-b007
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 222.44
           - 547.8
@@ -1164,6 +1673,9 @@ sections:
             not apply and they may swap the card for a card with the appropriate ability in hand.'
           zh: 升级：如果曾以变身或伪装异能施放之牌面朝下的牌张在游戏过程中发现实际上不具相关异能，则处罚为一盘负。如果牌手手上有一张或数张相应具变身或伪装异能的牌，自施放引致违规之牌张后未曾将其他之前未知的牌张加入手牌，且又是在某个效应会将其展示之前自行上报该失误，则不适用此升级，可将手上任一此类牌张与此引致违规之牌张交换。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001626
+        - raw-L001628
       id: ipg-s2-3-c-additional-remedy-g01
       kind: paragraphs
     id: ipg-s2-3-c-additional-remedy
@@ -1180,8 +1692,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-4-c-definition-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 374.6
           - 556.07
@@ -1195,9 +1707,12 @@ sections:
             Play Error — Hidden Card Error and too few cards is a Game Play Error — Game Rule Violation.
           zh: 牌手再调度流程中的一步出现失误。一旦再调度流程完成并且游戏开始后，由于错误的再调度而产生额外牌张属于游戏行动失误～非公开牌张失误，而牌张过少则属于游戏行动失误～违反游戏规则。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001644
+        - raw-L001646
       - id: ipg-s2-4-c-definition-g01-b002
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 429.8
           - 544.68
@@ -1210,6 +1725,9 @@ sections:
             early or exiling too many cards to Serum Powder, are not an infraction.
           zh: 流程上无意的失误如不会带来优势，例如提前表明再调度之意图，或使用浆液粉末放逐了太多牌，不属于违规。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001652
+        - raw-L001654
       id: ipg-s2-4-c-definition-g01
       kind: paragraphs
     id: ipg-s2-4-c-definition
@@ -1219,8 +1737,8 @@ sections:
     - blocks:
       - id: ipg-s2-4-c-examples-g01-b001
         marker: A
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 486.2
           - 458.4
@@ -1232,10 +1750,13 @@ sections:
           en: A player draws eight cards at the start of the game (instead of seven).
           zh: 牌手在游戏开始的时候抓了八张牌（应为七张）。
         type: list-item
+        legacyRawUnits:
+        - raw-L001675
+        - raw-L001677
       - id: ipg-s2-4-c-examples-g01-b002
         marker: B
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 500.0
           - 552.67
@@ -1248,6 +1769,9 @@ sections:
             choose to take a mulligan.
           zh: 牌手先选择不进行再调度，后在看见对手再调度后也进行再调度。
         type: list-item
+        legacyRawUnits:
+        - raw-L001679
+        - raw-L001681
       id: ipg-s2-4-c-examples-g01
       kind: ordered-list
     id: ipg-s2-4-c-examples
@@ -1256,8 +1780,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-4-c-philosophy-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 556.4
           - 553.06
@@ -1270,6 +1794,9 @@ sections:
             is not available at any other point during the game.
           zh: 较之游戏中的其他时点，在游戏还没开始便发生的失误，还可以采用强制再调度这种影响较小的方式来修正，而其他时点就无法做到这点。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001685
+        - raw-L001687
       id: ipg-s2-4-c-philosophy-g01
       kind: paragraphs
     id: ipg-s2-4-c-philosophy
@@ -1278,8 +1805,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-4-c-additional-remedy-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 612.8
           - 283.32
@@ -1291,6 +1818,9 @@ sections:
           en: The player takes an additional mulligan.
           zh: 牌手再额外进行一次再调度。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001699
+        - raw-L001701
       id: ipg-s2-4-c-additional-remedy-g01
       kind: paragraphs
     id: ipg-s2-4-c-additional-remedy
@@ -1307,8 +1837,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-5-c-definition-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 126.2
           - 556.8
@@ -1322,6 +1852,9 @@ sections:
             Rules that are not covered by the other Game Play Errors.
           zh: 此违规涵盖了大多数关于牌手发生失误，或是没有正确的执行游戏程序而造成的游戏状况。这也用来处理违反完整规则、且未包含在其他游戏行动失误中的违规。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001713
+        - raw-L001715
       id: ipg-s2-5-c-definition-g01
       kind: paragraphs
     id: ipg-s2-5-c-definition
@@ -1331,8 +1864,8 @@ sections:
     - blocks:
       - id: ipg-s2-5-c-examples-g01-b001
         marker: A
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 196.4
           - 397.44
@@ -1344,10 +1877,13 @@ sections:
           en: A player casts Wrath of God for 3W (actual cost 2WW).
           zh: 牌手支付{三}{白}来施放神之愤怒/Wrath of God（正确费用为{二}{白}{白}）。
         type: list-item
+        legacyRawUnits:
+        - raw-L001723
+        - raw-L001725
       - id: ipg-s2-5-c-examples-g01-b002
         marker: B
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 210.2
           - 446.16
@@ -1359,10 +1895,13 @@ sections:
           en: A player does not attack with a creature that must attack each turn.
           zh: 牌手没有让每回合都必须攻击的生物来进行攻击。
         type: list-item
+        legacyRawUnits:
+        - raw-L001727
+        - raw-L001729
       - id: ipg-s2-5-c-examples-g01-b003
         marker: C
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 224.0
           - 544.8
@@ -1375,10 +1914,13 @@ sections:
             until several turns later.
           zh: 牌手没有将受到致命伤害的生物放进坟墓场，且在数个回合之后才发现。
         type: list-item
+        legacyRawUnits:
+        - raw-L001731
+        - raw-L001733
       - id: ipg-s2-5-c-examples-g01-b004
         marker: D
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 251.6
           - 523.85
@@ -1390,10 +1932,13 @@ sections:
           en: A Phyrexian Revoker is on the battlefield that should have had a card named for it.
           zh: 非瑞克西亚断念妖/Phyrexian Revoker 在战场上，当初应为其说一张牌名时却没有说。
         type: list-item
+        legacyRawUnits:
+        - raw-L001735
+        - raw-L001737
       - id: ipg-s2-5-c-examples-g01-b005
         marker: E
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 265.4
           - 522.46
@@ -1405,6 +1950,9 @@ sections:
           en: A player casts Brainstorm and forgets to put two cards back on top of their library.
           zh: 牌手施放脑力激荡/Brainstorm，却忘记将两张牌放回牌库顶。
         type: list-item
+        legacyRawUnits:
+        - raw-L001739
+        - raw-L001741
       id: ipg-s2-5-c-examples-g01
       kind: ordered-list
     id: ipg-s2-5-c-examples
@@ -1413,8 +1961,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-5-c-philosophy-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 308.0
           - 540.96
@@ -1429,6 +1977,9 @@ sections:
             of their impact on the game.
           zh: 虽然违反游戏规则通常是归咎于其中一位牌手，但此类情况通常是公开地发生，且双方牌手都应留意游戏中所发生的事情。处理者应尝试去“修复”这些失误，但很重要的是：不论这些失误对游戏有多少影响，处理方式都必须一致。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001745
+        - raw-L001747
       id: ipg-s2-5-c-philosophy-g01
       kind: paragraphs
     id: ipg-s2-5-c-philosophy
@@ -1437,8 +1988,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-5-c-additional-remedy-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 392.0
           - 323.76
@@ -1450,9 +2001,12 @@ sections:
           en: First, consider a simple backup (see section 1.4).
           zh: 首先，考虑是否简易倒回（参见1.4章节）。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001755
+        - raw-L001757
       - id: ipg-s2-5-c-additional-remedy-g01-b002
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 419.6
           - 530.88
@@ -1465,13 +2019,16 @@ sections:
             categories, and only into those categories, perform the appropriate partial fix:'
           zh: 如果简易倒回不足以完全修正，且违规属于下列某种情形或同属多种情形（但不得超出各情形规定之内容），则进行部分修正：
         type: paragraph
+        legacyRawUnits:
+        - raw-L001759
+        - raw-L001761
       id: ipg-s2-5-c-additional-remedy-g01
       kind: paragraphs
     - blocks:
       - id: ipg-s2-5-c-additional-remedy-g02-b001
         marker: bullet
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 460.8
           - 544.34
@@ -1484,10 +2041,13 @@ sections:
             still the same turn, untap them.
           zh: 如果牌手在自己回合开始时忘记重置一个或数个永久物，并且当前依然是同一个回合，则重置它们。
         type: list-item
+        legacyRawUnits:
+        - raw-L001767
+        - raw-L001769
       - id: ipg-s2-5-c-additional-remedy-g02-b002
         marker: bullet
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 489.24
           - 554.16
@@ -1500,10 +2060,13 @@ sections:
             generating a continuous effect still on the battlefield, that player makes a legal choice.
           zh: 如果某牌手为某个在战场上之静止式异能产生的持续性效应作出的选择不合法（包括在需要作选择时未如此作），则该牌手重新作出一个符合游戏规则的选择。
         type: list-item
+        legacyRawUnits:
+        - raw-L001775
+        - raw-L001777
       - id: ipg-s2-5-c-additional-remedy-g02-b003
         marker: bullet
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 517.68
           - 547.21
@@ -1516,10 +2079,13 @@ sections:
             zone, that player does so.
           zh: 如果某牌手未能抓牌、弃牌或忘记将牌从手上移至其他区域，则该牌手如此作。
         type: list-item
+        legacyRawUnits:
+        - raw-L001783
+        - raw-L001785
       - id: ipg-s2-5-c-additional-remedy-g02-b004
         marker: bullet
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 546.24
           - 548.71
@@ -1534,10 +2100,13 @@ sections:
             Violation, and not if it is the consequence of a different error.
           zh: 如果一个物件处于错误的区域中，且该物件依然为所有牌手所知悉、移动此物件仅会对游戏当前状态造成轻微影响，则将该物件放入正确区域。此修正仅适用于，当“违反游戏规则”的问题本身，是由于有物件处于错误的区域中而产生的，而非因其他错误导致此类结果的情况。
         type: list-item
+        legacyRawUnits:
+        - raw-L001791
+        - raw-L001793
       - id: ipg-s2-5-c-additional-remedy-g02-b005
         marker: bullet
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 602.28
           - 539.5
@@ -1549,12 +2118,15 @@ sections:
           en: If damage assignment order has not been declared, the appropriate player chooses that order.
           zh: 如果未宣告伤害分配次序，对应牌手决定此顺序。
         type: list-item
+        legacyRawUnits:
+        - raw-L001803
+        - raw-L001805
       id: ipg-s2-5-c-additional-remedy-g02
       kind: unordered-list
     - blocks:
       - id: ipg-s2-5-c-additional-remedy-g03-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 644.72
           - 546.89
@@ -1568,9 +2140,12 @@ sections:
             would have occurred had the action been taken at the correct time.
           zh: 对于以上各修正而言，如果能让修正更平滑，可以在此之前进行一次简易倒回。对于在部分修正中产生的触发式异能，只有在这些动作在正确的时间进行也会触发的情况下，才会在这些部分修正中产生。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001811
+        - raw-L001813
       - id: ipg-s2-5-c-additional-remedy-g03-b002
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 699.92
           - 469.56
@@ -1582,9 +2157,12 @@ sections:
           en: Otherwise, a full backup may be considered or the game state may be left as is.
           zh: 若属于其他情况，则可以考虑进行完整倒回，或保留当前游戏状态不做修正。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001819
+        - raw-L001821
       - id: ipg-s2-5-c-additional-remedy-g03-b003
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 56.84
           - 557.93
@@ -1605,6 +2183,9 @@ sections:
           zh: 如果对手没能在预期其能注意到失误的合理时间点前指出游戏行动失误，则对手也犯下违规。大多数情况下是“游戏行动失误～未维护游戏状态”。然而如果裁判认为双方牌手在本次违反游戏规则的过程中均有责任，例如是由于对手操控的改变游戏规则的持续性效应导致的，或是某位牌手根据另一位牌手的指示执行行动，则对手也犯下了“游戏行动失误～违反游戏规则”违规。例如，如果牌手向对手的生物施放流放之径/Path
             to Exile，且该对手将此生物放进坟墓场，一旦游戏继续进行则双方牌手均犯下“游戏行动失误～违反游戏规则”违规。
         type: paragraph
+        legacyRawUnits:
+        - raw-L001827
+        - raw-L001829
       id: ipg-s2-5-c-additional-remedy-g03
       kind: paragraphs
     id: ipg-s2-5-c-additional-remedy
@@ -1621,8 +2202,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-6-c-definition-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 250.4
           - 553.2
@@ -1637,8 +2218,21 @@ sections:
             strategically advantageous time, they should consider an Unsporting Conduct — Cheating infraction.
             Not reminding an opponent about their triggered abilities is never Failure to Maintain Game
             State nor Cheating.
-          zh: ''
+          zh: '牌手容许游戏中的其他牌手犯下了游戏行动失误，且未立刻指出该错误。
+
+
+            如果裁判认为牌手系出于“此状况对己方有利”，或是“希望等到战略上对己方更有利的时候再提出”这一类的考量，而蓄意未指出其他牌手之违规行动，则应考虑适用“举止违背运动道德～作弊”之违规。
+
+
+            未指出对手之触发式异能的行为不属于“未维护游戏状态”或“作弊”。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L001849
+        - raw-L001851
+        - raw-L001857
+        - raw-L001859
+        - raw-L001865
+        - raw-L001867
       id: ipg-s2-6-c-definition-g01
       kind: paragraphs
     id: ipg-s2-6-c-definition
@@ -1648,8 +2242,8 @@ sections:
     - blocks:
       - id: ipg-s2-6-c-examples-g01-b001
         marker: A
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 362.0
           - 538.54
@@ -1662,10 +2256,13 @@ sections:
             noticed until the end of turn.
           zh: 牌手的对手忘了展示处世导师/Worldly Tutor所搜寻的牌。但到了回合结束才被注意到。
         type: list-item
+        legacyRawUnits:
+        - raw-L001875
+        - raw-L001877
       - id: ipg-s2-6-c-examples-g01-b002
         marker: B
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 108.0
           - 389.6
           - 529.18
@@ -1678,6 +2275,9 @@ sections:
             from green.
           zh: 牌手没注意到对手的穿山甲外衣/Armadillo Cloak结附在了具反绿保护异能的生物上。
         type: list-item
+        legacyRawUnits:
+        - raw-L001879
+        - raw-L001881
       id: ipg-s2-6-c-examples-g01
       kind: ordered-list
     id: ipg-s2-6-c-examples
@@ -1686,8 +2286,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-s2-6-c-philosophy-g01-b001
-        officialPdfUnit:
-          bbox:
+        officialPdfUnits:
+        - bbox:
           - 90.0
           - 446.0
           - 551.09
@@ -1699,8 +2299,16 @@ sections:
           en: If an error is caught before a player could gain advantage, then the dangers of the ongoing
             game state becoming corrupted are much lower. If the error is allowed to persist, at least
             some of the fault lies with the opponent, who has also failed to notice the error.
-          zh: ''
+          zh: '如果失误能在有牌手能够藉此获得优势之前发现，则对于接下来游戏状态的伤害就会减少许多。
+
+
+            如果失误持续下去，对手必然也有错，因为他也没有去注意到该失误。'
         type: paragraph
+        legacyRawUnits:
+        - raw-L001889
+        - raw-L001891
+        - raw-L001897
+        - raw-L001899
       id: ipg-s2-6-c-philosophy-g01
       kind: paragraphs
     id: ipg-s2-6-c-philosophy

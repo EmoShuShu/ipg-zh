@@ -85,13 +85,15 @@ def _make_blocks(
         block_type = current.pop("type")
         source_lines = current.pop("lines")
         text = " ".join(part["text"] for part in source_lines)
+        provenance = []
+        for page in dict.fromkeys(line["page"] for line in source_lines):
+            page_lines = [line for line in source_lines if line["page"] == page]
+            provenance.append(_provenance(page, page_lines, f"page-{page}-line-block"))
         block: dict[str, Any] = {
             "id": f"{section_id}-c-{component_role}-g{group_number:02d}-b{block_number:03d}",
             "type": block_type,
             "text": {"en": text, "zh": ""},
-            "officialPdfUnit": _provenance(
-                source_lines[0]["page"], source_lines, f"page-{source_lines[0]['page']}-line-block"
-            ),
+            "officialPdfUnits": provenance,
         }
         if marker:
             block["marker"] = marker
@@ -110,12 +112,17 @@ def _make_blocks(
             marker, content, block_type = example.group(1), example.group(2), "list-item"
 
         starts_item = marker is not None
-        continues = bool(
-            current
-            and not starts_item
-            and line["page"] == current["lines"][-1]["page"]
-            and line["top"] - current["lines"][-1]["bottom"] < 8
+        previous = current["lines"][-1] if current else None
+        same_page_continuation = bool(
+            previous and line["page"] == previous["page"] and line["top"] - previous["bottom"] < 8
         )
+        cross_page_continuation = bool(
+            previous
+            and line["page"] == previous["page"] + 1
+            and not re.search(r"[.!?\u201d)]$", previous["text"])
+            and content[:1].islower()
+        )
+        continues = bool(current and not starts_item and (same_page_continuation or cross_page_continuation))
         if continues:
             current["lines"].append({**line, "text": content})
             continue
@@ -247,7 +254,7 @@ def _parse_appendix_a(lines: list[dict[str, Any]]) -> dict[str, Any]:
                 "type": "appendix-row",
                 "text": {"en": infraction, "zh": ""},
                 "displayCode": code,
-                "officialPdfUnit": _provenance(line["page"], [line], "appendix-a-row"),
+                "officialPdfUnits": [_provenance(line["page"], [line], "appendix-a-row")],
             }
         )
     sample = [row for row in rows if row["text"]["en"] in {"Missed Trigger", "Game Rule Violation", "Tardiness", "Cheating"}]
@@ -310,7 +317,7 @@ def _appendix_change_block(lines: list[dict[str, Any]], number: int) -> dict[str
         "id": f"ipg-app-b-change-{number:02d}",
         "type": "change-entry",
         "text": {"en": " ".join(line["text"] for line in lines), "zh": ""},
-        "officialPdfUnit": _provenance(lines[0]["page"], lines, "appendix-b-change-entry"),
+        "officialPdfUnits": [_provenance(lines[0]["page"], lines, "appendix-b-change-entry")],
     }
 
 
@@ -335,4 +342,10 @@ def parse_pilot(pdf_path: Path) -> dict[str, Any]:
             "appendix-b.yaml": _parse_appendix_b(appendix_b_lines),
         },
     }
+
+
+def extract_pilot(pdf_path: Path) -> dict[str, Any]:
+    from .reconcile import extraction_view
+
+    return extraction_view(parse_pilot(pdf_path))
 

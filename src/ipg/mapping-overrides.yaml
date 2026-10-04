@@ -1,35 +1,117 @@
 schemaVersion: 1
+reconciliation:
+  englishHashToStableId:
+    0e14c7fd4e78fe1c92e1cf6cd196558b59e544ad78300b1b868816936e9c9ed6: ipg-s2-1-c-philosophy-g01-b002
+    eee96477a61a24f298b047887eaba62ab80d22f673642ac386554b7c0156609a: ipg-s2-3-c-additional-remedy-g01-b004
 applied:
+  - id: pilot-body-2-1-delayed-copy
+    kind: body-interval
+    targetId: ipg-s2-1-c-definition-g03-b003
+    legacyPairs:
+      - {enLine: 852, zhLine: 854}
+      - {enLine: 860, zhLine: 862}
+    confidence: high
+    rationale: The legacy English second fragment is an obsolete example, but its paired Chinese is the complete normative copy-trigger translation retained by the current official block.
   - id: pilot-ann-section-2-5-definition-context
     kind: publication-annotation-anchor
-    legacyLines: [1717, 1719]
-    anchor: {type: section, id: ipg-s2-5}
-    position: inside-start
+    legacyBlocks: [{enLines: [1717], zhLines: [1719]}]
+    anchor: {type: block, id: ipg-s2-5-c-definition-g01-b001}
+    position: after
+    order: 10
     confidence: high
-    rationale: The annotation explicitly defines Game Rule Violation as a whole.
+    rationale: Immediately follows the definition paragraph in the legacy source.
   - id: pilot-ann-2-5-philosophy-consistency
     kind: publication-annotation-anchor
-    legacyLines: [1749, 1751]
-    anchor: {type: component, id: ipg-s2-5-c-philosophy}
-    position: inside-end
+    legacyBlocks: [{enLines: [1749], zhLines: [1751]}]
+    anchor: {type: block, id: ipg-s2-5-c-philosophy-g01-b001}
+    position: after
+    order: 20
     confidence: high
-    rationale: The annotation explains the section's Philosophy paragraph on consistent handling.
+    rationale: Immediately follows the philosophy paragraph in the legacy source.
   - id: pilot-ann-2-5-partial-fix-list
     kind: publication-annotation-anchor
-    legacyLines: [1763, 1765]
-    anchor: {type: group, id: ipg-s2-5-c-additional-remedy-g02}
-    position: inside-start
+    legacyBlocks: [{enLines: [1763], zhLines: [1765]}]
+    anchor: {type: block, id: ipg-s2-5-c-additional-remedy-g01-b002}
+    position: after
+    order: 30
     confidence: high
-    rationale: The annotation introduces the immediately following partial-fix list as a group.
+    rationale: Immediately follows the paragraph introducing the partial-fix list.
+  - id: pilot-ann-2-5-untap
+    kind: publication-annotation-anchor
+    legacyBlocks: [{enLines: [1771], zhLines: [1773]}]
+    anchor: {type: block, id: ipg-s2-5-c-additional-remedy-g02-b001}
+    position: after
+    order: 40
+    confidence: high
+    rationale: Immediately follows the untap partial fix.
+  - id: pilot-ann-2-5-illegal-choice
+    kind: publication-annotation-anchor
+    legacyBlocks: [{enLines: [1779], zhLines: [1781]}]
+    anchor: {type: block, id: ipg-s2-5-c-additional-remedy-g02-b002}
+    position: after
+    order: 50
+    confidence: high
+    rationale: Immediately follows the illegal-choice partial fix.
+  - id: pilot-ann-2-5-hand-zone
+    kind: publication-annotation-anchor
+    legacyBlocks: [{enLines: [1787], zhLines: [1789]}]
+    anchor: {type: block, id: ipg-s2-5-c-additional-remedy-g02-b003}
+    position: after
+    order: 60
+    confidence: high
+    rationale: Immediately follows the draw/discard/return partial fix.
   - id: pilot-ann-2-5-wrong-zone
     kind: publication-annotation-anchor
-    legacyLines: [1795, 1799]
-    anchor:
-      type: block
-      matchEnglishPrefix: If an object is not in the correct zone
+    legacyBlocks:
+      - {enLines: [1795], zhLines: [1799]}
+      - {enLines: [1797], zhLines: [1801]}
+    anchor: {type: block, id: ipg-s2-5-c-additional-remedy-g02-b004}
     position: after
+    order: 70
     confidence: high
-    rationale: The annotation directly expands the wrong-zone list item.
+    rationale: Two legacy annotation paragraphs immediately follow the wrong-zone partial fix.
+  - id: pilot-ann-2-5-damage-order
+    kind: publication-annotation-anchor
+    legacyBlocks: [{enLines: [1807], zhLines: [1809]}]
+    anchor: {type: block, id: ipg-s2-5-c-additional-remedy-g02-b005}
+    position: after
+    order: 80
+    confidence: high
+    rationale: Immediately follows the damage-assignment-order partial fix.
+  - id: pilot-ann-2-5-partial-fix-backup
+    kind: publication-annotation-anchor
+    legacyBlocks: [{enLines: [1815], zhLines: [1817]}]
+    anchor: {type: block, id: ipg-s2-5-c-additional-remedy-g03-b001}
+    position: after
+    order: 90
+    confidence: high
+    rationale: Immediately follows the paragraph on partial fixes and simple backups.
+  - id: pilot-ann-2-5-full-backup
+    kind: publication-annotation-anchor
+    legacyBlocks: [{enLines: [1823], zhLines: [1825]}]
+    anchor: {type: block, id: ipg-s2-5-c-additional-remedy-g03-b002}
+    position: after
+    order: 100
+    confidence: high
+    rationale: Immediately follows the full-backup paragraph.
+  - id: pilot-ann-2-5-opponent-responsibility
+    kind: publication-annotation-anchor
+    legacyBlocks: [{enLines: [1831], zhLines: [1833]}]
+    anchor: {type: block, id: ipg-s2-5-c-additional-remedy-g03-b003}
+    position: after
+    order: 110
+    confidence: high
+    rationale: First annotation following the final remedy paragraph.
+  - id: pilot-ann-2-5-shared-grv
+    kind: publication-annotation-anchor
+    legacyBlocks:
+      - {enLines: [1835], zhLines: [1839]}
+      - {enLines: [1837], zhLines: [1841]}
+    anchor: {type: block, id: ipg-s2-5-c-additional-remedy-g03-b003}
+    position: after
+    order: 120
+    confidence: high
+    rationale: Second, two-paragraph annotation following the final remedy paragraph.
 examples:
   rename:
     from: {id: ipg-s2-5, title: Old title}
@@ -47,4 +129,3 @@ examples:
     from: [ipg-example-old-block-a, ipg-example-old-block-b]
     to: [ipg-example-new-block]
     translationInheritance: manual
-
