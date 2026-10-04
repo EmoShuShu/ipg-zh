@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from ipg_pipeline.builder import build_outputs
+from ipg_pipeline.builder import build_outputs, render_markdown
 from ipg_pipeline.core import ROOT, load_yaml, validate_schema, walk_nodes
 from ipg_pipeline.full_parser import FullParseError, extract_full_pdf, parse_full_extraction
 from ipg_pipeline.p3 import OFFICIAL_PDF, p3_manifest
@@ -38,6 +38,23 @@ def reconciled(parsed: dict) -> dict:
         previous,
         load_yaml(ROOT / "src/ipg/id-registry.yaml"),
         version="ipg-2024-09-23-p3-test",
+    )
+
+
+@pytest.fixture(scope="module")
+def full_candidate(tmp_path_factory: pytest.TempPathFactory, reconciled: dict) -> tuple[str, dict]:
+    output = tmp_path_factory.mktemp("full-candidate")
+    build_outputs(
+        output,
+        p3_manifest(),
+        [reconciled["document"]],
+        load_yaml(ROOT / "src/ipg/display-values.yaml"),
+        candidate=True,
+        profile="candidate",
+    )
+    return (
+        (output / "IPG.md").read_text(encoding="utf-8"),
+        json.loads((output / "rules.json").read_text(encoding="utf-8")),
     )
 
 
@@ -123,6 +140,103 @@ def test_appendix_b_dates_entries_and_rule_references(parsed: dict) -> None:
         for block in group["blocks"]
         for reference in block["ruleReferences"]
     )
+
+
+def test_front_matter_headings_never_expose_internal_keys(full_candidate: tuple[str, dict], reconciled: dict) -> None:
+    markdown, _ = full_candidate
+    assert "### introduction" not in markdown.casefold()
+    assert "### framework" not in markdown.casefold()
+    assert "## **[CANDIDATE 缺译]** Introduction" in markdown
+    assert "## **[CANDIDATE 缺译]** Framework of this Document" in markdown
+
+    translated = copy.deepcopy(reconciled["document"])
+    translated["sections"][0]["title"]["zh"] = "引言"
+    translated_markdown = render_markdown(
+        p3_manifest(),
+        [translated],
+        load_yaml(ROOT / "src/ipg/display-values.yaml"),
+        candidate=True,
+    )
+    assert "## 引言 (Introduction)" in translated_markdown
+    assert "## introduction" not in translated_markdown.casefold()
+
+
+def test_appendix_b_dates_render_in_persisted_order_with_entry_counts(full_candidate: tuple[str, dict]) -> None:
+    markdown, _ = full_candidate
+    expected = [
+        ("September 23, 2024", 5),
+        ("April 15, 2024", 6),
+        ("February 2, 2024", 1),
+        ("November 13, 2023", 2),
+        ("September 4, 2023", 3),
+    ]
+    lines = markdown.splitlines()
+    indices = [lines.index(f"### {date}") for date, _ in expected]
+    assert indices == sorted(indices)
+    appendix_end = len(lines)
+    for index, ((_, expected_count), start) in enumerate(zip(expected, indices)):
+        end = indices[index + 1] if index + 1 < len(indices) else appendix_end
+        assert sum(line.startswith("- ") for line in lines[start + 1 : end]) == expected_count
+
+
+def test_appendix_component_titles_are_not_repeated(full_candidate: tuple[str, dict]) -> None:
+    markdown, _ = full_candidate
+    assert "#### 处罚快速查询" not in markdown
+    assert "#### 与之前版本的更动" not in markdown
+
+
+def test_rules_json_preserves_complete_appendix_date_groups(full_candidate: tuple[str, dict]) -> None:
+    _, rules = full_candidate
+    appendix = next(section for section in rules["sections"] if section["number"] == "B")
+    groups = appendix["components"][0]["groups"]
+    assert [(group["date"], len(group["blocks"])) for group in groups] == [
+        ("September 23, 2024", 5),
+        ("April 15, 2024", 6),
+        ("February 2, 2024", 1),
+        ("November 13, 2023", 2),
+        ("September 4, 2023", 3),
+    ]
+
+
+def test_output_schema_rejects_invalid_section_id(full_candidate: tuple[str, dict]) -> None:
+    _, rules = full_candidate
+    broken = copy.deepcopy(rules)
+    broken["sections"][0]["id"] = "not-an-ipg-id"
+    assert validate_schema(broken, ROOT / "schema/ipg-output.schema.json")
+
+
+def test_output_schema_rejects_block_without_text(full_candidate: tuple[str, dict]) -> None:
+    _, rules = full_candidate
+    broken = copy.deepcopy(rules)
+    del broken["sections"][0]["components"][0]["groups"][0]["blocks"][0]["text"]
+    assert validate_schema(broken, ROOT / "schema/ipg-output.schema.json")
+
+
+@pytest.mark.parametrize("damage", ["anchor", "annotation-block"])
+def test_output_schema_rejects_invalid_publication_annotation(
+    full_candidate: tuple[str, dict], damage: str
+) -> None:
+    _, rules = full_candidate
+    broken = copy.deepcopy(rules)
+    annotation = broken["publicationAnnotations"][0]
+    if damage == "anchor":
+        annotation["anchor"]["type"] = "paragraph"
+    else:
+        del annotation["groups"][0]["blocks"][0]["text"]
+    assert validate_schema(broken, ROOT / "schema/ipg-output.schema.json")
+
+
+@pytest.mark.parametrize("damage", ["date", "block-type"])
+def test_output_schema_rejects_invalid_change_list(full_candidate: tuple[str, dict], damage: str) -> None:
+    _, rules = full_candidate
+    broken = copy.deepcopy(rules)
+    appendix = next(section for section in broken["sections"] if section["number"] == "B")
+    group = appendix["components"][0]["groups"][0]
+    if damage == "date":
+        group["date"] = "2024/09/23"
+    else:
+        group["blocks"][0]["type"] = "paragraph"
+    assert validate_schema(broken, ROOT / "schema/ipg-output.schema.json")
 
 
 def test_every_official_block_has_hash_page_bbox_and_extraction_unit(parsed: dict) -> None:
