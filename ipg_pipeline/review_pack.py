@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Any
 
 from .builder import build_outputs
-from .core import sha256_bytes, sha256_text
+from .core import sha256_bytes, sha256_text, walk_nodes
 from .omegat import collect_units
 from .review import build_review_ledger
 from .validation import validate_release
@@ -76,6 +76,49 @@ def build_p2_review_pack(
 
     annotations = documents[0][1]["publicationAnnotations"]
     disposition_counts = migration_report["coverage"]["dispositions"]
+    blocks = [
+        node
+        for _, document in documents
+        for kind, node in walk_nodes([document])
+        if kind == "block"
+    ]
+    provenance_units = [unit for block in blocks for unit in block["officialPdfUnits"]]
+    provenance = {
+        "schemaVersion": 1,
+        "officialPdfSha256": sorted({unit["pdfSha256"] for unit in provenance_units}),
+        "blockCount": len(blocks),
+        "provenanceUnitCount": len(provenance_units),
+        "pages": sorted({unit["page"] for unit in provenance_units}),
+        "allBboxesValid": all(
+            len(unit["bbox"]) == 4
+            and unit["bbox"][0] < unit["bbox"][2]
+            and unit["bbox"][1] < unit["bbox"][3]
+            for unit in provenance_units
+        ),
+    }
+    _write_json(report_dir / "pdf-provenance-summary.json", provenance)
+    expected_golden = json.loads(
+        (root / "tests/fixtures/pilot/golden-pilot-summary.json").read_text(encoding="utf-8")
+    )
+    actual_golden = {
+        "scope": "pilot-only-pages-7-14-30-31",
+        "pdfSha256": provenance["officialPdfSha256"][0],
+        "pageCount": 31,
+        "documentBlockCounts": {
+            filename: sum(1 for kind, _ in walk_nodes([document]) if kind == "block")
+            for filename, document in documents
+        },
+        "crossPageBlockCount": sum(len(block["officialPdfUnits"]) > 1 for block in blocks),
+    }
+    _write_json(
+        report_dir / "golden-fixture-diff.json",
+        {
+            "schemaVersion": 1,
+            "identical": actual_golden == expected_golden,
+            "expected": expected_golden,
+            "actual": actual_golden,
+        },
+    )
     summary = {
         "schemaVersion": 1,
         "scope": "P0-P2 vertical slice only",
