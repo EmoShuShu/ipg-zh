@@ -7,6 +7,7 @@ from typing import Any, Iterable
 
 import yaml
 from jsonschema import Draft202012Validator
+from referencing import Registry, Resource
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -41,7 +42,12 @@ def load_json(path: Path) -> Any:
 
 
 def validate_schema(instance: Any, schema_path: Path) -> list[str]:
-    validator = Draft202012Validator(load_json(schema_path))
+    schemas = [load_json(path) for path in schema_path.parent.glob("*.schema.json")]
+    registry = Registry()
+    for schema in schemas:
+        if "$id" in schema:
+            registry = registry.with_resource(schema["$id"], Resource.from_contents(schema))
+    validator = Draft202012Validator(load_json(schema_path), registry=registry)
     return [
         f"{'/'.join(str(part) for part in error.absolute_path) or '<root>'}: {error.message}"
         for error in sorted(validator.iter_errors(instance), key=lambda item: list(item.absolute_path))

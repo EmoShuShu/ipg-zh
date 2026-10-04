@@ -6,6 +6,8 @@ sections:
   - groups:
     - blocks:
       - id: ipg-app-b-change-01
+        ruleReferences:
+        - '1.2'
         officialPdfUnits:
         - bbox:
           - 54.0
@@ -23,6 +25,8 @@ sections:
         legacyRawUnits:
         - raw-L004069
       - id: ipg-app-b-change-02
+        ruleReferences:
+        - '2.1'
         officialPdfUnits:
         - bbox:
           - 54.0
@@ -39,6 +43,8 @@ sections:
         legacyRawUnits:
         - raw-L004070
       - id: ipg-app-b-change-03
+        ruleReferences:
+        - '2.1'
         officialPdfUnits:
         - bbox:
           - 54.0
@@ -55,6 +61,8 @@ sections:
         legacyRawUnits:
         - raw-L004071
       - id: ipg-app-b-change-04
+        ruleReferences:
+        - '2.5'
         officialPdfUnits:
         - bbox:
           - 54.0
@@ -72,6 +80,8 @@ sections:
         legacyRawUnits:
         - raw-L004072
       - id: ipg-app-b-change-05
+        ruleReferences:
+        - '3.5'
         officialPdfUnits:
         - bbox:
           - 54.0
@@ -90,6 +100,7 @@ sections:
         - raw-L004073
       id: ipg-app-b-c-change-log-g01
       kind: change-list
+      date: September 23, 2024
     id: ipg-app-b-c-change-log
     labelCode: component.change-log
     role: change-log

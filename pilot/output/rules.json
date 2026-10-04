@@ -21,13 +21,25 @@
       "en": "Definition",
       "zh": "定义"
     },
+    "component.downgrade": {
+      "en": "Downgrade",
+      "zh": "降级"
+    },
     "component.examples": {
       "en": "Examples",
       "zh": "范例"
     },
+    "component.penalty-definition": {
+      "en": "Penalty Definition",
+      "zh": "处罚定义"
+    },
     "component.philosophy": {
       "en": "Philosophy",
       "zh": "原则"
+    },
+    "component.upgrade": {
+      "en": "Upgrade",
+      "zh": "升级"
     },
     "penalty.disqualification": {
       "en": "Disqualification",
@@ -424,8 +436,27 @@
       "position": "after"
     }
   ],
+  "publishable": false,
   "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
   "schema": "ipg-output-v1",
+  "scope": {
+    "officialContent": {
+      "included": [
+        "chapter-2",
+        "appendix-a-sample",
+        "appendix-b-sample"
+      ],
+      "mode": "pilot"
+    },
+    "publicationAnnotations": {
+      "deferredGroups": 86,
+      "deferredRawUnits": 338,
+      "includedSections": [
+        "2.5"
+      ],
+      "mode": "pilot"
+    }
+  },
   "sections": [
     {
       "components": [
@@ -3082,6 +3113,7 @@
                       "pdfSha256": "056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0"
                     }
                   ],
+                  "referenceId": "ipg-s2-1",
                   "text": {
                     "en": "Missed Trigger",
                     "zh": "遗漏触发"
@@ -3107,6 +3139,7 @@
                       "pdfSha256": "056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0"
                     }
                   ],
+                  "referenceId": "ipg-s2-5",
                   "text": {
                     "en": "Game Rule Violation",
                     "zh": "违反游戏规则"
@@ -3132,6 +3165,7 @@
                       "pdfSha256": "056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0"
                     }
                   ],
+                  "referenceId": "ipg-s3-1",
                   "text": {
                     "en": "Tardiness",
                     "zh": "迟到"
@@ -3157,6 +3191,7 @@
                       "pdfSha256": "056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0"
                     }
                   ],
+                  "referenceId": "ipg-s4-8",
                   "text": {
                     "en": "Cheating",
                     "zh": "作弊"
@@ -3205,6 +3240,9 @@
                       "pdfSha256": "056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0"
                     }
                   ],
+                  "ruleReferences": [
+                    "1.2"
+                  ],
                   "text": {
                     "en": "1.2: Removed specific details of how penalties are collected and stored, as it varies depending on the software being used.",
                     "zh": "1.2：由于记录和收集方式因软件而异，故取消此方面的特别说明。"
@@ -3228,6 +3266,9 @@
                       "page": 31,
                       "pdfSha256": "056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0"
                     }
+                  ],
+                  "ruleReferences": [
+                    "2.1"
                   ],
                   "text": {
                     "en": "2.1: Treat missed Saga turn actions as missed triggers.",
@@ -3253,6 +3294,9 @@
                       "pdfSha256": "056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0"
                     }
                   ],
+                  "ruleReferences": [
+                    "2.1"
+                  ],
                   "text": {
                     "en": "2.1: Missed triggers still count as having triggered.",
                     "zh": "2.1：被遗漏的触发式异能仍认为已触发过。"
@@ -3276,6 +3320,9 @@
                       "page": 31,
                       "pdfSha256": "056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0"
                     }
+                  ],
+                  "ruleReferences": [
+                    "2.5"
                   ],
                   "text": {
                     "en": "2.5: Object-in-wrong-zone changed to always be a partial fix, but only when the incorrect zone is the root GRV.",
@@ -3301,6 +3348,9 @@
                       "pdfSha256": "056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0"
                     }
                   ],
+                  "ruleReferences": [
+                    "3.5"
+                  ],
                   "text": {
                     "en": "3.5: Wrong number of cards upgrade has been split into two paragraphs for clarity, as it has slightly different criteris for pre- and post-sideboard games.",
                     "zh": "3.5：牌张数量错误的升级被分为两段内容，以厘清换备前与换备后对局两种不同情况之判断标准的区别。"
@@ -3308,6 +3358,7 @@
                   "type": "change-entry"
                 }
               ],
+              "date": "September 23, 2024",
               "id": "ipg-app-b-c-change-log-g01",
               "kind": "change-list"
             }

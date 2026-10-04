@@ -7,6 +7,7 @@ sections:
     - blocks:
       - displayCode: penalty.none
         id: ipg-app-a-row-01
+        referenceId: ipg-s2-1
         officialPdfUnits:
         - bbox:
           - 134.88
@@ -24,6 +25,7 @@ sections:
         - raw-L004039
       - displayCode: penalty.warning
         id: ipg-app-a-row-05
+        referenceId: ipg-s2-5
         officialPdfUnits:
         - bbox:
           - 120.0
@@ -41,6 +43,7 @@ sections:
         - raw-L004043
       - displayCode: penalty.game-loss
         id: ipg-app-a-row-07
+        referenceId: ipg-s3-1
         officialPdfUnits:
         - bbox:
           - 148.68
@@ -58,6 +61,7 @@ sections:
         - raw-L004046
       - displayCode: penalty.disqualification
         id: ipg-app-a-row-23
+        referenceId: ipg-s4-8
         officialPdfUnits:
         - bbox:
           - 150.36

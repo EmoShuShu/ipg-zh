@@ -56,7 +56,17 @@
           "uniqueItems": true,
           "items": {"type": "string", "pattern": "^raw-"}
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"type": {"const": "appendix-row"}}, "required": ["type"]},
+          "then": {"required": ["displayCode", "referenceId"]}
+        },
+        {
+          "if": {"properties": {"type": {"const": "change-entry"}}, "required": ["type"]},
+          "then": {"required": ["ruleReferences"]}
+        }
+      ]
     },
     "group": {
       "type": "object",
@@ -67,7 +77,28 @@
         "kind": {"enum": ["paragraphs", "ordered-list", "unordered-list", "appendix-table", "change-list"]},
         "date": {"type": "string", "pattern": "^[A-Z][a-z]+ [0-9]{1,2}, [0-9]{4}$"},
         "blocks": {"type": "array", "items": {"$ref": "#/$defs/block"}}
-      }
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"kind": {"const": "paragraphs"}}, "required": ["kind"]},
+          "then": {"properties": {"blocks": {"items": {"properties": {"type": {"const": "paragraph"}}}}}}
+        },
+        {
+          "if": {"properties": {"kind": {"enum": ["ordered-list", "unordered-list"]}}, "required": ["kind"]},
+          "then": {"properties": {"blocks": {"items": {"properties": {"type": {"const": "list-item"}}}}}}
+        },
+        {
+          "if": {"properties": {"kind": {"const": "appendix-table"}}, "required": ["kind"]},
+          "then": {"properties": {"blocks": {"items": {"properties": {"type": {"const": "appendix-row"}}}}}}
+        },
+        {
+          "if": {"properties": {"kind": {"const": "change-list"}}, "required": ["kind"]},
+          "then": {
+            "required": ["date"],
+            "properties": {"blocks": {"items": {"properties": {"type": {"const": "change-entry"}}}}}
+          }
+        }
+      ]
     },
     "component": {
       "type": "object",
