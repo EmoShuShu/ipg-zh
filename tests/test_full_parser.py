@@ -165,6 +165,15 @@ def test_duplicate_subsection_fails_closed(extraction: dict) -> None:
     assert "duplicate-body-section" in _codes(error)
 
 
+def test_section_missing_from_both_toc_and_body_still_fails_expected_structure(extraction: dict) -> None:
+    changed = copy.deepcopy(extraction)
+    _remove_line(changed, page=2, startswith="1.5.")
+    _remove_line(changed, page=6, startswith="1.5.")
+    with pytest.raises(FullParseError) as error:
+        parse_full_extraction(changed)
+    assert "toc-missing-expected-section" in _codes(error)
+
+
 def test_unrecognized_role_and_unclassified_text_fail_closed(extraction: dict) -> None:
     role_changed = copy.deepcopy(extraction)
     role = next(line for line in role_changed["lines"] if line["page"] == 7 and line["text"] == "Definition")

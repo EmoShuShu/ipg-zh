@@ -35,6 +35,12 @@ TOC_RE = re.compile(r"^(.*?)\s*\.{3,}\s*(\d+)$")
 MAIN_HEADING_RE = re.compile(r"^([1-4](?:\.\d+)?)\.\s+(.+)$")
 LIST_RE = re.compile(r"^([A-Z])\.\s+(.*)$")
 RULE_REF_RE = re.compile(r"\b([1-4](?:\.\d+)?)\s*:")
+EXPECTED_TOC_KEYS = {
+    "introduction", "framework", "1", "1.1", "1.2", "1.3", "1.4", "1.5",
+    "2", "2.1", "2.2", "2.3", "2.4", "2.5", "2.6",
+    "3", "3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9",
+    "4", "4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "A", "B",
+}
 
 
 class FullParseError(ValueError):
@@ -353,9 +359,11 @@ def _parse_front(lines: list[dict[str, Any]], temp, mark, findings) -> list[dict
 
 def _parse_appendix_a(lines: list[dict[str, Any]], infraction_by_title: dict[str, dict[str, Any]], temp, mark, findings) -> dict[str, Any]:
     blocks = []
+    heading_count = 0
     for line in lines:
         text = line["text"]
         if text == "APPENDIX A — PENALTY QUICK REFERENCE":
+            heading_count += 1
             mark(line, "section-heading")
         elif text in {"Infraction Penalty", "Game Play Errors", "Tournament Errors", "Unsporting Conduct"}:
             mark(line, "appendix-table-heading")
@@ -377,6 +385,8 @@ def _parse_appendix_a(lines: list[dict[str, Any]], infraction_by_title: dict[str
                     findings.append({"code": "appendix-a-penalty-mismatch", "section": section["number"], "appendixPenalty": PENALTIES[penalty], "bodyPenalty": section.get("penaltyCode")})
             block = {"id": temp("block"), "type": "appendix-row", "text": {"en": title, "zh": ""}, "displayCode": PENALTIES[penalty], "referenceId": reference, "officialPdfUnits": _provenance([line])}
             blocks.append(block); mark(line, "appendix-a-row", block["id"])
+    if heading_count != 1:
+        findings.append({"code": "appendix-heading-count", "appendix": "A", "count": heading_count})
     return {"id": temp("section"), "kind": "appendix", "number": "A", "title": {"en": "Penalty Quick Reference", "zh": ""}, "components": [{"id": temp("component"), "role": "appendix-table", "labelCode": "component.appendix-table", "groups": [{"id": temp("group"), "kind": "appendix-table", "blocks": blocks}]}]}
 
 
@@ -385,6 +395,7 @@ def _parse_appendix_b(lines: list[dict[str, Any]], known_numbers: set[str], temp
     current_date = None
     entries: list[dict[str, Any]] = []
     current_lines: list[dict[str, Any]] = []
+    heading_count = 0
 
     def finish_entry() -> None:
         nonlocal current_lines
@@ -411,6 +422,7 @@ def _parse_appendix_b(lines: list[dict[str, Any]], known_numbers: set[str], temp
     for line in lines:
         text = line["text"]
         if text == "APPENDIX B — CHANGES FROM PREVIOUS VERSIONS":
+            heading_count += 1
             mark(line, "section-heading")
         elif DATE_RE.match(text):
             finish_group(); current_date = text; mark(line, "appendix-b-date")
@@ -425,6 +437,8 @@ def _parse_appendix_b(lines: list[dict[str, Any]], known_numbers: set[str], temp
         else:
             findings.append({"code": "unclassified-appendix-b", "lineId": line["id"], "text": text}); mark(line, "unclassified-body")
     finish_group()
+    if heading_count != 1:
+        findings.append({"code": "appendix-heading-count", "appendix": "B", "count": heading_count})
     return {"id": temp("section"), "kind": "appendix", "number": "B", "title": {"en": "Changes from Previous Versions", "zh": ""}, "components": [{"id": temp("component"), "role": "change-log", "labelCode": "component.change-log", "groups": groups}]}
 
 
@@ -451,9 +465,16 @@ def parse_full_extraction(extraction: dict[str, Any]) -> dict[str, Any]:
         if count > 1:
             findings.append({"code": "duplicate-toc-section", "key": key, "count": count})
     toc = {item["key"]: item for item in toc_entries}
+    for key in sorted(EXPECTED_TOC_KEYS - set(toc)):
+        findings.append({"code": "toc-missing-expected-section", "key": key})
+    for key in sorted(set(toc) - EXPECTED_TOC_KEYS):
+        findings.append({"code": "toc-unexpected-section", "key": key})
     front = _parse_front(by_page[1], temp, mark, findings)
     main = _parse_main([line for page in range(3, 30) for line in by_page[page]], toc, temp, mark, findings)
     body_keys = [section["number"] for section in [*front, *main]]
+    for key, count in Counter(body_keys).items():
+        if count > 1:
+            findings.append({"code": "duplicate-body-section", "key": key, "count": count})
     for key in sorted(set(toc) - set(body_keys) - {"A", "B"}):
         findings.append({"code": "toc-section-missing-from-body", "key": key})
     for key in sorted(set(body_keys) - set(toc)):
