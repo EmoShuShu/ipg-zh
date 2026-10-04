@@ -86,7 +86,7 @@ PDF 解析只产生临时 extraction identity；独立 reconciliation 阶段才�
 
 ## 验证与确定性
 
-- 自动测试：73 项通过。
+- 自动测试：74 项通过。
 - candidate：通过，报告 272 个缺译、缺少完整 review ledger 和注解许可待完成；这些均完整报告但不阻塞候选。
 - release：按预期失败；除上述项目外，还明确因 `publishable: false` 和 86/338 个延期注解材料失败。
 - 两次完整解析/协调结果一致；两次候选构建逐字节一致。

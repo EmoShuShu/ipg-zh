@@ -252,6 +252,20 @@ def _parse_main(lines: list[dict[str, Any]], toc: dict[str, dict[str, Any]], tem
         current = None
 
     seen: Counter[str] = Counter()
+
+    def check_toc_heading(entry: dict[str, Any] | None, *, key: str, title: str, line: dict[str, Any]) -> None:
+        if entry is None:
+            return
+        normalized = lambda value: " ".join(value.casefold().split())
+        if normalized(entry["title"]) != normalized(title):
+            findings.append(
+                {"code": "toc-body-title-mismatch", "key": key, "tocTitle": entry["title"], "bodyTitle": title}
+            )
+        if entry["page"] != line["page"]:
+            findings.append(
+                {"code": "toc-body-page-mismatch", "key": key, "tocPage": entry["page"], "bodyPage": line["page"]}
+            )
+
     for line in lines:
         text = line["text"]
         if text == str(line["page"]) and line["top"] > 720:
@@ -268,6 +282,7 @@ def _parse_main(lines: list[dict[str, Any]], toc: dict[str, dict[str, Any]], tem
                     title = heading_text.title()
                 else:
                     title = entry["title"]
+                check_toc_heading(entry, key=number, title=heading_text, line=line)
                 current = {"id": temp("section"), "kind": "chapter", "number": number, "title": {"en": title, "zh": ""}, "components": []}
                 role, label_code = "body", "component.body"
                 seen[number] += 1
@@ -284,12 +299,19 @@ def _parse_main(lines: list[dict[str, Any]], toc: dict[str, dict[str, Any]], tem
                     title, classification, penalty = heading_text, None, None
                 else:
                     title, classification, penalty = parsed
+                toc_title = (
+                    f"{next(label for label, value in CLASSIFICATIONS.items() if value == classification)} — {title}"
+                    if classification
+                    else title
+                )
+                check_toc_heading(entry, key=number, title=toc_title, line=line)
                 current = {"id": temp("section"), "kind": "infraction", "number": number, "title": {"en": title, "zh": ""}, "components": []}
                 if classification:
                     current["classification"] = classification
                 if penalty:
                     current["penaltyCode"] = penalty
             else:
+                check_toc_heading(entry, key=number, title=heading_text, line=line)
                 current = {"id": temp("section"), "kind": "policy", "number": number, "title": {"en": entry["title"] if entry else heading_text.title(), "zh": ""}, "components": []}
             role, label_code = "body", "component.body"
             seen[number] += 1
@@ -479,6 +501,13 @@ def parse_full_extraction(extraction: dict[str, Any]) -> dict[str, Any]:
         findings.append({"code": "toc-section-missing-from-body", "key": key})
     for key in sorted(set(body_keys) - set(toc)):
         findings.append({"code": "body-heading-missing-from-toc", "key": key})
+    toc_body_order = [item["key"] for item in toc_entries if item["key"] not in {"A", "B"}]
+    if body_keys != toc_body_order:
+        findings.append({"code": "toc-body-order-mismatch", "toc": toc_body_order, "body": body_keys})
+    for section in front:
+        entry = toc.get(section["number"])
+        if entry and (entry["title"] != section["title"]["en"] or entry["page"] != 1):
+            findings.append({"code": "toc-body-front-matter-mismatch", "key": section["number"]})
     infractions = [section for section in main if section["kind"] == "infraction"]
     if len(infractions) != 23:
         findings.append({"code": "infraction-count-cross-check", "expected": 23, "actual": len(infractions)})
@@ -492,6 +521,10 @@ def parse_full_extraction(extraction: dict[str, Any]) -> dict[str, Any]:
         findings.append({"code": "body-heading-missing-from-toc", "key": "A"})
     if "B" not in toc:
         findings.append({"code": "body-heading-missing-from-toc", "key": "B"})
+    for key, page, title in (("A", 30, appendix_a["title"]["en"]), ("B", 31, appendix_b["title"]["en"])):
+        entry = toc.get(key)
+        if entry and (entry["title"] != title or entry["page"] != page):
+            findings.append({"code": "toc-body-appendix-mismatch", "key": key})
 
     unclassified = [line for line in extraction["lines"] if line["id"] not in dispositions]
     for line in unclassified:

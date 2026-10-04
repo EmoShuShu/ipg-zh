@@ -202,6 +202,22 @@ def test_wrong_penalty_box_fails_appendix_cross_check(extraction: dict) -> None:
     assert "appendix-a-penalty-mismatch" in _codes(error)
 
 
+def test_toc_title_and_page_must_match_body(extraction: dict) -> None:
+    title_changed = copy.deepcopy(extraction)
+    heading = next(line for line in title_changed["lines"] if line["page"] == 13 and line["text"].startswith("2.5."))
+    heading["text"] = heading["text"].replace("Game Rule Violation", "Game Rules Violation")
+    with pytest.raises(FullParseError) as error:
+        parse_full_extraction(title_changed)
+    assert "toc-body-title-mismatch" in _codes(error)
+
+    page_changed = copy.deepcopy(extraction)
+    toc_line = next(line for line in page_changed["lines"] if line["page"] == 2 and line["text"].startswith("2.5."))
+    toc_line["text"] = toc_line["text"].removesuffix("13") + "12"
+    with pytest.raises(FullParseError) as error:
+        parse_full_extraction(page_changed)
+    assert "toc-body-page-mismatch" in _codes(error)
+
+
 def test_reconciliation_preserves_every_p2_chapter_2_id(reconciled: dict) -> None:
     prior = load_yaml(P2_RELEASE / "chapter-02.yaml")
     prior_ids = {node["id"] for _, node in walk_nodes([prior])}
