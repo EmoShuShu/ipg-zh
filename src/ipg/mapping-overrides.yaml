@@ -1,5 +1,35 @@
 schemaVersion: 1
-applied: []
+applied:
+  - id: pilot-ann-section-2-5-definition-context
+    kind: publication-annotation-anchor
+    legacyLines: [1717, 1719]
+    anchor: {type: section, id: ipg-s2-5}
+    position: inside-start
+    confidence: high
+    rationale: The annotation explicitly defines Game Rule Violation as a whole.
+  - id: pilot-ann-2-5-philosophy-consistency
+    kind: publication-annotation-anchor
+    legacyLines: [1749, 1751]
+    anchor: {type: component, id: ipg-s2-5-c-philosophy}
+    position: inside-end
+    confidence: high
+    rationale: The annotation explains the section's Philosophy paragraph on consistent handling.
+  - id: pilot-ann-2-5-partial-fix-list
+    kind: publication-annotation-anchor
+    legacyLines: [1763, 1765]
+    anchor: {type: group, id: ipg-s2-5-c-additional-remedy-g02}
+    position: inside-start
+    confidence: high
+    rationale: The annotation introduces the immediately following partial-fix list as a group.
+  - id: pilot-ann-2-5-wrong-zone
+    kind: publication-annotation-anchor
+    legacyLines: [1795, 1799]
+    anchor:
+      type: block
+      matchEnglishPrefix: If an object is not in the correct zone
+    position: after
+    confidence: high
+    rationale: The annotation directly expands the wrong-zone list item.
 examples:
   rename:
     from: {id: ipg-s2-5, title: Old title}

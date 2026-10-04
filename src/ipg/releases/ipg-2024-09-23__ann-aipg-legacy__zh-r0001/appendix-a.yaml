@@ -1,0 +1,78 @@
+documentId: ipg-appendix-a-pilot
+publicationAnnotations: []
+schemaVersion: 1
+sections:
+- components:
+  - groups:
+    - blocks:
+      - displayCode: penalty.none
+        id: ipg-app-a-row-01
+        officialPdfUnit:
+          bbox:
+          - 134.88
+          - 136.04
+          - 408.53
+          - 148.3
+          extractionUnit: appendix-a-row
+          page: 30
+          pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+        text:
+          en: Missed Trigger
+          zh: 遗漏触发
+        type: appendix-row
+      - displayCode: penalty.warning
+        id: ipg-app-a-row-05
+        officialPdfUnit:
+          bbox:
+          - 120.0
+          - 227.24
+          - 416.52
+          - 239.5
+          extractionUnit: appendix-a-row
+          page: 30
+          pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+        text:
+          en: Game Rule Violation
+          zh: 违反游戏规则
+        type: appendix-row
+      - displayCode: penalty.game-loss
+        id: ipg-app-a-row-07
+        officialPdfUnit:
+          bbox:
+          - 148.68
+          - 295.64
+          - 422.63
+          - 307.9
+          extractionUnit: appendix-a-row
+          page: 30
+          pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+        text:
+          en: Tardiness
+          zh: 迟到
+        type: appendix-row
+      - displayCode: penalty.disqualification
+        id: ipg-app-a-row-23
+        officialPdfUnit:
+          bbox:
+          - 150.36
+          - 683.24
+          - 434.28
+          - 695.5
+          extractionUnit: appendix-a-row
+          page: 30
+          pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+        text:
+          en: Cheating
+          zh: 作弊
+        type: appendix-row
+      id: ipg-app-a-c-table-g01
+      kind: appendix-table
+    id: ipg-app-a-c-table
+    labelCode: component.appendix-table
+    role: appendix-table
+  id: ipg-app-a
+  kind: appendix
+  number: A
+  title:
+    en: Penalty Quick Reference
+    zh: 处罚快速查询
