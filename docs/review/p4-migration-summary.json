@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "phase": "P4 full legacy migration",
+  "authority": {
+    "officialPdfSha256": "056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0",
+    "legacySourceSha256": "acce82ca7224d5d741609807a2d95697337e56110354efec370938dea51b75fb"
+  },
+  "scope": {
+    "officialContent": "full-document",
+    "publicationAnnotations": "full-document",
+    "deferredAnnotationGroups": 0,
+    "deferredRawUnits": 0,
+    "publishable": false
+  },
+  "officialStructure": {
+    "sections": 36,
+    "components": 110,
+    "groups": 124,
+    "blocks": 338,
+    "pdfLinesClassified": 1050,
+    "pdfLinesTotal": 1050,
+    "unclassified": 0
+  },
+  "migrationByPart": {
+    "front-matter": {"officialBlocks": 5, "mapped": 5, "trueMissing": 0, "unresolved": 0, "annotations": 0, "annotationBlocks": 0},
+    "chapter-1": {"officialBlocks": 30, "mapped": 30, "trueMissing": 0, "unresolved": 0, "annotations": 61, "annotationBlocks": 73},
+    "chapter-2": {"officialBlocks": 84, "mapped": 84, "trueMissing": 0, "unresolved": 0, "annotations": 98, "annotationBlocks": 182},
+    "chapter-3": {"officialBlocks": 102, "mapped": 102, "trueMissing": 0, "unresolved": 0, "annotations": 108, "annotationBlocks": 140},
+    "chapter-4": {"officialBlocks": 77, "mapped": 77, "trueMissing": 0, "unresolved": 0, "annotations": 63, "annotationBlocks": 121},
+    "appendix-a": {"officialBlocks": 23, "mapped": 23, "trueMissing": 0, "unresolved": 0, "annotations": 0, "annotationBlocks": 0},
+    "appendix-b": {"officialBlocks": 17, "mapped": 5, "trueMissing": 12, "unresolved": 0, "annotations": 0, "annotationBlocks": 0}
+  },
+  "publicationAnnotations": {
+    "annotations": 330,
+    "groups": 352,
+    "blocks": 516,
+    "orphans": 0,
+    "deferred": 0,
+    "p2Section2_5": {"annotations": 12, "blocks": 14, "unchanged": true}
+  },
+  "rawUnits": {
+    "total": 4085,
+    "disposed": 4085,
+    "duplicateConsumption": 0,
+    "unresolved": 0,
+    "dispositions": {
+      "ignored-layout": 1286,
+      "ignored-obsolete-official-version": 2,
+      "ignored-quote-separator": 701,
+      "ignored-with-reason": 188,
+      "mapped-bilingual-appendix-row": 23,
+      "mapped-bilingual-title": 36,
+      "mapped-legacy-english-without-translation": 7,
+      "mapped-obsolete-official-context": 2,
+      "mapped-official-en": 400,
+      "mapped-publication-annotation": 519,
+      "mapped-publication-annotation-translation": 516,
+      "mapped-translation": 400,
+      "mapped-translation-date-and-number": 5
+    },
+    "ignoredReasons": {
+      "blank line": 1286,
+      "Markdown quote separator": 701,
+      "legacy version notes": 30,
+      "legacy table of contents": 40,
+      "legacy structural label or table/date heading": 113,
+      "legacy Appendix A table header or category row": 5,
+      "legacy official wording not present in current PDF": 2
+    }
+  },
+  "overridesApplied": [
+    "p4-ann-2-1-simple-backup-guide",
+    "p4-body-4-2-upgrade-context",
+    "pilot-ann-2-5-damage-order",
+    "pilot-ann-2-5-full-backup",
+    "pilot-ann-2-5-hand-zone",
+    "pilot-ann-2-5-illegal-choice",
+    "pilot-ann-2-5-opponent-responsibility",
+    "pilot-ann-2-5-partial-fix-backup",
+    "pilot-ann-2-5-partial-fix-list",
+    "pilot-ann-2-5-philosophy-consistency",
+    "pilot-ann-2-5-shared-grv",
+    "pilot-ann-2-5-untap",
+    "pilot-ann-2-5-wrong-zone",
+    "pilot-ann-section-2-5-definition-context"
+  ],
+  "identity": {
+    "p3RegistryEntries": 649,
+    "p3RegistryPrefixSha256": "72a71c332a0988bc6361c771e981580583e7989e2a0e90a9fbb19ceecb698ffb",
+    "p3RegistryEntriesUnchanged": true,
+    "p2OfficialIdsExpected": 158,
+    "p2OfficialIdsPreserved": 158,
+    "newAnnotationRegistryEntries": 1160,
+    "registryEntriesAfterP4": 1809
+  },
+  "validation": {
+    "candidateValid": true,
+    "releaseValid": false,
+    "releaseReadinessFindings": {
+      "annotation-license-pending": 1,
+      "manifest-not-publishable": 1,
+      "missing-review-ledger": 1,
+      "missing-translation": 12
+    }
+  },
+  "tests": {"passed": 97, "failed": 0},
+  "determinism": {
+    "byteIdentical": true,
+    "candidateHashes": {
+      "IPG.md": "cbb812826a73c7f417d46961b692774b0a259284b76ee996356b71aaf0603400",
+      "rules.json": "d7f052c742cdcaf3dde53347c85f7b72fb5d36515f809474f9eebf27c2efe79c"
+    },
+    "rulesHashEmbedded": false
+  },
+  "humanJudgmentRequired": []
+}

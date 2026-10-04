@@ -1,14 +1,45 @@
-# ipg-zh pilot
+# ipg-zh
 
-This repository contains only the approved P0-P2 local vertical slice for
-Chapter 2, a complete golden sample for section 2.5, and small Appendix A/B
-fixtures. It is deliberately not a full-IPG parser or migration.
+This repository currently contains the approved work through P4: the complete
+2024-09-23 official English IPG structure, conservatively migrated legacy
+Chinese text, and the bilingual AIPG publication annotations found in
+`AIPG_2025.md`. It is a review candidate, not a publishable release.
 
 The authoritative English source is the immutable WPN PDF snapshot. The legacy
 `AIPG_2025.md` file is a migration input only and remains byte-for-byte
 unchanged. Candidate artifacts are visibly marked and must not be published.
 
-## Local pilot workflow
+## P4 full legacy migration
+
+P4 rebuilds the seven-file candidate source directly from the immutable PDF
+and legacy snapshots, the stable-ID registry, and reviewed mapping overrides.
+It does not use an ignored P3 output as an input.
+
+```powershell
+ipg-p4 migrate
+ipg-p4 validate
+ipg-p4 build
+ipg-p4 review
+# or run the four steps in order
+ipg-p4 all
+```
+
+The committed source is under
+`src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001/`. Generated raw
+ledgers, parser diagnostics, reports, and the visibly marked preview are kept
+under ignored `outputs/p4/`. Formal `dist/` remains untouched.
+
+Candidate validation succeeds with all 4,085 legacy raw units uniquely
+disposed and no unresolved mappings, duplicate consumption, orphan annotation,
+or deferred annotation. Release validation intentionally fails: 12 Appendix B
+entries have no legacy Chinese, the full review ledger does not yet exist,
+publication-annotation licensing/attribution is pending, and the manifest is
+`publishable: false`.
+
+P4 deliberately does not create a full OmegaT project. That review workflow is
+reserved for the next approved phase.
+
+## Historical P0-P2 pilot workflow
 
 ```powershell
 ipg-pilot parse
@@ -25,7 +56,8 @@ ipg-pilot build --profile candidate
 ipg-pilot p2-pack
 ```
 
-`parse` emits temporary extraction IDs. `reconcile` is a separate identity
+These commands reproduce the historical 2.5 vertical slice. `parse` emits
+temporary extraction IDs. `reconcile` is a separate identity
 step using the prior registry, English evidence, structural context and
 explicit overrides before any stable ID reaches source YAML. Generated parser,
 migration, report and OmegaT work files live under ignored `outputs/`. The
@@ -81,6 +113,5 @@ ipg-p3 review
 ipg-p3 all
 ```
 
-The committed compact review is `docs/review/p3-full-official-parser.md`. A P3
-candidate cannot be released: its manifest has full official content but only
-pilot publication annotations and `publishable: false`.
+The committed compact review is `docs/review/p3-full-official-parser.md`. P3 is
+kept as the frozen official-structure baseline used by P4.
