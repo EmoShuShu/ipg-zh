@@ -1,0 +1,24 @@
+{
+  "baseFiles": {
+    "src/ipg/display-values.yaml": "eb02b91437e3cb5ff9ee2a237314aafe15bff526b0cbb9abc72f57c9ccab0dff"
+  },
+  "candidateFiles": {
+    "src/ipg/display-values.yaml": "1adda6f156380599edf5320c50b8f83d76d14cdae5067cd47ef4bf227ea2224c"
+  },
+  "changes": [
+    {
+      "file": "src/ipg/display-values.yaml",
+      "newTargetHash": "484d55613910eb8c0917fe308b499d474115ced993cd002a17d7cc75254330a4",
+      "oldTargetHash": "aa732455e4948ef0da78b2c69ae71a24b14df6db3eb05fb033bfbabbb53cf9b0",
+      "pointer": [
+        "values",
+        "penalty.none",
+        "zh"
+      ],
+      "unitId": "display:penalty.none"
+    }
+  ],
+  "expectedChangeCount": 1,
+  "schemaVersion": 1,
+  "targetPoSha256": "2466baeeafbf117c87ff4a061a7885839834df05671aeda9953aa55077b920bd"
+}

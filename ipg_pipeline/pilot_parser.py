@@ -69,11 +69,11 @@ def _extract_lines(pdf: pdfplumber.PDF, pages: Iterable[int]) -> list[dict[str, 
 
 
 def _make_blocks(
-    lines: list[dict[str, Any]], section_id: str, component_role: str, group_start: int = 1
+    lines: list[dict[str, Any]], section_id: str, component_role: str
 ) -> list[dict[str, Any]]:
     blocks: list[dict[str, Any]] = []
     current: dict[str, Any] | None = None
-    group_number = group_start
+    group_number = 1
     block_number = 0
 
     def finish() -> None:

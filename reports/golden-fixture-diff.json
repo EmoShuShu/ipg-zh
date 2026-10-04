@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "scope": "approved-pilot-pages-7-14-30-31",
+  "actual": "work/parsed/official-pilot.json",
+  "golden": "tests/fixtures/pilot/golden-official-pilot.json",
+  "byteEquivalentJsonValue": true,
+  "differenceCount": 0,
+  "differences": []
+}
+

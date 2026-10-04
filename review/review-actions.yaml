@@ -1,0 +1,20 @@
+schemaVersion: 1
+scope: p2-workflow-demonstration
+actor: pilot-fixture
+actions:
+  - unitId: display:penalty.none
+    sourceHash: 115f9a035c14816bc50d2a405da02f64c0d44d0e0bf92531b53ef298d129e419
+    targetHash: 484d55613910eb8c0917fe308b499d474115ced993cd002a17d7cc75254330a4
+    modified: true
+    reviewedAt: "2026-10-04"
+  - unitId: block:ipg-s2-5-c-definition-g01-b001
+    sourceHash: 7536a10beaf6531419144e04c2a4e5a7035efe5d1f23d741be10a13b32b98c22
+    targetHash: bdd8fe03becd8e9ddabdbdbc2f46f25cb2494dc87be0e220505c3b3e2fad1d3c
+    modified: false
+    reviewedAt: "2026-10-04"
+  - unitId: annotation:ipg-ann-2-5-philosophy-consistency
+    sourceHash: 0000000000000000000000000000000000000000000000000000000000000000
+    targetHash: 1588b3b0ea2b8734d19e2b43e086233e7ff20f1513be60319c31a6318adcc204
+    modified: false
+    reviewedAt: "2026-10-04"
+

@@ -80,6 +80,16 @@ def validate_release(
         structural.append({"code": "duplicate-consumption", "count": duplicate_consumption})
 
     mapping_codes = {"ambiguous-mapping", "unresolved-mapping", "missing-legacy-mapping"}
+    deferred_units = int(coverage.get("dispositions", {}).get("deferred-pilot-content", 0))
+    if deferred_units:
+        readiness.append(
+            {
+                "code": "unresolved-mapping",
+                "targetId": "raw-unit-ledger",
+                "count": deferred_units,
+                "detail": "in-scope legacy units deliberately deferred by the pilot",
+            }
+        )
     for finding in migration_report.get("findings", []):
         if finding.get("code") in mapping_codes:
             readiness.append(dict(finding))
@@ -104,7 +114,9 @@ def validate_release(
         "orphanPublicationAnnotation": sum(
             item["code"] == "orphan-publication-annotation" for item in readiness
         ),
-        "unresolvedMapping": sum(item["code"] in mapping_codes for item in readiness),
+        "unresolvedMapping": sum(
+            item.get("count", 1) for item in readiness if item["code"] in mapping_codes
+        ),
         "duplicateConsumption": duplicate_consumption,
     }
     valid = not structural and (profile == "candidate" or not readiness)

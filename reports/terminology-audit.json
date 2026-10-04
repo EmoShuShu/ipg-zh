@@ -1,0 +1,44 @@
+{
+  "findingCount": 5,
+  "findings": [
+    {
+      "code": "term-target-missing",
+      "expectedTarget": "违反游戏规则",
+      "glossaryLine": 1,
+      "sourceTerm": "Game Rule Violation",
+      "unitId": "block:ipg-s2-2-c-philosophy-g01-b001"
+    },
+    {
+      "code": "term-target-missing",
+      "expectedTarget": "违反游戏规则",
+      "glossaryLine": 1,
+      "sourceTerm": "Game Rule Violation",
+      "unitId": "block:ipg-s2-3-c-philosophy-g01-b002"
+    },
+    {
+      "code": "term-target-missing",
+      "expectedTarget": "警告",
+      "glossaryLine": 2,
+      "sourceTerm": "Warning",
+      "unitId": "block:ipg-s2-c-body-g01-b003"
+    },
+    {
+      "code": "term-target-missing",
+      "expectedTarget": "警告",
+      "glossaryLine": 2,
+      "sourceTerm": "Warning",
+      "unitId": "block:ipg-s2-1-c-additional-remedy-g01-b006"
+    },
+    {
+      "code": "term-target-missing",
+      "expectedTarget": "《万智牌完整规则》",
+      "glossaryLine": 4,
+      "sourceTerm": "Comprehensive Rules",
+      "unitId": "block:ipg-s2-5-c-definition-g01-b001"
+    }
+  ],
+  "glossaryIssueCount": 0,
+  "glossaryIssues": [],
+  "nonBlocking": true,
+  "schemaVersion": 1
+}

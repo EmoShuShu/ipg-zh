@@ -1,0 +1,6 @@
+--- src/ipg/display-values.yaml (before)
++++ src/ipg/display-values.yaml (after)
+@@
+-  penalty.none: {en: No Penalty, zh: 无处罚}
++  penalty.none: {en: No Penalty, zh: "无"}
+

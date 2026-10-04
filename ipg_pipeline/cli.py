@@ -8,7 +8,19 @@ from typing import Any
 from .builder import build_outputs
 from .core import ROOT, dump_yaml, load_json, load_yaml
 from .migration import migrate_pilot
+from .omegat import (
+    apply_writeback,
+    collect_units,
+    export_project,
+    preview_writeback,
+)
 from .pilot_parser import OFFICIAL_SHA256, parse_pilot
+from .review import (
+    build_review_ledger,
+    extract_translation_notes,
+    review_status_report,
+    terminology_audit,
+)
 from .validation import validate_release
 
 
@@ -77,6 +89,12 @@ def _release_inputs() -> tuple[dict[str, Any], list[dict[str, Any]], dict[str, A
     return manifest, documents, display_values, migration_report
 
 
+def _document_tuples() -> tuple[list[tuple[str, dict[str, Any]]], dict[str, Any]]:
+    manifest = load_yaml(RELEASE_DIR / "manifest.yaml")
+    documents = [(filename, load_yaml(RELEASE_DIR / filename)) for filename in manifest["documents"]]
+    return documents, load_yaml(ROOT / "src/ipg/display-values.yaml")
+
+
 def command_validate(args: argparse.Namespace) -> int:
     manifest, documents, display_values, migration_report = _release_inputs()
     review_path = ROOT / "review/review-ledger.json"
@@ -99,12 +117,14 @@ def command_validate(args: argparse.Namespace) -> int:
 
 def command_build(args: argparse.Namespace) -> int:
     manifest, documents, display_values, migration_report = _release_inputs()
+    review_path = ROOT / "review/review-ledger.json"
     report = validate_release(
         profile=args.profile,
         manifest=manifest,
         documents=documents,
         display_values=display_values,
         migration_report=migration_report,
+        review_ledger=load_json(review_path) if review_path.exists() else None,
     )
     if not report["valid"]:
         raise SystemExit(f"{args.profile} validation failed; build refused")
@@ -121,6 +141,80 @@ def command_build(args: argparse.Namespace) -> int:
     return 0
 
 
+def command_omegat_export(_: argparse.Namespace) -> int:
+    documents, display_values = _document_tuples()
+    mapping = export_project(
+        ROOT / "omegat/ipg-pilot",
+        ROOT,
+        documents,
+        display_values,
+        ROOT / "terminology/ipg-glossary.txt",
+    )
+    print(f"exported {len(mapping['units'])} OmegaT units")
+    return 0
+
+
+def command_omegat_preview(_: argparse.Namespace) -> int:
+    preview = preview_writeback(
+        ROOT / "omegat/ipg-pilot",
+        ROOT,
+        ROOT / "work/omegat-candidate",
+    )
+    _write_json(ROOT / "reports/omegat-writeback-preview.json", preview)
+    print(f"previewed {preview['expectedChangeCount']} isolated candidate changes")
+    return 0
+
+
+def command_omegat_apply(args: argparse.Namespace) -> int:
+    preview = load_json(ROOT / "reports/omegat-writeback-preview.json")
+    apply_writeback(
+        ROOT / "omegat/ipg-pilot",
+        ROOT,
+        ROOT / "work/omegat-candidate",
+        preview,
+        expected_change_count=args.expected_change_count,
+    )
+    print(f"applied {args.expected_change_count} previewed changes")
+    return 0
+
+
+def command_translation_notes(_: argparse.Namespace) -> int:
+    documents, display_values = _document_tuples()
+    units = collect_units(documents, display_values)
+    notes = extract_translation_notes(
+        ROOT / "omegat/ipg-pilot/tm/translation-notes.tmx",
+        units,
+    )
+    _write_json(ROOT / "review/translation-notes.json", notes)
+    print(f"imported {len(notes['notes'])} translation notes")
+    return 0
+
+
+def command_review(_: argparse.Namespace) -> int:
+    documents, display_values = _document_tuples()
+    units = collect_units(documents, display_values)
+    actions = load_yaml(ROOT / "review/review-actions.yaml")["actions"]
+    ledger = build_review_ledger(units, actions)
+    _write_json(ROOT / "review/review-ledger.json", ledger)
+    _write_json(ROOT / "reports/review-status.json", review_status_report(ledger))
+    print(f"recorded {len(ledger['entries'])} review states")
+    return 0
+
+
+def command_terms(_: argparse.Namespace) -> int:
+    documents, display_values = _document_tuples()
+    report = terminology_audit(
+        ROOT / "terminology/ipg-glossary.txt",
+        collect_units(documents, display_values),
+    )
+    _write_json(ROOT / "reports/terminology-audit.json", report)
+    print(
+        f"terminology audit (non-blocking): {report['findingCount']} findings, "
+        f"{report['glossaryIssueCount']} glossary issues"
+    )
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="ipg-pilot")
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -132,6 +226,24 @@ def build_parser() -> argparse.ArgumentParser:
     build = subparsers.add_parser("build", help="build after validation with an explicit profile")
     build.add_argument("--profile", required=True, choices=("candidate", "release"))
     build.set_defaults(func=command_build)
+    subparsers.add_parser("omegat-export", help="export the pilot OmegaT project").set_defaults(
+        func=command_omegat_export
+    )
+    subparsers.add_parser("omegat-preview", help="preview target PO writeback").set_defaults(
+        func=command_omegat_preview
+    )
+    apply = subparsers.add_parser("omegat-apply", help="apply an unchanged writeback preview")
+    apply.add_argument("--expected-change-count", type=int, required=True)
+    apply.set_defaults(func=command_omegat_apply)
+    subparsers.add_parser("translation-notes", help="extract TMX notes to the isolated store").set_defaults(
+        func=command_translation_notes
+    )
+    subparsers.add_parser("review-status", help="build the independent review ledger").set_defaults(
+        func=command_review
+    )
+    subparsers.add_parser("terms", help="run the non-blocking terminology audit").set_defaults(
+        func=command_terms
+    )
     return parser
 
 

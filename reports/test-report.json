@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "command": ".venv/Scripts/python.exe -m pytest",
+  "python": "3.12.7",
+  "passed": 36,
+  "failed": 0,
+  "durationSeconds": 4.90,
+  "result": "passed"
+}
+

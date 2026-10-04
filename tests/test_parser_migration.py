@@ -1,6 +1,3 @@
-import json
-from copy import deepcopy
-
 import pytest
 
 from ipg_pipeline.cli import OFFICIAL_PDF, PARSED_JSON, RELEASE_DIR

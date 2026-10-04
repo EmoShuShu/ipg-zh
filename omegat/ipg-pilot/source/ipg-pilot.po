@@ -1,0 +1,722 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+#. kind: display-value
+#. source-sha256: 8608fb433602c562d10eb9347c53a8edbd5eeb3d09f456d8d39a663f518f3438
+msgctxt "display:component.additional-remedy"
+msgid "Additional Remedy"
+msgstr "进一步的修正"
+
+#. kind: display-value
+#. source-sha256: f325f77189fdea96fc3d7a0c9fc215036fddfbd701f48d5d8ea47cace9e41d3f
+msgctxt "display:component.appendix-table"
+msgid "Penalty Quick Reference"
+msgstr "处罚快速查询"
+
+#. kind: display-value
+#. source-sha256: 6ccaa6415b5ee449e3c5c716f57b4608ebe3b780f5aa6b077bc5d8eee5d961f9
+msgctxt "display:component.body"
+msgid "Body"
+msgstr "正文"
+
+#. kind: display-value
+#. source-sha256: 24ab72c476f35cd1acac5776cf87b31cd8f9d4e0b697627b688eb05cd232f46f
+msgctxt "display:component.change-log"
+msgid "Changes from Previous Versions"
+msgstr "与之前版本的更动"
+
+#. kind: display-value
+#. source-sha256: 9813fafb098c218090536790280a91ee70062a8490eb3615395ee731cdd40023
+msgctxt "display:component.definition"
+msgid "Definition"
+msgstr "定义"
+
+#. kind: display-value
+#. source-sha256: e68ee04dff59551b7d1ae07a2f8a00dc61d841628948da3d2781630706a05e92
+msgctxt "display:component.examples"
+msgid "Examples"
+msgstr "范例"
+
+#. kind: display-value
+#. source-sha256: 7f3d81eb0817c1bf0e04af5bc5888c49fc70fb1f11190b307c81a05f8ced39c2
+msgctxt "display:component.philosophy"
+msgid "Philosophy"
+msgstr "原则"
+
+#. kind: display-value
+#. source-sha256: 5592925824dcbc66a2b37f063aab7bf32308b4a69f214034b982cc8e3d4c4225
+msgctxt "display:penalty.disqualification"
+msgid "Disqualification"
+msgstr "取消资格"
+
+#. kind: display-value
+#. source-sha256: 8c2d7c625357fb94eb32aab65ae56a15c1bcbf6f4a62c1972051b4e8978512c0
+msgctxt "display:penalty.game-loss"
+msgid "Game Loss"
+msgstr "一盘负"
+
+#. kind: display-value
+#. source-sha256: 8dab215ff1a1699a139d7485d60823e8fd75bc53836fdedf43c72f88616e33a1
+msgctxt "display:penalty.match-loss"
+msgid "Match Loss"
+msgstr "一局负"
+
+#. kind: display-value
+#. source-sha256: 115f9a035c14816bc50d2a405da02f64c0d44d0e0bf92531b53ef298d129e419
+msgctxt "display:penalty.none"
+msgid "No Penalty"
+msgstr "无处罚"
+
+#. kind: display-value
+#. source-sha256: e981ddae45d8f4ca53f1ccbe613ad254a041dacf65a06026099a6302d332113b
+msgctxt "display:penalty.warning"
+msgid "Warning"
+msgstr "警告"
+
+#. kind: title
+#. source-sha256: 892f49cbde47e85b30f932bf6c456b74c0866979810427d1d34e108d80712bb5
+msgctxt "title:ipg-s2"
+msgid "Game Play Errors"
+msgstr "游戏行动失误"
+
+#. kind: official-body
+#. source-sha256: 6106adbc9d16bd94995b02ce9357564bf988679463c7f9a680574dfa271cbdb7
+msgctxt "block:ipg-s2-c-body-g01-b001"
+msgid "Game Play Errors are caused by incorrect or inaccurate play of the game such that it results in violations of the Magic Comprehensive Rules. Many offenses fit into this category and it would be impossible to list them all. The guide below is designed to give judges a framework for assessing how to handle a Game Play Error."
+msgstr "游戏行动失误是以不正确或是不精准的行动来进行游戏，而导致违反《万智牌完整规则》的结果。"
+
+#. kind: official-body
+#. source-sha256: 84ec42c0c2b98ea674083b7d3d77f163724d91bdd6c0fa808921865a8edb8169
+msgctxt "block:ipg-s2-c-body-g01-b002"
+msgid "Most Game Play Error infractions are assumed to have been committed unintentionally. If the judge believes that the error was intentional, they should first consider whether an Unsporting Conduct — Cheating infraction has occurred."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: 2ce56ae382cec618934d2d9cbce519127a464937792c7f770edf7488b8d49574
+msgctxt "block:ipg-s2-c-body-g01-b003"
+msgid "With the exception of Failure to Maintain Game State, which is never upgraded, the third or subsequent Warning for a Game Play Error offense in the same category is upgraded to a Game Loss. For multi-day tournaments, the penalty count for these infractions resets between days."
+msgstr ""
+
+#. kind: title
+#. source-sha256: 6900adb0c4194b893541bde270138a47a8a9ca9fe0f5db83bf217c6bd7e249d4
+msgctxt "title:ipg-s2-1"
+msgid "Missed Trigger"
+msgstr "遗漏触发"
+
+#. kind: official-body
+#. source-sha256: a564e69aa343413fb4582329b1f52bc80c617f6e42bf15a8ef2a90760e0c54cc
+msgctxt "block:ipg-s2-1-c-definition-g01-b001"
+msgid "A triggered ability triggers, but the player controlling the ability doesn’t demonstrate awareness of the trigger’s existence by the first time that it would affect the game in a visible fashion."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: 0da33e9dfcfdeadb49eaf46e58ad17229578000472ac303e8fbcc2925b76ef81
+msgctxt "block:ipg-s2-1-c-definition-g01-b002"
+msgid "The point by which the player needs to demonstrate this awareness depends on the impact that the trigger would have on the game:"
+msgstr "根据不同的触发对游戏产生之影响不同，牌手需要表明自己认识触发存在的最迟时点也有所差异："
+
+#. kind: official-body
+#. source-sha256: d40616f3c7a04f4b092e9bb22c8b06fc7741767ffad96007131fe73b9c7c2a05
+msgctxt "block:ipg-s2-1-c-definition-g02-b001"
+msgid "A triggered ability that requires its controller to choose targets (other than 'target opponent'), modes, or other choices made when the ability is put onto the stack: The controller must announce those choices before they next pass priority."
+msgstr "对于需要其操控者选择目标（注记“目标对手”者除外）、模式，或具在将异能放进堆叠时便需作出决定之其他选择的触发式异能而言：其操控者必须在其下一次让出优先权之前宣告该些决定。"
+
+#. kind: official-body
+#. source-sha256: b7f4f79c9985b0eb7fdba48300397c39839d0ef625bfb56412eed19a7da6fe57
+msgctxt "block:ipg-s2-1-c-definition-g02-b002"
+msgid "A triggered ability that causes a change in the visible game state (including life totals) or requires a choice upon resolution: The controller must take the appropriate physical action or acknowledge the specific trigger before taking any game actions (such as casting a sorcery spell or explicitly taking an action in the next step or phase) that can be taken only after the triggered ability should have resolved. Note that passing priority, casting an instant spell or activating an ability doesn’t mean a triggered ability has been forgotten, as it could still be on the stack."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: 1db62b528345a7bc2707009ed7dc5e6763ad5f7b0102c7230dad29c9a322a00b
+msgctxt "block:ipg-s2-1-c-definition-g02-b003"
+msgid "A triggered ability that changes the rules of the game: The controller must acknowledge the trigger or stop an opponent who tries to take any resulting illegal action."
+msgstr "对于改变了游戏规则的触发式异能而言：其操控者必须认识此触发，或在对手尝试执行因此变为不合法的动作时阻止之。"
+
+#. kind: official-body
+#. source-sha256: 82f66e51ff8c23b40b98700fdf20c6054dea88de4bf678a3dd53e593aa2c5a1c
+msgctxt "block:ipg-s2-1-c-definition-g02-b004"
+msgid "A triggered ability that affects the game state in non-visible ways: The controller must make the change known by the first time the change has an effect on the visible game state."
+msgstr "对于会以不可见的方式对游戏状态产生影响的触发式异能而言：其操控者必须于此类触发首度对游戏的可见状态造成影响时，让所有人知晓影响为何。"
+
+#. kind: official-body
+#. source-sha256: 8fa37739bc5a09eb23347f35d9ecc9f5bcbdea01f7d39a54244ed59a61d16bd3
+msgctxt "block:ipg-s2-1-c-definition-g03-b001"
+msgid "Once any of the above obligations has been fulfilled, further problems are treated as a Game Play Error — Game Rule Violation."
+msgstr "只要牌手履行了上述各项义务的任意一项，由此产生的其他问题便应按照“游戏行动失误～违反游戏规则”来处理。"
+
+#. kind: official-body
+#. source-sha256: 52d906807bf72ffbbe8086342c5ed9398d204be11c97c2e9b3a984f91e1b8bf2
+msgctxt "block:ipg-s2-1-c-definition-g03-b002"
+msgid "If the turn-based action of putting a lore counter on a Saga is missed, it should be handled as though it was a missed trigger."
+msgstr "如果在传纪上放置学问指示物的回合动作被遗忘了，将这个问题视作遗漏触发来处理。"
+
+#. kind: official-body
+#. source-sha256: ed59eec36692a2a8daafda2c5334c69833bc10cf34be899a80b3bef663f85889
+msgctxt "block:ipg-s2-1-c-definition-g03-b003"
+msgid "Triggered abilities that do nothing except create delayed triggered abilities automatically resolve without requiring acknowledgment. Awareness of the resulting delayed trigger must be demonstrated at the appropriate point. Triggered abilities that do nothing except create one or more copies of a spell or ability (such as storm or cipher) automatically resolve, but awareness of the resulting objects must be demonstrated using the same requirements as described above (even though the objects may not be triggered abilities)."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: 9b9d4a138ff33de56e6016f41efcb44b0ed9cc95b0c59e7234feef554eb2bfd6
+msgctxt "block:ipg-s2-1-c-definition-g03-b004"
+msgid "Abilities consisting of an action followed by “when you do” in the same ability are considered communicated by the announcement of the action. This is most commonly the case for exert and similar abilities."
+msgstr "一些异能包括一个动作以及紧跟其后的“当你如此作”异能。此类异能视为在宣告该动作之后就已声明。这种情形通常包括耗竭和其他一些类似的异能。"
+
+#. kind: official-body
+#. source-sha256: 3fa2b137b649220d8d0912da9977441838ceeae522b5718810ec1ac04b37b598
+msgctxt "block:ipg-s2-1-c-definition-g03-b005"
+msgid "If a triggered ability would have no impact on the game, it’s not an infraction to fail to demonstrate awareness of it. For example, if the effect of a triggered ability instructs its controller to sacrifice a creature, a player who controls no creatures isn’t required to demonstrate awareness of the ability. Similarly, a player demonstrating awareness of an optional trigger with no visible effect is assumed to have made the affirmative choice unless the opponent responds."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: 00c0638b5780418f4d9449097140db5867a7b82cdc99712a8686404468daef0b
+msgctxt "block:ipg-s2-1-c-definition-g03-b006"
+msgid "Judges do not intervene in a missed trigger situation unless they intend to issue a Warning or have reason to suspect that the controller is intentionally missing their triggered abilities."
+msgstr "除非认为应给予警告，或有理由怀疑异能的操控者系蓄意遗忘自己的触发，否则裁判在观察到牌手遗漏触发时不应干预比赛。"
+
+#. kind: official-body
+#. source-sha256: 9a0cf3be1b7b3f2d59a8379d9d99d636359463679f1a35b6cc3d3954161a1774
+msgctxt "block:ipg-s2-1-c-definition-g03-b007"
+msgid "A player controlling another player is responsible for that player’s triggers in addition to their own."
+msgstr "若某牌手正在操控其他牌手之回合，则他除了需留意自己的触发外，还有责任准确处理其所操控之牌手的触发。"
+
+#. kind: official-body
+#. source-sha256: 2996abd70909984e889eb84a87440a3e3507579e2e6e08479111b952f523a500
+msgctxt "block:ipg-s2-1-c-examples-g01-b001"
+msgid "Knight of Infamy (a 2/1 creature with exalted) attacks alone. Its controller says “Take two.”"
+msgstr "恶名骑士/Knight of Infamy（2/1生物，具颂威异能）单独攻击。其操控者说“中两点。”"
+
+#. kind: official-body
+#. source-sha256: 960e2dabf398b0d178cabd3fce5e9927c202845535d22e7cd2551ea5d1335b0f
+msgctxt "block:ipg-s2-1-c-examples-g01-b002"
+msgid "A player forgets to remove the final time counter from a suspended spell and then draws a card during their draw step."
+msgstr "牌手忘记从已延缓的咒语上移去最后一个计时指示物，并在其抓牌步骤中抓了一张牌。"
+
+#. kind: official-body
+#. source-sha256: 8384590fe2c26113609f82175a554509a8c626abf3a5c004d0ce86bfbf35f7a7
+msgctxt "block:ipg-s2-1-c-examples-g01-b003"
+msgid "A player casts Manic Vandal, then forgets its triggered ability by not choosing a target for it. They realize this only after casting another spell."
+msgstr "牌手施放了疯狂莽夫/Manic Vandal，但并未为其触发式异能选择目标，遗忘了此触发。等到施放另外一个咒语的时候，他们才发现遗忘了此触发。"
+
+#. kind: official-body
+#. source-sha256: e99c0c613a164920e2ea05e9ecf502ae734719c475ec3d304cf0fd8b3524f5c3
+msgctxt "block:ipg-s2-1-c-examples-g01-b004"
+msgid "A player forgets to exile the Angel token created by Geist of Saint Traft at end of combat. They realize the error when declaring blockers during the next turn."
+msgstr "在战斗结束的时候，牌手忘记放逐圣沙弗的游魂/Geist of Saint Traft产生的天使衍生物。等到下一个回合宣告阻挡者的时候，他们才发现这个失误。"
+
+#. kind: official-body
+#. source-sha256: c8997ad4be8ac25eaae15705d4f192967b158f20e47e0d74982b95c19efa2be5
+msgctxt "block:ipg-s2-1-c-philosophy-g01-b001"
+msgid "Triggered abilities are common and invisible, so players should not be harshly penalized when forgetting about one. Players are expected to remember their own triggered abilities; intentionally ignoring one may be Unsporting Conduct — Cheating (unless the ability would have no impact on the game as described above). Even if an opponent is involved in the announcement or resolution of the ability, the controller is still responsible for ensuring the opponents make the appropriate choices and take the appropriate actions. Opponents are not required to point out triggered abilities that they do not control, though they may do so if they wish."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: 220ef4450a240be73a966040999f844cf23d069a31f799d14bedd340ee23bef4
+msgctxt "block:ipg-s2-1-c-philosophy-g01-b002"
+msgid "Triggered abilities are assumed to be remembered until otherwise indicated, and the impact on the game state may not be immediately apparent. The opponent’s benefit is in not having to point out triggered abilities, although this does not mean that they can cause triggers to be missed. If an opponent requires information about the precise timing of a triggered ability or needs details about a game object that may be affected by a resolved triggered ability, that player may need to"
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: 2130e30ea6ab33fcd8dc6393e86349f1ed6111f06959241e608ae2e4dcda42db
+msgctxt "block:ipg-s2-1-c-philosophy-g01-b003"
+msgid "acknowledge that ability’s existence before its controller does. A player who makes a play that may or may not be legal depending on whether an opponent’s uncommunicated trigger has been remembered has not committed an infraction; their play either succeeds, confirming that the trigger has been missed, or is rewound."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: 7d923f2191924dbb3f800eede480df51090c05a826b87fb738e22a0f77f4452d
+msgctxt "block:ipg-s2-1-c-philosophy-g01-b004"
+msgid "Players may not cause triggered abilities controlled by an opponent to be missed by taking game actions or otherwise prematurely advancing the game. During an opponent’s turn, if a trigger’s controller demonstrates awareness of the trigger before they take an active role (such as taking an action or explicitly passing priority), the trigger is remembered. The Out-of-Order Sequencing rules (MTR section 4.3) may also be applicable, especially as they relate to batches of actions or resolving items on the stack in an improper order."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: f263cd4bd1db30dc357adf66f44de08bdaf5611f1ba855fc31fbad62ddcb59bf
+msgctxt "block:ipg-s2-1-c-philosophy-g01-b005"
+msgid "A triggered ability is considered to have triggered even if it was subsequently missed. Effects that count or restrict the number of times a triggered ability can trigger will count the missed one."
+msgstr "即使一个触发式异能在触发后被遗忘，它仍被视作已触发。计算或限制异能触发次数的效应，会将被遗漏的触发计算在内。"
+
+#. kind: official-body
+#. source-sha256: 3c81c08d2ed620a21c92a385d06d6615075286aa030a04602bc861705a204de9
+msgctxt "block:ipg-s2-1-c-additional-remedy-g01-b001"
+msgid "If the triggered ability is an enters-the-battlefield trigger of an Aura that affects only the enchanted permanent and causes a visible change to that permanent, resolve the ability immediately."
+msgstr "若该触发式异能系由进战场之灵气触发，仅影响其所结附的永久物并对其产生可见变化，则立即结算之。"
+
+#. kind: official-body
+#. source-sha256: b1583c5efa43571198e20ec682f4ea803779c70ec6f37dc755e5e9988c979dac
+msgctxt "block:ipg-s2-1-c-additional-remedy-g01-b002"
+msgid "If the triggered ability is a delayed triggered ability that undoes a zone change (including token creation) caused by the effect that created the delayed triggered ability, the opponent chooses whether to resolve the ability the next time a player would get priority or when a player would get priority at the start of the next phase. The new zone does not need to be the same as the one the card was originally moved from."
+msgstr "若该触发式异能系由改变某物件区域（包括派出衍生物）之效应产生、用于复原前述区域改变的延迟式触发异能，则由对手选择是令其在下一次将有牌手获得优先权时结算，还是在下一个阶段开始、有牌手将获得优先权时结算。新的区域不需要与牌原本来自的区域相同。"
+
+#. kind: official-body
+#. source-sha256: ea59fcb0fa76f5c54c7832ae27bddeba88938f5b834ac213a3fb48c6b03f6565
+msgctxt "block:ipg-s2-1-c-additional-remedy-g01-b003"
+msgid "For all other triggered abilities, if the ability was missed prior to the current phase in the previous turn, instruct the players to continue playing. If the triggered ability created an effect whose duration has already expired, instruct the players to continue playing."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: 3046587c59a3026f2e502867af4bbb3b9f0cc6e304c60a68bac6f5487349d9be
+msgctxt "block:ipg-s2-1-c-additional-remedy-g01-b004"
+msgid "If the triggered ability isn’t covered by the previous paragraphs, the opponent chooses whether the triggered ability is added to the stack. If it is, it’s inserted at the appropriate place on the stack if possible or on the bottom of the stack. No player may make choices for the triggered ability involving objects that would not have been legal choices when the ability should have triggered. For example, if the ability instructs a player to sacrifice a creature, that player can't sacrifice a creature that wasn't on the battlefield when the ability should have triggered."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: ca41d1262a4bac7449737689879c4b0ca21f1a70e8869e676e9ab6053e839617
+msgctxt "block:ipg-s2-1-c-additional-remedy-g01-b005"
+msgid "If the player is in the process of, or has just completed, an action that indicates the trigger has been missed, and completing that action would change the effect of the trigger, a simple backup may be performed on that action."
+msgstr "如果牌手正在进行或刚刚完成一个动作表明其遗漏了触发，并且完成该动作会改变该触发式异能的效应，则可以对该动作进行简易倒回。"
+
+#. kind: official-body
+#. source-sha256: 17972801ade9e64a54791a9e6fb868abda4a850f13c5883df9a9884da6849457
+msgctxt "block:ipg-s2-1-c-additional-remedy-g01-b006"
+msgid "Upgrade: If the triggered ability is usually considered detrimental for the controlling player and they own the card responsible for the existence of the trigger, the penalty is a Warning. The current game state is not a factor in determining this, though symmetrical abilities (such as Howling Mine) may be considered usually detrimental or not depending on who is being affected."
+msgstr ""
+
+#. kind: title
+#. source-sha256: 152ca3ff3f29e9194195f7307378638cde12fc31de695d2d53cfa8e96ac13fa6
+msgctxt "title:ipg-s2-2"
+msgid "Looking at Extra Cards"
+msgstr "额外看牌"
+
+#. kind: official-body
+#. source-sha256: 8cd0859f065c753db1db64ea9ffb93f627c127d56319b8431ad82e1e1296da9a
+msgctxt "block:ipg-s2-2-c-definition-g01-b001"
+msgid "A player takes an action that may have enabled them to see the faces of cards that they were not entitled to see."
+msgstr "牌手采取之行动让他们看到了本不应能检视的牌。"
+
+#. kind: official-body
+#. source-sha256: 094e971629dc474c68a949ee65b79e3c83957b8e04d23a5df10ca0b67c46a4a5
+msgctxt "block:ipg-s2-2-c-definition-g01-b002"
+msgid "This penalty is applied only once if one or more cards are seen in the same action or sequence of actions."
+msgstr "在同一动作或同一系列动作中看到了一张牌或数张牌，此处罚也只适用一次。"
+
+#. kind: official-body
+#. source-sha256: 6c4d3714e55858f892b03599ead86b14302b95a3188fe07c005954c30edd4ef6
+msgctxt "block:ipg-s2-2-c-examples-g01-b001"
+msgid "A player accidentally reveals (drops, flips over) a card while shuffling their opponent’s library."
+msgstr "牌手在洗对手牌库时意外地翻开（掉落，翻转）一张牌。"
+
+#. kind: official-body
+#. source-sha256: 5588d85f6902122360aed8a15909a03e77e75ce905d5eabfcdc10e8a78ee4211
+msgctxt "block:ipg-s2-2-c-examples-g01-b002"
+msgid "A player pulls up an extra card while drawing from their library."
+msgstr "牌手抓牌时多带起了一张牌。"
+
+#. kind: official-body
+#. source-sha256: ac958f72e156770ecd2a80cecc93381557e19aa99afe18a876d4f37192b1488b
+msgctxt "block:ipg-s2-2-c-examples-g01-b003"
+msgid "A player sees the bottom card of their deck when presenting it to their opponent for cutting/shuffling."
+msgstr "牌手在将套牌给对手洗或切时看到了牌库底的牌。"
+
+#. kind: official-body
+#. source-sha256: e03692067822b5de1a203e99a8a3303b67a53e9cdfe0a631afe9a2a1f02a0032
+msgctxt "block:ipg-s2-2-c-philosophy-g01-b001"
+msgid "A player can accidentally look at extra cards easily and this infraction handles situations where a dexterity or rules error has led to a player seeing cards that they shouldn’t have. Cards in a library are considered to be there until they touch cards in another hidden set. Once those cards have joined another hidden set, the infraction is Hidden Card Error or Game Rule Violation."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: 53947cdfe7a59cdc33da0e2a11563b7643e56de3ae640e5066abb6f8ab39f3c5
+msgctxt "block:ipg-s2-2-c-philosophy-g01-b002"
+msgid "Players should not use this penalty to get a “free shuffle” or to attempt to shuffle away cards they don’t want to draw; doing so may be Unsporting Conduct — Cheating. Players also are not allowed to use this penalty as a stalling mechanism. The library is already randomized, so shuffling in the revealed cards should not involve excessive effort."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: b671d5413401572de3ae6932511e4a0386238b0863b594c54d461a17c203a3ce
+msgctxt "block:ipg-s2-2-c-additional-remedy-g01-b001"
+msgid "If the cards were in the library, shuffle any previously unknown cards from a deck back into the random portion of the library, then put any previously known cards back in their correct locations."
+msgstr "如果额外看的牌在牌库中，则将此前套牌中未知的牌张洗入牌库的随机部分，然后将此前已知牌张置于正确位置。"
+
+#. kind: title
+#. source-sha256: 96490972b9ffc15299df03da5d83a2cf6f7b7221be8ceeebba4ad27053f893de
+msgctxt "title:ipg-s2-3"
+msgid "Hidden Card Error"
+msgstr "非公开牌张失误"
+
+#. kind: official-body
+#. source-sha256: bfb95610f0a4590a1218ad59f7efcebd07530df0661451cb31e65f2eec0e0262
+msgctxt "block:ipg-s2-3-c-definition-g01-b001"
+msgid "A player commits an error in the game that cannot be corrected by only publicly available information. It is not a Hidden Card Error if the opponent acknowledges the action or controls the continuous effect modifying the game rule that made the action illegal. This infraction only applies when a card whose identity is known to only one player is in a hidden set of cards both before and after the error."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: 9ee8bbe054f76f9a9ed3f684923b384a5be6107019563ed94155029d2b6ff605
+msgctxt "block:ipg-s2-3-c-definition-g01-b002"
+msgid "If an additional card is seen but not added to the set, the infraction is Game Play Error — Looking at Extra Cards."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: eb9bcf9e8989ddea07e41e621167227f205f3a4a667c8ff5726cbcad6753a82d
+msgctxt "block:ipg-s2-3-c-examples-g01-b001"
+msgid "A player draws four cards after casting Ancestral Recall."
+msgstr "牌手施放Ancestral Recall之后抓了四张牌。"
+
+#. kind: official-body
+#. source-sha256: 3b3daebbad9bd56cf3473b2f73162d8aa035808c87117bfc50d91f6690a54a0f
+msgctxt "block:ipg-s2-3-c-examples-g01-b002"
+msgid "A player scries two cards when they should only have scried one."
+msgstr "牌手在只该占卜一张牌的情况下占卜了两张牌。"
+
+#. kind: official-body
+#. source-sha256: 4b5f6cb8b084149e5e45dbba11fbce976b13c661182947e483875aeaeed0c2fa
+msgctxt "block:ipg-s2-3-c-examples-g01-b003"
+msgid "A player resolves a Dark Confidant trigger, but forgets to reveal the card before putting it into their hand."
+msgstr "牌手结算了黑暗亲信/Dark Confidant的触发，但在将牌张置入手中之前忘了展示。"
+
+#. kind: official-body
+#. source-sha256: a26fd1439b30ef95210c8788cd079caea1f999c644b768aef3cb2c5a37fe50b4
+msgctxt "block:ipg-s2-3-c-examples-g01-b004"
+msgid "A player has more cards in their hand than can be accounted for."
+msgstr "牌手的手牌数量比其应有的数量多。"
+
+#. kind: official-body
+#. source-sha256: 5791961bb8500ffada4eb69a4268eeaf03742d0db04de58cb81b0a98e23c3687
+msgctxt "block:ipg-s2-3-c-examples-g01-b005"
+msgid "A player casts Anticipate and picks up the top four cards of their library."
+msgstr "牌手施放预先考虑/Anticipate，并拿起了其牌库顶的四张牌。"
+
+#. kind: official-body
+#. source-sha256: 316d3812f4194722e0d5b1a1f90c5681d0c322e587594f412b898b13d1a4216f
+msgctxt "block:ipg-s2-3-c-examples-g01-b006"
+msgid "A player, going first, draws for their turn."
+msgstr "先手的牌手在第一回合开始时抓了牌。"
+
+#. kind: official-body
+#. source-sha256: 1b01b35418a31638a2d4faccb9c2996d3863dcbb2f24a945b9ae6d661c8d2e92
+msgctxt "block:ipg-s2-3-c-philosophy-g01-b001"
+msgid "Though the game state cannot be reversed to the ‘correct’ state, this error can be mitigated by giving the opponent sufficient knowledge and ability to offset the error so that it is less likely to generate advantage."
+msgstr "虽然犯下此失误之后，没有办法将游戏状态倒回至“正确”的状态，但此类失误也有弥补之法，即是让对手充分获取信息，依其意愿来减轻失误造成的影响，从而使牌手较难从中渔利。"
+
+#. kind: official-body
+#. source-sha256: f0a7903281515eeb2dcba3fc190527c4b26545ac15b8b7f48fd2f4266a7bc1a1
+msgctxt "block:ipg-s2-3-c-philosophy-g01-b002"
+msgid "If cards are placed into a public zone, then their order is known and the infraction can be handled as a Game Rule Violation. Order cannot be determined from card faces only visible to one player unless the card is in a uniquely identifiable position (such as on top of the library, or as the only card in hand.)"
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: 35ddec7ca1f17af8190026ff031cdd2347a19a25b841753248ba2b363149d83c
+msgctxt "block:ipg-s2-3-c-philosophy-g01-b003"
+msgid "Be careful not to apply this infraction in situations where a publicly-correctable error subsequently leads to an uncorrectable situation such as a Brainstorm cast using green mana. In these situations, the infraction is based on that root cause."
+msgstr "但应注意，如果是原本可通过公开方式修正的失误引致无法修复之状况的情形（例如利用绿色法术力来施放脑力激荡/Brainstorm），不要适用此违规。应根据这类情形的根本原因来适用对应的违规。"
+
+#. kind: official-body
+#. source-sha256: 2a7bd2638efe03ada01bd2c70376dd979c7ada9222687410895f0e9b315cd05a
+msgctxt "block:ipg-s2-3-c-philosophy-g01-b004"
+msgid "Information about cards previously known by the opponent, such as cards previously revealed while on the top of the library or by a previous look at the hand, may be taken into account while determining the set of cards to which the remedy applies."
+msgstr "若存在对手先前已知晓的牌张,例如之前展示过的牌库顶牌或检视手牌时看到的牌,则可考虑在此信息的基础上来确定要对哪部分牌叠适用修正。"
+
+#. kind: official-body
+#. source-sha256: 681f5991b52da05f1d70a529e0e7c13feb454bffbac00b1551497c1d33c346a8
+msgctxt "block:ipg-s2-3-c-philosophy-g01-b005"
+msgid "Always operate on the smallest set possible to remedy the error. This may mean applying the remedy to only part of a set defined by an instruction. For example, if a player resolves Collected Company, picks up three cards with one hand and then four cards with the other, the last drawn set of four cards should be used for the remedy, instead of the full set of seven cards.."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: 13c80daef33c485c6000403baf1281a5e03f642002907d810c0d45162cd30a39
+msgctxt "block:ipg-s2-3-c-additional-remedy-g01-b001"
+msgid "In cases where the infraction was immediately followed by moving a card from the affected set to a known location, such as by discarding, putting cards on top of the library, or playing a land, a simple backup to the point just after the error may be performed."
+msgstr "如果属于违规发生后会立即将牌张从相关牌叠移至已知位置，例如弃牌、将牌置于牌库顶或是使用地，则可以简易倒回至错误刚发生的时点。"
+
+#. kind: official-body
+#. source-sha256: 5c36cde6e6e63392b26f5fd861b64f69c130cff600a3261a752d7ae8fb4f87cd
+msgctxt "block:ipg-s2-3-c-additional-remedy-g01-b002"
+msgid "If the set of cards that contained the problem no longer exists, there is no remedy to be applied."
+msgstr "如果存在问题之牌叠已不存在，则无需应用修正。"
+
+#. kind: official-body
+#. source-sha256: 6ff159ba873553f73a8d69de7d142bbdc4cb07e15bd937f9ae72c5d8286f75ed
+msgctxt "block:ipg-s2-3-c-additional-remedy-g01-b003"
+msgid "If the error put cards into a set prematurely and other operations involving cards in the set should have been performed first, the player reveals the set of cards that contains the excess and their opponent chooses a number of previously-unknown cards. Put those cards aside until the point at which they should have been legally added, then return them to the set."
+msgstr "如果错误属于未进行本应对相关牌叠中的牌张执行其他行动的情况下，便先行将牌张置入该牌叠中的情形，则该牌手展示包含过量牌张的牌叠，其对手从中选出先前未知的牌张。将这些选出的牌张放在一旁，直到进行到他们应能合乎规则地加入牌叠之后，再将他们移回牌叠。"
+
+#. kind: official-body
+#. source-sha256: 6bf1e6339b7f9dcc416bc7c0ce5abd8d0a6b26f63b4a8275448d9565dfbfc220
+msgctxt "block:ipg-s2-3-c-additional-remedy-g01-b004"
+msgid "If the error involves one or more cards that were supposed to be revealed, the player reveals the set of cards that contains the unrevealed cards and their opponent chooses that many previously- unknown cards. Treat those as the cards that were ‘revealed’ and return them to the set that was"
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: adea1bb71e3138f2cf4dda82c12941be53a4d28a43fe60d57ab95c175f7e85e4
+msgctxt "block:ipg-s2-3-c-additional-remedy-g01-b005"
+msgid "being selected from; the player then reperforms the action. If recreating the original selection set and reperforming the action would be too disruptive, leave the selected cards in hand."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: ae93c58d77137244a46a36deeeb09aa441d9e313e9bc943bc90eb24579bd90e3
+msgctxt "block:ipg-s2-3-c-additional-remedy-g01-b006"
+msgid "If a set affected by the error contains more cards than it is supposed to contain, the player reveals the set of cards that contains the excess and their opponent chooses a number of previously- unknown cards sufficient to reduce the set to the correct size. These excess cards are returned to the correct location. If that location is the library, they should be shuffled into the random portion unless the owner previously knew the identity of the card/cards illegally moved; that many cards, chosen by the opponent, are returned to the original location instead. For example, if a player playing with Sphinx of Jwar Isle illegally draws a card, that card should be returned to the top of the library."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: b9a781264b4cd03e4858af223cf6786961edc790af6b263c76a51f617df8f421
+msgctxt "block:ipg-s2-3-c-additional-remedy-g01-b007"
+msgid "Upgrade: If a face-down card cast using a morph or disguise ability is on the battlefield during the game and does not have the relevant ability printed on the card, the penalty is a Game Loss. If the player has one or more cards with the same ability in hand, has not added previously unknown cards to their hand since casting the card found in violation, and has self-reported the error before an effect that would reveal it is played, the upgrade does not apply and they may swap the card for a card with the appropriate ability in hand."
+msgstr "升级：如果曾以变身或伪装异能施放之牌面朝下的牌张在游戏过程中发现实际上不具相关异能，则处罚为一盘负。如果牌手手上有一张或数张相应具变身或伪装异能的牌，自施放引致违规之牌张后未曾将其他之前未知的牌张加入手牌，且又是在某个效应会将其展示之前自行上报该失误，则不适用此升级，可将手上任一此类牌张与此引致违规之牌张交换。"
+
+#. kind: title
+#. source-sha256: d9ec6d29d80cba3b2b0fa7a7efc088dc40f21414843ab9ca8c32b2110138e653
+msgctxt "title:ipg-s2-4"
+msgid "Mulligan Procedure Error"
+msgstr "再调度失误"
+
+#. kind: official-body
+#. source-sha256: 64c9ff20fdb9b744de934035933d7d2906d5c5e41f80bfa6982000d06ee5809e
+msgctxt "block:ipg-s2-4-c-definition-g01-b001"
+msgid "A player makes an error in one of the steps of the mulligan process. Once the mulligan process is complete and the game begins, excess cards arising from an improper mulligan is a Game Play Error — Hidden Card Error and too few cards is a Game Play Error — Game Rule Violation."
+msgstr "牌手再调度流程中的一步出现失误。一旦再调度流程完成并且游戏开始后，由于错误的再调度而产生额外牌张属于游戏行动失误～非公开牌张失误，而牌张过少则属于游戏行动失误～违反游戏规则。"
+
+#. kind: official-body
+#. source-sha256: 973af2e6f0719ff9f4fb1cc402c20618e7e53cf2aecb3343222564701ad1c7f2
+msgctxt "block:ipg-s2-4-c-definition-g01-b002"
+msgid "Unintentional process errors that provide no advantage, such as declaring an intent to mulligan early or exiling too many cards to Serum Powder, are not an infraction."
+msgstr "流程上无意的失误如不会带来优势，例如提前表明再调度之意图，或使用浆液粉末放逐了太多牌，不属于违规。"
+
+#. kind: official-body
+#. source-sha256: 3df463027f3044f3f1797cdbe33964b3ef2a165ddfa8322604f1758001b26f8e
+msgctxt "block:ipg-s2-4-c-examples-g01-b001"
+msgid "A player draws eight cards at the start of the game (instead of seven)."
+msgstr "牌手在游戏开始的时候抓了八张牌（应为七张）。"
+
+#. kind: official-body
+#. source-sha256: b141d19dd26d57f8e5a23c7daacd8ae67615049134acb05863fde69ee1d8b0ce
+msgctxt "block:ipg-s2-4-c-examples-g01-b002"
+msgid "A player chooses to not take a mulligan then takes a mulligan after seeing their opponent choose to take a mulligan."
+msgstr "牌手先选择不进行再调度，后在看见对手再调度后也进行再调度。"
+
+#. kind: official-body
+#. source-sha256: 13758533fbc116a5a4bba188058a5776cc0476b6cc2f46141b8a7fe12499d9d9
+msgctxt "block:ipg-s2-4-c-philosophy-g01-b001"
+msgid "Errors prior to the beginning of the game have a less disruptive option—a forced mulligan—that is not available at any other point during the game."
+msgstr "较之游戏中的其他时点，在游戏还没开始便发生的失误，还可以采用强制再调度这种影响较小的方式来修正，而其他时点就无法做到这点。"
+
+#. kind: official-body
+#. source-sha256: 778360af7d5c420a34270aa6a02d2e638a147f8c76911ff096fecd3cdb18b066
+msgctxt "block:ipg-s2-4-c-additional-remedy-g01-b001"
+msgid "The player takes an additional mulligan."
+msgstr "牌手再额外进行一次再调度。"
+
+#. kind: title
+#. source-sha256: e1c8f0f33d9cda426a653e2b8de762955c04f5fac98f16f7011141e38354d3bf
+msgctxt "title:ipg-s2-5"
+msgid "Game Rule Violation"
+msgstr "违反游戏规则"
+
+#. kind: official-body
+#. source-sha256: 7536a10beaf6531419144e04c2a4e5a7035efe5d1f23d741be10a13b32b98c22
+msgctxt "block:ipg-s2-5-c-definition-g01-b001"
+msgid "This infraction covers the majority of game situations in which a player makes an error or fails to follow a game procedure correctly. It handles violations of the Comprehensive Rules that are not covered by the other Game Play Errors."
+msgstr "此违规涵盖了大多数关于牌手发生失误，或是没有正确的执行游戏程序而造成的游戏状况。这也用来处理违反完整规则、且未包含在其他游戏行动失误中的违规。"
+
+#. kind: official-body
+#. source-sha256: c3fd983c3779f4d6be596d62b14ae4f4eedcde2201aea63f1d22c29ea30e0c77
+msgctxt "block:ipg-s2-5-c-examples-g01-b001"
+msgid "A player casts Wrath of God for 3W (actual cost 2WW)."
+msgstr "牌手支付{三}{白}来施放神之愤怒/Wrath of God（正确费用为{二}{白}{白}）。"
+
+#. kind: official-body
+#. source-sha256: 6d71472f8d5debc0fdef177deb68cd2e7d8495f2ce6d00125ee6f44e33d314d1
+msgctxt "block:ipg-s2-5-c-examples-g01-b002"
+msgid "A player does not attack with a creature that must attack each turn."
+msgstr "牌手没有让每回合都必须攻击的生物来进行攻击。"
+
+#. kind: official-body
+#. source-sha256: d94918976818a2658bd9b72e252c3c4b36dc82dfd649eb344e09c7626c715265
+msgctxt "block:ipg-s2-5-c-examples-g01-b003"
+msgid "A player fails to put a creature with lethal damage into a graveyard and it is not noticed until several turns later."
+msgstr "牌手没有将受到致命伤害的生物放进坟墓场，且在数个回合之后才发现。"
+
+#. kind: official-body
+#. source-sha256: d97abd546a3a551dc37852e903d63a1ed6ff20987d54306ad0b858431e8961db
+msgctxt "block:ipg-s2-5-c-examples-g01-b004"
+msgid "A Phyrexian Revoker is on the battlefield that should have had a card named for it."
+msgstr "非瑞克西亚断念妖/Phyrexian Revoker 在战场上，当初应为其说一张牌名时却没有说。"
+
+#. kind: official-body
+#. source-sha256: 53636967d1905f2f5d97a18cf326fc67067ac64442c8bb15b2a9073b1da705c0
+msgctxt "block:ipg-s2-5-c-examples-g01-b005"
+msgid "A player casts Brainstorm and forgets to put two cards back on top of their library."
+msgstr "牌手施放脑力激荡/Brainstorm，却忘记将两张牌放回牌库顶。"
+
+#. kind: official-body
+#. source-sha256: 4d4d3b0bd45e6ead51b38f42709a3e0156a3e8bcc555d10732eed237a6bf746a
+msgctxt "block:ipg-s2-5-c-philosophy-g01-b001"
+msgid "While Game Rule Violations can be attributed to one player, they usually occur publicly and both players are expected to be mindful of what is happening in the game. It is tempting to try and “fix” these errors, but it is important that they be handled consistently, regardless of their impact on the game."
+msgstr "虽然违反游戏规则通常是归咎于其中一位牌手，但此类情况通常是公开地发生，且双方牌手都应留意游戏中所发生的事情。处理者应尝试去“修复”这些失误，但很重要的是：不论这些失误对游戏有多少影响，处理方式都必须一致。"
+
+#. kind: official-body
+#. source-sha256: 2dcaf7331b4133fb56294e853944fe82488d79f32afc078c12cb64f037c64ee0
+msgctxt "block:ipg-s2-5-c-additional-remedy-g01-b001"
+msgid "First, consider a simple backup (see section 1.4)."
+msgstr "首先，考虑是否简易倒回（参见1.4章节）。"
+
+#. kind: official-body
+#. source-sha256: 11ee5fecdf89f69a902966af7db21febcc2b3c97decd54d5653eceab4eae2659
+msgctxt "block:ipg-s2-5-c-additional-remedy-g01-b002"
+msgid "If a simple backup is not sufficient and the infraction falls into one or more of the following categories, and only into those categories, perform the appropriate partial fix:"
+msgstr "如果简易倒回不足以完全修正，且违规属于下列某种情形或同属多种情形（但不得超出各情形规定之内容），则进行部分修正："
+
+#. kind: official-body
+#. source-sha256: abab8e4641497c367118878f33092d8849e49bc2ab6e9a6a140b8eb634a04f6f
+msgctxt "block:ipg-s2-5-c-additional-remedy-g02-b001"
+msgid "If a player forgot to untap one or more permanents at the start of their turn and it is still the same turn, untap them."
+msgstr "如果牌手在自己回合开始时忘记重置一个或数个永久物，并且当前依然是同一个回合，则重置它们。"
+
+#. kind: official-body
+#. source-sha256: 64f8afbf7ebb133a93e132fc69a7dff4d80f101039c7c796e0864e8b2eb0f62d
+msgctxt "block:ipg-s2-5-c-additional-remedy-g02-b002"
+msgid "If a player made an illegal choice (including no choice where required) for a static ability generating a continuous effect still on the battlefield, that player makes a legal choice."
+msgstr "如果某牌手为某个在战场上之静止式异能产生的持续性效应作出的选择不合法（包括在需要作选择时未如此作），则该牌手重新作出一个符合游戏规则的选择。"
+
+#. kind: official-body
+#. source-sha256: 59a086fed04096673f213cf6e3af1b39f986d7b508bd5d7ee74e0c5adfd399ba
+msgctxt "block:ipg-s2-5-c-additional-remedy-g02-b003"
+msgid "If a player failed to draw cards, discard cards, or return cards from their hand to another zone, that player does so."
+msgstr "如果某牌手未能抓牌、弃牌或忘记将牌从手上移至其他区域，则该牌手如此作。"
+
+#. kind: official-body
+#. source-sha256: 4c077f531c54caa1e5ab7e3b3b1870c295093b85788928fa057673f1ea48ba17
+msgctxt "block:ipg-s2-5-c-additional-remedy-g02-b004"
+msgid "If an object is not in the correct zone, the exact object is still known to all players, and it can be moved with only minor disruption to the current state of the game, put the object in the correct zone. This only applies if the object being in the wrong zone is the Game Rule Violation, and not if it is the consequence of a different error."
+msgstr "如果一个物件处于错误的区域中，且该物件依然为所有牌手所知悉、移动此物件仅会对游戏当前状态造成轻微影响，则将该物件放入正确区域。此修正仅适用于，当“违反游戏规则”的问题本身，是由于有物件处于错误的区域中而产生的，而非因其他错误导致此类结果的情况。"
+
+#. kind: official-body
+#. source-sha256: ccf311519f19e56f9f03af2364374c5738ce3b6136227931edd00e0fb72335dc
+msgctxt "block:ipg-s2-5-c-additional-remedy-g02-b005"
+msgid "If damage assignment order has not been declared, the appropriate player chooses that order."
+msgstr "如果未宣告伤害分配次序，对应牌手决定此顺序。"
+
+#. kind: official-body
+#. source-sha256: 982a59b174fa58b5594ecaa743658dff0ae3bf25ddf94ccf8fe8f5e5a7ecb4db
+msgctxt "block:ipg-s2-5-c-additional-remedy-g03-b001"
+msgid "For each of these fixes, a simple backup may be performed beforehand if it makes applying the fix smoother. Triggered abilities are generated from these partial fixes only if they would have occurred had the action been taken at the correct time."
+msgstr "对于以上各修正而言，如果能让修正更平滑，可以在此之前进行一次简易倒回。对于在部分修正中产生的触发式异能，只有在这些动作在正确的时间进行也会触发的情况下，才会在这些部分修正中产生。"
+
+#. kind: official-body
+#. source-sha256: 2a137707672ff5e314dfc9067abc74038d06118566790da0a7ba8796a2780879
+msgctxt "block:ipg-s2-5-c-additional-remedy-g03-b002"
+msgid "Otherwise, a full backup may be considered or the game state may be left as is."
+msgstr "若属于其他情况，则可以考虑进行完整倒回，或保留当前游戏状态不做修正。"
+
+#. kind: official-body
+#. source-sha256: 367c6b1d014f22bf8d1a351113ebd34778acb8ec36f09b42164c750d5f0e8816
+msgctxt "block:ipg-s2-5-c-additional-remedy-g03-b003"
+msgid "If the game has proceeded past a point where an opponent could reasonably be expected to notice the error, the opponent has also committed an infraction. In most cases, the infraction is Game Play Error — Failure to Maintain Game State. However, if the judge believes that both players were responsible for the Game Rule Violation, such as due to the opponent controlling the continuous effect modifying the rules of the game that led to the Game Rule Violation or a player taking action based on another player’s instruction, they have instead committed a Game Play Error — Game Rule Violation. For example, if a player casts Path to Exile on an opponent’s creature and the opponent puts the creature into the graveyard, once the game has continued both players will have committed a Game Rule Violation."
+msgstr "如果对手没能在预期其能注意到失误的合理时间点前指出游戏行动失误，则对手也犯下违规。大多数情况下是“游戏行动失误～未维护游戏状态”。然而如果裁判认为双方牌手在本次违反游戏规则的过程中均有责任，例如是由于对手操控的改变游戏规则的持续性效应导致的，或是某位牌手根据另一位牌手的指示执行行动，则对手也犯下了“游戏行动失误～违反游戏规则”违规。例如，如果牌手向对手的生物施放流放之径/Path to Exile，且该对手将此生物放进坟墓场，一旦游戏继续进行则双方牌手均犯下“游戏行动失误～违反游戏规则”违规。"
+
+#. kind: title
+#. source-sha256: 6285da2a6fea7331f80d1f976928e1af20a0c19e38b03cdfa39b6ddbb9b5f60b
+msgctxt "title:ipg-s2-6"
+msgid "Failure to Maintain Game State"
+msgstr "未维护游戏状态"
+
+#. kind: official-body
+#. source-sha256: 7ebaa00294052886f4f926ecbaea5b40f69a8938c65f6a802f27482c8b57ca4a
+msgctxt "block:ipg-s2-6-c-definition-g01-b001"
+msgid "A player allows another player in the game to commit a Game Play Error and does not point it out immediately. If a judge believes a player is intentionally not pointing out other players’ illegal actions, either for their own advantage, or in the hope of bringing it up at a more strategically advantageous time, they should consider an Unsporting Conduct — Cheating infraction. Not reminding an opponent about their triggered abilities is never Failure to Maintain Game State nor Cheating."
+msgstr ""
+
+#. kind: official-body
+#. source-sha256: d8aaebb204a776b4b2b4191bd7f6ccf4bc3686eb66665589b7ecf1fe3cd525f4
+msgctxt "block:ipg-s2-6-c-examples-g01-b001"
+msgid "A player’s opponent forgets to reveal the card searched for by Worldly Tutor. It is not noticed until the end of turn."
+msgstr "牌手的对手忘了展示处世导师/Worldly Tutor所搜寻的牌。但到了回合结束才被注意到。"
+
+#. kind: official-body
+#. source-sha256: 69adedb8f530e68592b6880711bf3f2f91498878b50e615af6d07dc22021dcfc
+msgctxt "block:ipg-s2-6-c-examples-g01-b002"
+msgid "A player does not notice that their opponent has Armadillo Cloak on a creature with protection from green."
+msgstr "牌手没注意到对手的穿山甲外衣/Armadillo Cloak结附在了具反绿保护异能的生物上。"
+
+#. kind: official-body
+#. source-sha256: 033babf3ee8eec34c39d2ff2083c6fa69080297dde53b6749d6219bf409e5fcc
+msgctxt "block:ipg-s2-6-c-philosophy-g01-b001"
+msgid "If an error is caught before a player could gain advantage, then the dangers of the ongoing game state becoming corrupted are much lower. If the error is allowed to persist, at least some of the fault lies with the opponent, who has also failed to notice the error."
+msgstr ""
+
+#. kind: publication-annotation
+#. source-sha256: 1046dc6e68f3f2dacbe36c71a1486e980927ad4b70b3e66305bb6f3349a4235a
+msgctxt "annotation:ipg-ann-section-2-5-definition-context"
+msgid "“Game Rule Violation” does not refer to any particular type of error. Rather, Game Rule Violations are specifically defined as errors that aren’t another infraction. Newer judges will sometimes talk about how “mis-resolving a spell” is a Game Rule Violation. In actuality, resolving a spell improperly could result in one of several different infractions, such as Looking at Extra Cards (e.g. forgetting that Courser of Kruphix left the battlefield) to Hidden Card Error (e.g. mis-reading Divination and drawing three cards)."
+msgstr "“违反游戏规则”不指代任何特定类型的错误。然而，违反游戏规则明确定义为所有不能归类为其他违规的错误。新裁判有时会讨论“错误地结算一个咒语”是否应当是违反游戏规则。事实上，不正确的结算咒语可能会导致另一些违规，像是额外看牌（如忘记了克罗芬斯的骏马已经离开战场）及非公开牌张失误（看错了卜卦的叙述而抓了3张牌）等。"
+
+#. kind: publication-annotation
+#. source-sha256: a6c3944567620947ae2d0724a2449892638656c7725b257099e8d9ee80a4bfec
+msgctxt "annotation:ipg-ann-2-5-philosophy-consistency"
+msgid "Consistency is a core principle of the IPG. Even though there are thousands of judges adjudicating tournaments across the world, it is important for each of these tournaments to be run and judged to the same standard. For this reason, we strive to handle penalties neutrally. Fundamentally, both players are responsible for maintaining a proper game state. Our core role as judges is not to “correct” or “fix” the players’ mistakes, but to dispassionately interpret and apply the fixes prescribed by the IPG."
+msgstr "一致性是IPG的核心原则。以同样的标准执法世界各地的比赛是很重要的事，即使这些比赛由数以千计的不同裁判来执法。因此，我们致力于处理处罚的中立性。从根本上来说，双方牌手都有责任保持正确的游戏状态。作为裁判，我们的核心作用不是改正或者修复牌手的错误，而是冷静地解释并应用IPG中规定的修正。"
+
+#. kind: publication-annotation
+#. source-sha256: dd9afe69daeb9e199d4a9215ac3814936abfa34172604c4c80b354421b00ca51
+msgctxt "annotation:ipg-ann-2-5-partial-fix-list"
+msgid "So right here we are going to have a list of partial fixes. Try to do a simple backup (see Backing Up 1.4 for more information about back ups) then, if you can’t, you can try to do a partial fix. If you cannot apply a simple backup or a partial fix you evaluate if you need to do a back up or leave alone. If the error fits more than one of these categories, it’s ok to partial fix, but be careful that the error only fits into those categories. If there are multiple fixes within the same bullet point, you’re still fine to use that partial fix."
+msgstr "以下是部分修正的列表。首先试着进行简易倒回（关于倒回，详见一节）；如果简易倒回不够，你可以试着执行部分修正。如果你既不能进行简易倒回、也不能执行部分修正，那么你可以考虑倒回或者保留当前状态不修正。如果失误属于一种类别以上，可以使用部分修正，但必须小心注意该失误只属于这些类别。如果在同一条目中满足了多个修正条件，你仍然可以使用这种部分修正。"
+
+#. kind: publication-annotation
+#. source-sha256: 4f85d78ac60957832a69e2837caf77e0f518243bf82a1c6a8d89933829befbc9
+msgctxt "annotation:ipg-ann-2-5-wrong-zone"
+msgid "There is a fair amount to consider here. There are four tests to determine if this partial fix is relevant. 1) Is the object not in the correct zone. This covers when a creature died but shouldn’t have, or when a creatures shouldn’t have died but did. It also covers if a card was supposed to be bounced as wasn’t or a card was put in the GY when it should have been exiled. Basically, if the game was played correctly, that card should be somewhere else. 2) The identity of the object was known to all players. This means that all players know what the object is. This could be because the card was revealed or it could be because the card is in a location known by both players such as the top of a library. 3) The movement of the card (or lack of movement) is the error, not the result of some other error. For example, if a Path to Exile was case for {C}, and the card was put in exile; that is not eligible for this partial fix because the error was in casting Path for {C}."
+msgstr "这里有不少需要考量的因素。要确定此项部分修正是否适用，需要进行四项测试：该物件是否不在正确的区域？这涵盖了生物本不该死却死了，或者生物本该死却没死的情况。这也包括牌本该被回手却没移回，或者牌本该被放逐却进了坟墓场的情况。简而言之，如果游戏进行正确，该牌应当处于其他位置。是否所有牌手都知晓该物件的身份？这意味着所有牌手都知道那个物件具体是什么。这可能是因为该牌曾被展示过，或者因为它处于双方都知道的位置，例如已知的牌库顶。失误是否是牌的移动（或未移动）本身，而非其他失误导致的后果？例如，如果某人用方片施放了流放之径并将目标牌放逐了；这种情况就不适用此项部分修正，因为错误的根源在于用方片施放了流放之径。"
+
+#. kind: title
+#. source-sha256: f325f77189fdea96fc3d7a0c9fc215036fddfbd701f48d5d8ea47cace9e41d3f
+msgctxt "title:ipg-app-a"
+msgid "Penalty Quick Reference"
+msgstr "处罚快速查询"
+
+#. kind: official-body
+#. source-sha256: 6900adb0c4194b893541bde270138a47a8a9ca9fe0f5db83bf217c6bd7e249d4
+msgctxt "block:ipg-app-a-row-01"
+msgid "Missed Trigger"
+msgstr "遗漏触发"
+
+#. kind: official-body
+#. source-sha256: e1c8f0f33d9cda426a653e2b8de762955c04f5fac98f16f7011141e38354d3bf
+msgctxt "block:ipg-app-a-row-05"
+msgid "Game Rule Violation"
+msgstr "违反游戏规则"
+
+#. kind: official-body
+#. source-sha256: e436ef22513553b4e206df0f5752b2ccfc793bcfca43aedfa58a9369a718bd65
+msgctxt "block:ipg-app-a-row-07"
+msgid "Tardiness"
+msgstr "迟到"
+
+#. kind: official-body
+#. source-sha256: 78f5e96a2665fb4b51e44a36e395f3dff20afe90a2a5fb8c5c21d57154389d07
+msgctxt "block:ipg-app-a-row-23"
+msgid "Cheating"
+msgstr "作弊"
+
+#. kind: title
+#. source-sha256: 24ab72c476f35cd1acac5776cf87b31cd8f9d4e0b697627b688eb05cd232f46f
+msgctxt "title:ipg-app-b"
+msgid "Changes from Previous Versions"
+msgstr "与之前版本的更动"
+
+#. kind: official-body
+#. source-sha256: 46d8d018f0432658322d96bc44243a2d314a36134e0fad80ce2c3d53d9af83f4
+msgctxt "block:ipg-app-b-change-01"
+msgid "1.2: Removed specific details of how penalties are collected and stored, as it varies depending on the software being used."
+msgstr "1.2：由于记录和收集方式因软件而异，故取消此方面的特别说明。"
+
+#. kind: official-body
+#. source-sha256: e4aa52be4c93b7576b89038901b1aa663cc8e1a6d0e7f50af28760c954a799ee
+msgctxt "block:ipg-app-b-change-02"
+msgid "2.1: Treat missed Saga turn actions as missed triggers."
+msgstr "2.1：遗忘传纪的回合动作，视为遗漏触发来处理。"
+
+#. kind: official-body
+#. source-sha256: 045ea6dc172dd332b0957826e275662938f7ce8cb8fac372ac757efcdf451678
+msgctxt "block:ipg-app-b-change-03"
+msgid "2.1: Missed triggers still count as having triggered."
+msgstr "2.1：被遗漏的触发式异能仍认为已触发过。"
+
+#. kind: official-body
+#. source-sha256: fdbd7466fd2af39f3ab412ccc70e822a8eeaeb127b0897621f5ee42c3733b4fa
+msgctxt "block:ipg-app-b-change-04"
+msgid "2.5: Object-in-wrong-zone changed to always be a partial fix, but only when the incorrect zone is the root GRV."
+msgstr "2.5：物件处于错误区域中的情况始终适用于部分修正，但仅当该GRV是由处于错误区域本身导致的。"
+
+#. kind: official-body
+#. source-sha256: 256455c0020fbf2ac60600558b120715b83529ba57f4d6dafd436905c65752b9
+msgctxt "block:ipg-app-b-change-05"
+msgid "3.5: Wrong number of cards upgrade has been split into two paragraphs for clarity, as it has slightly different criteris for pre- and post-sideboard games."
+msgstr "3.5：牌张数量错误的升级被分为两段内容，以厘清换备前与换备后对局两种不同情况之判断标准的区别。"

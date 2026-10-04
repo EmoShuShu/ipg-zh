@@ -1,0 +1,118 @@
+from __future__ import annotations
+
+import xml.etree.ElementTree as ET
+from collections import Counter
+from pathlib import Path
+from typing import Any
+
+from .core import sha256_text
+
+
+def extract_translation_notes(
+    tmx_path: Path, units: list[dict[str, Any]]
+) -> dict[str, Any]:
+    known = {unit["id"]: unit for unit in units}
+    notes: list[dict[str, Any]] = []
+    root = ET.parse(tmx_path).getroot()
+    for translation_unit in root.findall(".//tu"):
+        unit_id = translation_unit.attrib.get("tuid", "")
+        props = {
+            prop.attrib.get("type", ""): prop.text or ""
+            for prop in translation_unit.findall("prop")
+        }
+        note = props.get("x-translation-note", "").strip()
+        if not note:
+            continue
+        source = ""
+        for variant in translation_unit.findall("tuv"):
+            if variant.attrib.get("{http://www.w3.org/XML/1998/namespace}lang", "").startswith("en"):
+                segment = variant.find("seg")
+                source = "" if segment is None else "".join(segment.itertext())
+                break
+        source_hash = sha256_text(source)
+        notes.append(
+            {
+                "unitId": unit_id,
+                "sourceHash": source_hash,
+                "note": note,
+                "recordedAt": props.get("x-recorded-at", "2026-10-04"),
+                "stale": unit_id not in known or source_hash != sha256_text(known[unit_id]["source"]),
+            }
+        )
+    return {"schemaVersion": 1, "notes": notes}
+
+
+def build_review_ledger(
+    units: list[dict[str, Any]], actions: list[dict[str, Any]]
+) -> dict[str, Any]:
+    actions_by_id = {action["unitId"]: action for action in actions}
+    entries: list[dict[str, Any]] = []
+    for unit in units:
+        source_hash = sha256_text(unit["source"])
+        target_hash = sha256_text(unit["target"])
+        action = actions_by_id.get(unit["id"])
+        if action is None:
+            status = "unreviewed"
+            reviewed_at = None
+        elif action["sourceHash"] != source_hash or action["targetHash"] != target_hash:
+            status = "stale"
+            reviewed_at = action.get("reviewedAt")
+        else:
+            status = "reviewed-modified" if action.get("modified") else "reviewed-unchanged"
+            reviewed_at = action.get("reviewedAt")
+        entries.append(
+            {
+                "unitId": unit["id"],
+                "sourceHash": source_hash,
+                "targetHash": target_hash,
+                "status": status,
+                "reviewedAt": reviewed_at,
+            }
+        )
+    return {"schemaVersion": 1, "entries": entries}
+
+
+def review_status_report(ledger: dict[str, Any]) -> dict[str, Any]:
+    counts = Counter(entry["status"] for entry in ledger["entries"])
+    return {
+        "schemaVersion": 1,
+        "total": len(ledger["entries"]),
+        "counts": {
+            status: counts.get(status, 0)
+            for status in ("unreviewed", "reviewed-unchanged", "reviewed-modified", "stale")
+        },
+    }
+
+
+def terminology_audit(glossary_path: Path, units: list[dict[str, Any]]) -> dict[str, Any]:
+    glossary: list[tuple[str, str, int]] = []
+    issues: list[dict[str, Any]] = []
+    for line_number, raw in enumerate(glossary_path.read_text(encoding="utf-8").splitlines(), 1):
+        if not raw.strip() or raw.lstrip().startswith("#"):
+            continue
+        parts = raw.split("\t")
+        if len(parts) < 2 or not parts[0].strip() or not parts[1].strip():
+            issues.append({"code": "invalid-glossary-row", "line": line_number})
+            continue
+        glossary.append((parts[0].strip(), parts[1].strip(), line_number))
+    findings: list[dict[str, Any]] = []
+    for source_term, target_term, line_number in glossary:
+        for unit in units:
+            if source_term in unit["source"] and target_term not in unit["target"]:
+                findings.append(
+                    {
+                        "code": "term-target-missing",
+                        "unitId": unit["id"],
+                        "sourceTerm": source_term,
+                        "expectedTarget": target_term,
+                        "glossaryLine": line_number,
+                    }
+                )
+    return {
+        "schemaVersion": 1,
+        "nonBlocking": True,
+        "glossaryIssueCount": len(issues),
+        "findingCount": len(findings),
+        "glossaryIssues": issues,
+        "findings": findings,
+    }

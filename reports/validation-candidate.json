@@ -4,7 +4,9 @@
   "readinessFindingCounts": {
     "annotation-license-pending": 1,
     "missing-legacy-mapping": 24,
-    "missing-translation": 24
+    "missing-translation": 24,
+    "stale-review": 1,
+    "unresolved-mapping": 1
   },
   "readinessFindings": [
     {
@@ -102,6 +104,12 @@
     {
       "code": "missing-translation",
       "targetId": "ipg-s2-6-c-philosophy-g01-b001"
+    },
+    {
+      "code": "unresolved-mapping",
+      "count": 523,
+      "detail": "in-scope legacy units deliberately deferred by the pilot",
+      "targetId": "raw-unit-ledger"
     },
     {
       "candidateRawUnits": [],
@@ -226,13 +234,17 @@
     {
       "code": "annotation-license-pending",
       "targetId": "versions.annotations"
+    },
+    {
+      "code": "stale-review",
+      "targetId": "annotation:ipg-ann-2-5-philosophy-consistency"
     }
   ],
   "releaseGateCounts": {
     "duplicateConsumption": 0,
     "missingTranslation": 24,
     "orphanPublicationAnnotation": 0,
-    "unresolvedMapping": 24
+    "unresolvedMapping": 547
   },
   "schemaVersion": 1,
   "structuralFindingCounts": {},

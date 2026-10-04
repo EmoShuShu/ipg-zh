@@ -48,7 +48,7 @@ def test_candidate_succeeds_while_same_content_fails_release() -> None:
     assert release["releaseGateCounts"] == {
         "missingTranslation": 24,
         "orphanPublicationAnnotation": 0,
-        "unresolvedMapping": 24,
+        "unresolvedMapping": 547,
         "duplicateConsumption": 0,
     }
 
