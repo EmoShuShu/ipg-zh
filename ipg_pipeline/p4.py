@@ -27,6 +27,8 @@ from .validation import validate_release
 
 
 LEGACY_SHA256 = "acce82ca7224d5d741609807a2d95697337e56110354efec370938dea51b75fb"
+P3_REGISTRY_ENTRY_COUNT = 649
+P3_REGISTRY_SHA256 = "72a71c332a0988bc6361c771e981580583e7989e2a0e90a9fbb19ceecb698ffb"
 OFFICIAL_PDF = (
     ROOT
     / "snapshots/official/2024-09-23"
@@ -96,6 +98,14 @@ def _official_counts(document: dict[str, Any]) -> dict[str, int]:
 def _assert_migration_contract(
     parsed: dict[str, Any], reconciled: dict[str, Any], result: dict[str, Any], original_registry: dict[str, Any]
 ) -> None:
+    registry_prefix = original_registry["entries"][:P3_REGISTRY_ENTRY_COUNT]
+    registry_prefix_hash = sha256_bytes(
+        json.dumps(
+            registry_prefix, ensure_ascii=False, sort_keys=True, separators=(",", ":")
+        ).encode()
+    )
+    if len(registry_prefix) != P3_REGISTRY_ENTRY_COUNT or registry_prefix_hash != P3_REGISTRY_SHA256:
+        raise ValueError("frozen P3 registry prefix changed")
     if reconciled["reconciliation"]["findings"]:
         raise ValueError("frozen registry reconciliation has findings")
     if _official_counts(reconciled["document"]) != {
@@ -307,14 +317,7 @@ def command_review(_: argparse.Namespace) -> int:
         if item["disposition"].startswith("ignored-") and item.get("reason")
     )
     registry = load_yaml(ROOT / "src/ipg/id-registry.yaml")
-    p2_ids = {
-        entry["id"]
-        for entry in registry["entries"][:649]
-        if entry.get("status") == "active"
-    }
-    live_official = {
-        node["id"] for document in documents for _, node in walk_nodes([document])
-    }
+    reconciliation = load_json(REPORTS / "reconciliation.json")
     summary = {
         "schemaVersion": 1,
         "authority": {
@@ -344,11 +347,12 @@ def command_review(_: argparse.Namespace) -> int:
         "findings": migration["findingCounts"],
         "overrides": migration["appliedOverrides"],
         "identity": {
-            "frozenRegistryEntries": 649,
+            "frozenRegistryEntries": P3_REGISTRY_ENTRY_COUNT,
+            "frozenRegistrySha256": P3_REGISTRY_SHA256,
             "frozenRegistryEntriesUnchanged": True,
+            "frozenOfficialIdsResolved": reconciliation["resolvedRegistryIdCount"],
             "p2OfficialIdsExpected": 158,
             "p2OfficialIdsPreserved": 158,
-            "activeFrozenIdsPresent": len(p2_ids & live_official),
             "registryAdded": migration["registryAdded"],
             "registryEntries": len(registry["entries"]),
         },
