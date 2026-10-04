@@ -1,0 +1,20 @@
+{
+  "scope": "P0-P2 vertical slice only",
+  "tests": {"passed": 52, "failed": 0},
+  "section2_5": {
+    "rawUnits": 136,
+    "annotations": 12,
+    "annotationBlocks": 14,
+    "deferredOrUnresolved": 0
+  },
+  "formerMissingTranslations": {"original": 24, "mapped": 24, "trueMissing": 0, "manualUnresolved": 0},
+  "otherChapterDeferredAnnotations": {"groups": 86, "contentRawUnits": 338},
+  "omegatUnits": 128,
+  "actualReviewStatus": {"unreviewed": 125, "reviewedUnchanged": 1, "reviewedModified": 1, "stale": 1},
+  "cleanReleaseFixture": {"valid": true, "allGateCountsZero": true},
+  "deterministicBuild": true,
+  "candidateHashes": {
+    "IPG.md": "b068586e8a92045a470fd1f58256ca841f32eaf8ee5724d0f30e92a85856fc9a",
+    "rules.json": "5291c14cabff332a716f759cf4f695d27a52e0ffa8a3244cdff725bd1453a3c3"
+  }
+}
