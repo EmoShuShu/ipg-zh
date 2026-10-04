@@ -1,0 +1,36 @@
+{
+  "officialPdfSha256": "056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0",
+  "pages": 31,
+  "pdfTextLines": 1050,
+  "sections": {
+    "front-matter": 2,
+    "chapter": 4,
+    "policy": 5,
+    "infraction": 23,
+    "appendix": 2
+  },
+  "components": 110,
+  "groups": 124,
+  "blocks": 338,
+  "roles": {
+    "body": 10,
+    "definition": 23,
+    "examples": 23,
+    "philosophy": 21,
+    "additional-remedy": 16,
+    "upgrade": 9,
+    "downgrade": 2,
+    "penalty-definition": 4,
+    "appendix-table": 1,
+    "change-log": 1
+  },
+  "appendixA": {"rows": 23, "unknownReferences": 0, "penaltyMismatches": 0},
+  "appendixB": {
+    "dateGroups": 5,
+    "entries": 17,
+    "entryCountsByDate": [5, 6, 1, 2, 3]
+  },
+  "p2StableIds": {"expected": 158, "preserved": 158, "missing": 0},
+  "unclassifiedText": 0,
+  "reconciliationFindings": 0
+}

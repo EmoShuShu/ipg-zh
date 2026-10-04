@@ -65,3 +65,22 @@ Run all local regression tests with:
 ```powershell
 python -m pytest -q
 ```
+
+## P3 full official-English parser
+
+P3 uses only the pinned official PDF. It writes the complete reconciled source,
+coverage reports, and a visibly non-publishable candidate under ignored
+`outputs/p3/`; it does not migrate additional legacy Chinese or annotations.
+
+```powershell
+ipg-p3 parse
+ipg-p3 reconcile
+ipg-p3 build
+ipg-p3 review
+# or run the four steps in order
+ipg-p3 all
+```
+
+The committed compact review is `docs/review/p3-full-official-parser.md`. A P3
+candidate cannot be released: its manifest has full official content but only
+pilot publication annotations and `publishable: false`.

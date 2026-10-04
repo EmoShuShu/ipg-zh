@@ -239,6 +239,13 @@ def test_source_output_schema_v1_and_full_build_are_deterministic(tmp_path: Path
     assert rules["publishable"] is False
 
 
+def test_two_complete_parses_are_byte_identical(extraction: dict) -> None:
+    first = parse_full_extraction(copy.deepcopy(extraction))
+    second = parse_full_extraction(copy.deepcopy(extraction))
+    encoded = lambda value: json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
+    assert encoded(first) == encoded(second)
+
+
 def test_role_counts_are_content_derived_not_assumed(parsed: dict) -> None:
     counts = Counter(
         component["role"]
@@ -251,3 +258,22 @@ def test_role_counts_are_content_derived_not_assumed(parsed: dict) -> None:
     assert counts["additional-remedy"] == 16
     assert counts["upgrade"] == 9
     assert counts["downgrade"] == 2
+
+
+def test_compact_p3_golden_summary(parsed: dict, reconciled: dict) -> None:
+    golden = json.loads((ROOT / "tests/fixtures/full/golden-p3-summary.json").read_text(encoding="utf-8"))
+    document = reconciled["document"]
+    sections = document["sections"]
+    nodes = list(walk_nodes([document]))
+    assert golden["officialPdfSha256"] == parsed["pdf"]["sha256"]
+    assert golden["pages"] == parsed["pdf"]["pages"]
+    assert golden["pdfTextLines"] == parsed["coverage"]["lineCount"]
+    assert golden["sections"] == dict(Counter(section["kind"] for section in sections))
+    assert golden["components"] == sum(kind == "component" for kind, _ in nodes)
+    assert golden["groups"] == sum(kind == "group" for kind, _ in nodes)
+    assert golden["blocks"] == sum(kind == "block" for kind, _ in nodes)
+    assert golden["roles"] == dict(
+        Counter(component["role"] for section in sections for component in section["components"])
+    )
+    assert golden["unclassifiedText"] == parsed["coverage"]["unclassifiedLineCount"]
+    assert golden["reconciliationFindings"] == len(reconciled["reconciliation"]["findings"])
