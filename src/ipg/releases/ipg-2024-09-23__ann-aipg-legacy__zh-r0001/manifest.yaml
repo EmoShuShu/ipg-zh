@@ -2,25 +2,24 @@ schemaVersion: 1
 releaseId: ipg-2024-09-23__ann-aipg-legacy__zh-r0001
 scope:
   officialContent:
-    mode: pilot
+    mode: full-document
     included:
-      - chapter-2
-      - appendix-a-sample
-      - appendix-b-sample
+    - full-official-ipg-2024-09-23
   publicationAnnotations:
-    mode: pilot
-    includedSections: ["2.5"]
-    deferredGroups: 86
-    deferredRawUnits: 338
+    mode: full-document
+    includedSections:
+    - full-document
+    deferredGroups: 0
+    deferredRawUnits: 0
 publishable: false
 versions:
   official:
-    effectiveDate: "2024-09-23"
+    effectiveDate: '2024-09-23'
     pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
-    downloadedAt: "2026-10-04T11:08:31.068Z"
-    url: "https://media.wizards.com/ContentResources/WPN/MTG_IPG_2024Sep23_EN.pdf"
+    downloadedAt: '2026-10-04T11:08:31.068Z'
+    url: https://media.wizards.com/ContentResources/WPN/MTG_IPG_2024Sep23_EN.pdf
   annotations:
-    version: aipg-legacy-pilot
+    version: aipg-legacy-full
     sourceId: AIPG_2025.md
     sourceSha256: acce82ca7224d5d741609807a2d95697337e56110354efec370938dea51b75fb
     attribution: pending-before-formal-release
@@ -31,7 +30,10 @@ versions:
 build:
   schema: ipg-output-v1
 documents:
-  - chapter-02.yaml
-  - appendix-a.yaml
-  - appendix-b.yaml
-
+- front-matter.yaml
+- chapter-01.yaml
+- chapter-02.yaml
+- chapter-03.yaml
+- chapter-04.yaml
+- appendix-a.yaml
+- appendix-b.yaml

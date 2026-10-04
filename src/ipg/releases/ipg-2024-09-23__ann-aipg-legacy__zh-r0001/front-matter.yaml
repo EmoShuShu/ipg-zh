@@ -1,0 +1,130 @@
+schemaVersion: 1
+documentId: ipg-front-matter
+sections:
+- id: ipg-introduction
+  kind: front-matter
+  number: introduction
+  title:
+    en: Introduction
+    zh: 引言
+  components:
+  - id: ipg-c000001
+    role: body
+    labelCode: component.body
+    groups:
+    - id: ipg-g000001
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000001
+        type: paragraph
+        text:
+          en: 'The Magic: The Gathering™ (“Magic”) Infraction Procedure Guide provides judges the appropriate
+            penalties and procedures to handle rules violations that occur during a tournament held at
+            Competitive or Professional Rules Enforcement Level (REL), as well as the underlying philosophy
+            that guides their implementation. It exists to protect players from potential misconduct and
+            to protect the integrity of the tournament itself. Rules violations usually require a penalty
+            or they are unenforceable. Tournaments run at Regular REL use the Judging at Regular REL document.'
+          zh: 《万智牌违规处理方针》此份文档，是用来在执法严格度（REL）为“竞争”或“专业”级别的比赛中发生违反规则事件时，为提供裁判适当的罚则与处理程序，并阐述其背后的原则。这是用来保护牌手免于犯下潜在的失误，也保护比赛本身的公正性。违反规则的行为通常应受处罚，否则规则将无法执行。执法严格度为一般等级的比赛使用《一般级别执法严格度执法指南》。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 1
+          bbox:
+          - 54.0
+          - 132.8
+          - 554.28
+          - 213.8
+          extractionUnit: extract-p01-l004..extract-p01-l009
+        legacyRawUnits:
+        - raw-L000073
+        - raw-L000075
+- id: ipg-framework
+  kind: front-matter
+  number: framework
+  title:
+    en: Framework of this Document
+    zh: 本文件架构
+  components:
+  - id: ipg-c000002
+    role: body
+    labelCode: component.body
+    groups:
+    - id: ipg-g000002
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000002
+        type: paragraph
+        text:
+          en: 'This document is divided into two major parts: General Definitions and Philosophy (section
+            1), and Infractions (sections 2-4). Infractions are broken down into general classes (Game
+            Play Errors, Tournament Errors, and Unsporting Conduct), and further into subclasses for specific
+            infractions.'
+          zh: 此文件分为两个主要部份：一般定义和原则（第1节），以及违规（第2-4节）。违规分为一些主分类（游戏行动失误、比赛失误及举止违背运动道德），以及为特定违规进一步区分副分类。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 1
+          bbox:
+          - 54.0
+          - 244.4
+          - 531.6
+          - 284.0
+          extractionUnit: extract-p01-l011..extract-p01-l013
+        legacyRawUnits:
+        - raw-L000079
+        - raw-L000081
+      - id: ipg-b000003
+        type: paragraph
+        text:
+          en: See the Magic Tournament Rules for further definitions of terms in this document.
+          zh: 欲知本文件中一些特别用语的定义，请参见《万智牌比赛规则》。最新版本的《万智牌比赛规则》可于此处获得：http://wpn.wizards.com/zh-hans/document/magic-gathering-tournament-rules
+            。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 1
+          bbox:
+          - 54.0
+          - 299.6
+          - 451.66
+          - 311.86
+          extractionUnit: extract-p01-l014..extract-p01-l014
+        legacyRawUnits:
+        - raw-L000083
+        - raw-L000085
+      - id: ipg-b000004
+        type: paragraph
+        text:
+          en: This document is published in multiple languages. If a discrepancy exists between the English
+            version and a non-English version of this document, tournament participants must refer to
+            the English version to settle disputes concerning interpretations of the Infraction Procedure
+            Guide.
+          zh: 本文件以各种不同语言版本发行。若英语版本与非英文版本之间有相异之处，参与比赛者必须依据英文版本来诠释违规处理方针。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 1
+          bbox:
+          - 54.0
+          - 327.2
+          - 555.24
+          - 366.8
+          extractionUnit: extract-p01-l015..extract-p01-l017
+        legacyRawUnits:
+        - raw-L000087
+        - raw-L000089
+      - id: ipg-b000005
+        type: paragraph
+        text:
+          en: This document is updated periodically. Please obtain the most current version at https://wpn.wizards.com/en/rules-documents.
+          zh: 此文件系定期更新。欲知最新版本，请参见这个网页:http://wpn.wizards.com/en/document/magic-infraction-procedure-guide
+            。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 1
+          bbox:
+          - 54.0
+          - 382.4
+          - 438.46
+          - 408.2
+          extractionUnit: extract-p01-l018..extract-p01-l019
+        legacyRawUnits:
+        - raw-L000091
+        - raw-L000093
+publicationAnnotations: []

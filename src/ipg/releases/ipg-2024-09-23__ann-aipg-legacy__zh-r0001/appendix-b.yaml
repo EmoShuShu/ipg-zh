@@ -1,112 +1,323 @@
-documentId: ipg-appendix-b-pilot
-publicationAnnotations: []
 schemaVersion: 1
+documentId: ipg-appendix-b
 sections:
-- components:
-  - groups:
-    - blocks:
-      - id: ipg-app-b-change-01
-        ruleReferences:
-        - '1.2'
-        officialPdfUnits:
-        - bbox:
-          - 54.0
-          - 109.76
-          - 537.77
-          - 135.56
-          extractionUnit: appendix-b-change-entry
-          page: 31
-          pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
-        text:
-          en: '1.2: Removed specific details of how penalties are collected and stored, as it varies depending
-            on the software being used.'
-          zh: 1.2：由于记录和收集方式因软件而异，故取消此方面的特别说明。
-        type: change-entry
-        legacyRawUnits:
-        - raw-L004069
-      - id: ipg-app-b-change-02
-        ruleReferences:
-        - '2.1'
-        officialPdfUnits:
-        - bbox:
-          - 54.0
-          - 137.36
-          - 314.64
-          - 149.62
-          extractionUnit: appendix-b-change-entry
-          page: 31
-          pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
-        text:
-          en: '2.1: Treat missed Saga turn actions as missed triggers.'
-          zh: 2.1：遗忘传纪的回合动作，视为遗漏触发来处理。
-        type: change-entry
-        legacyRawUnits:
-        - raw-L004070
-      - id: ipg-app-b-change-03
-        ruleReferences:
-        - '2.1'
-        officialPdfUnits:
-        - bbox:
-          - 54.0
-          - 151.16
-          - 298.3
-          - 163.42
-          extractionUnit: appendix-b-change-entry
-          page: 31
-          pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
-        text:
-          en: '2.1: Missed triggers still count as having triggered.'
-          zh: 2.1：被遗漏的触发式异能仍认为已触发过。
-        type: change-entry
-        legacyRawUnits:
-        - raw-L004071
-      - id: ipg-app-b-change-04
-        ruleReferences:
-        - '2.5'
-        officialPdfUnits:
-        - bbox:
-          - 54.0
-          - 164.96
-          - 538.49
-          - 190.76
-          extractionUnit: appendix-b-change-entry
-          page: 31
-          pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
-        text:
-          en: '2.5: Object-in-wrong-zone changed to always be a partial fix, but only when the incorrect
-            zone is the root GRV.'
-          zh: 2.5：物件处于错误区域中的情况始终适用于部分修正，但仅当该GRV是由处于错误区域本身导致的。
-        type: change-entry
-        legacyRawUnits:
-        - raw-L004072
-      - id: ipg-app-b-change-05
-        ruleReferences:
-        - '3.5'
-        officialPdfUnits:
-        - bbox:
-          - 54.0
-          - 192.56
-          - 532.32
-          - 218.36
-          extractionUnit: appendix-b-change-entry
-          page: 31
-          pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
-        text:
-          en: '3.5: Wrong number of cards upgrade has been split into two paragraphs for clarity, as it
-            has slightly different criteris for pre- and post-sideboard games.'
-          zh: 3.5：牌张数量错误的升级被分为两段内容，以厘清换备前与换备后对局两种不同情况之判断标准的区别。
-        type: change-entry
-        legacyRawUnits:
-        - raw-L004073
-      id: ipg-app-b-c-change-log-g01
-      kind: change-list
-      date: September 23, 2024
-    id: ipg-app-b-c-change-log
-    labelCode: component.change-log
-    role: change-log
-  id: ipg-app-b
+- id: ipg-app-b
   kind: appendix
   number: B
   title:
     en: Changes from Previous Versions
     zh: 与之前版本的更动
+  components:
+  - id: ipg-app-b-c-change-log
+    role: change-log
+    labelCode: component.change-log
+    groups:
+    - id: ipg-app-b-c-change-log-g01
+      kind: change-list
+      date: September 23, 2024
+      blocks:
+      - id: ipg-app-b-change-01
+        type: change-entry
+        text:
+          en: '1.2: Removed specific details of how penalties are collected and stored, as it varies depending
+            on the software being used.'
+          zh: 1.2：由于记录和收集方式因软件而异，故取消此方面的特别说明。
+        ruleReferences:
+        - '1.2'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 109.76
+          - 537.77
+          - 135.56
+          extractionUnit: extract-p31-l003..extract-p31-l004
+        legacyRawUnits:
+        - raw-L004069
+      - id: ipg-app-b-change-02
+        type: change-entry
+        text:
+          en: '2.1: Treat missed Saga turn actions as missed triggers.'
+          zh: 2.1：遗忘传纪的回合动作，视为遗漏触发来处理。
+        ruleReferences:
+        - '2.1'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 137.36
+          - 314.64
+          - 149.62
+          extractionUnit: extract-p31-l005..extract-p31-l005
+        legacyRawUnits:
+        - raw-L004070
+      - id: ipg-app-b-change-03
+        type: change-entry
+        text:
+          en: '2.1: Missed triggers still count as having triggered.'
+          zh: 2.1：被遗漏的触发式异能仍认为已触发过。
+        ruleReferences:
+        - '2.1'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 151.16
+          - 298.3
+          - 163.42
+          extractionUnit: extract-p31-l006..extract-p31-l006
+        legacyRawUnits:
+        - raw-L004071
+      - id: ipg-app-b-change-04
+        type: change-entry
+        text:
+          en: '2.5: Object-in-wrong-zone changed to always be a partial fix, but only when the incorrect
+            zone is the root GRV.'
+          zh: 2.5：物件处于错误区域中的情况始终适用于部分修正，但仅当该GRV是由处于错误区域本身导致的。
+        ruleReferences:
+        - '2.5'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 164.96
+          - 538.49
+          - 190.76
+          extractionUnit: extract-p31-l007..extract-p31-l008
+        legacyRawUnits:
+        - raw-L004072
+      - id: ipg-app-b-change-05
+        type: change-entry
+        text:
+          en: '3.5: Wrong number of cards upgrade has been split into two paragraphs for clarity, as it
+            has slightly different criteris for pre- and post-sideboard games.'
+          zh: 3.5：牌张数量错误的升级被分为两段内容，以厘清换备前与换备后对局两种不同情况之判断标准的区别。
+        ruleReferences:
+        - '3.5'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 192.56
+          - 532.32
+          - 218.36
+          extractionUnit: extract-p31-l009..extract-p31-l010
+        legacyRawUnits:
+        - raw-L004073
+    - id: ipg-g000091
+      kind: change-list
+      date: April 15, 2024
+      blocks:
+      - id: ipg-b000234
+        type: change-entry
+        text:
+          en: '2.3: Made it clearer that a morph returned to hand without reveal is not part of the upgrade
+            path.'
+          zh: ''
+        ruleReferences:
+        - '2.3'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 247.76
+          - 515.16
+          - 260.02
+          extractionUnit: extract-p31-l012..extract-p31-l012
+      - id: ipg-b000235
+        type: change-entry
+        text:
+          en: '2.3: Added a clarification that the player needs to identify a morph problem before it
+            is about to be discovered by the opponent.'
+          zh: ''
+        ruleReferences:
+        - '2.3'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 261.56
+          - 527.45
+          - 287.36
+          extractionUnit: extract-p31-l013..extract-p31-l014
+      - id: ipg-b000236
+        type: change-entry
+        text:
+          en: '3.4: Added wording to make presenting the wrong decklist to an opponent a Decklist Problem.'
+          zh: ''
+        ruleReferences:
+        - '3.4'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 289.16
+          - 508.44
+          - 301.42
+          extractionUnit: extract-p31-l015..extract-p31-l015
+      - id: ipg-b000237
+        type: change-entry
+        text:
+          en: '3.5: Clarity on the order of when things happen once a problem has been discovered.'
+          zh: ''
+        ruleReferences:
+        - '3.5'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 302.96
+          - 461.16
+          - 315.22
+          extractionUnit: extract-p31-l016..extract-p31-l016
+      - id: ipg-b000238
+        type: change-entry
+        text:
+          en: '3.5: Companion restriction fix now parallels the normal error fix.'
+          zh: ''
+        ruleReferences:
+        - '3.5'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 316.76
+          - 366.84
+          - 329.02
+          extractionUnit: extract-p31-l017..extract-p31-l017
+      - id: ipg-b000239
+        type: change-entry
+        text:
+          en: '3.5: Removed the requirement that multiple copies of the card have to be discovered after
+            the game has begun (can now happen during pregame procedures).'
+          zh: ''
+        ruleReferences:
+        - '3.5'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 330.56
+          - 549.71
+          - 356.36
+          extractionUnit: extract-p31-l018..extract-p31-l019
+    - id: ipg-g000092
+      kind: change-list
+      date: February 2, 2024
+      blocks:
+      - id: ipg-b000240
+        type: change-entry
+        text:
+          en: '2.3: Upgrade language changed to account for disguise ability.'
+          zh: ''
+        ruleReferences:
+        - '2.3'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 385.76
+          - 354.6
+          - 398.02
+          extractionUnit: extract-p31-l021..extract-p31-l021
+    - id: ipg-g000093
+      kind: change-list
+      date: November 13, 2023
+      blocks:
+      - id: ipg-b000241
+        type: change-entry
+        text:
+          en: '3.5: Rephrased first sentences in the remedy to make the order of actions clearer.'
+          zh: ''
+        ruleReferences:
+        - '3.5'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 427.16
+          - 442.08
+          - 439.42
+          extractionUnit: extract-p31-l023..extract-p31-l023
+      - id: ipg-b000242
+        type: change-entry
+        text:
+          en: '4.2: Added intentional misgendering as an example of USC-Major.'
+          zh: ''
+        ruleReferences:
+        - '4.2'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 440.96
+          - 376.56
+          - 453.22
+          extractionUnit: extract-p31-l024..extract-p31-l024
+    - id: ipg-g000094
+      kind: change-list
+      date: September 4, 2023
+      blocks:
+      - id: ipg-b000243
+        type: change-entry
+        text:
+          en: '1.1: Added link to report disqualifications. Removed outdated link to additional DQ information.'
+          zh: ''
+        ruleReferences:
+        - '1.1'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 482.36
+          - 519.58
+          - 494.62
+          extractionUnit: extract-p31-l026..extract-p31-l026
+      - id: ipg-b000244
+        type: change-entry
+        text:
+          en: '2.1: Missed triggers can now do a simple backup in limited situations.'
+          zh: ''
+        ruleReferences:
+        - '2.1'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 496.16
+          - 390.36
+          - 508.42
+          extractionUnit: extract-p31-l027..extract-p31-l027
+      - id: ipg-b000245
+        type: change-entry
+        text:
+          en: '3.5: Opponent chooses the timing of when to return the cards to the deck.'
+          zh: ''
+        ruleReferences:
+        - '3.5'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 31
+          bbox:
+          - 54.0
+          - 509.96
+          - 406.2
+          - 522.22
+          extractionUnit: extract-p31-l028..extract-p31-l028
+publicationAnnotations: []

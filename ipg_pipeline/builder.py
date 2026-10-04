@@ -50,9 +50,17 @@ def render_markdown(
 
     lines = ["<!-- CANDIDATE: NOT FOR RELEASE -->" if candidate else "<!-- RELEASE -->"]
     if candidate:
+        full_scope = (
+            manifest["scope"]["officialContent"]["mode"] == "full-document"
+            and manifest["scope"]["publicationAnnotations"]["mode"] == "full-document"
+        )
         lines.extend(
             [
-                "> **候选试制版：不得发布。** 本文件范围尚不完整，且尚未完成完整审校。",
+                (
+                    "> **全文迁移候选版：不得发布。** 本文件尚未完成完整审校，且仍有正式发布门槛。"
+                    if full_scope
+                    else "> **候选试制版：不得发布。** 本文件范围尚不完整，且尚未完成完整审校。"
+                ),
                 "",
             ]
         )

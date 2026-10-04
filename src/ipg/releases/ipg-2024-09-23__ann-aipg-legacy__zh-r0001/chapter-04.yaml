@@ -1,0 +1,3867 @@
+schemaVersion: 1
+documentId: ipg-chapter-04
+sections:
+- id: ipg-s4
+  kind: chapter
+  number: '4'
+  title:
+    en: Unsporting Conduct
+    zh: 举止违背运动道德
+  components:
+  - id: ipg-c000057
+    role: body
+    labelCode: component.body
+    groups:
+    - id: ipg-g000061
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000138
+        type: paragraph
+        text:
+          en: Unsporting conduct is disruptive behavior that may affect the safety, competitiveness, enjoyment,
+            or integrity of a tournament in a significantly negative fashion.
+          zh: 举止违背运动道德是具干扰性的行为，可能会对比赛的安全、竞争性、乐趣或公平性有严重的负面影响。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 24
+          bbox:
+          - 90.0
+          - 73.64
+          - 502.56
+          - 99.44
+          extractionUnit: extract-p24-l002..extract-p24-l003
+        legacyRawUnits:
+        - raw-L003090
+        - raw-L003092
+      - id: ipg-b000139
+        type: paragraph
+        text:
+          en: Unsporting behavior is not the same as a lack of sporting behavior. There is a wide middle
+            ground of “competitive” behavior that is certainly neither “nice” nor “sporting” but still
+            doesn’t qualify as “unsporting.” The Head Judge is the final arbiter on what constitutes unsporting
+            conduct.
+          zh: '举止违背运动道德和缺乏运动家精神并不一样。“竞争性”的行为有很多的灰色地带，它们确实不“友好”，也非“具有运动家精神”，但也不能算是“举止违背运动道德”。
+
+
+            主审是判定举止是否举止违背运动道德的最终仲裁者。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 24
+          bbox:
+          - 90.0
+          - 115.04
+          - 548.98
+          - 168.44
+          extractionUnit: extract-p24-l004..extract-p24-l007
+        legacyRawUnits:
+        - raw-L003098
+        - raw-L003100
+        - raw-L003106
+        - raw-L003108
+      - id: ipg-b000140
+        type: paragraph
+        text:
+          en: Judges should inform the player how their conduct is disruptive. The player is expected
+            to correct the situation and behavior immediately. However, while making sure that the player
+            understands the severity of their actions is important, judges should focus first on calming
+            a situation, and deal with infractions and penalties afterwards.
+          zh: 裁判必须告知该牌手，其举止会如何对他人造成干扰。该牌手必须立刻改正状况和行为。但是，在确定该牌手已了解其行为的严重性之同时，裁判应该先设法冷静当前局势，之后才去判定违规与处罚。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 24
+          bbox:
+          - 90.0
+          - 184.04
+          - 530.21
+          - 237.44
+          extractionUnit: extract-p24-l008..extract-p24-l011
+        legacyRawUnits:
+        - raw-L003114
+        - raw-L003116
+- id: ipg-s4-1
+  kind: infraction
+  number: '4.1'
+  title:
+    en: Minor
+    zh: 轻微
+  components:
+  - id: ipg-c000058
+    role: definition
+    labelCode: component.definition
+    groups:
+    - id: ipg-g000062
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000141
+        type: paragraph
+        text:
+          en: A player takes action that is disruptive to the tournament or its participants. It may affect
+            the comfort level of those around the individual, but determining whether this is the case
+            is not required.
+          zh: '牌手的个人行为对比赛或是参与者产生干扰。
+
+
+            这可能会妨碍到该人周遭的舒适气氛，不过是否造成妨碍并非判定的必要条件。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 24
+          bbox:
+          - 90.0
+          - 308.6
+          - 533.57
+          - 348.2
+          extractionUnit: extract-p24-l014..extract-p24-l016
+        legacyRawUnits:
+        - raw-L003128
+        - raw-L003130
+        - raw-L003152
+        - raw-L003154
+  - id: ipg-c000059
+    role: examples
+    labelCode: component.examples
+    groups:
+    - id: ipg-g000063
+      kind: ordered-list
+      blocks:
+      - id: ipg-b000142
+        type: list-item
+        text:
+          en: A player uses excessively vulgar and profane language.
+          zh: 牌手使用过度粗俗不雅的言语。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 24
+          bbox:
+          - 108.0
+          - 378.8
+          - 392.4
+          - 390.8
+          extractionUnit: extract-p24-l018..extract-p24-l018
+        marker: A
+        legacyRawUnits:
+        - raw-L003162
+        - raw-L003164
+      - id: ipg-b000143
+        type: list-item
+        text:
+          en: A player inappropriately demands to a judge that their opponent receive a penalty.
+          zh: 牌手无理地要求裁判去处罚其对手。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 24
+          bbox:
+          - 108.0
+          - 392.6
+          - 520.97
+          - 404.6
+          extractionUnit: extract-p24-l019..extract-p24-l019
+        marker: B
+        legacyRawUnits:
+        - raw-L003166
+        - raw-L003168
+      - id: ipg-b000144
+        type: list-item
+        text:
+          en: A player appeals to the Head Judge before waiting for the floor judge to issue a ruling.
+          zh: 牌手在巡场裁判作出判罚之前就上诉至主审。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 24
+          bbox:
+          - 108.0
+          - 406.4
+          - 541.44
+          - 418.4
+          extractionUnit: extract-p24-l020..extract-p24-l020
+        marker: C
+        legacyRawUnits:
+        - raw-L003170
+        - raw-L003172
+      - id: ipg-b000145
+        type: list-item
+        text:
+          en: A player throws their deck on the ground after losing a game.
+          zh: 牌手在输掉游戏后将套牌摔向地面。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 24
+          bbox:
+          - 108.0
+          - 420.2
+          - 421.08
+          - 432.2
+          extractionUnit: extract-p24-l021..extract-p24-l021
+        marker: D
+        legacyRawUnits:
+        - raw-L003174
+        - raw-L003176
+      - id: ipg-b000146
+        type: list-item
+        text:
+          en: A player leaves excessive trash in the play area after leaving the table.
+          zh: 牌手离开座位时将过多的垃圾留在游戏区域。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 24
+          bbox:
+          - 108.0
+          - 434.0
+          - 462.72
+          - 446.0
+          extractionUnit: extract-p24-l022..extract-p24-l022
+        marker: E
+        legacyRawUnits:
+        - raw-L003178
+        - raw-L003180
+      - id: ipg-b000147
+        type: list-item
+        text:
+          en: A player fails to follow the request of a tournament official to leave the play area.
+          zh: 牌手未遵从比赛工作人员的要求，例如请离比赛区域。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 24
+          bbox:
+          - 108.0
+          - 447.8
+          - 517.78
+          - 459.8
+          extractionUnit: extract-p24-l023..extract-p24-l023
+        marker: F
+        legacyRawUnits:
+        - raw-L003182
+        - raw-L003184
+  - id: ipg-c000060
+    role: philosophy
+    labelCode: component.philosophy
+    groups:
+    - id: ipg-g000064
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000148
+        type: paragraph
+        text:
+          en: All participants should expect a safe and enjoyable environment at a tournament, and a player
+            needs to be made aware if their behavior is unacceptable so that this environment may be maintained.
+          zh: 所有参赛者都该享有一个安全且舒适的赛场环境，牌手在做出不被接受的行为时就要给于处罚，如此才能维护赛场环境。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 24
+          bbox:
+          - 90.0
+          - 490.4
+          - 540.16
+          - 530.0
+          extractionUnit: extract-p24-l025..extract-p24-l027
+        legacyRawUnits:
+        - raw-L003192
+        - raw-L003194
+  - id: ipg-c000061
+    role: additional-remedy
+    labelCode: component.additional-remedy
+    groups:
+    - id: ipg-g000065
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000149
+        type: paragraph
+        text:
+          en: The player must correct the problem immediately. Subsequent Unsporting Conduct — Minor infractions,
+            even for different offenses, will result in a Game Loss. If a Game Loss is issued for repeated
+            infractions, and it occurs at the end of a game, it is acceptable for the judge to apply the
+            penalty to the next game instead.
+          zh: '该牌手必须立即更正问题。
+
+
+            再次犯下举止违背运动道德～轻微，会导致一盘负；即使是不同类型的违犯也一样。
+
+
+            如果因为累犯而给予一盘负，且是在发生在一盘游戏结束时，裁判可以改为在下一盘才让处罚生效。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 24
+          bbox:
+          - 90.0
+          - 560.6
+          - 553.49
+          - 614.0
+          extractionUnit: extract-p24-l029..extract-p24-l032
+        legacyRawUnits:
+        - raw-L003210
+        - raw-L003212
+        - raw-L003218
+        - raw-L003220
+        - raw-L003230
+        - raw-L003232
+  classification: unsporting-conduct
+  penaltyCode: penalty.warning
+- id: ipg-s4-2
+  kind: infraction
+  number: '4.2'
+  title:
+    en: Major
+    zh: 严重
+  components:
+  - id: ipg-c000062
+    role: definition
+    labelCode: component.definition
+    groups:
+    - id: ipg-g000066
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000150
+        type: paragraph
+        text:
+          en: A player takes action towards one or more individuals that could reasonably be expected
+            to create a feeling of being harassed, threatened, bullied, or stalked. This may include insults
+            based on race, color, religion, national origin, age, gender, disability, or sexual orientation.
+            Threats of physical violence should be treated as Unsporting Conduct – Aggressive Behavior.
+          zh: '牌手向一人或多人做出易使对方产生受骚扰、威胁、欺侮、尾随感受的不端行为。
+
+
+            这包括侮辱他人的人种、肤色、宗教、国籍、年龄、性别、残疾或是性取向。
+
+
+            肢体暴力挑衅应依照“举止违背运动道德～攻击性举止”进行处理。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 25
+          bbox:
+          - 90.0
+          - 126.2
+          - 552.48
+          - 179.6
+          extractionUnit: extract-p25-l003..extract-p25-l006
+        legacyRawUnits:
+        - raw-L003252
+        - raw-L003254
+        - raw-L003272
+        - raw-L003274
+        - raw-L003288
+        - raw-L003290
+      - id: ipg-b000151
+        type: paragraph
+        text:
+          en: It is possible for an offender to commit this infraction without intending malice or harm
+            to the subject of the harassment.
+          zh: 就算作出此类行为的牌手原本主观上无意针对或伤害受骚扰者，他也可能犯下此违规。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 25
+          bbox:
+          - 90.0
+          - 195.2
+          - 541.1
+          - 221.0
+          extractionUnit: extract-p25-l007..extract-p25-l008
+        legacyRawUnits:
+        - raw-L003296
+        - raw-L003298
+  - id: ipg-c000063
+    role: examples
+    labelCode: component.examples
+    groups:
+    - id: ipg-g000067
+      kind: ordered-list
+      blocks:
+      - id: ipg-b000152
+        type: list-item
+        text:
+          en: A player uses a racial slur against their opponent.
+          zh: 牌手诋毁对手的人种。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 25
+          bbox:
+          - 108.0
+          - 265.4
+          - 362.74
+          - 277.4
+          extractionUnit: extract-p25-l010..extract-p25-l010
+        marker: A
+        legacyRawUnits:
+        - raw-L003310
+        - raw-L003312
+      - id: ipg-b000153
+        type: list-item
+        text:
+          en: A player intentionally misgenders their opponent.
+          zh: 牌手故意错判对手的性别。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 25
+          bbox:
+          - 108.0
+          - 279.2
+          - 364.61
+          - 291.2
+          extractionUnit: extract-p25-l011..extract-p25-l011
+        marker: B
+        legacyRawUnits:
+        - raw-L003314
+        - raw-L003316
+      - id: ipg-b000154
+        type: list-item
+        text:
+          en: A player takes inappropriate photos of another player without express permission.
+          zh: 牌手在未征得对方明确同意的情况下拍摄其他牌手的不雅照片。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 25
+          bbox:
+          - 108.0
+          - 293.0
+          - 519.72
+          - 305.0
+          extractionUnit: extract-p25-l012..extract-p25-l012
+        marker: C
+        legacyRawUnits:
+        - raw-L003318
+        - raw-L003320
+      - id: ipg-b000155
+        type: list-item
+        text:
+          en: A player asks a spectator for a date, is denied, and continues to press the issue.
+          zh: 牌手意图约会某位旁观者，但在遭拒后依然不依不饶。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 25
+          bbox:
+          - 108.0
+          - 306.8
+          - 503.21
+          - 318.8
+          extractionUnit: extract-p25-l013..extract-p25-l013
+        marker: D
+        legacyRawUnits:
+        - raw-L003322
+        - raw-L003324
+      - id: ipg-b000156
+        type: list-item
+        text:
+          en: A player purposefully obstructs another player with the intent of inducing physical contact.
+          zh: 牌手故意阻挡其他牌手，意图寻衅滋事。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 25
+          bbox:
+          - 108.0
+          - 320.6
+          - 522.94
+          - 346.4
+          extractionUnit: extract-p25-l014..extract-p25-l015
+        marker: E
+        legacyRawUnits:
+        - raw-L003326
+        - raw-L003328
+      - id: ipg-b000157
+        type: list-item
+        text:
+          en: A spectator uses social media to bully another player.
+          zh: 牌手利用社交媒体欺侮其他牌手。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 25
+          bbox:
+          - 108.0
+          - 348.2
+          - 382.8
+          - 360.2
+          extractionUnit: extract-p25-l016..extract-p25-l016
+        marker: F
+        legacyRawUnits:
+        - raw-L003330
+        - raw-L003332
+  - id: ipg-c000064
+    role: philosophy
+    labelCode: component.philosophy
+    groups:
+    - id: ipg-g000068
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000158
+        type: paragraph
+        text:
+          en: A safe environment is a basic expectation of any tournament attendee. Harassment undermines
+            the safety and integrity of a tournament. Players who purposefully create harmful or unwelcoming
+            situations in a tournament are expected to immediately correct the behavior and demonstrate
+            remorse or be removed.
+          zh: '安全的比赛环境是所有参赛者最基本的预期。对他人进行骚扰会破坏比赛的安全与公正。
+
+
+            在比赛中故意寻衅惹事的牌手应立即改正并道歉，否则便会被逐出赛场。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 25
+          bbox:
+          - 90.0
+          - 390.8
+          - 545.51
+          - 444.2
+          extractionUnit: extract-p25-l018..extract-p25-l021
+        legacyRawUnits:
+        - raw-L003392
+        - raw-L003394
+        - raw-L003400
+        - raw-L003402
+      - id: ipg-b000159
+        type: paragraph
+        text:
+          en: Because of the confrontational nature of this infraction, judges need to end any match in
+            progress and separate the players. Care should be taken not to escalate the situation if at
+            all possible. The offender will be removed from the area to receive the penalty, and education
+            about why the behavior is unacceptable regardless of excuse. They may need a few moments to
+            cool down afterwards. Apologizing is encouraged, but the desire of the other individuals to
+            not interact with their harasser must be respected.
+          zh: '由于出现次违规时双方牌手会在情绪上有所对立，裁判要终止正在进行的比赛，并将涉事双方牌手分开，
+
+
+            同时应尽力进行安抚，保证事态不致升级。裁判应将犯下此违规的牌手带离比赛区域，给予处罚，并教育牌手不管理由为何，都不应该进行这类行为。
+
+
+            此后牌手可能需要一段时间冷静。
+
+
+            虽然应促使双方谅解，但若受骚扰方表达出不愿再与骚扰方接触的意愿，也应予以尊重。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 25
+          bbox:
+          - 90.0
+          - 459.8
+          - 557.2
+          - 540.8
+          extractionUnit: extract-p25-l022..extract-p25-l027
+        legacyRawUnits:
+        - raw-L003416
+        - raw-L003418
+        - raw-L003424
+        - raw-L003426
+        - raw-L003436
+        - raw-L003438
+        - raw-L003448
+        - raw-L003450
+      - id: ipg-b000160
+        type: paragraph
+        text:
+          en: Officials must investigate these matters as soon as they are brought to their attention.
+            If they determine that the infraction does not meet the criteria for Unsporting Conduct –
+            Major, it is still recommended that the players be talked to to avoid future misunderstandings.
+          zh: '当有人就此行为唤起工作人员注意时，工作人员应尽快对此类事端进行调查。
+
+
+            即便认定有关违规不符合“举止违背运动道德～严重”的定义，也建议向双方牌手进行解释，以免再生误会。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 25
+          bbox:
+          - 90.0
+          - 556.4
+          - 554.38
+          - 596.0
+          extractionUnit: extract-p25-l028..extract-p25-l030
+        legacyRawUnits:
+        - raw-L003460
+        - raw-L003462
+        - raw-L003468
+        - raw-L003470
+  - id: ipg-c000065
+    role: additional-remedy
+    labelCode: component.additional-remedy
+    groups:
+    - id: ipg-g000069
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000161
+        type: paragraph
+        text:
+          en: The player must correct the behavior immediately. If the offense occurs at the end of a
+            match, it is acceptable for the judge to apply the penalty to the next match instead.
+          zh: '牌手必须立刻改正其行为。
+
+
+            如果违规是发生在一局游戏结束时，裁判可以改为在下一局才让处罚生效。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 25
+          bbox:
+          - 90.0
+          - 626.6
+          - 549.94
+          - 652.4
+          extractionUnit: extract-p25-l032..extract-p25-l033
+        legacyRawUnits:
+        - raw-L003482
+        - raw-L003484
+        - raw-L003490
+        - raw-L003492
+  - id: ipg-c000066
+    role: upgrade
+    labelCode: component.upgrade
+    groups:
+    - id: ipg-g000070
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000162
+        type: paragraph
+        text:
+          en: If the offense was committed with malicious intent, the player displays no remorse, or the
+            offense is repeated at a later time, the penalty is Disqualification and removal from the
+            venue.
+          zh: 升级：如果牌手作出此类行为时有恶意企图，或是之后未有道歉之意，或是稍后发生累犯，则处罚为取消资格并驱离赛场。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 25
+          bbox:
+          - 90.0
+          - 668.0
+          - 557.64
+          - 693.8
+          extractionUnit: extract-p25-l034..extract-p25-l035
+        legacyRawUnits:
+        - raw-L003506
+        - raw-L003508
+  classification: unsporting-conduct
+  penaltyCode: penalty.match-loss
+- id: ipg-s4-3
+  kind: infraction
+  number: '4.3'
+  title:
+    en: Improperly Determining a Winner
+    zh: 不当决定胜方
+  components:
+  - id: ipg-c000067
+    role: definition
+    labelCode: component.definition
+    groups:
+    - id: ipg-g000071
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000163
+        type: paragraph
+        text:
+          en: A player uses or offers to use a method that is not part of the current game (including
+            actions not legal in the current game) to determine the outcome of a game or match, or uses
+            language designed to trick someone who may not know it’s against the rules to make such an
+            offer.
+          zh: 牌手利用或提议不属于当前游戏的方法（包括当前游戏中不合法的行动），来决定某盘游戏或某对局的结果，或用言语诱使不知悉此行为属于违规的某人做出提议。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 26
+          bbox:
+          - 90.0
+          - 126.2
+          - 554.3
+          - 165.8
+          extractionUnit: extract-p26-l003..extract-p26-l005
+        legacyRawUnits:
+        - raw-L003540
+        - raw-L003542
+      - id: ipg-b000164
+        type: paragraph
+        text:
+          en: If the player was aware that what they were doing was against the rules, the infraction
+            is Unsporting Conduct — Cheating.
+          zh: 若牌手知悉其所作所为乃违规行为，则属于举止违背运动道德～作弊。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 26
+          bbox:
+          - 90.0
+          - 181.4
+          - 513.59
+          - 207.2
+          extractionUnit: extract-p26-l006..extract-p26-l007
+        legacyRawUnits:
+        - raw-L003564
+        - raw-L003566
+  - id: ipg-c000068
+    role: examples
+    labelCode: component.examples
+    groups:
+    - id: ipg-g000072
+      kind: ordered-list
+      blocks:
+      - id: ipg-b000165
+        type: list-item
+        text:
+          en: As time is called, two players about to draw roll a die to determine the winner.
+          zh: 比赛时间结束时，本该平手的两位牌手以掷骰来决定胜负。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 26
+          bbox:
+          - 108.0
+          - 237.8
+          - 502.92
+          - 249.8
+          extractionUnit: extract-p26-l009..extract-p26-l009
+        marker: A
+        legacyRawUnits:
+        - raw-L003578
+        - raw-L003580
+      - id: ipg-b000166
+        type: list-item
+        text:
+          en: A player offers to flip a coin to determine the winner of a match.
+          zh: 牌手提议以掷铜板来决定对局的胜方。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 26
+          bbox:
+          - 108.0
+          - 251.6
+          - 436.56
+          - 263.6
+          extractionUnit: extract-p26-l010..extract-p26-l010
+        marker: B
+        legacyRawUnits:
+        - raw-L003582
+        - raw-L003584
+      - id: ipg-b000167
+        type: list-item
+        text:
+          en: Two players arm wrestle to determine the winner of the match.
+          zh: 两位牌手比腕力来决定对局的胜方。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 26
+          bbox:
+          - 108.0
+          - 265.4
+          - 428.16
+          - 277.4
+          extractionUnit: extract-p26-l011..extract-p26-l011
+        marker: C
+        legacyRawUnits:
+        - raw-L003586
+        - raw-L003588
+      - id: ipg-b000168
+        type: list-item
+        text:
+          en: Two players play rock-paper-scissors to decide if they should play the match or draw.
+          zh: 两位牌手猜拳决定是否要进行对局或者约和。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 26
+          bbox:
+          - 108.0
+          - 279.2
+          - 537.72
+          - 291.2
+          extractionUnit: extract-p26-l012..extract-p26-l012
+        marker: D
+        legacyRawUnits:
+        - raw-L003590
+        - raw-L003592
+      - id: ipg-b000169
+        type: list-item
+        text:
+          en: Two players compare the converted mana costs of the top cards of their libraries to determine
+            the winner of a game at the end of extra turns.
+          zh: 在延长回合结束时，双方牌手比较各自牌库顶牌的总法术力费用来决定游戏的胜方。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 26
+          bbox:
+          - 108.0
+          - 293.0
+          - 523.8
+          - 318.8
+          extractionUnit: extract-p26-l013..extract-p26-l014
+        marker: E
+        legacyRawUnits:
+        - raw-L003594
+        - raw-L003596
+      - id: ipg-b000170
+        type: list-item
+        text:
+          en: Two players reveal cards from the top of their libraries to see “who would win” after extra
+            turns.
+          zh: 两位牌手展示各自牌库顶牌，决定延长回合之后“谁会赢”。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 26
+          bbox:
+          - 108.0
+          - 320.6
+          - 532.84
+          - 346.4
+          extractionUnit: extract-p26-l015..extract-p26-l016
+        marker: F
+        legacyRawUnits:
+        - raw-L003598
+        - raw-L003600
+      - id: ipg-b000171
+        type: list-item
+        text:
+          en: A player says “Oh no, we’re going to draw, that’s terrible for us. If only there were something
+            we could do about it.”
+          zh: 牌手说“平了大家都遭殃，要是咱们能用‘某种办法’来分出胜负就好了。”
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 26
+          bbox:
+          - 108.0
+          - 348.2
+          - 524.69
+          - 374.0
+          extractionUnit: extract-p26-l017..extract-p26-l018
+        marker: G
+        legacyRawUnits:
+        - raw-L003602
+        - raw-L003604
+  - id: ipg-c000069
+    role: philosophy
+    labelCode: component.philosophy
+    groups:
+    - id: ipg-g000073
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000172
+        type: paragraph
+        text:
+          en: Using an outside-the-game method to determine a winner compromises the integrity of the
+            tournament.
+          zh: 使用游戏之外的方式来决定胜方，会危害比赛的公平性。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 26
+          bbox:
+          - 90.0
+          - 404.6
+          - 525.17
+          - 430.4
+          extractionUnit: extract-p26-l020..extract-p26-l021
+        legacyRawUnits:
+        - raw-L003612
+        - raw-L003614
+      - id: ipg-b000173
+        type: paragraph
+        text:
+          en: Matches that result in a draw due to time are expected to be reported as such and are not
+            excluded from this penalty if the players use an illegal method to determine the outcome.
+          zh: 因时间而以平手收场的对局就该照实回报，以违规方式决定比赛结果的牌手，都必须以此给予处罚。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 26
+          bbox:
+          - 90.0
+          - 446.0
+          - 517.44
+          - 471.8
+          extractionUnit: extract-p26-l022..extract-p26-l023
+        legacyRawUnits:
+        - raw-L003620
+        - raw-L003622
+  classification: unsporting-conduct
+  penaltyCode: penalty.match-loss
+- id: ipg-s4-4
+  kind: infraction
+  number: '4.4'
+  title:
+    en: Bribery and Wagering
+    zh: 贿赂与赌博
+  components:
+  - id: ipg-c000070
+    role: definition
+    labelCode: component.definition
+    groups:
+    - id: ipg-g000074
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000174
+        type: paragraph
+        text:
+          en: A player offers an incentive to entice an opponent into conceding, drawing, or changing
+            the results of a match, encourages such an offer, or accepts such an offer. Refer to section
+            5.2 of the Magic Tournament Rules for a more detailed description of what constitutes bribery.
+          zh: 牌手提供奖励来诱使对手认输、约和，或改变对局结果，牌手鼓动此类行为，或是接受对方提出的此类条件。若想知道贿赂的详细定义与构成要素，请参照《万智牌比赛规则》第 5.2 节的详细叙述。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 26
+          bbox:
+          - 90.0
+          - 542.96
+          - 551.13
+          - 582.82
+          extractionUnit: extract-p26-l026..extract-p26-l028
+        legacyRawUnits:
+        - raw-L003638
+        - raw-L003640
+      - id: ipg-b000175
+        type: paragraph
+        text:
+          en: Wagering occurs when a player or spectator at a tournament places or offers to place a bet
+            on the outcome of a tournament, match or any portion of a tournament or match. The wager does
+            not need to be monetary, nor is it relevant if a player is not betting on their own match.
+          zh: 赌博指的是比赛的牌手或是观众对比赛的结果、对局或是比赛和对局的任何部分来下注或提议下注。赌博不一定只指现金形式，也不论牌手下注的是否是自己的对局。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 26
+          bbox:
+          - 90.0
+          - 598.16
+          - 555.17
+          - 637.76
+          extractionUnit: extract-p26-l029..extract-p26-l031
+        legacyRawUnits:
+        - raw-L003662
+        - raw-L003664
+      - id: ipg-b000176
+        type: paragraph
+        text:
+          en: If the player was aware that what they were doing was against the rules, the infraction
+            is Unsporting Conduct — Cheating.
+          zh: 若牌手知悉其所作所为乃违规行为，则属于举止违背运动道德～作弊。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 26
+          bbox:
+          - 90.0
+          - 653.36
+          - 513.59
+          - 679.16
+          extractionUnit: extract-p26-l032..extract-p26-l033
+        legacyRawUnits:
+        - raw-L003674
+        - raw-L003676
+  - id: ipg-c000071
+    role: examples
+    labelCode: component.examples
+    groups:
+    - id: ipg-g000075
+      kind: ordered-list
+      blocks:
+      - id: ipg-b000177
+        type: list-item
+        text:
+          en: A player in a Swiss round offers their opponent $100 to concede the match.
+          zh: 牌手在瑞士轮的对局之中，提供100美金来让对手认输。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 108.0
+          - 73.64
+          - 488.64
+          - 85.64
+          extractionUnit: extract-p27-l002..extract-p27-l002
+        marker: A
+        legacyRawUnits:
+        - raw-L003684
+        - raw-L003686
+      - id: ipg-b000178
+        type: list-item
+        text:
+          en: A player offers their opponent a card in exchange for a draw.
+          zh: 牌手愿意给对手一张牌，用以交换平手。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 108.0
+          - 87.44
+          - 419.14
+          - 99.44
+          extractionUnit: extract-p27-l003..extract-p27-l003
+        marker: B
+        legacyRawUnits:
+        - raw-L003692
+        - raw-L003694
+      - id: ipg-b000179
+        type: list-item
+        text:
+          en: A player asks for a concession in exchange for a prize split.
+          zh: 牌手要求平分奖品来交换认输。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 108.0
+          - 101.24
+          - 411.96
+          - 113.24
+          extractionUnit: extract-p27-l004..extract-p27-l004
+        marker: C
+        legacyRawUnits:
+        - raw-L003700
+        - raw-L003702
+      - id: ipg-b000180
+        type: list-item
+        text:
+          en: Two players agree that the winner of the match will be able to choose a rare card out of
+            the other person’s deck after the match.
+          zh: 两位牌手同意赢得对局的人可以对手的牌库中拿走一张稀有牌。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 108.0
+          - 115.04
+          - 545.08
+          - 140.84
+          extractionUnit: extract-p27-l005..extract-p27-l006
+        marker: D
+        legacyRawUnits:
+        - raw-L003708
+        - raw-L003710
+      - id: ipg-b000181
+        type: list-item
+        text:
+          en: Two spectators place a bet on the number of games that will be needed to decide a match.
+          zh: 两位观众下注，赌某对局要打几盘才会结束。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 108.0
+          - 142.64
+          - 556.44
+          - 154.64
+          extractionUnit: extract-p27-l007..extract-p27-l007
+        marker: E
+        legacyRawUnits:
+        - raw-L003716
+        - raw-L003718
+  - id: ipg-c000072
+    role: philosophy
+    labelCode: component.philosophy
+    groups:
+    - id: ipg-g000076
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000182
+        type: paragraph
+        text:
+          en: Bribery and wagering disrupt the integrity of the tournament and are strictly forbidden.
+          zh: 贿赂和赌博会干扰比赛的公平性，必须严格禁止。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 90.0
+          - 185.24
+          - 507.48
+          - 197.24
+          extractionUnit: extract-p27-l009..extract-p27-l009
+        legacyRawUnits:
+        - raw-L003726
+        - raw-L003728
+  classification: unsporting-conduct
+  penaltyCode: penalty.match-loss
+- id: ipg-s4-5
+  kind: infraction
+  number: '4.5'
+  title:
+    en: Aggressive Behavior
+    zh: 攻击性举止
+  components:
+  - id: ipg-c000073
+    role: definition
+    labelCode: component.definition
+    groups:
+    - id: ipg-g000077
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000183
+        type: paragraph
+        text:
+          en: A player acts in a threatening way towards others or their property.
+          zh: 牌手对他人或是他人的拥有物进行威胁性的行动。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 90.0
+          - 268.4
+          - 411.84
+          - 280.4
+          extractionUnit: extract-p27-l012..extract-p27-l012
+        legacyRawUnits:
+        - raw-L003744
+        - raw-L003746
+  - id: ipg-c000074
+    role: examples
+    labelCode: component.examples
+    groups:
+    - id: ipg-g000078
+      kind: ordered-list
+      blocks:
+      - id: ipg-b000184
+        type: list-item
+        text:
+          en: A player threatens to hit another player who won’t concede to them.
+          zh: 牌手威胁要殴打不愿认输的对手。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 108.0
+          - 311.0
+          - 453.12
+          - 323.0
+          extractionUnit: extract-p27-l014..extract-p27-l014
+        marker: A
+        legacyRawUnits:
+        - raw-L003754
+        - raw-L003756
+      - id: ipg-b000185
+        type: list-item
+        text:
+          en: A player pulls a chair out from under another player, causing them to fall to the ground.
+          zh: 牌手将别的牌手所坐的椅子拉开，使该牌手摔在地上。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 108.0
+          - 324.8
+          - 547.2
+          - 336.8
+          extractionUnit: extract-p27-l015..extract-p27-l015
+        marker: B
+        legacyRawUnits:
+        - raw-L003758
+        - raw-L003760
+      - id: ipg-b000186
+        type: list-item
+        text:
+          en: A player makes threats against a judge after receiving a ruling.
+          zh: 牌手在得到规则解释之后威胁裁判。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 108.0
+          - 338.6
+          - 426.98
+          - 350.6
+          extractionUnit: extract-p27-l016..extract-p27-l016
+        marker: C
+        legacyRawUnits:
+        - raw-L003762
+        - raw-L003764
+      - id: ipg-b000187
+        type: list-item
+        text:
+          en: A player tears up a card belonging to another player.
+          zh: 牌手撕毁他人拥有的牌张。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 108.0
+          - 352.4
+          - 378.48
+          - 364.4
+          extractionUnit: extract-p27-l017..extract-p27-l017
+        marker: D
+        legacyRawUnits:
+        - raw-L003766
+        - raw-L003768
+      - id: ipg-b000188
+        type: list-item
+        text:
+          en: A player intentionally turns over a table.
+          zh: 牌手故意翻到桌子。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 108.0
+          - 366.2
+          - 320.16
+          - 378.2
+          extractionUnit: extract-p27-l018..extract-p27-l018
+        marker: E
+        legacyRawUnits:
+        - raw-L003770
+        - raw-L003772
+  - id: ipg-c000075
+    role: philosophy
+    labelCode: component.philosophy
+    groups:
+    - id: ipg-g000079
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000189
+        type: paragraph
+        text:
+          en: The safety of all people at a tournament is of paramount importance. There will be no tolerance
+            of physical abuse or intimidation.
+          zh: 赛场内所有人的安全是最主要的重点。绝对不宽容身体上的伤害和恐吓。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 90.0
+          - 408.8
+          - 548.21
+          - 434.6
+          extractionUnit: extract-p27-l020..extract-p27-l021
+        legacyRawUnits:
+        - raw-L003780
+        - raw-L003782
+  - id: ipg-c000076
+    role: additional-remedy
+    labelCode: component.additional-remedy
+    groups:
+    - id: ipg-g000080
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000190
+        type: paragraph
+        text:
+          en: The offender should be asked to leave the venue by the organizer.
+          zh: 比赛主办人必须要求该牌手离开赛场。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 90.0
+          - 465.2
+          - 405.84
+          - 477.2
+          extractionUnit: extract-p27-l023..extract-p27-l023
+        legacyRawUnits:
+        - raw-L003790
+        - raw-L003792
+  classification: unsporting-conduct
+  penaltyCode: penalty.disqualification
+- id: ipg-s4-6
+  kind: infraction
+  number: '4.6'
+  title:
+    en: Theft of Tournament Material
+    zh: 窃取比赛用品
+  components:
+  - id: ipg-c000077
+    role: definition
+    labelCode: component.definition
+    groups:
+    - id: ipg-g000081
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000191
+        type: paragraph
+        text:
+          en: A player steals materials from the tournament, including but not limited to cards or tournament
+            equipment.
+          zh: 牌手偷拿比赛物品，例如牌或是比赛的配备。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 90.0
+          - 548.36
+          - 546.22
+          - 574.16
+          extractionUnit: extract-p27-l026..extract-p27-l027
+        legacyRawUnits:
+        - raw-L003804
+        - raw-L003806
+  - id: ipg-c000078
+    role: examples
+    labelCode: component.examples
+    groups:
+    - id: ipg-g000082
+      kind: ordered-list
+      blocks:
+      - id: ipg-b000192
+        type: list-item
+        text:
+          en: A player steals cards from the sideboard of their opponent.
+          zh: 牌手偷拿对手备牌里的牌。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 108.0
+          - 604.76
+          - 407.88
+          - 616.76
+          extractionUnit: extract-p27-l029..extract-p27-l029
+        marker: A
+        legacyRawUnits:
+        - raw-L003814
+        - raw-L003816
+      - id: ipg-b000193
+        type: list-item
+        text:
+          en: A player steals the table number from a table.
+          zh: 牌手偷拿桌号牌。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 108.0
+          - 618.56
+          - 344.88
+          - 630.56
+          extractionUnit: extract-p27-l030..extract-p27-l030
+        marker: B
+        legacyRawUnits:
+        - raw-L003818
+        - raw-L003820
+      - id: ipg-b000194
+        type: list-item
+        text:
+          en: A player realizes they have a previous opponent’s card, but they hide it instead of telling
+            a tournament official.
+          zh: 牌手发现他误拿了前一位对手的牌，却没有告诉比赛工作人员而藏起来。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 108.0
+          - 632.36
+          - 551.16
+          - 658.16
+          extractionUnit: extract-p27-l031..extract-p27-l032
+        marker: C
+        legacyRawUnits:
+        - raw-L003822
+        - raw-L003824
+  - id: ipg-c000079
+    role: philosophy
+    labelCode: component.philosophy
+    groups:
+    - id: ipg-g000083
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000195
+        type: paragraph
+        text:
+          en: Players enter a tournament expecting that their materials will be protected. This does not
+            absolve the players from their responsibility to keep an eye on their possessions, but they
+            should expect to be able to retain the product they began with or were given for the tournament.
+            Other instances of theft not involving tournament materials are the responsibility of the
+            Tournament Organizer, though judges are encouraged to help in any way possible.
+          zh: '牌手加入比赛之后，他们的物品就应该受到保护。
+
+
+            这并不是免除牌手留意自我财物的责任；但他们必须能够保有开赛时的产品，或是给他们比赛用的物品。
+
+
+            其他未牵涉比赛物品的偷窃，便是比赛承办人的责任，裁判也要尽量提供帮助。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 27
+          bbox:
+          - 90.0
+          - 688.76
+          - 557.75
+          - 728.36
+          extractionUnit: extract-p27-l034..extract-p27-l036
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 90.0
+          - 56.84
+          - 546.72
+          - 82.64
+          extractionUnit: extract-p28-l001..extract-p28-l002
+        legacyRawUnits:
+        - raw-L003832
+        - raw-L003834
+        - raw-L003840
+        - raw-L003842
+        - raw-L003848
+        - raw-L003850
+  - id: ipg-c000080
+    role: additional-remedy
+    labelCode: component.additional-remedy
+    groups:
+    - id: ipg-g000084
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000196
+        type: paragraph
+        text:
+          en: The offender should be asked to leave the venue by the organizer.
+          zh: 比赛主办人必须要求该牌手离开赛场。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 90.0
+          - 113.24
+          - 405.84
+          - 125.24
+          extractionUnit: extract-p28-l004..extract-p28-l004
+        legacyRawUnits:
+        - raw-L003858
+        - raw-L003860
+  classification: unsporting-conduct
+  penaltyCode: penalty.disqualification
+- id: ipg-s4-7
+  kind: infraction
+  number: '4.7'
+  title:
+    en: Stalling
+    zh: 拖延
+  components:
+  - id: ipg-c000081
+    role: definition
+    labelCode: component.definition
+    groups:
+    - id: ipg-g000085
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000197
+        type: paragraph
+        text:
+          en: A player intentionally plays slowly in order to take advantage of the time limit. If the
+            slow play is not intentional, please refer to Tournament Error — Slow Play instead.
+          zh: '牌手为了得到时间限制上的优势，故意过慢进行游戏。
+
+
+            如果进行过慢并非蓄意，请参见比赛失误～游戏进行过慢。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 90.0
+          - 190.4
+          - 547.8
+          - 216.2
+          extractionUnit: extract-p28-l007..extract-p28-l008
+        legacyRawUnits:
+        - raw-L003872
+        - raw-L003874
+        - raw-L003880
+        - raw-L003882
+  - id: ipg-c000082
+    role: examples
+    labelCode: component.examples
+    groups:
+    - id: ipg-g000086
+      kind: ordered-list
+      blocks:
+      - id: ipg-b000198
+        type: list-item
+        text:
+          en: A player has two lands in their hand, no options available to significantly affect the game,
+            and spends excessive time “thinking” about what to do to eat up time on the clock.
+          zh: 牌手手上只有两张地牌，没有任何选择能够明显地影响游戏，却花时间来“思考”该怎么做以消耗时间。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 108.0
+          - 246.8
+          - 557.5
+          - 272.6
+          extractionUnit: extract-p28-l010..extract-p28-l011
+        marker: A
+        legacyRawUnits:
+        - raw-L003894
+        - raw-L003896
+      - id: ipg-b000199
+        type: list-item
+        text:
+          en: A player is ahead in games and significantly slows down their pace of play so the opponent
+            has little chance to catch up.
+          zh: 牌手的胜利盘数领先对手，并明显放慢游戏步调，让对手难以挽回劣势。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 108.0
+          - 274.4
+          - 516.98
+          - 300.2
+          extractionUnit: extract-p28-l012..extract-p28-l013
+        marker: B
+        legacyRawUnits:
+        - raw-L003902
+        - raw-L003904
+      - id: ipg-b000200
+        type: list-item
+        text:
+          en: A player playing slowly appeals a warning in an attempt to gain advantage by having more
+            time to make a decision.
+          zh: 游戏进行过慢的牌手抗议他受到的警告判决，藉此争取更多时间来做决定。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 108.0
+          - 302.0
+          - 535.32
+          - 327.8
+          extractionUnit: extract-p28-l014..extract-p28-l015
+        marker: C
+        legacyRawUnits:
+        - raw-L003910
+        - raw-L003912
+      - id: ipg-b000201
+        type: list-item
+        text:
+          en: A player intentionally mulligans slowly before the third game in an attempt to make it harder
+            for their opponent to win in time.
+          zh: 在第三盘开始之前，牌手蓄意以缓慢的速度进行再调度，好让对手难以及时赢得游戏。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 108.0
+          - 329.6
+          - 539.26
+          - 355.4
+          extractionUnit: extract-p28-l016..extract-p28-l017
+        marker: D
+        legacyRawUnits:
+        - raw-L003918
+        - raw-L003920
+      - id: ipg-b000202
+        type: list-item
+        text:
+          en: A player losing a game starts slowing down the pace of play in an attempt to run out the
+            clock.
+          zh: 在游戏中就要输掉的牌手开始放慢游戏步调，想拖延到时间用完。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 108.0
+          - 357.2
+          - 548.57
+          - 383.0
+          extractionUnit: extract-p28-l018..extract-p28-l019
+        marker: E
+        legacyRawUnits:
+        - raw-L003926
+        - raw-L003928
+  classification: unsporting-conduct
+  penaltyCode: penalty.disqualification
+- id: ipg-s4-8
+  kind: infraction
+  number: '4.8'
+  title:
+    en: Cheating
+    zh: 作弊
+  components:
+  - id: ipg-c000083
+    role: definition
+    labelCode: component.definition
+    groups:
+    - id: ipg-g000087
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000203
+        type: paragraph
+        text:
+          en: A person breaks a rule defined by the tournament documents, lies to a tournament official,
+            or notices an offense committed in their (or a teammate's) match and does not call attention
+            to it.
+          zh: 某人违反了比赛文档中规定的规则，向比赛工作人员说谎，或在注意到自身对局（或队友之对局）中发生了违规情事的情况下却不去寻求解决。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 90.0
+          - 454.16
+          - 540.48
+          - 479.96
+          extractionUnit: extract-p28-l022..extract-p28-l023
+        legacyRawUnits:
+        - raw-L003940
+        - raw-L003942
+      - id: ipg-b000204
+        type: paragraph
+        text:
+          en: 'Additionally, the offense must meet the following criteria for it to be considered Cheating:'
+          zh: 此外，必须在同时满足下列要素的情况下，才能将上述的违规行为视为“作弊”：
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 90.0
+          - 495.56
+          - 524.62
+          - 507.56
+          extractionUnit: extract-p28-l024..extract-p28-l024
+        legacyRawUnits:
+        - raw-L003956
+        - raw-L003958
+    - id: ipg-g000088
+      kind: unordered-list
+      blocks:
+      - id: ipg-b000205
+        type: list-item
+        text:
+          en: The player must be attempting to gain advantage from their action.
+          zh: 该牌手确实意图利用自身的行为来获取优势。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 108.0
+          - 522.96
+          - 446.76
+          - 536.0
+          extractionUnit: extract-p28-l025..extract-p28-l025
+        marker: bullet
+        legacyRawUnits:
+        - raw-L003960
+        - raw-L003962
+      - id: ipg-b000206
+        type: list-item
+        text:
+          en: The player must be aware that they are doing something illegal.
+          zh: 该牌手确实知道自己之作为属违规行为，但仍决定如此作。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 108.0
+          - 537.72
+          - 431.73
+          - 550.76
+          extractionUnit: extract-p28-l026..extract-p28-l026
+        marker: bullet
+        legacyRawUnits:
+        - raw-L003964
+        - raw-L003966
+    - id: ipg-g000089
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000207
+        type: paragraph
+        text:
+          en: If all criteria are not met, the offense is not Cheating and is handled by a different infraction.
+            Cheating will often appear on the surface as a Game Play Error or Tournament Error, and must
+            be investigated by the judge to make a determination of intent and awareness.
+          zh: '如果某违规并未同时满足上述两个要素，则该行为便不属于“作弊”，且应依照其他种类之违规进行处理。
+
+
+            作弊这类违规表面上看起来通常很类似游戏行动失误或是比赛失误，裁判必须经过调查方得以断定牌手背后之意图及其对规则的了解程度。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 90.0
+          - 566.36
+          - 546.1
+          - 605.96
+          extractionUnit: extract-p28-l027..extract-p28-l029
+        legacyRawUnits:
+        - raw-L003984
+        - raw-L003986
+        - raw-L003992
+        - raw-L003994
+  - id: ipg-c000084
+    role: examples
+    labelCode: component.examples
+    groups:
+    - id: ipg-g000090
+      kind: ordered-list
+      blocks:
+      - id: ipg-b000208
+        type: list-item
+        text:
+          en: A player alters the results on a match slip without their opponent’s knowledge.
+          zh: 牌手在对手不知情的状况下更改对局的结果。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 108.0
+          - 636.56
+          - 504.24
+          - 648.56
+          extractionUnit: extract-p28-l031..extract-p28-l031
+        marker: A
+        legacyRawUnits:
+        - raw-L004002
+        - raw-L004004
+      - id: ipg-b000209
+        type: list-item
+        text:
+          en: A player lies to a tournament official about what happened in a game to make their case
+            stronger.
+          zh: 牌手就游戏中发生的事情向比赛工作人员说谎，以增强己方诉求的严重性。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 108.0
+          - 650.36
+          - 547.82
+          - 676.16
+          extractionUnit: extract-p28-l032..extract-p28-l033
+        marker: B
+        legacyRawUnits:
+        - raw-L004006
+        - raw-L004008
+      - id: ipg-b000210
+        type: list-item
+        text:
+          en: A player allows their opponent to put a creature into the graveyard even though the creature
+            has not been dealt lethal damage.
+          zh: 在某生物未受到致命伤害的情况下，牌手仍允许其对手将该生物置入坟墓场。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 28
+          bbox:
+          - 108.0
+          - 677.96
+          - 525.14
+          - 703.76
+          extractionUnit: extract-p28-l034..extract-p28-l035
+        marker: C
+        legacyRawUnits:
+        - raw-L004010
+        - raw-L004012
+      - id: ipg-b000211
+        type: list-item
+        text:
+          en: A player notices that their opponent resolved only half of the triggered ability of Sword
+            of Feast and Famine and decides not to call attention to the error.
+          zh: 牌手注意到其对手仅部分结算了丰馑剑/Sword of Feast and Famine的触发式异能，但却决定不去寻求解决此失误。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 29
+          bbox:
+          - 108.0
+          - 56.84
+          - 545.86
+          - 82.64
+          extractionUnit: extract-p29-l001..extract-p29-l002
+        marker: D
+        legacyRawUnits:
+        - raw-L004014
+        - raw-L004016
+      - id: ipg-b000212
+        type: list-item
+        text:
+          en: A player peeks at another player’s picks during the draft.
+          zh: 牌手在轮抽过程中窥视其他牌手抽到的牌。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 29
+          bbox:
+          - 108.0
+          - 84.44
+          - 399.12
+          - 96.44
+          extractionUnit: extract-p29-l003..extract-p29-l003
+        marker: E
+        legacyRawUnits:
+        - raw-L004018
+        - raw-L004020
+      - id: ipg-b000213
+        type: list-item
+        text:
+          en: A player adds cards to their Sealed Deck pool.
+          zh: 参加现开赛的牌手加额外的牌到他的牌池中。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 29
+          bbox:
+          - 108.0
+          - 98.24
+          - 348.82
+          - 110.24
+          extractionUnit: extract-p29-l004..extract-p29-l004
+        marker: F
+        legacyRawUnits:
+        - raw-L004022
+        - raw-L004024
+      - id: ipg-b000214
+        type: list-item
+        text:
+          en: A player realizes they have accidentally drawn an extra card, then fails to call a judge
+            in order to avoid a penalty.
+          zh: 牌手发现自己不慎额外抓了一张牌，但为了逃避惩罚，并未叫裁判。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 29
+          bbox:
+          - 108.0
+          - 112.04
+          - 548.88
+          - 137.84
+          extractionUnit: extract-p29-l005..extract-p29-l006
+        marker: G
+        legacyRawUnits:
+        - raw-L004026
+        - raw-L004028
+  classification: unsporting-conduct
+  penaltyCode: penalty.disqualification
+publicationAnnotations:
+- id: ipg-ann-4-d4fea234b84c
+  anchor:
+    type: block
+    id: ipg-b000138
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-d4fea234b84c-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-d4fea234b84c-g01-b01
+      type: paragraph
+      text:
+        en: This is a general definition of what constitutes “Unsporting Conduct”, and it’s pretty broad.
+          Some of you might think it covers a lot more stuff than you would have expected — but bear in
+          mind that all these things are vital in to the provision of a good tournament experience. As
+          judges we need to be watchful for things that can create negative experiences for players, and
+          deal with them as appropriate.
+        zh: 这是“举止违背运动道德”的一般定义。这个定义相当广泛。有些人可能会认为它覆盖了很多你可能不会预期会遇到的情况，但是请牢记这些方针的存在对于保持良好的比赛体验是至关重要的。作为裁判，我们需要警惕这些可能对牌手产生负面体验的情况，并恰当的处理它们。
+      sourceRawUnits:
+      - raw-L003094
+      - raw-L003096
+- id: ipg-ann-4-b38257c3a9f5
+  anchor:
+    type: block
+    id: ipg-b000139
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-b38257c3a9f5-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-b38257c3a9f5-g01-b01
+      type: paragraph
+      text:
+        en: It’s important to make this clarification. If a player is not being nice to you, that doesn’t
+          necessarily mean they are being unsporting. For example, you are not required to say “Good game”
+          after getting crushed, you don’t have to shake hands, your opponent doesn’t have to tell you
+          exactly what a card does, etc. None of these things constitute Unsporting Conduct. A player
+          is allowed to have their “game face” on.
+        zh: 澄清这一点是重要的。如果一个牌手并没有表现的很友好，这并不一定表示他违背运动道德。举例来说，我们不能指望牌手在被对手完虐之后说“精彩的比赛”，握手也不是必须的，对手没必要准确地告诉你一张牌能做什么，等等。这些情况都不是举止违背运动道德。我们应当允许牌手在比赛中换上他的竞赛面孔。
+      sourceRawUnits:
+      - raw-L003102
+      - raw-L003104
+- id: ipg-ann-4-a2b09b1caa1c
+  anchor:
+    type: block
+    id: ipg-b000139
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-4-a2b09b1caa1c-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-a2b09b1caa1c-g01-b01
+      type: paragraph
+      text:
+        en: A Floor Judge can decide to issue an Unsporting Conduct penalty, but players may appeal this
+          ruling. Just as with many other sections of this document, the Head Judge is the final authority
+          when it comes to determining whether something is Unsporting Conduct. It is also necessary to
+          get the Head Judge’s agreement/approval prior to giving any infraction with a penalty of Game
+          Loss or higher, and if it’s a Disqualification, the Head Judge should be the one giving it.
+        zh: 巡场裁判可以决定给出一个举止违背运动道德的判罚，但是牌手可以上诉。与这份文件的许多其他部分相同，主审拥有判定是否举止违背运动道德的最终权限。巡场裁判在给予任何违规为一盘负或更严厉的处罚时，获得主审的授权或同意也是必要的。而取消资格的判罚则必须由主审给出。
+      sourceRawUnits:
+      - raw-L003110
+      - raw-L003112
+- id: ipg-ann-4-fc1fbc155496
+  anchor:
+    type: block
+    id: ipg-b000140
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-fc1fbc155496-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-fc1fbc155496-g01-b01
+      type: paragraph
+      text:
+        en: Sometimes players do not notice that their behavior is being disruptive to the event. They
+          are wrapped up in their own concerns, so the judges have to let them know that what they are
+          doing is causing a problem. After being told, the player should immediately correct their actions.
+          However, in order to prevent situations from escalating, the primary focus of judges should
+          be to get the situation under control. Basically, if you have a player who is angry, giving
+          them a penalty at that moment will probably make things worse. Get control of the situation,
+          and then worry about infractions.
+        zh: 有时牌手并没有注意到他们的行为对比赛会产生干扰。他们的注意力完全集中于自己的事情，所以裁判应当让牌手知道他/她做了什么事情导致了问题。在被告知后，牌手应当立刻纠正他/她的行为。然后，为了防止事态升级，裁判首先要注意控制当前场面。基本上来说，如果立刻给予一个愤怒的牌手判罚将有可能会让情况变得更糟。先控制事态，然后考虑违规行为。
+      sourceRawUnits:
+      - raw-L003118
+      - raw-L003120
+- id: ipg-ann-4-1-cec71ab27515
+  anchor:
+    type: block
+    id: ipg-b000141
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-1-cec71ab27515-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-1-cec71ab27515-g01-b01
+      type: paragraph
+      text:
+        en: Actions can be “disruptive” in multiple ways. We can’t write an exhaustive list of everything
+          disruptive because every place in the world where Magic is played has its own rules for civil
+          life. Note that we said “disruptive”, not “offensive”, although offensive statements are almost
+          always disruptive. The IPG makes no effort to determine if a player is “offended” as that leads
+          to inconsistent rulings and opens up the potential for players to “game the system” by pretending
+          to be more offended than they really are.
+        zh: 干扰行为可能是多种多样的。我们无法列出一个涵盖所有干扰行为的清单，因为全世界每一个打万智牌的地方都会有自己的文化氛围。注意，干扰并非冒犯，尽管冒犯的言论一般都是干扰性的。IPG无意去判定一个牌手是否被冒犯，因为这会导致判决的不一致，也会给予牌手利用规则的空间，假装被冒犯的程度比实际严重来使别人获得判罚。
+      sourceRawUnits:
+      - raw-L003132
+      - raw-L003142
+    - id: ipg-ann-4-1-cec71ab27515-g01-b02
+      type: paragraph
+      text:
+        en: The IPG is applied in the same way for all problems of this type, but each judge must determine
+          what is acceptable or not from their own experience and judgment.
+        zh: IPG对于所有此类问题以相同的方式适用。但是每个裁判必须根据他们的经验与判断来决定什么是可以接受的，而什么不能。
+      sourceRawUnits:
+      - raw-L003134
+      - raw-L003144
+    - id: ipg-ann-4-1-cec71ab27515-g01-b03
+      type: paragraph
+      text:
+        en: Participants have the responsibility to not ruin the enjoyable atmosphere of the tournament,
+          so as judges we must take care to educate players.  If Magic is to be a game where people have
+          fun with each other, we must prevent behaviors that damage this. Our goal is to educate the
+          players to be respectful in the tournament and to signal that certain behaviors are not acceptable.
+          While “minor” may be in the title of the infraction, it is still a formal infraction and has
+          an upgrade path. Do not confuse “minor” with how seriously we are to treat the issue. However,
+          you also need to be cautious to not over-apply what is disruptive by taking the most extreme
+          definition.
+        zh: 参与比赛者有责任不去破坏比赛的愉快氛围，所以作为裁判必须留心教育牌手。如果我们想让万智牌成为一个人们可以与他人一起娱乐的游戏，我们必须防止做出伤害它的行为。我们的目标是教育牌手在比赛中尊重他人，并且表示某些行为是不被接受的。尽管违规的标题中包含“轻微”，这仍然是一个正式的违规，并且有可能升级。不要因“轻微”忘记我们要非常严肃地对待此类违规。然而，也要注意不要过度解读牌手的行动，而采取最极端的定义。
+      sourceRawUnits:
+      - raw-L003136
+      - raw-L003146
+    - id: ipg-ann-4-1-cec71ab27515-g01-b04
+      type: paragraph
+      text:
+        en: A player failing to follow a judge’s direct instruction is also disruptive; perhaps to the
+          tournament or to the Judges themselves. When a judge tells a player to do something, it is for
+          the good of the event or to enforce a specific policy concern or tournament rule. We don’t tell
+          players to change their behavior for the fun of it, or to exercise our authority because we
+          can. Keep in mind there is a reasonable limit to what you can instruct a player to do. We don’t
+          tell them “Go stand in the rain for 20 min”, but we will tell them “Quit shuffling in your lap.”
+        zh: 牌手没有听从裁判的直接指示也是干扰行为。这可能是对比赛的干扰，也可能是对裁判的。当一位裁判告诉牌手去做某事时，这是为了比赛的利益或者是执行某个方针或比赛规则。我们不会只为了找乐子或者单纯炫耀权力而告诉牌手去改变他们的行为。注意，对于什么是裁判能够指示牌手做的，这里有一个合理的限制。例如，我们不能告诉牌手“去雨里站20分钟”，但我们会告诉他们不要在腿上洗牌。
+      sourceRawUnits:
+      - raw-L003138
+      - raw-L003148
+    - id: ipg-ann-4-1-cec71ab27515-g01-b05
+      type: paragraph
+      text:
+        en: Finally, if the disruptive behavior is neither Unsporting Conduct — Major nor Aggressive Behavior,
+          then it is Unsporting Conduct — Minor.
+        zh: 最后，如果干扰行为既不能归类为举止违背运动道德～严重，也不能归类为攻击性举止，那么它就是举止违背运动道德～轻微。
+      sourceRawUnits:
+      - raw-L003140
+      - raw-L003150
+- id: ipg-ann-4-1-0d1677709c5e
+  anchor:
+    type: block
+    id: ipg-b000141
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-4-1-0d1677709c5e-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-1-0d1677709c5e-g01-b01
+      type: paragraph
+      text:
+        en: This sentence is included in the IPG because judges can’t have personal knowledge of all participants
+          in the venue; it is not important to find out if there actually is a person that is actually
+          being disturbed by the disruptive action for the penalty to apply, and we don’t have to look
+          for such a person. However, the converse is actually true as well. Some people can be offended
+          or upset by items below a reasonable threshold for this infraction. For example, in a sealed
+          event, a player may be upset by the unaltered artwork on Triumph of Ferocity; this does not
+          mean the player using the card should get a warning, or even have to change the card. Additionally,
+          you can always construct a fictitious person that would be discomforted by any action. Avoid
+          using this method when determining if an action should be infracted, and instead rely on what
+          is reasonable.
+        zh: IPG包含这句话是因为裁判不可能认识比赛中的每一位参与者。找出是否确实有人受到了干扰性行为的不良影响并不重要，并且我们也没有必要去找到这个人。对于上面这句话而言，反过来的情形也是如此。一些人可能会被不足以判定为此违规的事物所冒犯、或感到不爽。举例来说，在一场现开赛中，牌手可能会因为对手使用的狂野得胜这张牌的原画而感到不爽，但这并不表示使用这张牌的牌手应该得到一个警告，或者必须更换这张牌。此外，你总能构想出一个会因任何举动而感到不适的虚构人物。在判定某项行为是否违规时，请避免使用这种方式，而应依据常理来判断。
+      sourceRawUnits:
+      - raw-L003156
+      - raw-L003158
+- id: ipg-ann-4-1-fe561cb9ea57
+  anchor:
+    type: block
+    id: ipg-b000147
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-1-fe561cb9ea57-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-1-fe561cb9ea57-g01-b01
+      type: paragraph
+      text:
+        en: 'These examples give a view of what types of behavior are unacceptable. However, remember
+          that the line between Unsporting Conduct – Minor and normal competitive behavior is understandably
+          gray, as regional customs and standards of behavior vary widely. Additionally, as discussed
+          in section 4.0, a lack of sporting behavior is not the same thing as unsporting behavior.  There
+          are a wide range of behaviors that, while not sporting, do not fall under this infraction. For
+          example, refusing to shake an opponent’s hand after a match does not fall under this infraction.
+          When evaluating a situation for Unsporting Conduct – Minor, go back to the definition: did the
+          player take an action that is disruptive?'
+        zh: 这些例子给我们树立了一个概念，告诉我们哪些行为是不可接受的。但是，要记住举止违背运动道德～轻微和正常的竞争性行为之间的界限是模糊的，因为区域性习俗与行为标准相差很大。此外，如同我们在4.0节中讨论过的，缺乏运动家精神与举止违背运动道德并不能混为一谈。有很多行为虽然没什么运动家精神可言，也不属于这个违规的范畴。例如，在赛后拒绝与对手握手并不属于这项违规。当我们评估某个情况是否属于举止违背运动道德～轻微，我们应该遵从定义：牌手的行为是否产生了干扰？
+      sourceRawUnits:
+      - raw-L003186
+      - raw-L003188
+- id: ipg-ann-4-1-432fd0e7f5bc
+  anchor:
+    type: block
+    id: ipg-b000148
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-1-432fd0e7f5bc-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-1-432fd0e7f5bc-g01-b01
+      type: paragraph
+      text:
+        en: Unfortunately, not everyone you meet at a tournament is going to have an understanding of
+          basic respect and courtesy. Judges, by stepping in and giving a penalty, are showing the players
+          that certain behaviors are not acceptable. When issuing this penalty, be sure to explain the
+          correct behavior. Education is the most important factor here. The warning is to reinforce the
+          lesson, and to provide documentation if the infraction needs to be upgraded.
+        zh: 不幸的是，并非每一个你在比赛中遇到的人都能够理解基本的尊重和礼貌。裁判通过介入并给予判罚，能够向牌手表明其行为是不被接受的。给予此判罚时，请务必解释什么是恰当的行为。教育是最重要的。警告是用于加强教育的，并在违规行为需要被升级时提供判罚记录。
+      sourceRawUnits:
+      - raw-L003196
+      - raw-L003202
+    - id: ipg-ann-4-1-432fd0e7f5bc-g01-b02
+      type: paragraph
+      text:
+        en: Wearing offensive clothing does not generally fall under this infraction.  Wearing clothing
+          is a passive activity, and as such only the most extreme lapses in judgement should be considered
+          for this infraction. Unsporting Conduct – Minor applies either for specific actions or for the
+          failure to perform specific actions.  When an article of clothing is deemed reasonably offensive,
+          simply ask the player to remove the shirt/cover it up/turn it inside out, and issue no penalty.
+          Apply the infraction only if the player fails to comply with your directions.
+        zh: 穿着冒犯性的服装通常不属于此违规的范畴。服装一般是被动行为，并且只有最极端的过失才会被考虑适用此判罚。举止违背运动道德～轻微适用于某些行为或者不执行某些行为。如果你认为牌手穿的某件衣物足以构成冒犯，请简单地要求牌手脱去外衣/覆盖/翻过来穿它，且无须给出判罚。只有牌手不遵从裁判的指导时才考虑给出警告判罚。
+      sourceRawUnits:
+      - raw-L003198
+      - raw-L003204
+    - id: ipg-ann-4-1-432fd0e7f5bc-g01-b03
+      type: paragraph
+      text:
+        en: With regard to the directed instructions, judges have a lot of authority in an event. When
+          a judge directly instructs a player to perform an action, this infraction gives the judge the
+          authority to enforce compliance. This doesn’t mean judges can abuse this authority; when judges
+          give direct instructions, it must be for the benefit of the tournament.
+        zh: 说到直接指示，裁判在比赛拥有很多权力。当裁判直接指示一位牌手进行某个动作时，此违规给予裁判让牌手服从的权力。这并不表示裁判可以滥用权力。当裁判进行直接指示时，这必须是为了比赛的利益。
+      sourceRawUnits:
+      - raw-L003200
+      - raw-L003206
+- id: ipg-ann-4-1-54171ec17e02
+  anchor:
+    type: block
+    id: ipg-b000149
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-1-54171ec17e02-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-1-54171ec17e02-g01-b01
+      type: paragraph
+      text:
+        en: A player who commits unsporting conduct must be educated that their behavior is not acceptable.
+          Regardless of whether or not the player understands how the behavior is unacceptable, they are
+          expected to stop.
+        zh: 举止违背运动道德牌手必须接受教育——他的行为是不被接受的。不管他们是否能理解为什么他们的行为不被接受，我们期望他们不要继续这样做。
+      sourceRawUnits:
+      - raw-L003214
+      - raw-L003216
+- id: ipg-ann-4-1-853178766cc2
+  anchor:
+    type: block
+    id: ipg-b000149
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-4-1-853178766cc2-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-1-853178766cc2-g01-b01
+      type: paragraph
+      text:
+        en: Subsequent USC-Minor infractions are penalized with a game loss.  This is to reinforce the
+          importance of maintaining an open and welcoming environment.
+        zh: 后续的举止违背运动道德～轻微将得到一盘负处罚。这是为了强调保持一个开放而友好的环境之重要性。
+      sourceRawUnits:
+      - raw-L003222
+      - raw-L003226
+    - id: ipg-ann-4-1-853178766cc2-g01-b02
+      type: paragraph
+      text:
+        en: Note that this infraction is upgraded even if the second infraction is unrelated to the previous
+          infraction.  Keep in mind this is also relevant for direct instructions. If a judge gives a
+          player a direct instruction to not perform an action, and the player still does, the player
+          will get a warning for USC-Minor.  Continuing to do so after the first infraction will result
+          in a game loss.
+        zh: 注意，即使第二次违规是因为一件和之前的违规无关的事情，这一违规也是会升级的。注意这与你的直接指示也是有关联的。如果你给一个牌手直接指示，要求他们不要做出某些行为，但他还是做了，他便会因为举止违背运动道德～轻微得到一个警告。如果他继续这么做，我们就升级判罚。
+      sourceRawUnits:
+      - raw-L003224
+      - raw-L003228
+- id: ipg-ann-4-1-512fcb781fc3
+  anchor:
+    type: block
+    id: ipg-b000149
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-4-1-512fcb781fc3-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-1-512fcb781fc3-g01-b01
+      type: paragraph
+      text:
+        en: The reason for this difference in philosophy is simple. Unlike most other infractions, it’s
+          possible for a player to commit Unsporting Conduct – Minor after a match has already ended,
+          but before the players have left the table. If a player has already recorded a match loss through
+          the normal course of play, but still manages to commit this error during that same round, applying
+          the Game Loss immediately may fail to have the intended impact on the player, and probably won’t
+          help illustrate that their actions were unacceptable.
+        zh: 这样做的原则其实非常简单。与大多数其他违规不同，牌手可能会在一局游戏结束之后，但双方牌手还未离开对局桌前时犯下举止违背运动道德～轻微。如果牌手这一局因为正常比赛已经输掉了，却仍在这一轮犯下了这个违规，立即给予牌手一盘负可能无法让判罚起到我们想要的效果，对于教育该牌手其行为之不可接受性也无所助益。
+      sourceRawUnits:
+      - raw-L003234
+      - raw-L003238
+    - id: ipg-ann-4-1-512fcb781fc3-g01-b02
+      type: paragraph
+      text:
+        en: If you want a deeper knowledge about USC you can read this great Unsporting Conduct Article.
+        zh: 如果你需要更深入地了解举止违背运动道德，你可以阅读[这篇文章](http://www.wizards.com/magic/magazine/article.aspx?x=judge/article/20090810a)。
+      sourceRawUnits:
+      - raw-L003236
+      - raw-L003240
+- id: ipg-ann-4-2-a3c22a489078
+  anchor:
+    type: block
+    id: ipg-b000150
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-2-a3c22a489078-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-a3c22a489078-g01-b01
+      type: paragraph
+      text:
+        en: In stark contrast to previous revisions of this infraction, Unsporting Conduct — Major is
+          no longer defined by its examples. Whereas in the past, a player needed to take one of a very
+          specific set of actions to be considered committing Unsporting Conduct — Major, this is no longer
+          the case. This infraction has been expanded to include a wider category of unacceptable behavior.
+        zh: 与此违规之前修订的版本明显不同的是，举止违背运动道德～严重已不再用例子来定义。在过去，一个牌手需要作出特定的一些行为才会被认定为举止违背运动道德～严重。现在有所不同。此违规已经扩展，以归纳一些更广泛的不被接受行为。
+      sourceRawUnits:
+      - raw-L003256
+      - raw-L003264
+    - id: ipg-ann-4-2-a3c22a489078-g01-b02
+      type: paragraph
+      text:
+        en: For the purposes of identifying this infraction, it is important to consider whether or not
+          a player’s conduct toward others might reasonably be expected to cause any of the above-listed
+          feelings, and not necessarily that anybody has been actually made to feel any of those ways.
+          For further illustration of this point, please see Sean Catanese’s excellent blog article.
+        zh: 在鉴别这一违规时，非常重要的是要考虑一个牌手的对他人的行为是否有理由让我们认为会使被冒犯者产生上述感受。是否有人确实产生上述感受并非是必要的。为了进一步说明这一点，请看Sean Catanese博客中这篇[优秀的文章](http://blogs.magicjudges.org/seacat/updating-unsporting-conduct-major/)。
+      sourceRawUnits:
+      - raw-L003258
+      - raw-L003266
+    - id: ipg-ann-4-2-a3c22a489078-g01-b03
+      type: paragraph
+      text:
+        en: Note that it is possible for a player to commit this infraction by potentially causing these
+          feelings in individuals other than their opponent. Participants in other matches, spectators,
+          or tournament officials are all potential recipients of the harmful effects of a player’s misconduct.
+          The Match Loss penalty should be applied to the offending player even if the person potentially
+          harmed by their actions is not their current round opponent.
+        zh: 请注意，牌手有可能使其对手以外的其他人产生上述感受，而犯下此违规。其他对局的参赛者、旁观者或比赛工作人员都有可能是潜在的不良影响受害者。一局负的判罚应当应用在冒犯他人的牌手上，即使可能被伤害的人并非是他当前这一轮的对手。
+      sourceRawUnits:
+      - raw-L003260
+      - raw-L003268
+    - id: ipg-ann-4-2-a3c22a489078-g01-b04
+      type: paragraph
+      text:
+        en: Finally, it should be pointed out that actual incidents of Unsporting Conduct — Major are
+          pretty rare. Local Magic communities tend to be very self-correcting even without the presence
+          of judges. Basic social contract theory applies here; Magic players are humans, first. Most
+          players already refrain from acting in ways that violate the communal agreements of society
+          at large, so instances of this infraction are likewise unusual.
+        zh: 最后，应当指出，实际的举止违背运动道德事件～严重是相当少见的。本地的万智牌社群即使没有裁判在场一般都会自我纠正问题。因为万智牌牌手首先是人，所以这里适用基本的社会契约理论。大多数牌手已经避免做出触犯社会集体认同的行为，所以此违规的实例是比较不寻常的。
+      sourceRawUnits:
+      - raw-L003262
+      - raw-L003270
+- id: ipg-ann-4-2-d0f69da0f8d1
+  anchor:
+    type: block
+    id: ipg-b000150
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-4-2-d0f69da0f8d1-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-d0f69da0f8d1-g01-b01
+      type: paragraph
+      text:
+        en: A harassing comment or threatening slur directed at a person that meets the criteria above
+          is unacceptable. Even if a comment is intended to be humorous, it may still be reasonably expected
+          to create one or more feelings of being harassed, threatened, bullied, or stalked. Other players
+          do not deserve to be spoken to in this way and judges are responsible for enforcing the standards
+          Wizards of the Coast has put forth. It doesn’t matter if a particular judge personally feels
+          this type of insult doesn’t merit a Match Loss, they should consider only how others might be
+          expected to react to it.
+        zh: 符合上述标准针对个人的骚扰言论或者威胁言辞是不被接受的。即使牌手说出该言论的目的只是幽默，它仍然可能会造成他人感到受骚扰、危险、欺侮或者尾随。其他牌手不应被这类言论所针对，而裁判有责任执行威世智倡导的标准。个别裁判感觉这类侮辱不应判罚一局负是不重要的，他/她只应考虑其他人会对此有何反应。
+      sourceRawUnits:
+      - raw-L003276
+      - raw-L003282
+    - id: ipg-ann-4-2-d0f69da0f8d1-g01-b02
+      type: paragraph
+      text:
+        en: Furthermore, the infraction doesn’t depend on whether or not anybody was actually made to
+          feel any of these ways. The IPG has no way to measure or normalize how offended a person is.
+          We, as judges, also do not want a player’s level of offense dictating the severity of a penalty
+          as offense is highly subjective.
+        zh: 此外，违规与是否有人确实感到被骚扰、威胁、欺侮、尾随并无关联。IPG无法衡量或者标准化一个人受到的冒犯的程度。我们作为裁判也不想使用一个牌手受冒犯的程度来指导判罚的严重程度，因为被冒犯的感受是高度主观的。
+      sourceRawUnits:
+      - raw-L003278
+      - raw-L003284
+    - id: ipg-ann-4-2-d0f69da0f8d1-g01-b03
+      type: paragraph
+      text:
+        en: Similarly, a generic comment that merely annoys or offends another person is not necessarily
+          sufficient for Unsporting Conduct — Major. Again, what’s important here is whether or not the
+          action could reasonably create feelings of being harassed, threatened, bullied, or stalked.
+          Here, too, judges must take care to make sure that their own personal likelihood to be offended
+          doesn’t preclude their treating players fairly. Judges should be be mindful to neither over
+          -nor under- penalize for Unsporting Conduct based on their own personal biases.
+        zh: 类似的，仅仅只是让人厌烦或者冒犯他人的一般言论可能达不到举止违背运动道德-严重这个违规的标准。重复一遍，重要的是行为是否有可能使人产生被骚扰、威胁、欺侮、尾随的感受。在此裁判必须小心，不能让自己对冒犯的个人判断妨碍他们对待牌手的公平性。裁判应当留意不能依据自己的个人偏见来重判或轻判违背运动道德的行为。
+      sourceRawUnits:
+      - raw-L003280
+      - raw-L003286
+- id: ipg-ann-4-2-a7d1b3aa95da
+  anchor:
+    type: block
+    id: ipg-b000150
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-4-2-a7d1b3aa95da-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-a7d1b3aa95da-g01-b01
+      type: paragraph
+      text:
+        en: Threats of violence, be they explicit or implied, represent an even more serious category
+          of problems that should be dealt with even more severely. Unsporting Conduct — Major does not
+          cover these.
+        zh: 暴力挑衅，不论明显的或者含蓄的，都是更为严重的问题，因此应当更为严格地处理。举止违背运动道德～严重不涵盖此情况。
+      sourceRawUnits:
+      - raw-L003292
+      - raw-L003294
+- id: ipg-ann-4-2-ba783d68be37
+  anchor:
+    type: block
+    id: ipg-b000151
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-2-ba783d68be37-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-ba783d68be37-g01-b01
+      type: paragraph
+      text:
+        en: Realistically, most incidents of Unsporting Conduct — Major will have come about without malicious
+          intent. Whether or not a player simply used a poorly-chosen word or made an instantly-regretted
+          remark doesn’t matter in determining whether or not the infraction has been committed. If a
+          player does or says something that could reasonably create feelings of being harassed, threatened,
+          bullied, or stalked, even without meaning to, then the damage has potentially already been done
+          and the player should still receive the penalty.
+        zh: 实际上，大多数举止违背运动道德～严重的实例并非由恶意的企图所导致。一位牌手是否只是简单地使用错误的词语或者立刻感到后悔的言辞对于判定其是否犯下违规并不重要。如果一个牌手做了或说了很可能产生他人被骚扰、威胁、欺侮、尾随感受的事，即使该牌手不是有意而为，伤害有可能已经造成了，所以牌手仍然应当受到判罚。
+      sourceRawUnits:
+      - raw-L003300
+      - raw-L003304
+    - id: ipg-ann-4-2-ba783d68be37-g01-b02
+      type: paragraph
+      text:
+        en: In fact, if a player committing Unsporting Conduct — Major does so with malicious intent,
+          meaning they have acted with the specific intention of creating a toxic environment for others,
+          then the penalty for this infraction should be upgraded to a Disqualification as explained below.
+        zh: 事实上，如果牌手触犯举止违背运动道德～严重是因为恶意，这表示他有意图地对他人制造不良环境，而对此违规的判罚应当如下详述的升级。
+      sourceRawUnits:
+      - raw-L003302
+      - raw-L003306
+- id: ipg-ann-4-2-dbee2d2b803b
+  anchor:
+    type: block
+    id: ipg-b000157
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-2-dbee2d2b803b-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-dbee2d2b803b-g01-b01
+      type: paragraph
+      text:
+        en: To help establish the difference between this infraction and some other similarly-seeming,
+          yet fundamentally different errors, here are a few “anti-examples” of behavior that should usually
+          not be considered Unsporting Conduct — Major. It may be helpful to refer back to these after
+          reading through some other sections of this annotation.
+        zh: 为了区分此违规与其他看起来类似但根本上不同的违规，下面有一些范例，包含一些通常不被考虑为举止违背运动道德～严重的行为。阅读完此注释的其他部分之后再回顾这些范例是有益的。
+      sourceRawUnits:
+      - raw-L003334
+      - raw-L003362
+    - id: ipg-ann-4-2-dbee2d2b803b-g01-b02
+      type: paragraph
+      text:
+        en: ANTI-EXAMPLES
+        zh: '反例:'
+      sourceRawUnits:
+      - raw-L003336
+      - raw-L003364
+  - id: ipg-ann-4-2-dbee2d2b803b-g02
+    kind: ordered-list
+    blocks:
+    - id: ipg-ann-4-2-dbee2d2b803b-g02-b01
+      type: list-item
+      text:
+        en: After losing a game, a player physically threatens their opponent using a racial slur and
+          saying they’ll see them in the parking lot.
+        zh: 输掉一盘比赛后，一位牌手用种族歧视言论威胁他的对手并要和对手在停车场约架。
+      sourceRawUnits:
+      - raw-L003338
+      - raw-L003366
+      marker: Z
+  - id: ipg-ann-4-2-dbee2d2b803b-g03
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-dbee2d2b803b-g03-b01
+      type: paragraph
+      text:
+        en: While it is true that this certainly could be expected to cause feelings of harassment and
+          threat, this is not Unsporting Conduct — Major because it more appropriately meets the definition
+          of Aggressive Behavior. Threatening violence is a more serious concern and so takes precedence.
+        zh: 虽然上述行为确实会产生骚扰和威胁感，这并不是举止违背运动道德～严重，因为这更符合攻击性举止。暴力威胁是更严重的问题，所以优先考虑。
+      sourceRawUnits:
+      - raw-L003340
+      - raw-L003368
+  - id: ipg-ann-4-2-dbee2d2b803b-g04
+    kind: ordered-list
+    blocks:
+    - id: ipg-ann-4-2-dbee2d2b803b-g04-b01
+      type: list-item
+      text:
+        en: After losing their match, a player throws their chair in anger at a group of spectators, but
+          doesn’t actually hit any of them.
+        zh: 牌手输了一局比赛后愤怒的把椅子扔向一群观众，但实际上没有伤到任何人。
+      sourceRawUnits:
+      - raw-L003342
+      - raw-L003370
+      marker: Y
+  - id: ipg-ann-4-2-dbee2d2b803b-g05
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-dbee2d2b803b-g05-b01
+      type: paragraph
+      text:
+        en: Again, this is not Unsporting Conduct — Major. Violence directed toward someone is more properly
+          categorized as Aggressive behavior.
+        zh: 再一次，这不是举止违背运动道德～严重。直接针对他人的暴力行为被划分为攻击性举止。
+      sourceRawUnits:
+      - raw-L003344
+      - raw-L003372
+  - id: ipg-ann-4-2-dbee2d2b803b-g06
+    kind: ordered-list
+    blocks:
+    - id: ipg-ann-4-2-dbee2d2b803b-g06-b01
+      type: list-item
+      text:
+        en: A player refuses to shake their opponent’s hand after losing a close game. The opponent, with
+          no reason to believe otherwise, assumes that the refusal is due to their gender.
+        zh: 一位牌手在差之毫厘地输掉一盘游戏后拒绝与对手握手。他的对手认为对手拒绝的唯一合理理由是因为她的性别。
+      sourceRawUnits:
+      - raw-L003346
+      - raw-L003374
+      marker: X
+  - id: ipg-ann-4-2-dbee2d2b803b-g07
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-dbee2d2b803b-g07-b01
+      type: paragraph
+      text:
+        en: This is not Unsporting Conduct — Major or any other infraction, really. As said in the introduction
+          to Unsporting Conduct, unsporting behavior is not the same as a lack of sporting behavior. Refusing
+          a friendly handshake might not be very nice, but it isn’t actually against the rules.
+        zh: 事实上，这不是举止违背运动道德～严重或者任何其他违规。如举止违背运动道德的介绍中所说，违背运动道德的行为与缺乏运动精神的行为是不同的。拒绝友好的握手可能显得不友善，但是这并不违反规则。
+      sourceRawUnits:
+      - raw-L003348
+      - raw-L003376
+  - id: ipg-ann-4-2-dbee2d2b803b-g08
+    kind: ordered-list
+    blocks:
+    - id: ipg-ann-4-2-dbee2d2b803b-g08-b01
+      type: list-item
+      text:
+        en: A player opens their sealed pool and exclaims to themself in disgust, “These cards are gay!”
+        zh: 牌手打开他的现开牌池并厌恶的自言自语“这牌池太基佬了”
+      sourceRawUnits:
+      - raw-L003350
+      - raw-L003378
+      marker: W
+  - id: ipg-ann-4-2-dbee2d2b803b-g09
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-dbee2d2b803b-g09-b01
+      type: paragraph
+      text:
+        en: Once again, this is not Unsporting Conduct — Major, but does sound like it may be Unsporting
+          Conduct — Minor. While statements like this are sure to offend some people, they are a lot less
+          likely to cause feelings of being harassed, threatened, bullied, or stalked, as they are not
+          specifically directed at anybody. Merely offending others is not sufficient for meeting the
+          criteria for this infraction; in order for something to be considered Unsporting Conduct — Major,
+          it must reasonably potentially cause one or more of these feelings. Note that in issuing the
+          Unsporting Conduct — Minor infraction, the player should still be talked to about this behavior
+          and told to knock it off.
+        zh: 这也不是举止违背运动道德～严重，但这可能符合举止违背运动道德～轻微的定义。即使这样的言论很可能会冒犯一些人，但不大可能会导致被骚扰、威胁、欺侮、尾随的感受。因为这些言论并不直接针对任何人。仅仅只是冒犯他人并不满足此违规的充分条件。一个行为要想被认为是举止违背运动道德～严重，应当可能造成他人一个或多个上述的不良感受。注意，确认举止违背运动道德～轻微违规后，应当教育牌手上述行为是不好的，并要求其不再犯。
+      sourceRawUnits:
+      - raw-L003352
+      - raw-L003380
+  - id: ipg-ann-4-2-dbee2d2b803b-g10
+    kind: ordered-list
+    blocks:
+    - id: ipg-ann-4-2-dbee2d2b803b-g10-b01
+      type: list-item
+      text:
+        en: A player in a losing position repeatedly shouts expletives to themself during their match
+          and is issued a Warning for Unsporting Conduct — Minor. During the next round, that player continues
+          to use the same expletives.
+        zh: 牌手快要输掉对局时不断地自言自语地咒骂，因举止违背运动道德～轻微被判警告。下一轮比赛中，牌手仍然继续此行为。
+      sourceRawUnits:
+      - raw-L003354
+      - raw-L003382
+      marker: V
+  - id: ipg-ann-4-2-dbee2d2b803b-g11
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-dbee2d2b803b-g11-b01
+      type: paragraph
+      text:
+        en: Similarly, this is not Unsporting Conduct — Major. Repeated infractions of Unsporting Conduct
+          — Minor do not automatically upgrade the infraction to Unsporting Conduct — Major. Please refer
+          to the Unsporting Conduct — Minor infraction in the IPG for guidance on dealing with recurrences
+          of that error.
+        zh: 类似地，这不是举止违背运动道德～严重。重复违反举止违背运动道德～轻微的违规行为并不自动升级为举止违背运动道德～严重。请根据IPG中关于举止违背运动道德～轻微的指导来处理累犯此违规的行为。
+      sourceRawUnits:
+      - raw-L003356
+      - raw-L003384
+  - id: ipg-ann-4-2-dbee2d2b803b-g12
+    kind: ordered-list
+    blocks:
+    - id: ipg-ann-4-2-dbee2d2b803b-g12-b01
+      type: list-item
+      text:
+        en: A player, Nevin has Xe/Xem/Xyr pronouns is in a match against Sky (She/Her).  Sky calls a
+          judge and during the call misgenders Nevin using he/him pronouns. Nevin moves uncomfortably
+          and Sky says, “Oh, um, Xe. Xe tapped out for…” and proceeds with the judge question.
+        zh: 牌手Nevin对自己使用Xe/Xem/Xyr代词，正在与Sky（她）进行对局。Sky 呼叫裁判，并在陈述过程中使用he/him（他）指代 Nevin，错称了其性别。Nevin表现出不适，Sky随即说道：“噢，嗯，是
+          Xe。Xe 横置了……”然后继续向裁判提问。
+      sourceRawUnits:
+      - raw-L003358
+      - raw-L003386
+      marker: U
+  - id: ipg-ann-4-2-dbee2d2b803b-g13
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-dbee2d2b803b-g13-b01
+      type: paragraph
+      text:
+        en: This is not Unsporting Conduct — Major. The concept of intentionality is often found by either
+          remorse from the player who misgendered or by rapid self-correction. The investigation for intention
+          is usually fairly easy as those intentionally misgendering are oft eager to tell you.
+        zh: '这不属于举止违背运动道德～严重。判断是否存在「蓄意」，通常取决于错称性别的牌手是否表现出懊悔，或者是否进行了快速的自我纠正。对蓄意与否的调查通常很容易，因为那些故意错称性别的人往往恨不得直接告诉你。（译注：Xe/Xem/Xyr:
+          这是一组英语中的中性代词，用于非二元性别者。在中文语境下很难完美对应。）'
+      sourceRawUnits:
+      - raw-L003360
+      - raw-L003388
+- id: ipg-ann-4-2-58c0302ead93
+  anchor:
+    type: block
+    id: ipg-b000158
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-2-58c0302ead93-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-58c0302ead93-g01-b01
+      type: paragraph
+      text:
+        en: This should pretty much go without saying. Magic tournaments are supposed to be safe, non-threatening,
+          family-friendly affairs.
+        zh: 这是不言自明的。万智牌比赛应当是安全的、无害的、适合家庭参与的事情。
+      sourceRawUnits:
+      - raw-L003396
+      - raw-L003398
+- id: ipg-ann-4-2-7e8d01867103
+  anchor:
+    type: block
+    id: ipg-b000158
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-4-2-7e8d01867103-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-7e8d01867103-g01-b01
+      type: paragraph
+      text:
+        en: Note that there is a distinction between purposefully creating a harmful and/or unwelcoming
+          situation and doing so “with malicious intent.” A player who intentionally takes a harmful action
+          — such as making a harassing off-color remark — might not necessarily have expected any offense
+          by it. It’s possible, for example, for a player to use a particular ethnic slur without knowing
+          its definition or being aware of its vulgar nature. Again, if a player did actually mean specific
+          and longer-lasting harm with their words or actions, the penalty for the infraction should be
+          upgraded to Disqualification as explained later.
+        zh: 注意，故意制造有害或者不受欢迎的情况与不怀好意地这样做是有区别的。牌手故意做出有害行为，比如骚扰他人的下流言辞，可能不是打算冒犯其他人。举例来说，牌手使用了种族歧视词汇，但他有可能并不知道该词汇的含义，或者意识到它的粗俗性质。再一次说明，如果一个牌手有意地使用言语或行为故意对他人造成持久性伤害，那么判罚应当如后文叙述地升级为取消资格。
+      sourceRawUnits:
+      - raw-L003404
+      - raw-L003410
+    - id: ipg-ann-4-2-7e8d01867103-g01-b02
+      type: paragraph
+      text:
+        en: Determining whether or not a player has demonstrated remorse requires at least a basic level
+          of attentiveness and empathy. Statements such as “I’m sorry,” and “I shouldn’t have done that,”
+          are good indications that a player regrets their actions and won’t repeat them. Conversely,
+          statements like “it was just a joke,” or “this is ridiculous,” are potential red flags indicating
+          that a player doesn’t yet understand the harmful implications of their behavior, or is simply
+          not well-conditioned for participation in a non-threatening environment. Special care should
+          be used by judges to ensure that infracting players disagreeing with or being upset over a Match
+          Loss penalty are still separately given a chance to show remorse for their actions.
+        zh: 判定牌手是否懊悔需要一定的专注力与同理心。言辞如“我很抱歉”和“我不应该这样做”是比较好的迹象，表明牌手对他的行为表示后悔，并不会再犯。相反的，言辞如“那只是开玩笑啦”或者“你一定是在逗我”都是潜在危险迹象，表明牌手还没有意识到他/她的行为造成的有害影响，或者他目前的状态并不适合在无威胁环境中继续参赛。裁判应当特别小心处理这类违规，保证那些因为不同意一局负判罚或者因为判罚而不爽的违规牌手仍然在稍后有机会对自己的违规行为表示懊悔。
+      sourceRawUnits:
+      - raw-L003406
+      - raw-L003412
+    - id: ipg-ann-4-2-7e8d01867103-g01-b03
+      type: paragraph
+      text:
+        en: A player not demonstrating sincere remorse should be informed that continuing to not do so
+          will result in their Disqualification. An ultimatum like “If you want to continue playing today,
+          you’ll need to convince me that this isn’t going to be a problem again,” may be enough to prompt
+          the regret and humility necessary for the player to be allowed to stay in the tournament. Note
+          that, “I don’t agree with you, but I’ll stop,” should be an acceptable response.
+        zh: 牌手若没有表现出真诚的懊悔，裁判应该告知该牌手，如果仍不进行道歉将导致他/她被取消资格。诸如“如果你今天想要继续比赛，你需要让我相信你不会再制造麻烦”这样的最后通牒可能足以促使想要继续比赛的牌手感到后悔与羞愧。注意，“我不认同你，但我会停止”是一个可以接受的反应。
+      sourceRawUnits:
+      - raw-L003408
+      - raw-L003414
+- id: ipg-ann-4-2-5aa511d2d0af
+  anchor:
+    type: block
+    id: ipg-b000159
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-2-5aa511d2d0af-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-5aa511d2d0af-g01-b01
+      type: paragraph
+      text:
+        en: Some judicious teamwork may be a useful approach, here. For example, the attending judge might
+          ask to speak to the offending player privately. After they have been escorted from the playing
+          area, another assisting judge might then inform the opponent that they will be receiving a win
+          for the current match, assist them with gathering their belongings, and then ask them to leave
+          the table. Then, after the attending judge has finished explaining the infraction and penalty
+          to the offending player (see below for more on this topic), that judge would be able to escort
+          them back to the playing area to retrieve their belongings without risk of further confrontation.
+        zh: 审慎判断现场情况并开展团队合作可能会十分有效。举例来说，参与判罚的裁判可以要求与做出冒犯行为的牌手私下交谈。在被带出比赛区域后，另一位协助的裁判可以告知对手，她将会得到当前对局的胜利，并且协助她带好她的物品并离开。然后，在参与判罚的裁判向做出冒犯行为的牌手解释完违规和判罚之后（以下有更多关于此主题的内容），该裁判可以带他回到比赛区域取回他的物品。这样做可以避免进一步对抗的风险。
+      sourceRawUnits:
+      - raw-L003420
+      - raw-L003422
+- id: ipg-ann-4-2-2021e2e81d12
+  anchor:
+    type: block
+    id: ipg-b000159
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-4-2-2021e2e81d12-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-2021e2e81d12-g01-b01
+      type: paragraph
+      text:
+        en: Handling aggressive behavior with more aggressive behavior is a poor way to approach a situation,
+          as it tends to make things worse. When dealing with an unruly player, keeping cool yet remaining
+          firm is usually the best approach. Judges should remove the player from the situation by, for
+          example, asking them to step away from the playing area or to come outside to talk. This has
+          the effect of giving the player time to cool off, while providing an opportunity for the judge
+          to talk with them, let them vent, and do whatever else is needed to calm the offending player
+          down.
+        zh: 用更具有攻击性的行为来处理攻击性行为是一个糟糕的方法，它会导致情况变得更差。当面对不守规矩的牌手时，保持冷静而坚定通常是最佳方式。裁判应当让牌手脱离不好的情形，可运用的方式如请他/她离开比赛区域到一旁谈谈，让他把情绪发泄出来，然后再设法让牌手冷静下来。
+      sourceRawUnits:
+      - raw-L003428
+      - raw-L003432
+    - id: ipg-ann-4-2-2021e2e81d12-g01-b02
+      type: paragraph
+      text:
+        en: It is important for judges to remember to themselves remain calm. When dealing with Unsporting
+          Conduct — Major, a judge’s first priority is to de-escalate the situation, which will be difficult
+          or impossible if that judge is angry, upset, or visibly nervous. Assessing the penalty should
+          only be done once everything else is under control.
+        zh: 对于裁判来说，最重要的是记住要保持冷静。当你处理举止违背运动道德～严重时，裁判的第一要务是缓和事态。如果裁判自己就很愤怒、不爽或显得紧张，就很难甚至不可能去缓和事态。只有当事态进入可控的范围内之后，再决定判罚。
+      sourceRawUnits:
+      - raw-L003430
+      - raw-L003434
+- id: ipg-ann-4-2-cd947634427a
+  anchor:
+    type: block
+    id: ipg-b000159
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-4-2-cd947634427a-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-cd947634427a-g01-b01
+      type: paragraph
+      text:
+        en: Judges should take their time dealing with all players involved in Unsporting Conduct — Major
+          – not just the offender. Other players made to feel harassed, threatened, bullied, or stalked
+          may also require some brief counseling and/or an explanation of the corrective action being
+          applied to the match and opponent.
+        zh: 裁判应该花时间处理所有涉及到举止违背运动道德～严重事件的牌手，而不仅仅只是冒犯者。其他感到受骚扰、威胁、欺侮或尾随的牌手可能也需要一些简短地建议和/或解释，告知他对手应做出的改正行为、以及当前对局的解决方法。
+      sourceRawUnits:
+      - raw-L003440
+      - raw-L003444
+    - id: ipg-ann-4-2-cd947634427a-g01-b02
+      type: paragraph
+      text:
+        en: Because the penalty for this infraction is a Match Loss, it is unlikely that issuing it will
+          result in much delay to the entire tournament, even when significant time is needed to help
+          the players cool down. Since the match is already over, an extension will usually not be required.
+        zh: 因为此违规的判罚是一局负，给出此判罚一般不会对整场比赛造成太多的拖延，即使让牌手们冷静下来需要花费不少时间。由于对局已经结束，通常是不需要延时的。
+      sourceRawUnits:
+      - raw-L003442
+      - raw-L003446
+- id: ipg-ann-4-2-eacede6eca1d
+  anchor:
+    type: block
+    id: ipg-b000159
+  position: after
+  order: 40
+  groups:
+  - id: ipg-ann-4-2-eacede6eca1d-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-eacede6eca1d-g01-b01
+      type: paragraph
+      text:
+        en: One of the main reasons why the penalty for Unsporting Conduct — Major is a Match Loss is
+          that assessing it immediately disengages the offending player from their opponent. It would
+          be unreasonable to expect the female opponent of a player who uses, for example, misogynistic
+          language to continue the match after a judge has intervened. If such an opponent doesn’t want
+          any further contact, this request should be honored. After the penalty is issued, the match
+          is automatically ended, so there’s no need for any further interaction.
+        zh: 举止违背运动道德～严重的判罚是一局负的一个主要原因是，它能够直接让冒犯者与他的对手分开来。举例来说，指望女性牌手在对手使用厌恶女性的言语之后还继续比赛是不合理的，即使裁判对不良行为进行了干预。如果对手不希望继续与冒犯者有更多的接触，这一需求应当被尊重。在判罚给出之后，对局自动结束，所以双方没有必要进一步互动。
+      sourceRawUnits:
+      - raw-L003452
+      - raw-L003456
+    - id: ipg-ann-4-2-eacede6eca1d-g01-b02
+      type: paragraph
+      text:
+        en: However, a player eager to apologize is a good indication that they are demonstrating enough
+          remorse to be allowed to continue playing after receiving their penalty. This is true even if
+          they are not given the chance to deliver it.
+        zh: 然而，一位牌手很愿意道歉是一个良好的迹象。他/她表现出足够懊悔的话可以被允许在受到判罚之后继续比赛。即使对手并不想接受致歉也是如此。
+      sourceRawUnits:
+      - raw-L003454
+      - raw-L003458
+- id: ipg-ann-4-2-0851062b5da4
+  anchor:
+    type: block
+    id: ipg-b000160
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-2-0851062b5da4-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-0851062b5da4-g01-b01
+      type: paragraph
+      text:
+        en: Note that because the penalty for this infraction is a Match Loss (or Disqualification), as
+          with all penalties greater than a Warning, the Head Judge should be made aware before it is
+          issued. However, the first priority when dealing with potential Unsporting Conduct — Major is
+          de-escalation of the situation through separation of the players and calming of the people involved.
+          Judges should make sure this goal is met before taking further action.
+        zh: 注意，因为此违规的判罚是一局负（或者取消资格），与所有严重程度超过警告的判罚一样，需要在给出判罚前告知主审。然而，处理可能是举止违背运动道德～严重的事件时，第一要务是缓和事态，分开牌手并让涉及到的人们冷静下来。裁判应当在采取进一步动作前确保这一点。
+      sourceRawUnits:
+      - raw-L003464
+      - raw-L003466
+- id: ipg-ann-4-2-7b6b104c70ad
+  anchor:
+    type: block
+    id: ipg-b000160
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-4-2-7b6b104c70ad-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-7b6b104c70ad-g01-b01
+      type: paragraph
+      text:
+        en: It is expected that players will sometimes become offended or be made otherwise uncomfortable
+          by another player’s actions without those actions being considered to reasonably cause feelings
+          of being harassed, threatened, bullied, or stalked. In such a circumstance, the more appropriate
+          infraction may be, but is not necessarily, Unsporting Conduct — Minor. Judges should refer to
+          that infraction to make sure that the player’s behavior matches up to what’s described therein.
+        zh: 有可能发生一种情况，牌手有时因其他牌手的行为被冒犯或感到不适，而这些行为不是易使人感到被骚扰、威胁、欺侮或尾随。在这种情况下，更为适用的违规可能是（但不一定是）举止违背运动道德～轻微。裁判应当参考该违规的条文以确定牌手的行为是否符合该违规的描述。
+      sourceRawUnits:
+      - raw-L003472
+      - raw-L003476
+    - id: ipg-ann-4-2-7b6b104c70ad-g01-b02
+      type: paragraph
+      text:
+        en: Fostering a safe, non-threatening, family-friendly environment by talking to players about
+          their unfriendly conduct is highly encouraged. Judges do not need to wait until a player actually
+          commits an infraction before getting involved. Pro-activity on the part of judges – by listening
+          for and intervening in intensifying situations – is always a good idea. Furthermore, players
+          should usually be talked to about their own offensive behavior even if they are not receiving
+          a penalty.
+        zh: 我们鼓励裁判与牌手关于其不友好行为进行谈话，来培养一个安全的、无威胁的、适合家庭参与的环境。裁判不需要等待牌手实际违规了之后才介入。裁判积极主动地聆听并介入正在升级的事态总是正确的方式。进一步来讲，牌手做出了冒犯行为，即使没受到判罚，通常也应该接受关于这种行为的谈话。
+      sourceRawUnits:
+      - raw-L003474
+      - raw-L003478
+- id: ipg-ann-4-2-96caf4ba3084
+  anchor:
+    type: block
+    id: ipg-b000161
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-2-96caf4ba3084-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-96caf4ba3084-g01-b01
+      type: paragraph
+      text:
+        en: The outward display of remorse and a tacit agreement to not repeat the unacceptable behavior
+          is generally all that’s necessary for correction, here. As described above, apologies should
+          be encouraged, but they are not usually required.
+        zh: 外在表现出懊悔以及默认不再重复不可接受的行为通常就足以视为改正了。如上文所述，道歉是值得鼓励的，但是一般不要求牌手致歉。
+      sourceRawUnits:
+      - raw-L003486
+      - raw-L003488
+- id: ipg-ann-4-2-fee9b19661a7
+  anchor:
+    type: block
+    id: ipg-b000161
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-4-2-fee9b19661a7-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-fee9b19661a7-g01-b01
+      type: paragraph
+      text:
+        en: As a rule of thumb, if a player committing Unsporting Conduct — Major has already won (or
+          has not yet lost) the current match, the penalty should be applied to that round, with the judge
+          updating match results as necessary. Conversely, if the player committing the infraction has
+          already lost the current match, the penalty should be deferred to the next round, instead.
+        zh: 如果牌手触犯举止违背运动道德～严重时已经赢得当前对局（或者还没有输），判罚应当应用在这一轮，并且有必要的话裁判应当更改对局结果。相反的，若一位牌手违规时已经输掉了当前对局，那么判罚应当改为在下一轮生效。
+      sourceRawUnits:
+      - raw-L003494
+      - raw-L003500
+    - id: ipg-ann-4-2-fee9b19661a7-g01-b02
+      type: paragraph
+      text:
+        en: Note that this represents a very different philosophy from that of most other infractions
+          found in the IPG. With most other errors, it is usually appropriate to apply the penalty to
+          the game in which the mistake has been made regardless of either player’s board position or
+          game record. For example, if a player commits a third Game Rule Violation, that player should
+          almost always be assessed a Game Loss for the current game even if that player happens to be
+          very far behind on resources, is facing lethal combat damage, or is otherwise about to lose.
+          However, this is not true for Unsporting Conduct — Major.
+        zh: 注意，这代表了一个与IPG其他违规显得非常不同的原则。对于大多数其他错误而言，通常应用判罚在当前对局中，即犯下错误的对局，而不考虑牌手的场面情况或对局成绩。例如，若一位牌手第三次犯下违反游戏规则，这个牌手触犯违规的牌局应判负，即使这位牌手的资源/场面已大幅度落后，正面临致命战斗伤害，或马上要输了。然而这并不适用于举止违背运动道德～严重。
+      sourceRawUnits:
+      - raw-L003496
+      - raw-L003502
+    - id: ipg-ann-4-2-fee9b19661a7-g01-b03
+      type: paragraph
+      text:
+        en: The reason for this difference in philosophy is simple. Unlike most other infractions, it’s
+          possible for a player to commit Unsporting Conduct — Major after a match has already ended,
+          but before the players have left the table. If a player has already recorded a Match Loss through
+          the normal course of play, but still manages to commit this error during that same round, applying
+          the Match Loss immediately may fail to have the intended impact on the player, and probably
+          won’t help illustrate that their actions were unacceptable. Some additional dispensation – being
+          able to delay the penalty one round – is necessary to properly deliver justice in this case.
+          Significant errors bear significant penalties.
+        zh: 原理上有所不同的理由很简单。与其他违规不同，牌手触犯举止违背运动道德～严重可能是在一盘比赛结束之后且离开赛桌之前。若一位牌手已经因为普通的原因被判罚一局负，但仍然在同一轮比赛中触犯举止违背运动道德～严重，应用一局负判罚可能无法达到预期的对该牌手的影响，而且有可能无法使其认识到他的行为是不可被接受的。一些额外的调整——下一局才让处罚生效——对于执行公正而言是必要的。重大错误应受到严厉判罚。
+      sourceRawUnits:
+      - raw-L003498
+      - raw-L003504
+- id: ipg-ann-4-2-9a2a91daa1e1
+  anchor:
+    type: block
+    id: ipg-b000162
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-2-9a2a91daa1e1-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-2-9a2a91daa1e1-g01-b01
+      type: paragraph
+      text:
+        en: This is an admittedly tricky section of the policy, as the term “malicious intent” isn’t especially
+          well-defined. However, what this is getting at is that judges need to use some careful discernment
+          to investigate the intent behind Unsporting Conduct — Major infractions in order to determine
+          the appropriate penalty. Players that simply had a temporary lapse in social decorum, were caught
+          up in the heat of the moment, or just miscalculated the implications of their own actions probably
+          haven’t committed this error maliciously.
+        zh: 必须承认方针的这一部分有些复杂，因为“恶意企图”不好被定义。然而，裁判需要敏锐的洞察力来调查牌手违规的意图，目的在于决定恰当的判罚。牌手只是在社会礼仪方面一时过失，或一时冲动，或只是错误估计了他们行为的影响，不应当被认定为恶意。
+      sourceRawUnits:
+      - raw-L003510
+      - raw-L003522
+    - id: ipg-ann-4-2-9a2a91daa1e1-g01-b02
+      type: paragraph
+      text:
+        en: On the other hand, and to quote Sean Catanese, “A player who intends to intimidate or involuntarily
+          control someone else with their actions, yet stops short of being outright aggressive or threatening
+          (Aggressive Behavior), is still actively choosing to harm someone. That player does not belong
+          in a Magic tournament.” Players fitting this profile should be disqualified and removed from
+          the venue.
+        zh: 另一方面，引用Sean Catanese的话，“牌手意图用某些行为恐吓或胁迫他人，即使这些行为又不完全是攻击性或者威胁性的（即攻击性举止），仍然是主动伤害他人。这样的牌手不能留在万智牌比赛中”。符合这项定义的牌手应当被取消资格并逐出赛场。
+      sourceRawUnits:
+      - raw-L003512
+      - raw-L003524
+    - id: ipg-ann-4-2-9a2a91daa1e1-g01-b03
+      type: paragraph
+      text:
+        en: A player taking inappropriate photos of another player because they think it’s funny is probably
+          not acting with malicious intent. A player taking these photos for the purpose of using them
+          to publicly mock the subject probably is. A player continuously asking another player for a
+          date because they think that they can convince them to change their mind is probably not acting
+          with malicious intent. A player continuing to ask because they know it makes them feel uncomfortable
+          probably is. A player using a racial slur because they are frustrated and angry is probably
+          not acting with malicious intent. A player using a racial slur that is directed and targeted
+          as an insult probably is.
+        zh: 牌手因为觉得有趣而拍下其他牌手的不雅照片可能不是一种恶意行为。牌手拍下这些照片来为了公开嘲弄他人则是恶意行为。一位牌手不断地邀请另一位牌手与他约会，因为他认为他可以说服她改变主意，这可能不是一种恶意行为。牌手不断地邀请另一位牌手与他约会，因为他知道这样能让她感到不适，则可能是恶意行为。一位牌手因为沮丧和愤怒使用种族歧视言辞可能不是一种恶意行为。一位牌手使用种族歧视言辞直接侮辱对手，则可能是恶意行为。
+      sourceRawUnits:
+      - raw-L003514
+      - raw-L003526
+    - id: ipg-ann-4-2-9a2a91daa1e1-g01-b04
+      type: paragraph
+      text:
+        en: The necessity to handle these two types of cases differently stems from the fact that penalties
+          have their natural limits. Among other things, penalties serve to educate, and a Match Loss
+          is supposed to help teach the lesson of proper social conduct. However, it’s likely that basic
+          education will not be enough to correct a player who has chosen to commit Unsporting Conduct
+          — Major maliciously; there may be deeper issues with them than simple ignorance. Sometimes Disqualification
+          is the only suitable option.
+        zh: 以不同的处理这两种类型情况是有必要的，来源于判罚本身的局限性。在其他情形中，判罚旨在教育，一局负的目的在于教育牌手采取合适的社会行为。然而，简单的教育难以有效地纠正牌手恶意触犯举止违背运动道德～严重的行为。他的问题可能不仅是无知，而有更深层次的原因。有时取消资格是唯一恰当的选择。
+      sourceRawUnits:
+      - raw-L003516
+      - raw-L003528
+    - id: ipg-ann-4-2-9a2a91daa1e1-g01-b05
+      type: paragraph
+      text:
+        en: The same can be said about players that neither show remorse nor refrain from repeating the
+          same harmful behavior. Further education will probably not be effective for these players, either,
+          so they should be disqualified, too.
+        zh: 同样的，对于牌手毫无悔意、并且重复相同的有害行为的情况也是如此。进一步教育可能对这些牌手也是无效的，所以他们应当被取消资格。
+      sourceRawUnits:
+      - raw-L003518
+      - raw-L003530
+    - id: ipg-ann-4-2-9a2a91daa1e1-g01-b06
+      type: paragraph
+      text:
+        en: For more information, read these articles from Toby Elliott on the M15 Policy changes and
+          from Sean Catanese on the updates to Unsporting Conduct — Major.
+        zh: 更多信息参见Toby Elliott的[M15方针更新](http://blogs.magicjudges.org/telliott/2014/07/14/m15-policy-changes/)或者Sean
+          Catanese的[举止违背运动道德～严重更新](http://blogs.magicjudges.org/seacat/2014/07/14/updating-unsporting-conduct-major/)。
+      sourceRawUnits:
+      - raw-L003520
+      - raw-L003532
+- id: ipg-ann-4-3-657c12fdf0dc
+  anchor:
+    type: block
+    id: ipg-b000163
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-3-657c12fdf0dc-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-3-657c12fdf0dc-g01-b01
+      type: paragraph
+      text:
+        en: As judges, we want players actually playing Magic at our tournaments. This is not only because
+          the point of a Magic tournament is to actually play Magic, but also to uphold Magic’s reputation
+          and position as a game of skill, not chance. This is important for ensuring that Magic isn’t
+          associated with gambling. In addition, game actions that could not be taken legally to come
+          to an agreement about the outcome of the game are not permitted – see example F below.
+        zh: 作为裁判，我们想要让牌手实实在在地在比赛中打万智牌。这不仅是因为万智牌比赛的目的是打牌，也是为了维持万智牌作为一个技巧性比赛的声誉和地位，而不是运气。确保万智牌不涉及赌博是非常重要的。此外，同意用不合法的游戏行动来决定比赛结果的行为也是不被允许的——参见下列的例子F。
+      sourceRawUnits:
+      - raw-L003544
+      - raw-L003554
+    - id: ipg-ann-4-3-657c12fdf0dc-g01-b02
+      type: paragraph
+      text:
+        en: As a result, even just offering to use an outside-the-game-method (or an illegal action within
+          the game) falls into this infraction.
+        zh: 因此，仅仅只是提议一个比赛外方法（或非法的游戏行动）来决定胜方也是触犯此违规的。
+      sourceRawUnits:
+      - raw-L003546
+      - raw-L003556
+    - id: ipg-ann-4-3-657c12fdf0dc-g01-b03
+      type: paragraph
+      text:
+        en: The opponent no longer is expected to call a judge, if they receive an offer.
+        zh: 现在，如果对手收到了提议，他无需叫裁判。
+      sourceRawUnits:
+      - raw-L003548
+      - raw-L003558
+    - id: ipg-ann-4-3-657c12fdf0dc-g01-b04
+      type: paragraph
+      text:
+        en: You are also prohibited from trying to trick your opponent into making an offer to improperly
+          determine a winner.  Saying something like “Oh no. If we draw it is bad for both of us, if only
+          there was something we could do” is prohibited.
+        zh: 试图引诱对手做出不当决定胜方的提议也是禁止的。说出诸如「糟了。如果打平对我们都不好，不如我们……？」此类的话是不允许的。
+      sourceRawUnits:
+      - raw-L003550
+      - raw-L003560
+    - id: ipg-ann-4-3-657c12fdf0dc-g01-b05
+      type: paragraph
+      text:
+        en: 'Note: While the association with gambling factors into the reason the penalty is a Match
+          Loss (or DQ), please keep in mind that when explaining the penalty to players, they aren’t going
+          to care about that part of the justification.  You should focus on how rolling undermines the
+          game and the fairness to other players'
+        zh: 注意：虽然与赌博的关联是该判罚被定为一局负（或取消资格）的考量因素之一，但请记住，在向牌手解释判罚时，他们并不会关心这部分的理由。你应该着重解释掷骰子（决定胜负）是如何破坏游戏本质以及损害对其他牌手的公平性的。
+      sourceRawUnits:
+      - raw-L003552
+      - raw-L003562
+- id: ipg-ann-4-3-316643fe4833
+  anchor:
+    type: block
+    id: ipg-b000164
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-3-316643fe4833-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-3-316643fe4833-g01-b01
+      type: paragraph
+      text:
+        en: We still want to treat this infraction seriously, but we do not want to DQ players who genuinely
+          did not know this was illegal.  At local stores where rules are a bit more relaxed, players
+          might not know. We still want to educate and correct, but a DQ is too extreme.  However, if
+          players know that they are not allowed to do this, then a DQ is appropriate. Additionally, knowing
+          that offering to roll a dice is illegal, and deliberately trying to trick your opponent into
+          making an offer so that you can win shows a level awareness of what you are doing is wrong.
+        zh: 我们仍然想要严肃对待此类违规，但我们不想DQ真的不知道这样做是不允许的牌手。在规则相对较松的本地牌店，牌手可能会不知道。我们仍然想要教育并纠正牌手，但是DQ有些太极端了。然而，如果牌手知道他们不被允许如此做，那么DQ就是合适的。更有甚者，知道扔骰子是不允许的、所以故意试图引诱对手做出此类提议、并借此获得胜利的手段更能显示出你有多么清楚你这么做是错误的。
+      sourceRawUnits:
+      - raw-L003568
+      - raw-L003572
+    - id: ipg-ann-4-3-316643fe4833-g01-b02
+      type: paragraph
+      text:
+        en: 'What are actions that are “not part of the current game”? The IPG provides some helpful examples:'
+        zh: 什么行为是「不属于当前游戏的方法」？IPG提供了很多有用的例子：
+      sourceRawUnits:
+      - raw-L003570
+      - raw-L003574
+- id: ipg-ann-4-3-b8490451539d
+  anchor:
+    type: block
+    id: ipg-b000171
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-3-b8490451539d-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-3-b8490451539d-g01-b01
+      type: paragraph
+      text:
+        en: While using a random method like a die roll or coin toss is the most common example of an
+          outside-the-game method, employing any method that isn’t the requisite game of Magic fits into
+          this category. It doesn’t matter if the method is completely random (like a coin or die), has
+          a physical component (arm wrestling), or is even another game entirely (like Tic-Tac-Toe or
+          Yu-Gi-Oh). Another more controversial decision is for players to use “future cards” to determine
+          who would win. At the end of a match, it is fine for players to use current board position to
+          make a case of who should concede to whom; however, they must make a decision based on what
+          they see. Players may reveal cards that they are legally entitled to see, such as their hands.  They
+          may not reveal cards that they are not entitled to see within the game, such as cards in libraries.
+          It is not allowed to make an offer like “If I drew another land I would win. If my next card
+          is a land, you scoop to me, else, I’ll scoop to you.”
+        zh: 虽然最常见的比赛外方式是使用随机方式，例如掷骰子或硬币是例子，但使用任何比赛所需求牌手进行的万智牌游戏以外的任何方式都属于此类违规。方法是否是完全随机（例如硬币或骰子），是否涉及身体上的竞技（掰手腕），或甚至另一个游戏（例如井字棋或游戏王等），都是无关紧要的。另一个更有争议的情况是牌手使用“未来的牌”来觉得谁获胜。在一局比赛结束时，牌手根据当前的场面局势来决定谁投降是可以的；然而他们必须根据他们所知的情况来决定。牌手可以展示他们可以合法看到的牌，例如其手牌，但不能展示游戏规则不允许看到的牌，例如牌库中的牌。不允许提出“如果我抓到另一张地就能赢。如果我下一张牌是地，你投给我，否则，我投给你”这样的提议。
+      sourceRawUnits:
+      - raw-L003606
+      - raw-L003608
+- id: ipg-ann-4-3-565d733d2752
+  anchor:
+    type: block
+    id: ipg-b000172
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-3-565d733d2752-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-3-565d733d2752-g01-b01
+      type: paragraph
+      text:
+        en: As stated earlier, the results of Magic tournaments should be reached only through playing
+          actual games of Magic. Doing otherwise compromises the integrity of the tournament. What does
+          “compromise the integrity of the tournament” mean? It means we have games of Magic that are
+          being determined by some method other than the Magic games the players are supposed to play,
+          and that impacts the results of that match and the tournament as a whole. It affects other matches
+          and other players’ standings in the event. Rolling a die to determine the winner is playing
+          the system, not playing the game.
+        zh: 正如之前所述，万智牌比赛的结果应当根据实际的万智牌对局来决定。如果使用其他方式来决定结果，会违背比赛的公正性。这是什么意思呢？这表示有些对局的结果由非万智牌竞技的方式来决定，这将对对局和整场比赛造成不好的影响。这也会影响其他对局以及比赛中其他牌手的排名。掷骰子决定胜者属于利用比赛体系，而非真正打比赛。
+      sourceRawUnits:
+      - raw-L003616
+      - raw-L003618
+- id: ipg-ann-4-3-cb1ccec4a295
+  anchor:
+    type: block
+    id: ipg-b000173
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-3-cb1ccec4a295-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-3-cb1ccec4a295-g01-b01
+      type: paragraph
+      text:
+        en: Draws are a valid result for a Magic game. Trying to avoid a draw doesn’t give players an
+          excuse to use an outside-the-game method to determine a winner.
+        zh: 平局是有效的万智牌比赛结果。试图避免平局不是牌手使用比赛外手段决定胜者的借口。
+      sourceRawUnits:
+      - raw-L003624
+      - raw-L003628
+    - id: ipg-ann-4-3-cb1ccec4a295-g01-b02
+      type: paragraph
+      text:
+        en: That said, if a player asks their opponent to concede because they have an overwhelming board
+          position when time is called, that is not Improperly Determining a Winner, because nothing outside
+          the game has actually been introduced into the scenario. Of course, the opponent has every right
+          to refuse, and in that case the match result will simply be determined normally.
+        zh: 虽然如此，若一位牌手在对局时间结束时因为他的游戏局势占绝对优势更高而请他的对手投降，并不属于不当决定胜方。因为该牌手没有使用比赛外的方式来决定胜者。当然，对手有权利拒绝，这种情况下比赛结果直接根据常规情形决定。
+      sourceRawUnits:
+      - raw-L003626
+      - raw-L003630
+- id: ipg-ann-4-4-7fbe7fcc543c
+  anchor:
+    type: block
+    id: ipg-b000174
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-4-7fbe7fcc543c-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-4-7fbe7fcc543c-g01-b01
+      type: paragraph
+      text:
+        en: Where the IPG says “refer to the Magic Tournament Rules,” it means “everything on the subject
+          of Bribery besides the penalty is in the MTR.” So let’s summarize the key points here (please
+          refer to the MTR for full details on the subject). Full articles have been written on what is/is
+          not legal. We are only summarizing here.
+        zh: IPG提到“请参照《万智牌比赛规则》中的叙述”，表示“除判罚外，任何关于贿赂的内容都在MTR中”。我们来总结一下这些叙述中的关键部分（全文请参照MTR中的相关条款）。关于什么是合法的、什么是不合法的，也有专门的文章进行叙述。这里只是进行简单地总结。
+      sourceRawUnits:
+      - raw-L003642
+      - raw-L003652
+    - id: ipg-ann-4-4-7fbe7fcc543c-g01-b02
+      type: paragraph
+      text:
+        en: Dropping, conceding, or agreeing to an intentional draw must not be done in exchange for any
+          sort of reward or incentive. Statements like “I’ll scoop to you if I get your FNM promo,” or,
+          “Hey, If I make it into the Top 8, I’ll be in the money, and I can be pretty generous” are unacceptable.
+          “Hey, I’m hungry, let’s intentionally draw so we can go get some food before the next round”
+          is not an offer or an incentive, and as such is acceptable.
+        zh: 弃权、投降或者约和都不能以任何形式的奖励或诱因来交换。类似“把你的FNM闪卡给我，我就投给你”或者“嘿，如果我打入八强，我进钱圈了，我可以很慷慨哦！”的言论都是不可接受的。“嘿，我饿了，我们约和吧，这样我们可以在下一轮开始前吃点东西”不是奖励或者诱因，所以是可接受的。
+      sourceRawUnits:
+      - raw-L003644
+      - raw-L003654
+    - id: ipg-ann-4-4-7fbe7fcc543c-g01-b03
+      type: paragraph
+      text:
+        en: In the Finals, there is an exception to the Bribery rules that allow players to divide prizes
+          as they wish, so long as it does not include incentives outside of the prize pool. If the final
+          has a prize that is not divisible, like a Pro Tour Invite, then the player who does not receive
+          the “award” prize must drop from the tournament — not concede, but drop.
+        zh: 在决赛中，规则有一个例外条款，允许牌手按他们的意愿分配奖品，只要这不涉及到奖品池之外的奖励。如果决赛有不能被分割的奖励，例如PT邀请资格，则没有得到此奖励的牌手必须退赛——不是投降，而是退赛。
+      sourceRawUnits:
+      - raw-L003646
+      - raw-L003656
+    - id: ipg-ann-4-4-7fbe7fcc543c-g01-b04
+      type: paragraph
+      text:
+        en: Players can use information regarding the results of another match to determine if they want
+          to offer to intentionally draw. However, they cannot consult those other matches, or reach an
+          agreement with them.
+        zh: 牌手可以利用其它对局的信息来决定他们是否约和。但是他们不能对其他对局提出建议，或者与其他对局的牌手达成协议。
+      sourceRawUnits:
+      - raw-L003648
+      - raw-L003658
+    - id: ipg-ann-4-4-7fbe7fcc543c-g01-b05
+      type: paragraph
+      text:
+        en: In some events, during the single elimination, the players may decide to split all the prizes
+          evenly. This requires the Tournament Organizer’s agreement, and must be unanimous amongst the
+          players.
+        zh: 在某些比赛中，单淘赛阶段牌手可以决定将所有奖品平分。这必须得到比赛主办人的同意，并且必须得到所有牌手的同意。
+      sourceRawUnits:
+      - raw-L003650
+      - raw-L003660
+- id: ipg-ann-4-4-ebf809ab7fd0
+  anchor:
+    type: block
+    id: ipg-b000175
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-4-ebf809ab7fd0-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-4-ebf809ab7fd0-g01-b01
+      type: paragraph
+      text:
+        en: Wagering is easier to understand. If you wager on anything in the event, you are gambling,
+          and that is not allowed in sanctioned events. Once people wager anything on the outcome of the
+          games within the event, if judges don’t act upon that they run the risk of damaging the image
+          of Magic as a whole, beyond that single event. There have been cases where events like FNM were
+          shut down by local law enforcement because they felt it was breaking gambling laws. This is
+          the kind of thing Wizards of the Coast doesn’t want people to think of when they think of their
+          game.
+        zh: 赌博理解起来就容易一些了。如果你对赛事的任何事下赌注，你就是在赌博，而这是认证比赛所不允许的。一旦人们用任何东西做赌注，来赌比赛中对局的结果，若裁判不对此采取行动，便有可能伤害万智牌游戏的形象，而不仅仅是一场比赛。曾经有FNM被地方执法部门停办的案例，因为他们触犯了有关赌博的法律。威世智不愿意人们将万智牌视作赌博。
+      sourceRawUnits:
+      - raw-L003666
+      - raw-L003670
+    - id: ipg-ann-4-4-ebf809ab7fd0-g01-b02
+      type: paragraph
+      text:
+        en: Wagering requires two or more people to be risking something. Offering a bounty on a player
+          is not wagering. “I’ll give you a booster if you beat my friend” is only one person risking
+          something, and even then they’re hoping they do have to give the booster away.
+        zh: 赌博需要两位或更多牌手在某事上冒险。为牌手提供赏金不属于赌博。“如果你打败我的朋友，我就给你一包”只有一位牌手在冒险，而且即使如此他们也希望他们能够真的把这一包给出去。
+      sourceRawUnits:
+      - raw-L003668
+      - raw-L003672
+- id: ipg-ann-4-4-d70369e59f03
+  anchor:
+    type: block
+    id: ipg-b000176
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-4-d70369e59f03-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-4-d70369e59f03-g01-b01
+      type: paragraph
+      text:
+        en: This infraction assumes that the player or players have no knowledge that bribery or wagering
+          are not against the rules. Knowing it is against the rules changes the infraction to Unsporting
+          Conduct – Cheating.
+        zh: 这项违规假定涉事的牌手不知道赌博或贿赂是规则所不允许的。如果牌手知道，违规就变成举止违背运动道德～作弊。
+      sourceRawUnits:
+      - raw-L003678
+      - raw-L003680
+- id: ipg-ann-4-4-37dacd382cbb
+  anchor:
+    type: block
+    id: ipg-b000177
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-4-37dacd382cbb-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-4-37dacd382cbb-g01-b01
+      type: paragraph
+      text:
+        en: This is an example of buying a win, and is not allowed. It’s an unfair advantage that basically
+          would allow the person with the biggest wallet the ability to buy victories.
+        zh: 这是一个买赢对手的例子，而这是不允许的。允许有钱人买到胜利是不公平的。
+      sourceRawUnits:
+      - raw-L003688
+      - raw-L003690
+- id: ipg-ann-4-4-0f868307b6b7
+  anchor:
+    type: block
+    id: ipg-b000178
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-4-0f868307b6b7-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-4-0f868307b6b7-g01-b01
+      type: paragraph
+      text:
+        en: This is an example of an incentive determining the outcome of the results. It’s not exactly
+          as enticing as that one hundred dollar bill above, but it’s still not fair to everyone else
+          that someone can use something else to influence the outcome of their matches.
+        zh: 这是一个用奖励决定比赛结果的例子。这没有上个例子的100美金那么有诱惑力，但用某些东西影响比赛结果仍然是不公平的。
+      sourceRawUnits:
+      - raw-L003696
+      - raw-L003698
+- id: ipg-ann-4-4-a1460eb6ec09
+  anchor:
+    type: block
+    id: ipg-b000179
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-4-a1460eb6ec09-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-4-a1460eb6ec09-g01-b01
+      type: paragraph
+      text:
+        en: 'Remember that players can agree to divide prizes — perhaps because they’re friends, or they
+          feel bad about what happened to someone else in the event — but not if the split or exchange
+          is contingent upon any kind of match result. Saying you will concede for a prize split is illegal.
+          However, a legal scenario is: you offer a prize split, then, once it''s accepted, you ask your
+          opponent to concede or you concede. In this scenario, the prize split was not dependent on a
+          concession, despite the fact that once the prize split was agreed, one player no longer wanted
+          to play.'
+        zh: 记住牌手可以同意分配奖品。这或许是因为他们是朋友，或者他们对于他人的遭遇感到难过。但平分或交换奖品是根据任何比赛结果来决定的话则不行。牌手说他/她会为了平分奖品而认输是非法的。然而，一个合法的情况是，你提出奖品平分，然后，对手同意之后，你请你的对手投降或者你投降。在这个情形中，奖品平分不是根据认输来决定的，尽管事实上双方同意奖品平分以后，一位牌手不想继续玩了。
+      sourceRawUnits:
+      - raw-L003704
+      - raw-L003706
+- id: ipg-ann-4-4-002713152712
+  anchor:
+    type: block
+    id: ipg-b000180
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-4-002713152712-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-4-002713152712-g01-b01
+      type: paragraph
+      text:
+        en: Even something like “a soda for the draw” or “a foot rub at home later” is something that’s
+          now affecting the decisions of the players, regardless of the intent of that offer. It could
+          be a “joke” between two players, but we’ll never know if that’s true or not.
+        zh: 即使类似“一瓶苏打水就约和”或者“晚点回家脚底按摩”的一些提议都会影响牌手的决定，不管提议的意图如何。这可能是牌手之间在开玩笑，但我们不知道这是真的还是假的。
+      sourceRawUnits:
+      - raw-L003712
+      - raw-L003714
+- id: ipg-ann-4-4-c0506a97d9ae
+  anchor:
+    type: block
+    id: ipg-b000181
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-4-c0506a97d9ae-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-4-c0506a97d9ae-g01-b01
+      type: paragraph
+      text:
+        en: This is a great example of wagering that you might not have immediately thought of.
+        zh: 这是一个很好的关于下赌注的例子。你或许不会立刻想到它。
+      sourceRawUnits:
+      - raw-L003720
+      - raw-L003722
+- id: ipg-ann-4-4-2d42632f2594
+  anchor:
+    type: block
+    id: ipg-b000182
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-4-2d42632f2594-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-4-2d42632f2594-g01-b01
+      type: paragraph
+      text:
+        en: By offering any incentive for the results of a match, or placing incentive on the outcome
+          of the match, players have tainted the integrity of the event, and created an unfair play environment
+          where results are potentially no longer decided by games of Magic. Because this can be so damaging
+          and difficult to catch, it’s penalized.
+        zh: 为了比赛结果而提供任何奖励（贿赂），或者根据比赛结果提供奖励（赌博），牌手便玷污了比赛的公正性，并且制造了一个不公平竞赛的环境——比赛结果可能不再是根据万智牌对局本身来决定的。因为这种行为伤害极大并且难以被发现，必须对其进行判罚。
+      sourceRawUnits:
+      - raw-L003730
+      - raw-L003734
+    - id: ipg-ann-4-4-2d42632f2594-g01-b02
+      type: paragraph
+      text:
+        en: Earlier versions of the IPG had this penalty as Disqualification because of the severity of
+          the disruption to the integrity of the tournament, that is still the case, using Unsporting
+          Conduct – Cheating, if the player knew bribery or wagering were against the rules. It’s a lot
+          harder to provide education to a player unaware that a small bet or what they thought was a
+          valid prize split is against the rules when filling out disqualification paperwork than explaining
+          why they are receiving a match loss.
+        zh: 这项违规的判罚在先前版本的IPG中是取消资格，其原因是这种违规对比赛公正性的影响十分严重。现在如果牌手知道贿赂或赌博是违反规则的，判罚仍然是取消资格，但使用的是举止违背运动道德～作弊。对于没有意识到赌点小钱或是自认为合法的分奖品是规则所不允许的牌手而言，向其解释为什么他们会吃到一个一局负比起直接让他们写DQ陈述更容易起到教育效果。
+      sourceRawUnits:
+      - raw-L003732
+      - raw-L003736
+- id: ipg-ann-4-5-f74f7fc64d23
+  anchor:
+    type: block
+    id: ipg-b000183
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-5-f74f7fc64d23-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-5-f74f7fc64d23-g01-b01
+      type: paragraph
+      text:
+        en: Unsporting Conduct — Aggressive Behavior is pretty clear cut. Unlike Unsporting Conduct Minor
+          and Major, where we issue infractions based on people being made uncomfortable or hurtful/insulting
+          language (in addition to other things), Aggressive Behavior is based on physical actions or
+          language used to suggest an intent to cause physical harm.
+        zh: 举止违背运动道德～攻击性举止是很容易理解的。对于举止违背运动道德～轻微与严重而言，我们根据可能令人不适的行为或伤害性/侮辱性的言辞（以及一些其他情形）来判定这些违规。不同于它们，攻击性举止是基于肢体动作或有意伤害他人身体的言论。
+      sourceRawUnits:
+      - raw-L003748
+      - raw-L003750
+- id: ipg-ann-4-5-798cfefc7e90
+  anchor:
+    type: block
+    id: ipg-b000188
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-5-798cfefc7e90-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-5-798cfefc7e90-g01-b01
+      type: paragraph
+      text:
+        en: These examples make it pretty clear what Aggressive Behavior might be. It also includes subtle
+          threats, such as “I’ll be waiting for you in the parking lot when you leave tonight”. You don’t
+          need to get too hung up on specific words — you know a threat when you see one. It’s also important
+          to note that if a player damages their own property, while possibly intimidating, it most likely
+          doesn’t fall under Aggressive Behavior and rather falls under Unsporting Conduct – Minor — unless
+          they are doing it in a way that constitutes a threat.
+        zh: 这些例子清晰的告诉我们什么是攻击性举止。它也包括微妙的威胁，例如“今晚你离开的时候，我们停车场见！”你没有必要太在意特定的修辞——当你遇到威胁时你自然会意识到。也需要重点注意的是，如果一位牌手破坏他们自己的物品，尽管可能是在恐吓他人，这一般不是攻击性举止，更有可能是举止违背运动道德～轻微，除非他的做法对他人构成了威胁。
+      sourceRawUnits:
+      - raw-L003774
+      - raw-L003776
+- id: ipg-ann-4-5-843336cd7038
+  anchor:
+    type: block
+    id: ipg-b000189
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-5-843336cd7038-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-5-843336cd7038-g01-b01
+      type: paragraph
+      text:
+        en: The reason we issue a Disqualification for this type of infraction is because everyone should
+          feel safe at any sanctioned event, and allowing someone to continue in an event after such behavior
+          would discourage players from ever wanting to participate in an event again.
+        zh: 我们对此类违规判罚取消资格的原因是任何人都应该在认证比赛中感到安全。如果允许此类违规者继续比赛将让其他牌手不愿再参加比赛。
+      sourceRawUnits:
+      - raw-L003784
+      - raw-L003786
+- id: ipg-ann-4-5-da66dd0bea17
+  anchor:
+    type: block
+    id: ipg-b000190
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-5-da66dd0bea17-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-5-da66dd0bea17-g01-b01
+      type: paragraph
+      text:
+        en: Keep in mind that your first priority is to defuse the situation. How to do this depends on
+          the situation. However, you are not a police officer, and are not obligated to get involved
+          physically. When this infraction occurs, that player’s day at the event is over. They will be
+          disqualified. Be sure to collect a statement from the player if they are willing to give one,
+          and be sure to write your own. It’s also advised that the Tournament Organizer ask the player
+          to leave the venue as soon as possible. An important distinction here is that the Tournament
+          Organizer should be the one to actually make this decision. We can encourage the Tournament
+          Organizer to make this decision, but our jurisdiction does not reach beyond the scope of the
+          event. Once the player is no longer involved with the event, they’re no longer someone we, as
+          judges, should be dealing with.
+        zh: 请注意你的首要任务是平息事态。如何做到则需要根据具体情况而定。然而，裁判不是警察，并且没有义务在身体上介入。当此违规发生时，违规牌手的比赛就结束了。他将被取消资格。记得要获取该牌手的陈述（如果该牌手愿意的话），并且写好你自己的陈述。建议比赛组织者尽快地请牌手离开比赛场地。一个重要的区别是，比赛组织者应当是实际作出此决定的人。我们可以鼓励比赛组织者作出决定，但我们的管辖权利并不包括比赛范围之外的事情。一旦牌手已经退出比赛，他们就不是我们裁判需要应付的人。
+      sourceRawUnits:
+      - raw-L003794
+      - raw-L003796
+- id: ipg-ann-4-6-272f47251c06
+  anchor:
+    type: block
+    id: ipg-b000191
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-6-272f47251c06-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-6-272f47251c06-g01-b01
+      type: paragraph
+      text:
+        en: Stealing is unacceptable behavior. This type of conduct is just as intolerable at Magic tournaments
+          as it is among society at large. There is a clear line here; in order to receive this penalty,
+          the theft must be of materials from the tournament. Theft of an EDH deck of a player enrolled
+          in a Standard event is not Theft of Tournament Material. It is still unacceptable though, and
+          the TO should still be notified. Stealing is wrong.
+        zh: 偷窃是不可接受的行为。此类行径在万智牌比赛中正如在一般社会中一样，均是无法容忍的。这里有一条明确的界线：要适用此项判罚，被盗物品必须属于比赛物品。偷窃一位报名参加标准赛的牌手的指挥官套牌，并不属于偷窃比赛物品。但这依然是不可接受的，且仍应通知比赛主办人。偷窃是错误的行为。
+      sourceRawUnits:
+      - raw-L003808
+      - raw-L003810
+- id: ipg-ann-4-6-7d7ec24326f1
+  anchor:
+    type: block
+    id: ipg-b000194
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-6-7d7ec24326f1-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-6-7d7ec24326f1-g01-b01
+      type: paragraph
+      text:
+        en: Example C makes it clear that players who did not intentionally set out to steal something
+          may still end up committing this infraction through later inaction. A phenomenon that’s as old
+          as Magic is players forgetting to give their opponents back a creature they took with Control
+          Magic, and instead accidentally scooping and shuffling it in. Doing this is not a problem in
+          and of itself, provided that the player gives the card back or otherwise calls a judge as soon
+          as they notice the issue. However, a player noticing that they still accidentally have their
+          last round opponent’s Thragtusk in their deck and choosing to stay quiet about it is a big problem,
+          and still meets the definition of this infraction. Think of it as a form of “passive theft.”
+        zh: 例子C说明牌手即使不是故意要偷窃他人物品也可能因为不作为而触犯违规。自从万智牌问世以来，就经常出现牌手忘记将他们使用魔法操控术操控的生物还给对手，而是不小心洗入自己的套牌这样的问题。只要牌手发现后立刻把牌还回去或者呼叫裁判解决，它并不是个问题。然而牌手注意到她意外的获得了上一轮对手的犄牙兽但选择保持沉默，就会是一个大问题，也符合此违规的定义。这可以被认为是一种“被动偷窃”。
+      sourceRawUnits:
+      - raw-L003826
+      - raw-L003828
+- id: ipg-ann-4-6-eb0824ebb16d
+  anchor:
+    type: block
+    id: ipg-b000195
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-6-eb0824ebb16d-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-6-eb0824ebb16d-g01-b01
+      type: paragraph
+      text:
+        en: As the saying goes, your rights end where others’ begin. Players have a right to their own
+          stuff, and thus you have no right to take it. We shouldn’t actually need the IPG to tell us
+          this much.
+        zh: 亚伯拉罕林肯有句名言：“你有挥舞拳头的自由，但一旦碰到了我的鼻子，此自由将被终止。”牌手对他们的物品享有所有权，而他人无权拿走。我们不需要IPG来告诉我们这一点。
+      sourceRawUnits:
+      - raw-L003836
+      - raw-L003838
+- id: ipg-ann-4-6-16b892909e5e
+  anchor:
+    type: block
+    id: ipg-b000195
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-4-6-16b892909e5e-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-6-16b892909e5e-g01-b01
+      type: paragraph
+      text:
+        en: Thievery is an ever-present concern, and keeping an eye on one’s own stuff is important. Despite
+          constant reminders from judges, Tournament Organizers, and here even the IPG itself, it’s rare
+          to get through a large tournament without at least a few players’ weekends getting ruined by
+          stolen bags. While judges should remain vigilant for thieves, players are ultimately responsible
+          for their own possessions.
+        zh: 盗窃问题始终应当注意，看管好自己的物品是很重要的。尽管裁判和比赛组织者常常提醒，甚至IPG也载明，大赛中仍然总是会有一些牌手不幸被偷走东西。尽管裁判应当保持对小偷的警惕，保管自己物品责任终究还是在牌手自己。
+      sourceRawUnits:
+      - raw-L003844
+      - raw-L003846
+- id: ipg-ann-4-6-6e5aa96e3788
+  anchor:
+    type: block
+    id: ipg-b000195
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-4-6-6e5aa96e3788-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-6-6e5aa96e3788-g01-b01
+      type: paragraph
+      text:
+        en: This sentence is a little tricky. What happens if a player steals a bag of trade binders,
+          but not a player’s deck? Technically, this is not actually Theft of Tournament Material, although
+          the outcome (the removal of the player from your tournament) has more-or-less the same consequences.
+          If theft is brought to a judge’s attention, the judge should involve the Tournament Organizer.
+          They will deal with removing the individual from the store, or handling police involvement.
+        zh: 这句话有些微妙。如果一个牌手偷了牌册而不是套牌，理论上讲这确实不是窃取比赛用品，尽管结果（将该牌手驱离赛场）几乎是相同的。如果裁判注意到偷窃行为，应当告知比赛组织者。他们会负责将偷窃者驱离赛场，或者协助警方介入。
+      sourceRawUnits:
+      - raw-L003852
+      - raw-L003854
+- id: ipg-ann-4-6-e2368176d982
+  anchor:
+    type: block
+    id: ipg-b000196
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-6-e2368176d982-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-6-e2368176d982-g01-b01
+      type: paragraph
+      text:
+        en: With or without the police, depending on the circumstance.
+        zh: 是否需要警方介入，视具体情况而定。
+      sourceRawUnits:
+      - raw-L003862
+      - raw-L003864
+- id: ipg-ann-4-7-54ac2c19b95d
+  anchor:
+    type: block
+    id: ipg-b000197
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-7-54ac2c19b95d-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-7-54ac2c19b95d-g01-b01
+      type: paragraph
+      text:
+        en: This infraction describes situations in which a player is fully aware of the time remaining
+          in the round and they attempt to run the clock out in order to win or deny the opponent the
+          time needed to play. For example, a player may count or look through their sideboard or graveyard
+          for no strategic reason. Alternatively, the player may act as if they are looking for tokens,
+          emblems, or dice, and take an unusual amount of time in doing so.
+        zh: 此违规所述情况是指一位牌手完全了解一轮比赛的剩余时间并且他/她试图消耗掉对手取胜所需要的时间。举例来说，牌手可能并非因战术原因进行清点或查看他的备牌或坟墓场。或者，牌手装作他正在寻找衍生物、徽记或骰子，并且借此消耗掉通常不需花费的时间。
+      sourceRawUnits:
+      - raw-L003876
+      - raw-L003878
+- id: ipg-ann-4-7-1589a26f2b4d
+  anchor:
+    type: block
+    id: ipg-b000197
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-4-7-1589a26f2b4d-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-7-1589a26f2b4d-g01-b01
+      type: paragraph
+      text:
+        en: Not all players who take a long time to play the game are necessarily doing so intentionally.
+          Magic is a complex game with many factors to be considered. Large cash prizes, invites, pieces
+          of power, etc., may provide players with incentive to take their time when thinking about their
+          actions. If it is determined that the player did not have intent to run out the clock, then
+          the infraction is not Stalling.
+        zh: 并非所有消耗比较多的时间来打牌的牌手是故意要这么做的。万智牌是一项复杂的游戏，需要考虑的因素很多。大额奖金、赛事邀请资格、珍贵卡牌等等都会鼓励牌手花时间认真地思考他们的行动。如果牌手不是故意要消耗掉时间，那么违规就不是拖延。
+      sourceRawUnits:
+      - raw-L003884
+      - raw-L003888
+    - id: ipg-ann-4-7-1589a26f2b4d-g01-b02
+      type: paragraph
+      text:
+        en: The key thing to look for when issuing a penalty for Stalling is intent. If there wasn’t intent
+          on the part of the player, then the appropriate infraction is Slow Play.
+        zh: 判断拖延的关键点在于牌手的意图。如果牌手不是有意的，适用的违规是游戏进行过慢。
+      sourceRawUnits:
+      - raw-L003886
+      - raw-L003890
+- id: ipg-ann-4-7-7e79f9cc9b06
+  anchor:
+    type: block
+    id: ipg-b000198
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-7-7e79f9cc9b06-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-7-7e79f9cc9b06-g01-b01
+      type: paragraph
+      text:
+        en: A player encounters a situation where they realize that there’s no significant play available,
+          but knows the opponent has no way of verifying this. The player intentionally acts as though
+          they have difficult options to consider in an effort to use up time. Here there is a difference
+          between “bluffing” and Stalling. In the case of bluffing, the motivation is not to eat up clock
+          time. However, excessive time ‘thinking’ in order to bluff is Slow Play.
+        zh: 牌手意识到他并无法做出有意义的游戏行动，但他知道对手没有办法觉察这一点。该牌手假装他面临一个艰难的决择并需要思考，目的是消耗掉时间。注意，拖延和虚张声势（bluff）有所不同。虚张声势的目的不是消耗时间。然而消耗太多时间假装思考来虚张声势属于游戏进行过慢。
+      sourceRawUnits:
+      - raw-L003898
+      - raw-L003900
+- id: ipg-ann-4-7-2be91796ae2a
+  anchor:
+    type: block
+    id: ipg-b000199
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-7-2be91796ae2a-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-7-2be91796ae2a-g01-b01
+      type: paragraph
+      text:
+        en: A player wins the first game and realizes that instead of winning a second game, they could
+          waste the time that the opponent would need to catch up by intentionally playing slowly.
+        zh: 一位牌手获得了第一盘的胜利，并意识到他可以故意打的很慢来浪费掉对手所需的用来追平的时间，而不是获得第二盘的胜利。
+      sourceRawUnits:
+      - raw-L003906
+      - raw-L003908
+- id: ipg-ann-4-7-1ac23e47eaeb
+  anchor:
+    type: block
+    id: ipg-b000200
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-7-1ac23e47eaeb-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-7-1ac23e47eaeb-g01-b01
+      type: paragraph
+      text:
+        en: A player tries to take advantage of a tournament’s appeals process in order to steal some
+          extra time to think. For example, with only two minutes left in a match and facing a tough decision,
+          a player appeals a minor ruling knowing that doing so will provide at least five minutes of
+          thinking before the Head Judge can respond to the call. The player knows that his match will
+          afterward receive at least a five-minute extension, so he thinks he can abuse the appeals process
+          as a means of buying time. Protip – judges can help prevent players from committing this infraction
+          with a little pre-emptive care! Often, a wily player out to commit the above-described infraction
+          will do so by appealing the Warning he’s receiving for committing the infraction Slow Play itself.
+          So, if you give a Slow Play warning to a player that they then appeal, you should instruct the
+          players to continue playing while you get the Head Judge. By telling the players to continue
+          to play, you’ll prevent any possibility of a player getting away with this kind of clock manipulation.
+          And ask another judge to watch to make sure they follow the instructions.
+        zh: 一位牌手试图利用比赛的上诉程序来获得额外时间进行思考。距离来说，一局比赛只剩2分钟，而牌手面对一个艰难的决择。一位牌手为了一个小判罚上述，因为他/她知道这样做能在主审回应呼叫之前获得至少5分钟来思考。该牌手知道他的对局会获得至少5分钟的加时，所以他认为它可以滥用上诉程序作为获得时间的手段。提示——裁判通过一点小小的预防手段可以避免牌手触犯此违规。通常，触犯上述违规的牌手会对因游戏进行过慢得到的警告进行上诉。所以，如果你根据游戏进行过慢给牌手警告，接着他若上诉，你应当指示牌手继续打牌，同时你去找主审。通过告诉该牌手继续打牌，你可以避免任何一位牌手用上述方法操控时间的可能性。并且请其另一位裁判关注对局以确保牌手听从指示。
+      sourceRawUnits:
+      - raw-L003914
+      - raw-L003916
+- id: ipg-ann-4-7-76f24e27fd23
+  anchor:
+    type: block
+    id: ipg-b000201
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-7-76f24e27fd23-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-7-76f24e27fd23-g01-b01
+      type: paragraph
+      text:
+        en: After splitting the match 1-1, a player who is playing for a draw against an opponent who
+          needs the win may decide to take their time sideboarding, shuffling, and mulliganing to eat
+          up time in an effort to force the match to a draw.
+        zh: 双方在对局中打平后，一位想要平局的牌手对阵一位需要获胜的牌手时，可能会决定靠更换备牌、洗牌或者调度来消耗掉时间，让对局以平局结束。
+      sourceRawUnits:
+      - raw-L003922
+      - raw-L003924
+- id: ipg-ann-4-7-9df6f6662f60
+  anchor:
+    type: block
+    id: ipg-b000202
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-7-9df6f6662f60-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-7-9df6f6662f60-g01-b01
+      type: paragraph
+      text:
+        en: A player knows that they are about to lose the current game, but realizes it is possible to
+          draw the match if the opponent is unable to “finish them off” in time. Knowing that a draw is
+          better than a loss, that player begins to slow their rate of play to below a reasonable pace
+          to deny the opponent the time needed.
+        zh: 一位牌手知道他即将输掉当前这一盘，但意识到，如果对手在规定时间内无法击败他，比赛将会是平局。因为知道平局比输掉更好，该牌手开始不合理地放慢游戏节奏，不给对手足够的时间。
+      sourceRawUnits:
+      - raw-L003930
+      - raw-L003932
+- id: ipg-ann-4-8-7265ca2f30ad
+  anchor:
+    type: block
+    id: ipg-b000203
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-8-7265ca2f30ad-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-8-7265ca2f30ad-g01-b01
+      type: paragraph
+      text:
+        en: This sentence is an exhaustive list of the situations that can be considered Cheating. If
+          the basic situation does not match one of these three categories, it is not Cheating. Moreover,
+          all intentional violations of the tournament rules fall under the provision of Cheating (except
+          for Slow Play, which is Stalling), and should not be treated simply as upgraded versions of
+          other infractions.
+        zh: 这句话说明了所有可以被考虑为作弊的情况。只要情形不符合上述三类中的任何一类，便不属于作弊。此外，任何故意违反比赛规则的行为都属于作弊（除游戏进行过慢以外，故意游戏进行过慢属于拖延），而不应以其他违规的升级情形进行处理。
+      sourceRawUnits:
+      - raw-L003944
+      - raw-L003950
+    - id: ipg-ann-4-8-7265ca2f30ad-g01-b02
+      type: paragraph
+      text:
+        en: The phrases “breaking a rule” and “notices an offense” include violations of the Comprehensive
+          Rules and of the Magic Tournament Rules. Players are required to call a judge when they make
+          an error. Additionally, because both players are responsible for the game state, players are
+          also expected to call a judge when they notice their opponent commit an offense.
+        zh: “违反规则”和“注意到违规”包括违反完整规则（CR）和比赛规则（MTR）。我们要求牌手在他们犯错时呼叫裁判。此外，由于双方牌手都有维护游戏状态的责任，牌手也应当在他们注意到对手违规时呼叫裁判。
+      sourceRawUnits:
+      - raw-L003946
+      - raw-L003952
+    - id: ipg-ann-4-8-7265ca2f30ad-g01-b03
+      type: paragraph
+      text:
+        en: The IPG stipulates that, in team formats, players are also responsible for pointing out offenses
+          in their teammates’ matches. This is because each team advances in the tournament and earns
+          prizes as a group. Accordingly, members of a team are accountable for calling attention to mistakes
+          they notice in their teammates’ matches as well as their own.
+        zh: IPG规定，在团队比赛中，牌手也有责任指出队友的对局的违规。这是因为每个团队成员是一起参加比赛并获得奖励的。因此，如同自己的对局，团队成员有责任在他们注意到队友的对局发生错误时呼叫裁判。
+      sourceRawUnits:
+      - raw-L003948
+      - raw-L003954
+- id: ipg-ann-4-8-f008d884925f
+  anchor:
+    type: block
+    id: ipg-b000206
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-8-f008d884925f-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-8-f008d884925f-g01-b01
+      type: paragraph
+      text:
+        en: In Magic, cheating is always a deliberate action, or conscious lack of action. There is no
+          such thing as “accidental cheating”. Accidental errors should be handled by the appropriate
+          infractions found elsewhere in the IPG.
+        zh: 在万智牌中，作弊总是一种故意的行为，或者有意不作为。不存在“意外作弊”。意外的错误应依照IPG其他部分处理。
+      sourceRawUnits:
+      - raw-L003968
+      - raw-L003976
+    - id: ipg-ann-4-8-f008d884925f-g01-b02
+      type: paragraph
+      text:
+        en: 'Additionally, if a player is not attempting to gain advantage from their action, then the
+          offense is not Cheating. This bullet is sort of weird, generally you think of someone trying
+          to gain an advantage when they cheat, which is exactly the point. If there is no advantage,
+          there is no cheating. For example: Alex, who is at 6 life, attacks with a creature the turn
+          it was summoned. Nat notices, but just takes the damage because they are holding 2 Lightning
+          Bolts in their hand, and want to let Alex get in a hit so Alex doesn’t feel as crushed when
+          Nat wins next turn. In this case, Nat is not committing a cheating infraction (although it would
+          be ruled Failure to Maintain Game State if there is a judge call from a spectator). Be aware
+          though, that because this rule is published where players can see it, some may be tempted to
+          craft stories where it seems like they were just trying to be ‘nice’. It is your responsibility
+          to determine as much of the truth as possible.'
+        zh: 此外，若一位牌手不是故意要从他的行为中获利，则违规并非作弊。这一点有些奇怪，一般来说，你认为某人作弊时他/她在试图获利。如果没有获利，则没有作弊。举例来说，Alex的生命值为6，用一个召唤失调的生物进攻。Nat注意到了这一点，但他接受了伤害，因为他有两张闪电击在手。他想让Alex多打一点时间，这样当他下回合击败Abe时，对方不会感到特别难受。这种情况下，Nat并没有犯下作弊此违规（但如果旁观者呼叫裁判，这可能被判为未维护游戏状态）。请注意，由于此规则是公开的，牌手都可以看到它，有些人可能会尝试编造故事来假装自己只是尝试做个“友善的人”。裁判的责任是尽量根据事实来做决定。
+      sourceRawUnits:
+      - raw-L003970
+      - raw-L003978
+    - id: ipg-ann-4-8-f008d884925f-g01-b03
+      type: paragraph
+      text:
+        en: A third thing that is not on this list, but is stated in the definition, the player actually
+          has to be breaking a rule. If a player misunderstands a rule, thinks they are doing something
+          illegal for an advantage, but what they are doing is actually legal; that’s not Cheating.
+        zh: 定义中提到的但没有在清单中列明的第三点是，牌手确实违反了规则。若一位牌手误解了规则，认为他们为了获利做了某些非法的事情，但实际上他们所做的是合法的，则不是作弊。
+      sourceRawUnits:
+      - raw-L003972
+      - raw-L003980
+    - id: ipg-ann-4-8-f008d884925f-g01-b04
+      type: paragraph
+      text:
+        en: The IPG used to define Cheating as a separate category of infractions, including Cheating
+          — Fraud, Cheating — Hidden Information Violation, and Cheating — Manipulation of Game Materials.
+          In January 2013, the IPG was updated to rule these various infractions into a single, streamlined
+          infraction called Unsporting Conduct – Cheating. This makes it easier for judges to determine
+          whether a certain action is Cheating, as the criteria for Cheating are now the same for all
+          types of offenses.
+        zh: IPG曾经将作弊定义为一个专门类别，包括作弊～欺诈、作弊～隐藏信息违规和作弊～操纵比赛物品。2013年1月，IPG更新后将这些违规合并为一个新的违规，称为举止违背运动道德～作弊。这让裁判更容易确定一个行为是否是作弊，因为现在对于任何违规的情形，作弊的标准都是一致的。
+      sourceRawUnits:
+      - raw-L003974
+      - raw-L003982
+- id: ipg-ann-4-8-6908aba3e41b
+  anchor:
+    type: block
+    id: ipg-b000207
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-8-6908aba3e41b-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-8-6908aba3e41b-g01-b01
+      type: paragraph
+      text:
+        en: The IPG clearly specifies the criteria that must be met for an offense to be Cheating so that
+          judges can more easily identify situations where Cheating has actually occurred. If one or more
+          of the criteria for Cheating is not met, the judge should consider whether a different infraction
+          applies, if any. Do not apply your own definition.
+        zh: IPG清晰的阐述了作弊行为的要素，所以裁判可以更容易的确定哪些情况确实是作弊。如果某个情形未满足一个或多个作弊的要素，裁判应当考虑是否应当适用另一种违规。不要自己定义什么是作弊。
+      sourceRawUnits:
+      - raw-L003988
+      - raw-L003990
+- id: ipg-ann-4-8-4b8ba47ce33d
+  anchor:
+    type: block
+    id: ipg-b000207
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-4-8-4b8ba47ce33d-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-8-4b8ba47ce33d-g01-b01
+      type: paragraph
+      text:
+        en: The ability to conduct investigations is highly prized by the judge community; it is one of
+          the qualities of higher level judges, and one that all judges should strive to cultivate. The
+          IPG does not require definite proof of the intent to cheat, but rather expects officials to
+          exercise their best judgment to determine if a player is deliberately breaking a rule to gain
+          an advantage. This sentence is a reminder to remain vigilant and ask questions. This particular
+          skill is a hard one to develop as each potential situation is unique.
+        zh: 裁判社群对调查能力高度看重。这是高级裁判要掌握的能力，也是所有裁判应当努力培养的。IPG不要求作弊意图的确切证据，但希望裁判能够使用最佳判断，来确定一位牌手是否故意破坏规则来获利。这句话提醒你在调查中，问问题时要保持警醒。调查是一种较难学习的技能，因为每一个可能是作弊的情形都是不同的。
+      sourceRawUnits:
+      - raw-L003996
+      - raw-L003998
+- id: ipg-ann-4-8-c0e7f83bcceb
+  anchor:
+    type: block
+    id: ipg-b000214
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-4-8-c0e7f83bcceb-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-4-8-c0e7f83bcceb-g01-b01
+      type: paragraph
+      text:
+        en: 'All of these are examples of a player intentionally violating game rules, tournament rules,
+          or lying. While this is not an exhaustive list, it covers many of the most common cases. One
+          thing that is noticeably absent: not pointing out your opponents Missed Trigger. This is never
+          cheating, even if you point out the Missed Trigger at a point in time that is beneficial to
+          you.'
+        zh: 这些例子都是牌手在故意违反游戏规则、比赛规则或者撒谎。尽管这些例子无法涵盖所有的作弊情况，它涵盖了很多常见的情况。注意，有一种情况不属于作弊：没有指出对手的遗漏触发。这永远不是作弊，即使你在更有利于你的时间才指出对手的遗漏触发，也是一样。
+      sourceRawUnits:
+      - raw-L004030
+      - raw-L004032

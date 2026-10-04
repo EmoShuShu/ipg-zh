@@ -1,90 +1,432 @@
-documentId: ipg-appendix-a-pilot
-publicationAnnotations: []
 schemaVersion: 1
+documentId: ipg-appendix-a
 sections:
-- components:
-  - groups:
-    - blocks:
-      - displayCode: penalty.none
-        id: ipg-app-a-row-01
-        referenceId: ipg-s2-1
-        officialPdfUnits:
-        - bbox:
-          - 134.88
-          - 136.04
-          - 408.53
-          - 148.3
-          extractionUnit: appendix-a-row
-          page: 30
-          pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
-        text:
-          en: Missed Trigger
-          zh: 遗漏触发
-        type: appendix-row
-        legacyRawUnits:
-        - raw-L004039
-      - displayCode: penalty.warning
-        id: ipg-app-a-row-05
-        referenceId: ipg-s2-5
-        officialPdfUnits:
-        - bbox:
-          - 120.0
-          - 227.24
-          - 416.52
-          - 239.5
-          extractionUnit: appendix-a-row
-          page: 30
-          pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
-        text:
-          en: Game Rule Violation
-          zh: 违反游戏规则
-        type: appendix-row
-        legacyRawUnits:
-        - raw-L004043
-      - displayCode: penalty.game-loss
-        id: ipg-app-a-row-07
-        referenceId: ipg-s3-1
-        officialPdfUnits:
-        - bbox:
-          - 148.68
-          - 295.64
-          - 422.63
-          - 307.9
-          extractionUnit: appendix-a-row
-          page: 30
-          pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
-        text:
-          en: Tardiness
-          zh: 迟到
-        type: appendix-row
-        legacyRawUnits:
-        - raw-L004046
-      - displayCode: penalty.disqualification
-        id: ipg-app-a-row-23
-        referenceId: ipg-s4-8
-        officialPdfUnits:
-        - bbox:
-          - 150.36
-          - 683.24
-          - 434.28
-          - 695.5
-          extractionUnit: appendix-a-row
-          page: 30
-          pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
-        text:
-          en: Cheating
-          zh: 作弊
-        type: appendix-row
-        legacyRawUnits:
-        - raw-L004063
-      id: ipg-app-a-c-table-g01
-      kind: appendix-table
-    id: ipg-app-a-c-table
-    labelCode: component.appendix-table
-    role: appendix-table
-  id: ipg-app-a
+- id: ipg-app-a
   kind: appendix
   number: A
   title:
     en: Penalty Quick Reference
     zh: 处罚快速查询
+  components:
+  - id: ipg-app-a-c-table
+    role: appendix-table
+    labelCode: component.appendix-table
+    groups:
+    - id: ipg-app-a-c-table-g01
+      kind: appendix-table
+      blocks:
+      - id: ipg-app-a-row-01
+        type: appendix-row
+        text:
+          en: Missed Trigger
+          zh: 遗漏触发
+        displayCode: penalty.none
+        referenceId: ipg-s2-1
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 134.88
+          - 136.04
+          - 408.53
+          - 148.3
+          extractionUnit: extract-p30-l004..extract-p30-l004
+        legacyRawUnits:
+        - raw-L004039
+      - id: ipg-b000215
+        type: appendix-row
+        text:
+          en: Looking at Extra Cards
+          zh: 额外看牌
+        displayCode: penalty.warning
+        referenceId: ipg-s2-2
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 112.8
+          - 158.84
+          - 416.52
+          - 171.1
+          extractionUnit: extract-p30-l005..extract-p30-l005
+        legacyRawUnits:
+        - raw-L004040
+      - id: ipg-b000216
+        type: appendix-row
+        text:
+          en: Hidden Card Error
+          zh: 非公开牌张失误
+        displayCode: penalty.warning
+        referenceId: ipg-s2-3
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 123.72
+          - 181.64
+          - 416.52
+          - 193.9
+          extractionUnit: extract-p30-l006..extract-p30-l006
+        legacyRawUnits:
+        - raw-L004041
+      - id: ipg-b000217
+        type: appendix-row
+        text:
+          en: Mulligan Procedure Error
+          zh: 再调度失误
+        displayCode: penalty.warning
+        referenceId: ipg-s2-4
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 106.08
+          - 204.44
+          - 416.52
+          - 216.7
+          extractionUnit: extract-p30-l007..extract-p30-l007
+        legacyRawUnits:
+        - raw-L004042
+      - id: ipg-app-a-row-05
+        type: appendix-row
+        text:
+          en: Game Rule Violation
+          zh: 违反游戏规则
+        displayCode: penalty.warning
+        referenceId: ipg-s2-5
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 120.0
+          - 227.24
+          - 416.52
+          - 239.5
+          extractionUnit: extract-p30-l008..extract-p30-l008
+        legacyRawUnits:
+        - raw-L004043
+      - id: ipg-b000218
+        type: appendix-row
+        text:
+          en: Failure to Maintain Game State
+          zh: 未维护游戏状态
+        displayCode: penalty.warning
+        referenceId: ipg-s2-6
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 92.4
+          - 250.04
+          - 416.52
+          - 262.3
+          extractionUnit: extract-p30-l009..extract-p30-l009
+        legacyRawUnits:
+        - raw-L004044
+      - id: ipg-app-a-row-07
+        type: appendix-row
+        text:
+          en: Tardiness
+          zh: 迟到
+        displayCode: penalty.game-loss
+        referenceId: ipg-s3-1
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 148.68
+          - 295.64
+          - 422.63
+          - 307.9
+          extractionUnit: extract-p30-l011..extract-p30-l011
+        legacyRawUnits:
+        - raw-L004046
+      - id: ipg-b000219
+        type: appendix-row
+        text:
+          en: Outside Assistance
+          zh: 外来协助
+        displayCode: penalty.match-loss
+        referenceId: ipg-s3-2
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 125.88
+          - 318.44
+          - 423.71
+          - 330.7
+          extractionUnit: extract-p30-l012..extract-p30-l012
+        legacyRawUnits:
+        - raw-L004047
+      - id: ipg-b000220
+        type: appendix-row
+        text:
+          en: Slow Play
+          zh: 游戏进行过慢
+        displayCode: penalty.warning
+        referenceId: ipg-s3-3
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 148.8
+          - 341.24
+          - 416.52
+          - 353.5
+          extractionUnit: extract-p30-l013..extract-p30-l013
+        legacyRawUnits:
+        - raw-L004048
+      - id: ipg-b000221
+        type: appendix-row
+        text:
+          en: Decklist Problem
+          zh: 套牌登记表问题
+        displayCode: penalty.game-loss
+        referenceId: ipg-s3-4
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 129.84
+          - 364.04
+          - 422.63
+          - 376.3
+          extractionUnit: extract-p30-l014..extract-p30-l014
+        legacyRawUnits:
+        - raw-L004049
+      - id: ipg-b000222
+        type: appendix-row
+        text:
+          en: Deck Problem
+          zh: 套牌问题
+        displayCode: penalty.warning
+        referenceId: ipg-s3-5
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 137.52
+          - 386.84
+          - 416.52
+          - 399.1
+          extractionUnit: extract-p30-l015..extract-p30-l015
+        legacyRawUnits:
+        - raw-L004050
+      - id: ipg-b000223
+        type: appendix-row
+        text:
+          en: Limited Procedure Violation
+          zh: 违反限制赛流程
+        displayCode: penalty.warning
+        referenceId: ipg-s3-6
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 100.32
+          - 409.64
+          - 416.52
+          - 421.9
+          extractionUnit: extract-p30-l016..extract-p30-l016
+        legacyRawUnits:
+        - raw-L004051
+      - id: ipg-b000224
+        type: appendix-row
+        text:
+          en: Communication Policy Violation
+          zh: 违反交流原则
+        displayCode: penalty.warning
+        referenceId: ipg-s3-7
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 90.36
+          - 432.44
+          - 416.52
+          - 444.7
+          extractionUnit: extract-p30-l017..extract-p30-l017
+        legacyRawUnits:
+        - raw-L004052
+      - id: ipg-b000225
+        type: appendix-row
+        text:
+          en: Marked Cards
+          zh: 有记号的牌
+        displayCode: penalty.warning
+        referenceId: ipg-s3-8
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 136.2
+          - 455.24
+          - 416.52
+          - 467.5
+          extractionUnit: extract-p30-l018..extract-p30-l018
+        legacyRawUnits:
+        - raw-L004053
+      - id: ipg-b000226
+        type: appendix-row
+        text:
+          en: Insufficient Shuffling
+          zh: 未充分洗牌
+        displayCode: penalty.warning
+        referenceId: ipg-s3-9
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 119.52
+          - 478.04
+          - 416.52
+          - 490.3
+          extractionUnit: extract-p30-l019..extract-p30-l019
+        legacyRawUnits:
+        - raw-L004054
+      - id: ipg-b000227
+        type: appendix-row
+        text:
+          en: Unsporting Conduct — Minor
+          zh: 举止违背运动道德～轻微
+        displayCode: penalty.warning
+        referenceId: ipg-s4-1
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 95.88
+          - 523.64
+          - 416.52
+          - 535.9
+          extractionUnit: extract-p30-l021..extract-p30-l021
+        legacyRawUnits:
+        - raw-L004056
+      - id: ipg-b000228
+        type: appendix-row
+        text:
+          en: Unsporting Conduct — Major
+          zh: 举止违背运动道德～严重
+        displayCode: penalty.match-loss
+        referenceId: ipg-s4-2
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 95.88
+          - 546.44
+          - 423.71
+          - 558.7
+          extractionUnit: extract-p30-l022..extract-p30-l022
+        legacyRawUnits:
+        - raw-L004057
+      - id: ipg-b000229
+        type: appendix-row
+        text:
+          en: Improperly Determining a Winner
+          zh: 不当决定胜方
+        displayCode: penalty.match-loss
+        referenceId: ipg-s4-3
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 84.48
+          - 569.24
+          - 423.71
+          - 581.5
+          extractionUnit: extract-p30-l023..extract-p30-l023
+        legacyRawUnits:
+        - raw-L004058
+      - id: ipg-b000230
+        type: appendix-row
+        text:
+          en: Bribery and Wagering
+          zh: 贿赂与赌博
+        displayCode: penalty.match-loss
+        referenceId: ipg-s4-4
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 115.68
+          - 592.04
+          - 423.71
+          - 604.3
+          extractionUnit: extract-p30-l024..extract-p30-l024
+        legacyRawUnits:
+        - raw-L004059
+      - id: ipg-b000231
+        type: appendix-row
+        text:
+          en: Aggressive Behavior
+          zh: 攻击性举止
+        displayCode: penalty.disqualification
+        referenceId: ipg-s4-5
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 121.2
+          - 614.84
+          - 434.28
+          - 627.1
+          extractionUnit: extract-p30-l025..extract-p30-l025
+        legacyRawUnits:
+        - raw-L004060
+      - id: ipg-b000232
+        type: appendix-row
+        text:
+          en: Theft of Tournament Material
+          zh: 窃取比赛用品
+        displayCode: penalty.disqualification
+        referenceId: ipg-s4-6
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 95.52
+          - 637.64
+          - 434.28
+          - 649.9
+          extractionUnit: extract-p30-l026..extract-p30-l026
+        legacyRawUnits:
+        - raw-L004061
+      - id: ipg-b000233
+        type: appendix-row
+        text:
+          en: Stalling
+          zh: 拖延
+        displayCode: penalty.disqualification
+        referenceId: ipg-s4-7
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 153.96
+          - 660.44
+          - 434.28
+          - 672.7
+          extractionUnit: extract-p30-l027..extract-p30-l027
+        legacyRawUnits:
+        - raw-L004062
+      - id: ipg-app-a-row-23
+        type: appendix-row
+        text:
+          en: Cheating
+          zh: 作弊
+        displayCode: penalty.disqualification
+        referenceId: ipg-s4-8
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 30
+          bbox:
+          - 150.36
+          - 683.24
+          - 434.28
+          - 695.5
+          extractionUnit: extract-p30-l028..extract-p30-l028
+        legacyRawUnits:
+        - raw-L004063
+publicationAnnotations: []

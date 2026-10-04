@@ -409,11 +409,16 @@ def _piece_content(piece: dict[str, Any]) -> str:
 
 
 def _annotation_override_by_start(overrides: dict[str, Any]) -> dict[int, dict[str, Any]]:
-    return {
-        item["startLine"]: item
-        for item in overrides.get("applied", [])
-        if item.get("kind") == "publication-annotation-boundaries"
-    }
+    result = {}
+    for item in overrides.get("applied", []):
+        if item.get("kind") != "publication-annotation-boundaries":
+            continue
+        if item["startLine"] in result:
+            raise ValueError(
+                f"ambiguous publication annotation boundary at line {item['startLine']}"
+            )
+        result[item["startLine"]] = item
+    return result
 
 
 def _map_pilot_annotation_overrides(
@@ -511,8 +516,9 @@ def _annotation_anchor(
     preceding = []
     for block in _blocks(section):
         lines = [int(raw_id.removeprefix("raw-L")) for raw_id in block.get("legacyRawUnits", [])]
-        if lines and max(lines) < start_line:
-            preceding.append((max(lines), block["id"]))
+        earlier = [line for line in lines if line < start_line]
+        if earlier:
+            preceding.append((max(earlier), block["id"]))
     if not preceding:
         return {"type": "section", "id": section["id"]}, "inside-start", 10
     return {"type": "block", "id": max(preceding)[1]}, "after", 0
@@ -529,6 +535,10 @@ def _map_annotations(
         document, units, dispositions, overrides
     )
     override_by_start = _annotation_override_by_start(overrides)
+    known_ids = {node["id"] for _, node in walk_nodes([document])}
+    for item in override_by_start.values():
+        if item["anchor"]["id"] not in known_ids:
+            raise ValueError(f"publication annotation anchor does not exist: {item['id']}")
     existing_raw_sets = {
         frozenset(raw_id for group in annotation["groups"] for block in group["blocks"] for raw_id in block.get("sourceRawUnits", []))
         for annotation in document["publicationAnnotations"]
@@ -761,7 +771,15 @@ def migrate_full(
                     }
                 )
 
-    registry_added = _register_annotations(registry, document)
+    _register_annotations(registry, document)
+    registry_added = sum(
+        any(
+            event.get("event") == "allocated"
+            and event.get("atVersion") == "aipg-legacy-full-p4"
+            for event in entry.get("history", [])
+        )
+        for entry in registry["entries"]
+    )
     unresolved_codes = {"unresolved-mapping", "ambiguous-mapping", "unresolved-annotation-mapping", "ambiguous-annotation-block-kind"}
     return {
         "documents": split_document(document),

@@ -1,0 +1,2354 @@
+schemaVersion: 1
+documentId: ipg-chapter-01
+sections:
+- id: ipg-s1
+  kind: chapter
+  number: '1'
+  title:
+    en: General Philosophy
+    zh: 一般原则
+  components:
+  - id: ipg-c000003
+    role: body
+    labelCode: component.body
+    groups:
+    - id: ipg-g000003
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000006
+        type: paragraph
+        text:
+          en: Judges are neutral arbiters and enforcers of policy and rules. A judge shouldn’t intervene
+            in a game unless they believe a rules violation has occurred, a player with a concern or question
+            requests assistance, or the judge wishes to prevent a situation from escalating. Judges don’t
+            stop play errors from occurring, but instead deal with errors that have occurred, penalize
+            those who violate rules or policy, and promote fair play and sporting conduct by example and
+            diplomacy. Judges may intervene to prevent or preempt errors occurring outside of a game.
+            Knowledge of a player’s history or skill does not alter an infraction, but it may be taken
+            into account during an investigation.
+          zh: '裁判是中立的裁决者，也是政策与规则的执法者。
+
+
+            通常情况下，裁判不应干预游戏的进行，但在此数类情况下，裁判应及时介入：裁判认为已有人违反规则，抱有顾虑或疑问的牌手请求协助，或裁判希望防止局势恶化。
+
+
+            裁判并不会阻止游戏失误的发生，而是会去解决已发生之失误，处罚违反规则和政策的牌手，并以身体力行和交际手腕来宣导公平的比赛和运动道德。
+
+
+            为避免或预防游戏之外的失误发生，裁判可以介入。
+
+
+            对某牌手过去作为与游戏技巧的认知不会影响违规的认定，但在调查过程中或会将这些方面考虑在内。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 3
+          bbox:
+          - 90.0
+          - 73.64
+          - 551.09
+          - 182.24
+          extractionUnit: extract-p03-l002..extract-p03-l009
+        legacyRawUnits:
+        - raw-L000097
+        - raw-L000099
+        - raw-L000105
+        - raw-L000107
+        - raw-L000113
+        - raw-L000115
+        - raw-L000125
+        - raw-L000127
+        - raw-L000149
+        - raw-L000151
+      - id: ipg-b000007
+        type: paragraph
+        text:
+          en: The purpose of a penalty is to educate the player not to make similar mistakes in the future.
+            This is done through both an explanation of where the rules or policies were violated and
+            a penalty to reinforce the education. Penalties are also for the deterrence and education
+            of every other player in the event and are also used to track player behavior over time.
+          zh: '处罚的目的是为了避免牌手在往后犯下类似的失误。
+
+
+            为达成此目标，必须向该牌手解释所违反之规则或政策，使处罚有其教育意义。
+
+
+            处罚的效果也包括教育比赛中其他牌手并造成警惕，且会用来持续记录牌手的行为。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 3
+          bbox:
+          - 90.0
+          - 197.84
+          - 552.83
+          - 251.24
+          extractionUnit: extract-p03-l010..extract-p03-l013
+        legacyRawUnits:
+        - raw-L000157
+        - raw-L000159
+        - raw-L000165
+        - raw-L000167
+        - raw-L000173
+        - raw-L000175
+      - id: ipg-b000008
+        type: paragraph
+        text:
+          en: If a minor violation is quickly handled by the players to their mutual satisfaction, a judge
+            does not need to intervene. If the players are playing in a way that is clear to both players,
+            but might cause confusion to an external observer, judges are encouraged to request that the
+            players make the situation clear, but not assess an infraction or issue any penalty. In both
+            these situations, the judge should ensure that the game progresses normally. More significant
+            violations are addressed by first identifying what infraction applies, then proceeding with
+            the corresponding instructions.
+          zh: '如果违反规则的情况较为轻微，且牌手已以双方均满意的方式进行了快速处理，则裁判无需干预。
+
+
+            如果游戏的进行方式虽对双方牌手足够明晰，但在旁观者看来或会混淆不清，则建议裁判去要求牌手让情况更加清楚，而不要给予任何处罚。
+
+
+            在上述两种情况中，裁判应确保游戏正常进行。
+
+
+            对于较为严重之违反规则情况而言，裁判应先确定适用何种违规，然后再根据相应的处理方式进行处理。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 3
+          bbox:
+          - 90.0
+          - 266.84
+          - 557.52
+          - 347.84
+          extractionUnit: extract-p03-l014..extract-p03-l019
+        legacyRawUnits:
+        - raw-L000185
+        - raw-L000187
+        - raw-L000193
+        - raw-L000195
+        - raw-L000201
+        - raw-L000203
+        - raw-L000209
+        - raw-L000211
+      - id: ipg-b000009
+        type: paragraph
+        text:
+          en: Only the Head Judge is authorized to issue penalties that deviate from these guidelines.
+            The Head Judge may not deviate from this guide’s procedures except in significant and exceptional
+            circumstances or a situation that has no applicable philosophy for guidance. Significant and
+            exceptional circumstances are rare—a table collapses, a booster contains cards from a different
+            set, etc. The Rules Enforcement Level, round of the tournament, age or experience-level of
+            the player, desire to educate the player, and certification level of the judge are NOT exceptional
+            circumstances. If another judge feels deviation is appropriate, they must consult with the
+            Head Judge.
+          zh: '只有主审才有权力不依此方针来作处罚。
+
+
+            除非在重大且特殊的状况中，或是没有可供运用的指导原则，否则主审都不该背离此方针的处理流程。
+
+
+            重大且特殊的状况很少见～桌子垮掉、补充包内含其他系列的牌等等。
+
+
+            执法严格度、比赛的回合、牌手的经验高低和年龄、特别想教育该牌手，以及裁判的等级，均不算是特殊状况。
+
+
+            如果其他裁判认为有理由不遵循罚则方针，则必须请示主审。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 3
+          bbox:
+          - 90.0
+          - 363.44
+          - 545.98
+          - 472.04
+          extractionUnit: extract-p03-l020..extract-p03-l027
+        legacyRawUnits:
+        - raw-L000217
+        - raw-L000219
+        - raw-L000225
+        - raw-L000227
+        - raw-L000233
+        - raw-L000235
+        - raw-L000241
+        - raw-L000243
+        - raw-L000249
+        - raw-L000251
+      - id: ipg-b000010
+        type: paragraph
+        text:
+          en: Judges are human and make mistakes. When a judge makes a mistake, they should acknowledge
+            the mistake, apologize to the players, and fix it if it is not too late. If a member of the
+            tournament staff gives a player erroneous information that causes them to commit a violation,
+            the Head Judge is authorized to downgrade the penalty. For example, a player asks a judge
+            whether a card is legal for a format and is told yes. When that player’s deck is found to
+            be illegal because of these cards, the Head Judge applies the normal procedure for fixing
+            the decklist, but may downgrade the penalty to a Warning because of the direct error of the
+            judge. If a player clearly acts on erroneous information provided by a judge during the game,
+            the Head Judge may consider a backup to the point of the action taken, even if that action
+            did not lead to a violation.
+          zh: '裁判也是常人，也会犯下错误。若裁判确实出现了失误，他应承认错误，向牌手致歉，且如果发现尚属及时，还应该进行修正。
+
+
+            如果牌手是因比赛工作人员提供的错误信息而犯下违规，主审有权将罚则降级。
+
+
+            举例来说，某牌手询问裁判某张牌是否在该赛制中合法时，裁判回答他说“是”；此后当该牌手的套牌因为这张牌之故被判为非法套牌时，主审应依照正常的规程来修正套牌登记表，但由于是裁判的失误直接导致了此违规行为的发生，他可以将罚则降级为“警告”。
+
+
+            如果牌手明显是根据裁判提供的错误信息而在游戏中行动，在主审可以考虑倒回至实际行动前之时点，即便相关行动并未违规也可如此操作。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 3
+          bbox:
+          - 90.0
+          - 487.64
+          - 555.43
+          - 610.04
+          extractionUnit: extract-p03-l028..extract-p03-l036
+        legacyRawUnits:
+        - raw-L000257
+        - raw-L000259
+        - raw-L000273
+        - raw-L000275
+        - raw-L000281
+        - raw-L000283
+        - raw-L000297
+        - raw-L000299
+- id: ipg-s1-1
+  kind: policy
+  number: '1.1'
+  title:
+    en: Definition of Penalties
+    zh: 各式处罚之定义
+  components:
+  - id: ipg-c000004
+    role: penalty-definition
+    labelCode: penalty.warning
+    groups:
+    - id: ipg-g000004
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000011
+        type: paragraph
+        text:
+          en: Warnings are used in situations of incorrect play when a small amount of time is needed
+            to implement the corrective procedure. The purpose of a Warning is to alert judges and players
+            involved that a problem has occurred and to keep a permanent record of the infraction. A time
+            extension should be issued if the ruling has taken more than a minute.
+          zh: '警告使用于不正确的行动，且需要些许时间来执行修正的流程。
+
+
+            其目的是用来针对已产生的问题，警示相关裁判和牌手，并将此违规永久记录。
+
+
+            如果解释规则花费超过一分钟的时间，则要给予延长时间。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 3
+          bbox:
+          - 90.0
+          - 666.44
+          - 541.61
+          - 719.84
+          extractionUnit: extract-p03-l039..extract-p03-l042
+        legacyRawUnits:
+        - raw-L000309
+        - raw-L000311
+        - raw-L000317
+        - raw-L000319
+        - raw-L000325
+        - raw-L000327
+  - id: ipg-c000005
+    role: penalty-definition
+    labelCode: penalty.game-loss
+    groups:
+    - id: ipg-g000005
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000012
+        type: paragraph
+        text:
+          en: A Game Loss ends the current game immediately and the player who committed the infraction
+            is considered to have lost the game for the purpose of match reporting. The player receiving
+            a Game Loss chooses whether to play or draw in the next game of that match, if applicable.
+            If a Game Loss is issued before the match begins, neither player in that match may use sideboards
+            (if the tournament uses them) for the first game they play.
+          zh: 一盘负处罚会立刻结束目前这一盘游戏，犯下此违规的牌手在对局纪录上会视为是输掉一盘。如果还有下一盘，则得到一盘负处罚的牌手选择下一盘是否要先手。如果在对局开始之前就得到一盘负处罚，则本盘游戏之所有牌手在第一盘开始之前都不能使用备牌（如果该比赛使用备牌的话）。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 4
+          bbox:
+          - 90.0
+          - 73.64
+          - 555.52
+          - 140.84
+          extractionUnit: extract-p04-l002..extract-p04-l006
+        legacyRawUnits:
+        - raw-L000335
+        - raw-L000337
+      - id: ipg-b000013
+        type: paragraph
+        text:
+          en: Game Losses are applied immediately if the game is still ongoing, or to the player’s next
+            game if it is not, unless otherwise specified. If a player would receive multiple Game Losses
+            at the same time, they only receive one. If simultaneous Game Loss penalties are issued to
+            each player, they are recorded, but do not affect the match score.
+          zh: '一盘负处罚在游戏仍在继续的情况下立刻生效，否则对该牌手的下一盘游戏生效，除非特别说明。
+
+
+            如果牌手会在同一时间受到多个“一盘负”判罚，则其只会受到一个一盘负。
+
+
+            如果游戏中所有牌手同时受到一盘负之处罚，则此些“一盘负”处罚会记录在案，但不会影响当前对局的成绩。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 4
+          bbox:
+          - 90.0
+          - 156.44
+          - 555.13
+          - 209.84
+          extractionUnit: extract-p04-l007..extract-p04-l010
+        legacyRawUnits:
+        - raw-L000343
+        - raw-L000345
+        - raw-L000351
+        - raw-L000353
+        - raw-L000359
+        - raw-L000361
+  - id: ipg-c000006
+    role: penalty-definition
+    labelCode: penalty.match-loss
+    groups:
+    - id: ipg-g000006
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000014
+        type: paragraph
+        text:
+          en: A Match Loss is a severe penalty that is usually issued when the match itself has been compromised.
+          zh: 一局负是严厉的处罚，通常用于对局本身被干扰的情况。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 4
+          bbox:
+          - 90.0
+          - 240.44
+          - 502.44
+          - 266.24
+          extractionUnit: extract-p04-l012..extract-p04-l013
+        legacyRawUnits:
+        - raw-L000369
+        - raw-L000371
+      - id: ipg-b000015
+        type: paragraph
+        text:
+          en: Match Losses are applied to the match during which the offense occurred unless the offender’s
+            match has already ended, in which case the penalty will be applied to that player’s next match.
+          zh: 一局负的处罚应该适用于发生违规的该对局，倘若违规牌手已经结束该对局，则应将一局负适用于相应牌手的下次对局。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 4
+          bbox:
+          - 90.0
+          - 281.84
+          - 545.03
+          - 307.64
+          extractionUnit: extract-p04-l014..extract-p04-l015
+        legacyRawUnits:
+        - raw-L000381
+        - raw-L000383
+  - id: ipg-c000007
+    role: penalty-definition
+    labelCode: penalty.disqualification
+    groups:
+    - id: ipg-g000007
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000016
+        type: paragraph
+        text:
+          en: A Disqualification is issued for activity that damages the integrity of a tournament as
+            a whole or for severe unsporting conduct.
+          zh: 取消资格判决用于伤害比赛之公正性，或是严重举止违背运动道德的行为。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 4
+          bbox:
+          - 90.0
+          - 338.24
+          - 551.8
+          - 364.04
+          extractionUnit: extract-p04-l017..extract-p04-l018
+        legacyRawUnits:
+        - raw-L000391
+        - raw-L000393
+      - id: ipg-b000017
+        type: paragraph
+        text:
+          en: The recipient of a Disqualification does not need to be a player in the tournament. They
+            may be a spectator or other bystander.
+          zh: 并不是只有参与比赛的牌手才会得到取消资格的处罚。旁观者和其他观众都有可能。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 4
+          bbox:
+          - 90.0
+          - 379.64
+          - 556.85
+          - 405.44
+          extractionUnit: extract-p04-l019..extract-p04-l020
+        legacyRawUnits:
+        - raw-L000399
+        - raw-L000401
+      - id: ipg-b000018
+        type: paragraph
+        text:
+          en: Disqualification can occur without proof of action so long as the Head Judge determines
+            sufficient information exists to believe the tournament’s integrity may have been compromised.
+            It is recommended that the Head Judge’s report reflect this fact.
+          zh: 给予取消资格的处罚可以不需要行为上的证据，只要主审研判有明显的信息，足以相信此比赛的公正性可能受到损害即可。建议主审在报告中反应这个事实。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 4
+          bbox:
+          - 90.0
+          - 421.04
+          - 549.24
+          - 460.64
+          extractionUnit: extract-p04-l021..extract-p04-l023
+        legacyRawUnits:
+        - raw-L000407
+        - raw-L000409
+      - id: ipg-b000019
+        type: paragraph
+        text:
+          en: When this penalty is applied, the player loses their current match and is dropped from the
+            tournament. If a player has already received prizes at the time they are disqualified, that
+            player may keep those prizes but does not receive any additional prizes or awards they may
+            be due.
+          zh: 此处罚生效时，牌手输掉目前正在进行的该局，然后将牌手退出比赛。如果牌手在他被取消资格之前就已获得奖品，则他可以保留那些奖品，但不会再得到其他本来应得的奖品或奖赏。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 4
+          bbox:
+          - 90.0
+          - 476.24
+          - 544.04
+          - 515.84
+          extractionUnit: extract-p04-l024..extract-p04-l026
+        legacyRawUnits:
+        - raw-L000415
+        - raw-L000417
+      - id: ipg-b000020
+        type: paragraph
+        text:
+          en: When a player is disqualified during a tournament, they are removed from the tournament
+            and do not take up a place in the standings. This means that all players in the tournament
+            will advance one spot in the standings and are entitled to any prizes the new standing would
+            offer. If the Disqualification takes place after a cut is made, no additional players advance
+            in place of the disqualified player although they do move up a spot in the standings. For
+            example, if a player is disqualified during the quarterfinal round of a Magic Tabletop Mythic
+            Qualifier, the former 9th place finisher does not advance into the single elimination top
+            8, but they do move into 8th place in the standings.
+          zh: 当比赛中有牌手被取消资格时，该牌手会被移出比赛，并且不会出现在比赛排名上。这代表排名比这些牌手低的选手，会因此在排名上前进一位，并获得新排名所应当给予的奖励。如果取消资格的处罚是发生在比赛赛程划分之后，则牌手虽然排名上有进位，但是不会递补来进行后续的比赛。例如，有位牌手在万智牌实体传奇资格赛的四分之一决赛中被判了取消资格，之前排名在第九名的牌手并不能加入八强的单淘汰赛中进行比赛，但是在最后的排名上会前进到第八名。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 4
+          bbox:
+          - 90.0
+          - 531.44
+          - 556.97
+          - 640.04
+          extractionUnit: extract-p04-l027..extract-p04-l034
+        legacyRawUnits:
+        - raw-L000423
+        - raw-L000425
+      - id: ipg-b000021
+        type: paragraph
+        text:
+          en: Disqualifications should be reported here. Please include the Wizards Account email address
+            of the disqualified player and that player’s opponent.
+          zh: 取消资格需要在[这里](https://askwpn-na.wizards.com/hc/en-us/requests/new?ticket_form_id=360001446253)上报，需包含被取消资格的牌手及其对手的威世智账号邮箱地址。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 4
+          bbox:
+          - 90.0
+          - 655.64
+          - 548.8
+          - 681.44
+          extractionUnit: extract-p04-l035..extract-p04-l036
+        legacyRawUnits:
+        - raw-L000431
+        - raw-L000433
+- id: ipg-s1-2
+  kind: policy
+  number: '1.2'
+  title:
+    en: Applying Penalties
+    zh: 应用处罚
+  components:
+  - id: ipg-c000008
+    role: body
+    labelCode: component.body
+    groups:
+    - id: ipg-g000008
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000022
+        type: paragraph
+        text:
+          en: Any penalty of Game Loss or higher should be reported to the Head Judge, and it is recommended
+            that only the Head Judge issue penalties of this nature (with the exception of Tardiness (3.1)
+            and Decklist Problems (3.4)).
+          zh: 任何级别高于“一盘负”处罚（含“一盘负”）都必须回报给主审，并建议仅由主审来作这类的判罚（迟到（3.1）和套牌登记表问题（3.4）此两项违规除外）。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 5
+          bbox:
+          - 90.0
+          - 73.64
+          - 527.8
+          - 113.24
+          extractionUnit: extract-p05-l002..extract-p05-l004
+        legacyRawUnits:
+        - raw-L000441
+        - raw-L000443
+      - id: ipg-b000023
+        type: paragraph
+        text:
+          en: Being enrolled in the tournament is not a requirement to receive a penalty. Although these
+            guidelines refer to players, other people in the venue, such as spectators, staff, or judges
+            may be enrolled into (and dropped from) the tournament in order to receive a penalty. Penalties
+            are still issued even if a player drops from the tournament before it would take effect.
+          zh: 并非只有参赛牌手才可能会得到处罚。此处罚方针虽然只提及牌手，但是赛场内的其他人，例如观众、工作人员或是裁判皆可能会被加入比赛（并立即退赛）以得到处罚。即使牌手在罚则生效之前选择退出比赛，该牌手依然会受到相应的处罚。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 5
+          bbox:
+          - 90.0
+          - 128.84
+          - 549.77
+          - 182.24
+          extractionUnit: extract-p05-l005..extract-p05-l008
+        legacyRawUnits:
+        - raw-L000449
+        - raw-L000451
+      - id: ipg-b000024
+        type: paragraph
+        text:
+          en: Any time a penalty is issued, the judge must explain the infraction, the procedure for fixing
+            the situation, and the penalty to all players involved. If the Head Judge chooses to deviate
+            from the Infraction Procedure Guide, the Head Judge is expected to explain the standard penalty
+            and the reason for deviation.
+          zh: '作出任何处罚时，裁判都必须对涉及该违规的牌手们解释修正状况的流程，以及其处罚。
+
+
+            如果主审选择不遵循违规处理方针，则主审应解释标准的罚则，以及不遵循的理由。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 5
+          bbox:
+          - 90.0
+          - 197.84
+          - 546.41
+          - 251.24
+          extractionUnit: extract-p05-l009..extract-p05-l012
+        legacyRawUnits:
+        - raw-L000457
+        - raw-L000459
+        - raw-L000465
+        - raw-L000467
+      - id: ipg-b000025
+        type: paragraph
+        text:
+          en: Some infractions include remedies to handle the offense beyond the base penalty. These procedures
+            exist to protect officials from accusations of unfairness, bias, or favoritism. If a judge
+            makes a ruling that is consistent with quoted text, then the complaints of a player shift
+            from accusation of unfairness by the judge to accusations of unfair policy. Deviations from
+            these procedures may raise accusations against the judge from the player(s) involved, or from
+            those who hear about it. These procedures do not, and should not, take into account the game
+            being played, the current situation that the game is in, or who will benefit strategically
+            from the procedure associated with a penalty. While it is tempting to try to “fix” game situations,
+            the danger of missing a subtle detail or showing favoritism to a player (even unintentionally)
+            makes it a bad idea.
+          zh: '有些罚则会在基本的处罚之外，包括额外叙述修正此犯规的流程的叙述。这些流程是用以保护工作人员免于不公正、偏见或是偏袒的指控。如果裁判的规则解释和引用的内容一致，而牌手还有所抱怨，则“指控该裁判不公”此事会转变成“指控方针不公”。裁判若不遵循这些流程，可能会引来相关牌手或是旁观者对裁判的指控。
+
+
+            这些流程不会也不该考虑游戏进行过的部份、游戏目前的状况，或是谁会因此流程与所连带的处罚而得到策略上的好处。
+
+
+            此流程只是试图要“修复”游戏的状况，遗漏一个小细节或是表现出对某牌手的偏袒（即使不是有意的），都不是好主意。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 5
+          bbox:
+          - 90.0
+          - 266.84
+          - 554.81
+          - 403.04
+          extractionUnit: extract-p05-l013..extract-p05-l022
+        legacyRawUnits:
+        - raw-L000473
+        - raw-L000475
+        - raw-L000481
+        - raw-L000483
+        - raw-L000489
+        - raw-L000491
+      - id: ipg-b000026
+        type: paragraph
+        text:
+          en: If an error leads to multiple related infractions, only issue one with the most severe penalty.
+          zh: 如果一个错误导致了多个相关联的违规，仅作出其中最严重的处罚。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 5
+          bbox:
+          - 90.0
+          - 418.64
+          - 529.56
+          - 430.64
+          extractionUnit: extract-p05-l023..extract-p05-l023
+        legacyRawUnits:
+        - raw-L000497
+        - raw-L000499
+- id: ipg-s1-3
+  kind: policy
+  number: '1.3'
+  title:
+    en: Randomizing a Library
+    zh: 随机化牌库
+  components:
+  - id: ipg-c000009
+    role: body
+    labelCode: component.body
+    groups:
+    - id: ipg-g000009
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000027
+        type: paragraph
+        text:
+          en: The remedy for some infractions in this document includes shuffling the randomized portion
+            of the library. This requires first determining whether any portion of the library is non-random,
+            such as cards that have been manipulated on the top or bottom of the library, and separating
+            those. Check with both players to verify this, and check the graveyard, exile, and battlefield
+            for library manipulation cards, such as Brainstorm and cards with the scry mechanic. Once
+            the library has been shuffled, any manipulated cards are returned to their correct locations.
+          zh: '本文档中某些违规的修正方式包含将牌库已随机化的部分洗牌。
+
+
+            利用此种方式进行修正时，首先需要确定牌库中是否包含非随机的部分，例如牌库顶部或底部已被调整过顺序的牌张，然后将这部分放在一边。询问双方牌手来确认此事，然后检查他们的坟墓场、放逐区和战场，看看是否有可以操作牌库的牌，像是脑力激荡/Brainstorm和拥有占卜机制的牌。
+
+
+            在完成牌库的洗牌之后，将已调整过顺序的牌张放回原本的位置。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 5
+          bbox:
+          - 90.0
+          - 475.04
+          - 557.76
+          - 556.04
+          extractionUnit: extract-p05-l025..extract-p05-l030
+        legacyRawUnits:
+        - raw-L000511
+        - raw-L000513
+        - raw-L000519
+        - raw-L000521
+        - raw-L000527
+        - raw-L000529
+      - id: ipg-b000028
+        type: paragraph
+        text:
+          en: Shuffles performed by a judge as part of a remedy are not considered shuffles for game purposes.
+          zh: 作为修正方式由裁判执行的洗牌，不属于游戏意义上的洗牌。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 5
+          bbox:
+          - 90.0
+          - 571.64
+          - 557.4
+          - 583.64
+          extractionUnit: extract-p05-l031..extract-p05-l031
+        legacyRawUnits:
+        - raw-L000535
+        - raw-L000537
+- id: ipg-s1-4
+  kind: policy
+  number: '1.4'
+  title:
+    en: Backing Up
+    zh: 倒回
+  components:
+  - id: ipg-c000010
+    role: body
+    labelCode: component.body
+    groups:
+    - id: ipg-g000010
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000029
+        type: paragraph
+        text:
+          en: Some infractions in this document permit the judge to consider the possibility of a backup.
+            Due to the amount of information that may become available to players and might affect their
+            play, backups are regarded as a solution of last resort, only applied in situations where
+            leaving the game in the current state is a substantially worse solution. A good backup will
+            result in a situation where the gained information makes no difference and the line of play
+            remains the same (excepting the error, which has been fixed). This means limiting backups
+            to situations with minimal decision trees.
+          zh: '本文档中的某些违规允许裁判考虑进行倒回。
+
+
+            由于此举可能会向牌手透露信息，且牌手可能由此改变游戏行动，因此“倒回”应作为最后的处理手段，仅适用于“保留当前游戏状态反而结果更糟”的情形。
+
+
+            良好的倒回结果应是：双方牌手获得的信息与此前一致，游戏进行的过程没有区别（错误已被修正）。这意味着倒回仅适用于存在最小决策树之情形。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 5
+          bbox:
+          - 90.0
+          - 614.24
+          - 554.04
+          - 709.04
+          extractionUnit: extract-p05-l033..extract-p05-l039
+        legacyRawUnits:
+        - raw-L000545
+        - raw-L000547
+        - raw-L000553
+        - raw-L000555
+        - raw-L000561
+        - raw-L000563
+      - id: ipg-b000030
+        type: paragraph
+        text:
+          en: Only the Head Judge may authorize a backup. At large tournaments, they may choose to delegate
+            this responsibility to Team Leaders.
+          zh: 只有主审可允许进行倒回。在大型比赛中，主审可委派领队承担此许可职责。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 6
+          bbox:
+          - 90.0
+          - 56.84
+          - 557.45
+          - 82.64
+          extractionUnit: extract-p06-l001..extract-p06-l002
+        legacyRawUnits:
+        - raw-L000569
+        - raw-L000571
+      - id: ipg-b000031
+        type: paragraph
+        text:
+          en: To perform a backup, each individual action since the point of the error is reversed, starting
+            with the most recent ones and working backwards. Every action must be reversed; no parts of
+            the sequence should be omitted or reordered. If the identity of a card involved in reversing
+            an action is unknown to one of the players (usually because it was drawn), a random card is
+            chosen from the possible candidates. Actions that caused a player to learn the identity of
+            cards at a specific location in the library are reversed by shuffling those cards into the
+            random portion of the library unless they were subsequently drawn; cards being returned to
+            the library as part of the backup should not be shuffled at that stage if their identity was
+            known to only one player.
+          zh: '执行倒回的流程如下：从最近的行动开始逐步回退，还原做过的所有行动，直到游戏来到发生失误的时间点为止。所有的行动都必须还原；不得省略或重排一连串行动当中的若干步骤。
+
+
+            如果在还原行动时，涉及到有牌手无法辨认之牌张（通常是因为该牌被抓上手），则从可能的牌张中随机选择一张。
+
+
+            让牌手得知某一张牌在牌库中具体位置的动作，除非是在之后抓起导致的，否则以将这些牌洗进牌库中随机部分的方式进行倒回；由于倒回而回到牌库的牌如果之前只有一位牌手知道内容，则在此步骤中不将它们洗牌。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 6
+          bbox:
+          - 90.0
+          - 98.24
+          - 555.24
+          - 206.84
+          extractionUnit: extract-p06-l003..extract-p06-l010
+        legacyRawUnits:
+        - raw-L000577
+        - raw-L000579
+        - raw-L000585
+        - raw-L000587
+        - raw-L000593
+        - raw-L000595
+      - id: ipg-b000032
+        type: paragraph
+        text:
+          en: Backups involving random/unknown elements should be approached with extreme caution, especially
+            if they cause or threaten to cause a situation in which a player will end up with different
+            cards than they would once they have correctly drawn those cards. For example, returning cards
+            to the library when a player has the ability to shuffle their library is not something that
+            should be done except in extreme situations.
+          zh: 涉及随机／未知元素之倒回应谨慎处之，在进行倒回会导致或极可能导致牌手最终手牌内容与正常完成抓牌动作之结果不同的情形下尤甚。举例来说，除极特殊情况外，在牌手能够将牌库洗牌的情况下，不应将牌放回牌库中。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 6
+          bbox:
+          - 90.0
+          - 222.44
+          - 528.36
+          - 289.64
+          extractionUnit: extract-p06-l011..extract-p06-l015
+        legacyRawUnits:
+        - raw-L000601
+        - raw-L000603
+      - id: ipg-b000033
+        type: paragraph
+        text:
+          en: Some remedies state a simple backup may be performed. A simple backup is backing up the
+            last action completed (or one currently in progress) and is sometimes used to make another
+            portion of the prescribed remedy smoother. A simple backup should not involve any random elements.
+          zh: '某些修正方式注明“可进行简易倒回”。简易倒回是指倒回最后完成（或正在执行）的一个游戏动作，有时用于保证列明之修正方式的其他部分能够顺利执行。
+
+
+            简易倒回不应涉及任何随机元素。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 6
+          bbox:
+          - 90.0
+          - 305.24
+          - 557.44
+          - 344.84
+          extractionUnit: extract-p06-l016..extract-p06-l018
+        legacyRawUnits:
+        - raw-L000609
+        - raw-L000611
+        - raw-L000617
+        - raw-L000619
+- id: ipg-s1-5
+  kind: policy
+  number: '1.5'
+  title:
+    en: Sets
+    zh: 牌叠
+  components:
+  - id: ipg-c000011
+    role: body
+    labelCode: component.body
+    groups:
+    - id: ipg-g000011
+      kind: paragraphs
+      blocks:
+      - id: ipg-b000034
+        type: paragraph
+        text:
+          en: Some infractions in this document refer to “sets” of cards. A set is a physically distinct
+            group of cards defined by a game rule or effect. It may correspond to a specific zone, or
+            may only represent a part of a zone. A set may consist of a single card.
+          zh: '本文档中的某些违规会提及“牌叠”之概念。
+
+
+            所谓牌叠，是指由游戏规则或效应规定，有显著区隔的牌张组合。牌叠此概念可能对应某一特定区域，也可能只包含某一区域当中的一部分。一张牌也可构成牌叠。'
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 6
+          bbox:
+          - 90.0
+          - 375.44
+          - 550.6
+          - 415.04
+          extractionUnit: extract-p06-l020..extract-p06-l022
+        legacyRawUnits:
+        - raw-L000627
+        - raw-L000629
+        - raw-L000635
+        - raw-L000637
+      - id: ipg-b000035
+        type: paragraph
+        text:
+          en: Cards are considered to be part of a set until they join another set. There is no in-between
+            state and any card that has not yet been seen is part of the previous set (unless the new
+            set is hidden).
+          zh: 牌张在移入新的牌叠之前，视为在原来的牌叠之中。牌张不存在“移动中”之状态，任何还没有被看到的牌都属于之前的牌叠（除非新的牌叠也为非公开）。
+        officialPdfUnits:
+        - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+          page: 6
+          bbox:
+          - 90.0
+          - 430.64
+          - 548.76
+          - 456.44
+          extractionUnit: extract-p06-l023..extract-p06-l024
+        legacyRawUnits:
+        - raw-L000643
+        - raw-L000645
+publicationAnnotations:
+- id: ipg-ann-1-ce79fc3a1e68
+  anchor:
+    type: block
+    id: ipg-b000006
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-ce79fc3a1e68-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-ce79fc3a1e68-g01-b01
+      type: paragraph
+      text:
+        en: This is probably the single most important concept in the document. Whenever there is an issue,
+          judges should evaluate the situation without bias and in accordance to the rules and policy
+          documents. It should be inconceivable that a judge ruled in favor of a player because they are
+          friends or because somehow the judge likes one player more than the other. Being impartial is
+          a fundamental concept in the Magic Judge Code of Conduct. Judges are viewed with respect, in
+          large part, because they are neutral and because they enforce the policy equally. It should
+          also be unimaginable that a judge creates rules or rulings without policy guidance.
+        zh: 这可能是这份文件中最重要的概念。每当问题发生时，裁判应当毫无偏袒地评估情况，并依照规则和方针文件进行处理。我们无法想象一位裁判在做出判断时会偏向某位牌手，只是因为他们是朋友或者裁判更喜欢这位牌手。公正是《万智牌裁判行为守则》中规定的裁判行为基础。正因为裁判总是能公正的执行政策，所以大家才会对裁判怀有敬意。裁判在没有方针指导下自行创造规则或做出判决也是无法想象的。
+      sourceRawUnits:
+      - raw-L000101
+      - raw-L000103
+- id: ipg-ann-1-313697b6bb7c
+  anchor:
+    type: block
+    id: ipg-b000006
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-1-313697b6bb7c-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-313697b6bb7c-g01-b01
+      type: paragraph
+      text:
+        en: Judges are there for the players. Our services are needed when a rule has been violated, a
+          player has some need, or there is a delicate situation like an argument and it’s necessary to
+          calm the players down. When their assistance is not needed, judges should not interfere with
+          matches. That means no comments about game actions, no risk of giving advice, and no disruption
+          of the player’s concentration. Let players play. Keep in mind this doesn’t mean you have to
+          be a robot. You can still chat with players, and joke around with them, just don’t interrupt
+          their games.
+        zh: 裁判的存在是为了服务牌手们。当有规则被违反，有牌手需要帮助或有特殊情况发生（比如产生了争吵，需要安抚牌手），裁判就该出动了。当不需要裁判的时候，裁判不应该干扰比赛。也就是说不评论牌手的游戏行动，不给出建议，不打断牌手的思考。让牌手玩自己的。但是注意这并不是让你成为一个规则自动答复机。你依然可以跟牌手闲聊、开玩笑，只是不要打断他们的对局。
+      sourceRawUnits:
+      - raw-L000109
+      - raw-L000111
+- id: ipg-ann-1-c5da51e504c8
+  anchor:
+    type: block
+    id: ipg-b000006
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-1-c5da51e504c8-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-c5da51e504c8-g01-b01
+      type: paragraph
+      text:
+        en: Like in many other sports, judges don’t prevent mistakes. However, when a game infraction
+          happens, judges step in and apply the necessary corrections and penalties. Players cannot depend
+          on a judge to prevent their illegal actions from occurring, because judges can’t foresee the
+          future and game actions happen quickly. In the vast majority of cases, fixing an infraction
+          after it happens restores the correct flow of the game. This policy also holds when a judge
+          is watching a match at the end of round or during a Top 8.
+        zh: 正如在很多其他体育项目中一样，裁判并不防止游戏错误的出现。然而，只要当违规发生，裁判就会介入，进行需要的修正及判罚。牌手无法依靠裁判来防止自己做出非法游戏动作，因为裁判无法预知未来而且游戏动作通常进行的很快。在绝大部分情况下，在违规出现之后进行修正，可以让游戏正常的进行下去。裁判在每轮结束时或者八强的盯桌时同样需要遵守这一条。
+      sourceRawUnits:
+      - raw-L000117
+      - raw-L000121
+    - id: ipg-ann-1-c5da51e504c8-g01-b02
+      type: paragraph
+      text:
+        en: It’s also important that judges set a good example of behavior. At an event, your attitude
+          is an advertisement for the behaviors you want to see at events.  Your attitude and actions
+          have a pronounced impact on the tone of the event. Your role is largely a customer service role,
+          and that requires a high degree of diplomacy.
+        zh: 裁判做出良好的行为举止的表率也是很重要的。在比赛中，你的态度会为你希望在比赛中看到的举止广而告之。你的行为和态度对赛事的氛围有着非常显著的影响。你的角色在很大程度上是客户服务的角色，而这需要较高水平的交际手腕。
+      sourceRawUnits:
+      - raw-L000119
+      - raw-L000123
+- id: ipg-ann-1-9ff99079c796
+  anchor:
+    type: block
+    id: ipg-b000006
+  position: after
+  order: 40
+  groups:
+  - id: ipg-ann-1-9ff99079c796-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-9ff99079c796-g01-b01
+      type: paragraph
+      text:
+        en: 'While it’s next to impossible to see that a game infraction is about to happen, sometimes
+          it’s possible to see that an outside-of-game infraction that is about to happen. In these cases,
+          judges should step in and prevent infractions from happening. The “may” in the sentence is not
+          “the judge is allowed to make a choice” but more “The IPG/MTR allows judges to do step in.”
+          This underscores the importance of customer service and makes it very clear that judges do not
+          have the choice of whether to intervene and prevent these types of errors. Outside of a game,
+          judges should always intervene to prevent infractions, but we accept that they sometimes won’t
+          notice that an infraction is about to happen. Here are a few examples:'
+        zh: 虽然发现一个游戏内的违规事件的征兆是几乎不可能的，但是有时可以看出游戏外违规事件的征兆。在这种情况下，裁判应该上前阻止这个违规的发生。IPG原文中这句话中的“可以”并不是指“裁判可以选择是否阻止”，而是“IPG/MTR允许才裁判上前阻止”。这强调了服务牌手的重要性，同时明确的说明裁判并不能选择是否要在此时干预并防止此类违规。在游戏外，裁判应该阻止这些违规的出现，但是我们承认有的时候裁判并不能意识到这种违规的征兆。下面是几个例子：
+      sourceRawUnits:
+      - raw-L000129
+      - raw-L000139
+  - id: ipg-ann-1-9ff99079c796-g02
+    kind: unordered-list
+    blocks:
+    - id: ipg-ann-1-9ff99079c796-g02-b01
+      type: list-item
+      text:
+        en: A judge sees that a player is shuffling their deck after the end of game one, sees that there
+          is a previously exiled creature on the table, and realizes that the player forgot to return
+          it to their deck; the judge steps in and tell the player that they’re forgetting to shuffle
+          a card.
+        zh: 一位裁判看到牌手在第一局与第二局之间洗牌，然而有一张被放逐的生物牌还在桌子上，意识到那位牌手忘记了把它洗进去。裁判上前告诉那位牌手他忘了把那张生物牌洗回去。
+      sourceRawUnits:
+      - raw-L000131
+      - raw-L000141
+      marker: bullet
+    - id: ipg-ann-1-9ff99079c796-g02-b02
+      type: list-item
+      text:
+        en: In a Sealed Deck tournament, a player gives a decklist to a judge, and the judge notices that
+          the player forgot to write down her basic lands; the judge asks the player to record the basic
+          lands they’re playing.
+        zh: 在一场现开比赛中，一位牌手将他的套牌登记表交给裁判，裁判发现该牌手忘了填他基本地的使用量；裁判让该牌手将他的地牌的数量写上。
+      sourceRawUnits:
+      - raw-L000133
+      - raw-L000143
+      marker: bullet
+    - id: ipg-ann-1-9ff99079c796-g02-b03
+      type: list-item
+      text:
+        en: Just before the beginning of a round, a player goes to the judge station and hands in a card
+          (like Pacifism) that belongs to her previous opponent; the judges makes an effort to find where
+          the owner of that card is playing this round, so that they can return it before the game starts
+          with an illegal deck.
+        zh: 在一轮比赛马上要开始的时候，一位牌手到主席台处把一张属于他上局对手的牌（比如和平主义）交给裁判。裁判尽力寻找那张牌的拥有者并把牌还给他，以防他用一套不合法的套牌进行下轮比赛。
+      sourceRawUnits:
+      - raw-L000135
+      - raw-L000145
+      marker: bullet
+    - id: ipg-ann-1-9ff99079c796-g02-b04
+      type: list-item
+      text:
+        en: Before the event, a judge sees a questionable card alter. The Judge reminds the player that
+          the head judge needs to approve all card alters prior to the event.
+        zh: 在比赛之前，一位裁判看到牌手用了可能有问题的艺术加工牌。他提醒那位牌手他需要在比赛之前先获得主审的允许来使用这些牌。
+      sourceRawUnits:
+      - raw-L000137
+      - raw-L000147
+      marker: bullet
+- id: ipg-ann-1-43efd295d505
+  anchor:
+    type: block
+    id: ipg-b000006
+  position: after
+  order: 50
+  groups:
+  - id: ipg-ann-1-43efd295d505-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-43efd295d505-g01-b01
+      type: paragraph
+      text:
+        en: We don’t change the infraction based on how good the player is perceived to be. A GRV is a
+          warning regardless of whether the player is new or a grizzled Pro. Once you determine what the
+          infraction was, you apply the penalties without any preconceived biases.  You don’t make penalties
+          harsher because the player should ‘know better’. A player who has a reputation for being shady
+          has their GRVs fixed the same way as an L3 Judge playing in the event. Once the infraction is
+          recognized, who the player is has no bearing. However, in determining what infraction was made,
+          a player’s history may influence the investigation. For example, a new player misunderstanding
+          how trample works is much more believable than an experienced player, with whom you have discussed
+          Trample before on multiple occasions. It’s still possible for legitimate errors to be made,
+          but the questions asked in the investigation will be influenced by this knowledge.
+        zh: 我们不应根据牌手的能力或对牌手的印象来改变判罚。当你确定了违规所属的类别，你的处罚应该不掺杂任何先入为主的偏见。不应该因为牌手本应"了解地更多"而进行更严厉的处罚。一位声名狼藉的牌手和一位参加比赛的3级裁判犯下违反游戏规则后进行的修正应当遵循相同的方式。一旦明确了违规是什么，牌手是谁并不会有任何影响。然而，在确定究竟是什么违规的时候，牌手的身份可能会影响调查。例如，一位跟你数次讨论过践踏的老玩家和一位新手都说他自己误解了践踏的规则，显然后者的可信度要高一些。这依然有可能是老牌手犯下的一个正常的错误，但是这些前期的判断将影响你在调查的时候的提问。
+      sourceRawUnits:
+      - raw-L000153
+      - raw-L000155
+- id: ipg-ann-1-e646c43664c6
+  anchor:
+    type: block
+    id: ipg-b000007
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-e646c43664c6-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-e646c43664c6-g01-b01
+      type: paragraph
+      text:
+        en: Penalties don’t exist to give sadistic judges the ability to inflict pain on defenseless players.
+          Penalties exist to reduce the chance the error will happen again. A player who receives a penalty
+          for an action is less likely to make the same error in the future. Generally they are meant
+          to be something tangible to reinforce the lesson “I lost a game once for this mistake, and I
+          don’t want to lose another game for something I can easily avoid, I will count to 60 every time
+          I write a decklist”. The primary purpose of a penalty is not tracking; although that is a convenient
+          and useful byproduct, the purpose is education.
+        zh: 处罚的存在并不是为了让虐待狂裁判去伤害毫无防备的牌手，处罚的存在是为了减少错误再次出现的几率。牌手受到了处罚之后他再次犯下同样错误的可能会减少。通常这意味着给他们上了印象深刻的一课“我因为这个失误而获得一盘负，我不想再因为这个可以轻松避免的问题再输一盘。我以后交牌表之前会数一下到没到60张”。处罚的目的并不是持续记录一位牌手的比赛行为（虽然那是个方便的副产物），处罚的目的在于教育。
+      sourceRawUnits:
+      - raw-L000161
+      - raw-L000163
+- id: ipg-ann-1-f63e81ada058
+  anchor:
+    type: block
+    id: ipg-b000007
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-1-f63e81ada058-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-f63e81ada058-g01-b01
+      type: paragraph
+      text:
+        en: So in the sentence above we are stressing the importance of education. A penalty alone can’t
+          do that. You also have to explain (briefly) what the player did wrong. Otherwise, they might
+          not fully understand what went wrong.
+        zh: 所以这句话我们强调了教育的重要性。仅仅是处罚牌手并不能做到这点，你同时要清楚地向他解释他哪儿做错了。否则，他可能不能完全理解自己错在哪儿。
+      sourceRawUnits:
+      - raw-L000169
+      - raw-L000171
+- id: ipg-ann-1-d88ef95e28e5
+  anchor:
+    type: block
+    id: ipg-b000007
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-1-d88ef95e28e5-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-d88ef95e28e5-g01-b01
+      type: paragraph
+      text:
+        en: We should also note that you don’t have to receive a penalty to recognize that you don’t want
+          to receive one. Hearing about a friend getting a penalty for an action helps reinforce that
+          you don’t want one either. We learn from our friend’s mistakes as well as from our own.
+        zh: 我们也要记住，有时并不用以获得判罚为代价来认识错误。如果一位朋友因为一个处罚输掉了一场重要的比赛，我们肯定不希望自己不小心干了同样的事情而受到处罚。对我们朋友的处罚同样能使我们防止自己犯错误。
+      sourceRawUnits:
+      - raw-L000177
+      - raw-L000181
+    - id: ipg-ann-1-d88ef95e28e5-g01-b02
+      type: paragraph
+      text:
+        en: There is a (private) archive of all the penalties, just like the (public) archive of all match
+          results. This archive becomes useful in the case of one player committing a high number of the
+          same infraction. If a player receives a warning for “Looking at extra cards – They revealed
+          their opponent’s cards while shuffling their opponent’s deck before the beginning of the match”
+          for twenty times in twenty consecutive tournaments, well, wouldn’t you believe that they are
+          doing it on purpose and they are doing it only once just because they knows that “the first
+          time is just a warning.”
+        zh: 正如有一个档案（公开的）保存着所有的比赛结果一样，同样有一个档案（非公开的）保存着所有的判罚记录。当一位牌手重复出现了同一个违规的时候，这个档案会非常有用。当一个牌手在20个连续的比赛中受到了20次“额外看牌——在比赛前洗牌时，看到了对手的牌库”的处罚，难道你不认为是因为他知道这样做“第一次只是警告”所以故意这样做的么？
+      sourceRawUnits:
+      - raw-L000179
+      - raw-L000183
+- id: ipg-ann-1-2cac760b5d42
+  anchor:
+    type: block
+    id: ipg-b000008
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-2cac760b5d42-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-2cac760b5d42-g01-b01
+      type: paragraph
+      text:
+        en: Judges should be seen as a benefit to the players, and there are many minor/tiny mistakes
+          that players make and correct themselves over the course of a match without the need for a judge.
+          If the error is tiny, and the players fix it themselves, and are both happy, then the judge
+          does not need to insert themselves into their game. If you see an error, you can wait a second
+          to see if the players fix it themselves, and if they do, you can continue watching Magic.
+        zh: 裁判应当被牌手视为提供帮助的来源。在对局中有很多轻微的错误，牌手犯下这些错误后会自行修正，而无需裁判修正。如果错误很轻微，且牌手自行修正并都对结果满意，则裁判无需介入游戏来干预。如果你发现了一个失误，你可以稍等一下，看牌手会不会自行修正。如果牌手这样做了，你便可以继续观战而无需干预。
+      sourceRawUnits:
+      - raw-L000189
+      - raw-L000191
+- id: ipg-ann-1-44bb9eb2da14
+  anchor:
+    type: block
+    id: ipg-b000008
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-1-44bb9eb2da14-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-44bb9eb2da14-g01-b01
+      type: paragraph
+      text:
+        en: Players take certain shortcuts, or use beads to represent odd things, or use the wrong tokens
+          for creatures. These things might be clear to them, but not clear to observers (including judges).
+          If the players understand what’s going on, and everything is fine, don’t issue a penalty. Just
+          ask them to play in a way that’s clearer. Often we get spectators coming to us with problems
+          that aren’t really problems. For this reason we must push the players to not only be clear with
+          each other but also to ensure that their actions are clear to anyone who is watching their game.
+        zh: 牌手可能会采用一些简化流程、使用意义不明的物体来表示某些东西、或使用错误的衍生物等。这些做法也许对于双方牌手均很清楚，但对旁观者（包括裁判）可能就不那么清楚了。如果双方牌手均清楚发生了什么，双方也都能接受，则不要给予判罚，但可以请求牌手用更为清楚的方式进行游戏。我们经常会遇到旁观者叫来裁判报告问题，但最后发现实际上并不是问题，而是理解错误。因此我们必须促使牌手不仅要对对手表达清楚，也要对旁观他们游戏的其他人表达清楚。
+      sourceRawUnits:
+      - raw-L000197
+      - raw-L000199
+- id: ipg-ann-1-b3a62e9682b3
+  anchor:
+    type: block
+    id: ipg-b000008
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-1-b3a62e9682b3-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-b3a62e9682b3-g01-b01
+      type: paragraph
+      text:
+        en: If the players fix a tiny error themselves or are playing in a way that is clear to them,
+          but not clear to bystanders, stick around and watch and make sure nothing odd is happening,  We
+          don’t want a player taking advantage of the confusion, or the error compounding on itself.
+        zh: 如果牌手自行修正了一个轻微错误，或使用只有牌手双方知道但对旁观者混淆不清的表达方式，裁判应该在桌前稍作停留，并确认没有更严重的事情发生。我们不希望牌手利用混淆不清的表达获利、或同样的错误接连不断发生。
+      sourceRawUnits:
+      - raw-L000205
+      - raw-L000207
+- id: ipg-ann-1-4f9a8d59ee72
+  anchor:
+    type: block
+    id: ipg-b000008
+  position: after
+  order: 40
+  groups:
+  - id: ipg-ann-1-4f9a8d59ee72-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-4f9a8d59ee72-g01-b01
+      type: paragraph
+      text:
+        en: This sentence pulls double-duty. It’s a reminder that we do give infractions in cases larger
+          than “tiny” and that we do not start with the penalty and work backwards to the infraction.
+          We identify what actions occurred, what the infraction is, and then determine the penalty. We
+          do not give people Game Losses because their error seems worth a game loss.
+        zh: 这句话确定了两项责任。首先，我们的确需要对任何比“轻微”违规严重的情况给出判罚；其次，我们不能先确定判罚是什么，再回头找适用的违规。我们应当先判定牌手做了哪些行动，导致了什么违规，再确定判罚。我们不能因为某个错误看起来应该一盘负就给一盘负。
+      sourceRawUnits:
+      - raw-L000213
+      - raw-L000215
+- id: ipg-ann-1-178317ec4772
+  anchor:
+    type: block
+    id: ipg-b000009
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-178317ec4772-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-178317ec4772-g01-b01
+      type: paragraph
+      text:
+        en: When there are multiple judges, the Head Judge is the judge in charge of the entire tournament;
+          the only one who has the authority to determine if a specific penalty doesn’t apply well to
+          the current situation. Head judges are usually the most experienced judges available, and when
+          they decide to deviate it’s usually for a good reason.
+        zh: 当多个裁判共同执法时，主审是负责整个比赛的裁判；他是唯一有权利来决定是否需要进行不依照方针的特殊判罚的人。主审通常由经验最丰富的裁判来担任，他在决定不依照方针行事的时候通常都有充分的理由。
+      sourceRawUnits:
+      - raw-L000221
+      - raw-L000223
+- id: ipg-ann-1-2112e177a631
+  anchor:
+    type: block
+    id: ipg-b000009
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-1-2112e177a631-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-2112e177a631-g01-b01
+      type: paragraph
+      text:
+        en: Of course, although the Head Judge has the authority to deviate any time he or she wants,
+          he or she is also expected to know when it is appropriate to deviate. The main reason for deviation
+          is when a specific situation doesn’t fit well in the categories listed in the twenty pages of
+          the IPG. The only case where a deviation is justifiable is when the situation is both significant
+          and exceptional.
+        zh: 当然，虽然主审虽然任何时候都有不依照方针处理的权利，他同样也应该知道什么时候适合自行决定处罚。不依照方针的常见原因是出现了某些没有被包含在这份IPG中的特殊情况。只有在出现了重大且特殊的状况时，不依照方针才是公正的处理方法。
+      sourceRawUnits:
+      - raw-L000229
+      - raw-L000231
+- id: ipg-ann-1-aaba7f93765d
+  anchor:
+    type: block
+    id: ipg-b000009
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-1-aaba7f93765d-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-aaba7f93765d-g01-b01
+      type: paragraph
+      text:
+        en: Here you have a couple of examples of “exceptional circumstances”. In these cases, we use
+          common sense and we try to find the “best solution” with the players. Both of the examples above
+          are both significant and exceptional. Make sure your situation is both before you consider deviating.
+          If you find yourself considering a deviation, give it a serious second thought.
+        zh: 在这里你可以看到几个“重大且特殊的状况”的例子。在这些情况下，我们使用我们的常识去跟牌手一起努力找到最佳解决方案。上面的这两个例子都重大且特殊，在你不依照方针处理之前请确保你遇到的状况也是重大且特殊的。如果你想要考虑偏离方针，请认真地再次考虑一遍。
+      sourceRawUnits:
+      - raw-L000237
+      - raw-L000239
+- id: ipg-ann-1-e28523ebe0f7
+  anchor:
+    type: block
+    id: ipg-b000009
+  position: after
+  order: 40
+  groups:
+  - id: ipg-ann-1-e28523ebe0f7-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-e28523ebe0f7-g01-b01
+      type: paragraph
+      text:
+        en: Some of these situations might make it seem like it’s OK to deviate, but it’s not. You are
+          to enforce policy regardless of whether it’s the last round, regardless of if the call is at
+          table 1 or table 101. The opponents might be an exceptionally young age, but that age difference
+          is not significant in terms of policy. The player might be new, and not know that rolling a
+          die to determine a winner is prohibited; that player is still going to receive the appropriate
+          penalty regardless of whether you think it is ‘fair’ or not. And finally, being a Level 3 Judge
+          does not bestow upon that judge the right to deviate. In truth, they are held to a stricter
+          standard, as lower level judges are watching and learning from their actions.
+        zh: 一些情况下，不依照方针行事看上去是合理的，但其实不是。你应该严格的依照方针执行，不管这是不是最后一轮，不管这是1号桌还是101号桌。对手可能是非常年轻的孩子，但是年龄对于执行方针并没有什么影响。牌手可能是刚刚接触万智牌的新人，他并不知道扔骰子决定胜负是被禁止的，他仍然会获得相应的判罚，不管你觉得这是否“公平”。另外，成为一个L3裁判并不会给你更多不依方针行事的权利。事实上，他们会更加严格的遵守标准，因为低级的裁判都以他们为榜样在学习。
+      sourceRawUnits:
+      - raw-L000245
+      - raw-L000247
+- id: ipg-ann-1-42f1626b7dbf
+  anchor:
+    type: block
+    id: ipg-b000009
+  position: after
+  order: 50
+  groups:
+  - id: ipg-ann-1-42f1626b7dbf-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-42f1626b7dbf-g01-b01
+      type: paragraph
+      text:
+        en: Just because the Head Judge is the only one that’s allowed to deviate doesn’t mean a floor
+          judge can’t suggest it to the Head Judge. However, as a floor judge, you must never deviate.
+        zh: 只有主审有不依方针行事的权利并不意味着一个巡场裁判不能建议主审如此做。然而，作为一个巡场裁判，你永远不能不依方针行事。
+      sourceRawUnits:
+      - raw-L000253
+      - raw-L000255
+- id: ipg-ann-1-02ad37ae2dc0
+  anchor:
+    type: block
+    id: ipg-b000010
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-02ad37ae2dc0-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-02ad37ae2dc0-g01-b01
+      type: paragraph
+      text:
+        en: Despite all efforts to train Golden Retrievers, we judges are still only human.
+        zh: 尽管我们已经非常努力的在训练狗狗来进行工作，但是我们裁判仍然都是人类。
+      sourceRawUnits:
+      - raw-L000261
+      - raw-L000267
+    - id: ipg-ann-1-02ad37ae2dc0-g01-b02
+      type: paragraph
+      text:
+        en: For now.
+        zh: 至少现在为止还是这样。
+      sourceRawUnits:
+      - raw-L000263
+      - raw-L000269
+    - id: ipg-ann-1-02ad37ae2dc0-g01-b03
+      type: paragraph
+      text:
+        en: Humans make mistakes. It’s a fact of life. No one can be 100% correct all the time, and it
+          is unrealistic to expect otherwise. However, when you do make a mistake, you need to take ownership
+          of it and fix it if you can. Players cannot be allowed to continue thinking that something a
+          judge incorrectly told them is correct. In all cases though, you need to apologize to the players
+          for your error. Sometimes it’s best to do this right away, sometimes it’s less disruptive to
+          do it after the match is over. But apologize to both players as soon as it is possible, and
+          correct the situation. Players are typically very understanding, even when they were on the
+          receiving end of an incorrect call.
+        zh: 人总是会犯错，这是人生中一定会出现的。没有人可以总是保证自己100%的正确，同时对于他人来说也是个不切实际的期望。然而，当你犯了错误，你需要负起责任尽最大努力去修正他。不可以让牌手认为裁判说的错误信息是对的。在任何情况下，你需要因为你犯的错误向牌手道歉。有时需要立刻这么做，但是有的时候在比赛结束之后再这么做可能更好。但是立刻向双方牌手道歉，并且修正这个错误，通常情况下牌手们总是会表示理解，即使他们是直接接收到了你错误判罚的人。
+      sourceRawUnits:
+      - raw-L000265
+      - raw-L000271
+- id: ipg-ann-1-a82d9643de61
+  anchor:
+    type: block
+    id: ipg-b000010
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-1-a82d9643de61-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-a82d9643de61-g01-b01
+      type: paragraph
+      text:
+        en: We expect players to trust their tournament officials, and players need to be able to act
+          on the instructions/information we provide them. It is unfair to penalize them for trusting
+          the people they are supposed to be able to trust. However, this downgrade decision still rests
+          with the HJ. For this clause we need two things 1) the Judge to provide erroneous information
+          and 2) A violation be the direct result from the faulty information.
+        zh: 我们希望牌手们能够信任他们比赛的裁判，牌手也需要依照我们给出的指示或者信息来行动。因为信任他们应该信任的人而导致自己受到处罚是不公平的。然而这个降级的决定权仍然在主审的手里。这个条款的执行需要两个条件：（1）裁判提供了错误信息；（2）违规是收到错误信息的直接结果。
+      sourceRawUnits:
+      - raw-L000277
+      - raw-L000279
+- id: ipg-ann-1-863dedb18807
+  anchor:
+    type: block
+    id: ipg-b000010
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-1-863dedb18807-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-863dedb18807-g01-b01
+      type: paragraph
+      text:
+        en: 'Other examples might include:'
+        zh: 其他的例子包括：
+      sourceRawUnits:
+      - raw-L000285
+      - raw-L000291
+  - id: ipg-ann-1-863dedb18807-g02
+    kind: unordered-list
+    blocks:
+    - id: ipg-ann-1-863dedb18807-g02-b01
+      type: list-item
+      text:
+        en: Downgrading a Game Rule Violation Warning to no penalty if a judge tells a player that they
+          can untap two untapped lands with Teferi, Hero of Dominaria.
+        zh: 将违反游戏规则的“警告”降级为无判罚，因为裁判告诉一位牌手他可以用多明纳里亚英雄泰菲力重置两个未横置的地。
+      sourceRawUnits:
+      - raw-L000287
+      - raw-L000293
+      marker: bullet
+    - id: ipg-ann-1-863dedb18807-g02-b02
+      type: list-item
+      text:
+        en: Downgrading a Decklist Problem Game Loss to a Warning if a judge has previously told the player
+          that registering “Jace” on their Decklist is fine.
+        zh: 将套牌登记表问题的“一盘负”降级为“警告”，因为裁判告诉牌手在牌表上写“杰斯”没有问题。
+      sourceRawUnits:
+      - raw-L000289
+      - raw-L000295
+      marker: bullet
+- id: ipg-ann-1-c9f733d3ab26
+  anchor:
+    type: block
+    id: ipg-b000010
+  position: after
+  order: 40
+  groups:
+  - id: ipg-ann-1-c9f733d3ab26-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-c9f733d3ab26-g01-b01
+      type: paragraph
+      text:
+        en: We expect players to trust the information provided by their tournament officials, as detailed
+          already.  Normally a backup could only be considered if an infraction had been committed, but
+          in the same way that it is unfair to penalize a player for trusting the information provided,
+          it is also unfair for a player to have made a decision based upon that information even if it
+          doesn’t result in an infraction.
+        zh: 正如上文所述，我们期望牌手信任比赛工作人员提供的信息。通常而言，只有在发生违规时才能考虑是否进行倒回。但是正如牌手信任这些信息而导致受到判罚对他们是不公平的，即使没有造成违规，牌手根据这些信息导致作出游戏决定也同样是不公平的。
+      sourceRawUnits:
+      - raw-L000301
+      - raw-L000303
+- id: ipg-ann-1-1-e9805d926938
+  anchor:
+    type: block
+    id: ipg-b000011
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-1-e9805d926938-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-1-e9805d926938-g01-b01
+      type: paragraph
+      text:
+        en: Warnings are typically issued when judges have to step in to correct a situation. The main
+          purpose of warnings is to give ‘weight’ to the reminder to play more carefully. It’s written
+          down and tracked, therefore it's significant, but it doesn’t need to be scary.
+        zh: “警告”是在裁判介入修正问题时常见的处罚。其主要的意义在于给牌手更深的印象，让他们之后更小心些。它将被记录下来并追踪，所以它很重要，但是我们不需要让这件事显得很恐怖。
+      sourceRawUnits:
+      - raw-L000313
+      - raw-L000315
+- id: ipg-ann-1-1-450409569a25
+  anchor:
+    type: block
+    id: ipg-b000011
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-1-1-450409569a25-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-1-450409569a25-g01-b01
+      type: paragraph
+      text:
+        en: A Warning needs to be tracked and judges should write it down on the back of the result slips
+          (if you are using them). The Scorekeeper will input the warning penalty into the tournament
+          software to track the infraction. Scorekeepers can notify you when a player is close to an upgrade,
+          and players need to be aware of how many penalties they have.
+        zh: “警告”需要被记录，裁判也应该将它写在成绩条的背面（如果使用成绩条的话）。记分员将会将这个警告处罚记录在比赛软件内以追踪违规。记分员和被警告的牌手都应知道警告的内容。记分员可以在该牌手的判罚接近升级次数的时候提醒裁判，同时该牌手也需要知晓自己已经受到了几个判罚。
+      sourceRawUnits:
+      - raw-L000321
+      - raw-L000323
+- id: ipg-ann-1-1-c38960d00c01
+  anchor:
+    type: block
+    id: ipg-b000011
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-1-1-c38960d00c01-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-1-c38960d00c01-g01-b01
+      type: paragraph
+      text:
+        en: If fixing the game state has taken more than one minute, give a time extension equal to the
+          time taken, unless the match is in extra turns. You did look at the clock before walking up
+          to the table, right?
+        zh: 如果现在不是额外回合，且修正问题的时候用了一分钟以上的时间时，你需要为这桌补时。你在走向叫裁判的桌子的时候会看一眼时间，对吧？
+      sourceRawUnits:
+      - raw-L000329
+      - raw-L000331
+- id: ipg-ann-1-1-38336e54d939
+  anchor:
+    type: block
+    id: ipg-b000012
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-1-38336e54d939-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-1-38336e54d939-g01-b01
+      type: paragraph
+      text:
+        en: If a player gets a Game Loss, that game is over. Board position or “but they were going to
+          lose anyway” doesn’t factor into the decision. The rest of this block tells us what to do for
+          the next game. The player with the Game Loss… lost. So that player gets to decide if they play
+          or draw in the next game in the match. However, if the Game Loss is issued before the first
+          game, the players haven’t actually played a game yet, so they don’t get a chance to sideboard.
+        zh: 当一位牌手受到一盘负的处罚时，当前的游戏立刻结束。局面的情况或“反正他也要输了”的因素并不在考虑范围内。这段的剩下内容将告诉我们在该牌手接下来的盘中应该怎么做。那位牌手输了一盘，所以下一盘由他来决定先后手。然而如果在对局开始之前牌手得到了一盘负的判罚，牌手们都没有开始对局，所以他们不能在开始对局之前换备。
+      sourceRawUnits:
+      - raw-L000339
+      - raw-L000341
+- id: ipg-ann-1-1-949d90c79134
+  anchor:
+    type: block
+    id: ipg-b000013
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-1-949d90c79134-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-1-949d90c79134-g01-b01
+      type: paragraph
+      text:
+        en: The default time to apply a Game Losses is immediately. If there is no game going on, you
+          apply the penalty to the next game that you can, even if its in a different match. However,
+          there are a few infractions where the penalty specifically tells you to apply the penalty at
+          a specific time.  Mostly this is for a Decklist Problem discovered through decklist counting.
+        zh: 默认情况下，一盘负在适用时会立即发生。如果当前没有进行对局，则该违规会适用到下一盘中，即使这一盘发生在另一局中。然而，有一些违规明确说明了判罚应在何时发生。这种情况最常见的就是在清点牌表上的张数时发现的套牌登记表问题。
+      sourceRawUnits:
+      - raw-L000347
+      - raw-L000349
+- id: ipg-ann-1-1-515a99e222be
+  anchor:
+    type: block
+    id: ipg-b000013
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-1-1-515a99e222be-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-1-515a99e222be-g01-b01
+      type: paragraph
+      text:
+        en: The infractions don’t have to happen at the same time; if you’re going to write two or more
+          Game Losses on the match slip in one go you will only issue one. While relatively rare it is
+          most likely to come up during a deck check, where multiple infractions could occur as part of
+          the one check. Another scenario is handing a decklist in late, then before the round starts
+          needing to fix the list because of mis-registering lands. A Game Loss is always a significant
+          penalty, receiving 2 or more for infractions discovered at the same time essentially converts
+          the penalty into a match loss which doesn’t fit the infractions. Although it may feel like the
+          player is getting away with no penalty for the other infraction or infractions, they are still
+          receiving the same penalty they would have for that infraction and they are all being recorded.
+        zh: 这些违规不一定非要在同时发生；只要你将在成绩条上一次写下两个一盘负，你就只会给出一个实际的一盘负处罚。虽然这种情况相对而言比较罕见，最可能的情况之一是在一次套牌检查时发生了多种不同的违规。另一种情形是牌表提交晚了，然后在一轮开始前因为填写的地数量不对又需要修改登记表。一盘负是较重的处罚，因同时发现的不同违规而一次获得2个或更多一盘负会导致判罚实际变成一局负，这与违规并不相称。虽然这可能让你感觉牌手的某些违规没有得到惩罚，牌手实际还是会得到与其违规相称的处罚，且都会被记录在案。
+      sourceRawUnits:
+      - raw-L000355
+      - raw-L000357
+- id: ipg-ann-1-1-03f21073c447
+  anchor:
+    type: block
+    id: ipg-b000013
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-1-1-03f21073c447-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-1-03f21073c447-g01-b01
+      type: paragraph
+      text:
+        en: This covers situations where both players have an illegal deck, or other similar circumstances.
+          If we issue both players with a Game Loss penalty, only one game in the match will determine
+          the winner and it’s always better for both players to play a complete match. To remedy this,
+          you record both penalties, end the current game (if it is still being played) and both players
+          continue to the next game. For the purpose of reporting the score, that specific game didn’t
+          happen.
+        zh: 这适用于两位牌手套牌都不合法等其他的情况。如果我们直接给出一人一个一盘负，那么一盘游戏就会决定这一盘的胜负，但对于两位牌手而言打完一个完整的对局总是更好的。为不让这种事情发生，你需要记录这两个判罚，结束当前这一盘游戏（如果问题出现的时候游戏还在进行的话），然后这两位牌手继续进行下一局。在录入成绩时，刚才那一盘视同不存在。
+      sourceRawUnits:
+      - raw-L000363
+      - raw-L000365
+- id: ipg-ann-1-1-c1cdae1c6e35
+  anchor:
+    type: block
+    id: ipg-b000014
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-1-c1cdae1c6e35-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-1-c1cdae1c6e35-g01-b01
+      type: paragraph
+      text:
+        en: The infractions associated with this penalty, are all things that cannot be “undone” even
+          with a Game Loss.  For example, if you offer a bribe to your opponent, a Game Loss cannot unmake
+          that offer.
+        zh: 导致这种处罚的犯规，都有一个共同点：它们是不可逆的，就算判决一局负也无法补救。举个例子，如果你试图贿赂对手，那么判你一局负并不能消除你提出过贿赂这个事实。
+      sourceRawUnits:
+      - raw-L000373
+      - raw-L000377
+    - id: ipg-ann-1-1-c1cdae1c6e35-g01-b02
+      type: paragraph
+      text:
+        en: Note that it is possible for a match to become compromised but still continue such as if a
+          spectator commits Outside Assistance.
+        zh: 注意，对局可能会受到干扰但仍然继续，例如一位旁观者犯下外来协助的情形。
+      sourceRawUnits:
+      - raw-L000375
+      - raw-L000379
+- id: ipg-ann-1-1-39d4cd1c48a7
+  anchor:
+    type: block
+    id: ipg-b000015
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-1-39d4cd1c48a7-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-1-39d4cd1c48a7-g01-b01
+      type: paragraph
+      text:
+        en: If the match has already ended, apply the penalty to the next match.
+        zh: 如果这一局已经结束了，那么这个处罚将应用于下一局。
+      sourceRawUnits:
+      - raw-L000385
+      - raw-L000387
+- id: ipg-ann-1-1-d9a997de0eff
+  anchor:
+    type: block
+    id: ipg-b000016
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-1-d9a997de0eff-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-1-d9a997de0eff-g01-b01
+      type: paragraph
+      text:
+        en: Disqualifications are for the most severe infractions. Don’t feel bad about these. Remember,
+          you don’t give penalties. Players earn them.
+        zh: 取消资格用来处理最严重的违规。你对此并不需要对此感到愧疚。记住，并不是因为你他们才得到判罚，而是他们自作自受。
+      sourceRawUnits:
+      - raw-L000395
+      - raw-L000397
+- id: ipg-ann-1-1-dfb1083b8e7b
+  anchor:
+    type: block
+    id: ipg-b000017
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-1-dfb1083b8e7b-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-1-dfb1083b8e7b-g01-b01
+      type: paragraph
+      text:
+        en: Entering the spectator or bystander into the event ensures that there is a record of the DQ
+          and the information can be used by the Investigations Committee. Get the person’s name and Wizards
+          Account email address, even if you have to ask around. Remember to collect statements and enter
+          an investigation report.
+        zh: 将旁观者或路人录入赛事，能确保对取消资格的判罚有档可查，并且相关信息可供调查委员会使用。即便需要多方打听，也务必获取到此人的姓名和威世智账户的电子邮箱地址。切记要收集陈述并提交调查报告。
+      sourceRawUnits:
+      - raw-L000403
+      - raw-L000405
+- id: ipg-ann-1-1-451c3b3b2fe7
+  anchor:
+    type: block
+    id: ipg-b000018
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-1-451c3b3b2fe7-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-1-451c3b3b2fe7-g01-b01
+      type: paragraph
+      text:
+        en: Magic events are not a court of law, nor an episode of CSI:Miami. You do not need a smoking
+          gun or DNA evidence. The Head Judge does not need to prove that their decision is right, they
+          just need sufficient information to justify it. However, if you disqualify without evidence,
+          you need to record that as well. And the investigation committee still has the right to ask
+          the Head Judge to explain why they thought the player should be disqualified.
+        zh: 万智牌赛事不是法院，也不是《犯罪现场调查》。你不需要凶器或者DNA鉴定结果。主审不用证明自己的决定是正确的，他只需要足够的信息来判定出一个结果。然而，如果你没有证据就将一个牌手取消资格，你需要在报告中提到这点。同时调查委员会有权利要求主审解释为何认为该牌手应该被取消资格。
+      sourceRawUnits:
+      - raw-L000411
+      - raw-L000413
+- id: ipg-ann-1-1-f221c4a4dc99
+  anchor:
+    type: block
+    id: ipg-b000019
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-1-f221c4a4dc99-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-1-f221c4a4dc99-g01-b01
+      type: paragraph
+      text:
+        en: When a player is disqualified from the tournament, their event is over. The results of the
+          matches or games they have finished won’t be changed, and if the player has already received
+          prizes prior to the Disqualification, they get to keep what has already been received. However,
+          they are not given anything they are yet to receive. This is mainly to avoid the legal complications
+          of “taking back” something that has already been given.
+        zh: 当一位牌手被取消资格时，他的比赛就结束了。他所有之前完成的对局结果都不会被更改，如果那位牌手在被取消资格之前拿到了奖品，那么他可以保留它们。然而，他不会再拿到任何他还没收到的奖品。这主要是为了防止追回已经发出的奖品可能造成的法律问题。
+      sourceRawUnits:
+      - raw-L000419
+      - raw-L000421
+- id: ipg-ann-1-1-a194e3583e1c
+  anchor:
+    type: block
+    id: ipg-b000020
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-1-a194e3583e1c-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-1-a194e3583e1c-g01-b01
+      type: paragraph
+      text:
+        en: 'This paragraph is to tell judges (and players) what happens when a player is disqualified.
+          A very common question is “Well, now that a spot in the Top 8 is available, can 9th place get
+          it?” The answer is: if it’s after the cut, no you can’t.'
+        zh: 这告诉了裁判（与牌手），在一位牌手被取消资格之后将会发生什么。一个非常常见的问题：“现在八强里面出现了一个空位，第九名能算进八强么？”答案是：如果比赛赛程已经划分，那么不行。
+      sourceRawUnits:
+      - raw-L000427
+      - raw-L000429
+- id: ipg-ann-1-1-4a1a115f92da
+  anchor:
+    type: block
+    id: ipg-b000021
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-1-4a1a115f92da-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-1-4a1a115f92da-g01-b01
+      type: paragraph
+      text:
+        en: The link to the disqualification process has all the information on what needs to happen when
+          a player is disqualified. This link requires a Wizards login.
+        zh: 这个取消资格流程的链接中包含了牌手被取消资格时所有需要做的事情的信息。这个链接需要用威世智店家网络（译注：即WPN）登录。
+      sourceRawUnits:
+      - raw-L000435
+      - raw-L000437
+- id: ipg-ann-1-2-2b6a5e24a28f
+  anchor:
+    type: block
+    id: ipg-b000022
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-2-2b6a5e24a28f-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-2-2b6a5e24a28f-g01-b01
+      type: paragraph
+      text:
+        en: Game Losses are a “big deal” and difficult to correct if they are issued by mistake. As a
+          result, it is recommended that the Head Judge be consulted prior to giving any Game Loss or
+          Match Loss. As for Disqualifications, only the Head Judge can give those. The reason Tardiness
+          and Decklist Problems get an exception is because there is actually very little judgment involved
+          in a Tardiness Game Loss (and they are extremely common), and the same holds true for Decklist
+          Problems. However, if the judge is on a team, it is recommended that they go through their Team
+          Lead. At some events, the Head Judge may modify this policy. A common modification at large
+          competitive REL events is that a Level 3 judge can issue Game Losses instead of having to consult
+          the Head Judge. At some events like StarCityGames Opens it is not uncommon for Team Leaders
+          to have the authority to issue Game Losses.
+        zh: 一盘负是个比较大的判罚，而且如果判错了很难修正。所以我们建议你在给出一盘负或一局负之前请先去咨询主审。同时，只有主审能给出取消资格的判罚。迟到和套牌登记表问题是两个例外，因为相对于其他一盘负的问题而言，判断这两个情况不需要很多信息，并且这些判罚也非常普遍。然而，如果裁判是成小组工作的，那么建议通过小组的组长来向主审反映。在某些比赛中，主审可以更改这条规定。常见的变更是在一场大型竞争级别赛事中，L3裁判可以代替主审给出一盘负的判罚。在一些例如星城公开赛（SCG
+          Opens）的比赛中，组长可以给一盘负的情况也并不少见。
+      sourceRawUnits:
+      - raw-L000445
+      - raw-L000447
+- id: ipg-ann-1-2-52fa4130f230
+  anchor:
+    type: block
+    id: ipg-b000023
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-2-52fa4130f230-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-2-52fa4130f230-g01-b01
+      type: paragraph
+      text:
+        en: The main purpose of this sentence is to explicitly answer the question, “What do I do if a
+          person not enrolled in my event is doing these things?” There are no distinctions made between
+          tournament attendees when it comes to any kind of penalties. If you commit an infractions and
+          are not enrolled in the event, you will be added to the event in the Reporter Software and given
+          the appropriate penalty. If a spectator is acting aggressively, then that is something that
+          needs to be tracked. You can do something ban-worthy at an event you aren’t enrolled in. If
+          a spectator is giving outside assistance for example, we need to keep track of it.
+        zh: 这句话的主要目的是告诉大家：“如果有人并不是我这场比赛中的参赛者，却犯下了这些违规，我该怎么办？”当谈及判罚时，我们并不区别对待任何比赛的参与者。如果你在没有参赛的情况下犯下了违规，你将被通过比赛报告软件加入比赛、并给予相应的判罚。如果有一个旁观者言行冒犯他人，这便属于一件需要被记录在案的事情。你甚至可以在没有参赛的情况下犯下值得被禁赛的事情。例如，一个旁观者给予他人外来协助，我们就应该将其记录在案。
+      sourceRawUnits:
+      - raw-L000453
+      - raw-L000455
+- id: ipg-ann-1-2-6ea6a90ea996
+  anchor:
+    type: block
+    id: ipg-b000024
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-2-6ea6a90ea996-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-2-6ea6a90ea996-g01-b01
+      type: paragraph
+      text:
+        en: If a judge is going to give a penalty to a player, they should take the time to explain what
+          the infraction is, and what the fix is. The judge should politely and professionally answer
+          any reasonable questions the players might ask. Players called you for help — so be helpful.
+          Make sure the players understand what you are telling them to do. Sometimes they won’t understand
+          ‘why’; in those cases, make an attempt to explain, but if the explanation is taking too long,
+          tell the players to continue and remind them they can speak to you after the match.
+        zh: 裁判在给牌手处罚时，他应该花时间向牌手解释他的违规是什么，以及修正是什么。裁判应当礼貌并专业的回答任何该牌手可能提出的合理问题。牌手呼叫裁判以寻求帮助，所以请专业的帮助他们。确保那位牌手听懂了你说的。有时候他们还是不明白“为什么”，在这种情况下，你应该尝试为他们解释，但是如果解释花费了太长的时间，告诉那位牌手先继续比赛等到对局结束后再跟他继续说明。
+      sourceRawUnits:
+      - raw-L000461
+      - raw-L000463
+- id: ipg-ann-1-2-98cb852bcf42
+  anchor:
+    type: block
+    id: ipg-b000024
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-1-2-98cb852bcf42-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-2-98cb852bcf42-g01-b01
+      type: paragraph
+      text:
+        en: As the IPG said earlier, only the Head Judge can deviate. If the Head Judge does, it must
+          be explained to the players what the standard penalty is, and why the deviation is being made.
+          This does two things. First, it requires the Head Judge to be able to defend their deviation.
+          If you as Head Judge can’t explain it, odds are good you need to re-think your position. Second,
+          the Head Judge should not be teaching players that “this is how it’s done all the time.” The
+          Head Judge is making an exception, this once, and making that clear to the players, and any
+          other judges that might be watching and learning from the interaction.
+        zh: 正如IPG前面说过的那样，只有主审可以不依照方针做出判罚。如果主审这么做了，他必须向该牌手说明原来应有的判罚是什么，然后为何现在这个情况没有按照原有判罚来做。这样做是因为两点。第一，主审需要能够说明不依照方针的原因。如果你作为主审无法解释原因，那么你最好重新考虑一下你的决定。第二，主审不应告诉牌手“任何时候都会这样处理”。只有这一次，主审不依方针做出了判罚，并且跟牌手解释清楚，同时让旁观的裁判观看并从中学习。
+      sourceRawUnits:
+      - raw-L000469
+      - raw-L000471
+- id: ipg-ann-1-2-87adf811ad40
+  anchor:
+    type: block
+    id: ipg-b000025
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-2-87adf811ad40-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-2-87adf811ad40-g01-b01
+      type: paragraph
+      text:
+        en: 'Some penalties come with an additional fix/remedy. These are typically listed after the Philosophy
+          section in their description. Use them; don’t ignore them. They are there to help fix the games
+          as much as is possible. They need to be applied consistently across all events. Not only does
+          it enforce the consistency judges want at the competitive level, it protects them as well. If
+          the judge is following the document, a player can’t (reasonably) claim that the judge is out
+          to get them, or that the judge changed the rules to favor the opponent. When judges deviate,
+          they open themselves up to rumors: “Abe got a downgrade for extra cards in his deckbox, but
+          I didn’t because the judge always lets Abe get away with things.” The short story is: don’t
+          deviate. Don’t end up the subject of some forum rant.'
+        zh: 一些判罚附带了额外的修正及补救措施。它们一般是列在这些判罚的原则部分后面，不要忘记使用它们。它们能够尽最大可能的修复游戏状态，也需要在各种比赛中始终如一的执行。这不仅能够保持竞争级赛事的判罚的一致性，还能保护裁判。如果裁判严格遵循方针，牌手就不能（合理的）控诉裁判对他们不公，或者裁判更改规则以让他们的对手获利。如果裁判不依照方针行事，牌手可能就会开始私下说：“牌手甲在他盒子里放了跟比赛无关的牌吃了一个警告，但是我放了就一盘负，这都是因为裁判偏袒牌手甲。”简单来说：依照方针行事，就不会成为喷子们在网上群起而攻之的对象。
+      sourceRawUnits:
+      - raw-L000477
+      - raw-L000479
+- id: ipg-ann-1-2-37214a59aafa
+  anchor:
+    type: block
+    id: ipg-b000025
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-1-2-37214a59aafa-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-2-37214a59aafa-g01-b01
+      type: paragraph
+      text:
+        en: Often judges question this line. When we are called to a table, don’t we have to take into
+          account the current game state? Yes and no. We as judges are allowed to take game state into
+          account when determining if an infraction occurred. It helps us know what questions to ask.
+          For example, if investigating someone for Stalling, then the current match record is extremely
+          important. However, once we determine the infraction, we no longer consider those factors when
+          it comes to applying the fix. When enforcing the additional fix, it doesn’t matter if that fix
+          decides the game or if it allows a player to benefit strategically from an error. Any time there
+          is an error, someone is going to gain some information from it. We do not ask judges to make
+          assessments of exactly what that will be, as this definitely cannot be done with any consistency.
+        zh: 经常会有裁判对这一条有疑问：当我们被叫到桌前，我们不用考虑游戏状态么？答案是：有时候用，有时候不用。我们在判断是否违规、违规是什么的时候可以将游戏状态列入考虑。这能够帮助我们明白应该问牌手什么问题。例如，调查某人是否拖延时，当前对局的状态就非常重要。然而，当你确定了违规是什么，修正问题时就不再考虑这些因素。当你进行修正时，一位牌手是否能从判罚中获得利益就并不重要了。每当一个错误发生时，总会有一位牌手从中获取某些额外信息。我们不要求裁判详细评估谁因为错误获利，因为这样做显然无法保证判罚的一致性。
+      sourceRawUnits:
+      - raw-L000485
+      - raw-L000487
+- id: ipg-ann-1-2-adb80793ed0e
+  anchor:
+    type: block
+    id: ipg-b000025
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-1-2-adb80793ed0e-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-2-adb80793ed0e-g01-b01
+      type: paragraph
+      text:
+        en: Judges should stick to the fixes prescribed. They have been tested thoroughly and tend to
+          work in all but the most extreme of corner cases. By trying to create your own “fix”, you run
+          the risk of not fixing everything properly and giving one player too much of an advantage. This
+          is especially important for judges who are used to FNM, where they are allowed to be more “creative”
+          with their fixes.
+        zh: 裁判应该坚持依照方针进行修正。这些方针已经被充分的测试，除非出现极其罕见的边缘情形，它们可以应用于几乎所有的情况。如果你尝试用自己的方式去修复问题，你就冒了没有合适地修正、或者给一方过多的优势的风险。对于习惯了FNM的执法风格的裁判们更应该重视这个问题，因为一般级别在修正问题时给了裁判更多的“创造空间”。
+      sourceRawUnits:
+      - raw-L000493
+      - raw-L000495
+- id: ipg-ann-1-2-c5fa43ecd864
+  anchor:
+    type: block
+    id: ipg-b000026
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-2-c5fa43ecd864-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-2-c5fa43ecd864-g01-b01
+      type: paragraph
+      text:
+        en: This covers the case where judges come up to a table and find multiple errors. In many cases
+          the errors are separate; like doing a deck check and finding marked cards and a 59 card deck.
+          While those might both be found at the same time, they do not have the same root cause. However,
+          sometimes multiple errors share the same root cause – such as players thinking heroic triggers
+          off abilities, and repeatedly using equipment to trigger heroic. In that case, the root cause
+          is the same, making it one infraction. If they did this three times, treat it as a single infraction
+          for the purposes of fixing it and upgrades.
+        zh: 这条适用于当裁判被叫到桌前时发现了许多问题的情况。有时这些问题是相互无关的。比如套牌检查时，一套牌里同时出现了59张牌和有记号的牌的问题。虽然这些问题被同时发现，但它们的起因不一样。然而，有时多个问题可能有着相同的起因。比如牌手认为勇行可以被异能触发，于是反复启动武具的佩戴异能来触发勇行。在此情况下，由于多个问题的起因是相同的，就应当把它们当做同一个违规来处理。即使该牌手这样做了三次，也当做是一次违规来处理、修正和升级。
+      sourceRawUnits:
+      - raw-L000501
+      - raw-L000505
+    - id: ipg-ann-1-2-c5fa43ecd864-g01-b02
+      type: paragraph
+      text:
+        en: If the infractions are different infractions, yet have the same root cause, apply all appropriate
+          fixes, despite giving the single infraction. Keep in mind that legally drawing a card off an
+          illegally cast spell is not two infractions.
+        zh: 如果这些违规是不同的违规，但具有相同的起因，进行所有适用的修正，但只给出一个判罚。记住因为不合法施放的咒语正确结算而抓了牌，**并不算**是两个违规。
+      sourceRawUnits:
+      - raw-L000503
+      - raw-L000507
+- id: ipg-ann-1-3-71261f10e808
+  anchor:
+    type: block
+    id: ipg-b000027
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-3-71261f10e808-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-3-71261f10e808-g01-b01
+      type: paragraph
+      text:
+        en: Some infractions in the IPG instruct to shuffle or randomize a library as part of the fix.
+          If they do, use these instructions.
+        zh: IPG中的一些违规指示说，作为修正的一部分，要将牌库洗牌或随机化。如果需要如此做，请参照以下的指示。
+      sourceRawUnits:
+      - raw-L000515
+      - raw-L000517
+- id: ipg-ann-1-3-3455700001e1
+  anchor:
+    type: block
+    id: ipg-b000027
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-1-3-3455700001e1-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-3-3455700001e1-g01-b01
+      type: paragraph
+      text:
+        en: When instructed to randomize the library, we don’t want to lose parts of the library that
+          have been seen and intentionally ordered. Be sure to ask the players if any cards are known,
+          but given player memory is not always perfect, check all the zones for cards and effects that
+          might have ordered or unordered (like fetch lands) parts of the library.
+        zh: 当随机化牌库时，我们并不想让牌库中原本已知的部分也被随机化。请确保在修正时询问牌手是否牌库中有已知位置的牌，但牌手的记忆并非万无一失；记得检查所有区域中可能会影响牌库的一部分或打乱牌库顺序（例如找地地）的牌或者效应。
+      sourceRawUnits:
+      - raw-L000523
+      - raw-L000525
+- id: ipg-ann-1-3-5c8cd3ba02d2
+  anchor:
+    type: block
+    id: ipg-b000027
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-1-3-5c8cd3ba02d2-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-3-5c8cd3ba02d2-g01-b01
+      type: paragraph
+      text:
+        en: Separate the cards that are known, keeping the cards face down and hidden and have the players
+          shuffle the part that is unknown, then add the known cards back to where they are supposed to
+          be.
+        zh: 将已知的牌分开并保持牌面朝下不要泄露，然后让牌手将未知的部分洗牌，然后将已知的牌放回它们应该在的位置。
+      sourceRawUnits:
+      - raw-L000531
+      - raw-L000533
+- id: ipg-ann-1-3-6e2256ac285d
+  anchor:
+    type: block
+    id: ipg-b000028
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-3-6e2256ac285d-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-3-6e2256ac285d-g01-b01
+      type: paragraph
+      text:
+        en: Sorry Cosi’s Trickster. Note that even though this sentence says “performed by a judge” it’s
+          not recommended for a judge to shuffle the library if an infraction calls for the library to
+          be shuffled. Let the player shuffle and present.
+        zh: 抱歉，寇希诈术师。注意即使这句话说道「由裁判执行」，我们也不推荐在发生需要洗牌的违规时，由裁判来执行洗牌。让牌手洗牌，然后呈现牌库。
+      sourceRawUnits:
+      - raw-L000539
+      - raw-L000541
+- id: ipg-ann-1-4-598b04c2db34
+  anchor:
+    type: block
+    id: ipg-b000029
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-4-598b04c2db34-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-4-598b04c2db34-g01-b01
+      type: paragraph
+      text:
+        en: These infractions are IPG 2.5 Game Rule Violation, IPG 2.3 Hidden Card Error, and IPG 3.7
+          Communication Policy Violation.
+        zh: 允许倒回的违规是IPG 2.5违反游戏规则、IPG 2.3额外抓牌、以及IPG 3.7违反交流原则。
+      sourceRawUnits:
+      - raw-L000549
+      - raw-L000551
+- id: ipg-ann-1-4-943ddf2043bd
+  anchor:
+    type: block
+    id: ipg-b000029
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-1-4-943ddf2043bd-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-4-943ddf2043bd-g01-b01
+      type: paragraph
+      text:
+        en: A whole article could be written on this topic, and fortunately, one has been. In short, don’t
+          be quick to backup. You need to take into consideration what actions the players have taken
+          since, what information has been revealed, and the possibility of making things worse. We don’t
+          always have to backup. It’s not “backup if you can, else leave everything alone” it’s “leave
+          things alone unless it’s really really worse than backing up.” Remember, both players are responsible
+          for the game state. No matter how messed up things have gotten, both players had opportunities
+          to prevent it.
+        zh: 这句话可以展开写一整篇文章了。幸运的是，已经有人[写过了一篇](http://blogs.magicjudges.org/articles/2013/08/20/backups-embracing-the-rewind/)。简短来说，不要贸然决定倒回。裁判需要考虑牌手已经执行的动作、哪些信息已经泄露、以及倒回会不会让问题更糟。裁判不是一定要执行倒回。并不是“能倒就倒，倒不了才保持原样”，而是“如果保持这样的话实在糟糕了，所以只能倒回”。注意，双方牌手都应该尽力保持游戏状态正确。不管场面变得多么乱，两位牌手都有机会来避免错误发生。
+      sourceRawUnits:
+      - raw-L000557
+      - raw-L000559
+- id: ipg-ann-1-4-6dc827248700
+  anchor:
+    type: block
+    id: ipg-b000029
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-1-4-6dc827248700-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-4-6dc827248700-g01-b01
+      type: paragraph
+      text:
+        en: This is a nice way of saying that the backup was minimally impactful. For example, the active
+          player casts Terror on a White Knight, and the White Knight is put in the graveyard. In this
+          case a rewind is quick and clean and doesn’t impact any decisions. But now let’s add to the
+          scenario. Let’s say the active player cast the Terror to remove a blocker and then attacked
+          with their entire team. In this case more decisions have been made. A rewind may be acceptable,
+          but it may alter the attack. Finally, the active player cast Terror on the Knight, attacked.
+          The opponent blocked. Combat tricks were used on both sides. In this case, too much information
+          has been revealed. Backing up to the point of error would drastically impact the flow of the
+          turn. The fewer decisions, the more likely a rewind is acceptable.
+        zh: 换句话说，倒回的影响应该尽可能小。例如，主动牌手对白骑士施放了惊骇，白骑士现在在坟墓场。在这种情况下倒回是很干净的，并不会影响任何决定。现在我们来加入一些新的信息。比如说主动牌手施放惊骇来去除一个阻挡者，然后用所有生物进攻。在这种情况下，牌手做出了更多的决定。倒回可能是可以接受的，但是这可能会改变进攻的决定。最后的例子里面，主动牌手用惊骇杀了白骑士以后进攻。对手阻挡了。两边都使用了战斗trick。这种情况下，泄露的信息太多了。如果倒回到错误发生的时间点，会极大的改变这个回合牌手思考的流程。牌手做出的决定越少，倒回可以接受的可能性就越大。
+      sourceRawUnits:
+      - raw-L000565
+      - raw-L000567
+- id: ipg-ann-1-4-28bf31b86985
+  anchor:
+    type: block
+    id: ipg-b000030
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-4-28bf31b86985-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-4-28bf31b86985-g01-b01
+      type: paragraph
+      text:
+        en: This shouldn’t come as a surprise. Any time you are about to do something that cannot be easily
+          reversed (such as an erroneous Game Loss, or a mangled rewind) the Head Judge must be consulted
+          first. At big events, such as a Regional Championships or StarCityGames 10K, the Head Judge
+          may allow Team Leaders to authorize backups. If this is the case, this will be communicated
+          during the judge meeting. Now, this does not mean that if you feel a backup is a good idea,
+          you can’t request a backup from the Head Judge.
+        zh: 看到这条不应该感到惊讶。在任何时候，当你要做出一些较难修正回来的事情时（比如错误的一盘负，或者有问题的倒回）你需要先咨询主审。在大型比赛中，比如区域冠军赛或星城10K赛，主审可能会允许各组的组长做这些决定。如果是这种情况，那么这些事项将会在赛前裁判会议的时候宣布。但是如果你觉得倒回是个好主意的话，你当然也可以向主审提出要求。
+      sourceRawUnits:
+      - raw-L000573
+      - raw-L000575
+- id: ipg-ann-1-4-b7ba53f7a121
+  anchor:
+    type: block
+    id: ipg-b000031
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-4-b7ba53f7a121-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-4-b7ba53f7a121-g01-b01
+      type: paragraph
+      text:
+        en: Ask the players what happened. You should have a clear understanding of each action that needs
+          to be reversed before you start doing a backup. There should be no “I’m not sure what lands
+          were tapped” or “I don’t remember if he attacked with that creature or tapped to use its ability.”
+          Undo each action, in order. You don’t get to skip anything or switch stuff around. You must
+          return exactly to the point of error, exactly the way it happened. This is to protect you as
+          much as the players. If you rewind everything in reverse order, the players can see and understand
+          what is going on.
+        zh: 向牌手询问发生了什么。在倒回前，你应该让自己清楚的理解你需要倒回的每一个动作。不能出现“我不确定这个地是横着的还是竖着的”或“我忘了这个生物是启动异能横的还是进攻横的了”的情况。依次倒回每一个动作。不能略过任何一个或者打乱顺序。你必须精确的倒回至错误发生的时点。这将同样保护你和牌手。如果你依原次序倒回，牌手将会看到并理解发生了什么。
+      sourceRawUnits:
+      - raw-L000581
+      - raw-L000583
+- id: ipg-ann-1-4-137f7d8b77bc
+  anchor:
+    type: block
+    id: ipg-b000031
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-1-4-137f7d8b77bc-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-4-137f7d8b77bc-g01-b01
+      type: paragraph
+      text:
+        en: Rewinding through a card draw can make people nervous. It’s really not that complicated, but
+          still shouldn’t be done lightly. If backing up through a card draw, put the card back where
+          it came from. If the specific card isn’t known to all players, put a random one back. Now, as
+          a point of clarity, if you find yourself wanting to shuffle after returning a random card from
+          a player’s hand as part of a rewind, you are probably doing more harm than good at this point
+          with the rewind. Shuffling away a random card from a player’s hand is pretty much the definition
+          of “disruptive”, but we will see below we can get around that.
+        zh: 倒回抓牌动作可能会让人很紧张。虽然倒回抓牌并不是很复杂，但仍然不能轻易对待。如果在抓过牌之后进行倒回，那么把那张牌放回原处。如果那张牌并不是对所有牌手可见的，那么将一张随机的牌放回去。注意，如果在此之后，你发现在把牌放到牌库顶后还需要洗那位牌手的牌库，那么你遇到的情况可能并不适合倒回。把牌手的一张手牌洗回牌库实在是对游戏非常有破坏性；下面会介绍如何倒回洗牌。
+      sourceRawUnits:
+      - raw-L000589
+      - raw-L000591
+- id: ipg-ann-1-4-08422eb291b0
+  anchor:
+    type: block
+    id: ipg-b000031
+  position: after
+  order: 30
+  groups:
+  - id: ipg-ann-1-4-08422eb291b0-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-4-08422eb291b0-g01-b01
+      type: paragraph
+      text:
+        en: If we are rewinding through an action that resulted in information about card location in
+          the library becoming known (like scrying), we randomize the portion of the library that information
+          was contained in (in plain language, we shuffle the previously random portion of the library,
+          including the card(s) that became known). If we are rewinding through a drawn card, however,
+          we don’t want to enable that card or another to be shuffled away, and so… it’s not. We simply
+          return a random card from the hand to the top of the library.
+        zh: 当倒回一个能够得知牌库中某些牌张的位置的动作时（例如占卜），我们将包含该信息的牌库部分进行随机化（用更直接的方式来说，就是将原本牌库的随机部分，包括被得知的这些牌，进行洗牌。）但是，如果要倒回一张抓起的牌，我们并不想让这张牌或另一张牌被洗走，所以……它不会被洗走。我们只是将一张随机的牌从手牌放到牌库顶。
+      sourceRawUnits:
+      - raw-L000597
+      - raw-L000599
+- id: ipg-ann-1-4-0bae61dd4232
+  anchor:
+    type: block
+    id: ipg-b000032
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-4-0bae61dd4232-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-4-0bae61dd4232-g01-b01
+      type: paragraph
+      text:
+        en: So, any time you are messing around with returning random cards from a player’s hand you run
+          the risk of drastically changing the game. For example, the player has been holding on to a
+          specific card since his opening draw. In a rewind, that card gets randomly put on top of the
+          library. Then when we proceed forward, the opponent mills a card. Or we return a useless card
+          to the top of the library, and they crack a fetch land to shuffle it away.
+        zh: 任何你把一张随机的手牌放回牌库顶的倒回都可能彻底改变本盘游戏。例如，一位牌手手牌包括一张之前展示过的好牌，如果我们将随机一张牌放到牌库顶的话，他的对手可能在游戏继续的时候决定磨掉该牌手的牌库顶牌。或者，如果我们放的是一张没用的牌的话，该牌手自己可能掰掉一块找地地把那张牌洗进牌库。
+      sourceRawUnits:
+      - raw-L000605
+      - raw-L000607
+- id: ipg-ann-1-4-c558fe6c5c72
+  anchor:
+    type: block
+    id: ipg-b000033
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-4-c558fe6c5c72-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-4-c558fe6c5c72-g01-b01
+      type: paragraph
+      text:
+        en: Game Rule Violation, Missed Trigger, and Hidden Card Error mention that a simple backup may
+          sometimes be applicable. This describes what a small backup is. Small backups are limited to
+          one action, and exist just to make other fixes have intuitive results.
+        zh: 违反游戏规则，遗漏触发和非公开牌张失误中提到，有时可以适用简易倒回。这一句说明了什么是简易倒回。简易倒回仅限用于倒回一个动作，且这种倒回方式的存在只是为了让其他修正方式能得到符合直觉的结果。
+      sourceRawUnits:
+      - raw-L000613
+      - raw-L000615
+- id: ipg-ann-1-4-689e1ed1051c
+  anchor:
+    type: block
+    id: ipg-b000033
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-1-4-689e1ed1051c-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-4-689e1ed1051c-g01-b01
+      type: paragraph
+      text:
+        en: If you are backing up through a shuffle or returning random cards from the hand to the library
+          or anything of the sort, we are no longer in the realm of “simple”. Stop.
+        zh: 如果倒回涉及到洗牌、将随机的牌移回手牌或洗回牌库这样的情形，这就不再属于“简易”的范畴。不要使用简易倒回。
+      sourceRawUnits:
+      - raw-L000621
+      - raw-L000623
+- id: ipg-ann-1-5-2108dc23735b
+  anchor:
+    type: block
+    id: ipg-b000034
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-5-2108dc23735b-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-5-2108dc23735b-g01-b01
+      type: paragraph
+      text:
+        en: These infractions are IPG 2.2 Looking at Extra Cards, IPG 2.3 Hidden Card Error, and IPG 3.5
+          Deck Problem.
+        zh: 这些违规包括2.2额外看牌、2.3非公开牌张失误、以及3.5套牌问题。
+      sourceRawUnits:
+      - raw-L000631
+      - raw-L000633
+- id: ipg-ann-1-5-55dc591989c9
+  anchor:
+    type: block
+    id: ipg-b000034
+  position: after
+  order: 20
+  groups:
+  - id: ipg-ann-1-5-55dc591989c9-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-5-55dc591989c9-g01-b01
+      type: paragraph
+      text:
+        en: A card or rule may create sets briefly during their resolution (such as Fact or Fiction, Collected
+          Company, or even your draw for turn). If you are holding one or more cards, that’s a set.  If
+          you flipped over the top 3 cards of your library to reveal them, that’s a set.  Other sets simply
+          exist naturally in the game, such as your Library, Graveyard, Exile, and Hand. Just to be as
+          clear as possible, it is also directly spelled out that a single card may be a set.
+        zh: 有些牌可能在其结算过程中临时创造牌叠（例如真伪莫辨，征召军伍，甚至是你这回合抓的牌）。如果你拿着一张或几张牌，这些牌就构成一个牌叠。如果你翻开你牌库顶的三张牌来展示它们，这些牌就构成一个牌叠。另一些牌叠自然地存在于游戏中，例如你的牌库、坟墓场、放逐区、或手牌。为了特地澄清，这里还直接说明了即使只有一张牌也可能构成一个牌叠。
+      sourceRawUnits:
+      - raw-L000639
+      - raw-L000641
+- id: ipg-ann-1-5-abc5e5ae8e4f
+  anchor:
+    type: block
+    id: ipg-b000035
+  position: after
+  order: 10
+  groups:
+  - id: ipg-ann-1-5-abc5e5ae8e4f-g01
+    kind: paragraphs
+    blocks:
+    - id: ipg-ann-1-5-abc5e5ae8e4f-g01-b01
+      type: paragraph
+      text:
+        en: This is just explicitly clear language to ensure that, no matter how hard you try, there will
+          not exist a card without it being part of a set. Consider any unseen card as a part of the previous
+          non-hidden set.
+        zh: 这句话是为了清楚地确保不会有一张不属于任何牌叠的牌出现。将没有被看到的牌视为之前非公开牌叠的一部分。
+      sourceRawUnits:
+      - raw-L000647
+      - raw-L000649
