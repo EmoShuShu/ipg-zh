@@ -11,7 +11,22 @@ from ipg_pipeline.reconcile import reconcile_pilot
 
 
 def _documents() -> dict:
-    return {name: load_yaml(RELEASE_DIR / name) for name in ("chapter-02.yaml", "appendix-a.yaml", "appendix-b.yaml")}
+    documents = {
+        name: load_yaml(RELEASE_DIR / name)
+        for name in ("chapter-02.yaml", "appendix-a.yaml", "appendix-b.yaml")
+    }
+    p2_ids = {
+        f"ipg-ann-{item['id'].removeprefix('pilot-ann-')}"
+        for item in load_yaml(ROOT / "src/ipg/mapping-overrides.yaml")["applied"]
+        if item.get("kind") == "publication-annotation-anchor"
+    }
+    documents["chapter-02.yaml"] = deepcopy(documents["chapter-02.yaml"])
+    documents["chapter-02.yaml"]["publicationAnnotations"] = [
+        annotation
+        for annotation in documents["chapter-02.yaml"]["publicationAnnotations"]
+        if annotation["id"] in p2_ids
+    ]
+    return documents
 
 
 @lru_cache(maxsize=1)

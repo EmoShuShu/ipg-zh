@@ -30,7 +30,21 @@
     "entries": 17,
     "entryCountsByDate": [5, 6, 1, 2, 3]
   },
-  "p2StableIds": {"expected": 158, "preserved": 158, "missing": 0},
+  "p2StableIds": {
+    "expected": 158,
+    "preserved": 158,
+    "missing": 0,
+    "sortedIdSha256": "d72471c0cc22bb82785951d67b582c71834038a10199d25a426693b5b8c64d9d"
+  },
+  "p2Annotations": {
+    "annotations": 12,
+    "blocks": 14,
+    "canonicalSha256": "3cb4114ada83ec7389c880409801a8cf0d0f24cfae10e416a1fda9af068e1769"
+  },
+  "p3Registry": {
+    "entries": 649,
+    "canonicalSha256": "72a71c332a0988bc6361c771e981580583e7989e2a0e90a9fbb19ceecb698ffb"
+  },
   "unclassifiedText": 0,
   "reconciliationFindings": 0
 }

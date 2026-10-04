@@ -5,14 +5,27 @@ import shutil
 import pytest
 
 from ipg_pipeline.builder import build_outputs
-from ipg_pipeline.cli import RELEASE_DIR, _document_tuples
-from ipg_pipeline.core import ROOT, load_json, load_yaml, validate_schema
+from ipg_pipeline.cli import RELEASE_DIR
+from ipg_pipeline.core import ROOT, load_json, load_yaml, validate_schema, walk_nodes
 from ipg_pipeline.omegat import apply_writeback, collect_units, export_project, parse_po, preview_writeback, validate_target_entries
 from ipg_pipeline.review import build_review_ledger, extract_translation_notes, review_status_report, terminology_audit
 
 
+def _pilot_document_tuples():
+    relative = "chapter-02.yaml"
+    chapter = copy.deepcopy(load_yaml(RELEASE_DIR / relative))
+    chapter["sections"] = [section for section in chapter["sections"] if section["number"] == "2.5"]
+    ids = {node["id"] for _, node in walk_nodes([chapter])}
+    chapter["publicationAnnotations"] = [
+        annotation
+        for annotation in chapter["publicationAnnotations"]
+        if annotation["anchor"]["id"] in ids
+    ]
+    return [(relative, chapter)], load_yaml(ROOT / "src/ipg/display-values.yaml")
+
+
 def _export(tmp_path):
-    documents, display = _document_tuples()
+    documents, display = _pilot_document_tuples()
     project = tmp_path / "omegat"
     mapping = export_project(project, ROOT, documents, display, ROOT / "terminology/ipg-glossary.txt")
     return project, mapping, documents, display
@@ -64,7 +77,7 @@ def test_po_identity_faults_block_writeback(tmp_path, fault: str, expected: str)
 
 def test_apply_blocks_count_and_changes_after_preview(tmp_path) -> None:
     source_root = tmp_path / "source-root"
-    documents, display = _document_tuples(); units = collect_units(documents, display)
+    documents, display = _pilot_document_tuples(); units = collect_units(documents, display)
     for relative in sorted({unit["file"] for unit in units}):
         destination = source_root / relative; destination.parent.mkdir(parents=True, exist_ok=True); shutil.copyfile(ROOT / relative, destination)
     project = tmp_path / "omegat"; export_project(project, source_root, documents, display, ROOT / "terminology/ipg-glossary.txt")
@@ -86,7 +99,7 @@ def test_apply_blocks_count_and_changes_after_preview(tmp_path) -> None:
 
 
 def test_translation_notes_versioning_and_target_change_staleness() -> None:
-    documents, display = _document_tuples(); units = collect_units(documents, display)
+    documents, display = _pilot_document_tuples(); units = collect_units(documents, display)
     kwargs = {"release_id": "ipg-test", "translation_revision": "zh-r0001"}
     notes = extract_translation_notes(ROOT / "tests/fixtures/pilot/translation-notes.tmx", units, **kwargs)
     assert validate_schema(notes, ROOT / "schema/translation-notes.schema.json") == []
@@ -110,7 +123,7 @@ def test_translation_note_without_time_requires_explicit_parameter(tmp_path) -> 
 
 
 def test_review_ledger_has_four_states_and_is_isolated(tmp_path) -> None:
-    documents, display = _document_tuples(); units = collect_units(documents, display)
+    documents, display = _pilot_document_tuples(); units = collect_units(documents, display)
     actions = load_yaml(ROOT / "review/actions/zh-r0001.yaml")["actions"]
     ledger = build_review_ledger(units, actions, release_id="ipg-test", translation_revision="zh-r0001")
     assert validate_schema(ledger, ROOT / "schema/review-ledger.schema.json") == []
@@ -125,5 +138,5 @@ def test_review_ledger_has_four_states_and_is_isolated(tmp_path) -> None:
 
 def test_terminology_audit_is_advisory_even_for_bad_glossary(tmp_path) -> None:
     bad = tmp_path / "bad-glossary.txt"; bad.write_text("bad-row-without-tab\nGame Rule Violation\t不存在的受控译名\n", encoding="utf-8")
-    documents, display = _document_tuples(); report = terminology_audit(bad, collect_units(documents, display))
+    documents, display = _pilot_document_tuples(); report = terminology_audit(bad, collect_units(documents, display))
     assert report["nonBlocking"] is True and report["glossaryIssueCount"] == 1 and report["findingCount"] >= 1

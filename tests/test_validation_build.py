@@ -55,18 +55,19 @@ def test_candidate_succeeds_while_same_content_fails_release() -> None:
     release = validate_release(profile="release", manifest=manifest, documents=documents, display_values=display, migration_report=migration)
     assert candidate["valid"] is True and candidate["meaning"] == "reviewable-not-publishable"
     assert release["valid"] is False
-    assert release["releaseGateCounts"]["missingTranslation"] == 0
+    assert release["releaseGateCounts"]["missingTranslation"] == 12
     assert release["releaseGateCounts"]["reviewLedgerMissing"] == 1
-    assert "manifest-not-full-document" in release["readinessFindingCounts"]
+    assert "manifest-not-full-document" not in release["readinessFindingCounts"]
     assert "manifest-not-publishable" in release["readinessFindingCounts"]
-    assert "deferred-publication-annotations" in release["readinessFindingCounts"]
+    assert "deferred-publication-annotations" not in release["readinessFindingCounts"]
 
 
 def test_actual_manifest_has_machine_verifiable_nonpublishable_scope() -> None:
     manifest, _, _, _ = _inputs()
-    assert manifest["scope"]["officialContent"]["mode"] == "pilot"
+    assert manifest["scope"]["officialContent"]["mode"] == "full-document"
     assert manifest["scope"]["publicationAnnotations"] == {
-        "mode": "pilot", "includedSections": ["2.5"], "deferredGroups": 86, "deferredRawUnits": 338,
+        "mode": "full-document", "includedSections": ["full-document"],
+        "deferredGroups": 0, "deferredRawUnits": 0,
     }
     assert manifest["publishable"] is False
 
@@ -85,7 +86,15 @@ def test_full_document_with_deferred_annotations_still_fails_release() -> None:
 
 def test_clean_2_5_fixture_requires_and_passes_with_complete_ledger() -> None:
     manifest, documents, display, _ = _inputs()
-    chapter = copy.deepcopy(documents[0]); chapter["sections"] = [section for section in chapter["sections"] if section["number"] == "2.5"]
+    chapter = copy.deepcopy(next(document for document in documents if any(section["number"] == "2.5" for section in document["sections"])))
+    section = next(section for section in chapter["sections"] if section["number"] == "2.5")
+    ids = {section["id"]}
+    for component in section["components"]:
+        ids.add(component["id"])
+        for group in component["groups"]:
+            ids.add(group["id"]); ids.update(block["id"] for block in group["blocks"])
+    chapter["sections"] = [section]
+    chapter["publicationAnnotations"] = [annotation for annotation in chapter["publicationAnnotations"] if annotation["anchor"]["id"] in ids]
     clean_migration = {"coverage": {"rawUnitCount": 1, "disposedUnitCount": 1, "duplicateConsumption": 0}, "findings": []}
     ledger = _reviewed_ledger([chapter], display)
     report = validate_release(profile="release", manifest=_complete_manifest(manifest), documents=[chapter], display_values=display, migration_report=clean_migration, review_ledger=ledger)
@@ -137,7 +146,7 @@ def test_duplicate_ids_and_invalid_display_codes_are_structural_failures() -> No
 
 def test_orphan_annotation_bad_position_and_applies_to_are_rejected() -> None:
     manifest, documents, display, migration = _inputs(); broken = copy.deepcopy(documents)
-    annotation = broken[0]["publicationAnnotations"][0]
+    annotation = next(document for document in broken if document["publicationAnnotations"])["publicationAnnotations"][0]
     annotation["anchor"]["id"] = "ipg-missing"; annotation["position"] = "inside-start"; annotation["appliesTo"] = ["ipg-missing"]
     report = validate_release(profile="candidate", manifest=manifest, documents=broken, display_values=display, migration_report=migration)
     assert report["valid"] is False
@@ -148,8 +157,16 @@ def test_orphan_annotation_bad_position_and_applies_to_are_rejected() -> None:
 
 def test_duplicate_annotation_order_at_same_anchor_is_rejected() -> None:
     manifest, documents, display, migration = _inputs(); broken = copy.deepcopy(documents)
-    annotations = broken[0]["publicationAnnotations"]
-    annotations[-1]["order"] = annotations[-2]["order"]
+    annotations = next(document for document in broken if document["publicationAnnotations"])["publicationAnnotations"]
+    pairs = {}
+    for annotation in annotations:
+        key = (annotation["anchor"]["type"], annotation["anchor"]["id"], annotation["position"])
+        if key in pairs:
+            annotation["order"] = pairs[key]["order"]
+            break
+        pairs[key] = annotation
+    else:
+        raise AssertionError("fixture needs two annotations at one anchor")
     report = validate_release(profile="candidate", manifest=manifest, documents=broken, display_values=display, migration_report=migration)
     assert report["valid"] is False
     assert report["structuralFindingCounts"]["duplicate-annotation-order"] == 1
@@ -188,5 +205,5 @@ def test_build_is_byte_deterministic_and_rules_hash_is_external(tmp_path) -> Non
     assert validate_schema(rules, ROOT / "schema/ipg-output.schema.json") == []
     assert (first / "IPG.md").read_text(encoding="utf-8").startswith("<!-- CANDIDATE: NOT FOR RELEASE -->")
     notice = (first / "IPG.md").read_text(encoding="utf-8").splitlines()[1]
-    assert "范围尚不完整" in notice and "尚未完成完整审校" in notice
+    assert "全文迁移候选版" in notice and "尚未完成完整审校" in notice
     assert "包含明确标记的缺译" not in notice
