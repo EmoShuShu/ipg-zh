@@ -59,7 +59,8 @@ SHA-256、页码、bbox 和 extraction unit。
 `p4-ann-2-1-simple-backup-guide` 显式记录 29 个 raw unit、14 个双语 block
 边界、列表标记、锚点和顺序。3246/3248 行则通过
 `p4-body-4-2-upgrade-context` 明确处置为同一官方正文 block 的旧版本上下文，
-没有生成发布注解。
+没有生成发布注解。P2 已有的 `pilot-body-2-1-delayed-copy` 正文区间 override
+继续生效并列入 applied override 审计。
 
 ## 4,085 个 raw unit 的唯一处置
 

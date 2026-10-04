@@ -748,7 +748,12 @@ def migrate_full(
     _consume_existing_provenance(document, units_by_id, dispositions)
     _mark_titles(document, units, dispositions)
     _map_body(document, units, dispositions, overrides, findings, mappings)
-    applied_overrides = _apply_legacy_context_overrides(units, dispositions, overrides)
+    applied_overrides = [
+        mapping["overrideId"] for mapping in mappings if mapping.get("overrideId")
+    ]
+    applied_overrides.extend(
+        _apply_legacy_context_overrides(units, dispositions, overrides)
+    )
     _map_appendix_a(next(section for section in document["sections"] if section["number"] == "A"), units, dispositions)
     _map_appendix_b(next(section for section in document["sections"] if section["number"] == "B"), units, dispositions, findings)
     _mark_structural_and_preamble(units, dispositions)
