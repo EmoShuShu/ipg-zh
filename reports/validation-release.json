@@ -1,0 +1,241 @@
+{
+  "meaning": "validation-failed",
+  "profile": "release",
+  "readinessFindingCounts": {
+    "annotation-license-pending": 1,
+    "missing-legacy-mapping": 24,
+    "missing-translation": 24
+  },
+  "readinessFindings": [
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-c-body-g01-b002"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-c-body-g01-b003"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-1-c-definition-g01-b001"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-1-c-definition-g02-b002"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-1-c-definition-g03-b003"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-1-c-definition-g03-b005"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-1-c-philosophy-g01-b001"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-1-c-philosophy-g01-b002"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-1-c-philosophy-g01-b003"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-1-c-philosophy-g01-b004"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-1-c-additional-remedy-g01-b003"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-1-c-additional-remedy-g01-b004"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-1-c-additional-remedy-g01-b006"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-2-c-philosophy-g01-b001"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-2-c-philosophy-g01-b002"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-3-c-definition-g01-b001"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-3-c-definition-g01-b002"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-3-c-philosophy-g01-b002"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-3-c-philosophy-g01-b005"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-3-c-additional-remedy-g01-b004"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-3-c-additional-remedy-g01-b005"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-3-c-additional-remedy-g01-b006"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-6-c-definition-g01-b001"
+    },
+    {
+      "code": "missing-translation",
+      "targetId": "ipg-s2-6-c-philosophy-g01-b001"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-c-body-g01-b002"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-c-body-g01-b003"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-1-c-definition-g01-b001"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-1-c-definition-g02-b002"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-1-c-definition-g03-b003"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-1-c-definition-g03-b005"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-1-c-philosophy-g01-b001"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-1-c-philosophy-g01-b002"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-1-c-philosophy-g01-b003"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-1-c-philosophy-g01-b004"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-1-c-additional-remedy-g01-b003"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-1-c-additional-remedy-g01-b004"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-1-c-additional-remedy-g01-b006"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-2-c-philosophy-g01-b001"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-2-c-philosophy-g01-b002"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-3-c-definition-g01-b001"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-3-c-definition-g01-b002"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-3-c-philosophy-g01-b002"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-3-c-philosophy-g01-b005"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-3-c-additional-remedy-g01-b004"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-3-c-additional-remedy-g01-b005"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-3-c-additional-remedy-g01-b006"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-6-c-definition-g01-b001"
+    },
+    {
+      "candidateRawUnits": [],
+      "code": "missing-legacy-mapping",
+      "targetId": "ipg-s2-6-c-philosophy-g01-b001"
+    },
+    {
+      "code": "annotation-license-pending",
+      "targetId": "versions.annotations"
+    }
+  ],
+  "releaseGateCounts": {
+    "duplicateConsumption": 0,
+    "missingTranslation": 24,
+    "orphanPublicationAnnotation": 0,
+    "unresolvedMapping": 24
+  },
+  "schemaVersion": 1,
+  "structuralFindingCounts": {},
+  "structuralFindings": [],
+  "valid": false
+}

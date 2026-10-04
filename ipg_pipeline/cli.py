@@ -5,9 +5,11 @@ import json
 from pathlib import Path
 from typing import Any
 
+from .builder import build_outputs
 from .core import ROOT, dump_yaml, load_json, load_yaml
 from .migration import migrate_pilot
 from .pilot_parser import OFFICIAL_SHA256, parse_pilot
+from .validation import validate_release
 
 
 OFFICIAL_PDF = (
@@ -67,11 +69,69 @@ def command_migrate(_: argparse.Namespace) -> int:
     return 0
 
 
+def _release_inputs() -> tuple[dict[str, Any], list[dict[str, Any]], dict[str, Any], dict[str, Any]]:
+    manifest = load_yaml(RELEASE_DIR / "manifest.yaml")
+    documents = [load_yaml(RELEASE_DIR / filename) for filename in manifest["documents"]]
+    display_values = load_yaml(ROOT / "src/ipg/display-values.yaml")
+    migration_report = load_json(ROOT / "reports/migration-report.json")
+    return manifest, documents, display_values, migration_report
+
+
+def command_validate(args: argparse.Namespace) -> int:
+    manifest, documents, display_values, migration_report = _release_inputs()
+    review_path = ROOT / "review/review-ledger.json"
+    report = validate_release(
+        profile=args.profile,
+        manifest=manifest,
+        documents=documents,
+        display_values=display_values,
+        migration_report=migration_report,
+        review_ledger=load_json(review_path) if review_path.exists() else None,
+    )
+    path = ROOT / f"reports/validation-{args.profile}.json"
+    _write_json(path, report)
+    print(
+        f"{args.profile}: {'valid' if report['valid'] else 'failed'}; "
+        f"release gates={report['releaseGateCounts']}"
+    )
+    return 0 if report["valid"] else 1
+
+
+def command_build(args: argparse.Namespace) -> int:
+    manifest, documents, display_values, migration_report = _release_inputs()
+    report = validate_release(
+        profile=args.profile,
+        manifest=manifest,
+        documents=documents,
+        display_values=display_values,
+        migration_report=migration_report,
+    )
+    if not report["valid"]:
+        raise SystemExit(f"{args.profile} validation failed; build refused")
+    build = build_outputs(
+        ROOT / "dist",
+        manifest,
+        documents,
+        display_values,
+        candidate=args.profile == "candidate",
+        profile=args.profile,
+    )
+    _write_json(ROOT / f"reports/validation-{args.profile}.json", report)
+    print(f"built {'candidate' if build['candidate'] else 'release'} outputs -> dist")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="ipg-pilot")
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("parse", help="parse only the approved PDF pilot pages").set_defaults(func=command_parse)
     subparsers.add_parser("migrate", help="migrate legacy pilot content and write coverage ledger").set_defaults(func=command_migrate)
+    validate = subparsers.add_parser("validate", help="validate with an explicit profile")
+    validate.add_argument("--profile", required=True, choices=("candidate", "release"))
+    validate.set_defaults(func=command_validate)
+    build = subparsers.add_parser("build", help="build after validation with an explicit profile")
+    build.add_argument("--profile", required=True, choices=("candidate", "release"))
+    build.set_defaults(func=command_build)
     return parser
 
 

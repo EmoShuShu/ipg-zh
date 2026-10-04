@@ -1,0 +1,17 @@
+{
+  "candidate": true,
+  "outputs": {
+    "IPG.md": {
+      "bytes": 24372,
+      "sha256": "d0625cbc1301a50c1ae1bcaff09f620b0d68c0f22d952529c4482845b34a44fd"
+    },
+    "rules.json": {
+      "bytes": 114859,
+      "sha256": "40fa895a9e7c1d1ef73ee269f0fdda0c35d8bd15bff40e368bab2274139e6927"
+    }
+  },
+  "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+  "rulesHashEmbedded": false,
+  "schemaVersion": 1,
+  "validationProfile": "candidate"
+}
