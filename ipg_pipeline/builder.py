@@ -116,6 +116,8 @@ def build_outputs(
         "schema": "ipg-output-v1",
         "releaseId": manifest["releaseId"],
         "versions": manifest["versions"],
+        "scope": manifest["scope"],
+        "publishable": manifest["publishable"],
         "candidate": candidate,
         "displayValues": display_values["values"],
         "sections": [section for document in documents for section in document["sections"]],

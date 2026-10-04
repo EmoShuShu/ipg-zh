@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.invalid/ipg-source.schema.json",
-  "title": "IPG structured source v1 pilot",
+  "title": "IPG structured source v1",
   "type": "object",
   "required": ["schemaVersion", "documentId", "sections", "publicationAnnotations"],
   "additionalProperties": false,
@@ -39,6 +39,12 @@
         "text": {"$ref": "#/$defs/localized"},
         "marker": {"type": "string"},
         "displayCode": {"type": "string"},
+        "referenceId": {"type": "string", "pattern": "^ipg-"},
+        "ruleReferences": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[1-4](?:\\.[0-9]+)?$"}
+        },
         "officialPdfUnits": {
           "type": "array",
           "minItems": 1,
@@ -59,6 +65,7 @@
       "properties": {
         "id": {"type": "string", "pattern": "^ipg-"},
         "kind": {"enum": ["paragraphs", "ordered-list", "unordered-list", "appendix-table", "change-list"]},
+        "date": {"type": "string", "pattern": "^[A-Z][a-z]+ [0-9]{1,2}, [0-9]{4}$"},
         "blocks": {"type": "array", "items": {"$ref": "#/$defs/block"}}
       }
     },
@@ -68,7 +75,7 @@
       "additionalProperties": false,
       "properties": {
         "id": {"type": "string", "pattern": "^ipg-"},
-        "role": {"enum": ["body", "definition", "examples", "philosophy", "additional-remedy", "appendix-table", "change-log"]},
+        "role": {"enum": ["body", "definition", "examples", "philosophy", "additional-remedy", "upgrade", "downgrade", "penalty-definition", "appendix-table", "change-log"]},
         "labelCode": {"type": "string"},
         "groups": {"type": "array", "items": {"$ref": "#/$defs/group"}}
       }
@@ -79,16 +86,17 @@
       "additionalProperties": false,
       "properties": {
         "id": {"type": "string", "pattern": "^ipg-"},
-        "kind": {"enum": ["chapter", "infraction", "appendix"]},
+        "kind": {"enum": ["front-matter", "chapter", "policy", "infraction", "appendix"]},
         "number": {"type": "string"},
         "title": {"$ref": "#/$defs/localized"},
         "penaltyCode": {"type": "string"},
+        "classification": {"enum": ["game-play-error", "tournament-error", "unsporting-conduct"]},
         "components": {"type": "array", "items": {"$ref": "#/$defs/component"}}
       }
     },
     "annotationBlock": {
       "type": "object",
-      "required": ["id", "type", "text", "sourceRawUnits"],
+      "required": ["id", "type", "text"],
       "additionalProperties": false,
       "properties": {
         "id": {"type": "string", "pattern": "^ipg-ann-.*-b[0-9]{2,}$"},

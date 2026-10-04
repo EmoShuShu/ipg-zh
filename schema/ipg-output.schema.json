@@ -3,15 +3,32 @@
   "$id": "https://example.invalid/ipg-output.schema.json",
   "title": "IPG output v1",
   "type": "object",
-  "required": ["schema", "releaseId", "versions", "candidate", "displayValues", "sections", "publicationAnnotations"],
+  "required": ["schema", "releaseId", "versions", "scope", "publishable", "candidate", "displayValues", "sections", "publicationAnnotations"],
   "additionalProperties": false,
   "properties": {
     "schema": {"const": "ipg-output-v1"},
     "releaseId": {"type": "string"},
-    "versions": {"type": "object"},
+    "versions": {
+      "type": "object",
+      "required": ["official", "annotations", "translation"],
+      "properties": {
+        "official": {"type": "object", "required": ["effectiveDate", "pdfSha256"]},
+        "annotations": {"type": "object", "required": ["version", "sourceSha256"]},
+        "translation": {"type": "object", "required": ["locale", "revision"]}
+      }
+    },
+    "scope": {
+      "type": "object",
+      "required": ["officialContent", "publicationAnnotations"],
+      "properties": {
+        "officialContent": {"type": "object", "required": ["mode"]},
+        "publicationAnnotations": {"type": "object", "required": ["mode"]}
+      }
+    },
+    "publishable": {"type": "boolean"},
     "candidate": {"type": "boolean"},
     "displayValues": {"type": "object"},
-    "sections": {"type": "array"},
+    "sections": {"type": "array", "items": {"type": "object", "required": ["id", "kind", "number", "title", "components"]}},
     "publicationAnnotations": {"type": "array"}
   }
 }

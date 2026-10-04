@@ -41,6 +41,9 @@ def validate_release(
     structural: list[dict[str, Any]] = []
     readiness: list[dict[str, Any]] = []
 
+    for error in validate_schema(manifest, ROOT / "schema/ipg-manifest.schema.json"):
+        structural.append({"code": "manifest-schema", "detail": error})
+
     for document in documents:
         for error in validate_schema(document, ROOT / "schema/ipg-source.schema.json"):
             structural.append({"code": "source-schema", "documentId": document.get("documentId"), "detail": error})

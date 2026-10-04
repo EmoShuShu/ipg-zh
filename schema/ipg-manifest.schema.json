@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/ipg-manifest.schema.json",
+  "title": "IPG content manifest v1",
+  "type": "object",
+  "required": ["schemaVersion", "releaseId", "scope", "publishable", "versions", "build", "documents"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "releaseId": {"type": "string", "minLength": 1},
+    "scope": {
+      "type": "object",
+      "required": ["officialContent", "publicationAnnotations"],
+      "additionalProperties": false,
+      "properties": {
+        "officialContent": {
+          "type": "object",
+          "required": ["mode", "included"],
+          "additionalProperties": false,
+          "properties": {
+            "mode": {"enum": ["pilot", "full-document"]},
+            "included": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}
+          }
+        },
+        "publicationAnnotations": {
+          "type": "object",
+          "required": ["mode", "includedSections", "deferredGroups", "deferredRawUnits"],
+          "additionalProperties": false,
+          "properties": {
+            "mode": {"enum": ["pilot", "full-document"]},
+            "includedSections": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+            "deferredGroups": {"type": "integer", "minimum": 0},
+            "deferredRawUnits": {"type": "integer", "minimum": 0}
+          }
+        }
+      }
+    },
+    "publishable": {"type": "boolean"},
+    "versions": {
+      "type": "object",
+      "required": ["official", "annotations", "translation"],
+      "additionalProperties": false,
+      "properties": {
+        "official": {
+          "type": "object",
+          "required": ["effectiveDate", "pdfSha256", "downloadedAt", "url"],
+          "additionalProperties": false,
+          "properties": {
+            "effectiveDate": {"type": "string", "format": "date"},
+            "pdfSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+            "downloadedAt": {"type": "string", "format": "date-time"},
+            "url": {"type": "string", "format": "uri"}
+          }
+        },
+        "annotations": {
+          "type": "object",
+          "required": ["version", "sourceId", "sourceSha256", "attribution", "licenseStatus"],
+          "additionalProperties": false,
+          "properties": {
+            "version": {"type": "string"},
+            "sourceId": {"type": "string"},
+            "sourceSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+            "attribution": {"type": "string"},
+            "licenseStatus": {"type": "string"}
+          }
+        },
+        "translation": {
+          "type": "object",
+          "required": ["locale", "revision"],
+          "additionalProperties": false,
+          "properties": {
+            "locale": {"const": "zh-CN"},
+            "revision": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    },
+    "build": {
+      "type": "object",
+      "required": ["schema"],
+      "additionalProperties": false,
+      "properties": {"schema": {"const": "ipg-output-v1"}}
+    },
+    "documents": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}
+  }
+}
