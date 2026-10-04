@@ -61,8 +61,10 @@ def render_markdown(
     for document in documents:
         for section in document["sections"]:
             add_annotations(lines, "section", section["id"], "before")
-            level = 2 if section["kind"] in {"chapter", "appendix"} else 3
-            heading = f"{'#' * level} {section['number']} {translated(section['title'])}"
+            top_level = section["kind"] in {"front-matter", "chapter", "appendix"}
+            level = 2 if top_level else 3
+            prefix = "" if section["kind"] == "front-matter" else f"{section['number']} "
+            heading = f"{'#' * level} {prefix}{translated(section['title'])}"
             if section["title"]["zh"]:
                 heading += f" ({section['title']['en']})"
             lines.extend([heading, ""])
@@ -71,12 +73,14 @@ def render_markdown(
             add_annotations(lines, "section", section["id"], "inside-start")
             for component in section["components"]:
                 add_annotations(lines, "component", component["id"], "before")
-                if component["role"] != "body":
+                if component["role"] != "body" and section["kind"] != "appendix":
                     lines.extend([f"#### {values[component['labelCode']]['zh']}", ""])
                 add_annotations(lines, "component", component["id"], "inside-start")
                 for group in component["groups"]:
                     add_annotations(lines, "group", group["id"], "before")
                     add_annotations(lines, "group", group["id"], "inside-start")
+                    if "date" in group:
+                        lines.extend([f"### {group['date']}", ""])
                     for block in group["blocks"]:
                         add_annotations(lines, "block", block["id"], "before")
                         value = translated(block["text"])
