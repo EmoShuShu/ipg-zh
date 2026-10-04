@@ -84,13 +84,21 @@ PDF 解析只产生临时 extraction identity；独立 reconciliation 阶段才�
 - `ipg-output.schema.json` 固定 `ipg-output-v1` 顶层字段，并将 scope 和 `publishable` 带入输出，防止候选范围在消费端丢失。
 - P3 新增范围的 `zh` 保持空字符串；不会以英文填充中文。仅保留 P2 已有第 2 章、附录小样译文及 2.5 发布注解。
 
+## P3 收尾修正
+
+- Markdown 的 Introduction 和 Framework 使用顶层内容层级，只显示缺译标记/译名及英文标题，不再泄漏内部结构键 `introduction`、`framework`。
+- 附录 B 直接按五个 change-list group 的持久化 `date` 字段及原顺序渲染，条目数保持 5、6、1、2、3。
+- 附录 A/B 的 component 继续完整保留在 `rules.json`，但 Markdown 不再于 section 标题后重复同名 component 标题。
+- `ipg-output-v1` 的 section、component、group、block 和 publication annotation 直接引用 source schema 定义，并补充 appendix-row、change-list 和 change-entry 的条件约束。
+- 反向测试确认非法 section ID、缺少 `text`、损坏的注解 anchor/内部 block、非法 change-list 日期及错误 block 类型都会被拒绝。
+
 ## 验证与确定性
 
-- 自动测试：74 项通过。
+- 自动测试：84 项通过。
 - candidate：通过，报告 272 个缺译、缺少完整 review ledger 和注解许可待完成；这些均完整报告但不阻塞候选。
 - release：按预期失败；除上述项目外，还明确因 `publishable: false` 和 86/338 个延期注解材料失败。
 - 两次完整解析/协调结果一致；两次候选构建逐字节一致。
-- 候选哈希：`IPG.md e3459019cde322e00be81926f153a25f48c3e712a0715f49abc9dd1383b12a39`；`rules.json c1a0b651fa105f745855ab29e4a560f288c03889688ff7accf9c71b25a1bba98`。
+- 候选哈希：`IPG.md 72467b0c91033b0dc37c0f0593981b157e3f86870f833c95f9487e2c4750fdbb`；`rules.json c1a0b651fa105f745855ab29e4a560f288c03889688ff7accf9c71b25a1bba98`。
 - `rules.json` 不包含自身哈希；哈希只存在外部 build report 和 `SHA256SUMS`。
 
 ## 提交摘要
@@ -100,6 +108,10 @@ PDF 解析只产生临时 extraction identity；独立 reconciliation 阶段才�
 - `9928e50`：完整结构 reconciliation 与 P3 本地流水线。
 - `913b354`：完整解析、结构、失败模式与确定性测试。
 - `bdf4c73`：完整文档稳定 ID registry 分配及额外故障封闭检查。
+- `2e99974`：修复前置章节及附录 Markdown 渲染。
+- `e41673f`：以 source schema 定义约束完整 `ipg-output-v1` 节点结构。
+- `69918c2`：增加 Markdown 渲染与损坏输出 schema 反向测试。
+- 本摘要更新由最终 P3 收尾文档提交保存；最终 HEAD 以交付报告为准。
 
 ## 进入 P4 前仍需决定
 
