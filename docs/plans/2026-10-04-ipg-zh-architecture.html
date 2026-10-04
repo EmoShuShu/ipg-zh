@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ipg-zh 调查与实施设计</title>
+  <style>
+    :root { --ink:#17202a; --muted:#5b6773; --line:#d8dee4; --paper:#fff; --wash:#f5f7f9; --blue:#175cd3; --green:#067647; --amber:#b54708; --red:#b42318; --violet:#6941c6; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:#eef2f5; font:15px/1.55 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif; }
+    main { max-width:1180px; margin:28px auto; padding:38px 44px 56px; background:var(--paper); box-shadow:0 12px 40px rgba(16,24,40,.08); }
+    h1,h2,h3 { line-height:1.25; scroll-margin-top:20px; }
+    h1 { margin:0 0 10px; font-size:34px; }
+    h2 { margin:38px 0 14px; padding-top:10px; border-top:1px solid var(--line); font-size:23px; }
+    h3 { margin:24px 0 10px; font-size:17px; }
+    p { margin:9px 0; }
+    a { color:var(--blue); }
+    code { padding:.1em .35em; border-radius:4px; background:#f0f3f6; font:13px/1.4 ui-monospace,SFMono-Regular,Consolas,monospace; }
+    pre { overflow:auto; padding:16px; border:1px solid var(--line); border-radius:8px; background:#0b1220; color:#e8eef7; font:12.5px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace; }
+    table { width:100%; border-collapse:collapse; margin:12px 0 20px; }
+    th,td { padding:9px 10px; border:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { background:var(--wash); }
+    ul,ol { margin:8px 0 12px 22px; padding:0; }
+    li { margin:4px 0; }
+    .lede { max-width:940px; color:#344054; font-size:17px; }
+    .meta { color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:18px 0; }
+    .card { padding:15px; border:1px solid var(--line); border-radius:9px; background:#fff; }
+    .card strong { display:block; margin-bottom:5px; }
+    .metric { font-size:28px; font-weight:700; color:var(--violet); }
+    .callout { margin:16px 0; padding:14px 16px; border-left:4px solid var(--blue); background:#eff6ff; }
+    .warn { border-left-color:var(--amber); background:#fffaeb; }
+    .risk { border-left-color:var(--red); background:#fff1f0; }
+    .ok { border-left-color:var(--green); background:#ecfdf3; }
+    .seq { color:var(--red); font-weight:650; }
+    .par { color:var(--green); font-weight:650; }
+    .small { color:var(--muted); font-size:13px; }
+    .check td:first-child { width:24%; font-weight:650; }
+    @media (max-width:820px) { main{margin:0;padding:24px 18px}.grid{grid-template-columns:1fr} table{font-size:13px} }
+    @media print { body{background:#fff} main{margin:0;box-shadow:none;max-width:none} a{color:inherit} }
+  </style>
+</head>
+<body>
+<main>
+  <h1><code>ipg-zh</code> 调查与实施设计</h1>
+  <p class="meta">调查日期：2026-10-04 · 修订日期：2026-10-04 · 阶段：P0–P2 本地 vertical slice 已获授权 · 项目实施：准备开始</p>
+  <p class="lede"><strong>北极星：</strong>建立一个与 <code>mtr-zh</code> 在可靠性和使用体验上对等、但以 IPG 自身语义为中心的维护系统。先用第 2 章、2.5 Game Rule Violation 和附录 A/B 小型夹具验证完整闭环；模型和阅读效果经人工确认后，才扩展到全文解析与迁移。官方英文、中文译文和最终发布注解必须可追溯、可确定性构建，任何缺译或未决内容都必须显式报告。</p>
+
+  <div class="callout">
+    <strong>本轮修订记录。</strong>
+    已将实施顺序改为 vertical slice 优先；严格分离发布注解、OmegaT 翻译批注和审校账本；把注解锚点扩展到 section/component/group/block；增加官方、注解和中文修订三条版本轴；补全稳定 ID 注册、拆并与历史生命周期；定义 candidate/release 两级验证；修正官方 PDF 与旧源的覆盖关系；集中维护组件标签和处罚显示值；并把 P2 验收改为覆盖解析、迁移、构建、OmegaT、翻译批注、发布注解和审校状态的完整闭环。本次实施前补充三项约束：P0 初始化仅限本地的 Git 仓库并按五个里程碑提交；验证级别只能由命令行 <code>--profile</code> 选择；<code>rules.json</code> 的哈希只能写入外部构建报告、<code>SHA256SUMS</code> 和未来 Release 标签。
+  </div>
+
+  <div class="callout warn"><strong>阶段边界。</strong>P0–P2 已获准在本地实施。P0 初始化独立 Git 仓库，随后仅完成 vertical slice；不添加远端，不配置 GitHub Actions、自动 PR 或 Release，不迁移全文，也不在 P2 审阅包获确认前开发全文 PDF 解析器。</div>
+
+  <h2>1. 范围、非目标与已确定约束</h2>
+  <table>
+    <tr><th>范围内</th><th>本阶段不做</th></tr>
+    <tr><td>实施 P0–P2 的模型、夹具、最小解析迁移、构建、OmegaT 闭环、测试与审阅包，并用本地 Git 审查和回退。</td><td>不扩展到全文解析或全文迁移，不添加 GitHub 远端、Actions、自动 PR 或 Release，不修改 <code>D:\mtr-zh</code>，不改写 <code>AIPG_2025.md</code>。</td></tr>
+    <tr><td>把 <code>mtr-zh</code> 当作行为规范和已验证的控制流程来源。</td><td>不继承 MTR 的固定 10 章/6 附录、JSON 形状、PDF 版式或 <code>extras[0]</code> 假设。</td></tr>
+  </table>
+  <h3>已确定的项目决策</h3>
+  <ul>
+    <li>官方基线采用 WPN 当前指向的 2024-09-23 英文 PDF；开始实施时重新记录下载时间和 SHA-256。</li>
+    <li><code>AIPG_2025.md</code> 是旧译与旧注解迁移基线，不是官方英文权威来源；旧中文只做保守迁移，不在迁移阶段顺便润色。</li>
+    <li>第一版只输出 <code>dist/IPG.md</code> 和 <code>dist/rules.json</code>。<code>IPG.md</code> 同时包含正文和最终发布注解；不额外生成 <code>AIPG.md</code> 或无注解 Markdown。</li>
+    <li><code>rules.json</code> 使用 IPG 原生 <code>ipg-output-v1</code>，不兼容 MTR 字段形状。</li>
+    <li>注解许可与署名不阻塞本地试制，但属于正式发布的硬门槛。</li>
+    <li>P0 初始化独立本地 Git 仓库，为原始基线、基础模型、解析迁移、构建输出和 OmegaT 闭环分别提交；GitHub 远端、Actions、自动 PR 和 Release 配置均推迟到本地试制通过之后。</li>
+  </ul>
+  <p><strong>环境假设：</strong>Python 3.12+；YAML 是人工维护的内容事实源；生成的 Markdown/JSON 不手改；官方英文优先于旧 AIPG 中的英文。</p>
+
+  <h2>2. 已审阅来源与可复核证据</h2>
+  <ul>
+    <li>参照仓库：<code>D:\mtr-zh</code>，已阅读 README、schema、pipeline、测试、GitHub 工作流、不可变快照、reference pipeline 和审校助手。</li>
+    <li>旧迁移基线：<code>D:\ipg-zh\AIPG_2025.md</code>（533,043 字节，4,085 行）。</li>
+    <li>官方入口：<a href="https://wpn.wizards.com/en/rules-documents">WPN Rules and Documentation</a>；当前指向 <a href="https://media.wizards.com/ContentResources/WPN/MTG_IPG_2024Sep23_EN.pdf">MTG_IPG_2024Sep23_EN.pdf</a>。</li>
+    <li>官方 PDF 共 31 页，内部标示 <em>Effective September 23, 2024</em>；WPN 条目日期为 2024-09-24。</li>
+    <li><code>mtr-zh</code> 的 79 项测试全部通过且测试后工作树干净；其 MTR PDF 解析器直接处理 IPG 时返回 0 个章节。</li>
+  </ul>
+  <div class="grid">
+    <div class="card"><strong>官方 IPG</strong><span class="metric">4 + 2</span><br>4 个主章、2 个附录；第 2–4 章共 23 个违规小节。</div>
+    <div class="card"><strong>旧 AIPG</strong><span class="metric">328</span><br>个引用块运行段；存在格式异常和未成对内容。</div>
+    <div class="card"><strong>试制范围</strong><span class="metric">2.5</span><br>以第 2 章为代表章、2.5 为黄金样例，附录 A/B 仅取小夹具。</div>
+  </div>
+
+  <h2>3. 当前结构与目标行为</h2>
+  <h3>3.1 官方 IPG 结构</h3>
+  <ul>
+    <li>前置部分为 Introduction 与 Framework of this Document；第 1 章为一般原则；第 2–4 章先有章节前言，再有违规小节。</li>
+    <li>违规小节有独立处罚，并按实际内容组合 Definition、Examples、Philosophy、Additional Remedy、Upgrade、Downgrade；角色并不总是齐全或只出现一次。</li>
+    <li>附录 A 是处罚速查表；附录 B 是按日期分组的变更记录。二者需要专用结构。</li>
+  </ul>
+  <h3>3.2 旧 AIPG 结构</h3>
+  <ul>
+    <li>官方英文、旧中文正文、英文注解和中文注解交错出现；blockquote 只是线索，不能作为唯一分类依据。</li>
+    <li>已知异常：第 3246 行的官方英文被写成引用块，而对应中文在第 3248 行是普通段落；版本说明中的“这是一段注解”只是演示文字。</li>
+    <li>附录 B 的 2024-04-15 和 2024-02-02 条目仍为英文，迁移时必须保留空中文并报告缺译。</li>
+  </ul>
+  <h3>3.3 目标行为</h3>
+  <p>试制应证明一个小而完整的链路：PDF 夹具 → 官方英文结构 → 旧源分词与对齐 → candidate YAML → 两级验证 → <code>IPG.md</code>/<code>rules.json</code> → OmegaT 往返 → 翻译批注归档 → 审校状态更新。发布注解必须出现在阅读产物中，而翻译批注和审校状态绝不能进入发布产物。</p>
+
+  <h2>4. 复用判定</h2>
+  <table>
+    <tr><th>类别</th><th>内容</th><th>边界</th></tr>
+    <tr><td><strong>直接复用行为</strong></td><td>确定性构建、JSON Schema 校验、路径边界、重复 ID 检测、不可变快照、PO 源文哈希、预览/隔离 candidate/预计变更数、共享术语表、非阻塞术语审计、审校状态哈希、CI 二次构建比较。</td><td>移植行为契约，不让新项目运行时依赖 <code>D:\mtr-zh</code>。</td></tr>
+    <tr><td><strong>轻度修改</strong></td><td>CLI 包装、中文审校助手、官方页面发现器、group/block 渲染、OmegaT 项目、报告格式、Release 哈希逻辑。</td><td>移除固定 17 个 PO、MTR 文案、MTR 输出路径和将 TMX note 写进审校账本的做法。</td></tr>
+    <tr><td><strong>重新设计</strong></td><td>IPG 内容模型、发布注解、版本轴、ID 注册表、PDF 解析、旧源迁移、附录 A/B、输出 schema、更新重基和完整性验证。</td><td>不得以全局改名或 MTR 的 <code>extras</code> 模型替代。</td></tr>
+  </table>
+
+  <h2>5. 数据模型：三类“注释/状态”严格分离</h2>
+  <table>
+    <tr><th>对象</th><th>保存位置</th><th>生命周期</th><th>发布与 OmegaT</th></tr>
+    <tr><td><strong>最终发布的 AIPG 注解</strong><br><code>publicationAnnotations</code></td><td>正式内容 YAML，随章节/附录版本化；进入 <code>rules.json</code>。</td><td>属于内容；有稳定 ID、双语正文、来源版本和显示锚点；随官方更新迁移或变成孤立注解 finding。</td><td>英文/中文正文作为翻译单元进入 OmegaT；渲染到 <code>IPG.md</code>。锚点、来源和位置不翻译。</td></tr>
+    <tr><td><strong>OmegaT 翻译批注</strong><br><code>translationNotes</code></td><td><code>review/translation-notes/&lt;translation-revision&gt;.json</code>；从 TMX note 单独归档。</td><td>记录“为何修改/待查什么”；按 unit ID 与源/译文哈希关联，可 stale，保留历史；不写回内容 YAML。</td><td>不成为 PO 翻译单元，不进入 <code>IPG.md</code> 或 <code>rules.json</code>。TMX 是输入通道，归档 JSON 是项目记录。</td></tr>
+    <tr><td><strong>审校状态与审校账本</strong><br><code>reviewLedger</code></td><td><code>review/status/&lt;translation-revision&gt;.json</code>。</td><td>只记录 unit ID、源/译文哈希、outcome 和状态；内容变化后变为 stale。账本中禁止 <code>note</code> 或发布注解字段。</td><td>不进入 OmegaT 可编辑内容和任何发布产物；仅生成进度报告并参与可选发布门槛。</td></tr>
+  </table>
+  <div class="callout ok"><strong>隔离不变量。</strong>发布注解、翻译批注和审校账本使用不同 schema、不同路径和不同写入命令；任何转换都必须显式执行。构建器只读取正式内容 YAML，不能读取 TMX、translation-notes 或 review ledger。</div>
+
+  <h2>6. IPG 原生内容模型与注解锚点</h2>
+  <p>正式 YAML 仍按可审阅文件拆分，但版本目录使用组合 release ID，而不是只用官方日期：</p>
+  <pre>src/ipg/
+  current-release.txt
+  display-values.yaml
+  id-registry.yaml
+  mapping-overrides.yaml
+  releases/&lt;release-id&gt;/
+    manifest.yaml
+    front-matter.yaml
+    chapter-01.yaml ... chapter-04.yaml
+    appendix-a.yaml
+    appendix-b.yaml</pre>
+  <p>2.5 的代表性结构：</p>
+  <pre>section:
+  id: ipg-section-game-rule-violation
+  number: "2.5"
+  kind: infraction
+  title: { en: Game Rule Violation, zh: 违反游戏规则 }
+  penalty: warning                 # 显示值集中解析
+  components:
+    - id: ipg-section-game-rule-violation-definition
+      role: definition             # 标签集中解析
+      groups:
+        - id: ipg-section-game-rule-violation-definition-g001
+          type: paragraph
+          blocks:
+            - id: ipg-section-game-rule-violation-definition-b001
+              en: "..."
+              zh: "..."
+              provenance:
+                officialPdfUnit: ipg-pdf-20240923-p13-u001
+  publicationAnnotations:
+    - id: ipg-section-game-rule-violation-ann001
+      anchor:
+        targetKind: component
+        targetId: ipg-section-game-rule-violation-additional-remedy
+        position: inside-start
+        order: 10
+      appliesTo:
+        - ipg-section-game-rule-violation-additional-remedy-b001
+        - ipg-section-game-rule-violation-additional-remedy-b002
+      sourceVersion: aipg-2024-09-23-legacy
+      en: "..."
+      zh: "..."</pre>
+  <p><strong>锚点规则：</strong></p>
+  <ul>
+    <li><code>targetKind</code> 可为 <code>section</code>、<code>component</code>、<code>group</code> 或 <code>block</code>；<code>targetId</code> 必须存在且类型一致。</li>
+    <li><code>position</code> 为 <code>before</code>、<code>after</code>、<code>inside-start</code> 或 <code>inside-end</code>；容器可使用 inside 位置，叶节点 block 只能 before/after。</li>
+    <li>同一锚点和位置的多个注解按持久化 <code>order</code> 排列；order 只用于显示，不作为 ID。</li>
+    <li><code>appliesTo</code> 可选，用于表达注解语义覆盖范围，与显示锚点分离；不得用它代替锚点。</li>
+    <li>锚点删除或类型变化会产生 orphan finding。candidate 可在独立未决清单中保留，release 中必须为零。</li>
+  </ul>
+  <p>章节、component、group、block 和发布注解都有稳定 ID；Appendix A 使用 <code>sectionRef + penalty code</code>；Appendix B 使用日期分组和可选 <code>sectionRef</code>。</p>
+
+  <h2>7. 集中显示值与 OmegaT 翻译单元边界</h2>
+  <p><code>src/ipg/display-values.yaml</code> 集中维护反复出现的组件标签、处罚名称及其他受控显示值。内容节点只保存 code：</p>
+  <pre>componentLabels:
+  definition: { en: Definition, zh: 定义 }
+  examples: { en: Examples, zh: 范例 }
+  philosophy: { en: Philosophy, zh: 原则 }
+  additional-remedy: { en: Additional Remedy, zh: 进一步的修正 }
+  upgrade: { en: Upgrade, zh: 升级 }
+  downgrade: { en: Downgrade, zh: 降级 }
+penalties:
+  none: { en: No Penalty, zh: 无处罚 }
+  warning: { en: Warning, zh: 警告 }
+  game-loss: { en: Game Loss, zh: 一盘负 }
+  match-loss: { en: Match Loss, zh: 一局负 }
+  disqualification: { en: Disqualification, zh: 取消资格 }</pre>
+  <p>这些值各自只形成一个 OmegaT 单元，例如 <code>ipg-display-penalty-warning</code>；每次出现不重复导出。</p>
+  <table>
+    <tr><th>进入 OmegaT</th><th>不进入 OmegaT</th></tr>
+    <tr><td>文档/章节/小节标题；中央显示值（每个 code 一次）；官方正文 block；最终发布注解正文；附录 A 中不能由引用推导的专有显示文本；附录 B 双语条目；图片 alt（如未来存在）。</td><td>稳定 ID、官方编号、role/penalty code、锚点和 order、<code>appliesTo</code>、PDF 页码/bbox/哈希、版本组合、raw unit 处置、migration finding、translationNotes、reviewLedger、构建时间和输出哈希。</td></tr>
+  </table>
+
+  <h2>8. 三条版本轴与组合标识</h2>
+  <table>
+    <tr><th>版本轴</th><th>示例字段</th><th>含义</th></tr>
+    <tr><td>官方 IPG</td><td><code>official.effectiveDate</code><br><code>official.pdfSha256</code><br><code>official.downloadedAt</code><br><code>official.url</code></td><td>权威英文版本与实际下载物。相同日期、不同哈希视为不同官方快照。</td></tr>
+    <tr><td>发布注解</td><td><code>annotations.version</code><br><code>annotations.sourceId</code><br><code>annotations.sourceSha256</code><br><code>annotations.attribution</code></td><td>AIPG 注解内容及其来源版本。首版来源是旧文件，但正式发布前必须完成许可/署名门槛。</td></tr>
+    <tr><td>中文修订/构建</td><td><code>translation.revision</code>（如 <code>zh-r0001</code>）<br><code>build.schema</code></td><td>同一官方/注解组合可有多次中文审校发布。输出哈希是构建结果，不是内容版本输入。</td></tr>
+  </table>
+  <p>manifest 示例：</p>
+  <pre>schemaVersion: 1
+releaseId: ipg-2024-09-23__ann-aipg-2024-09-23-legacy__zh-r0001
+versions:
+  official:
+    effectiveDate: "2024-09-23"
+    pdfSha256: "..."
+    downloadedAt: "..."
+    url: "https://media.wizards.com/..."
+  annotations:
+    version: aipg-2024-09-23-legacy
+    sourceId: AIPG_2025.md
+    sourceSha256: "..."
+  translation:
+    locale: zh-CN
+    revision: zh-r0001</pre>
+  <p><code>candidate</code>/<code>release</code> 是验证命令显式传入的 profile，不是 manifest 中的内容字段。验证报告记录实际使用的 profile；未来正式发布命令必须强制 <code>--profile release</code>，不能由 manifest 自行选择或降级。</p>
+  <p><code>rules.json</code> 顶层同时输出 <code>schema: "ipg-output-v1"</code>、三条版本轴与 <code>releaseId</code>，但绝不包含自身 SHA-256，该哈希也不得成为任何会参与 <code>rules.json</code> 构建的输入。构建完成后才计算哈希，并写入外部 <code>build-report.json</code>、<code>SHA256SUMS</code> 与未来 Release 标签。正式 Release 标签建议为 <code>&lt;releaseId&gt;-&lt;rulesSha256前12位&gt;</code>；GitHub 配置虽然延后，但标识规则现在冻结。</p>
+  <p>快照分两层：官方 PDF 存放于 <code>snapshots/official/&lt;date&gt;/&lt;pdf-hash&gt;/</code>；一次旧源迁移存放于其下的 <code>imports/&lt;annotation-source-hash&gt;/</code>，记录 annotation version、migration 实现哈希、ID registry/override 哈希和 candidate 报告。这样更新中文修订不会复制官方 PDF。</p>
+
+  <h2>9. 稳定 ID 的完整生命周期</h2>
+  <p><code>src/ipg/id-registry.yaml</code> 是 ID 分配与历史查询的唯一持久事实源；<code>src/ipg/mapping-overrides.yaml</code> 保存版本间人工映射决策。二者的副本与 SHA-256 进入每个快照。</p>
+  <table>
+    <tr><th>事件</th><th>处理规则</th></tr>
+    <tr><td>新增</td><td>分配器读取 registry 中该 owner/kind 的 <code>nextSequence</code>，铸造新 ID 后立刻递增。语义 ID 仅用于 section/component；group/block/annotation 使用不回收的单调编号。</td></tr>
+    <tr><td>删除</td><td>registry 将 ID 标为 <code>retired</code>，记录 <code>lastSeen</code> 和 tombstone；编号永久禁用，不能因内容重新出现而复用。</td></tr>
+    <tr><td>历史查询</td><td>registry 保存 <code>firstSeen</code>、<code>lastSeen</code>、编号/标题历史、aliases、状态与 successor/predecessor；命令可从当前 registry 和快照查询任意历史 ID。</td></tr>
+    <tr><td>人工 override</td><td>override 条目必须含 change ID、来源/目标版本、操作、from/to IDs、正文/注解继承策略、理由和操作者；自动对齐不得覆盖显式决定。</td></tr>
+    <tr><td>改名</td><td>保持 ID，更新 title，并在 registry 追加 titleHistory；旧标题成为检索 alias。</td></tr>
+    <tr><td>改号/移动</td><td>保持 ID，更新 number/父级/顺序，并记录 locationHistory；路由可生成旧编号 alias。</td></tr>
+    <tr><td>拆分</td><td>必须人工 override。默认 retire 原 ID 并为所有新节点分配新 ID；若明确指定一个节点为语义连续体，可由该节点保留旧 ID，其余节点获新 ID。译文和发布注解逐目标决定，不自动复制到全部子项。</td></tr>
+    <tr><td>合并</td><td>必须人工 override。若指定一个既有节点为连续体，则保留其 ID，其他 ID 标记 <code>mergedInto</code>；否则铸造新 ID 并 retire 全部来源。冲突译文、注解锚点和审校状态必须人工解决。</td></tr>
+  </table>
+  <p>任何内容哈希、当前序号、标题 slug 或数组位置都不能单独决定既有 ID。解析器只提出候选映射；registry + overrides 决定身份。</p>
+
+  <h2>10. 迁移覆盖与可追溯性</h2>
+  <ol>
+    <li><strong>官方 PDF 溯源。</strong>每个官方英文 block 必须带 <code>officialPdfUnit</code>，能解析到 PDF SHA-256、页码、bbox 和提取单元；这与是否存在旧译无关。</li>
+    <li><strong>旧源唯一处置。</strong>每个 raw unit 必须恰好处于 <code>mapped</code>、<code>ignored-with-reason</code> 或 <code>unresolved</code>。一次显式 split 可在一个处置记录中列出多个 target IDs，但不能让同一 raw unit 被两个独立决定重复消费。</li>
+    <li><strong>映射是部分函数。</strong>一个官方 block 可以没有旧译映射；此时 <code>zh</code> 保持空白并产生 <code>missing-translation</code>。不得要求每个官方 block 都来自旧文件，也不得把英文复制到中文。</li>
+    <li><strong>歧义。</strong>一个官方 block 若出现多个旧译候选，candidate 记录 <code>unresolved-mapping</code>；只有人工 override 后才能成为 release。</li>
+    <li><strong>发布注解。</strong>旧注解 raw unit 映射到 publication annotation；无法确定锚点时保存在 candidate 的 unresolved annotation 清单中，不制造无效引用。</li>
+  </ol>
+  <div class="callout ok"><strong>两套覆盖公式。</strong><br>
+    <code>旧 raw unit 总数 = mapped + ignored-with-reason + unresolved</code>，集合两两不相交。<br>
+    <code>官方 block 总数 = 有旧译映射 + 无旧译映射（missing-translation）</code>。<br>
+    所有官方 block 都必须有 PDF provenance；只有“有旧译映射”的 block 才必须有旧 raw unit 来源。
+  </div>
+
+  <h2>11. Candidate 与 Release 两级验证</h2>
+  <table>
+    <tr><th>级别</th><th>允许</th><th>必须满足</th></tr>
+    <tr><td><strong>candidate</strong></td><td>空中文、未决映射、孤立发布注解、重复消费 finding、未审或 stale 状态；这些内容可留在报告或专用 unresolved 文件中。</td><td>schema 和引用结构有效；每个官方 block 有 PDF provenance；每个 raw unit 有唯一处置记录；所有 readiness 问题完整计数并带来源；报告总数可重算，不能隐藏或丢弃。candidate 校验成功表示“可审阅”，不表示“可发布”。</td></tr>
+    <tr><td><strong>release</strong></td><td>只允许 schema 明确列出的非翻译字段为空；术语 finding 仍为非阻塞。</td><td>candidate 全部结构门槛；<code>missingTranslation = 0</code>、<code>orphanPublicationAnnotation = 0</code>、<code>unresolvedMapping = 0</code>、<code>duplicateConsumption = 0</code>；受控显示值齐全；发布范围内无 stale 审校记录；许可与署名门槛完成；确定性构建和输出校验通过。</td></tr>
+  </table>
+  <p>命令界面必须显式选择 <code>--profile candidate</code> 或 <code>--profile release</code>。profile 不读取 manifest，也不写回内容源；source schema 可表达空译文，严格发布条件由跨文件语义验证器执行，避免为了 candidate 复制两套 schema。正式发布入口只能调用 <code>--profile release</code>。</p>
+
+  <h2>12. 实施顺序：先 Vertical Slice，再扩展全文</h2>
+  <table>
+    <tr><th>阶段</th><th>工作内容</th><th>门槛</th></tr>
+    <tr><td><span class="seq">P0 顺序</span><br>试制契约与夹具冻结</td><td>初始化独立本地 Git 仓库；重新下载官方 PDF，记录时间/SHA；只截取第 2 章、2.5 与附录 A/B 必要页区作为夹具；记录旧文件哈希和对应行段；建立 schema 草案、受控显示值、版本组合和 ID registry 草案。原始基线、基础模型、解析迁移、构建输出和 OmegaT 闭环分别形成清晰提交。</td><td>夹具来源可追溯；不需要全文解析器；所有已确定决策写入测试契约；仓库无远端和 GitHub 自动化配置。</td></tr>
+    <tr><td><span class="seq">P1 顺序</span><br>最小 Vertical Slice</td><td>实现只覆盖夹具的解析器与旧源分词器；生成第 2 章 candidate、附录 A/B 小样；完成 candidate/release 验证、原生 JSON 与含发布注解的 <code>IPG.md</code>。</td><td>2.5 的处罚、组件、列表、发布注解和多层锚点可表达；附录两种结构可表达；构建确定。</td></tr>
+    <tr><td><span class="seq">P2 顺序</span><br>完整审校闭环与人工门槛</td><td>在同一 slice 上完成 OmegaT 导出、最小回写、TMX 翻译批注独立归档、review ledger、状态报告、术语审计和发布注解渲染；形成审阅包供用户确认。</td><td>见第 13 节。未获得模型与阅读效果确认，不进入 P3。</td></tr>
+    <tr><td><span class="seq">P3 顺序</span><br>模型冻结与全文解析扩展</td><td>根据 P2 反馈冻结 source/output schema v1；扩展 PDF 解析器到前置部分、第 1/3/4 章和完整附录，增加 TOC/正文/处罚/附录交叉验证。</td><td>全文官方英文重构与 PDF provenance 完整；未知版式 fail closed。</td></tr>
+    <tr><td><span class="par">P4 可分章推进</span><br>全文旧源迁移</td><td>扩展迁移器，按前置部分、第 1、3、4 章和附录生成 candidate；逐章解决 overrides，不润色旧中文。</td><td>全文 raw unit 唯一处置；release 四个零门槛达成后才形成首个完整 release source。</td></tr>
+    <tr><td><span class="seq">P5 顺序</span><br>官方更新与快照</td><td>完成三版本轴快照、精确 diff、ID/译文/发布注解继承和同日换包处理；先本地合成更新测试。</td><td>新增、删除、改名、改号、拆分、合并、失锚均有测试和人工 override 路径。</td></tr>
+    <tr><td><span class="seq">P6 顺序</span><br>GitHub、CI、Release、文档</td><td>仅在本地试制通过后添加 GitHub 远端并确定托管分支策略，加入 CI、定时检查、Draft PR、Release、README 和一键助手。</td><td>全新 checkout 可复现；Release 标识包含三版本轴和输出哈希；重复发布幂等。</td></tr>
+  </table>
+
+  <h2>13. P2 审阅包与验收材料</h2>
+  <table class="check">
+    <tr><th>证据包</th><th>必须提交的材料</th><th>验收点</th></tr>
+    <tr><td>解析</td><td>第 2 章/2.5 解析 JSON；附录 A/B 小夹具；每个 block 的 PDF 页码/bbox/SHA 溯源；黄金 fixture diff。</td><td>处罚框、组件角色、列表和附录结构正确；未解析内容显式报告。</td></tr>
+    <tr><td>迁移</td><td>对应旧源 raw units、唯一处置账本、映射/缺译/未决/重复消费报告、已知 3246/3248 异常测试。</td><td>旧源覆盖公式成立；无旧译的官方 block 留空而非伪造来源。</td></tr>
+    <tr><td>模型与版本</td><td>pilot manifest、display-values、ID registry/override 示例、三版本轴组合、candidate/release 报告。</td><td>模型不重复翻译标签；ID 生命周期与版本组合可人工理解。</td></tr>
+    <tr><td>构建与阅读</td><td>pilot <code>dist/IPG.md</code> 与 <code>dist/rules.json</code>、两次构建哈希、输出 schema 验证报告。</td><td>发布注解按 section/component/group/block 锚点及 position 正确渲染；阅读层级获用户确认。</td></tr>
+    <tr><td>OmegaT 回写</td><td>source/target PO、import preview、隔离 candidate、应用前后 YAML 最小 diff；受控显示值仅各出现一次。</td><td>仅选定 <code>zh</code> 标量改变；未知/缺失 ID、英文变化或预览后变化会阻止写回。</td></tr>
+    <tr><td>翻译批注回写</td><td>含一条修改理由的 TMX、独立 <code>translation-notes</code> JSON、stale 示例。</td><td>批注与 unit/hash 关联；不进入内容 YAML、<code>IPG.md</code>、<code>rules.json</code> 或 review ledger。</td></tr>
+    <tr><td>审校状态</td><td>独立 ledger 和状态报告，展示 unreviewed、reviewed-unchanged、reviewed-modified、stale。</td><td>账本没有 note/annotation 字段；译文变更会令记录 stale。</td></tr>
+    <tr><td>两级门槛</td><td>一份含声明缺译/未决的 candidate 成功报告；同一状态下 release 失败报告；清零后的 release 成功报告。</td><td>“可审阅”和“可发布”不可混淆，四个 release 计数均为零。</td></tr>
+  </table>
+  <div class="callout warn"><strong>P2 人工停止点。</strong>审阅包完成后暂停。只有用户确认模型、ID、版本展示、<code>IPG.md</code> 阅读效果、发布注解位置及三套审校数据隔离均符合预期，才扩展全文解析器。</div>
+
+  <h2>14. 预期仓库影响（实施阶段）</h2>
+  <pre>pyproject.toml
+README.md / README.zh-CN.md / 审校助手.cmd
+schema/ipg-source.schema.json
+schema/ipg-output.schema.json
+schema/translation-notes.schema.json
+schema/review-ledger.schema.json
+ipg_pipeline/
+  core.py build.py validate.py output_validate.py
+  pdf_parser.py official_source.py official_update.py snapshot.py
+  legacy_import.py legacy_migrate.py id_registry.py
+  omegat.py omegat_import.py translation_notes.py
+  review_status.py review_workflow.py terminology.py
+src/ipg/
+  current-release.txt display-values.yaml
+  id-registry.yaml mapping-overrides.yaml
+  releases/&lt;release-id&gt;/*.yaml
+review/
+  translation-notes/&lt;translation-revision&gt;.json
+  status/&lt;translation-revision&gt;.json
+snapshots/official/&lt;date&gt;/&lt;pdf-hash&gt;/...
+terminology/ipg-glossary.txt
+dist/IPG.md
+dist/rules.json
+tests/fixtures/pilot/ tests/*.py
+.github/workflows/...             # P6 才创建</pre>
+  <p class="small">第一版不创建 <code>AIPG.md</code>；不修改 <code>D:\mtr-zh</code>；跨仓库公共库不属于首版范围。</p>
+
+  <h2>15. QA / 验证矩阵</h2>
+  <table class="check">
+    <tr><th>层面</th><th>试制期</th><th>全文期</th></tr>
+    <tr><td>PDF 解析</td><td>第 2 章、2.5、附录 A/B 小夹具；页脚、处罚框、组件、跨页与表格。</td><td>前置部分及全部章节；TOC/正文集合相等；处罚与附录交叉一致。</td></tr>
+    <tr><td>Schema/语义</td><td>三类审校对象隔离；多层注解锚点；受控显示值；三版本轴；candidate/release。</td><td>完整发布结构、坏引用、重复 ID、过期 display code、未知结构。</td></tr>
+    <tr><td>ID 生命周期</td><td>新增、不复用、改名、改号、一次 split/merge override 示例。</td><td>历史查询、跨版本继承、tombstone、aliases、registry 篡改检测。</td></tr>
+    <tr><td>迁移</td><td>精确/模糊/歧义、格式异常、缺译、演示注解、重复消费。</td><td>每个 raw unit 唯一处置；每个官方 block 有 PDF provenance。</td></tr>
+    <tr><td>构建</td><td>含发布注解的单一 <code>IPG.md</code> 和原生 JSON；两次构建相同。</td><td>完整目录/路由、附录、版本组合、checked-in dist 一致。</td></tr>
+    <tr><td>OmegaT/批注</td><td>正文、发布注解、中央 display 单元；最小写回；translation note 独立归档。</td><td>全项目 PO 完整性、TMX 冲突、源文变化、批量选择。</td></tr>
+    <tr><td>审校/术语</td><td>四状态与 stale；ledger 无 note；术语 finding 非阻塞。</td><td>全文件进度、孤立状态、禁用译法报告和恢复路径。</td></tr>
+    <tr><td>更新/快照</td><td>先用合成 slice 测试同日换包、英文修改、失锚。</td><td>真实全文快照、精确 diff、改名/改号/拆并、ID/译文/注解继承。</td></tr>
+    <tr><td>Release</td><td>不配置 GitHub；只验证 release ID 和本地产物哈希算法。</td><td>P6 配置 PR/CI/Release，验证幂等和附件哈希。</td></tr>
+  </table>
+
+  <h2>16. 风险与缓解</h2>
+  <table>
+    <tr><th>风险</th><th>影响</th><th>缓解</th></tr>
+    <tr><td>在模型确认前写全文解析器</td><td>大量代码绑定错误抽象。</td><td>强制 P2 人工停止点；P0/P1 只支持 slice 和小夹具。</td></tr>
+    <tr><td>三种“注释”混用</td><td>审校理由泄漏进发布内容或发布注解被当状态元数据。</td><td>独立路径、schema、命令和测试；构建器只读正式内容 YAML。</td></tr>
+    <tr><td>旧 AIPG 标记不一致</td><td>正文与发布注解错分。</td><td>官方 PDF 优先；raw 覆盖账本；已知异常回归；candidate 保留未决。</td></tr>
+    <tr><td>官方 PDF 版式变化</td><td>错切段、漏处罚。</td><td>几何夹具、PDF provenance、TOC/正文交叉校验和未知结构 fail closed。</td></tr>
+    <tr><td>ID 拆分/合并误继承</td><td>中文、发布注解或历史链接错误迁移。</td><td>registry 永久记录，split/merge 必须人工 override，默认不批量复制。</td></tr>
+    <tr><td>注解许可或署名不清</td><td>不能正式发布。</td><td>不阻塞本地 P2，但 release validator/发布清单必须有合规完成标记和 attribution。</td></tr>
+    <tr><td>candidate 被误当正式版本</td><td>缺译或孤立内容发布。</td><td>产物显著标注 profile；Release 只接受 release validation 报告及四个零计数。</td></tr>
+  </table>
+
+  <h2>17. 回退、环境与部署边界</h2>
+  <ul>
+    <li>P0–P2 只在本地 Git 仓库工作，不配置远端、不发布；五个里程碑提交分别提供原始基线、基础模型、解析迁移、构建输出和 OmegaT 闭环的审查与回退点。</li>
+    <li>迁移与更新始终先写不可变快照和隔离 candidate；正式 release source 只在 release 校验通过后物化。</li>
+    <li>OmegaT 使用 preview → candidate → 完整验证 → <code>--apply --expected-change-count N</code>；翻译批注和状态账本在内容写回成功后分别更新，任一失败都不得伪装成完整成功。</li>
+    <li>正式内容可重建 <code>dist</code>；translation-notes 和 review ledger 可从各自历史文件恢复，但不参与内容重建。</li>
+    <li>GitHub Actions、自动更新和 Release 属于 P6；所需唯一平台权限预计为仓库自带 <code>GITHUB_TOKEN</code>，不在本地试制中引入外部 secrets。</li>
+  </ul>
+
+  <h2>18. 验收标准（Definition of Done）</h2>
+  <ol>
+    <li>P2 前没有全文解析器；slice 能独立证明模型、阅读效果和三套审校数据隔离。</li>
+    <li>source/output schema 可表达 IPG 处罚、组件、附录、多层发布注解锚点和三版本轴；中央显示值不会在每次出现时产生翻译单元。</li>
+    <li>每个官方 block 有 PDF provenance；每个旧 raw unit 有唯一处置；无旧译的官方 block 留空并报告。</li>
+    <li>candidate 可带完整报告的缺译和未决内容；release 的缺译、孤立发布注解、未决映射和重复消费全部为零。</li>
+    <li>ID registry 支持新增、不复用、历史查询、override、改名、改号、拆分和合并，且快照能证明所用 registry/override 版本。</li>
+    <li><code>dist/IPG.md</code> 同时正确呈现正文与发布注解；<code>dist/rules.json</code> 符合 <code>ipg-output-v1</code>；两次构建字节一致。</li>
+    <li>OmegaT 回写只改选定中文；TMX 翻译批注归档到独立 store；review ledger 独立记录状态；三者不会互相写入字段。</li>
+    <li>P2 审阅包获用户确认后才开展 P3；全文完成后再配置 GitHub 与 Release。</li>
+    <li>正式发布前补齐注解许可/署名，并通过 release validation、完整测试、确定性构建和文档复现。</li>
+  </ol>
+
+  <h2>19. 实施交接摘要</h2>
+  <p>实施从 P0 开始：初始化本地 Git，重新记录官方 PDF 下载时间和哈希，只制作第 2 章、2.5 与附录 A/B 小夹具；随后完成最小解析、迁移、构建和 P2 审校闭环。P2 审阅包交付后必须暂停，等待用户确认，再决定是否扩展全文。GitHub 远端、CI 和 Release 均不在本地试制范围。</p>
+
+  <h2>20. 仍需用户决定且会阻碍试制的问题</h2>
+  <div class="callout ok"><strong>无。</strong>本轮已获得 P0–P2 本地 vertical slice 的明确实施授权；P2 审阅包完成后必须停止并等待确认。</div>
+</main>
+</body>
+</html>

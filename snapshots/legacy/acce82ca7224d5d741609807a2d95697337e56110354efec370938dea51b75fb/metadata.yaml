@@ -1,0 +1,13 @@
+schemaVersion: 1
+kind: legacy-translation-and-annotations
+capturedAt: "2026-10-04T11:08:31.068Z"
+sourcePath: "D:/ipg-zh/AIPG_2025.md"
+file: AIPG_2025.md
+sha256: acce82ca7224d5d741609807a2d95697337e56110354efec370938dea51b75fb
+bytes: 533043
+encoding: UTF-8
+bom: false
+lineEndings: CRLF
+lineBreakCount: 4085
+authority: legacy-migration-baseline-only
+

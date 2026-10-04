@@ -1,0 +1,16 @@
+schemaVersion: 1
+kind: official-ipg-pdf
+effectiveDate: "2024-09-23"
+downloadedAt: "2026-10-04T11:08:31.068Z"
+entryUrl: "https://wpn.wizards.com/en/document/magic-infraction-procedure-guide"
+resolvedEntryUrl: "https://wpn.wizards.com/en/rules-documents"
+finalUrl: "https://media.wizards.com/ContentResources/WPN/MTG_IPG_2024Sep23_EN.pdf"
+file: MTG_IPG_2024Sep23_EN.pdf
+sha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
+bytes: 331337
+pages: 31
+pageSizePoints: [612, 792]
+discovery:
+  method: current-wpn-rules-page-embedded-content
+  observedLabel: Magic Infraction Procedure Guide
+
