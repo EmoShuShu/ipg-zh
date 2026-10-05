@@ -128,6 +128,9 @@ def complete_review_batch(
                 reviewed_at=reviewed_at,
             )
             progress = refresh_progress_reports()
+            validation = validate_current_state()
+            candidate.update(validation)
+            _write_json(CURRENT_CANDIDATE / "validation.json", candidate)
         except Exception:
             rollback_applied_writeback(formal_before, mapping_before)
             if CURRENT_CANDIDATE.exists():

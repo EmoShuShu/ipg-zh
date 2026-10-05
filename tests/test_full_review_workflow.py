@@ -229,6 +229,28 @@ def test_real_full_review_state_starts_with_905_unreviewed_and_empty_notes(
     assert not any((project / "target").iterdir())
 
 
+def test_existing_incomplete_review_ledger_is_not_silently_replaced(
+    isolated_repo: tuple[Path, Path]
+) -> None:
+    root, _ = isolated_repo
+    full_review.prepare_full_project()
+    path = root / "review/status/zh-r0001.json"
+    path.parent.mkdir(parents=True)
+    path.write_text(
+        json.dumps(
+            {
+                "schemaVersion": 1,
+                "releaseId": "r",
+                "translationRevision": "zh-r0001",
+                "entries": [],
+            }
+        ),
+        encoding="utf-8",
+    )
+    with pytest.raises(ValueError, match="不会静默修补或覆盖"):
+        full_review.initialize_full_review_state()
+
+
 def test_progress_reports_all_files_and_twelve_missing(
     isolated_repo: tuple[Path, Path]
 ) -> None:

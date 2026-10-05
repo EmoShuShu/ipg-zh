@@ -293,6 +293,14 @@ def initialize_full_review_state() -> dict[str, Any]:
     """Create the real 905-unit state without importing P2 demonstration data."""
     mapping = _validate_existing_project(validate_repository_inputs())
     existing = load_json(REVIEW_LEDGER_PATH) if REVIEW_LEDGER_PATH.exists() else None
+    current_ids = {unit["id"] for unit in mapping["units"]}
+    if existing is not None:
+        errors = validate_schema(existing, ROOT / "schema/review-ledger.schema.json")
+        ledger_ids = [entry["unitId"] for entry in existing.get("entries", [])]
+        if errors or len(ledger_ids) != len(set(ledger_ids)) or set(ledger_ids) != current_ids:
+            raise ValueError(
+                "现有全文审校账本与 905 个当前单元不兼容；不会静默修补或覆盖。"
+            )
     ledger = refresh_review_ledger(
         _current_units(mapping),
         existing,
@@ -303,7 +311,13 @@ def initialize_full_review_state() -> dict[str, Any]:
     if errors:
         raise ValueError("review ledger schema failed: " + "; ".join(errors))
     _write_json(REVIEW_LEDGER_PATH, ledger)
-    if not TRANSLATION_NOTES_PATH.exists():
+    if TRANSLATION_NOTES_PATH.exists():
+        notes = load_json(TRANSLATION_NOTES_PATH)
+        errors = validate_schema(notes, ROOT / "schema/translation-notes.schema.json")
+        note_ids = [note["unitId"] for note in notes.get("notes", [])]
+        if errors or not set(note_ids) <= current_ids:
+            raise ValueError("现有翻译批注库与当前单元不兼容；不会静默覆盖。")
+    else:
         _write_json(
             TRANSLATION_NOTES_PATH,
             {

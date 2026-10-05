@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "baseCommit": "6f6eff0912ab9f1bbefd9c1b300c582664358cf0",
+  "branch": "p4-5-full-review-workflow",
+  "scope": "full-document-omegat-review-workflow",
+  "omegaT": {
+    "project": "outputs/omegat-ipg-full/omegat.project",
+    "poCounts": {
+      "display-values.po": 15,
+      "front-matter.po": 7,
+      "chapter-01.po": 109,
+      "chapter-02.po": 273,
+      "chapter-03.po": 252,
+      "chapter-04.po": 207,
+      "appendix-a.po": 24,
+      "appendix-b.po": 18
+    },
+    "unitCount": 905,
+    "annotationBlockUnits": 516,
+    "initialMissingTranslations": 12,
+    "targetFileCount": 0
+  },
+  "review": {
+    "unreviewed": 905,
+    "reviewedUnchanged": 0,
+    "reviewedModified": 0,
+    "stale": 0,
+    "translationNotes": 0
+  },
+  "validation": {
+    "testsPassed": 124,
+    "candidateValid": true,
+    "releaseValid": false,
+    "releaseFindingCounts": {
+      "annotation-license-pending": 1,
+      "manifest-not-publishable": 1,
+      "missing-translation": 12,
+      "unreviewed": 905
+    },
+    "byteDeterministic": true
+  },
+  "candidateSha256": {
+    "IPG.md": "cbb812826a73c7f417d46961b692774b0a259284b76ee996356b71aaf0603400",
+    "rules.json": "d7f052c742cdcaf3dde53347c85f7b72fb5d36515f809474f9eebf27c2efe79c",
+    "SHA256SUMS": "dfae8b9fee72a3471804689eb38ef82e9fa345de1d342f5be0b0a57e94c89c0c",
+    "build-report.json": "96c7dad507c99567e2d717b479ded5ec35ff62c5e385a9fc670a7e3fa2585b3e"
+  },
+  "boundaries": {
+    "distChanged": false,
+    "remoteConfigured": false,
+    "githubConfigured": false,
+    "enteredP5": false,
+    "simulatedReview": false
+  }
+}
