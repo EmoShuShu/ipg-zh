@@ -4,10 +4,9 @@ import json
 import shutil
 import tempfile
 from collections import Counter
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
-from zoneinfo import ZoneInfo
 
 from .builder import build_outputs
 from .core import (
@@ -22,7 +21,7 @@ from .core import (
 )
 from .omegat import collect_units, parse_po, render_po, validate_target_entries
 from .omegat import minimal_yaml_update
-from .p4 import DOCUMENTS, RELEASE_DIR
+from .p4 import RELEASE_DIR
 from .review import (
     extract_omegat_notes,
     record_reviewed_units,
@@ -78,7 +77,7 @@ def _write_json(path: Path, content: Any) -> None:
 
 
 def _now() -> str:
-    return datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds")
+    return datetime.now(timezone(timedelta(hours=8))).isoformat(timespec="seconds")
 
 
 def full_inputs() -> tuple[dict[str, Any], list[tuple[str, dict[str, Any]]], dict[str, Any]]:

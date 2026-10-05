@@ -7,6 +7,7 @@ from pathlib import Path
 import pytest
 
 import ipg_pipeline.full_review as full_review
+import ipg_pipeline.review_assistant as review_assistant
 from ipg_pipeline.core import load_yaml
 from ipg_pipeline.omegat import parse_po, render_po
 
@@ -39,6 +40,12 @@ def isolated_repo(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> tuple[Path
     monkeypatch.setattr(full_review, "PROGRESS_MARKDOWN", root / "outputs/review-status.md")
     monkeypatch.setattr(full_review, "TERMINOLOGY_JSON", root / "outputs/terminology-audit.json")
     monkeypatch.setattr(full_review, "TERMINOLOGY_MARKDOWN", root / "outputs/terminology-audit.md")
+    monkeypatch.setattr(review_assistant, "ROOT", root)
+    monkeypatch.setattr(review_assistant, "PROJECT_DIR", project)
+    monkeypatch.setattr(review_assistant, "MAPPING_PATH", project / "omegat/full-review.mapping.json")
+    monkeypatch.setattr(review_assistant, "CURRENT_CANDIDATE", root / "outputs/current-candidate")
+    monkeypatch.setattr(review_assistant, "PREVIEW_JSON", root / "outputs/omegat-writeback-preview.json")
+    monkeypatch.setattr(review_assistant, "PREVIEW_MARKDOWN", root / "outputs/omegat-writeback-preview.md")
     return root, project
 
 
@@ -283,3 +290,49 @@ def test_terminology_audit_error_is_reported_but_nonblocking(
     assert report["nonBlocking"] is True
     assert "error" in report
     assert (root / "outputs/terminology-audit.json").is_file()
+
+
+def test_complete_batch_records_unchanged_file_and_only_builds_candidate(
+    isolated_repo: tuple[Path, Path]
+) -> None:
+    root, project = isolated_repo
+    full_review.prepare_full_project(); full_review.initialize_full_review_state(); _create_target(project)
+    result = review_assistant.complete_review_batch(
+        ["front-matter.po"],
+        lambda preview: True,
+        test_runner=lambda: {"passed": True, "output": "test stub"},
+    )
+    assert result["cancelled"] is False
+    assert result["preview"]["actualChangeCount"] == 0
+    assert result["progress"]["counts"]["reviewed-unchanged"] == 7
+    assert result["progress"]["counts"]["unreviewed"] == 898
+    assert result["validation"]["candidate"]["valid"] is True
+    assert result["validation"]["release"]["valid"] is False
+    assert (root / "outputs/current-candidate/IPG.md").is_file()
+    assert not (root / "dist").exists()
+
+
+def test_failed_post_writeback_check_rolls_back_yaml_and_does_not_update_ledger(
+    isolated_repo: tuple[Path, Path]
+) -> None:
+    root, project = isolated_repo
+    full_review.prepare_full_project(); full_review.initialize_full_review_state(); _create_target(project)
+    target = project / "target/appendix-b.po"
+    entries = parse_po(target)
+    changed = next(entry for entry in entries if not entry["target"])
+    changed["target"] = "仅用于回退测试"
+    _write_po(target, entries)
+    mapping = json.loads((project / "omegat/full-review.mapping.json").read_text(encoding="utf-8"))
+    formal = root / next(unit["file"] for unit in mapping["units"] if unit["id"] == changed["id"])
+    before = formal.read_bytes()
+
+    def fail_tests():
+        raise ValueError("test gate failed")
+
+    with pytest.raises(ValueError, match="test gate failed"):
+        review_assistant.complete_review_batch(
+            ["appendix-b.po"], lambda preview: True, test_runner=fail_tests
+        )
+    assert formal.read_bytes() == before
+    ledger = json.loads((root / "review/status/zh-r0001.json").read_text(encoding="utf-8"))
+    assert {entry["status"] for entry in ledger["entries"]} == {"unreviewed"}

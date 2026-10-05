@@ -20,6 +20,7 @@ test = ["pytest>=8.3,<9"]
 ipg-pilot = "ipg_pipeline.cli:main"
 ipg-p3 = "ipg_pipeline.p3:main"
 ipg-p4 = "ipg_pipeline.p4:main"
+ipg-review = "ipg_pipeline.review_assistant:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["ipg_pipeline"]

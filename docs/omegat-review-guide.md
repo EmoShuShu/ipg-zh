@@ -1,0 +1,77 @@
+# IPG 全文 OmegaT 审校使用说明
+
+当前全文 source 已迁移，OmegaT 审校工作流可用，但内容仍是不可正式发布的
+candidate。普通维护者只需要使用仓库根目录的 `审校助手.cmd`，不需要调用底层
+命令。
+
+## 第一次准备
+
+1. 双击 `审校助手.cmd`。
+2. 选择“1. 准备或继续 OmegaT 审校”。
+3. 助手会验证正式 source、schema、稳定 ID registry、词汇表和候选输出，然后
+   创建 `outputs/omegat-ipg-full/omegat.project`。
+4. 双击该 `omegat.project`，用 OmegaT 打开项目。
+
+项目包含 8 个 PO，共 905 个稳定翻译单元。8 个文件属于同一个项目，因此
+OmegaT 的全文搜索（通常为 `Ctrl+F`）可以跨文件检索。项目按段落分段；正文、
+发布注解和集中显示值都有独立、稳定的单元边界。
+
+如果项目已经存在，选项 1 只验证兼容性，不会覆盖 source PO、target PO、TMX、
+批注或词汇表。若目录不完整或正式英文已变化，助手会停止并要求人工检查。不要
+通过删除单个项目文件来强行继续；需要重建时，应先完整备份或移走整个项目目录。
+
+## 词汇表与翻译指南
+
+项目直接使用受 Git 管理的 `terminology/ipg-glossary.txt`，没有第二份副本。在
+OmegaT 中按 `Ctrl+Shift+G` 添加可自动匹配的术语。语境辨析、风格决定和跨词条
+规则写在 `terminology/translation-guide.md`，不要把长篇说明塞入词汇表。
+
+术语审计是非阻塞的参考报告。即使出现词汇表格式问题或术语提示，只要必要的
+结构和回写检查通过，译文仍可安全写回；详细信息在
+`outputs/terminology-audit.md` 和 `.json`。
+
+## 句段批注
+
+在 OmegaT 的当前句段批注区记录“为什么这样改”的审校理由。助手读取
+`omegat/project_save.tmx` 中的真实 `<note>`，并归档到
+`review/translation-notes/zh-r0001.json`。批注不会进入正文 YAML、AIPG 发布
+注解、审校账本、`IPG.md` 或 `rules.json`。
+
+如果同一英文/中文文本对应多个稳定单元，而 TMX 又没有保存稳定身份，助手会
+停止并要求人工处理，不会随机关联。孤立或互相冲突的批注同样会阻止本批完成。
+
+## 完成一批审校并回写
+
+1. 在 OmegaT 中逐条审完准备登记的整个 PO 文件。
+2. 选择“项目 → 创建已译文档”。这一步会生成 8 个 target PO；仅保存项目并不
+   会生成助手用于安全回写的 target 文件。
+3. 关闭或暂停 OmegaT 编辑，回到助手并选择“2. 完成审校并生成候选阅读文档”。
+4. 助手会自动列出有修改的 PO。直接回车选择它们，也可以明确选择其他已逐条
+   审完但没有文字变化的文件，或选择全部文件。
+5. 阅读预览摘要和 `outputs/omegat-writeback-preview.md`，然后只确认一次。
+
+确认后，助手会重新检查正式 YAML、全部 target PO、TMX 和预览基线，只最小替换
+对应的 `zh` 标量。随后依次执行完整测试、candidate 验证、非阻塞术语审计、
+确定性候选构建、翻译批注归档、审校账本更新和进度刷新。只有明确选择的文件会
+登记为已审；未选择文件中若混入修改，本批会被拒绝。
+
+取消时不会改变正式 YAML、审校账本或候选输出。失败时不会把本批登记为完成；
+正式写回若已开始，会回退本批 YAML 和 OmegaT 基线。用于预览的完整候选 YAML
+只存在于系统临时目录，完成、取消或报错后自动清理。
+
+## 查看进度和候选阅读文档
+
+助手的选项 3 显示总数、四种审校状态、12 项初始缺译的剩余数量，以及 8 个 PO
+的分文件统计。详细报告位于：
+
+- `outputs/review-status.md`
+- `outputs/review-status.json`
+
+完成一批审校后，候选阅读文档位于：
+
+- `outputs/current-candidate/IPG.md`
+- `outputs/current-candidate/rules.json`
+
+这些文件有醒目的 candidate 标记。它们不是正式发布文件，也不会写入 `dist/`。
+即使 12 项缺译全部补齐，只要注解授权、署名、完整审校或 `publishable: false`
+等门槛尚未解决，release 验证仍会失败。

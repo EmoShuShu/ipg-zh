@@ -1,9 +1,21 @@
 # ipg-zh
 
-This repository currently contains the approved work through P4: the complete
+This repository currently contains the approved work through P4.5: the complete
 2024-09-23 official English IPG structure, conservatively migrated legacy
-Chinese text, and the bilingual AIPG publication annotations found in
-`AIPG_2025.md`. It is a review candidate, not a publishable release.
+Chinese text, the bilingual AIPG publication annotations found in
+`AIPG_2025.md`, and a full-document OmegaT review workflow. It is a review
+candidate, not a publishable release.
+
+## 全文 OmegaT 审校
+
+普通维护者请双击仓库根目录的 `审校助手.cmd`。中文菜单可以安全准备或继续唯一的
+全文 OmegaT 项目、完成一批审校并生成候选阅读文档，以及查看 905 个翻译单元的
+进度。详细步骤见 `docs/omegat-review-guide.md`。
+
+OmegaT 项目位于忽略目录 `outputs/omegat-ipg-full/`，包含 8 个 PO。项目直接使用
+`terminology/ipg-glossary.txt`，不会复制另一份词汇表。当前 12 项真实缺译保持为空，
+不得用英文或机器译文填充。候选阅读产物只写入 `outputs/current-candidate/`；正式
+`dist/` 仍然不生成。
 
 The authoritative English source is the immutable WPN PDF snapshot. The legacy
 `AIPG_2025.md` file is a migration input only and remains byte-for-byte
@@ -36,8 +48,10 @@ entries have no legacy Chinese, the full review ledger does not yet exist,
 publication-annotation licensing/attribution is pending, and the manifest is
 `publishable: false`.
 
-P4 deliberately does not create a full OmegaT project. That review workflow is
-reserved for the next approved phase.
+P4.5 creates the ignored local project only when the review assistant prepares
+it. Translation notes and review state remain isolated under their versioned
+`review/` paths. The current real full-document ledger starts with all 905 units
+unreviewed; the older P2 demonstration records live only in pilot fixtures.
 
 ## Historical P0-P2 pilot workflow
 
