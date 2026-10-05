@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 import tempfile
 from pathlib import Path
 from typing import Any
@@ -16,8 +17,10 @@ from .core import (
     validate_schema,
 )
 from .omegat import collect_units, parse_po, render_po, validate_target_entries
+from .omegat import minimal_yaml_update
 from .p4 import DOCUMENTS, RELEASE_DIR
 from .review import terminology_audit
+from .validation import validate_release
 
 
 PROJECT_DIR = ROOT / "outputs/omegat-ipg-full"
@@ -247,4 +250,251 @@ def prepare_full_project() -> dict[str, Any]:
         "unitCount": len(mapping["units"]),
         "poCounts": mapping["poCounts"],
         "glossary": inputs["glossary"],
+    }
+
+
+def _target_entries(mapping: dict[str, Any]) -> dict[str, list[dict[str, str]]]:
+    target_dir = PROJECT_DIR / "target"
+    actual = sorted(path.name for path in target_dir.iterdir() if path.is_file())
+    if actual != sorted(PO_ORDER):
+        raise ValueError(
+            f"target PO 必须恰好包含 8 个文件；当前为 {actual}。请在 OmegaT 中创建已译文档。"
+        )
+    result = {}
+    for po_name in PO_ORDER:
+        entries = parse_po(target_dir / po_name)
+        expected = {"units": [unit for unit in mapping["units"] if unit["po"] == po_name]}
+        errors = validate_target_entries(expected, entries)
+        if errors:
+            raise ValueError(json.dumps({po_name: errors}, ensure_ascii=False, sort_keys=True))
+        result[po_name] = entries
+    return result
+
+
+def modified_po_files(mapping: dict[str, Any], entries: dict[str, list[dict[str, str]]]) -> list[str]:
+    baseline = {unit["id"]: unit["target"] for unit in mapping["units"]}
+    return [
+        po_name
+        for po_name in PO_ORDER
+        if any(item["target"] != baseline[item["id"]] for item in entries[po_name])
+    ]
+
+
+def inspect_target_project() -> dict[str, Any]:
+    inputs = validate_repository_inputs()
+    mapping = _validate_existing_project(inputs)
+    entries = _target_entries(mapping)
+    return {
+        "mapping": mapping,
+        "entries": entries,
+        "modifiedPo": modified_po_files(mapping, entries),
+    }
+
+
+def _load_overlay(relative: str, candidate_root: Path) -> dict[str, Any]:
+    candidate = candidate_root / relative
+    return load_yaml(candidate if candidate.exists() else ROOT / relative)
+
+
+def _leaf_differences(before: Any, after: Any, path: tuple[Any, ...] = ()) -> set[tuple[Any, ...]]:
+    if isinstance(before, dict) and isinstance(after, dict):
+        if set(before) != set(after):
+            return {path}
+        return set().union(
+            *(_leaf_differences(before[key], after[key], (*path, key)) for key in before)
+        )
+    if isinstance(before, list) and isinstance(after, list):
+        if len(before) != len(after):
+            return {path}
+        return set().union(
+            *(_leaf_differences(old, new, (*path, index)) for index, (old, new) in enumerate(zip(before, after, strict=True)))
+        )
+    return set() if before == after else {path}
+
+
+def _overlay_inputs(candidate_root: Path) -> tuple[dict[str, Any], list[tuple[str, dict[str, Any]]], dict[str, Any]]:
+    manifest = load_yaml(RELEASE_DIR / "manifest.yaml")
+    documents = [
+        (
+            filename,
+            _load_overlay(
+                f"src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001/{filename}",
+                candidate_root,
+            ),
+        )
+        for filename in manifest["documents"]
+    ]
+    display = _load_overlay("src/ipg/display-values.yaml", candidate_root)
+    return manifest, documents, display
+
+
+def _migration_gate_stub() -> dict[str, Any]:
+    return {
+        "coverage": {
+            "rawUnitCount": 4085,
+            "disposedUnitCount": 4085,
+            "duplicateConsumption": 0,
+            "dispositions": {},
+        },
+        "findings": [],
+    }
+
+
+def _validate_candidate_overlay(candidate_root: Path) -> dict[str, Any]:
+    manifest, documents, display = _overlay_inputs(candidate_root)
+    for filename, document in documents:
+        errors = validate_schema(document, ROOT / "schema/ipg-source.schema.json")
+        if errors:
+            raise ValueError(f"candidate schema failed for {filename}: {'; '.join(errors)}")
+    candidate = validate_release(
+        profile="candidate",
+        manifest=manifest,
+        documents=[item[1] for item in documents],
+        display_values=display,
+        migration_report=_migration_gate_stub(),
+        review_ledger=None,
+    )
+    if not candidate["valid"]:
+        raise ValueError("candidate validation failed")
+    first = candidate_root / ".build-first"
+    second = candidate_root / ".build-second"
+    build_outputs(first, manifest, [item[1] for item in documents], display, candidate=True, profile="candidate")
+    build_outputs(second, manifest, [item[1] for item in documents], display, candidate=True, profile="candidate")
+    names = ("IPG.md", "rules.json", "SHA256SUMS", "build-report.json")
+    if any((first / name).read_bytes() != (second / name).read_bytes() for name in names):
+        raise ValueError("candidate build is not byte deterministic")
+    output_errors = validate_schema(load_json(first / "rules.json"), ROOT / "schema/ipg-output.schema.json")
+    if output_errors:
+        raise ValueError("candidate output schema failed: " + "; ".join(output_errors))
+    shutil.rmtree(first)
+    shutil.rmtree(second)
+    return candidate
+
+
+def _tmx_hash() -> str | None:
+    path = PROJECT_DIR / "omegat/project_save.tmx"
+    return sha256_bytes(path.read_bytes()) if path.exists() else None
+
+
+def preview_full_writeback(selected_po: list[str], candidate_root: Path) -> dict[str, Any]:
+    inspection = inspect_target_project()
+    mapping = inspection["mapping"]
+    entries = inspection["entries"]
+    selected = [name for name in PO_ORDER if name in set(selected_po)]
+    if not selected:
+        raise ValueError("没有选择任何已经逐条审完的 PO")
+    unknown = sorted(set(selected_po) - set(PO_ORDER))
+    if unknown:
+        raise ValueError(f"未知 PO：{unknown}")
+    unselected_modified = [name for name in inspection["modifiedPo"] if name not in selected]
+    if unselected_modified:
+        raise ValueError(f"未选择的 PO 中存在文字修改：{unselected_modified}")
+
+    if candidate_root.exists():
+        shutil.rmtree(candidate_root)
+    candidate_root.mkdir(parents=True)
+    baseline = {unit["id"]: unit for unit in mapping["units"]}
+    target = {item["id"]: item for po_name in PO_ORDER for item in entries[po_name]}
+    changes = []
+    allowed_differences: dict[str, set[tuple[Any, ...]]] = {}
+    for po_name in selected:
+        for item in entries[po_name]:
+            unit = baseline[item["id"]]
+            if item["target"] == unit["target"]:
+                continue
+            relative = unit["file"]
+            candidate_file = candidate_root / relative
+            if not candidate_file.exists():
+                candidate_file.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(ROOT / relative, candidate_file)
+            minimal_yaml_update(candidate_file, unit["pointer"], unit["target"], item["target"])
+            allowed_differences.setdefault(relative, set()).add(tuple(unit["pointer"]))
+            changes.append(
+                {
+                    "unitId": unit["id"],
+                    "po": po_name,
+                    "file": relative,
+                    "pointer": unit["pointer"],
+                    "oldTarget": unit["target"],
+                    "newTarget": item["target"],
+                    "oldTargetHash": unit["targetHash"],
+                    "newTargetHash": sha256_text(item["target"]),
+                }
+            )
+    for relative, allowed in allowed_differences.items():
+        actual = _leaf_differences(load_yaml(ROOT / relative), load_yaml(candidate_root / relative))
+        if actual != allowed:
+            raise ValueError(f"candidate changed fields outside selected zh scalars: {relative}")
+    validation = _validate_candidate_overlay(candidate_root)
+    target_hashes = {
+        name: sha256_bytes((PROJECT_DIR / "target" / name).read_bytes()) for name in PO_ORDER
+    }
+    selected_ids = {
+        unit["id"] for unit in mapping["units"] if unit["po"] in selected
+    }
+    missing_remaining = sum(not target[unit_id]["target"] for unit_id in mapping["initialMissingUnitIds"])
+    return {
+        "schemaVersion": 1,
+        "selectedPo": selected,
+        "reviewedUnitCount": len(selected_ids),
+        "actualChangeCount": len(changes),
+        "reviewedUnchangedCount": len(selected_ids) - len(changes),
+        "initialMissingRemaining": missing_remaining,
+        "changes": changes,
+        "mappingSha256": sha256_bytes(MAPPING_PATH.read_bytes()),
+        "targetPoHashes": target_hashes,
+        "tmxSha256": _tmx_hash(),
+        "baseFiles": mapping["sourceFiles"],
+        "candidateFiles": {
+            relative: sha256_bytes((candidate_root / relative).read_bytes())
+            for relative in sorted(allowed_differences)
+        },
+        "candidateValidation": validation,
+    }
+
+
+def apply_full_writeback(preview: dict[str, Any], candidate_root: Path) -> dict[str, Any]:
+    if sha256_bytes(MAPPING_PATH.read_bytes()) != preview["mappingSha256"]:
+        raise ValueError("OmegaT mapping changed after preview")
+    if _tmx_hash() != preview["tmxSha256"]:
+        raise ValueError("project_save.tmx changed after preview")
+    for po_name, expected in preview["targetPoHashes"].items():
+        if sha256_bytes((PROJECT_DIR / "target" / po_name).read_bytes()) != expected:
+            raise ValueError(f"target PO changed after preview: {po_name}")
+    for relative, expected in preview["baseFiles"].items():
+        if sha256_bytes((ROOT / relative).read_bytes()) != expected:
+            raise ValueError(f"formal YAML changed after preview: {relative}")
+    for relative, expected in preview["candidateFiles"].items():
+        if sha256_bytes((candidate_root / relative).read_bytes()) != expected:
+            raise ValueError(f"temporary candidate changed after preview: {relative}")
+
+    before = {
+        relative: sha256_bytes((ROOT / relative).read_bytes())
+        for relative in preview["candidateFiles"]
+    }
+    for relative in sorted(preview["candidateFiles"]):
+        shutil.copyfile(candidate_root / relative, ROOT / relative)
+    after = {
+        relative: sha256_bytes((ROOT / relative).read_bytes())
+        for relative in preview["candidateFiles"]
+    }
+
+    mapping = load_json(MAPPING_PATH)
+    changes = {change["unitId"]: change for change in preview["changes"]}
+    for unit in mapping["units"]:
+        change = changes.get(unit["id"])
+        if change:
+            unit["target"] = change["newTarget"]
+            unit["targetHash"] = change["newTargetHash"]
+    mapping["sourceFiles"] = _source_file_hashes(mapping["units"])
+    _write_json(MAPPING_PATH, mapping)
+    return {
+        "schemaVersion": 1,
+        "appliedChangeCount": len(preview["changes"]),
+        "reviewedUnitCount": preview["reviewedUnitCount"],
+        "selectedPo": preview["selectedPo"],
+        "files": {
+            relative: {"beforeSha256": before[relative], "afterSha256": after[relative]}
+            for relative in sorted(after)
+        },
     }
