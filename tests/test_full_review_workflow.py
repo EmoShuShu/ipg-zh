@@ -119,6 +119,19 @@ def test_prepare_again_validates_without_overwriting_user_files(project: Path) -
     assert source_before == {path.name: path.read_bytes() for path in (project / "source").glob("*.po")}
 
 
+def test_manual_version_notes_edit_keeps_existing_project_compatible(isolated_repo):
+    root, project = isolated_repo
+    full_review.prepare_full_project()
+    source_before = {path.name: path.read_bytes() for path in (project / "source").glob("*.po")}
+    notes_path = root / "src/ipg/version-notes.md"
+    notes_path.write_text("# 版本说明\n\n维护者手工修订。\n", encoding="utf-8")
+    result = full_review.prepare_full_project()
+    assert result["created"] is False
+    assert result["unitCount"] == 905
+    assert source_before == {path.name: path.read_bytes() for path in (project / "source").glob("*.po")}
+    assert "维护者手工修订" in notes_path.read_text(encoding="utf-8")
+
+
 def test_existing_directory_without_project_file_fails_closed(project: Path) -> None:
     project.mkdir(parents=True)
     with pytest.raises(ValueError, match="omegat.project 缺失"):
@@ -192,7 +205,7 @@ def test_empty_translation_writeback_changes_only_one_zh_scalar(
     assert full_review._leaf_differences(before, after) == {tuple(preview["changes"][0]["pointer"])}
 
 
-@pytest.mark.parametrize("changed", ["target", "yaml"])
+@pytest.mark.parametrize("changed", ["target", "yaml", "version-notes"])
 def test_preview_detects_target_or_formal_yaml_change_before_apply(
     isolated_repo: tuple[Path, Path], changed: str
 ) -> None:
@@ -204,11 +217,15 @@ def test_preview_detects_target_or_formal_yaml_change_before_apply(
         path = project / "target/chapter-01.po"
         path.write_bytes(path.read_bytes() + b"\n")
         expected = "target PO changed"
-    else:
+    elif changed == "yaml":
         relative = next(iter(preview["baseFiles"]))
         path = root / relative
         path.write_bytes(path.read_bytes() + b"\n")
         expected = "formal YAML changed"
+    else:
+        path = root / "src/ipg/version-notes.md"
+        path.write_bytes(path.read_bytes() + "\n预览后编辑\n".encode())
+        expected = "version notes changed after preview"
     with pytest.raises(ValueError, match=expected):
         full_review.apply_full_writeback(preview, candidate)
 

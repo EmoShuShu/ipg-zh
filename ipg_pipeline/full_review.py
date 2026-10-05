@@ -8,7 +8,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
-from .builder import build_outputs
+from .builder import VERSION_NOTES_PATH, build_outputs
 from .core import (
     ROOT,
     dump_yaml,
@@ -175,7 +175,7 @@ def validate_repository_inputs() -> dict[str, Any]:
     units = [unit for name in PO_ORDER for unit in grouped[name]]
     with tempfile.TemporaryDirectory(prefix="ipg-review-output-") as temporary:
         output = Path(temporary)
-        build_outputs(output, manifest, [item[1] for item in documents], display, candidate=True, profile="candidate")
+        build_outputs(output, manifest, [item[1] for item in documents], display, candidate=True, profile="candidate", source_root=ROOT)
         output_errors = validate_schema(load_json(output / "rules.json"), ROOT / "schema/ipg-output.schema.json")
         if output_errors:
             raise ValueError("output schema validation failed: " + "; ".join(output_errors))
@@ -543,8 +543,8 @@ def _validate_candidate_overlay(candidate_root: Path) -> dict[str, Any]:
         raise ValueError("candidate validation failed")
     first = candidate_root / ".build-first"
     second = candidate_root / ".build-second"
-    build_outputs(first, manifest, [item[1] for item in documents], display, candidate=True, profile="candidate")
-    build_outputs(second, manifest, [item[1] for item in documents], display, candidate=True, profile="candidate")
+    build_outputs(first, manifest, [item[1] for item in documents], display, candidate=True, profile="candidate", source_root=ROOT)
+    build_outputs(second, manifest, [item[1] for item in documents], display, candidate=True, profile="candidate", source_root=ROOT)
     names = ("IPG.md", "rules.json", "SHA256SUMS", "build-report.json")
     if any((first / name).read_bytes() != (second / name).read_bytes() for name in names):
         raise ValueError("candidate build is not byte deterministic")
@@ -616,6 +616,7 @@ def preview_full_writeback(
     inspection = inspect_target_project()
     mapping = inspection["mapping"]
     entries = inspection["entries"]
+    version_notes_hash = sha256_bytes((ROOT / VERSION_NOTES_PATH).read_bytes())
     selected = [name for name in PO_ORDER if name in set(selected_po)]
     if not selected:
         raise ValueError("没有选择任何已经逐条审完的 PO")
@@ -662,6 +663,8 @@ def preview_full_writeback(
         if actual != allowed:
             raise ValueError(f"candidate changed fields outside selected zh scalars: {relative}")
     validation = _validate_candidate_overlay(candidate_root)
+    if sha256_bytes((ROOT / VERSION_NOTES_PATH).read_bytes()) != version_notes_hash:
+        raise ValueError("版本说明在预览构建期间发生变化；请重新预览。")
     target_hashes = {
         name: sha256_bytes((PROJECT_DIR / "target" / name).read_bytes()) for name in PO_ORDER
     }
@@ -682,7 +685,10 @@ def preview_full_writeback(
         "mappingSha256": sha256_bytes(MAPPING_PATH.read_bytes()),
         "targetPoHashes": target_hashes,
         "tmxSha256": _tmx_hash(),
-        "baseFiles": mapping["sourceFiles"],
+        "baseFiles": {
+            **mapping["sourceFiles"],
+            VERSION_NOTES_PATH.as_posix(): version_notes_hash,
+        },
         "candidateFiles": {
             relative: sha256_bytes((candidate_root / relative).read_bytes())
             for relative in sorted(allowed_differences)
@@ -701,6 +707,8 @@ def apply_full_writeback(preview: dict[str, Any], candidate_root: Path) -> dict[
             raise ValueError(f"target PO changed after preview: {po_name}")
     for relative, expected in preview["baseFiles"].items():
         if sha256_bytes((ROOT / relative).read_bytes()) != expected:
+            if relative == VERSION_NOTES_PATH.as_posix():
+                raise ValueError("version notes changed after preview; please preview again")
             raise ValueError(f"formal YAML changed after preview: {relative}")
     for relative, expected in preview["candidateFiles"].items():
         if sha256_bytes((candidate_root / relative).read_bytes()) != expected:
@@ -808,6 +816,7 @@ def build_current_candidate(validation: dict[str, Any] | None = None) -> dict[st
             display,
             candidate=True,
             profile="candidate",
+            source_root=ROOT,
         )
         build_outputs(
             second,
@@ -816,6 +825,7 @@ def build_current_candidate(validation: dict[str, Any] | None = None) -> dict[st
             display,
             candidate=True,
             profile="candidate",
+            source_root=ROOT,
         )
         names = ("IPG.md", "rules.json", "SHA256SUMS", "build-report.json")
         if any((first / name).read_bytes() != (second / name).read_bytes() for name in names):

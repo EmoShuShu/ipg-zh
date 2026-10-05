@@ -1,11 +1,25 @@
 from __future__ import annotations
 
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
-from .core import sha256_bytes
+from .core import ROOT, sha256_bytes
+
+
+VERSION_NOTES_PATH = Path("src/ipg/version-notes.md")
+
+
+def read_version_notes(source_root: Path = ROOT) -> str:
+    path = source_root / VERSION_NOTES_PATH
+    value = path.read_text(encoding="utf-8").replace("\r\n", "\n").replace("\r", "\n").strip()
+    if not value.startswith("# 版本说明\n"):
+        raise ValueError(f"版本说明必须以 '# 版本说明' 标题开头：{path}")
+    if re.search(r"(?m)^# 目录\s*$", value):
+        raise ValueError(f"版本说明不得包含目录：{path}")
+    return value
 
 
 def _annotation_markdown(annotation: dict[str, Any]) -> list[str]:
@@ -31,7 +45,9 @@ def render_markdown(
     display_values: dict[str, Any],
     *,
     candidate: bool,
+    version_notes: str | None = None,
 ) -> str:
+    version_notes = read_version_notes() if version_notes is None else version_notes
     values = display_values["values"]
     annotations: dict[tuple[str, str, str], list[dict[str, Any]]] = defaultdict(list)
     for document in documents:
@@ -64,7 +80,7 @@ def render_markdown(
                 "",
             ]
         )
-    lines.extend(["# 万智牌违规处理方针", "", f"版本：{manifest['releaseId']}", ""])
+    lines.extend([version_notes, "", "# 万智牌违规处理方针", "", f"版本：{manifest['releaseId']}", ""])
 
     for document in documents:
         for section in document["sections"]:
@@ -121,9 +137,13 @@ def build_outputs(
     *,
     candidate: bool,
     profile: str,
+    source_root: Path = ROOT,
 ) -> dict[str, Any]:
+    version_notes = read_version_notes(source_root)
     output_dir.mkdir(parents=True, exist_ok=True)
-    markdown = render_markdown(manifest, documents, display_values, candidate=candidate)
+    markdown = render_markdown(
+        manifest, documents, display_values, candidate=candidate, version_notes=version_notes
+    )
     rules = {
         "schema": "ipg-output-v1",
         "releaseId": manifest["releaseId"],
@@ -131,6 +151,7 @@ def build_outputs(
         "scope": manifest["scope"],
         "publishable": manifest["publishable"],
         "candidate": candidate,
+        "versionNotes": {"id": "ipg-version-notes", "en": "", "zh": version_notes},
         "displayValues": display_values["values"],
         "sections": [section for document in documents for section in document["sections"]],
         "publicationAnnotations": [

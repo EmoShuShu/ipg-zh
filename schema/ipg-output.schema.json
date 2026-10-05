@@ -3,7 +3,7 @@
   "$id": "https://example.invalid/ipg-output.schema.json",
   "title": "IPG output v1",
   "type": "object",
-  "required": ["schema", "releaseId", "versions", "scope", "publishable", "candidate", "displayValues", "sections", "publicationAnnotations"],
+  "required": ["schema", "releaseId", "versions", "scope", "publishable", "candidate", "versionNotes", "displayValues", "sections", "publicationAnnotations"],
   "additionalProperties": false,
   "properties": {
     "schema": {"const": "ipg-output-v1"},
@@ -27,6 +27,16 @@
     },
     "publishable": {"type": "boolean"},
     "candidate": {"type": "boolean"},
+    "versionNotes": {
+      "type": "object",
+      "required": ["id", "en", "zh"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"const": "ipg-version-notes"},
+        "en": {"const": ""},
+        "zh": {"type": "string", "pattern": "^# 版本说明\\n", "not": {"pattern": "(?m)^# 目录\\s*$"}}
+      }
+    },
     "displayValues": {
       "type": "object",
       "additionalProperties": {"$ref": "https://example.invalid/ipg-source.schema.json#/$defs/localized"}

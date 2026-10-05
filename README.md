@@ -17,6 +17,12 @@ OmegaT 项目位于忽略目录 `outputs/omegat-ipg-full/`，包含 8 个 PO。�
 不得用英文或机器译文填充。候选阅读产物只写入 `outputs/current-candidate/`；正式
 `dist/` 仍然不生成。
 
+本地修订“版本说明”时，请直接编辑共用的 `src/ipg/version-notes.md`。这与
+`mtr-zh` 的维护方式一致：它不进入 OmegaT，构建时会位于 IPG 内容前部，同时以
+独立的 `ipg-version-notes` 节点写入 `rules.json`。后续通过审校助手完成一批审校并
+生成候选文档时，会读取最新内容。编辑该文件不会自动改变 manifest 中的官方日期、
+注解版本或中文修订号，也不会解决注解授权门槛。
+
 The authoritative English source is the immutable WPN PDF snapshot. The legacy
 `AIPG_2025.md` file is a migration input only and remains byte-for-byte
 unchanged. Candidate artifacts are visibly marked and must not be published.
