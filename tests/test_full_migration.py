@@ -186,7 +186,7 @@ def test_p3_registry_prefix_and_official_structure_are_frozen() -> None:
     parsed, reconciled, result = _p4()
     golden = json.loads((ROOT / "tests/fixtures/full/golden-p3-summary.json").read_text(encoding="utf-8"))
     registry = result["registry"]
-    assert len(registry["entries"]) == 1809
+    assert len(registry["entries"]) == 1976
     assert _canonical_hash(registry["entries"][:649]) == golden["p3Registry"]["canonicalSha256"]
     nodes = list(walk_nodes([reconciled["document"]]))
     assert [sum(kind == wanted for kind, _ in nodes) for wanted in ("section", "component", "group", "block")] == [36, 110, 124, 338]

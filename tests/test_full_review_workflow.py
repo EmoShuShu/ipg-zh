@@ -62,10 +62,10 @@ def _write_po(path: Path, entries: list[dict[str, str]]) -> None:
     )
 
 
-def test_full_project_exports_exactly_eight_po_and_905_unique_units(project: Path) -> None:
+def test_full_project_exports_exactly_eight_po_and_1007_unique_units(project: Path) -> None:
     result = full_review.prepare_full_project()
     assert result["created"] is True
-    assert result["unitCount"] == 905
+    assert result["unitCount"] == 1007
     assert result["poCounts"] == full_review.EXPECTED_PO_COUNTS
     source_files = sorted(path.name for path in (project / "source").glob("*.po"))
     assert source_files == sorted(full_review.PO_ORDER)
@@ -75,7 +75,7 @@ def test_full_project_exports_exactly_eight_po_and_905_unique_units(project: Pat
     }
     assert {name: len(items) for name, items in entries.items()} == full_review.EXPECTED_PO_COUNTS
     ids = [item["id"] for items in entries.values() for item in items]
-    assert len(ids) == len(set(ids)) == 905
+    assert len(ids) == len(set(ids)) == 1007
     assert sum(item["id"].startswith("display:") for item in entries["display-values.po"]) == 15
     assert sum(item["id"].startswith("annotation-block:") for items in entries.values() for item in items) == 516
 
@@ -127,7 +127,7 @@ def test_manual_version_notes_edit_keeps_existing_project_compatible(isolated_re
     notes_path.write_text("# 版本说明\n\n维护者手工修订。\n", encoding="utf-8")
     result = full_review.prepare_full_project()
     assert result["created"] is False
-    assert result["unitCount"] == 905
+    assert result["unitCount"] == 1007
     assert source_before == {path.name: path.read_bytes() for path in (project / "source").glob("*.po")}
     assert "维护者手工修订" in notes_path.read_text(encoding="utf-8")
 
@@ -230,13 +230,13 @@ def test_preview_detects_target_or_formal_yaml_change_before_apply(
         full_review.apply_full_writeback(preview, candidate)
 
 
-def test_real_full_review_state_starts_with_905_unreviewed_and_empty_notes(
+def test_real_full_review_state_starts_with_1007_unreviewed_and_empty_notes(
     isolated_repo: tuple[Path, Path]
 ) -> None:
     root, project = isolated_repo
     full_review.prepare_full_project()
     ledger = full_review.initialize_full_review_state()
-    assert len(ledger["entries"]) == 905
+    assert len(ledger["entries"]) == 1007
     assert {entry["status"] for entry in ledger["entries"]} == {"unreviewed"}
     notes = json.loads(
         (root / "review/translation-notes/zh-r0001.json").read_text(encoding="utf-8")
@@ -275,9 +275,9 @@ def test_progress_reports_all_files_and_twelve_missing(
     full_review.prepare_full_project()
     full_review.initialize_full_review_state()
     report = full_review.refresh_progress_reports()
-    assert report["total"] == 905
+    assert report["total"] == 1007
     assert report["counts"] == {
-        "unreviewed": 905,
+        "unreviewed": 1007,
         "reviewed-unchanged": 0,
         "reviewed-modified": 0,
         "stale": 0,
@@ -302,7 +302,7 @@ def test_unchanged_selected_file_can_be_recorded_reviewed_unchanged(
     }
     chapter_ids = {unit["id"] for unit in mapping["units"] if unit["po"] == "chapter-01.po"}
     assert {statuses[unit_id] for unit_id in chapter_ids} == {"reviewed-unchanged"}
-    assert sum(status == "unreviewed" for status in statuses.values()) == 905 - 109
+    assert sum(status == "unreviewed" for status in statuses.values()) == 1007 - 140
     assert json.loads((root / "review/translation-notes/zh-r0001.json").read_text(encoding="utf-8"))["notes"] == []
 
 
@@ -344,7 +344,7 @@ def test_complete_batch_records_unchanged_file_and_only_builds_candidate(
     assert result["cancelled"] is False
     assert result["preview"]["actualChangeCount"] == 0
     assert result["progress"]["counts"]["reviewed-unchanged"] == 7
-    assert result["progress"]["counts"]["unreviewed"] == 898
+    assert result["progress"]["counts"]["unreviewed"] == 1000
     assert result["validation"]["candidate"]["valid"] is True
     assert result["validation"]["release"]["valid"] is False
     assert (root / "outputs/current-candidate/IPG.md").is_file()

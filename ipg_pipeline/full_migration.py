@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from .core import allocate_registry_id, sha256_text, walk_nodes
+from .reading import add_reading_segments
 from .migration import (
     CJK_RE,
     _align_block,
@@ -777,6 +778,8 @@ def migrate_full(
                 )
 
     _register_annotations(registry, document)
+    reading_layout = add_reading_segments(document, units, registry, overrides)
+    findings.extend(reading_layout["findings"])
     registry_added = sum(
         any(
             event.get("event") == "allocated"
@@ -788,6 +791,7 @@ def migrate_full(
     unresolved_codes = {"unresolved-mapping", "ambiguous-mapping", "unresolved-annotation-mapping", "ambiguous-annotation-block-kind"}
     return {
         "documents": split_document(document),
+        "readingLayout": reading_layout,
         "registry": registry,
         "rawUnits": units,
         "coverageLedger": ledger,

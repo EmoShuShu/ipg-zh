@@ -48,14 +48,14 @@ PO_ORDER = [
 EXPECTED_PO_COUNTS = {
     "display-values.po": 15,
     "front-matter.po": 7,
-    "chapter-01.po": 109,
-    "chapter-02.po": 273,
-    "chapter-03.po": 252,
-    "chapter-04.po": 207,
+    "chapter-01.po": 140,
+    "chapter-02.po": 302,
+    "chapter-03.po": 278,
+    "chapter-04.po": 223,
     "appendix-a.po": 24,
     "appendix-b.po": 18,
 }
-EXPECTED_UNIT_COUNT = 905
+EXPECTED_UNIT_COUNT = 1007
 TRANSLATION_REVISION = "zh-r0001"
 REVIEW_LEDGER_PATH = ROOT / f"review/status/{TRANSLATION_REVISION}.json"
 TRANSLATION_NOTES_PATH = ROOT / f"review/translation-notes/{TRANSLATION_REVISION}.json"
@@ -133,7 +133,7 @@ def _filters_xml() -> str:
 <filters removeTags="false" removeSpacesNonseg="false" preserveSpaces="true" ignoreFileContext="false">
   <filter className="org.omegat.filters2.po.PoFilter" enabled="true">
     <files targetEncoding="UTF-8" sourceEncoding="UTF-8" targetFilenamePattern="${filename}" sourceFilenameMask="*.po" />
-    <option name="skipHeader" value="false" />
+    <option name="skipHeader" value="true" />
   </filter>
 </filters>
 """
@@ -171,6 +171,12 @@ def validate_repository_inputs() -> dict[str, Any]:
     errors.extend(validate_registry(load_yaml(ROOT / "src/ipg/id-registry.yaml")))
     if errors:
         raise ValueError("repository validation failed: " + "; ".join(errors))
+    structural = validate_release(
+        profile="candidate", manifest=manifest, documents=[item[1] for item in documents],
+        display_values=display, migration_report=_migration_gate_stub(), review_ledger=None,
+    )
+    if not structural["valid"]:
+        raise ValueError("repository structural validation failed: " + json.dumps(structural["structuralFindings"], ensure_ascii=False))
     grouped = units_by_po(documents, display)
     units = [unit for name in PO_ORDER for unit in grouped[name]]
     with tempfile.TemporaryDirectory(prefix="ipg-review-output-") as temporary:
@@ -290,7 +296,7 @@ def _current_units(mapping: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def initialize_full_review_state() -> dict[str, Any]:
-    """Create the real 905-unit state without importing P2 demonstration data."""
+    """Create current review state without importing P2 demonstration data."""
     mapping = _validate_existing_project(validate_repository_inputs())
     existing = load_json(REVIEW_LEDGER_PATH) if REVIEW_LEDGER_PATH.exists() else None
     current_ids = {unit["id"] for unit in mapping["units"]}
@@ -299,7 +305,7 @@ def initialize_full_review_state() -> dict[str, Any]:
         ledger_ids = [entry["unitId"] for entry in existing.get("entries", [])]
         if errors or len(ledger_ids) != len(set(ledger_ids)) or set(ledger_ids) != current_ids:
             raise ValueError(
-                "现有全文审校账本与 905 个当前单元不兼容；不会静默修补或覆盖。"
+                "现有全文审校账本与当前单元不兼容；不会静默修补或覆盖。"
             )
     ledger = refresh_review_ledger(
         _current_units(mapping),
@@ -633,6 +639,7 @@ def preview_full_writeback(
     baseline = {unit["id"]: unit for unit in mapping["units"]}
     target = {item["id"]: item for po_name in PO_ORDER for item in entries[po_name]}
     changes = []
+    derived_changes = {}
     allowed_differences: dict[str, set[tuple[Any, ...]]] = {}
     for po_name in selected:
         for item in entries[po_name]:
@@ -659,6 +666,25 @@ def preview_full_writeback(
                 }
             )
     for relative, allowed in allowed_differences.items():
+        # Parent Chinese is the deterministic aggregate of independently reviewed fragments.
+        for pointer in list(allowed):
+            if "readingSegments" not in pointer:
+                continue
+            parent_pointer = list(pointer[:pointer.index("readingSegments")])
+            before = load_yaml(ROOT / relative)
+            after = load_yaml(candidate_root / relative)
+            original, block = before, after
+            for part in parent_pointer:
+                original, block = original[part], block[part]
+            aggregate = "\n\n".join(segment["text"]["zh"] for segment in block["readingSegments"])
+            if aggregate != original["text"]["zh"]:
+                minimal_yaml_update(candidate_root / relative, [*parent_pointer, "text", "zh"], block["text"]["zh"], aggregate)
+                allowed.add(tuple([*parent_pointer, "text", "zh"]))
+                derived_changes[(relative, tuple(parent_pointer))] = {
+                    "file": relative, "pointer": [*parent_pointer, "text", "zh"],
+                    "oldTarget": original["text"]["zh"], "newTarget": aggregate,
+                    "reason": "aggregate of selected reading segment translations",
+                }
         actual = _leaf_differences(load_yaml(ROOT / relative), load_yaml(candidate_root / relative))
         if actual != allowed:
             raise ValueError(f"candidate changed fields outside selected zh scalars: {relative}")
@@ -682,6 +708,8 @@ def preview_full_writeback(
         "noteUnitCount": sum(note["unitId"] in selected_ids for note in notes["notes"]),
         "initialMissingRemaining": missing_remaining,
         "changes": changes,
+        "derivedChanges": [derived_changes[key] for key in sorted(derived_changes)],
+        "expectedYamlScalarChangeCount": len(changes) + len(derived_changes),
         "mappingSha256": sha256_bytes(MAPPING_PATH.read_bytes()),
         "targetPoHashes": target_hashes,
         "tmxSha256": _tmx_hash(),

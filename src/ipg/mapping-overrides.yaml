@@ -1,4 +1,11 @@
 schemaVersion: 1
+readingBoundaries:
+  - id: reading-delayed-copy-boundary
+    targetId: ipg-s2-1-c-definition-g03-b003
+    sourceHash: ed59eec36692a2a8daafda2c5334c69833bc10cf34be899a80b3bef663f85889
+    beforeText:
+      - Triggered abilities that do nothing except create one or more copies
+    rationale: The existing pilot-body-2-1-delayed-copy override proves raw 852/854 cover the delayed-trigger sentences and raw 860/862 cover the copy-trigger sentences. Retain official English and the already accepted Chinese unchanged; never use the obsolete English example as the official source.
 reconciliation:
   englishHashToStableId:
     0e14c7fd4e78fe1c92e1cf6cd196558b59e544ad78300b1b868816936e9c9ed6: ipg-s2-1-c-philosophy-g01-b002

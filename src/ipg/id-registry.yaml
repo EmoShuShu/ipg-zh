@@ -19762,3 +19762,1468 @@ entries:
     legacyRawUnits:
     - raw-L004030
     - raw-L004032
+- id: ipg-b000006-rs-7b3c9cca7093
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000006:raw-L000097:raw-L000099
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Judges are neutral arbiters and enforcers of policy and rules.
+- id: ipg-b000006-rs-c4964b29a361
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000006:raw-L000105:raw-L000107
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A judge shouldn’t intervene in a game unless they believe a rules violation has occurred, a
+      player with a concern or que
+- id: ipg-b000006-rs-74c4f72a3c5c
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000006:raw-L000113:raw-L000115
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Judges don’t stop play errors from occurring, but instead deal with errors that have occurred,
+      penalize those who violat
+- id: ipg-b000006-rs-3781c47f04f5
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000006:raw-L000125:raw-L000127
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Judges may intervene to prevent or preempt errors occurring outside of a game.
+- id: ipg-b000006-rs-f206588cf784
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000006:raw-L000149:raw-L000151
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Knowledge of a player’s history or skill does not alter an infraction, but it may be taken
+      into account during an invest
+- id: ipg-b000007-rs-c1a2cf3130ff
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000007:raw-L000157:raw-L000159
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: The purpose of a penalty is to educate the player not to make similar mistakes in the future.
+- id: ipg-b000007-rs-cacfcd9b3a22
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000007:raw-L000165:raw-L000167
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: This is done through both an explanation of where the rules or policies were violated and a
+      penalty to reinforce the edu
+- id: ipg-b000007-rs-fb18de545b81
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000007:raw-L000173:raw-L000175
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Penalties are also for the deterrence and education of every other player in the event and
+      are also used to track player
+- id: ipg-b000008-rs-47dda231e547
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000008:raw-L000185:raw-L000187
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If a minor violation is quickly handled by the players to their mutual satisfaction, a judge
+      does not need to intervene.
+- id: ipg-b000008-rs-7134797fc872
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000008:raw-L000193:raw-L000195
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the players are playing in a way that is clear to both players, but might cause confusion
+      to an external observer, ju
+- id: ipg-b000008-rs-a09bc2ff6c77
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000008:raw-L000201:raw-L000203
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: In both these situations, the judge should ensure that the game progresses normally.
+- id: ipg-b000008-rs-2feb9e3ffc73
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000008:raw-L000209:raw-L000211
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: More significant violations are addressed by first identifying what infraction applies, then
+      proceeding with the corresp
+- id: ipg-b000009-rs-86c48380f402
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000009:raw-L000217:raw-L000219
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Only the Head Judge is authorized to issue penalties that deviate from these guidelines.
+- id: ipg-b000009-rs-0a910b519837
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000009:raw-L000225:raw-L000227
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: The Head Judge may not deviate from this guide’s procedures except in significant and exceptional
+      circumstances or a sit
+- id: ipg-b000009-rs-1106834c1b6c
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000009:raw-L000233:raw-L000235
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Significant and exceptional circumstances are rare—a table collapses, a booster contains cards
+      from a different set, etc
+- id: ipg-b000009-rs-3c35f44388a1
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000009:raw-L000241:raw-L000243
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: The Rules Enforcement Level, round of the tournament, age or experience-level of the player,
+      desire to educate the playe
+- id: ipg-b000009-rs-538984fad5f8
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000009:raw-L000249:raw-L000251
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If another judge feels deviation is appropriate, they must consult with the Head Judge.
+- id: ipg-b000010-rs-7145af153971
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000010:raw-L000257:raw-L000259
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: 'Judges are human and make mistakes. When a judge makes a mistake, they should acknowledge
+      the mistake, apologize to the '
+- id: ipg-b000010-rs-19adc066032e
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000010:raw-L000273:raw-L000275
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If a member of the tournament staff gives a player erroneous information that causes them to
+      commit a violation, the Hea
+- id: ipg-b000010-rs-ed88262b254d
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000010:raw-L000281:raw-L000283
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: For example, a player asks a judge whether a card is legal for a format and is told yes. When
+      that player’s deck is foun
+- id: ipg-b000010-rs-41ce45c33c81
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000010:raw-L000297:raw-L000299
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If a player clearly acts on erroneous information provided by a judge during the game, the
+      Head Judge may consider a bac
+- id: ipg-b000011-rs-689d98d6b3fc
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000011:raw-L000309:raw-L000311
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Warnings are used in situations of incorrect play when a small amount of time is needed to
+      implement the corrective proc
+- id: ipg-b000011-rs-03518d1e2c02
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000011:raw-L000317:raw-L000319
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: The purpose of a Warning is to alert judges and players involved that a problem has occurred
+      and to keep a permanent rec
+- id: ipg-b000011-rs-1734ed0cfa49
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000011:raw-L000325:raw-L000327
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A time extension should be issued if the ruling has taken more than a minute.
+- id: ipg-b000013-rs-f68e0bcb00c8
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000013:raw-L000343:raw-L000345
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Game Losses are applied immediately if the game is still ongoing, or to the player’s next game
+      if it is not, unless othe
+- id: ipg-b000013-rs-5aa9c545fd42
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000013:raw-L000351:raw-L000353
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If a player would receive multiple Game Losses at the same time, they only receive one.
+- id: ipg-b000013-rs-6551e50716ee
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000013:raw-L000359:raw-L000361
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If simultaneous Game Loss penalties are issued to each player, they are recorded, but do not
+      affect the match score.
+- id: ipg-b000024-rs-64650058d68d
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000024:raw-L000457:raw-L000459
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Any time a penalty is issued, the judge must explain the infraction, the procedure for fixing
+      the situation, and the pen
+- id: ipg-b000024-rs-58d94ca9bc25
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000024:raw-L000465:raw-L000467
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the Head Judge chooses to deviate from the Infraction Procedure Guide, the Head Judge is
+      expected to explain the stan
+- id: ipg-b000025-rs-d577b962ffd2
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000025:raw-L000473:raw-L000475
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Some infractions include remedies to handle the offense beyond the base penalty. These procedures
+      exist to protect offic
+- id: ipg-b000025-rs-41b7d38566f0
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000025:raw-L000481:raw-L000483
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: These procedures do not, and should not, take into account the game being played, the current
+      situation that the game is
+- id: ipg-b000025-rs-3fb90bae75d9
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000025:raw-L000489:raw-L000491
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: While it is tempting to try to “fix” game situations, the danger of missing a subtle detail
+      or showing favoritism to a p
+- id: ipg-b000027-rs-ec5fdc0d486d
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000027:raw-L000511:raw-L000513
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: The remedy for some infractions in this document includes shuffling the randomized portion
+      of the library.
+- id: ipg-b000027-rs-a8a8ec74eb63
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000027:raw-L000519:raw-L000521
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: This requires first determining whether any portion of the library is non-random, such as cards
+      that have been manipulat
+- id: ipg-b000027-rs-1e71e8e65235
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000027:raw-L000527:raw-L000529
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Once the library has been shuffled, any manipulated cards are returned to their correct locations.
+- id: ipg-b000029-rs-c8487c092978
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000029:raw-L000545:raw-L000547
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Some infractions in this document permit the judge to consider the possibility of a backup.
+- id: ipg-b000029-rs-34f4da8af34f
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000029:raw-L000553:raw-L000555
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: 'Due to the amount of information that may become available to players and might affect their
+      play, backups are regarded '
+- id: ipg-b000029-rs-432a1a194819
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000029:raw-L000561:raw-L000563
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A good backup will result in a situation where the gained information makes no difference and
+      the line of play remains t
+- id: ipg-b000031-rs-c56d5d1e3d6f
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000031:raw-L000577:raw-L000579
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: To perform a backup, each individual action since the point of the error is reversed, starting
+      with the most recent ones
+- id: ipg-b000031-rs-68105f7b398d
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000031:raw-L000585:raw-L000587
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the identity of a card involved in reversing an action is unknown to one of the players
+      (usually because it was drawn
+- id: ipg-b000031-rs-0c2ce457bbd9
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000031:raw-L000593:raw-L000595
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Actions that caused a player to learn the identity of cards at a specific location in the library
+      are reversed by shuffl
+- id: ipg-b000033-rs-4670c5c95502
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000033:raw-L000609:raw-L000611
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Some remedies state a simple backup may be performed. A simple backup is backing up the last
+      action completed (or one cu
+- id: ipg-b000033-rs-77cafdce455d
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000033:raw-L000617:raw-L000619
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A simple backup should not involve any random elements.
+- id: ipg-b000034-rs-d11e6f7dbc75
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000034:raw-L000627:raw-L000629
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Some infractions in this document refer to “sets” of cards.
+- id: ipg-b000034-rs-b4a4c9acb125
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000034:raw-L000635:raw-L000637
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A set is a physically distinct group of cards defined by a game rule or effect. It may correspond
+      to a specific zone, or
+- id: ipg-s2-c-body-g01-b001-rs-eb6eab424795
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-c-body-g01-b001:raw-L000653:raw-L000655
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: 'Game Play Errors are caused by incorrect or inaccurate play of the game such that it results
+      in violations of the Magic '
+- id: ipg-s2-c-body-g01-b001-rs-e182026d8083
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-c-body-g01-b001:raw-L000665:raw-L000667
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Many offenses fit into this category and it would be impossible to list them all.
+- id: ipg-s2-c-body-g01-b001-rs-f3518a80e04a
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-c-body-g01-b001:raw-L000673:raw-L000675
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: The guide below is designed to give judges a framework for assessing how to handle a Game Play
+      Error.
+- id: ipg-s2-c-body-g01-b002-rs-6f34188f0894
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-c-body-g01-b002:raw-L000681:raw-L000683
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Most Game Play Error infractions are assumed to have been committed unintentionally.
+- id: ipg-s2-c-body-g01-b002-rs-0c37f7b3cf90
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-c-body-g01-b002:raw-L000693:raw-L000695
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the judge believes that the error was intentional, they should first consider whether an
+      Unsporting Conduct — Cheatin
+- id: ipg-s2-c-body-g01-b003-rs-42523c863539
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-c-body-g01-b003:raw-L000701:raw-L000703
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: With the exception of Failure to Maintain Game State, which is never upgraded, the third or
+      subsequent Warning for a Gam
+- id: ipg-s2-c-body-g01-b003-rs-91da8199bece
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-c-body-g01-b003:raw-L000713:raw-L000715
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: For multi-day tournaments, the penalty count for these infractions resets between days.
+- id: ipg-s2-1-c-definition-g02-b002-rs-db2aac908f8f
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-definition-g02-b002:raw-L000767:raw-L000769
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A triggered ability that causes a change in the visible game state (including life totals)
+      or requires a choice upon res
+- id: ipg-s2-1-c-definition-g02-b002-rs-da5b4f0e4bc6
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-definition-g02-b002:raw-L000783:raw-L000785
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: 'Note that passing priority, casting an instant spell or activating an ability doesn’t mean
+      a triggered ability has been '
+- id: ipg-s2-1-c-definition-g03-b003-rs-5a8a3388a024
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-definition-g03-b003:raw-L000852:raw-L000854
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Triggered abilities that do nothing except create delayed triggered abilities automatically
+      resolve without requiring ac
+- id: ipg-s2-1-c-definition-g03-b003-rs-1bca48e427be
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-definition-g03-b003:raw-L000860:raw-L000862
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Triggered abilities that do nothing except create one or more copies of a spell or ability
+      (such as storm or cipher) aut
+- id: ipg-s2-1-c-definition-g03-b005-rs-e3d8b3c3b0d4
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-definition-g03-b005:raw-L000876:raw-L000878
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If a triggered ability would have no impact on the game, it’s not an infraction to fail to
+      demonstrate awareness of it.
+- id: ipg-s2-1-c-definition-g03-b005-rs-37883304c090
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-definition-g03-b005:raw-L000884:raw-L000886
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: For example, if the effect of a triggered ability instructs its controller to sacrifice a creature,
+      a player who control
+- id: ipg-s2-1-c-definition-g03-b005-rs-226769445fd3
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-definition-g03-b005:raw-L000892:raw-L000894
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Similarly, a player demonstrating awareness of an optional trigger with no visible effect is
+      assumed to have made the af
+- id: ipg-s2-1-c-philosophy-g01-b001-rs-99c04601b676
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-philosophy-g01-b001:raw-L000956:raw-L000958
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Triggered abilities are common and invisible, so players should not be harshly penalized when
+      forgetting about one.
+- id: ipg-s2-1-c-philosophy-g01-b001-rs-2a027a802380
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-philosophy-g01-b001:raw-L000964:raw-L000966
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Players are expected to remember their own triggered abilities; intentionally ignoring one
+      may be Unsporting Conduct — C
+- id: ipg-s2-1-c-philosophy-g01-b001-rs-a4501dc191ea
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-philosophy-g01-b001:raw-L000972:raw-L000974
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Even if an opponent is involved in the announcement or resolution of the ability, the controller
+      is still responsible fo
+- id: ipg-s2-1-c-philosophy-g01-b002-rs-60d6dc8ed03e
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-philosophy-g01-b002:raw-L000988:raw-L000990
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: 'Triggered abilities are assumed to be remembered until otherwise indicated, and the impact
+      on the game state may not be '
+- id: ipg-s2-1-c-philosophy-g01-b002-rs-5129b64f3c87
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-philosophy-g01-b002:raw-L001004:raw-L001006
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: The opponent’s benefit is in not having to point out triggered abilities, although this does
+      not mean that they can caus
+- id: ipg-s2-1-c-philosophy-g01-b002-rs-e4b62bad448b
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-philosophy-g01-b002:raw-L001012:raw-L001014
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If an opponent requires information about the precise timing of a triggered ability or needs
+      details about a game object
+- id: ipg-s2-1-c-philosophy-g01-b002-rs-cb512ffb0a08
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-philosophy-g01-b002:raw-L001032:raw-L001034
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A player who makes a play that may or may not be legal depending on whether an opponent’s uncommunicated
+      trigger has bee
+- id: ipg-s2-1-c-philosophy-g01-b004-rs-93a43883e6f9
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-philosophy-g01-b004:raw-L001040:raw-L001042
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Players may not cause triggered abilities controlled by an opponent to be missed by taking
+      game actions or otherwise pre
+- id: ipg-s2-1-c-philosophy-g01-b004-rs-8b9248d5d48d
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-philosophy-g01-b004:raw-L001060:raw-L001062
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: During an opponent’s turn, if a trigger’s controller demonstrates awareness of the trigger
+      before they take an active ro
+- id: ipg-s2-1-c-philosophy-g01-b004-rs-3d9c1fb881cb
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-philosophy-g01-b004:raw-L001068:raw-L001070
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: The Out-of-Order Sequencing rules (MTR section 4.3) may also be applicable, especially as they
+      relate to batches of acti
+- id: ipg-s2-1-c-additional-remedy-g01-b003-rs-779b8c1abcbc
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-additional-remedy-g01-b003:raw-L001146:raw-L001148
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: For all other triggered abilities, if the ability was missed prior to the current phase in
+      the previous turn, instruct t
+- id: ipg-s2-1-c-additional-remedy-g01-b003-rs-605cd232e937
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-additional-remedy-g01-b003:raw-L001154:raw-L001156
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the triggered ability created an effect whose duration has already expired, instruct the
+      players to continue playing.
+- id: ipg-s2-1-c-additional-remedy-g01-b004-rs-9036afe9b4bc
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-additional-remedy-g01-b004:raw-L001166:raw-L001168
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the triggered ability isn’t covered by the previous paragraphs, the opponent chooses whether
+      the triggered ability is
+- id: ipg-s2-1-c-additional-remedy-g01-b004-rs-26b996c9fbb4
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-additional-remedy-g01-b004:raw-L001178:raw-L001180
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If it is, it’s inserted at the appropriate place on the stack if possible or on the bottom
+      of the stack.
+- id: ipg-s2-1-c-additional-remedy-g01-b004-rs-da5f76ea3791
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-additional-remedy-g01-b004:raw-L001186:raw-L001188
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: No player may make choices for the triggered ability involving objects that would not have
+      been legal choices when the a
+- id: ipg-s2-1-c-additional-remedy-g01-b004-rs-45cd63bf4be3
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-additional-remedy-g01-b004:raw-L001194:raw-L001196
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: For example, if the ability instructs a player to sacrifice a creature, that player can't sacrifice
+      a creature that wasn
+- id: ipg-s2-1-c-additional-remedy-g01-b006-rs-c0a23d290ec3
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-additional-remedy-g01-b006:raw-L001262:raw-L001264
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: 'If the triggered ability is usually considered detrimental for the controlling player and
+      they own the card responsible '
+- id: ipg-s2-1-c-additional-remedy-g01-b006-rs-795d7a45d875
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-1-c-additional-remedy-g01-b006:raw-L001286:raw-L001288
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: The current game state is not a factor in determining this, though symmetrical abilities (such
+      as Howling Mine) may be c
+- id: ipg-s2-2-c-philosophy-g01-b001-rs-03637edf452d
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-2-c-philosophy-g01-b001:raw-L001388:raw-L001390
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A player can accidentally look at extra cards easily and this infraction handles situations
+      where a dexterity or rules e
+- id: ipg-s2-2-c-philosophy-g01-b001-rs-550f3c4ce20c
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-2-c-philosophy-g01-b001:raw-L001396:raw-L001398
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Cards in a library are considered to be there until they touch cards in another hidden set.
+      Once those cards have joined
+- id: ipg-s2-2-c-philosophy-g01-b002-rs-710f095f9d96
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-2-c-philosophy-g01-b002:raw-L001404:raw-L001406
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Players should not use this penalty to get a “free shuffle” or to attempt to shuffle away cards
+      they don’t want to draw;
+- id: ipg-s2-2-c-philosophy-g01-b002-rs-bd73f34011fc
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-2-c-philosophy-g01-b002:raw-L001412:raw-L001414
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Players also are not allowed to use this penalty as a stalling mechanism.
+- id: ipg-s2-2-c-philosophy-g01-b002-rs-592edaac19aa
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-2-c-philosophy-g01-b002:raw-L001420:raw-L001422
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: The library is already randomized, so shuffling in the revealed cards should not involve excessive
+      effort.
+- id: ipg-s2-3-c-definition-g01-b001-rs-fbd1e45f820e
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-3-c-definition-g01-b001:raw-L001444:raw-L001446
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A player commits an error in the game that cannot be corrected by only publicly available information.
+- id: ipg-s2-3-c-definition-g01-b001-rs-4595bc2d1aa5
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-3-c-definition-g01-b001:raw-L001452:raw-L001454
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: It is not a Hidden Card Error if the opponent acknowledges the action or controls the continuous
+      effect modifying the ga
+- id: ipg-s2-3-c-definition-g01-b001-rs-13acafecdf4a
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-3-c-definition-g01-b001:raw-L001468:raw-L001470
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: This infraction only applies when a card whose identity is known to only one player is in a
+      hidden set of cards both bef
+- id: ipg-s2-3-c-philosophy-g01-b002-rs-290cb52c48d5
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-3-c-philosophy-g01-b002:raw-L001540:raw-L001542
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If cards are placed into a public zone, then their order is known and the infraction can be
+      handled as a Game Rule Viola
+- id: ipg-s2-3-c-philosophy-g01-b002-rs-2d602b02eeb4
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-3-c-philosophy-g01-b002:raw-L001548:raw-L001550
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Order cannot be determined from card faces only visible to one player unless the card is in
+      a uniquely identifiable posi
+- id: ipg-s2-6-c-definition-g01-b001-rs-b7e235582cfc
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-6-c-definition-g01-b001:raw-L001849:raw-L001851
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A player allows another player in the game to commit a Game Play Error and does not point it
+      out immediately.
+- id: ipg-s2-6-c-definition-g01-b001-rs-dfab3954e975
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-6-c-definition-g01-b001:raw-L001857:raw-L001859
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If a judge believes a player is intentionally not pointing out other players’ illegal actions,
+      either for their own adva
+- id: ipg-s2-6-c-definition-g01-b001-rs-d7cd4a14bf58
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-6-c-definition-g01-b001:raw-L001865:raw-L001867
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Not reminding an opponent about their triggered abilities is never Failure to Maintain Game
+      State nor Cheating.
+- id: ipg-s2-6-c-philosophy-g01-b001-rs-f9c983665a49
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-6-c-philosophy-g01-b001:raw-L001889:raw-L001891
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If an error is caught before a player could gain advantage, then the dangers of the ongoing
+      game state becoming corrupte
+- id: ipg-s2-6-c-philosophy-g01-b001-rs-592f09b23206
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-s2-6-c-philosophy-g01-b001:raw-L001897:raw-L001899
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the error is allowed to persist, at least some of the fault lies with the opponent, who
+      has also failed to notice the
+- id: ipg-b000036-rs-a46209f1efca
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000036:raw-L001907:raw-L001909
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Tournament errors are violations of the Magic Tournament Rules.
+- id: ipg-b000036-rs-9068c48f6eef
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000036:raw-L001915:raw-L001917
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the judge believes that the error was intentional, they should consider Unsporting Conduct
+      — Cheating.
+- id: ipg-b000037-rs-4dd03ebdd495
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000037:raw-L001923:raw-L001925
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If a player violates the Magic Tournament Rules in a way that is not covered by one of the
+      infractions listed below, the
+- id: ipg-b000037-rs-164d091b577f
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000037:raw-L001931:raw-L001933
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Continued or willful disregard of these rules may require further investigation.
+- id: ipg-b000038-rs-e146de97a35b
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000038:raw-L001939:raw-L001941
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: 'A Warning for a Tournament Error offense is upgraded to a Game Loss if the player has already
+      received a Warning for an '
+- id: ipg-b000038-rs-27ff81ab2dd7
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000038:raw-L001947:raw-L001949
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: For multi-day tournaments, the penalty count for these infractions resets between days.
+- id: ipg-b000039-rs-d3f05e95c87b
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000039:raw-L001961:raw-L001963
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A player is not in their seat at the beginning of a round, or has not completed tasks assigned
+      within the time allocated
+- id: ipg-b000039-rs-8c076574e3e7
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000039:raw-L001969:raw-L001971
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If a round begins before the previous round would have ended (due to all players finishing
+      early), tardiness does not ap
+- id: ipg-b000045-rs-8c5e3d8617f5
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000045:raw-L002025:raw-L002027
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Players are responsible for being on time and in the correct seat for their matches, and for
+      completing registrations in
+- id: ipg-b000045-rs-ab48a2ae009e
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000045:raw-L002037:raw-L002039
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: 'The Tournament Organizer may announce that they are giving the players some additional time
+      before a penalty is issued. '
+- id: ipg-b000058-rs-9f406bb38508
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000058:raw-L002150:raw-L002152
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Visual modifications to cards, including brief text, that provide minor strategic information
+      or hints are acceptable an
+- id: ipg-b000058-rs-0bc41ef27c54
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000058:raw-L002158:raw-L002160
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Spectators who commit this infraction may be asked to leave the venue if they are not enrolled
+      in the tournament.
+- id: ipg-b000060-rs-c66bb2ae4f8b
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000060:raw-L002184:raw-L002186
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A player takes longer than is reasonably required to complete game actions.
+- id: ipg-b000060-rs-93dad88c46e3
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000060:raw-L002200:raw-L002202
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If a judge believes a player is intentionally playing slowly to take advantage of a time limit,
+      the infraction is Unspor
+- id: ipg-b000066-rs-9d90ca52abf5
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000066:raw-L002240:raw-L002242
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: All players have the responsibility to play quickly enough so that their opponents are not
+      at a significant disadvantage
+- id: ipg-b000066-rs-c95b2b502999
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000066:raw-L002248:raw-L002250
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A player may be playing slowly without realizing it. A comment of “I need you to play faster”
+      is often appropriate and a
+- id: ipg-b000066-rs-cb69b31867a9
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000066:raw-L002256:raw-L002258
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Further slow play should be penalized.
+- id: ipg-b000067-rs-52694ae9c274
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000067:raw-L002266:raw-L002268
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: In the event that the match exceeds the time limit, two additional turns are added to the number
+      of additional turns pla
+- id: ipg-b000067-rs-014218a6d459
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000067:raw-L002274:raw-L002276
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: 'This turn extension occurs before any end-of-match procedure can begin and after any time
+      extensions that may have been '
+- id: ipg-b000076-rs-5227a7e8342c
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000076:raw-L002348:raw-L002350
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Decklists are used to ensure that decks are not altered in the course of a tournament.
+- id: ipg-b000076-rs-87aeff2d65e3
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000076:raw-L002356:raw-L002358
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Judges and other tournament officials should be vigilant about reminding players before the
+      tournament begins of the imp
+- id: ipg-b000076-rs-101f14e11562
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000076:raw-L002364:raw-L002366
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A player normally receives a Game Loss if their decklist is altered after tournament play has
+      begun.
+- id: ipg-b000078-rs-1fd4e1c068ba
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000078:raw-L002384:raw-L002386
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: 'Ambiguous or unclear names on a decklist may allow a player to manipulate the contents of
+      their deck up until the point '
+- id: ipg-b000078-rs-c0e8e9db2157
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000078:raw-L002392:raw-L002394
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Truncated names of storyline characters on decklists (planeswalkers and other legendary permanents)
+      are acceptable as lo
+- id: ipg-b000082-rs-2e1c05fcf495
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000082:raw-L002434:raw-L002436
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the decklist contains illegal cards, remove them.
+- id: ipg-b000082-rs-7abfa0e37ebc
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000082:raw-L002442:raw-L002444
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the decklist is being adjusted to allow for an intended companion, the player exchanges
+      cards between the deck and si
+- id: ipg-b000083-rs-07839f2e2d11
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000083:raw-L002450:raw-L002452
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Alter the decklist to match the deck the player is actually playing.
+- id: ipg-b000083-rs-2131e703d658
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000083:raw-L002458:raw-L002460
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the deck/sideboard and decklist both violate a maximum cards restriction (usually too many
+      cards in a sideboard, more
+- id: ipg-b000098-rs-d373f0154c02
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000098:raw-L002592:raw-L002594
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: The most common forms of deck error are failure to desideboard and having a card in the wrong
+      deck. Both of these are di
+- id: ipg-b000098-rs-3c7d1ce2f881
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000098:raw-L002600:raw-L002602
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: 'Duplicates of cards that begin in the main deck are more problematic, as they are not as easy
+      to realize and catch, and '
+- id: ipg-b000100-rs-c6a303d9aa66
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000100:raw-L002618:raw-L002620
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Locate any cards missing from the deck and any incorrect cards in any game zone. Reveal those
+      cards to the opponent.
+- id: ipg-b000100-rs-294d65776da4
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000100:raw-L002630:raw-L002632
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the game has started, the opponent chooses whether to fix the problem now or when a player
+      would next get priority. T
+- id: ipg-b000100-rs-92411ff38f03
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000100:raw-L002650:raw-L002652
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If more cards are being removed than added, prioritize ones not in the library first. If there
+      are still additional card
+- id: ipg-b000100-rs-14fa29490781
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000100:raw-L002658:raw-L002660
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the missing card(s) are with the sideboard and it isn’t the first game, choose the ones
+      to be returned to the deck at
+- id: ipg-b000112-rs-f5de9d70b98f
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000112:raw-L002780:raw-L002782
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Errors in draft are disruptive and may become more so if they are not caught quickly.
+- id: ipg-b000112-rs-3d2b9759a113
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000112:raw-L002788:raw-L002790
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Announcements prior to the draft or the specific tournament rules for the format may specify
+      additional penalties for Li
+- id: ipg-b000118-rs-75459b35cd66
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000118:raw-L002838:raw-L002840
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A player may commit this infraction in situations where they have not spoken.
+- id: ipg-b000118-rs-afe4c5a18a6c
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000118:raw-L002846:raw-L002848
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A physically ambiguous board state is not automatically a penalty, but judges are encouraged
+      to tell players to fix ambi
+- id: ipg-b000125-rs-87abe8dea9e4
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000125:raw-L002922:raw-L002924
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Sleeves and cards often become worn over the course of a tournament, and, as long as the player
+      is not attempting to tak
+- id: ipg-b000125-rs-5e5e2750c8a8
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000125:raw-L002930:raw-L002932
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: In cases of marked cards, educating players to shuffle their cards and sleeves before sleeving
+      the cards is very importa
+- id: ipg-b000126-rs-6c27d0fa82cb
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000126:raw-L002942:raw-L002944
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: This infraction applies only to cards in a player’s deck. Differently-marked sleeves in the
+      sideboard are not illegal un
+- id: ipg-b000126-rs-c70c25a1383c
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000126:raw-L002950:raw-L002952
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Unless investigating, judges are encouraged to alert players about concerns with marked sideboard
+      cards.
+- id: ipg-b000127-rs-04e587dec5c8
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000127:raw-L002960:raw-L002962
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: The player needs to replace the card(s) or sleeve(s) with an unmarked version or, if no sleeves
+      are being used, use slee
+- id: ipg-b000127-rs-9e8904f62cbc
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000127:raw-L002968:raw-L002970
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the cards themselves have become marked through play in the tournament, the Head Judge may
+      decide to issue a proxy.
+- id: ipg-b000134-rs-893caf8dfac5
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000134:raw-L003034:raw-L003036
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Players are expected to shuffle their deck thoroughly when it is required and are expected
+      to have the skill and underst
+- id: ipg-b000134-rs-32ea4ccaacc4
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000134:raw-L003042:raw-L003044
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: However, as the opponent has the opportunity to shuffle after the player does, the potential
+      for advantage is lowered if
+- id: ipg-b000136-rs-c0470cfc7b3a
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000136:raw-L003058:raw-L003060
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A player should shuffle their deck using multiple methods. Patterned pile-shuffling is only
+      allowed at the start of a ga
+- id: ipg-b000136-rs-963287c3248b
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000136:raw-L003066:raw-L003068
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: 'Any manipulation, weaving, or stacking prior to randomization is acceptable, as long as the
+      deck is thoroughly shuffled '
+- id: ipg-b000139-rs-ba75ffdba825
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000139:raw-L003098:raw-L003100
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Unsporting behavior is not the same as a lack of sporting behavior. There is a wide middle
+      ground of “competitive” behav
+- id: ipg-b000139-rs-8dcd07836dc6
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000139:raw-L003106:raw-L003108
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: The Head Judge is the final arbiter on what constitutes unsporting conduct.
+- id: ipg-b000141-rs-c749eea9c0a1
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000141:raw-L003128:raw-L003130
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A player takes action that is disruptive to the tournament or its participants.
+- id: ipg-b000141-rs-76dd4862d79a
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000141:raw-L003152:raw-L003154
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: It may affect the comfort level of those around the individual, but determining whether this
+      is the case is not required
+- id: ipg-b000149-rs-2cc39e161828
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000149:raw-L003210:raw-L003212
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: The player must correct the problem immediately.
+- id: ipg-b000149-rs-f4c90ed27977
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000149:raw-L003218:raw-L003220
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Subsequent Unsporting Conduct — Minor infractions, even for different offenses, will result
+      in a Game Loss.
+- id: ipg-b000149-rs-b19e160697ff
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000149:raw-L003230:raw-L003232
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If a Game Loss is issued for repeated infractions, and it occurs at the end of a game, it is
+      acceptable for the judge to
+- id: ipg-b000150-rs-4d5df4ea560e
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000150:raw-L003252:raw-L003254
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A player takes action towards one or more individuals that could reasonably be expected to
+      create a feeling of being har
+- id: ipg-b000150-rs-239a8d8a2ae8
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000150:raw-L003272:raw-L003274
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: This may include insults based on race, color, religion, national origin, age, gender, disability,
+      or sexual orientation
+- id: ipg-b000150-rs-fc34b5015824
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000150:raw-L003288:raw-L003290
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Threats of physical violence should be treated as Unsporting Conduct – Aggressive Behavior.
+- id: ipg-b000158-rs-aa4a4f80031e
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000158:raw-L003392:raw-L003394
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: 'A safe environment is a basic expectation of any tournament attendee. Harassment undermines
+      the safety and integrity of '
+- id: ipg-b000158-rs-db8a053d25ad
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000158:raw-L003400:raw-L003402
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Players who purposefully create harmful or unwelcoming situations in a tournament are expected
+      to immediately correct th
+- id: ipg-b000159-rs-c7756e1bd45b
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000159:raw-L003416:raw-L003418
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Because of the confrontational nature of this infraction, judges need to end any match in progress
+      and separate the play
+- id: ipg-b000159-rs-ee57e0839108
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000159:raw-L003424:raw-L003426
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Care should be taken not to escalate the situation if at all possible. The offender will be
+      removed from the area to rec
+- id: ipg-b000159-rs-dbfc1c1bc9f2
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000159:raw-L003436:raw-L003438
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: They may need a few moments to cool down afterwards.
+- id: ipg-b000159-rs-7670258a1f76
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000159:raw-L003448:raw-L003450
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Apologizing is encouraged, but the desire of the other individuals to not interact with their
+      harasser must be respected
+- id: ipg-b000160-rs-5b932732bac3
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000160:raw-L003460:raw-L003462
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Officials must investigate these matters as soon as they are brought to their attention.
+- id: ipg-b000160-rs-590f02c46eb2
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000160:raw-L003468:raw-L003470
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If they determine that the infraction does not meet the criteria for Unsporting Conduct – Major,
+      it is still recommended
+- id: ipg-b000161-rs-f1612bd6008c
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000161:raw-L003482:raw-L003484
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: The player must correct the behavior immediately.
+- id: ipg-b000161-rs-d14dd392c9d0
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000161:raw-L003490:raw-L003492
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the offense occurs at the end of a match, it is acceptable for the judge to apply the penalty
+      to the next match inste
+- id: ipg-b000195-rs-a0f4e2b5c205
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000195:raw-L003832:raw-L003834
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Players enter a tournament expecting that their materials will be protected.
+- id: ipg-b000195-rs-95250eb486a4
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000195:raw-L003840:raw-L003842
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: 'This does not absolve the players from their responsibility to keep an eye on their possessions,
+      but they should expect '
+- id: ipg-b000195-rs-efb691cc346c
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000195:raw-L003848:raw-L003850
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Other instances of theft not involving tournament materials are the responsibility of the Tournament
+      Organizer, though j
+- id: ipg-b000197-rs-ab60f93a530c
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000197:raw-L003872:raw-L003874
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: A player intentionally plays slowly in order to take advantage of the time limit.
+- id: ipg-b000197-rs-ab506a51e80c
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000197:raw-L003880:raw-L003882
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If the slow play is not intentional, please refer to Tournament Error — Slow Play instead.
+- id: ipg-b000207-rs-cbcebc9a06a8
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000207:raw-L003984:raw-L003986
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: If all criteria are not met, the offense is not Cheating and is handled by a different infraction.
+- id: ipg-b000207-rs-dd1cd7191d17
+  kind: reading-segment
+  status: active
+  canonicalKey: reading-segment:ipg-b000207:raw-L003992:raw-L003994
+  history:
+  - event: allocated
+    atVersion: zh-r0001-reading-layout-v1
+    label: Cheating will often appear on the surface as a Game Play Error or Tournament Error, and must
+      be investigated by the judg

@@ -24,7 +24,7 @@ def test_shared_notes_preserve_legacy_text_and_do_not_enter_omegat(tmp_path):
     assert read_version_notes(tmp_path) == old.strip()
     _, documents, display = _inputs()
     units = collect_units(documents, display)
-    assert len(units) == 905
+    assert len(units) == 1007
     assert not any(unit["id"] == "ipg-version-notes" for unit in units)
 
 

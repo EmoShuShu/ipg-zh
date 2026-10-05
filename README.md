@@ -9,13 +9,16 @@ candidate, not a publishable release.
 ## 全文 OmegaT 审校
 
 普通维护者请双击仓库根目录的 `审校助手.cmd`。中文菜单可以安全准备或继续唯一的
-全文 OmegaT 项目、完成一批审校并生成候选阅读文档，以及查看 905 个翻译单元的
+全文 OmegaT 项目、完成一批审校并生成候选阅读文档，以及查看 1007 个翻译单元的
 进度。详细步骤见 `docs/omegat-review-guide.md`。
 
 OmegaT 项目位于忽略目录 `outputs/omegat-ipg-full/`，包含 8 个 PO。项目直接使用
 `terminology/ipg-glossary.txt`，不会复制另一份词汇表。当前 12 项真实缺译保持为空，
 不得用英文或机器译文填充。候选阅读产物只写入 `outputs/current-candidate/`；正式
 `dist/` 仍然不生成。
+
+正文与发布注解按阅读位置交错导出。被注解分隔的官方段落以稳定的双语阅读片段
+进入 OmegaT，同时保留完整官方 block 和 PDF 溯源。详见使用说明中的分段与备份规则。
 
 本地修订“版本说明”时，请直接编辑共用的 `src/ipg/version-notes.md`。这与
 `mtr-zh` 的维护方式一致：它不进入 OmegaT，构建时会位于 IPG 内容前部，同时以
@@ -50,13 +53,13 @@ under ignored `outputs/p4/`. Formal `dist/` remains untouched.
 Candidate validation succeeds with all 4,085 legacy raw units uniquely
 disposed and no unresolved mappings, duplicate consumption, orphan annotation,
 or deferred annotation. Release validation intentionally fails: 12 Appendix B
-entries have no legacy Chinese, the full review ledger does not yet exist,
+entries have no legacy Chinese, full-document review is not completed,
 publication-annotation licensing/attribution is pending, and the manifest is
 `publishable: false`.
 
 P4.5 creates the ignored local project only when the review assistant prepares
 it. Translation notes and review state remain isolated under their versioned
-`review/` paths. The current real full-document ledger starts with all 905 units
+`review/` paths. The current real full-document ledger starts with all 1007 units
 unreviewed; the older P2 demonstration records live only in pilot fixtures.
 
 ## Historical P0-P2 pilot workflow

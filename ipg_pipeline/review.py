@@ -31,7 +31,7 @@ def extract_translation_notes(
         source = ""
         target = ""
         for variant in translation_unit.findall("tuv"):
-            language = variant.attrib.get("{http://www.w3.org/XML/1998/namespace}lang", "")
+            language = variant.attrib.get("{http://www.w3.org/XML/1998/namespace}lang", variant.attrib.get("lang", ""))
             segment = variant.find("seg")
             value = "" if segment is None else "".join(segment.itertext())
             if language.startswith("en"):
@@ -97,7 +97,7 @@ def extract_omegat_notes(
         source = ""
         target = ""
         for variant in translation_unit.findall("tuv"):
-            language = variant.attrib.get("{http://www.w3.org/XML/1998/namespace}lang", "")
+            language = variant.attrib.get("{http://www.w3.org/XML/1998/namespace}lang", variant.attrib.get("lang", ""))
             segment = variant.find("seg")
             value = "" if segment is None else "".join(segment.itertext())
             if language.casefold().startswith("en"):
@@ -106,7 +106,7 @@ def extract_omegat_notes(
                 target = value
         identity_candidates = [translation_unit.attrib.get("tuid", "")]
         identity_candidates.extend(
-            props.get(name, "") for name in ("x-unit-id", "unit-id", "id", "tuid")
+            props.get(name, "") for name in ("x-unit-id", "unit-id", "id", "tuid", "path")
         )
         explicit = {candidate for candidate in identity_candidates if candidate in known}
         if len(explicit) > 1:

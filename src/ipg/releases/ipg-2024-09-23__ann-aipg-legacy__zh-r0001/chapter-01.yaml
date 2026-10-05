@@ -59,6 +59,62 @@ sections:
         - raw-L000127
         - raw-L000149
         - raw-L000151
+        readingSegments:
+        - id: ipg-b000006-rs-7b3c9cca7093
+          sourceRange:
+          - 0
+          - 63
+          text:
+            en: Judges are neutral arbiters and enforcers of policy and rules.
+            zh: 裁判是中立的裁决者，也是政策与规则的执法者。
+          legacyRawUnits:
+          - raw-L000097
+          - raw-L000099
+        - id: ipg-b000006-rs-c4964b29a361
+          sourceRange:
+          - 63
+          - 270
+          text:
+            en: A judge shouldn’t intervene in a game unless they believe a rules violation has occurred, a player
+              with a concern or question requests assistance, or the judge wishes to prevent a situation from
+              escalating.
+            zh: 通常情况下，裁判不应干预游戏的进行，但在此数类情况下，裁判应及时介入：裁判认为已有人违反规则，抱有顾虑或疑问的牌手请求协助，或裁判希望防止局势恶化。
+          legacyRawUnits:
+          - raw-L000105
+          - raw-L000107
+        - id: ipg-b000006-rs-74c4f72a3c5c
+          sourceRange:
+          - 270
+          - 478
+          text:
+            en: Judges don’t stop play errors from occurring, but instead deal with errors that have occurred,
+              penalize those who violate rules or policy, and promote fair play and sporting conduct by example
+              and diplomacy.
+            zh: 裁判并不会阻止游戏失误的发生，而是会去解决已发生之失误，处罚违反规则和政策的牌手，并以身体力行和交际手腕来宣导公平的比赛和运动道德。
+          legacyRawUnits:
+          - raw-L000113
+          - raw-L000115
+        - id: ipg-b000006-rs-3781c47f04f5
+          sourceRange:
+          - 478
+          - 557
+          text:
+            en: Judges may intervene to prevent or preempt errors occurring outside of a game.
+            zh: 为避免或预防游戏之外的失误发生，裁判可以介入。
+          legacyRawUnits:
+          - raw-L000125
+          - raw-L000127
+        - id: ipg-b000006-rs-f206588cf784
+          sourceRange:
+          - 557
+          - 685
+          text:
+            en: Knowledge of a player’s history or skill does not alter an infraction, but it may be taken into
+              account during an investigation.
+            zh: 对某牌手过去作为与游戏技巧的认知不会影响违规的认定，但在调查过程中或会将这些方面考虑在内。
+          legacyRawUnits:
+          - raw-L000149
+          - raw-L000151
       - id: ipg-b000007
         type: paragraph
         text:
@@ -89,6 +145,39 @@ sections:
         - raw-L000167
         - raw-L000173
         - raw-L000175
+        readingSegments:
+        - id: ipg-b000007-rs-c1a2cf3130ff
+          sourceRange:
+          - 0
+          - 94
+          text:
+            en: The purpose of a penalty is to educate the player not to make similar mistakes in the future.
+            zh: 处罚的目的是为了避免牌手在往后犯下类似的失误。
+          legacyRawUnits:
+          - raw-L000157
+          - raw-L000159
+        - id: ipg-b000007-rs-cacfcd9b3a22
+          sourceRange:
+          - 94
+          - 222
+          text:
+            en: This is done through both an explanation of where the rules or policies were violated and a penalty
+              to reinforce the education.
+            zh: 为达成此目标，必须向该牌手解释所违反之规则或政策，使处罚有其教育意义。
+          legacyRawUnits:
+          - raw-L000165
+          - raw-L000167
+        - id: ipg-b000007-rs-fb18de545b81
+          sourceRange:
+          - 222
+          - 362
+          text:
+            en: Penalties are also for the deterrence and education of every other player in the event and are
+              also used to track player behavior over time.
+            zh: 处罚的效果也包括教育比赛中其他牌手并造成警惕，且会用来持续记录牌手的行为。
+          legacyRawUnits:
+          - raw-L000173
+          - raw-L000175
       - id: ipg-b000008
         type: paragraph
         text:
@@ -127,6 +216,51 @@ sections:
         - raw-L000203
         - raw-L000209
         - raw-L000211
+        readingSegments:
+        - id: ipg-b000008-rs-47dda231e547
+          sourceRange:
+          - 0
+          - 121
+          text:
+            en: If a minor violation is quickly handled by the players to their mutual satisfaction, a judge does
+              not need to intervene.
+            zh: 如果违反规则的情况较为轻微，且牌手已以双方均满意的方式进行了快速处理，则裁判无需干预。
+          legacyRawUnits:
+          - raw-L000185
+          - raw-L000187
+        - id: ipg-b000008-rs-7134797fc872
+          sourceRange:
+          - 121
+          - 366
+          text:
+            en: If the players are playing in a way that is clear to both players, but might cause confusion to
+              an external observer, judges are encouraged to request that the players make the situation clear,
+              but not assess an infraction or issue any penalty.
+            zh: 如果游戏的进行方式虽对双方牌手足够明晰，但在旁观者看来或会混淆不清，则建议裁判去要求牌手让情况更加清楚，而不要给予任何处罚。
+          legacyRawUnits:
+          - raw-L000193
+          - raw-L000195
+        - id: ipg-b000008-rs-a09bc2ff6c77
+          sourceRange:
+          - 366
+          - 451
+          text:
+            en: In both these situations, the judge should ensure that the game progresses normally.
+            zh: 在上述两种情况中，裁判应确保游戏正常进行。
+          legacyRawUnits:
+          - raw-L000201
+          - raw-L000203
+        - id: ipg-b000008-rs-2feb9e3ffc73
+          sourceRange:
+          - 451
+          - 591
+          text:
+            en: More significant violations are addressed by first identifying what infraction applies, then proceeding
+              with the corresponding instructions.
+            zh: 对于较为严重之违反规则情况而言，裁判应先确定适用何种违规，然后再根据相应的处理方式进行处理。
+          legacyRawUnits:
+          - raw-L000209
+          - raw-L000211
       - id: ipg-b000009
         type: paragraph
         text:
@@ -171,6 +305,60 @@ sections:
         - raw-L000243
         - raw-L000249
         - raw-L000251
+        readingSegments:
+        - id: ipg-b000009-rs-86c48380f402
+          sourceRange:
+          - 0
+          - 89
+          text:
+            en: Only the Head Judge is authorized to issue penalties that deviate from these guidelines.
+            zh: 只有主审才有权力不依此方针来作处罚。
+          legacyRawUnits:
+          - raw-L000217
+          - raw-L000219
+        - id: ipg-b000009-rs-0a910b519837
+          sourceRange:
+          - 89
+          - 264
+          text:
+            en: The Head Judge may not deviate from this guide’s procedures except in significant and exceptional
+              circumstances or a situation that has no applicable philosophy for guidance.
+            zh: 除非在重大且特殊的状况中，或是没有可供运用的指导原则，否则主审都不该背离此方针的处理流程。
+          legacyRawUnits:
+          - raw-L000225
+          - raw-L000227
+        - id: ipg-b000009-rs-1106834c1b6c
+          sourceRange:
+          - 264
+          - 386
+          text:
+            en: Significant and exceptional circumstances are rare—a table collapses, a booster contains cards
+              from a different set, etc.
+            zh: 重大且特殊的状况很少见～桌子垮掉、补充包内含其他系列的牌等等。
+          legacyRawUnits:
+          - raw-L000233
+          - raw-L000235
+        - id: ipg-b000009-rs-3c35f44388a1
+          sourceRange:
+          - 386
+          - 581
+          text:
+            en: The Rules Enforcement Level, round of the tournament, age or experience-level of the player, desire
+              to educate the player, and certification level of the judge are NOT exceptional circumstances.
+            zh: 执法严格度、比赛的回合、牌手的经验高低和年龄、特别想教育该牌手，以及裁判的等级，均不算是特殊状况。
+          legacyRawUnits:
+          - raw-L000241
+          - raw-L000243
+        - id: ipg-b000009-rs-538984fad5f8
+          sourceRange:
+          - 581
+          - 668
+          text:
+            en: If another judge feels deviation is appropriate, they must consult with the Head Judge.
+            zh: 如果其他裁判认为有理由不遵循罚则方针，则必须请示主审。
+          legacyRawUnits:
+          - raw-L000249
+          - raw-L000251
       - id: ipg-b000010
         type: paragraph
         text:
@@ -212,6 +400,54 @@ sections:
         - raw-L000283
         - raw-L000297
         - raw-L000299
+        readingSegments:
+        - id: ipg-b000010-rs-7145af153971
+          sourceRange:
+          - 0
+          - 163
+          text:
+            en: Judges are human and make mistakes. When a judge makes a mistake, they should acknowledge the
+              mistake, apologize to the players, and fix it if it is not too late.
+            zh: 裁判也是常人，也会犯下错误。若裁判确实出现了失误，他应承认错误，向牌手致歉，且如果发现尚属及时，还应该进行修正。
+          legacyRawUnits:
+          - raw-L000257
+          - raw-L000259
+        - id: ipg-b000010-rs-19adc066032e
+          sourceRange:
+          - 163
+          - 331
+          text:
+            en: If a member of the tournament staff gives a player erroneous information that causes them to commit
+              a violation, the Head Judge is authorized to downgrade the penalty.
+            zh: 如果牌手是因比赛工作人员提供的错误信息而犯下违规，主审有权将罚则降级。
+          legacyRawUnits:
+          - raw-L000273
+          - raw-L000275
+        - id: ipg-b000010-rs-ed88262b254d
+          sourceRange:
+          - 331
+          - 645
+          text:
+            en: For example, a player asks a judge whether a card is legal for a format and is told yes. When
+              that player’s deck is found to be illegal because of these cards, the Head Judge applies the normal
+              procedure for fixing the decklist, but may downgrade the penalty to a Warning because of the direct
+              error of the judge.
+            zh: 举例来说，某牌手询问裁判某张牌是否在该赛制中合法时，裁判回答他说“是”；此后当该牌手的套牌因为这张牌之故被判为非法套牌时，主审应依照正常的规程来修正套牌登记表，但由于是裁判的失误直接导致了此违规行为的发生，他可以将罚则降级为“警告”。
+          legacyRawUnits:
+          - raw-L000281
+          - raw-L000283
+        - id: ipg-b000010-rs-41ce45c33c81
+          sourceRange:
+          - 645
+          - 851
+          text:
+            en: If a player clearly acts on erroneous information provided by a judge during the game, the Head
+              Judge may consider a backup to the point of the action taken, even if that action did not lead to
+              a violation.
+            zh: 如果牌手明显是根据裁判提供的错误信息而在游戏中行动，在主审可以考虑倒回至实际行动前之时点，即便相关行动并未违规也可如此操作。
+          legacyRawUnits:
+          - raw-L000297
+          - raw-L000299
 - id: ipg-s1-1
   kind: policy
   number: '1.1'
@@ -256,6 +492,39 @@ sections:
         - raw-L000319
         - raw-L000325
         - raw-L000327
+        readingSegments:
+        - id: ipg-b000011-rs-689d98d6b3fc
+          sourceRange:
+          - 0
+          - 127
+          text:
+            en: Warnings are used in situations of incorrect play when a small amount of time is needed to implement
+              the corrective procedure.
+            zh: 警告使用于不正确的行动，且需要些许时间来执行修正的流程。
+          legacyRawUnits:
+          - raw-L000309
+          - raw-L000311
+        - id: ipg-b000011-rs-03518d1e2c02
+          sourceRange:
+          - 127
+          - 270
+          text:
+            en: The purpose of a Warning is to alert judges and players involved that a problem has occurred and
+              to keep a permanent record of the infraction.
+            zh: 其目的是用来针对已产生的问题，警示相关裁判和牌手，并将此违规永久记录。
+          legacyRawUnits:
+          - raw-L000317
+          - raw-L000319
+        - id: ipg-b000011-rs-1734ed0cfa49
+          sourceRange:
+          - 270
+          - 347
+          text:
+            en: A time extension should be issued if the ruling has taken more than a minute.
+            zh: 如果解释规则花费超过一分钟的时间，则要给予延长时间。
+          legacyRawUnits:
+          - raw-L000325
+          - raw-L000327
   - id: ipg-c000005
     role: penalty-definition
     labelCode: penalty.game-loss
@@ -314,6 +583,39 @@ sections:
         - raw-L000353
         - raw-L000359
         - raw-L000361
+        readingSegments:
+        - id: ipg-b000013-rs-f68e0bcb00c8
+          sourceRange:
+          - 0
+          - 137
+          text:
+            en: Game Losses are applied immediately if the game is still ongoing, or to the player’s next game
+              if it is not, unless otherwise specified.
+            zh: 一盘负处罚在游戏仍在继续的情况下立刻生效，否则对该牌手的下一盘游戏生效，除非特别说明。
+          legacyRawUnits:
+          - raw-L000343
+          - raw-L000345
+        - id: ipg-b000013-rs-5aa9c545fd42
+          sourceRange:
+          - 137
+          - 225
+          text:
+            en: If a player would receive multiple Game Losses at the same time, they only receive one.
+            zh: 如果牌手会在同一时间受到多个“一盘负”判罚，则其只会受到一个一盘负。
+          legacyRawUnits:
+          - raw-L000351
+          - raw-L000353
+        - id: ipg-b000013-rs-6551e50716ee
+          sourceRange:
+          - 225
+          - 341
+          text:
+            en: If simultaneous Game Loss penalties are issued to each player, they are recorded, but do not affect
+              the match score.
+            zh: 如果游戏中所有牌手同时受到一盘负之处罚，则此些“一盘负”处罚会记录在案，但不会影响当前对局的成绩。
+          legacyRawUnits:
+          - raw-L000359
+          - raw-L000361
   - id: ipg-c000006
     role: penalty-definition
     labelCode: penalty.match-loss
@@ -558,6 +860,29 @@ sections:
         - raw-L000459
         - raw-L000465
         - raw-L000467
+        readingSegments:
+        - id: ipg-b000024-rs-64650058d68d
+          sourceRange:
+          - 0
+          - 150
+          text:
+            en: Any time a penalty is issued, the judge must explain the infraction, the procedure for fixing
+              the situation, and the penalty to all players involved.
+            zh: 作出任何处罚时，裁判都必须对涉及该违规的牌手们解释修正状况的流程，以及其处罚。
+          legacyRawUnits:
+          - raw-L000457
+          - raw-L000459
+        - id: ipg-b000024-rs-58d94ca9bc25
+          sourceRange:
+          - 150
+          - 312
+          text:
+            en: If the Head Judge chooses to deviate from the Infraction Procedure Guide, the Head Judge is expected
+              to explain the standard penalty and the reason for deviation.
+            zh: 如果主审选择不遵循违规处理方针，则主审应解释标准的罚则，以及不遵循的理由。
+          legacyRawUnits:
+          - raw-L000465
+          - raw-L000467
       - id: ipg-b000025
         type: paragraph
         text:
@@ -594,6 +919,44 @@ sections:
         - raw-L000483
         - raw-L000489
         - raw-L000491
+        readingSegments:
+        - id: ipg-b000025-rs-d577b962ffd2
+          sourceRange:
+          - 0
+          - 490
+          text:
+            en: Some infractions include remedies to handle the offense beyond the base penalty. These procedures
+              exist to protect officials from accusations of unfairness, bias, or favoritism. If a judge makes
+              a ruling that is consistent with quoted text, then the complaints of a player shift from accusation
+              of unfairness by the judge to accusations of unfair policy. Deviations from these procedures may
+              raise accusations against the judge from the player(s) involved, or from those who hear about it.
+            zh: 有些罚则会在基本的处罚之外，包括额外叙述修正此犯规的流程的叙述。这些流程是用以保护工作人员免于不公正、偏见或是偏袒的指控。如果裁判的规则解释和引用的内容一致，而牌手还有所抱怨，则“指控该裁判不公”此事会转变成“指控方针不公”。裁判若不遵循这些流程，可能会引来相关牌手或是旁观者对裁判的指控。
+          legacyRawUnits:
+          - raw-L000473
+          - raw-L000475
+        - id: ipg-b000025-rs-41b7d38566f0
+          sourceRange:
+          - 490
+          - 695
+          text:
+            en: These procedures do not, and should not, take into account the game being played, the current
+              situation that the game is in, or who will benefit strategically from the procedure associated with
+              a penalty.
+            zh: 这些流程不会也不该考虑游戏进行过的部份、游戏目前的状况，或是谁会因此流程与所连带的处罚而得到策略上的好处。
+          legacyRawUnits:
+          - raw-L000481
+          - raw-L000483
+        - id: ipg-b000025-rs-3fb90bae75d9
+          sourceRange:
+          - 695
+          - 864
+          text:
+            en: While it is tempting to try to “fix” game situations, the danger of missing a subtle detail or
+              showing favoritism to a player (even unintentionally) makes it a bad idea.
+            zh: 此流程只是试图要“修复”游戏的状况，遗漏一个小细节或是表现出对某牌手的偏袒（即使不是有意的），都不是好主意。
+          legacyRawUnits:
+          - raw-L000489
+          - raw-L000491
       - id: ipg-b000026
         type: paragraph
         text:
@@ -657,6 +1020,41 @@ sections:
         - raw-L000521
         - raw-L000527
         - raw-L000529
+        readingSegments:
+        - id: ipg-b000027-rs-ec5fdc0d486d
+          sourceRange:
+          - 0
+          - 107
+          text:
+            en: The remedy for some infractions in this document includes shuffling the randomized portion of
+              the library.
+            zh: 本文档中某些违规的修正方式包含将牌库已随机化的部分洗牌。
+          legacyRawUnits:
+          - raw-L000511
+          - raw-L000513
+        - id: ipg-b000027-rs-a8a8ec74eb63
+          sourceRange:
+          - 107
+          - 462
+          text:
+            en: This requires first determining whether any portion of the library is non-random, such as cards
+              that have been manipulated on the top or bottom of the library, and separating those. Check with
+              both players to verify this, and check the graveyard, exile, and battlefield for library manipulation
+              cards, such as Brainstorm and cards with the scry mechanic.
+            zh: 利用此种方式进行修正时，首先需要确定牌库中是否包含非随机的部分，例如牌库顶部或底部已被调整过顺序的牌张，然后将这部分放在一边。询问双方牌手来确认此事，然后检查他们的坟墓场、放逐区和战场，看看是否有可以操作牌库的牌，像是脑力激荡/Brainstorm和拥有占卜机制的牌。
+          legacyRawUnits:
+          - raw-L000519
+          - raw-L000521
+        - id: ipg-b000027-rs-1e71e8e65235
+          sourceRange:
+          - 462
+          - 560
+          text:
+            en: Once the library has been shuffled, any manipulated cards are returned to their correct locations.
+            zh: 在完成牌库的洗牌之后，将已调整过顺序的牌张放回原本的位置。
+          legacyRawUnits:
+          - raw-L000527
+          - raw-L000529
       - id: ipg-b000028
         type: paragraph
         text:
@@ -721,6 +1119,41 @@ sections:
         - raw-L000555
         - raw-L000561
         - raw-L000563
+        readingSegments:
+        - id: ipg-b000029-rs-c8487c092978
+          sourceRange:
+          - 0
+          - 92
+          text:
+            en: Some infractions in this document permit the judge to consider the possibility of a backup.
+            zh: 本文档中的某些违规允许裁判考虑进行倒回。
+          legacyRawUnits:
+          - raw-L000545
+          - raw-L000547
+        - id: ipg-b000029-rs-34f4da8af34f
+          sourceRange:
+          - 92
+          - 348
+          text:
+            en: Due to the amount of information that may become available to players and might affect their play,
+              backups are regarded as a solution of last resort, only applied in situations where leaving the
+              game in the current state is a substantially worse solution.
+            zh: 由于此举可能会向牌手透露信息，且牌手可能由此改变游戏行动，因此“倒回”应作为最后的处理手段，仅适用于“保留当前游戏状态反而结果更糟”的情形。
+          legacyRawUnits:
+          - raw-L000553
+          - raw-L000555
+        - id: ipg-b000029-rs-432a1a194819
+          sourceRange:
+          - 348
+          - 591
+          text:
+            en: A good backup will result in a situation where the gained information makes no difference and
+              the line of play remains the same (excepting the error, which has been fixed). This means limiting
+              backups to situations with minimal decision trees.
+            zh: 良好的倒回结果应是：双方牌手获得的信息与此前一致，游戏进行的过程没有区别（错误已被修正）。这意味着倒回仅适用于存在最小决策树之情形。
+          legacyRawUnits:
+          - raw-L000561
+          - raw-L000563
       - id: ipg-b000030
         type: paragraph
         text:
@@ -774,6 +1207,43 @@ sections:
         - raw-L000587
         - raw-L000593
         - raw-L000595
+        readingSegments:
+        - id: ipg-b000031-rs-c56d5d1e3d6f
+          sourceRange:
+          - 0
+          - 232
+          text:
+            en: To perform a backup, each individual action since the point of the error is reversed, starting
+              with the most recent ones and working backwards. Every action must be reversed; no parts of the
+              sequence should be omitted or reordered.
+            zh: 执行倒回的流程如下：从最近的行动开始逐步回退，还原做过的所有行动，直到游戏来到发生失误的时间点为止。所有的行动都必须还原；不得省略或重排一连串行动当中的若干步骤。
+          legacyRawUnits:
+          - raw-L000577
+          - raw-L000579
+        - id: ipg-b000031-rs-68105f7b398d
+          sourceRange:
+          - 232
+          - 409
+          text:
+            en: If the identity of a card involved in reversing an action is unknown to one of the players (usually
+              because it was drawn), a random card is chosen from the possible candidates.
+            zh: 如果在还原行动时，涉及到有牌手无法辨认之牌张（通常是因为该牌被抓上手），则从可能的牌张中随机选择一张。
+          legacyRawUnits:
+          - raw-L000585
+          - raw-L000587
+        - id: ipg-b000031-rs-0c2ce457bbd9
+          sourceRange:
+          - 409
+          - 763
+          text:
+            en: Actions that caused a player to learn the identity of cards at a specific location in the library
+              are reversed by shuffling those cards into the random portion of the library unless they were subsequently
+              drawn; cards being returned to the library as part of the backup should not be shuffled at that
+              stage if their identity was known to only one player.
+            zh: 让牌手得知某一张牌在牌库中具体位置的动作，除非是在之后抓起导致的，否则以将这些牌洗进牌库中随机部分的方式进行倒回；由于倒回而回到牌库的牌如果之前只有一位牌手知道内容，则在此步骤中不将它们洗牌。
+          legacyRawUnits:
+          - raw-L000593
+          - raw-L000595
       - id: ipg-b000032
         type: paragraph
         text:
@@ -819,6 +1289,29 @@ sections:
         - raw-L000611
         - raw-L000617
         - raw-L000619
+        readingSegments:
+        - id: ipg-b000033-rs-4670c5c95502
+          sourceRange:
+          - 0
+          - 222
+          text:
+            en: Some remedies state a simple backup may be performed. A simple backup is backing up the last action
+              completed (or one currently in progress) and is sometimes used to make another portion of the prescribed
+              remedy smoother.
+            zh: 某些修正方式注明“可进行简易倒回”。简易倒回是指倒回最后完成（或正在执行）的一个游戏动作，有时用于保证列明之修正方式的其他部分能够顺利执行。
+          legacyRawUnits:
+          - raw-L000609
+          - raw-L000611
+        - id: ipg-b000033-rs-77cafdce455d
+          sourceRange:
+          - 222
+          - 277
+          text:
+            en: A simple backup should not involve any random elements.
+            zh: 简易倒回不应涉及任何随机元素。
+          legacyRawUnits:
+          - raw-L000617
+          - raw-L000619
 - id: ipg-s1-5
   kind: policy
   number: '1.5'
@@ -857,6 +1350,28 @@ sections:
         - raw-L000629
         - raw-L000635
         - raw-L000637
+        readingSegments:
+        - id: ipg-b000034-rs-d11e6f7dbc75
+          sourceRange:
+          - 0
+          - 60
+          text:
+            en: Some infractions in this document refer to “sets” of cards.
+            zh: 本文档中的某些违规会提及“牌叠”之概念。
+          legacyRawUnits:
+          - raw-L000627
+          - raw-L000629
+        - id: ipg-b000034-rs-b4a4c9acb125
+          sourceRange:
+          - 60
+          - 253
+          text:
+            en: A set is a physically distinct group of cards defined by a game rule or effect. It may correspond
+              to a specific zone, or may only represent a part of a zone. A set may consist of a single card.
+            zh: 所谓牌叠，是指由游戏规则或效应规定，有显著区隔的牌张组合。牌叠此概念可能对应某一特定区域，也可能只包含某一区域当中的一部分。一张牌也可构成牌叠。
+          legacyRawUnits:
+          - raw-L000635
+          - raw-L000637
       - id: ipg-b000035
         type: paragraph
         text:
@@ -881,6 +1396,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000006
+    segmentId: ipg-b000006-rs-7b3c9cca7093
   position: after
   order: 10
   groups:
@@ -905,6 +1421,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000006
+    segmentId: ipg-b000006-rs-c4964b29a361
   position: after
   order: 20
   groups:
@@ -929,6 +1446,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000006
+    segmentId: ipg-b000006-rs-74c4f72a3c5c
   position: after
   order: 30
   groups:
@@ -963,6 +1481,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000006
+    segmentId: ipg-b000006-rs-3781c47f04f5
   position: after
   order: 40
   groups:
@@ -1036,6 +1555,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000006
+    segmentId: ipg-b000006-rs-f206588cf784
   position: after
   order: 50
   groups:
@@ -1063,6 +1583,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000007
+    segmentId: ipg-b000007-rs-c1a2cf3130ff
   position: after
   order: 10
   groups:
@@ -1087,6 +1608,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000007
+    segmentId: ipg-b000007-rs-cacfcd9b3a22
   position: after
   order: 20
   groups:
@@ -1107,6 +1629,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000007
+    segmentId: ipg-b000007-rs-fb18de545b81
   position: after
   order: 30
   groups:
@@ -1141,6 +1664,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000008
+    segmentId: ipg-b000008-rs-47dda231e547
   position: after
   order: 10
   groups:
@@ -1163,6 +1687,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000008
+    segmentId: ipg-b000008-rs-7134797fc872
   position: after
   order: 20
   groups:
@@ -1186,6 +1711,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000008
+    segmentId: ipg-b000008-rs-a09bc2ff6c77
   position: after
   order: 30
   groups:
@@ -1206,6 +1732,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000008
+    segmentId: ipg-b000008-rs-2feb9e3ffc73
   position: after
   order: 40
   groups:
@@ -1227,6 +1754,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000009
+    segmentId: ipg-b000009-rs-86c48380f402
   position: after
   order: 10
   groups:
@@ -1248,6 +1776,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000009
+    segmentId: ipg-b000009-rs-0a910b519837
   position: after
   order: 20
   groups:
@@ -1270,6 +1799,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000009
+    segmentId: ipg-b000009-rs-1106834c1b6c
   position: after
   order: 30
   groups:
@@ -1291,6 +1821,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000009
+    segmentId: ipg-b000009-rs-3c35f44388a1
   position: after
   order: 40
   groups:
@@ -1316,6 +1847,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000009
+    segmentId: ipg-b000009-rs-538984fad5f8
   position: after
   order: 50
   groups:
@@ -1335,6 +1867,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000010
+    segmentId: ipg-b000010-rs-7145af153971
   position: after
   order: 10
   groups:
@@ -1376,6 +1909,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000010
+    segmentId: ipg-b000010-rs-19adc066032e
   position: after
   order: 20
   groups:
@@ -1398,6 +1932,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000010
+    segmentId: ipg-b000010-rs-ed88262b254d
   position: after
   order: 30
   groups:
@@ -1439,6 +1974,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000010
+    segmentId: ipg-b000010-rs-41ce45c33c81
   position: after
   order: 40
   groups:
@@ -1461,6 +1997,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000011
+    segmentId: ipg-b000011-rs-689d98d6b3fc
   position: after
   order: 10
   groups:
@@ -1481,6 +2018,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000011
+    segmentId: ipg-b000011-rs-03518d1e2c02
   position: after
   order: 20
   groups:
@@ -1502,6 +2040,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000011
+    segmentId: ipg-b000011-rs-1734ed0cfa49
   position: after
   order: 30
   groups:
@@ -1544,6 +2083,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000013
+    segmentId: ipg-b000013-rs-f68e0bcb00c8
   position: after
   order: 10
   groups:
@@ -1565,6 +2105,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000013
+    segmentId: ipg-b000013-rs-5aa9c545fd42
   position: after
   order: 20
   groups:
@@ -1591,6 +2132,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000013
+    segmentId: ipg-b000013-rs-6551e50716ee
   position: after
   order: 30
   groups:
@@ -1836,6 +2378,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000024
+    segmentId: ipg-b000024-rs-64650058d68d
   position: after
   order: 10
   groups:
@@ -1859,6 +2402,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000024
+    segmentId: ipg-b000024-rs-58d94ca9bc25
   position: after
   order: 20
   groups:
@@ -1883,6 +2427,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000025
+    segmentId: ipg-b000025-rs-d577b962ffd2
   position: after
   order: 10
   groups:
@@ -1909,6 +2454,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000025
+    segmentId: ipg-b000025-rs-41b7d38566f0
   position: after
   order: 20
   groups:
@@ -1935,6 +2481,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000025
+    segmentId: ipg-b000025-rs-3fb90bae75d9
   position: after
   order: 30
   groups:
@@ -1991,6 +2538,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000027
+    segmentId: ipg-b000027-rs-ec5fdc0d486d
   position: after
   order: 10
   groups:
@@ -2010,6 +2558,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000027
+    segmentId: ipg-b000027-rs-a8a8ec74eb63
   position: after
   order: 20
   groups:
@@ -2031,6 +2580,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000027
+    segmentId: ipg-b000027-rs-1e71e8e65235
   position: after
   order: 30
   groups:
@@ -2071,6 +2621,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000029
+    segmentId: ipg-b000029-rs-c8487c092978
   position: after
   order: 10
   groups:
@@ -2090,6 +2641,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000029
+    segmentId: ipg-b000029-rs-34f4da8af34f
   position: after
   order: 20
   groups:
@@ -2114,6 +2666,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000029
+    segmentId: ipg-b000029-rs-432a1a194819
   position: after
   order: 30
   groups:
@@ -2163,6 +2716,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000031
+    segmentId: ipg-b000031-rs-c56d5d1e3d6f
   position: after
   order: 10
   groups:
@@ -2187,6 +2741,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000031
+    segmentId: ipg-b000031-rs-68105f7b398d
   position: after
   order: 20
   groups:
@@ -2211,6 +2766,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000031
+    segmentId: ipg-b000031-rs-0c2ce457bbd9
   position: after
   order: 30
   groups:
@@ -2256,6 +2812,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000033
+    segmentId: ipg-b000033-rs-4670c5c95502
   position: after
   order: 10
   groups:
@@ -2276,6 +2833,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000033
+    segmentId: ipg-b000033-rs-77cafdce455d
   position: after
   order: 20
   groups:
@@ -2295,6 +2853,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000034
+    segmentId: ipg-b000034-rs-d11e6f7dbc75
   position: after
   order: 10
   groups:
@@ -2314,6 +2873,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000034
+    segmentId: ipg-b000034-rs-b4a4c9acb125
   position: after
   order: 20
   groups:

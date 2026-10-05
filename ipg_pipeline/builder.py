@@ -2,11 +2,11 @@ from __future__ import annotations
 
 import json
 import re
-from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
 from .core import ROOT, sha256_bytes
+from .reading import reading_events
 
 
 VERSION_NOTES_PATH = Path("src/ipg/version-notes.md")
@@ -49,18 +49,6 @@ def render_markdown(
 ) -> str:
     version_notes = read_version_notes() if version_notes is None else version_notes
     values = display_values["values"]
-    annotations: dict[tuple[str, str, str], list[dict[str, Any]]] = defaultdict(list)
-    for document in documents:
-        for annotation in document.get("publicationAnnotations", []):
-            key = (annotation["anchor"]["type"], annotation["anchor"]["id"], annotation["position"])
-            annotations[key].append(annotation)
-    for anchored in annotations.values():
-        anchored.sort(key=lambda item: item["order"])
-
-    def add_annotations(lines: list[str], anchor_type: str, anchor_id: str, position: str) -> None:
-        for annotation in annotations.get((anchor_type, anchor_id, position), []):
-            lines.extend(_annotation_markdown(annotation))
-
     def translated(text: dict[str, str]) -> str:
         return text["zh"] or f"**[CANDIDATE 缺译]** {text['en']}"
 
@@ -83,49 +71,34 @@ def render_markdown(
     lines.extend([version_notes, "", "# 万智牌违规处理方针", "", f"版本：{manifest['releaseId']}", ""])
 
     for document in documents:
-        for section in document["sections"]:
-            add_annotations(lines, "section", section["id"], "before")
-            top_level = section["kind"] in {"front-matter", "chapter", "appendix"}
-            level = 2 if top_level else 3
-            prefix = "" if section["kind"] == "front-matter" else f"{section['number']} "
-            heading = f"{'#' * level} {prefix}{translated(section['title'])}"
-            if section["title"]["zh"]:
-                heading += f" ({section['title']['en']})"
-            lines.extend([heading, ""])
-            if "penaltyCode" in section:
-                lines.extend([f"**处罚：{values[section['penaltyCode']]['zh']}**", ""])
-            add_annotations(lines, "section", section["id"], "inside-start")
-            for component in section["components"]:
-                add_annotations(lines, "component", component["id"], "before")
-                if component["role"] != "body" and section["kind"] != "appendix":
-                    lines.extend([f"#### {values[component['labelCode']]['zh']}", ""])
-                add_annotations(lines, "component", component["id"], "inside-start")
-                for group in component["groups"]:
-                    add_annotations(lines, "group", group["id"], "before")
-                    add_annotations(lines, "group", group["id"], "inside-start")
-                    if "date" in group:
-                        lines.extend([f"### {group['date']}", ""])
-                    for block in group["blocks"]:
-                        add_annotations(lines, "block", block["id"], "before")
-                        value = translated(block["text"])
-                        marker = block.get("marker")
-                        if block["type"] == "appendix-row":
-                            value = f"{value} — {values[block['displayCode']]['zh']}"
-                        if marker == "bullet":
-                            lines.extend([f"- {value}", ""])
-                        elif marker:
-                            lines.extend([f"{marker}. {value}", ""])
-                        elif block["type"] == "change-entry":
-                            lines.extend([f"- {value}", ""])
-                        else:
-                            lines.extend([value, ""])
-                        add_annotations(lines, "block", block["id"], "after")
-                    add_annotations(lines, "group", group["id"], "inside-end")
-                    add_annotations(lines, "group", group["id"], "after")
-                add_annotations(lines, "component", component["id"], "inside-end")
-                add_annotations(lines, "component", component["id"], "after")
-            add_annotations(lines, "section", section["id"], "inside-end")
-            add_annotations(lines, "section", section["id"], "after")
+        for kind, node, _ in reading_events(document):
+            if kind == "section":
+                section = node
+                level = 2 if section["kind"] in {"front-matter", "chapter", "appendix"} else 3
+                prefix = "" if section["kind"] == "front-matter" else f"{section['number']} "
+                heading = f"{'#' * level} {prefix}{translated(section['title'])}"
+                if section["title"]["zh"]:
+                    heading += f" ({section['title']['en']})"
+                lines.extend([heading, ""])
+                if "penaltyCode" in section:
+                    lines.extend([f"**处罚：{values[section['penaltyCode']]['zh']}**", ""])
+            elif kind == "component":
+                if node["role"] != "body" and section["kind"] != "appendix":
+                    lines.extend([f"#### {values[node['labelCode']]['zh']}", ""])
+            elif kind == "group" and "date" in node:
+                lines.extend([f"### {node['date']}", ""])
+            elif kind == "annotation":
+                lines.extend(_annotation_markdown(node))
+            elif kind in {"block", "reading-segment"}:
+                value = translated(node["text"])
+                marker = node.get("marker")
+                if node["type"] == "appendix-row":
+                    value = f"{value} — {values[node['displayCode']]['zh']}"
+                if marker == "bullet" or node["type"] == "change-entry":
+                    value = f"- {value}"
+                elif marker:
+                    value = f"{marker}. {value}"
+                lines.extend([value, ""])
     return "\n".join(lines).rstrip() + "\n"
 
 

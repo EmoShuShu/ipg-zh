@@ -8,6 +8,7 @@ from typing import Any
 import yaml
 
 from .core import sha256_bytes, sha256_text
+from .reading import reading_events
 
 
 def collect_units(
@@ -27,63 +28,21 @@ def collect_units(
         )
     for filename, document in documents:
         relative = f"src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001/{filename}"
-        for section_index, section in enumerate(document["sections"]):
-            units.append(
-                {
-                    "id": f"title:{section['id']}",
-                    "kind": "title",
-                    "source": section["title"]["en"],
-                    "target": section["title"]["zh"],
-                    "file": relative,
-                    "pointer": ["sections", section_index, "title", "zh"],
-                }
-            )
-            for component_index, component in enumerate(section["components"]):
-                for group_index, group in enumerate(component["groups"]):
+        def append_unit(node, pointer, prefix, kind, field="text"):
+            units.append({"id": f"{prefix}:{node['id']}", "kind": kind,
+                          "source": node[field]["en"], "target": node[field]["zh"],
+                          "file": relative, "pointer": [*pointer, field, "zh"]})
+
+        for kind, node, pointer in reading_events(document):
+            if kind == "section":
+                append_unit(node, pointer, "title", "title", "title")
+            elif kind in {"block", "reading-segment"}:
+                append_unit(node, pointer, kind, "official-body")
+            elif kind == "annotation":
+                for group_index, group in enumerate(node["groups"]):
                     for block_index, block in enumerate(group["blocks"]):
-                        units.append(
-                            {
-                                "id": f"block:{block['id']}",
-                                "kind": "official-body",
-                                "source": block["text"]["en"],
-                                "target": block["text"]["zh"],
-                                "file": relative,
-                                "pointer": [
-                                    "sections",
-                                    section_index,
-                                    "components",
-                                    component_index,
-                                    "groups",
-                                    group_index,
-                                    "blocks",
-                                    block_index,
-                                    "text",
-                                    "zh",
-                                ],
-                            }
-                        )
-        for annotation_index, annotation in enumerate(document["publicationAnnotations"]):
-            for group_index, group in enumerate(annotation["groups"]):
-                for block_index, block in enumerate(group["blocks"]):
-                    units.append(
-                        {
-                            "id": f"annotation-block:{block['id']}",
-                            "kind": "publication-annotation",
-                            "source": block["text"]["en"],
-                            "target": block["text"]["zh"],
-                            "file": relative,
-                            "pointer": [
-                                "publicationAnnotations",
-                                annotation_index,
-                                "groups",
-                                group_index,
-                                "blocks",
-                                block_index,
-                                "text",
-                                "zh",
-                            ],
-                        }
-                    )
+                        append_unit(block, [*pointer, "groups", group_index, "blocks", block_index],
+                                    "annotation-block", "publication-annotation")
     ids = [unit["id"] for unit in units]
     if len(ids) != len(set(ids)):
         raise ValueError("duplicate OmegaT unit id generated")
@@ -95,11 +54,8 @@ def _po_quote(value: str) -> str:
 
 
 def render_po(units: list[dict[str, Any]]) -> str:
-    lines = [
-        'msgid ""',
-        'msgstr "Content-Type: text/plain; charset=UTF-8\\n"',
-        "",
-    ]
+    # Match mtr-zh: OmegaT otherwise displays the PO metadata as a review unit.
+    lines: list[str] = []
     for unit in units:
         lines.extend(
             [

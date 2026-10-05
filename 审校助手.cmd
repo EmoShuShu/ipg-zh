@@ -1,9 +1,11 @@
 @echo off
 chcp 65001 >nul
+cd /d "%~dp0"
+set "PYTHONUTF8=1"
 set "IPG_PYTHON=%~dp0.venv\Scripts\python.exe"
 if not exist "%IPG_PYTHON%" (
-  echo 未找到项目 Python 环境：%IPG_PYTHON%
-  echo 请先按照 README 完成本地环境安装。
+  echo Project Python environment not found: %IPG_PYTHON%
+  echo Please follow README to install the local environment.
   pause
   exit /b 1
 )

@@ -59,6 +59,7 @@ def _write_preview_markdown(preview: dict[str, Any]) -> None:
         f"- 本批文件：{', '.join(preview['selectedPo'])}",
         f"- 已审单元：{preview['reviewedUnitCount']}",
         f"- 实际修改：{preview['actualChangeCount']}",
+        f"- 同步汇总中文：{len(preview.get('derivedChanges', []))}",
         f"- 确认保留旧译：{preview['reviewedUnchangedCount']}",
         f"- 含句段批注的单元：{preview['noteUnitCount']}",
         f"- 12 项初始缺译中尚余：{preview['initialMissingRemaining']}",
@@ -79,6 +80,9 @@ def _write_preview_markdown(preview: dict[str, Any]) -> None:
                 "",
             ]
         )
+    for change in preview.get("derivedChanges", []):
+        lines.extend(["### 同步父段落汇总中文", "", f"- 文件：{change['file']}",
+                      f"- 原译：{change['oldTarget']}", f"- 新译：{change['newTarget']}", ""])
     PREVIEW_MARKDOWN.parent.mkdir(parents=True, exist_ok=True)
     PREVIEW_MARKDOWN.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
@@ -184,6 +188,7 @@ def _confirm(preview: dict[str, Any]) -> bool:
     print(f"  本批文件：{'、'.join(preview['selectedPo'])}")
     print(f"  已审单元：{preview['reviewedUnitCount']}")
     print(f"  实际修改：{preview['actualChangeCount']}")
+    print(f"  同步汇总中文：{len(preview.get('derivedChanges', []))}")
     print(f"  确认保留旧译：{preview['reviewedUnchangedCount']}")
     print(f"  含句段批注的单元：{preview['noteUnitCount']}")
     print(f"  12 项初始缺译中尚余：{preview['initialMissingRemaining']}")

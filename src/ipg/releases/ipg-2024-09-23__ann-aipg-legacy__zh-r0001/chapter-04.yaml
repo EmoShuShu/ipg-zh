@@ -58,6 +58,29 @@ sections:
         - raw-L003100
         - raw-L003106
         - raw-L003108
+        readingSegments:
+        - id: ipg-b000139-rs-ba75ffdba825
+          sourceRange:
+          - 0
+          - 215
+          text:
+            en: Unsporting behavior is not the same as a lack of sporting behavior. There is a wide middle ground
+              of “competitive” behavior that is certainly neither “nice” nor “sporting” but still doesn’t qualify
+              as “unsporting.”
+            zh: 举止违背运动道德和缺乏运动家精神并不一样。“竞争性”的行为有很多的灰色地带，它们确实不“友好”，也非“具有运动家精神”，但也不能算是“举止违背运动道德”。
+          legacyRawUnits:
+          - raw-L003098
+          - raw-L003100
+        - id: ipg-b000139-rs-8dcd07836dc6
+          sourceRange:
+          - 215
+          - 290
+          text:
+            en: The Head Judge is the final arbiter on what constitutes unsporting conduct.
+            zh: 主审是判定举止是否举止违背运动道德的最终仲裁者。
+          legacyRawUnits:
+          - raw-L003106
+          - raw-L003108
       - id: ipg-b000140
         type: paragraph
         text:
@@ -116,6 +139,28 @@ sections:
         - raw-L003130
         - raw-L003152
         - raw-L003154
+        readingSegments:
+        - id: ipg-b000141-rs-c749eea9c0a1
+          sourceRange:
+          - 0
+          - 80
+          text:
+            en: A player takes action that is disruptive to the tournament or its participants.
+            zh: 牌手的个人行为对比赛或是参与者产生干扰。
+          legacyRawUnits:
+          - raw-L003128
+          - raw-L003130
+        - id: ipg-b000141-rs-76dd4862d79a
+          sourceRange:
+          - 80
+          - 201
+          text:
+            en: It may affect the comfort level of those around the individual, but determining whether this is
+              the case is not required.
+            zh: 这可能会妨碍到该人周遭的舒适气氛，不过是否造成妨碍并非判定的必要条件。
+          legacyRawUnits:
+          - raw-L003152
+          - raw-L003154
   - id: ipg-c000059
     role: examples
     labelCode: component.examples
@@ -293,6 +338,39 @@ sections:
         - raw-L003220
         - raw-L003230
         - raw-L003232
+        readingSegments:
+        - id: ipg-b000149-rs-2cc39e161828
+          sourceRange:
+          - 0
+          - 49
+          text:
+            en: The player must correct the problem immediately.
+            zh: 该牌手必须立即更正问题。
+          legacyRawUnits:
+          - raw-L003210
+          - raw-L003212
+        - id: ipg-b000149-rs-f4c90ed27977
+          sourceRange:
+          - 49
+          - 157
+          text:
+            en: Subsequent Unsporting Conduct — Minor infractions, even for different offenses, will result in
+              a Game Loss.
+            zh: 再次犯下举止违背运动道德～轻微，会导致一盘负；即使是不同类型的违犯也一样。
+          legacyRawUnits:
+          - raw-L003218
+          - raw-L003220
+        - id: ipg-b000149-rs-b19e160697ff
+          sourceRange:
+          - 157
+          - 321
+          text:
+            en: If a Game Loss is issued for repeated infractions, and it occurs at the end of a game, it is acceptable
+              for the judge to apply the penalty to the next game instead.
+            zh: 如果因为累犯而给予一盘负，且是在发生在一盘游戏结束时，裁判可以改为在下一盘才让处罚生效。
+          legacyRawUnits:
+          - raw-L003230
+          - raw-L003232
   classification: unsporting-conduct
   penaltyCode: penalty.warning
 - id: ipg-s4-2
@@ -339,6 +417,39 @@ sections:
         - raw-L003274
         - raw-L003288
         - raw-L003290
+        readingSegments:
+        - id: ipg-b000150-rs-4d5df4ea560e
+          sourceRange:
+          - 0
+          - 160
+          text:
+            en: A player takes action towards one or more individuals that could reasonably be expected to create
+              a feeling of being harassed, threatened, bullied, or stalked.
+            zh: 牌手向一人或多人做出易使对方产生受骚扰、威胁、欺侮、尾随感受的不端行为。
+          legacyRawUnits:
+          - raw-L003252
+          - raw-L003254
+        - id: ipg-b000150-rs-239a8d8a2ae8
+          sourceRange:
+          - 160
+          - 282
+          text:
+            en: This may include insults based on race, color, religion, national origin, age, gender, disability,
+              or sexual orientation.
+            zh: 这包括侮辱他人的人种、肤色、宗教、国籍、年龄、性别、残疾或是性取向。
+          legacyRawUnits:
+          - raw-L003272
+          - raw-L003274
+        - id: ipg-b000150-rs-fc34b5015824
+          sourceRange:
+          - 282
+          - 373
+          text:
+            en: Threats of physical violence should be treated as Unsporting Conduct – Aggressive Behavior.
+            zh: 肢体暴力挑衅应依照“举止违背运动道德～攻击性举止”进行处理。
+          legacyRawUnits:
+          - raw-L003288
+          - raw-L003290
       - id: ipg-b000151
         type: paragraph
         text:
@@ -504,6 +615,29 @@ sections:
         - raw-L003394
         - raw-L003400
         - raw-L003402
+        readingSegments:
+        - id: ipg-b000158-rs-aa4a4f80031e
+          sourceRange:
+          - 0
+          - 134
+          text:
+            en: A safe environment is a basic expectation of any tournament attendee. Harassment undermines the
+              safety and integrity of a tournament.
+            zh: 安全的比赛环境是所有参赛者最基本的预期。对他人进行骚扰会破坏比赛的安全与公正。
+          legacyRawUnits:
+          - raw-L003392
+          - raw-L003394
+        - id: ipg-b000158-rs-db8a053d25ad
+          sourceRange:
+          - 134
+          - 303
+          text:
+            en: Players who purposefully create harmful or unwelcoming situations in a tournament are expected
+              to immediately correct the behavior and demonstrate remorse or be removed.
+            zh: 在比赛中故意寻衅惹事的牌手应立即改正并道歉，否则便会被逐出赛场。
+          legacyRawUnits:
+          - raw-L003400
+          - raw-L003402
       - id: ipg-b000159
         type: paragraph
         text:
@@ -541,6 +675,51 @@ sections:
         - raw-L003438
         - raw-L003448
         - raw-L003450
+        readingSegments:
+        - id: ipg-b000159-rs-c7756e1bd45b
+          sourceRange:
+          - 0
+          - 125
+          text:
+            en: Because of the confrontational nature of this infraction, judges need to end any match in progress
+              and separate the players.
+            zh: 由于出现次违规时双方牌手会在情绪上有所对立，裁判要终止正在进行的比赛，并将涉事双方牌手分开，
+          legacyRawUnits:
+          - raw-L003416
+          - raw-L003418
+        - id: ipg-b000159-rs-ee57e0839108
+          sourceRange:
+          - 125
+          - 338
+          text:
+            en: Care should be taken not to escalate the situation if at all possible. The offender will be removed
+              from the area to receive the penalty, and education about why the behavior is unacceptable regardless
+              of excuse.
+            zh: 同时应尽力进行安抚，保证事态不致升级。裁判应将犯下此违规的牌手带离比赛区域，给予处罚，并教育牌手不管理由为何，都不应该进行这类行为。
+          legacyRawUnits:
+          - raw-L003424
+          - raw-L003426
+        - id: ipg-b000159-rs-dbfc1c1bc9f2
+          sourceRange:
+          - 338
+          - 391
+          text:
+            en: They may need a few moments to cool down afterwards.
+            zh: 此后牌手可能需要一段时间冷静。
+          legacyRawUnits:
+          - raw-L003436
+          - raw-L003438
+        - id: ipg-b000159-rs-7670258a1f76
+          sourceRange:
+          - 391
+          - 512
+          text:
+            en: Apologizing is encouraged, but the desire of the other individuals to not interact with their
+              harasser must be respected.
+            zh: 虽然应促使双方谅解，但若受骚扰方表达出不愿再与骚扰方接触的意愿，也应予以尊重。
+          legacyRawUnits:
+          - raw-L003448
+          - raw-L003450
       - id: ipg-b000160
         type: paragraph
         text:
@@ -565,6 +744,28 @@ sections:
         - raw-L003462
         - raw-L003468
         - raw-L003470
+        readingSegments:
+        - id: ipg-b000160-rs-5b932732bac3
+          sourceRange:
+          - 0
+          - 89
+          text:
+            en: Officials must investigate these matters as soon as they are brought to their attention.
+            zh: 当有人就此行为唤起工作人员注意时，工作人员应尽快对此类事端进行调查。
+          legacyRawUnits:
+          - raw-L003460
+          - raw-L003462
+        - id: ipg-b000160-rs-590f02c46eb2
+          sourceRange:
+          - 89
+          - 274
+          text:
+            en: If they determine that the infraction does not meet the criteria for Unsporting Conduct – Major,
+              it is still recommended that the players be talked to to avoid future misunderstandings.
+            zh: 即便认定有关违规不符合“举止违背运动道德～严重”的定义，也建议向双方牌手进行解释，以免再生误会。
+          legacyRawUnits:
+          - raw-L003468
+          - raw-L003470
   - id: ipg-c000065
     role: additional-remedy
     labelCode: component.additional-remedy
@@ -595,6 +796,28 @@ sections:
         - raw-L003484
         - raw-L003490
         - raw-L003492
+        readingSegments:
+        - id: ipg-b000161-rs-f1612bd6008c
+          sourceRange:
+          - 0
+          - 50
+          text:
+            en: The player must correct the behavior immediately.
+            zh: 牌手必须立刻改正其行为。
+          legacyRawUnits:
+          - raw-L003482
+          - raw-L003484
+        - id: ipg-b000161-rs-d14dd392c9d0
+          sourceRange:
+          - 50
+          - 173
+          text:
+            en: If the offense occurs at the end of a match, it is acceptable for the judge to apply the penalty
+              to the next match instead.
+            zh: 如果违规是发生在一局游戏结束时，裁判可以改为在下一局才让处罚生效。
+          legacyRawUnits:
+          - raw-L003490
+          - raw-L003492
   - id: ipg-c000066
     role: upgrade
     labelCode: component.upgrade
@@ -1369,6 +1592,39 @@ sections:
         - raw-L003842
         - raw-L003848
         - raw-L003850
+        readingSegments:
+        - id: ipg-b000195-rs-a0f4e2b5c205
+          sourceRange:
+          - 0
+          - 77
+          text:
+            en: Players enter a tournament expecting that their materials will be protected.
+            zh: 牌手加入比赛之后，他们的物品就应该受到保护。
+          legacyRawUnits:
+          - raw-L003832
+          - raw-L003834
+        - id: ipg-b000195-rs-95250eb486a4
+          sourceRange:
+          - 77
+          - 280
+          text:
+            en: This does not absolve the players from their responsibility to keep an eye on their possessions,
+              but they should expect to be able to retain the product they began with or were given for the tournament.
+            zh: 这并不是免除牌手留意自我财物的责任；但他们必须能够保有开赛时的产品，或是给他们比赛用的物品。
+          legacyRawUnits:
+          - raw-L003840
+          - raw-L003842
+        - id: ipg-b000195-rs-efb691cc346c
+          sourceRange:
+          - 280
+          - 449
+          text:
+            en: Other instances of theft not involving tournament materials are the responsibility of the Tournament
+              Organizer, though judges are encouraged to help in any way possible.
+            zh: 其他未牵涉比赛物品的偷窃，便是比赛承办人的责任，裁判也要尽量提供帮助。
+          legacyRawUnits:
+          - raw-L003848
+          - raw-L003850
   - id: ipg-c000080
     role: additional-remedy
     labelCode: component.additional-remedy
@@ -1432,6 +1688,27 @@ sections:
         - raw-L003874
         - raw-L003880
         - raw-L003882
+        readingSegments:
+        - id: ipg-b000197-rs-ab60f93a530c
+          sourceRange:
+          - 0
+          - 82
+          text:
+            en: A player intentionally plays slowly in order to take advantage of the time limit.
+            zh: 牌手为了得到时间限制上的优势，故意过慢进行游戏。
+          legacyRawUnits:
+          - raw-L003872
+          - raw-L003874
+        - id: ipg-b000197-rs-ab506a51e80c
+          sourceRange:
+          - 82
+          - 172
+          text:
+            en: If the slow play is not intentional, please refer to Tournament Error — Slow Play instead.
+            zh: 如果进行过慢并非蓄意，请参见比赛失误～游戏进行过慢。
+          legacyRawUnits:
+          - raw-L003880
+          - raw-L003882
   - id: ipg-c000082
     role: examples
     labelCode: component.examples
@@ -1652,6 +1929,28 @@ sections:
         - raw-L003986
         - raw-L003992
         - raw-L003994
+        readingSegments:
+        - id: ipg-b000207-rs-cbcebc9a06a8
+          sourceRange:
+          - 0
+          - 99
+          text:
+            en: If all criteria are not met, the offense is not Cheating and is handled by a different infraction.
+            zh: 如果某违规并未同时满足上述两个要素，则该行为便不属于“作弊”，且应依照其他种类之违规进行处理。
+          legacyRawUnits:
+          - raw-L003984
+          - raw-L003986
+        - id: ipg-b000207-rs-dd1cd7191d17
+          sourceRange:
+          - 99
+          - 269
+          text:
+            en: Cheating will often appear on the surface as a Game Play Error or Tournament Error, and must be
+              investigated by the judge to make a determination of intent and awareness.
+            zh: 作弊这类违规表面上看起来通常很类似游戏行动失误或是比赛失误，裁判必须经过调查方得以断定牌手背后之意图及其对规则的了解程度。
+          legacyRawUnits:
+          - raw-L003992
+          - raw-L003994
   - id: ipg-c000084
     role: examples
     labelCode: component.examples
@@ -1818,6 +2117,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000139
+    segmentId: ipg-b000139-rs-ba75ffdba825
   position: after
   order: 10
   groups:
@@ -1840,6 +2140,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000139
+    segmentId: ipg-b000139-rs-8dcd07836dc6
   position: after
   order: 20
   groups:
@@ -1886,6 +2187,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000141
+    segmentId: ipg-b000141-rs-c749eea9c0a1
   position: after
   order: 10
   groups:
@@ -1955,6 +2257,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000141
+    segmentId: ipg-b000141-rs-76dd4862d79a
   position: after
   order: 20
   groups:
@@ -2053,6 +2356,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000149
+    segmentId: ipg-b000149-rs-2cc39e161828
   position: after
   order: 10
   groups:
@@ -2073,6 +2377,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000149
+    segmentId: ipg-b000149-rs-f4c90ed27977
   position: after
   order: 20
   groups:
@@ -2104,6 +2409,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000149
+    segmentId: ipg-b000149-rs-b19e160697ff
   position: after
   order: 30
   groups:
@@ -2135,6 +2441,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000150
+    segmentId: ipg-b000150-rs-4d5df4ea560e
   position: after
   order: 10
   groups:
@@ -2191,6 +2498,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000150
+    segmentId: ipg-b000150-rs-239a8d8a2ae8
   position: after
   order: 20
   groups:
@@ -2239,6 +2547,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000150
+    segmentId: ipg-b000150-rs-fc34b5015824
   position: after
   order: 30
   groups:
@@ -2485,6 +2794,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000158
+    segmentId: ipg-b000158-rs-aa4a4f80031e
   position: after
   order: 10
   groups:
@@ -2504,6 +2814,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000158
+    segmentId: ipg-b000158-rs-db8a053d25ad
   position: after
   order: 20
   groups:
@@ -2555,6 +2866,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000159
+    segmentId: ipg-b000159-rs-c7756e1bd45b
   position: after
   order: 10
   groups:
@@ -2579,6 +2891,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000159
+    segmentId: ipg-b000159-rs-ee57e0839108
   position: after
   order: 20
   groups:
@@ -2614,6 +2927,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000159
+    segmentId: ipg-b000159-rs-dbfc1c1bc9f2
   position: after
   order: 30
   groups:
@@ -2645,6 +2959,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000159
+    segmentId: ipg-b000159-rs-7670258a1f76
   position: after
   order: 40
   groups:
@@ -2678,6 +2993,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000160
+    segmentId: ipg-b000160-rs-5b932732bac3
   position: after
   order: 10
   groups:
@@ -2700,6 +3016,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000160
+    segmentId: ipg-b000160-rs-590f02c46eb2
   position: after
   order: 20
   groups:
@@ -2735,6 +3052,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000161
+    segmentId: ipg-b000161-rs-f1612bd6008c
   position: after
   order: 10
   groups:
@@ -2755,6 +3073,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000161
+    segmentId: ipg-b000161-rs-d14dd392c9d0
   position: after
   order: 20
   groups:
@@ -3452,6 +3771,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000195
+    segmentId: ipg-b000195-rs-a0f4e2b5c205
   position: after
   order: 10
   groups:
@@ -3472,6 +3792,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000195
+    segmentId: ipg-b000195-rs-95250eb486a4
   position: after
   order: 20
   groups:
@@ -3494,6 +3815,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000195
+    segmentId: ipg-b000195-rs-efb691cc346c
   position: after
   order: 30
   groups:
@@ -3534,6 +3856,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000197
+    segmentId: ipg-b000197-rs-ab60f93a530c
   position: after
   order: 10
   groups:
@@ -3556,6 +3879,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000197
+    segmentId: ipg-b000197-rs-ab506a51e80c
   position: after
   order: 20
   groups:
@@ -3803,6 +4127,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000207
+    segmentId: ipg-b000207-rs-cbcebc9a06a8
   position: after
   order: 10
   groups:
@@ -3824,6 +4149,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000207
+    segmentId: ipg-b000207-rs-dd1cd7191d17
   position: after
   order: 20
   groups:

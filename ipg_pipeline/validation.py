@@ -4,27 +4,12 @@ from collections import Counter
 from typing import Any
 
 from .core import ROOT, anchor_position_is_legal, sha256_text, validate_schema, walk_nodes
+from .omegat import collect_units
 
 
 def _review_units(documents: list[dict[str, Any]], display_values: dict[str, Any]) -> dict[str, tuple[str, str]]:
-    units = {
-        f"display:{code}": (value["en"], value["zh"])
-        for code, value in display_values.get("values", {}).items()
-    }
-    for document in documents:
-        for section in document["sections"]:
-            units[f"title:{section['id']}"] = (section["title"]["en"], section["title"]["zh"])
-            for kind, node in walk_nodes([{"sections": [section]}]):
-                if kind == "block":
-                    units[f"block:{node['id']}"] = (node["text"]["en"], node["text"]["zh"])
-        for annotation in document.get("publicationAnnotations", []):
-            for group in annotation["groups"]:
-                for block in group["blocks"]:
-                    units[f"annotation-block:{block['id']}"] = (
-                        block["text"]["en"],
-                        block["text"]["zh"],
-                    )
-    return units
+    return {unit["id"]: (unit["source"], unit["target"])
+            for unit in collect_units([(str(index), d) for index, d in enumerate(documents)], display_values)}
 
 
 def validate_release(
@@ -51,6 +36,27 @@ def validate_release(
     nodes = [(kind, node) for document in documents for kind, node in walk_nodes([document])]
     annotations = [item for document in documents for item in document.get("publicationAnnotations", [])]
     id_counts = Counter(item.get("id") for _, item in nodes)
+    segments_by_block = {}
+    for kind, block in nodes:
+        if kind != "block" or "readingSegments" not in block:
+            continue
+        segments = block["readingSegments"]
+        segments_by_block[block["id"]] = {segment["id"] for segment in segments}
+        cursor = 0
+        raw_ids = []
+        for segment in segments:
+            id_counts[segment["id"]] += 1
+            start, end = segment["sourceRange"]
+            if start != cursor or end <= start or segment["text"]["en"] != block["text"]["en"][start:end].strip():
+                structural.append({"code": "invalid-reading-range", "targetId": segment["id"]})
+            cursor = end
+            raw_ids.extend(segment["legacyRawUnits"])
+            if not segment["text"]["zh"]:
+                readiness.append({"code": "missing-translation", "targetId": segment["id"]})
+        if cursor != len(block["text"]["en"]) or raw_ids != block.get("legacyRawUnits"):
+            structural.append({"code": "incomplete-reading-coverage", "targetId": block["id"]})
+        if "\n\n".join(segment["text"]["zh"] for segment in segments) != block["text"]["zh"]:
+            structural.append({"code": "reading-target-mismatch", "targetId": block["id"]})
     id_counts.update(item.get("id") for item in annotations)
     for annotation in annotations:
         for group in annotation.get("groups", []):
@@ -104,6 +110,8 @@ def validate_release(
             readiness.append(
                 {"code": "orphan-publication-annotation", "targetId": annotation["id"], "anchorId": anchor["id"]}
             )
+        if "segmentId" in anchor and anchor["segmentId"] not in segments_by_block.get(anchor["id"], set()):
+            structural.append({"code": "invalid-reading-anchor", "targetId": annotation["id"]})
         if not anchor_position_is_legal(anchor["type"], annotation["position"]):
             structural.append(
                 {
@@ -186,7 +194,11 @@ def validate_release(
                 }
             )
 
-    current_units = _review_units(documents, display_values)
+    # Invalid/duplicate content is already a structural failure; still return a report.
+    try:
+        current_units = _review_units(documents, display_values)
+    except ValueError:
+        current_units = {}
     if review_ledger is None:
         readiness.append({"code": "missing-review-ledger", "targetId": "review-ledger"})
     else:

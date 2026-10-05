@@ -37,6 +37,10 @@
         "id": {"type": "string", "pattern": "^ipg-"},
         "type": {"enum": ["paragraph", "list-item", "appendix-row", "change-entry"]},
         "text": {"$ref": "#/$defs/localized"},
+        "readingSegments": {
+          "type": "array", "minItems": 2,
+          "items": {"$ref": "#/$defs/readingSegment"}
+        },
         "marker": {"type": "string"},
         "displayCode": {"type": "string"},
         "referenceId": {"type": "string", "pattern": "^ipg-"},
@@ -59,6 +63,10 @@
       },
       "allOf": [
         {
+          "if": {"required": ["readingSegments"]},
+          "then": {"properties": {"type": {"enum": ["paragraph", "list-item"]}}}
+        },
+        {
           "if": {"properties": {"type": {"const": "appendix-row"}}, "required": ["type"]},
           "then": {"required": ["displayCode", "referenceId"]}
         },
@@ -67,6 +75,23 @@
           "then": {"required": ["ruleReferences"]}
         }
       ]
+    },
+    "readingSegment": {
+      "type": "object",
+      "required": ["id", "text", "sourceRange", "legacyRawUnits"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^ipg-.*-rs-[0-9a-f]{12}$"},
+        "text": {"$ref": "#/$defs/localized"},
+        "sourceRange": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "items": {"type": "integer", "minimum": 0}
+        },
+        "legacyRawUnits": {
+          "type": "array", "minItems": 2, "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^raw-"}
+        }
+      }
     },
     "group": {
       "type": "object",
@@ -168,8 +193,10 @@
           "additionalProperties": false,
           "properties": {
             "type": {"enum": ["section", "component", "group", "block"]},
-            "id": {"type": "string", "pattern": "^ipg-"}
-          }
+            "id": {"type": "string", "pattern": "^ipg-"},
+            "segmentId": {"type": "string", "pattern": "^ipg-.*-rs-[0-9a-f]{12}$"}
+          },
+          "allOf": [{"if": {"required": ["segmentId"]}, "then": {"properties": {"type": {"const": "block"}}}}]
         },
         "position": {"enum": ["before", "after", "inside-start", "inside-end"]},
         "order": {"type": "integer", "minimum": 0},

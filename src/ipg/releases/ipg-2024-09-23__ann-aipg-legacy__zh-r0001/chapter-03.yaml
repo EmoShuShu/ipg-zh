@@ -38,6 +38,28 @@ sections:
         - raw-L001909
         - raw-L001915
         - raw-L001917
+        readingSegments:
+        - id: ipg-b000036-rs-a46209f1efca
+          sourceRange:
+          - 0
+          - 64
+          text:
+            en: Tournament errors are violations of the Magic Tournament Rules.
+            zh: 比赛失误指的是违反《万智牌比赛规则》之违规行为。
+          legacyRawUnits:
+          - raw-L001907
+          - raw-L001909
+        - id: ipg-b000036-rs-9068c48f6eef
+          sourceRange:
+          - 64
+          - 169
+          text:
+            en: If the judge believes that the error was intentional, they should consider Unsporting Conduct
+              — Cheating.
+            zh: 假如裁判认为牌手系蓄意造成该失误，则应该首先考虑适用“举止违背运动道德～作弊”此违规。
+          legacyRawUnits:
+          - raw-L001915
+          - raw-L001917
       - id: ipg-b000037
         type: paragraph
         text:
@@ -63,6 +85,29 @@ sections:
         - raw-L001925
         - raw-L001931
         - raw-L001933
+        readingSegments:
+        - id: ipg-b000037-rs-4dd03ebdd495
+          sourceRange:
+          - 0
+          - 208
+          text:
+            en: If a player violates the Magic Tournament Rules in a way that is not covered by one of the infractions
+              listed below, the judge should explain the appropriate procedure to the player, but not issue a
+              penalty.
+            zh: 如果牌手违反了《万智牌比赛规则》，但又不符合下列各项违规之定义，则裁判应向该牌手说明正确的规程，但不需给予处罚。
+          legacyRawUnits:
+          - raw-L001923
+          - raw-L001925
+        - id: ipg-b000037-rs-164d091b577f
+          sourceRange:
+          - 208
+          - 288
+          text:
+            en: Continued or willful disregard of these rules may require further investigation.
+            zh: 如果牌手继续违反相关规则，或有意无视之，则可能需要进一步的调查。
+          legacyRawUnits:
+          - raw-L001931
+          - raw-L001933
       - id: ipg-b000038
         type: paragraph
         text:
@@ -87,6 +132,28 @@ sections:
         - raw-L001941
         - raw-L001947
         - raw-L001949
+        readingSegments:
+        - id: ipg-b000038-rs-e146de97a35b
+          sourceRange:
+          - 0
+          - 150
+          text:
+            en: A Warning for a Tournament Error offense is upgraded to a Game Loss if the player has already
+              received a Warning for an offense in the same category.
+            zh: 如果是第二次或更多次犯下同类型的比赛失误而受到警告，则升级为一盘负。
+          legacyRawUnits:
+          - raw-L001939
+          - raw-L001941
+        - id: ipg-b000038-rs-27ff81ab2dd7
+          sourceRange:
+          - 150
+          - 237
+          text:
+            en: For multi-day tournaments, the penalty count for these infractions resets between days.
+            zh: 对于历时多日的比赛而言，牌手当天的此类违规处罚累犯计数会在次日清零。
+          legacyRawUnits:
+          - raw-L001947
+          - raw-L001949
 - id: ipg-s3-1
   kind: infraction
   number: '3.1'
@@ -126,6 +193,29 @@ sections:
         - raw-L001963
         - raw-L001969
         - raw-L001971
+        readingSegments:
+        - id: ipg-b000039-rs-d3f05e95c87b
+          sourceRange:
+          - 0
+          - 122
+          text:
+            en: A player is not in their seat at the beginning of a round, or has not completed tasks assigned
+              within the time allocated.
+            zh: 牌手并未在一局比赛开始时坐在自己的座位上，或未能在规定的时间内完成指定的任务。
+          legacyRawUnits:
+          - raw-L001961
+          - raw-L001963
+        - id: ipg-b000039-rs-8c076574e3e7
+          sourceRange:
+          - 122
+          - 292
+          text:
+            en: If a round begins before the previous round would have ended (due to all players finishing early),
+              tardiness does not apply until the scheduled end of the previous round.
+            zh: 如果某局的开始时间早于前一局比赛原本预计结束的时间（由于所有牌手都提前完成对局），则要等到前一局比赛预计结束的时间之后，才会开始适用“迟到”违规。
+          legacyRawUnits:
+          - raw-L001969
+          - raw-L001971
       - id: ipg-b000040
         type: paragraph
         text:
@@ -259,6 +349,29 @@ sections:
         - raw-L002027
         - raw-L002037
         - raw-L002039
+        readingSegments:
+        - id: ipg-b000045-rs-8c5e3d8617f5
+          sourceRange:
+          - 0
+          - 138
+          text:
+            en: Players are responsible for being on time and in the correct seat for their matches, and for completing
+              registrations in a timely manner.
+            zh: 牌手有责任准时抵达正确的对局桌，以及在规定的时间内完成登记。
+          legacyRawUnits:
+          - raw-L002025
+          - raw-L002027
+        - id: ipg-b000045-rs-ab48a2ae009e
+          sourceRange:
+          - 138
+          - 319
+          text:
+            en: The Tournament Organizer may announce that they are giving the players some additional time before
+              a penalty is issued. Otherwise, the penalty is issued as soon as the round begins.
+            zh: 比赛主办人可以自行决定判处“迟到”此违规的额外等待时限，并向参赛牌手宣布。否则，在此局开始的同时就要给予一盘负的处罚。
+          legacyRawUnits:
+          - raw-L002037
+          - raw-L002039
   - id: ipg-c000018
     role: additional-remedy
     labelCode: component.additional-remedy
@@ -560,6 +673,31 @@ sections:
         - raw-L002152
         - raw-L002158
         - raw-L002160
+        readingSegments:
+        - id: ipg-b000058-rs-9f406bb38508
+          sourceRange:
+          - 0
+          - 316
+          text:
+            en: Visual modifications to cards, including brief text, that provide minor strategic information
+              or hints are acceptable and not considered notes. Detailed instructions or complex strategic advice
+              may not be written on cards. The Head Judge is the final arbiter on what cards and notes are acceptable
+              for a tournament.
+            zh: 牌上面的图样加工，包括间接地提供轻微策略信息的简短文字，均可以接受且不会认定为笔记。详细指示或复杂的策略建议不能写在牌上。在比赛中，主审是判定哪些牌与笔记可以接受的最终仲裁者。
+          legacyRawUnits:
+          - raw-L002150
+          - raw-L002152
+        - id: ipg-b000058-rs-0bc41ef27c54
+          sourceRange:
+          - 316
+          - 429
+          text:
+            en: Spectators who commit this infraction may be asked to leave the venue if they are not enrolled
+              in the tournament.
+            zh: 没有参与比赛的旁观者若是犯下此违规，可以要求他离开会场。
+          legacyRawUnits:
+          - raw-L002158
+          - raw-L002160
   - id: ipg-c000024
     role: downgrade
     labelCode: component.downgrade
@@ -625,6 +763,28 @@ sections:
         - raw-L002186
         - raw-L002200
         - raw-L002202
+        readingSegments:
+        - id: ipg-b000060-rs-c66bb2ae4f8b
+          sourceRange:
+          - 0
+          - 76
+          text:
+            en: A player takes longer than is reasonably required to complete game actions.
+            zh: 牌手在完成游戏中动作所需时间超过了合理的时长。
+          legacyRawUnits:
+          - raw-L002184
+          - raw-L002186
+        - id: ipg-b000060-rs-93dad88c46e3
+          sourceRange:
+          - 76
+          - 220
+          text:
+            en: If a judge believes a player is intentionally playing slowly to take advantage of a time limit,
+              the infraction is Unsporting Conduct — Stalling.
+            zh: 如果裁判相信牌手是蓄意进行过慢，来取得时间限制上的优势，则此违规应为“举止违背运动道德～拖延”。
+          legacyRawUnits:
+          - raw-L002200
+          - raw-L002202
       - id: ipg-b000061
         type: paragraph
         text:
@@ -762,6 +922,39 @@ sections:
         - raw-L002250
         - raw-L002256
         - raw-L002258
+        readingSegments:
+        - id: ipg-b000066-rs-9d90ca52abf5
+          sourceRange:
+          - 0
+          - 148
+          text:
+            en: All players have the responsibility to play quickly enough so that their opponents are not at
+              a significant disadvantage because of the time limit.
+            zh: 所有牌手都有迅速进行游戏的责任，以让对手不会因为时间限制而有明显的不利。
+          legacyRawUnits:
+          - raw-L002240
+          - raw-L002242
+        - id: ipg-b000066-rs-c95b2b502999
+          sourceRange:
+          - 148
+          - 287
+          text:
+            en: A player may be playing slowly without realizing it. A comment of “I need you to play faster”
+              is often appropriate and all that is needed.
+            zh: 牌手可能会无意间进行游戏过慢。对牌手说 “我希望你能进行的快速一点”通常就够了，而也只需要如此处理。再进一步的进行过慢就必须给予处罚。
+          legacyRawUnits:
+          - raw-L002248
+          - raw-L002250
+        - id: ipg-b000066-rs-cb69b31867a9
+          sourceRange:
+          - 287
+          - 325
+          text:
+            en: Further slow play should be penalized.
+            zh: 再进一步的进行过慢就必须给予处罚。
+          legacyRawUnits:
+          - raw-L002256
+          - raw-L002258
   - id: ipg-c000028
     role: additional-remedy
     labelCode: component.additional-remedy
@@ -793,6 +986,29 @@ sections:
         - raw-L002268
         - raw-L002274
         - raw-L002276
+        readingSegments:
+        - id: ipg-b000067-rs-52694ae9c274
+          sourceRange:
+          - 0
+          - 125
+          text:
+            en: In the event that the match exceeds the time limit, two additional turns are added to the number
+              of additional turns played.
+            zh: 若对局超出时间限制，则游戏将进行的延长回合数增加两个。
+          legacyRawUnits:
+          - raw-L002266
+          - raw-L002268
+        - id: ipg-b000067-rs-014218a6d459
+          sourceRange:
+          - 125
+          - 252
+          text:
+            en: This turn extension occurs before any end-of-match procedure can begin and after any time extensions
+              that may have been issued.
+            zh: 此延长回合会先于对局结束流程发生，且会在已有的任何补时结束之后才开始计算。
+          legacyRawUnits:
+          - raw-L002274
+          - raw-L002276
       - id: ipg-b000068
         type: paragraph
         text:
@@ -1001,6 +1217,39 @@ sections:
         - raw-L002358
         - raw-L002364
         - raw-L002366
+        readingSegments:
+        - id: ipg-b000076-rs-5227a7e8342c
+          sourceRange:
+          - 0
+          - 87
+          text:
+            en: Decklists are used to ensure that decks are not altered in the course of a tournament.
+            zh: 套牌登记表是用以确定套牌内容没有在比赛过程中变动。
+          legacyRawUnits:
+          - raw-L002348
+          - raw-L002350
+        - id: ipg-b000076-rs-87aeff2d65e3
+          sourceRange:
+          - 87
+          - 278
+          text:
+            en: Judges and other tournament officials should be vigilant about reminding players before the tournament
+              begins of the importance of submitting a legal decklist, and playing with a legal deck.
+            zh: 裁判和工作人员在比赛开始前，应该主动提醒牌手须登记合法的套牌登记表，也要以合法的套牌来进行比赛。
+          legacyRawUnits:
+          - raw-L002356
+          - raw-L002358
+        - id: ipg-b000076-rs-101f14e11562
+          sourceRange:
+          - 278
+          - 378
+          text:
+            en: A player normally receives a Game Loss if their decklist is altered after tournament play has
+              begun.
+            zh: 如果牌手在比赛开始之后因故须更新牌表，他通常会受到一盘负之处罚。
+          legacyRawUnits:
+          - raw-L002364
+          - raw-L002366
       - id: ipg-b000077
         type: paragraph
         text:
@@ -1046,6 +1295,30 @@ sections:
         - raw-L002386
         - raw-L002392
         - raw-L002394
+        readingSegments:
+        - id: ipg-b000078-rs-1fd4e1c068ba
+          sourceRange:
+          - 0
+          - 150
+          text:
+            en: Ambiguous or unclear names on a decklist may allow a player to manipulate the contents of their
+              deck up until the point at which they are discovered.
+            zh: 登记表上模棱两可或是不明确的名称，会让牌手有机会在被发现之前操作他们的实际套牌内容。
+          legacyRawUnits:
+          - raw-L002384
+          - raw-L002386
+        - id: ipg-b000078-rs-c0e8e9db2157
+          sourceRange:
+          - 150
+          - 429
+          text:
+            en: Truncated names of storyline characters on decklists (planeswalkers and other legendary permanents)
+              are acceptable as long as they are the only representation of that character in the format and are
+              treated as referring to that card, even if other cards begin with the same name.
+            zh: 对于套牌登记表上故事角色的名字（鹏洛客及其他传奇永久物），只要在此赛制中含有该名称的合法卡片只有一张，便可允许使用该角色名字之缩写。这类简写被视为指代前述之合法卡片，而非其他具有相同开头名称的牌张。
+          legacyRawUnits:
+          - raw-L002392
+          - raw-L002394
       - id: ipg-b000079
         type: paragraph
         text:
@@ -1137,6 +1410,28 @@ sections:
         - raw-L002436
         - raw-L002442
         - raw-L002444
+        readingSegments:
+        - id: ipg-b000082-rs-2e1c05fcf495
+          sourceRange:
+          - 0
+          - 53
+          text:
+            en: If the decklist contains illegal cards, remove them.
+            zh: 如果套牌登记表包含不合法的牌，则移除这些牌。
+          legacyRawUnits:
+          - raw-L002434
+          - raw-L002436
+        - id: ipg-b000082-rs-7abfa0e37ebc
+          sourceRange:
+          - 53
+          - 210
+          text:
+            en: If the decklist is being adjusted to allow for an intended companion, the player exchanges cards
+              between the deck and sideboard until the restriction is met.
+            zh: 如果需要调整套牌登记表以符合指定行侣牌的使用限制，则牌手需在主牌与备牌间调整直至符合行侣牌的使用限制。
+          legacyRawUnits:
+          - raw-L002442
+          - raw-L002444
       - id: ipg-b000083
         type: paragraph
         text:
@@ -1162,6 +1457,29 @@ sections:
         - raw-L002452
         - raw-L002458
         - raw-L002460
+        readingSegments:
+        - id: ipg-b000083-rs-07839f2e2d11
+          sourceRange:
+          - 0
+          - 69
+          text:
+            en: Alter the decklist to match the deck the player is actually playing.
+            zh: 将登记表按照实际使用的套牌组成进行更改。
+          legacyRawUnits:
+          - raw-L002450
+          - raw-L002452
+        - id: ipg-b000083-rs-2131e703d658
+          sourceRange:
+          - 69
+          - 341
+          text:
+            en: If the deck/sideboard and decklist both violate a maximum cards restriction (usually too many
+              cards in a sideboard, more than four of a card, or the same card in two decks in a Unified Constructed
+              format), remove cards as directed by the player to make the decklist legal.
+            zh: 如果套牌／备牌和套牌登记表同时违反最大张数限制（一般为备牌数量过多，同一张牌超过四张，或在使用“套牌联合构组规则”的赛制中于多于一副套牌内使用了同一张牌），则根据牌手的指示移除牌张，确保套牌登记表合法。
+          legacyRawUnits:
+          - raw-L002458
+          - raw-L002460
       - id: ipg-b000084
         type: paragraph
         text:
@@ -1482,6 +1800,31 @@ sections:
         - raw-L002594
         - raw-L002600
         - raw-L002602
+        readingSegments:
+        - id: ipg-b000098-rs-d373f0154c02
+          sourceRange:
+          - 0
+          - 323
+          text:
+            en: The most common forms of deck error are failure to desideboard and having a card in the wrong
+              deck. Both of these are difficult to gain advantage from without obvious cheating. Allowing the
+              opponent to choose which card they would otherwise be working with is sufficient to compensate for
+              the easily discovered situations.
+            zh: 最常见的套牌问题包括未能还原备牌，以及套牌中出现不属于该套牌的牌张。除非刻意作弊，否则牌手很难从这两种情况当中获利。由对手来选择他们本应对局的牌张，就足以修正这种较易注意到的情况。
+          legacyRawUnits:
+          - raw-L002592
+          - raw-L002594
+        - id: ipg-b000098-rs-3c7d1ce2f881
+          sourceRange:
+          - 323
+          - 476
+          text:
+            en: Duplicates of cards that begin in the main deck are more problematic, as they are not as easy
+              to realize and catch, and thus mandate an upgraded penalty.
+            zh: 但对于本来就在主牌中放入数张的牌而言，如果这类牌发生前述失误，会较难发现并指出该牌在套牌中的数量是否增多，因此在此情况下便须升级处罚。
+          legacyRawUnits:
+          - raw-L002600
+          - raw-L002602
       - id: ipg-b000099
         type: paragraph
         text:
@@ -1557,6 +1900,53 @@ sections:
         - raw-L002652
         - raw-L002658
         - raw-L002660
+        readingSegments:
+        - id: ipg-b000100-rs-c6a303d9aa66
+          sourceRange:
+          - 0
+          - 117
+          text:
+            en: Locate any cards missing from the deck and any incorrect cards in any game zone. Reveal those
+              cards to the opponent.
+            zh: 找到套牌中缺失的相应牌张，以及在各个游戏区域中的所有错误牌张。向对手展示这些牌。
+          legacyRawUnits:
+          - raw-L002618
+          - raw-L002620
+        - id: ipg-b000100-rs-294d65776da4
+          sourceRange:
+          - 117
+          - 402
+          text:
+            en: If the game has started, the opponent chooses whether to fix the problem now or when a player
+              would next get priority. Then, at the appropriatre time, they specify which of the missing cards
+              replaces each incorrect card; any extras are shuffled into the random portion of the library.
+            zh: 如果当前游戏已经开始，由对手选择当前立刻修复该问题，或是等到下一次有牌手将获得优先权时再进行修复。接下来，在其所选择的时点，由对手选择用缺失的牌张与错误牌张一一对应进行替换；多余的牌张将被洗入牌库中的随机部分。
+          legacyRawUnits:
+          - raw-L002630
+          - raw-L002632
+        - id: ipg-b000100-rs-92411ff38f03
+          sourceRange:
+          - 402
+          - 631
+          text:
+            en: If more cards are being removed than added, prioritize ones not in the library first. If there
+              are still additional cards not in the library that need replacing, they are replaced by cards from
+              the random portion of the library.
+            zh: 若需被移除的牌张多于需被加回的牌张，则优先替换不在牌库中的牌张。如果在此之后，仍有不在牌库中的牌张需被替换，则用牌库的随机部分中的牌张进行替换。
+          legacyRawUnits:
+          - raw-L002650
+          - raw-L002652
+        - id: ipg-b000100-rs-14fa29490781
+          sourceRange:
+          - 631
+          - 797
+          text:
+            en: If the missing card(s) are with the sideboard and it isn’t the first game, choose the ones to
+              be returned to the deck at random from main deck cards in the sideboard.
+            zh: 若缺失的牌与备牌放在一起，且当前并非第一盘游戏，则从备牌中原本属于主牌的牌张中随机选择相应数量的牌张加回套牌。
+          legacyRawUnits:
+          - raw-L002658
+          - raw-L002660
       - id: ipg-b000101
         type: paragraph
         text:
@@ -1841,6 +2231,28 @@ sections:
         - raw-L002782
         - raw-L002788
         - raw-L002790
+        readingSegments:
+        - id: ipg-b000112-rs-f5de9d70b98f
+          sourceRange:
+          - 0
+          - 86
+          text:
+            en: Errors in draft are disruptive and may become more so if they are not caught quickly.
+            zh: 轮抽流程中的失误会造成比赛中断，且不及早发现会影响更剧。
+          legacyRawUnits:
+          - raw-L002780
+          - raw-L002782
+        - id: ipg-b000112-rs-3d2b9759a113
+          sourceRange:
+          - 86
+          - 233
+          text:
+            en: Announcements prior to the draft or the specific tournament rules for the format may specify additional
+              penalties for Limited Procedure Violations.
+            zh: 轮抽前的说明，或是此赛制特定的赛场规则，可能会指明违反限制赛流程的额外处罚。
+          legacyRawUnits:
+          - raw-L002788
+          - raw-L002790
   classification: tournament-error
   penaltyCode: penalty.warning
 - id: ipg-s3-7
@@ -1991,6 +2403,28 @@ sections:
         - raw-L002840
         - raw-L002846
         - raw-L002848
+        readingSegments:
+        - id: ipg-b000118-rs-75459b35cd66
+          sourceRange:
+          - 0
+          - 78
+          text:
+            en: A player may commit this infraction in situations where they have not spoken.
+            zh: 牌手可能在没有讲话的情况下犯下此违规。
+          legacyRawUnits:
+          - raw-L002838
+          - raw-L002840
+        - id: ipg-b000118-rs-afe4c5a18a6c
+          sourceRange:
+          - 78
+          - 252
+          text:
+            en: A physically ambiguous board state is not automatically a penalty, but judges are encouraged to
+              tell players to fix ambiguous placements before they might become problematic.
+            zh: 桌面上出现迷惑的局面并不会自动导致判罚，但是应鼓励裁判在可能出现问题之前，让牌手改正迷惑的局面。
+          legacyRawUnits:
+          - raw-L002846
+          - raw-L002848
       - id: ipg-b000119
         type: paragraph
         text:
@@ -2164,6 +2598,31 @@ sections:
         - raw-L002924
         - raw-L002930
         - raw-L002932
+        readingSegments:
+        - id: ipg-b000125-rs-87abe8dea9e4
+          sourceRange:
+          - 0
+          - 322
+          text:
+            en: Sleeves and cards often become worn over the course of a tournament, and, as long as the player
+              is not attempting to take advantage of this, addressing the situation is sufficient in most cases.
+              Note that almost all sleeves can be considered marked in some way; judges should keep this in mind
+              when determining penalties.
+            zh: 牌套与牌在比赛过程中经常会持续磨损，并且，只要牌手并不准备藉此获得优势，通常来说只要提醒有此现象便已足够。请注意，几乎所有的牌套都可能在某种标准下被判定为有记号；裁判决定作出处罚时务须谨慎行事。
+          legacyRawUnits:
+          - raw-L002922
+          - raw-L002924
+        - id: ipg-b000125-rs-5e5e2750c8a8
+          sourceRange:
+          - 322
+          - 445
+          text:
+            en: In cases of marked cards, educating players to shuffle their cards and sleeves before sleeving
+              the cards is very important.
+            zh: 遇到此类状况时，要教导牌手在上牌套之前务必要先将牌洗过。
+          legacyRawUnits:
+          - raw-L002930
+          - raw-L002932
       - id: ipg-b000126
         type: paragraph
         text:
@@ -2189,6 +2648,29 @@ sections:
         - raw-L002944
         - raw-L002950
         - raw-L002952
+        readingSegments:
+        - id: ipg-b000126-rs-6c27d0fa82cb
+          sourceRange:
+          - 0
+          - 175
+          text:
+            en: This infraction applies only to cards in a player’s deck. Differently-marked sleeves in the sideboard
+              are not illegal unless they are put into the deck without being changed.
+            zh: 此违规只适用于牌手套牌中的牌。牌手备牌中的牌，就算牌套上有相异的记号也不会算作不合法，但倘若牌手在此种情况下不更换牌套即将之换入套牌则不然。
+          legacyRawUnits:
+          - raw-L002942
+          - raw-L002944
+        - id: ipg-b000126-rs-c70c25a1383c
+          sourceRange:
+          - 175
+          - 279
+          text:
+            en: Unless investigating, judges are encouraged to alert players about concerns with marked sideboard
+              cards.
+            zh: 除了需进行调查的情况外，在此鼓励裁判提醒牌手注意自己备牌是否上存在记号。
+          legacyRawUnits:
+          - raw-L002950
+          - raw-L002952
   - id: ipg-c000050
     role: additional-remedy
     labelCode: component.additional-remedy
@@ -2220,6 +2702,29 @@ sections:
         - raw-L002962
         - raw-L002968
         - raw-L002970
+        readingSegments:
+        - id: ipg-b000127-rs-04e587dec5c8
+          sourceRange:
+          - 0
+          - 151
+          text:
+            en: The player needs to replace the card(s) or sleeve(s) with an unmarked version or, if no sleeves
+              are being used, use sleeves that conceal the markings.
+            zh: 牌手必须将有记号的牌或是牌套换掉；若是并未利用牌套，则上牌套来盖掉记号。
+          legacyRawUnits:
+          - raw-L002960
+          - raw-L002962
+        - id: ipg-b000127-rs-9e8904f62cbc
+          sourceRange:
+          - 151
+          - 269
+          text:
+            en: If the cards themselves have become marked through play in the tournament, the Head Judge may
+              decide to issue a proxy.
+            zh: 如果牌是在比赛中因游戏过程地磨损而有了记号，则主审可以决定给予代牌来使用。
+          legacyRawUnits:
+          - raw-L002968
+          - raw-L002970
   - id: ipg-c000051
     role: upgrade
     labelCode: component.upgrade
@@ -2404,6 +2909,29 @@ sections:
         - raw-L003036
         - raw-L003042
         - raw-L003044
+        readingSegments:
+        - id: ipg-b000134-rs-893caf8dfac5
+          sourceRange:
+          - 0
+          - 154
+          text:
+            en: Players are expected to shuffle their deck thoroughly when it is required and are expected to
+              have the skill and understanding of randomization to do so.
+            zh: 牌手在有必要和被要求时，必须要彻底地将其套牌洗牌；且应要有随机化的技术和对何谓“随机化”的认知。
+          legacyRawUnits:
+          - raw-L003034
+          - raw-L003036
+        - id: ipg-b000134-rs-32ea4ccaacc4
+          sourceRange:
+          - 154
+          - 305
+          text:
+            en: However, as the opponent has the opportunity to shuffle after the player does, the potential for
+              advantage is lowered if tournament policy is followed.
+            zh: 由于对手在该牌手洗牌之后也有机会洗牌，若是能够确实遵守此项比赛方针，则牌手得到利益的可能性会降低。
+          legacyRawUnits:
+          - raw-L003042
+          - raw-L003044
       - id: ipg-b000135
         type: paragraph
         text:
@@ -2447,6 +2975,29 @@ sections:
         - raw-L003060
         - raw-L003066
         - raw-L003068
+        readingSegments:
+        - id: ipg-b000136-rs-c0470cfc7b3a
+          sourceRange:
+          - 0
+          - 124
+          text:
+            en: A player should shuffle their deck using multiple methods. Patterned pile-shuffling is only allowed
+              at the start of a game.
+            zh: 牌手应使用多种方式洗牌；有规律的分堆洗牌只能在一盘游戏一开始时使用。
+          legacyRawUnits:
+          - raw-L003058
+          - raw-L003060
+        - id: ipg-b000136-rs-963287c3248b
+          sourceRange:
+          - 124
+          - 255
+          text:
+            en: Any manipulation, weaving, or stacking prior to randomization is acceptable, as long as the deck
+              is thoroughly shuffled afterwards.
+            zh: 如果之后有充分洗过套牌，任何先行的操作、编排或是叠放都是可接受的。
+          legacyRawUnits:
+          - raw-L003066
+          - raw-L003068
   - id: ipg-c000056
     role: additional-remedy
     labelCode: component.additional-remedy
@@ -2478,6 +3029,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000036
+    segmentId: ipg-b000036-rs-a46209f1efca
   position: after
   order: 10
   groups:
@@ -2498,6 +3050,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000036
+    segmentId: ipg-b000036-rs-9068c48f6eef
   position: after
   order: 20
   groups:
@@ -2518,6 +3071,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000037
+    segmentId: ipg-b000037-rs-4dd03ebdd495
   position: after
   order: 10
   groups:
@@ -2540,6 +3094,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000037
+    segmentId: ipg-b000037-rs-164d091b577f
   position: after
   order: 20
   groups:
@@ -2561,6 +3116,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000038
+    segmentId: ipg-b000038-rs-e146de97a35b
   position: after
   order: 10
   groups:
@@ -2585,6 +3141,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000038
+    segmentId: ipg-b000038-rs-27ff81ab2dd7
   position: after
   order: 20
   groups:
@@ -2604,6 +3161,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000039
+    segmentId: ipg-b000039-rs-d3f05e95c87b
   position: after
   order: 10
   groups:
@@ -2624,6 +3182,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000039
+    segmentId: ipg-b000039-rs-8c076574e3e7
   position: after
   order: 20
   groups:
@@ -2765,6 +3324,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000045
+    segmentId: ipg-b000045-rs-8c5e3d8617f5
   position: after
   order: 10
   groups:
@@ -2798,6 +3358,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000045
+    segmentId: ipg-b000045-rs-ab48a2ae009e
   position: after
   order: 20
   groups:
@@ -3045,6 +3606,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000058
+    segmentId: ipg-b000058-rs-9f406bb38508
   position: after
   order: 10
   groups:
@@ -3067,6 +3629,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000058
+    segmentId: ipg-b000058-rs-0bc41ef27c54
   position: after
   order: 20
   groups:
@@ -3122,6 +3685,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000060
+    segmentId: ipg-b000060-rs-c66bb2ae4f8b
   position: after
   order: 10
   groups:
@@ -3167,6 +3731,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000060
+    segmentId: ipg-b000060-rs-93dad88c46e3
   position: after
   order: 20
   groups:
@@ -3240,6 +3805,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000066
+    segmentId: ipg-b000066-rs-9d90ca52abf5
   position: after
   order: 10
   groups:
@@ -3263,6 +3829,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000066
+    segmentId: ipg-b000066-rs-c95b2b502999
   position: after
   order: 20
   groups:
@@ -3286,6 +3853,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000066
+    segmentId: ipg-b000066-rs-cb69b31867a9
   position: after
   order: 30
   groups:
@@ -3308,6 +3876,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000067
+    segmentId: ipg-b000067-rs-52694ae9c274
   position: after
   order: 10
   groups:
@@ -3329,6 +3898,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000067
+    segmentId: ipg-b000067-rs-014218a6d459
   position: after
   order: 20
   groups:
@@ -3437,6 +4007,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000076
+    segmentId: ipg-b000076-rs-5227a7e8342c
   position: after
   order: 10
   groups:
@@ -3457,6 +4028,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000076
+    segmentId: ipg-b000076-rs-87aeff2d65e3
   position: after
   order: 20
   groups:
@@ -3479,6 +4051,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000076
+    segmentId: ipg-b000076-rs-101f14e11562
   position: after
   order: 30
   groups:
@@ -3539,6 +4112,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000078
+    segmentId: ipg-b000078-rs-1fd4e1c068ba
   position: after
   order: 10
   groups:
@@ -3559,6 +4133,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000078
+    segmentId: ipg-b000078-rs-c0e8e9db2157
   position: after
   order: 20
   groups:
@@ -3678,6 +4253,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000082
+    segmentId: ipg-b000082-rs-2e1c05fcf495
   position: after
   order: 10
   groups:
@@ -3697,6 +4273,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000082
+    segmentId: ipg-b000082-rs-7abfa0e37ebc
   position: after
   order: 20
   groups:
@@ -3717,6 +4294,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000083
+    segmentId: ipg-b000083-rs-07839f2e2d11
   position: after
   order: 10
   groups:
@@ -3737,6 +4315,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000083
+    segmentId: ipg-b000083-rs-2131e703d658
   position: after
   order: 20
   groups:
@@ -4021,6 +4600,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000098
+    segmentId: ipg-b000098-rs-d373f0154c02
   position: after
   order: 10
   groups:
@@ -4042,6 +4622,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000098
+    segmentId: ipg-b000098-rs-3c7d1ce2f881
   position: after
   order: 20
   groups:
@@ -4083,6 +4664,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000100
+    segmentId: ipg-b000100-rs-c6a303d9aa66
   position: after
   order: 10
   groups:
@@ -4119,6 +4701,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000100
+    segmentId: ipg-b000100-rs-294d65776da4
   position: after
   order: 20
   groups:
@@ -4178,6 +4761,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000100
+    segmentId: ipg-b000100-rs-92411ff38f03
   position: after
   order: 30
   groups:
@@ -4198,6 +4782,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000100
+    segmentId: ipg-b000100-rs-14fa29490781
   position: after
   order: 40
   groups:
@@ -4500,6 +5085,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000112
+    segmentId: ipg-b000112-rs-f5de9d70b98f
   position: after
   order: 10
   groups:
@@ -4522,6 +5108,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000112
+    segmentId: ipg-b000112-rs-3d2b9759a113
   position: after
   order: 20
   groups:
@@ -4616,6 +5203,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000118
+    segmentId: ipg-b000118-rs-75459b35cd66
   position: after
   order: 10
   groups:
@@ -4637,6 +5225,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000118
+    segmentId: ipg-b000118-rs-afe4c5a18a6c
   position: after
   order: 20
   groups:
@@ -4814,6 +5403,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000125
+    segmentId: ipg-b000125-rs-87abe8dea9e4
   position: after
   order: 10
   groups:
@@ -4837,6 +5427,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000125
+    segmentId: ipg-b000125-rs-5e5e2750c8a8
   position: after
   order: 20
   groups:
@@ -4871,6 +5462,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000126
+    segmentId: ipg-b000126-rs-6c27d0fa82cb
   position: after
   order: 10
   groups:
@@ -4894,6 +5486,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000126
+    segmentId: ipg-b000126-rs-c70c25a1383c
   position: after
   order: 20
   groups:
@@ -4916,6 +5509,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000127
+    segmentId: ipg-b000127-rs-04e587dec5c8
   position: after
   order: 10
   groups:
@@ -4940,6 +5534,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000127
+    segmentId: ipg-b000127-rs-9e8904f62cbc
   position: after
   order: 20
   groups:
@@ -5094,6 +5689,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000134
+    segmentId: ipg-b000134-rs-893caf8dfac5
   position: after
   order: 10
   groups:
@@ -5113,6 +5709,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000134
+    segmentId: ipg-b000134-rs-32ea4ccaacc4
   position: after
   order: 20
   groups:
@@ -5159,6 +5756,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000136
+    segmentId: ipg-b000136-rs-c0470cfc7b3a
   position: after
   order: 10
   groups:
@@ -5181,6 +5779,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-b000136
+    segmentId: ipg-b000136-rs-963287c3248b
   position: after
   order: 20
   groups:

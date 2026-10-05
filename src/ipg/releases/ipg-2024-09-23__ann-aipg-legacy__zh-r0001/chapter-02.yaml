@@ -45,6 +45,39 @@ sections:
         - raw-L000667
         - raw-L000673
         - raw-L000675
+        readingSegments:
+        - id: ipg-s2-c-body-g01-b001-rs-eb6eab424795
+          sourceRange:
+          - 0
+          - 141
+          text:
+            en: Game Play Errors are caused by incorrect or inaccurate play of the game such that it results in
+              violations of the Magic Comprehensive Rules.
+            zh: 游戏行动失误是以不正确或是不精准的行动来进行游戏，而导致违反《万智牌完整规则》的结果。
+          legacyRawUnits:
+          - raw-L000653
+          - raw-L000655
+        - id: ipg-s2-c-body-g01-b001-rs-e182026d8083
+          sourceRange:
+          - 141
+          - 223
+          text:
+            en: Many offenses fit into this category and it would be impossible to list them all.
+            zh: 许多违规都属于此类情况，但不可能全数详列。
+          legacyRawUnits:
+          - raw-L000665
+          - raw-L000667
+        - id: ipg-s2-c-body-g01-b001-rs-f3518a80e04a
+          sourceRange:
+          - 223
+          - 324
+          text:
+            en: The guide below is designed to give judges a framework for assessing how to handle a Game Play
+              Error.
+            zh: 以下的方针是设计给裁判参考的构架，用来决定如何处理游戏行动失误。
+          legacyRawUnits:
+          - raw-L000673
+          - raw-L000675
       - id: ipg-s2-c-body-g01-b002
         type: paragraph
         text:
@@ -69,6 +102,28 @@ sections:
         - raw-L000683
         - raw-L000693
         - raw-L000695
+        readingSegments:
+        - id: ipg-s2-c-body-g01-b002-rs-6f34188f0894
+          sourceRange:
+          - 0
+          - 85
+          text:
+            en: Most Game Play Error infractions are assumed to have been committed unintentionally.
+            zh: 大部分游戏行动失误的违规都假设该违规是无意间发生的。
+          legacyRawUnits:
+          - raw-L000681
+          - raw-L000683
+        - id: ipg-s2-c-body-g01-b002-rs-0c37f7b3cf90
+          sourceRange:
+          - 85
+          - 231
+          text:
+            en: If the judge believes that the error was intentional, they should first consider whether an Unsporting
+              Conduct — Cheating infraction has occurred.
+            zh: 假如裁判认为系蓄意造成该失误，则应该先考虑此违规是否属于“举止违背运动道德～作弊”。
+          legacyRawUnits:
+          - raw-L000693
+          - raw-L000695
       - id: ipg-s2-c-body-g01-b003
         type: paragraph
         text:
@@ -94,6 +149,28 @@ sections:
         - raw-L000703
         - raw-L000713
         - raw-L000715
+        readingSegments:
+        - id: ipg-s2-c-body-g01-b003-rs-42523c863539
+          sourceRange:
+          - 0
+          - 190
+          text:
+            en: With the exception of Failure to Maintain Game State, which is never upgraded, the third or subsequent
+              Warning for a Game Play Error offense in the same category is upgraded to a Game Loss.
+            zh: 除了始终不会升级的“未维护游戏状态”之外，第三次或更多次犯下同类型游戏行动失误而得到的警告，均应升级为一盘负。
+          legacyRawUnits:
+          - raw-L000701
+          - raw-L000703
+        - id: ipg-s2-c-body-g01-b003-rs-91da8199bece
+          sourceRange:
+          - 190
+          - 277
+          text:
+            en: For multi-day tournaments, the penalty count for these infractions resets between days.
+            zh: 对于历时多日的比赛而言，牌手当天的此类违规处罚累犯计数会在次日清零。
+          legacyRawUnits:
+          - raw-L000713
+          - raw-L000715
 - id: ipg-s2-1
   kind: infraction
   number: '2.1'
@@ -197,6 +274,32 @@ sections:
         - raw-L000769
         - raw-L000783
         - raw-L000785
+        readingSegments:
+        - id: ipg-s2-1-c-definition-g02-b002-rs-db2aac908f8f
+          sourceRange:
+          - 0
+          - 417
+          text:
+            en: 'A triggered ability that causes a change in the visible game state (including life totals) or
+              requires a choice upon resolution: The controller must take the appropriate physical action or acknowledge
+              the specific trigger before taking any game actions (such as casting a sorcery spell or explicitly
+              taking an action in the next step or phase) that can be taken only after the triggered ability should
+              have resolved.'
+            zh: 对于会对游戏的可见状态（包括牌手的总生命）产生影响，或是需要在结算时作出决定的触发式异能而言：其操控者在执行只有在该触发式异能结算完毕之后才有可能进行的任何游戏动作（例如施放法术咒语，或明确执行了下一个步骤或阶段中的动作）之前，就必须作出与此类触发式异能相对应的实际动作，或表明自己认识此触发的存在。
+          legacyRawUnits:
+          - raw-L000767
+          - raw-L000769
+        - id: ipg-s2-1-c-definition-g02-b002-rs-da5b4f0e4bc6
+          sourceRange:
+          - 417
+          - 582
+          text:
+            en: Note that passing priority, casting an instant spell or activating an ability doesn’t mean a triggered
+              ability has been forgotten, as it could still be on the stack.
+            zh: 请注意，让过优先权、施放瞬间咒语或起动异能这类动作并不表明牌手已遗忘触发式异能，因为在此情况下该触发式异能可能仍在堆叠之上。
+          legacyRawUnits:
+          - raw-L000783
+          - raw-L000785
       - id: ipg-s2-1-c-definition-g02-b003
         type: list-item
         text:
@@ -301,6 +404,31 @@ sections:
         - raw-L000854
         - raw-L000860
         - raw-L000862
+        readingSegments:
+        - id: ipg-s2-1-c-definition-g03-b003-rs-5a8a3388a024
+          sourceRange:
+          - 0
+          - 224
+          text:
+            en: Triggered abilities that do nothing except create delayed triggered abilities automatically resolve
+              without requiring acknowledgment. Awareness of the resulting delayed trigger must be demonstrated
+              at the appropriate point.
+            zh: 对于只会产生延时触发式异能，而没有其他效应的触发式异能而言，此类触发会自动结算，牌手不需特别指出此类触发的存在。牌手必须在恰当的时点，表明自己认识到因此产生之延时触发式异能的存在。
+          legacyRawUnits:
+          - raw-L000852
+          - raw-L000854
+        - id: ipg-s2-1-c-definition-g03-b003-rs-1bca48e427be
+          sourceRange:
+          - 224
+          - 528
+          text:
+            en: Triggered abilities that do nothing except create one or more copies of a spell or ability (such
+              as storm or cipher) automatically resolve, but awareness of the resulting objects must be demonstrated
+              using the same requirements as described above (even though the objects may not be triggered abilities).
+            zh: 对于只会产生咒语或异能之一个或数个复制品，而没有其他效应的触发式异能（例如风暴或暗码）而言，此类触发会自动结算，但牌手仍需依照上文所述的要求，在相应时点表明自己认识到由此产生之各物件的存在（就算此类物件不属于触发式异能也是一样）。
+          legacyRawUnits:
+          - raw-L000860
+          - raw-L000862
       - id: ipg-s2-1-c-definition-g03-b004
         type: paragraph
         text:
@@ -352,6 +480,40 @@ sections:
         - raw-L000886
         - raw-L000892
         - raw-L000894
+        readingSegments:
+        - id: ipg-s2-1-c-definition-g03-b005-rs-e3d8b3c3b0d4
+          sourceRange:
+          - 0
+          - 120
+          text:
+            en: If a triggered ability would have no impact on the game, it’s not an infraction to fail to demonstrate
+              awareness of it.
+            zh: 如果某个触发式异能不会对游戏造成影响，则就算牌手没有认识到此触发的存在，也不会算作违规。
+          legacyRawUnits:
+          - raw-L000876
+          - raw-L000878
+        - id: ipg-s2-1-c-definition-g03-b005-rs-37883304c090
+          sourceRange:
+          - 120
+          - 311
+          text:
+            en: For example, if the effect of a triggered ability instructs its controller to sacrifice a creature,
+              a player who controls no creatures isn’t required to demonstrate awareness of the ability.
+            zh: 举例来说，若某触发式异能的效应要求此异能的操控者牺牲一个生物，则未操控生物的牌手并不需要特别指出该触发的存在。
+          legacyRawUnits:
+          - raw-L000884
+          - raw-L000886
+        - id: ipg-s2-1-c-definition-g03-b005-rs-226769445fd3
+          sourceRange:
+          - 311
+          - 477
+          text:
+            en: Similarly, a player demonstrating awareness of an optional trigger with no visible effect is assumed
+              to have made the affirmative choice unless the opponent responds.
+            zh: 类似地，如果某牌手表明自己认识到无可见效应之非强制性触发的存在，则除非对手有回应，否则便应视为其已选择依可选项行事。
+          legacyRawUnits:
+          - raw-L000892
+          - raw-L000894
       - id: ipg-s2-1-c-definition-g03-b006
         type: paragraph
         text:
@@ -511,6 +673,43 @@ sections:
         - raw-L000966
         - raw-L000972
         - raw-L000974
+        readingSegments:
+        - id: ipg-s2-1-c-philosophy-g01-b001-rs-99c04601b676
+          sourceRange:
+          - 0
+          - 116
+          text:
+            en: Triggered abilities are common and invisible, so players should not be harshly penalized when
+              forgetting about one.
+            zh: 触发式异能属于常见异能，且其机制较为隐蔽，因此不应在牌手忘记处理该类异能时即对其采取严厉的惩罚措施。
+          legacyRawUnits:
+          - raw-L000956
+          - raw-L000958
+        - id: ipg-s2-1-c-philosophy-g01-b001-rs-2a027a802380
+          sourceRange:
+          - 116
+          - 318
+          text:
+            en: Players are expected to remember their own triggered abilities; intentionally ignoring one may
+              be Unsporting Conduct — Cheating (unless the ability would have no impact on the game as described
+              above).
+            zh: 牌手应记得属于自己的触发式异能；蓄意忽略触发式异能的行为应视作“举止违背运动道德～作弊”（除非该异能如上文所述，对游戏没有任何影响）。
+          legacyRawUnits:
+          - raw-L000964
+          - raw-L000966
+        - id: ipg-s2-1-c-philosophy-g01-b001-rs-a4501dc191ea
+          sourceRange:
+          - 318
+          - 647
+          text:
+            en: Even if an opponent is involved in the announcement or resolution of the ability, the controller
+              is still responsible for ensuring the opponents make the appropriate choices and take the appropriate
+              actions. Opponents are not required to point out triggered abilities that they do not control, though
+              they may do so if they wish.
+            zh: 就算在异能宣告或结算的时候，需要对手进行相应选择，该异能的操控者也应对此负责，确保对手作出恰当的决定或执行了合适的动作。对手不需指出不由自己操控的遗漏触发，不过如果他们希望指出的话，也可以如此作。
+          legacyRawUnits:
+          - raw-L000972
+          - raw-L000974
       - id: ipg-s2-1-c-philosophy-g01-b002
         type: paragraph
         text:
@@ -559,6 +758,53 @@ sections:
         - raw-L001014
         - raw-L001032
         - raw-L001034
+        readingSegments:
+        - id: ipg-s2-1-c-philosophy-g01-b002-rs-60d6dc8ed03e
+          sourceRange:
+          - 0
+          - 142
+          text:
+            en: Triggered abilities are assumed to be remembered until otherwise indicated, and the impact on
+              the game state may not be immediately apparent.
+            zh: 除非有迹象表明触发式异能已遭遗忘，否则应视作牌手始终记得触发式异能的存在，同时触发式异能对游戏状态产生的影响也有可能不会即刻显现出来。
+          legacyRawUnits:
+          - raw-L000988
+          - raw-L000990
+        - id: ipg-s2-1-c-philosophy-g01-b002-rs-5129b64f3c87
+          sourceRange:
+          - 142
+          - 287
+          text:
+            en: The opponent’s benefit is in not having to point out triggered abilities, although this does not
+              mean that they can cause triggers to be missed.
+            zh: 对于对手而言，虽然无须指出触发式异能这点对己有利，但这并不意味着可以主动致使他人遗漏触发。
+          legacyRawUnits:
+          - raw-L001004
+          - raw-L001006
+        - id: ipg-s2-1-c-philosophy-g01-b002-rs-e4b62bad448b
+          sourceRange:
+          - 287
+          - 551
+          text:
+            en: If an opponent requires information about the precise timing of a triggered ability or needs details
+              about a game object that may be affected by a resolved triggered ability, that player may need to
+              acknowledge that ability’s existence before its controller does.
+            zh: 如果对手要求知道某个触发式异能的确切触发时机，或需要了解可能会受到已结算之触发式异能影响的某个游戏物件的详细信息，则该牌手便可能需要在该异能的操控者尚未表明自己认识到该异能存在的情况下，提前指出这个触发式异能。
+          legacyRawUnits:
+          - raw-L001012
+          - raw-L001014
+        - id: ipg-s2-1-c-philosophy-g01-b002-rs-cb512ffb0a08
+          sourceRange:
+          - 551
+          - 804
+          text:
+            en: A player who makes a play that may or may not be legal depending on whether an opponent’s uncommunicated
+              trigger has been remembered has not committed an infraction; their play either succeeds, confirming
+              that the trigger has been missed, or is rewound.
+            zh: 如果牌手做出的某个游戏动作，其结果需根据是否记得未进行过沟通的对手的触发式异能才能判断是否合法，则这位牌手的行为并未触犯任何违规；他们这一游戏动作或就此成功～同时确认该触发确已遗漏～或会被倒回。
+          legacyRawUnits:
+          - raw-L001032
+          - raw-L001034
       - id: ipg-s2-1-c-philosophy-g01-b004
         type: paragraph
         text:
@@ -591,6 +837,41 @@ sections:
         - raw-L001062
         - raw-L001068
         - raw-L001070
+        readingSegments:
+        - id: ipg-s2-1-c-philosophy-g01-b004-rs-93a43883e6f9
+          sourceRange:
+          - 0
+          - 149
+          text:
+            en: Players may not cause triggered abilities controlled by an opponent to be missed by taking game
+              actions or otherwise prematurely advancing the game.
+            zh: 牌手不得通过执行游戏动作或其他贸然推进游戏进程的手段，以致使对手遗漏由其操控的触发式异能。
+          legacyRawUnits:
+          - raw-L001040
+          - raw-L001042
+        - id: ipg-s2-1-c-philosophy-g01-b004-rs-8b9248d5d48d
+          sourceRange:
+          - 149
+          - 358
+          text:
+            en: During an opponent’s turn, if a trigger’s controller demonstrates awareness of the trigger before
+              they take an active role (such as taking an action or explicitly passing priority), the trigger
+              is remembered.
+            zh: 在对手的回合中，如果触发的操控者在他们担任主动角色之前（例如进行游戏动作或明确让过优先权）表明自己认识到触发存在，便视作他们记得此触发。
+          legacyRawUnits:
+          - raw-L001060
+          - raw-L001062
+        - id: ipg-s2-1-c-philosophy-g01-b004-rs-3d9c1fb881cb
+          sourceRange:
+          - 358
+          - 535
+          text:
+            en: The Out-of-Order Sequencing rules (MTR section 4.3) may also be applicable, especially as they
+              relate to batches of actions or resolving items on the stack in an improper order.
+            zh: 次序不当的行事顺序之相关规则（MTR第4.3节）亦应纳入考量，因为这部分规则与未以恰当顺序进行一系列动作或结算堆叠上的多个物件有关。
+          legacyRawUnits:
+          - raw-L001068
+          - raw-L001070
       - id: ipg-s2-1-c-philosophy-g01-b005
         type: paragraph
         text:
@@ -681,6 +962,29 @@ sections:
         - raw-L001148
         - raw-L001154
         - raw-L001156
+        readingSegments:
+        - id: ipg-s2-1-c-additional-remedy-g01-b003-rs-779b8c1abcbc
+          sourceRange:
+          - 0
+          - 152
+          text:
+            en: For all other triggered abilities, if the ability was missed prior to the current phase in the
+              previous turn, instruct the players to continue playing.
+            zh: 对所有其他触发式异能而言，以前一回合中相同的阶段为限，如果发生遗漏异能此事的时机早于此限，则令牌手继续游戏。
+          legacyRawUnits:
+          - raw-L001146
+          - raw-L001148
+        - id: ipg-s2-1-c-additional-remedy-g01-b003-rs-605cd232e937
+          sourceRange:
+          - 152
+          - 272
+          text:
+            en: If the triggered ability created an effect whose duration has already expired, instruct the players
+              to continue playing.
+            zh: 如果属于该触发式异能产生之效应的持续时限已结束的情况，则令牌手继续游戏。
+          legacyRawUnits:
+          - raw-L001154
+          - raw-L001156
       - id: ipg-s2-1-c-additional-remedy-g01-b004
         type: paragraph
         text:
@@ -719,6 +1023,51 @@ sections:
         - raw-L001188
         - raw-L001194
         - raw-L001196
+        readingSegments:
+        - id: ipg-s2-1-c-additional-remedy-g01-b004-rs-9036afe9b4bc
+          sourceRange:
+          - 0
+          - 141
+          text:
+            en: If the triggered ability isn’t covered by the previous paragraphs, the opponent chooses whether
+              the triggered ability is added to the stack.
+            zh: 如果该触发式异能不属于前面段落所述之情况，则由对手选择是否要将该触发式异能加入堆叠。
+          legacyRawUnits:
+          - raw-L001166
+          - raw-L001168
+        - id: ipg-s2-1-c-additional-remedy-g01-b004-rs-26b996c9fbb4
+          sourceRange:
+          - 141
+          - 246
+          text:
+            en: If it is, it’s inserted at the appropriate place on the stack if possible or on the bottom of
+              the stack.
+            zh: 如果要将异能加入堆叠，则将该异能插入堆叠中其原本应处的位置（若能如此作）或是堆叠底。
+          legacyRawUnits:
+          - raw-L001178
+          - raw-L001180
+        - id: ipg-s2-1-c-additional-remedy-g01-b004-rs-da5f76ea3791
+          sourceRange:
+          - 246
+          - 396
+          text:
+            en: No player may make choices for the triggered ability involving objects that would not have been
+              legal choices when the ability should have triggered.
+            zh: 牌手在为该触发式异能作选择时，不得涉及于此异能原本应触发的时点尚不在相应区域当中的物件。
+          legacyRawUnits:
+          - raw-L001186
+          - raw-L001188
+        - id: ipg-s2-1-c-additional-remedy-g01-b004-rs-45cd63bf4be3
+          sourceRange:
+          - 396
+          - 577
+          text:
+            en: For example, if the ability instructs a player to sacrifice a creature, that player can't sacrifice
+              a creature that wasn't on the battlefield when the ability should have triggered.
+            zh: 举例来说，如果该异能令牌手牺牲一个生物，则该牌手不得牺牲于此异能本应触发之时点尚不在战场上的生物。
+          legacyRawUnits:
+          - raw-L001194
+          - raw-L001196
       - id: ipg-s2-1-c-additional-remedy-g01-b005
         type: paragraph
         text:
@@ -770,6 +1119,29 @@ sections:
         - raw-L001264
         - raw-L001286
         - raw-L001288
+        readingSegments:
+        - id: ipg-s2-1-c-additional-remedy-g01-b006-rs-c0a23d290ec3
+          sourceRange:
+          - 0
+          - 180
+          text:
+            en: If the triggered ability is usually considered detrimental for the controlling player and they
+              own the card responsible for the existence of the trigger, the penalty is a Warning.
+            zh: 升级：如果该触发式异能属于“通常认为对其操控牌手不利”，且由操控牌手拥有的牌张产生，则罚则为警告。
+          legacyRawUnits:
+          - raw-L001262
+          - raw-L001264
+        - id: ipg-s2-1-c-additional-remedy-g01-b006-rs-795d7a45d875
+          sourceRange:
+          - 180
+          - 372
+          text:
+            en: The current game state is not a factor in determining this, though symmetrical abilities (such
+              as Howling Mine) may be considered usually detrimental or not depending on who is being affected.
+            zh: 在判断异能性质时，不应考虑当前的游戏状态，但对于对等触发的异能而言（例如嚎叫的矿井/Howling Mine），则可根据当前受其影响的牌手来判断此异能是否属于通常认为之不利异能。
+          legacyRawUnits:
+          - raw-L001286
+          - raw-L001288
   classification: game-play-error
   penaltyCode: penalty.none
 - id: ipg-s2-2
@@ -917,6 +1289,29 @@ sections:
         - raw-L001390
         - raw-L001396
         - raw-L001398
+        readingSegments:
+        - id: ipg-s2-2-c-philosophy-g01-b001-rs-03637edf452d
+          sourceRange:
+          - 0
+          - 184
+          text:
+            en: A player can accidentally look at extra cards easily and this infraction handles situations where
+              a dexterity or rules error has led to a player seeing cards that they shouldn’t have.
+            zh: 牌手容易不慎看到多余的牌。此违规用于处理牌手因手脚笨拙或规则失误导致其看到本不应看到牌张的情况。
+          legacyRawUnits:
+          - raw-L001388
+          - raw-L001390
+        - id: ipg-s2-2-c-philosophy-g01-b001-rs-550f3c4ce20c
+          sourceRange:
+          - 184
+          - 384
+          text:
+            en: Cards in a library are considered to be there until they touch cards in another hidden set. Once
+              those cards have joined another hidden set, the infraction is Hidden Card Error or Game Rule Violation.
+            zh: 只要牌库中的牌张尚未触碰到其他非公开牌叠中之牌张，均视为在牌库之中。一旦相关牌张已加入其他非公开牌叠中，便应按照“非公开牌张失误”或“违反游戏规则”来处理此违规。
+          legacyRawUnits:
+          - raw-L001396
+          - raw-L001398
       - id: ipg-s2-2-c-philosophy-g01-b002
         type: paragraph
         text:
@@ -947,6 +1342,39 @@ sections:
         - raw-L001414
         - raw-L001420
         - raw-L001422
+        readingSegments:
+        - id: ipg-s2-2-c-philosophy-g01-b002-rs-710f095f9d96
+          sourceRange:
+          - 0
+          - 168
+          text:
+            en: Players should not use this penalty to get a “free shuffle” or to attempt to shuffle away cards
+              they don’t want to draw; doing so may be Unsporting Conduct — Cheating.
+            zh: 牌手不应该利用此处罚来得到“免费洗牌”，或是企图将不想抓的牌洗到别处去；如此会被视为是“举止违背运动道德~作弊”。
+          legacyRawUnits:
+          - raw-L001404
+          - raw-L001406
+        - id: ipg-s2-2-c-philosophy-g01-b002-rs-bd73f34011fc
+          sourceRange:
+          - 168
+          - 242
+          text:
+            en: Players also are not allowed to use this penalty as a stalling mechanism.
+            zh: 牌手也不应该将此处罚当做拖延的手段。
+          legacyRawUnits:
+          - raw-L001412
+          - raw-L001414
+        - id: ipg-s2-2-c-philosophy-g01-b002-rs-592edaac19aa
+          sourceRange:
+          - 242
+          - 348
+          text:
+            en: The library is already randomized, so shuffling in the revealed cards should not involve excessive
+              effort.
+            zh: 由于牌库都已经充分随机化，所以将展示的牌洗回去并不会造成太大的影响。
+          legacyRawUnits:
+          - raw-L001420
+          - raw-L001422
   - id: ipg-s2-2-c-additional-remedy
     role: additional-remedy
     labelCode: component.additional-remedy
@@ -1020,6 +1448,39 @@ sections:
         - raw-L001454
         - raw-L001468
         - raw-L001470
+        readingSegments:
+        - id: ipg-s2-3-c-definition-g01-b001-rs-fbd1e45f820e
+          sourceRange:
+          - 0
+          - 103
+          text:
+            en: A player commits an error in the game that cannot be corrected by only publicly available information.
+            zh: 牌手在游戏中发生失误，但此类失误仅凭可公开获知的信息无法修正。
+          legacyRawUnits:
+          - raw-L001444
+          - raw-L001446
+        - id: ipg-s2-3-c-definition-g01-b001-rs-4595bc2d1aa5
+          sourceRange:
+          - 103
+          - 261
+          text:
+            en: It is not a Hidden Card Error if the opponent acknowledges the action or controls the continuous
+              effect modifying the game rule that made the action illegal.
+            zh: 如果牌手的行动得到对手许可或由对手操控改变游戏规则的持续性效应使牌手的行动不合法，则这不是一个非公开牌张失误。
+          legacyRawUnits:
+          - raw-L001452
+          - raw-L001454
+        - id: ipg-s2-3-c-definition-g01-b001-rs-13acafecdf4a
+          sourceRange:
+          - 261
+          - 405
+          text:
+            en: This infraction only applies when a card whose identity is known to only one player is in a hidden
+              set of cards both before and after the error.
+            zh: 仅在只有一位牌手知晓内容之牌张在发生失误前后均处于非公开牌叠当中的情况下，此违规才适用。
+          legacyRawUnits:
+          - raw-L001468
+          - raw-L001470
       - id: ipg-s2-3-c-definition-g01-b002
         type: paragraph
         text:
@@ -1205,6 +1666,29 @@ sections:
         - raw-L001542
         - raw-L001548
         - raw-L001550
+        readingSegments:
+        - id: ipg-s2-3-c-philosophy-g01-b002-rs-290cb52c48d5
+          sourceRange:
+          - 0
+          - 126
+          text:
+            en: If cards are placed into a public zone, then their order is known and the infraction can be handled
+              as a Game Rule Violation.
+            zh: 如果牌张被置入公开区域，这样就能够知晓其顺序，之后便可依照“违反游戏规则”处理此违规。
+          legacyRawUnits:
+          - raw-L001540
+          - raw-L001542
+        - id: ipg-s2-3-c-philosophy-g01-b002-rs-2d602b02eeb4
+          sourceRange:
+          - 126
+          - 312
+          text:
+            en: Order cannot be determined from card faces only visible to one player unless the card is in a
+              uniquely identifiable position (such as on top of the library, or as the only card in hand.)
+            zh: 如果仅有一位牌手能看到牌面，便无法确定牌张之顺序，但牌张处于可唯一辨识之位置时（例如牌库顶、手上唯一的一张手牌）除外。
+          legacyRawUnits:
+          - raw-L001548
+          - raw-L001550
       - id: ipg-s2-3-c-philosophy-g01-b003
         type: paragraph
         text:
@@ -1970,6 +2454,41 @@ sections:
         - raw-L001859
         - raw-L001865
         - raw-L001867
+        readingSegments:
+        - id: ipg-s2-6-c-definition-g01-b001-rs-b7e235582cfc
+          sourceRange:
+          - 0
+          - 110
+          text:
+            en: A player allows another player in the game to commit a Game Play Error and does not point it out
+              immediately.
+            zh: 牌手容许游戏中的其他牌手犯下了游戏行动失误，且未立刻指出该错误。
+          legacyRawUnits:
+          - raw-L001849
+          - raw-L001851
+        - id: ipg-s2-6-c-definition-g01-b001-rs-dfab3954e975
+          sourceRange:
+          - 110
+          - 379
+          text:
+            en: If a judge believes a player is intentionally not pointing out other players’ illegal actions,
+              either for their own advantage, or in the hope of bringing it up at a more strategically advantageous
+              time, they should consider an Unsporting Conduct — Cheating infraction.
+            zh: 如果裁判认为牌手系出于“此状况对己方有利”，或是“希望等到战略上对己方更有利的时候再提出”这一类的考量，而蓄意未指出其他牌手之违规行动，则应考虑适用“举止违背运动道德～作弊”之违规。
+          legacyRawUnits:
+          - raw-L001857
+          - raw-L001859
+        - id: ipg-s2-6-c-definition-g01-b001-rs-d7cd4a14bf58
+          sourceRange:
+          - 379
+          - 490
+          text:
+            en: Not reminding an opponent about their triggered abilities is never Failure to Maintain Game State
+              nor Cheating.
+            zh: 未指出对手之触发式异能的行为不属于“未维护游戏状态”或“作弊”。
+          legacyRawUnits:
+          - raw-L001865
+          - raw-L001867
   - id: ipg-s2-6-c-examples
     role: examples
     labelCode: component.examples
@@ -2046,6 +2565,29 @@ sections:
         - raw-L001891
         - raw-L001897
         - raw-L001899
+        readingSegments:
+        - id: ipg-s2-6-c-philosophy-g01-b001-rs-f9c983665a49
+          sourceRange:
+          - 0
+          - 138
+          text:
+            en: If an error is caught before a player could gain advantage, then the dangers of the ongoing game
+              state becoming corrupted are much lower.
+            zh: 如果失误能在有牌手能够藉此获得优势之前发现，则对于接下来游戏状态的伤害就会减少许多。
+          legacyRawUnits:
+          - raw-L001889
+          - raw-L001891
+        - id: ipg-s2-6-c-philosophy-g01-b001-rs-592f09b23206
+          sourceRange:
+          - 138
+          - 265
+          text:
+            en: If the error is allowed to persist, at least some of the fault lies with the opponent, who has
+              also failed to notice the error.
+            zh: 如果失误持续下去，对手必然也有错，因为他也没有去注意到该失误。
+          legacyRawUnits:
+          - raw-L001897
+          - raw-L001899
   classification: game-play-error
   penaltyCode: penalty.warning
 publicationAnnotations:
@@ -2343,6 +2885,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-c-body-g01-b001
+    segmentId: ipg-s2-c-body-g01-b001-rs-eb6eab424795
   position: after
   order: 10
   groups:
@@ -2375,6 +2918,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-c-body-g01-b001
+    segmentId: ipg-s2-c-body-g01-b001-rs-e182026d8083
   position: after
   order: 20
   groups:
@@ -2397,6 +2941,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-c-body-g01-b001
+    segmentId: ipg-s2-c-body-g01-b001-rs-f3518a80e04a
   position: after
   order: 30
   groups:
@@ -2417,6 +2962,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-c-body-g01-b002
+    segmentId: ipg-s2-c-body-g01-b002-rs-6f34188f0894
   position: after
   order: 10
   groups:
@@ -2447,6 +2993,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-c-body-g01-b002
+    segmentId: ipg-s2-c-body-g01-b002-rs-0c37f7b3cf90
   position: after
   order: 20
   groups:
@@ -2468,6 +3015,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-c-body-g01-b003
+    segmentId: ipg-s2-c-body-g01-b003-rs-42523c863539
   position: after
   order: 10
   groups:
@@ -2515,6 +3063,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-c-body-g01-b003
+    segmentId: ipg-s2-c-body-g01-b003-rs-91da8199bece
   position: after
   order: 20
   groups:
@@ -2638,6 +3187,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-definition-g02-b002
+    segmentId: ipg-s2-1-c-definition-g02-b002-rs-db2aac908f8f
   position: after
   order: 10
   groups:
@@ -2680,6 +3230,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-definition-g02-b002
+    segmentId: ipg-s2-1-c-definition-g02-b002-rs-da5b4f0e4bc6
   position: after
   order: 20
   groups:
@@ -2862,6 +3413,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-definition-g03-b003
+    segmentId: ipg-s2-1-c-definition-g03-b003-rs-5a8a3388a024
   position: after
   order: 10
   groups:
@@ -2887,6 +3439,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-definition-g03-b003
+    segmentId: ipg-s2-1-c-definition-g03-b003-rs-1bca48e427be
   position: after
   order: 20
   groups:
@@ -2928,6 +3481,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-definition-g03-b005
+    segmentId: ipg-s2-1-c-definition-g03-b005-rs-e3d8b3c3b0d4
   position: after
   order: 10
   groups:
@@ -2950,6 +3504,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-definition-g03-b005
+    segmentId: ipg-s2-1-c-definition-g03-b005-rs-37883304c090
   position: after
   order: 20
   groups:
@@ -2972,6 +3527,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-definition-g03-b005
+    segmentId: ipg-s2-1-c-definition-g03-b005-rs-226769445fd3
   position: after
   order: 30
   groups:
@@ -3132,6 +3688,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-philosophy-g01-b001
+    segmentId: ipg-s2-1-c-philosophy-g01-b001-rs-99c04601b676
   position: after
   order: 10
   groups:
@@ -3154,6 +3711,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-philosophy-g01-b001
+    segmentId: ipg-s2-1-c-philosophy-g01-b001-rs-2a027a802380
   position: after
   order: 20
   groups:
@@ -3179,6 +3737,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-philosophy-g01-b001
+    segmentId: ipg-s2-1-c-philosophy-g01-b001-rs-a4501dc191ea
   position: after
   order: 30
   groups:
@@ -3220,6 +3779,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-philosophy-g01-b002
+    segmentId: ipg-s2-1-c-philosophy-g01-b002-rs-60d6dc8ed03e
   position: after
   order: 10
   groups:
@@ -3263,6 +3823,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-philosophy-g01-b002
+    segmentId: ipg-s2-1-c-philosophy-g01-b002-rs-5129b64f3c87
   position: after
   order: 20
   groups:
@@ -3287,6 +3848,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-philosophy-g01-b002
+    segmentId: ipg-s2-1-c-philosophy-g01-b002-rs-e4b62bad448b
   position: after
   order: 30
   groups:
@@ -3342,6 +3904,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-philosophy-g01-b002
+    segmentId: ipg-s2-1-c-philosophy-g01-b002-rs-cb512ffb0a08
   position: after
   order: 40
   groups:
@@ -3364,6 +3927,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-philosophy-g01-b004
+    segmentId: ipg-s2-1-c-philosophy-g01-b004-rs-93a43883e6f9
   position: after
   order: 10
   groups:
@@ -3420,6 +3984,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-philosophy-g01-b004
+    segmentId: ipg-s2-1-c-philosophy-g01-b004-rs-8b9248d5d48d
   position: after
   order: 20
   groups:
@@ -3443,6 +4008,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-philosophy-g01-b004
+    segmentId: ipg-s2-1-c-philosophy-g01-b004-rs-3d9c1fb881cb
   position: after
   order: 30
   groups:
@@ -3658,6 +4224,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-additional-remedy-g01-b003
+    segmentId: ipg-s2-1-c-additional-remedy-g01-b003-rs-779b8c1abcbc
   position: after
   order: 10
   groups:
@@ -3678,6 +4245,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-additional-remedy-g01-b003
+    segmentId: ipg-s2-1-c-additional-remedy-g01-b003-rs-605cd232e937
   position: after
   order: 20
   groups:
@@ -3707,6 +4275,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-additional-remedy-g01-b004
+    segmentId: ipg-s2-1-c-additional-remedy-g01-b004-rs-9036afe9b4bc
   position: after
   order: 10
   groups:
@@ -3735,6 +4304,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-additional-remedy-g01-b004
+    segmentId: ipg-s2-1-c-additional-remedy-g01-b004-rs-26b996c9fbb4
   position: after
   order: 20
   groups:
@@ -3755,6 +4325,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-additional-remedy-g01-b004
+    segmentId: ipg-s2-1-c-additional-remedy-g01-b004-rs-da5f76ea3791
   position: after
   order: 30
   groups:
@@ -3777,6 +4348,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-additional-remedy-g01-b004
+    segmentId: ipg-s2-1-c-additional-remedy-g01-b004-rs-45cd63bf4be3
   position: after
   order: 40
   groups:
@@ -3978,6 +4550,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-additional-remedy-g01-b006
+    segmentId: ipg-s2-1-c-additional-remedy-g01-b006-rs-c0a23d290ec3
   position: after
   order: 10
   groups:
@@ -4042,6 +4615,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-1-c-additional-remedy-g01-b006
+    segmentId: ipg-s2-1-c-additional-remedy-g01-b006-rs-795d7a45d875
   position: after
   order: 20
   groups:
@@ -4272,6 +4846,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-2-c-philosophy-g01-b001
+    segmentId: ipg-s2-2-c-philosophy-g01-b001-rs-03637edf452d
   position: after
   order: 10
   groups:
@@ -4293,6 +4868,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-2-c-philosophy-g01-b001
+    segmentId: ipg-s2-2-c-philosophy-g01-b001-rs-550f3c4ce20c
   position: after
   order: 20
   groups:
@@ -4315,6 +4891,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-2-c-philosophy-g01-b002
+    segmentId: ipg-s2-2-c-philosophy-g01-b002-rs-710f095f9d96
   position: after
   order: 10
   groups:
@@ -4337,6 +4914,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-2-c-philosophy-g01-b002
+    segmentId: ipg-s2-2-c-philosophy-g01-b002-rs-bd73f34011fc
   position: after
   order: 20
   groups:
@@ -4358,6 +4936,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-2-c-philosophy-g01-b002
+    segmentId: ipg-s2-2-c-philosophy-g01-b002-rs-592edaac19aa
   position: after
   order: 30
   groups:
@@ -4401,6 +4980,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-3-c-definition-g01-b001
+    segmentId: ipg-s2-3-c-definition-g01-b001-rs-fbd1e45f820e
   position: after
   order: 10
   groups:
@@ -4423,6 +5003,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-3-c-definition-g01-b001
+    segmentId: ipg-s2-3-c-definition-g01-b001-rs-4595bc2d1aa5
   position: after
   order: 20
   groups:
@@ -4469,6 +5050,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-3-c-definition-g01-b001
+    segmentId: ipg-s2-3-c-definition-g01-b001-rs-13acafecdf4a
   position: after
   order: 30
   groups:
@@ -4604,6 +5186,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-3-c-philosophy-g01-b002
+    segmentId: ipg-s2-3-c-philosophy-g01-b002-rs-290cb52c48d5
   position: after
   order: 10
   groups:
@@ -4626,6 +5209,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-3-c-philosophy-g01-b002
+    segmentId: ipg-s2-3-c-philosophy-g01-b002-rs-2d602b02eeb4
   position: after
   order: 20
   groups:
@@ -5009,6 +5593,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-6-c-definition-g01-b001
+    segmentId: ipg-s2-6-c-definition-g01-b001-rs-b7e235582cfc
   position: after
   order: 10
   groups:
@@ -5033,6 +5618,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-6-c-definition-g01-b001
+    segmentId: ipg-s2-6-c-definition-g01-b001-rs-dfab3954e975
   position: after
   order: 20
   groups:
@@ -5056,6 +5642,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-6-c-definition-g01-b001
+    segmentId: ipg-s2-6-c-definition-g01-b001-rs-d7cd4a14bf58
   position: after
   order: 30
   groups:
@@ -5096,6 +5683,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-6-c-philosophy-g01-b001
+    segmentId: ipg-s2-6-c-philosophy-g01-b001-rs-f9c983665a49
   position: after
   order: 10
   groups:
@@ -5115,6 +5703,7 @@ publicationAnnotations:
   anchor:
     type: block
     id: ipg-s2-6-c-philosophy-g01-b001
+    segmentId: ipg-s2-6-c-philosophy-g01-b001-rs-592f09b23206
   position: after
   order: 20
   groups:
