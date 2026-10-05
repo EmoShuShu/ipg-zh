@@ -3,12 +3,16 @@ from __future__ import annotations
 import json
 import shutil
 import tempfile
+from collections import Counter
+from datetime import datetime
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
 
 from .builder import build_outputs
 from .core import (
     ROOT,
+    dump_yaml,
     load_json,
     load_yaml,
     sha256_bytes,
@@ -19,7 +23,13 @@ from .core import (
 from .omegat import collect_units, parse_po, render_po, validate_target_entries
 from .omegat import minimal_yaml_update
 from .p4 import DOCUMENTS, RELEASE_DIR
-from .review import terminology_audit
+from .review import (
+    extract_omegat_notes,
+    record_reviewed_units,
+    refresh_review_ledger,
+    review_status_report,
+    terminology_audit,
+)
 from .validation import validate_release
 
 
@@ -47,6 +57,15 @@ EXPECTED_PO_COUNTS = {
     "appendix-b.po": 18,
 }
 EXPECTED_UNIT_COUNT = 905
+TRANSLATION_REVISION = "zh-r0001"
+REVIEW_LEDGER_PATH = ROOT / f"review/status/{TRANSLATION_REVISION}.json"
+TRANSLATION_NOTES_PATH = ROOT / f"review/translation-notes/{TRANSLATION_REVISION}.json"
+REVIEW_ACTIONS_PATH = ROOT / f"review/actions/{TRANSLATION_REVISION}.yaml"
+CURRENT_CANDIDATE = ROOT / "outputs/current-candidate"
+PROGRESS_JSON = ROOT / "outputs/review-status.json"
+PROGRESS_MARKDOWN = ROOT / "outputs/review-status.md"
+TERMINOLOGY_JSON = ROOT / "outputs/terminology-audit.json"
+TERMINOLOGY_MARKDOWN = ROOT / "outputs/terminology-audit.md"
 
 
 def _write_text(path: Path, content: str) -> None:
@@ -56,6 +75,10 @@ def _write_text(path: Path, content: str) -> None:
 
 def _write_json(path: Path, content: Any) -> None:
     _write_text(path, json.dumps(content, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
+
+
+def _now() -> str:
+    return datetime.now(ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds")
 
 
 def full_inputs() -> tuple[dict[str, Any], list[tuple[str, dict[str, Any]]], dict[str, Any]]:
@@ -86,19 +109,21 @@ def _project_xml() -> str:
     return """<?xml version="1.0" encoding="UTF-8"?>
 <omegat>
   <project version="1.0">
-    <sourceDir>source/</sourceDir>
-    <targetDir>target/</targetDir>
-    <tmDir>tm/</tmDir>
-    <glossaryDir>../../terminology/</glossaryDir>
-    <glossaryFile>ipg-glossary.txt</glossaryFile>
-    <dictionaryDir>dictionary/</dictionaryDir>
-    <sourceLang>EN-US</sourceLang>
-    <targetLang>ZH-CN</targetLang>
-    <sourceTok>org.omegat.tokenizer.LuceneEnglishTokenizer</sourceTok>
-    <targetTok>org.omegat.tokenizer.LuceneSmartChineseTokenizer</targetTok>
-    <sentenceSeg>false</sentenceSeg>
-    <supportDefaultTranslations>false</supportDefaultTranslations>
-    <removeTags>false</removeTags>
+    <source_dir>source</source_dir>
+    <target_dir>target</target_dir>
+    <tm_dir>tm</tm_dir>
+    <glossary_dir>../../terminology</glossary_dir>
+    <glossary_file>ipg-glossary.txt</glossary_file>
+    <dictionary_dir>dictionary</dictionary_dir>
+    <source_lang>EN-US</source_lang>
+    <target_lang>ZH-CN</target_lang>
+    <source_tok>org.omegat.tokenizer.LuceneEnglishTokenizer</source_tok>
+    <target_tok>org.omegat.tokenizer.LuceneSmartChineseTokenizer</target_tok>
+    <sentence_seg>false</sentence_seg>
+    <support_default_translations>false</support_default_translations>
+    <remove_tags>false</remove_tags>
+    <external_command></external_command>
+    <repositories />
   </project>
 </omegat>
 """
@@ -106,8 +131,8 @@ def _project_xml() -> str:
 
 def _filters_xml() -> str:
     return """<?xml version="1.0" encoding="UTF-8"?>
-<filters>
-  <filter className="org.omegat.filters2.po.PoFilter2">
+<filters removeTags="false" removeSpacesNonseg="false" preserveSpaces="true" ignoreFileContext="false">
+  <filter className="org.omegat.filters2.po.PoFilter" enabled="true">
     <files targetEncoding="UTF-8" sourceEncoding="UTF-8" targetFilenamePattern="${filename}" sourceFilenameMask="*.po" />
     <option name="skipHeader" value="false" />
   </filter>
@@ -253,6 +278,153 @@ def prepare_full_project() -> dict[str, Any]:
     }
 
 
+def _current_units(mapping: dict[str, Any]) -> list[dict[str, Any]]:
+    return [
+        {
+            "id": unit["id"],
+            "source": unit["source"],
+            "target": unit["target"],
+            "po": unit["po"],
+        }
+        for unit in mapping["units"]
+    ]
+
+
+def initialize_full_review_state() -> dict[str, Any]:
+    """Create the real 905-unit state without importing P2 demonstration data."""
+    mapping = _validate_existing_project(validate_repository_inputs())
+    existing = load_json(REVIEW_LEDGER_PATH) if REVIEW_LEDGER_PATH.exists() else None
+    ledger = refresh_review_ledger(
+        _current_units(mapping),
+        existing,
+        release_id=mapping["releaseId"],
+        translation_revision=mapping["translationRevision"],
+    )
+    errors = validate_schema(ledger, ROOT / "schema/review-ledger.schema.json")
+    if errors:
+        raise ValueError("review ledger schema failed: " + "; ".join(errors))
+    _write_json(REVIEW_LEDGER_PATH, ledger)
+    if not TRANSLATION_NOTES_PATH.exists():
+        _write_json(
+            TRANSLATION_NOTES_PATH,
+            {
+                "schemaVersion": 1,
+                "releaseId": mapping["releaseId"],
+                "translationRevision": mapping["translationRevision"],
+                "notes": [],
+            },
+        )
+    if not REVIEW_ACTIONS_PATH.exists():
+        _write_text(
+            REVIEW_ACTIONS_PATH,
+            dump_yaml(
+                {
+                    "schemaVersion": 1,
+                    "releaseId": mapping["releaseId"],
+                    "translationRevision": mapping["translationRevision"],
+                    "scope": "full-document-review",
+                    "actions": [],
+                }
+            ),
+        )
+    return ledger
+
+
+def _write_terminology_markdown(report: dict[str, Any]) -> None:
+    lines = [
+        "# 术语审计（非阻塞）",
+        "",
+        "本报告只供人工参考；其中的警告不会阻止已验证的回写或候选构建。",
+        "",
+        f"- 词汇表格式问题：{report.get('glossaryIssueCount', 0)}",
+        f"- 术语提示：{report.get('findingCount', 0)}",
+    ]
+    if report.get("error"):
+        lines.extend(["", f"- 审计程序错误：{report['error']}"])
+    _write_text(TERMINOLOGY_MARKDOWN, "\n".join(lines) + "\n")
+
+
+def run_nonblocking_terminology_audit() -> dict[str, Any]:
+    try:
+        inputs = validate_repository_inputs()
+        report = inputs["glossary"]
+    except Exception as error:  # The audit is deliberately advisory.
+        report = {
+            "schemaVersion": 1,
+            "nonBlocking": True,
+            "glossaryIssueCount": 0,
+            "findingCount": 0,
+            "glossaryIssues": [],
+            "findings": [],
+            "error": str(error),
+        }
+    _write_json(TERMINOLOGY_JSON, report)
+    _write_terminology_markdown(report)
+    return report
+
+
+def _write_progress_markdown(report: dict[str, Any]) -> None:
+    counts = report["counts"]
+    lines = [
+        "# IPG 全文审校进度",
+        "",
+        f"- 总单元：{report['total']}",
+        f"- 已审未改：{counts['reviewed-unchanged']}",
+        f"- 已审有改：{counts['reviewed-modified']}",
+        f"- 已过期：{counts['stale']}",
+        f"- 未审：{counts['unreviewed']}",
+        f"- 12 项初始缺译中尚余：{report['initialMissingRemaining']}",
+        "",
+        "| PO 文件 | 总数 | 已审未改 | 已审有改 | stale | 未审 |",
+        "|---|---:|---:|---:|---:|---:|",
+    ]
+    for po_name in PO_ORDER:
+        item = report["byPo"][po_name]
+        lines.append(
+            f"| {po_name} | {item['total']} | {item['reviewed-unchanged']} | "
+            f"{item['reviewed-modified']} | {item['stale']} | {item['unreviewed']} |"
+        )
+    _write_text(PROGRESS_MARKDOWN, "\n".join(lines) + "\n")
+
+
+def refresh_progress_reports() -> dict[str, Any]:
+    mapping = _validate_existing_project(validate_repository_inputs())
+    ledger = refresh_review_ledger(
+        _current_units(mapping),
+        load_json(REVIEW_LEDGER_PATH) if REVIEW_LEDGER_PATH.exists() else None,
+        release_id=mapping["releaseId"],
+        translation_revision=mapping["translationRevision"],
+    )
+    status = review_status_report(ledger)
+    po_for_id = {unit["id"]: unit["po"] for unit in mapping["units"]}
+    by_po = {}
+    for po_name in PO_ORDER:
+        entries = [entry for entry in ledger["entries"] if po_for_id[entry["unitId"]] == po_name]
+        counts = Counter(entry["status"] for entry in entries)
+        by_po[po_name] = {
+            "total": len(entries),
+            **{
+                name: counts.get(name, 0)
+                for name in ("reviewed-unchanged", "reviewed-modified", "stale", "unreviewed")
+            },
+        }
+    report = {
+        **status,
+        "releaseId": mapping["releaseId"],
+        "translationRevision": mapping["translationRevision"],
+        "initialMissingTotal": len(mapping["initialMissingUnitIds"]),
+        "initialMissingRemaining": sum(
+            not unit["target"]
+            for unit in mapping["units"]
+            if unit["id"] in set(mapping["initialMissingUnitIds"])
+        ),
+        "byPo": by_po,
+    }
+    _write_json(PROGRESS_JSON, report)
+    _write_progress_markdown(report)
+    return report
+
+
 def _target_entries(mapping: dict[str, Any]) -> dict[str, list[dict[str, str]]]:
     target_dir = PROJECT_DIR / "target"
     actual = sorted(path.name for path in target_dir.iterdir() if path.is_file())
@@ -376,7 +548,58 @@ def _tmx_hash() -> str | None:
     return sha256_bytes(path.read_bytes()) if path.exists() else None
 
 
-def preview_full_writeback(selected_po: list[str], candidate_root: Path) -> dict[str, Any]:
+def _units_with_target_entries(
+    mapping: dict[str, Any], entries: dict[str, list[dict[str, str]]]
+) -> list[dict[str, Any]]:
+    targets = {entry["id"]: entry["target"] for items in entries.values() for entry in items}
+    return [
+        {
+            "id": unit["id"],
+            "source": unit["source"],
+            "target": targets[unit["id"]],
+        }
+        for unit in mapping["units"]
+    ]
+
+
+def extract_project_translation_notes(
+    mapping: dict[str, Any],
+    entries: dict[str, list[dict[str, str]]] | None = None,
+    *,
+    recorded_at: str | None = None,
+) -> dict[str, Any]:
+    tmx = PROJECT_DIR / "omegat/project_save.tmx"
+    if not tmx.exists():
+        return {
+            "schemaVersion": 1,
+            "releaseId": mapping["releaseId"],
+            "translationRevision": mapping["translationRevision"],
+            "notes": [],
+        }
+    units = (
+        _units_with_target_entries(mapping, entries)
+        if entries is not None
+        else _current_units(mapping)
+    )
+    notes = extract_omegat_notes(
+        tmx,
+        units,
+        release_id=mapping["releaseId"],
+        translation_revision=mapping["translationRevision"],
+        recorded_at=recorded_at,
+    )
+    errors = validate_schema(notes, ROOT / "schema/translation-notes.schema.json")
+    if errors:
+        raise ValueError("translation notes schema failed: " + "; ".join(errors))
+    return notes
+
+
+def preview_full_writeback(
+    selected_po: list[str],
+    candidate_root: Path,
+    *,
+    recorded_at: str | None = None,
+) -> dict[str, Any]:
     inspection = inspect_target_project()
     mapping = inspection["mapping"]
     entries = inspection["entries"]
@@ -432,6 +655,7 @@ def preview_full_writeback(selected_po: list[str], candidate_root: Path) -> dict
     selected_ids = {
         unit["id"] for unit in mapping["units"] if unit["po"] in selected
     }
+    notes = extract_project_translation_notes(mapping, entries, recorded_at=recorded_at)
     missing_remaining = sum(not target[unit_id]["target"] for unit_id in mapping["initialMissingUnitIds"])
     return {
         "schemaVersion": 1,
@@ -439,6 +663,7 @@ def preview_full_writeback(selected_po: list[str], candidate_root: Path) -> dict
         "reviewedUnitCount": len(selected_ids),
         "actualChangeCount": len(changes),
         "reviewedUnchangedCount": len(selected_ids) - len(changes),
+        "noteUnitCount": sum(note["unitId"] in selected_ids for note in notes["notes"]),
         "initialMissingRemaining": missing_remaining,
         "changes": changes,
         "mappingSha256": sha256_bytes(MAPPING_PATH.read_bytes()),
@@ -498,3 +723,115 @@ def apply_full_writeback(preview: dict[str, Any], candidate_root: Path) -> dict[
             for relative in sorted(after)
         },
     }
+
+
+def record_review_completion(
+    selected_po: list[str],
+    modified_ids: set[str],
+    notes: dict[str, Any],
+    *,
+    reviewed_at: str,
+) -> dict[str, Any]:
+    mapping = _validate_existing_project(validate_repository_inputs())
+    reviewed_ids = {
+        unit["id"] for unit in mapping["units"] if unit["po"] in set(selected_po)
+    }
+    existing = load_json(REVIEW_LEDGER_PATH) if REVIEW_LEDGER_PATH.exists() else None
+    ledger = record_reviewed_units(
+        _current_units(mapping),
+        existing,
+        reviewed_ids=reviewed_ids,
+        modified_ids=modified_ids,
+        reviewed_at=reviewed_at,
+        release_id=mapping["releaseId"],
+        translation_revision=mapping["translationRevision"],
+    )
+    ledger_errors = validate_schema(ledger, ROOT / "schema/review-ledger.schema.json")
+    note_errors = validate_schema(notes, ROOT / "schema/translation-notes.schema.json")
+    if ledger_errors or note_errors:
+        raise ValueError("review state schema failed: " + "; ".join(ledger_errors + note_errors))
+    _write_json(TRANSLATION_NOTES_PATH, notes)
+    _write_json(REVIEW_LEDGER_PATH, ledger)
+    return ledger
+
+
+def validate_current_state() -> dict[str, Any]:
+    manifest, documents, display = full_inputs()
+    ledger = load_json(REVIEW_LEDGER_PATH) if REVIEW_LEDGER_PATH.exists() else None
+    candidate = validate_release(
+        profile="candidate",
+        manifest=manifest,
+        documents=[item[1] for item in documents],
+        display_values=display,
+        migration_report=_migration_gate_stub(),
+        review_ledger=ledger,
+    )
+    release = validate_release(
+        profile="release",
+        manifest=manifest,
+        documents=[item[1] for item in documents],
+        display_values=display,
+        migration_report=_migration_gate_stub(),
+        review_ledger=ledger,
+    )
+    if not candidate["valid"]:
+        raise ValueError("candidate validation failed")
+    if release["valid"]:
+        raise ValueError("nonpublishable P4.5 source unexpectedly passed release validation")
+    return {"candidate": candidate, "release": release}
+
+
+def build_current_candidate(validation: dict[str, Any] | None = None) -> dict[str, Any]:
+    manifest, documents, display = full_inputs()
+    validation = validation or validate_current_state()
+    with tempfile.TemporaryDirectory(prefix="ipg-current-candidate-") as temporary:
+        temporary_root = Path(temporary)
+        first = temporary_root / "first"
+        second = temporary_root / "second"
+        build_outputs(
+            first,
+            manifest,
+            [item[1] for item in documents],
+            display,
+            candidate=True,
+            profile="candidate",
+        )
+        build_outputs(
+            second,
+            manifest,
+            [item[1] for item in documents],
+            display,
+            candidate=True,
+            profile="candidate",
+        )
+        names = ("IPG.md", "rules.json", "SHA256SUMS", "build-report.json")
+        if any((first / name).read_bytes() != (second / name).read_bytes() for name in names):
+            raise ValueError("current candidate build is not byte deterministic")
+        output_errors = validate_schema(
+            load_json(first / "rules.json"), ROOT / "schema/ipg-output.schema.json"
+        )
+        if output_errors:
+            raise ValueError("candidate output schema failed: " + "; ".join(output_errors))
+        if CURRENT_CANDIDATE.exists():
+            shutil.rmtree(CURRENT_CANDIDATE)
+        CURRENT_CANDIDATE.mkdir(parents=True)
+        for name in names:
+            shutil.copyfile(first / name, CURRENT_CANDIDATE / name)
+    report = {
+        "schemaVersion": 1,
+        **validation,
+        "byteIdentical": True,
+        "files": {
+            name: sha256_bytes((CURRENT_CANDIDATE / name).read_bytes()) for name in names
+        },
+    }
+    _write_json(CURRENT_CANDIDATE / "validation.json", report)
+    return report
+
+
+def rollback_applied_writeback(
+    formal_files: dict[str, bytes], mapping_bytes: bytes
+) -> None:
+    for relative, content in formal_files.items():
+        (ROOT / relative).write_bytes(content)
+    MAPPING_PATH.write_bytes(mapping_bytes)

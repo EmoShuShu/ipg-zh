@@ -31,6 +31,14 @@ def isolated_repo(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> tuple[Path
     monkeypatch.setattr(full_review, "PROJECT_DIR", project)
     monkeypatch.setattr(full_review, "MAPPING_PATH", project / "omegat/full-review.mapping.json")
     monkeypatch.setattr(full_review, "GLOSSARY_PATH", root / "terminology/ipg-glossary.txt")
+    monkeypatch.setattr(full_review, "REVIEW_LEDGER_PATH", root / "review/status/zh-r0001.json")
+    monkeypatch.setattr(full_review, "TRANSLATION_NOTES_PATH", root / "review/translation-notes/zh-r0001.json")
+    monkeypatch.setattr(full_review, "REVIEW_ACTIONS_PATH", root / "review/actions/zh-r0001.yaml")
+    monkeypatch.setattr(full_review, "CURRENT_CANDIDATE", root / "outputs/current-candidate")
+    monkeypatch.setattr(full_review, "PROGRESS_JSON", root / "outputs/review-status.json")
+    monkeypatch.setattr(full_review, "PROGRESS_MARKDOWN", root / "outputs/review-status.md")
+    monkeypatch.setattr(full_review, "TERMINOLOGY_JSON", root / "outputs/terminology-audit.json")
+    monkeypatch.setattr(full_review, "TERMINOLOGY_MARKDOWN", root / "outputs/terminology-audit.md")
     return root, project
 
 
@@ -77,12 +85,14 @@ def test_appendix_b_has_twelve_empty_targets_and_other_source_targets_are_preser
 def test_one_project_contains_all_po_and_direct_repository_glossary(project: Path) -> None:
     full_review.prepare_full_project()
     xml = (project / "omegat.project").read_text(encoding="utf-8")
-    assert "<sentenceSeg>false</sentenceSeg>" in xml
+    assert "<sentence_seg>false</sentence_seg>" in xml
     assert "LuceneEnglishTokenizer" in xml and "LuceneSmartChineseTokenizer" in xml
-    assert "../../terminology/" in xml and "ipg-glossary.txt" in xml
+    assert "../../terminology" in xml and "ipg-glossary.txt" in xml
     assert not (project / "glossary").exists()
     assert list((project / "target").iterdir()) == []
-    assert (project / "omegat/filters.xml").is_file()
+    filters = (project / "omegat/filters.xml").read_text(encoding="utf-8")
+    assert 'preserveSpaces="true"' in filters
+    assert 'ignoreFileContext="false"' in filters
 
 
 def test_prepare_again_validates_without_overwriting_user_files(project: Path) -> None:
@@ -194,3 +204,82 @@ def test_preview_detects_target_or_formal_yaml_change_before_apply(
         expected = "formal YAML changed"
     with pytest.raises(ValueError, match=expected):
         full_review.apply_full_writeback(preview, candidate)
+
+
+def test_real_full_review_state_starts_with_905_unreviewed_and_empty_notes(
+    isolated_repo: tuple[Path, Path]
+) -> None:
+    root, project = isolated_repo
+    full_review.prepare_full_project()
+    ledger = full_review.initialize_full_review_state()
+    assert len(ledger["entries"]) == 905
+    assert {entry["status"] for entry in ledger["entries"]} == {"unreviewed"}
+    notes = json.loads(
+        (root / "review/translation-notes/zh-r0001.json").read_text(encoding="utf-8")
+    )
+    assert notes["notes"] == []
+    assert (root / "review/actions/zh-r0001.yaml").is_file()
+    assert not any((project / "target").iterdir())
+
+
+def test_progress_reports_all_files_and_twelve_missing(
+    isolated_repo: tuple[Path, Path]
+) -> None:
+    root, _ = isolated_repo
+    full_review.prepare_full_project()
+    full_review.initialize_full_review_state()
+    report = full_review.refresh_progress_reports()
+    assert report["total"] == 905
+    assert report["counts"] == {
+        "unreviewed": 905,
+        "reviewed-unchanged": 0,
+        "reviewed-modified": 0,
+        "stale": 0,
+    }
+    assert report["initialMissingRemaining"] == 12
+    assert {name: item["total"] for name, item in report["byPo"].items()} == full_review.EXPECTED_PO_COUNTS
+    assert (root / "outputs/review-status.md").is_file()
+
+
+def test_unchanged_selected_file_can_be_recorded_reviewed_unchanged(
+    isolated_repo: tuple[Path, Path]
+) -> None:
+    root, project = isolated_repo
+    full_review.prepare_full_project(); full_review.initialize_full_review_state(); _create_target(project)
+    mapping = json.loads((project / "omegat/full-review.mapping.json").read_text(encoding="utf-8"))
+    notes = full_review.extract_project_translation_notes(mapping, recorded_at="2026-10-05T00:00:00+08:00")
+    ledger = full_review.record_review_completion(
+        ["chapter-01.po"], set(), notes, reviewed_at="2026-10-05T00:00:00+08:00"
+    )
+    statuses = {
+        entry["unitId"]: entry["status"] for entry in ledger["entries"]
+    }
+    chapter_ids = {unit["id"] for unit in mapping["units"] if unit["po"] == "chapter-01.po"}
+    assert {statuses[unit_id] for unit_id in chapter_ids} == {"reviewed-unchanged"}
+    assert sum(status == "unreviewed" for status in statuses.values()) == 905 - 109
+    assert json.loads((root / "review/translation-notes/zh-r0001.json").read_text(encoding="utf-8"))["notes"] == []
+
+
+def test_candidate_build_never_writes_dist_and_release_stays_blocked(
+    isolated_repo: tuple[Path, Path]
+) -> None:
+    root, _ = isolated_repo
+    full_review.prepare_full_project(); full_review.initialize_full_review_state()
+    report = full_review.build_current_candidate()
+    assert report["candidate"]["valid"] is True
+    assert report["release"]["valid"] is False
+    assert report["byteIdentical"] is True
+    assert (root / "outputs/current-candidate/IPG.md").is_file()
+    assert (root / "outputs/current-candidate/rules.json").is_file()
+    assert not (root / "dist").exists()
+
+
+def test_terminology_audit_error_is_reported_but_nonblocking(
+    isolated_repo: tuple[Path, Path], monkeypatch: pytest.MonkeyPatch
+) -> None:
+    root, _ = isolated_repo
+    monkeypatch.setattr(full_review, "GLOSSARY_PATH", root / "terminology/missing.txt")
+    report = full_review.run_nonblocking_terminology_audit()
+    assert report["nonBlocking"] is True
+    assert "error" in report
+    assert (root / "outputs/terminology-audit.json").is_file()

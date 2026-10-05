@@ -1,0 +1,27 @@
+{
+  "notes": [
+    {
+      "note": "保留“涵盖大多数”措辞；这是修改理由记录，不是发布注解。",
+      "recordedAt": "2026-10-04",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "7536a10beaf6531419144e04c2a4e5a7035efe5d1f23d741be10a13b32b98c22",
+      "stale": false,
+      "targetHash": "bdd8fe03becd8e9ddabdbdbc2f46f25cb2494dc87be0e220505c3b3e2fad1d3c",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-s2-5-c-definition-g01-b001"
+    },
+    {
+      "note": "此条故意使用旧源文，用于证明源文变化后批注会标记为 stale。",
+      "recordedAt": "2026-10-04",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "2cda6188a2da1e6eda106343e949c26bf9257102530148815123a9b1555d7304",
+      "stale": true,
+      "targetHash": "c4c0e491854067cbf8d2954e01c075ee2cf7934ffbe4481680a36bc14605a21b",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-5-philosophy-consistency-g01-b01"
+    }
+  ],
+  "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+  "schemaVersion": 1,
+  "translationRevision": "zh-r0001"
+}

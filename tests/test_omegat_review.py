@@ -8,7 +8,15 @@ from ipg_pipeline.builder import build_outputs
 from ipg_pipeline.cli import RELEASE_DIR
 from ipg_pipeline.core import ROOT, load_json, load_yaml, validate_schema, walk_nodes
 from ipg_pipeline.omegat import apply_writeback, collect_units, export_project, parse_po, preview_writeback, validate_target_entries
-from ipg_pipeline.review import build_review_ledger, extract_translation_notes, review_status_report, terminology_audit
+from ipg_pipeline.review import (
+    build_review_ledger,
+    extract_omegat_notes,
+    extract_translation_notes,
+    record_reviewed_units,
+    refresh_review_ledger,
+    review_status_report,
+    terminology_audit,
+)
 
 
 def _pilot_document_tuples():
@@ -122,9 +130,127 @@ def test_translation_note_without_time_requires_explicit_parameter(tmp_path) -> 
     assert result["notes"][0]["recordedAt"] == "2026-10-04"
 
 
+def _write_tmx(tmp_path, body: str):
+    path = tmp_path / "project_save.tmx"
+    path.write_text(
+        f'<?xml version="1.0"?><tmx version="1.4"><body>{body}</body></tmx>',
+        encoding="utf-8",
+    )
+    return path
+
+
+def test_real_omegat_note_is_archived_and_target_change_makes_it_stale(tmp_path) -> None:
+    units = [{"id": "block:a", "source": "Source", "target": "译文"}]
+    tmx = _write_tmx(
+        tmp_path,
+        '<tu tuid="block:a" changedate="20261005T010203Z"><note>修改理由</note>'
+        '<tuv xml:lang="en-US"><seg>Source</seg></tuv>'
+        '<tuv xml:lang="zh-CN"><seg>译文</seg></tuv></tu>',
+    )
+    result = extract_omegat_notes(
+        tmx, units, release_id="r", translation_revision="zh-r0001"
+    )
+    assert result["notes"] == [
+        {
+            "unitId": "block:a",
+            "sourceHash": result["notes"][0]["sourceHash"],
+            "targetHash": result["notes"][0]["targetHash"],
+            "releaseId": "r",
+            "translationRevision": "zh-r0001",
+            "note": "修改理由",
+            "recordedAt": "20261005T010203Z",
+            "stale": False,
+        }
+    ]
+    changed = [{"id": "block:a", "source": "Source", "target": "新译文"}]
+    assert extract_omegat_notes(
+        tmx, changed, release_id="r", translation_revision="zh-r0001"
+    )["notes"][0]["stale"] is True
+
+
+def test_omegat_note_duplicate_pair_requires_stable_identity(tmp_path) -> None:
+    units = [
+        {"id": "block:a", "source": "Same", "target": "相同"},
+        {"id": "block:b", "source": "Same", "target": "相同"},
+    ]
+    tmx = _write_tmx(
+        tmp_path,
+        '<tu><note>理由</note><tuv xml:lang="en"><seg>Same</seg></tuv>'
+        '<tuv xml:lang="zh"><seg>相同</seg></tuv></tu>',
+    )
+    with pytest.raises(ValueError, match="ambiguous OmegaT note"):
+        extract_omegat_notes(
+            tmx,
+            units,
+            release_id="r",
+            translation_revision="zh-r0001",
+            recorded_at="2026-10-05T00:00:00+08:00",
+        )
+
+
+@pytest.mark.parametrize(
+    ("body", "expected"),
+    [
+        (
+            '<tu><note>理由</note><tuv xml:lang="en"><seg>Unknown</seg></tuv>'
+            '<tuv xml:lang="zh"><seg>未知</seg></tuv></tu>',
+            "orphan OmegaT note",
+        ),
+        (
+            '<tu tuid="block:a"><note>理由一</note><tuv xml:lang="en"><seg>Source</seg></tuv>'
+            '<tuv xml:lang="zh"><seg>译文</seg></tuv></tu>'
+            '<tu tuid="block:a"><note>理由二</note><tuv xml:lang="en"><seg>Source</seg></tuv>'
+            '<tuv xml:lang="zh"><seg>译文</seg></tuv></tu>',
+            "conflicting OmegaT notes",
+        ),
+    ],
+)
+def test_omegat_note_orphan_and_conflict_fail_closed(tmp_path, body: str, expected: str) -> None:
+    tmx = _write_tmx(tmp_path, body)
+    with pytest.raises(ValueError, match=expected):
+        extract_omegat_notes(
+            tmx,
+            [{"id": "block:a", "source": "Source", "target": "译文"}],
+            release_id="r",
+            translation_revision="zh-r0001",
+            recorded_at="2026-10-05T00:00:00+08:00",
+        )
+
+
+def test_review_ledger_marks_only_selected_units_and_detects_stale() -> None:
+    units = [
+        {"id": "a", "source": "A", "target": "甲"},
+        {"id": "b", "source": "B", "target": "乙"},
+        {"id": "c", "source": "C", "target": "丙"},
+    ]
+    initial = refresh_review_ledger(
+        units, None, release_id="r", translation_revision="zh-r0001"
+    )
+    reviewed = record_reviewed_units(
+        units,
+        initial,
+        reviewed_ids={"a", "b"},
+        modified_ids={"b"},
+        reviewed_at="2026-10-05T00:00:00+08:00",
+        release_id="r",
+        translation_revision="zh-r0001",
+    )
+    assert {entry["unitId"]: entry["status"] for entry in reviewed["entries"]} == {
+        "a": "reviewed-unchanged",
+        "b": "reviewed-modified",
+        "c": "unreviewed",
+    }
+    changed = copy.deepcopy(units)
+    changed[0]["target"] = "新甲"
+    stale = refresh_review_ledger(
+        changed, reviewed, release_id="r", translation_revision="zh-r0001"
+    )
+    assert {entry["unitId"]: entry["status"] for entry in stale["entries"]}["a"] == "stale"
+
+
 def test_review_ledger_has_four_states_and_is_isolated(tmp_path) -> None:
     documents, display = _pilot_document_tuples(); units = collect_units(documents, display)
-    actions = load_yaml(ROOT / "review/actions/zh-r0001.yaml")["actions"]
+    actions = load_yaml(ROOT / "tests/fixtures/pilot/review-actions.yaml")["actions"]
     ledger = build_review_ledger(units, actions, release_id="ipg-test", translation_revision="zh-r0001")
     assert validate_schema(ledger, ROOT / "schema/review-ledger.schema.json") == []
     assert set(entry["status"] for entry in ledger["entries"]) == {"unreviewed", "reviewed-unchanged", "reviewed-modified", "stale"}

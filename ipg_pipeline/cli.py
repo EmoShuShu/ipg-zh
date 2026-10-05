@@ -239,7 +239,7 @@ def command_review(_: argparse.Namespace) -> int:
     documents, display_values = _document_tuples()
     units = collect_units(documents, display_values)
     manifest = load_yaml(RELEASE_DIR / "manifest.yaml")
-    actions = load_yaml(ROOT / f"review/actions/{TRANSLATION_REVISION}.yaml")["actions"]
+    actions = load_yaml(ROOT / "tests/fixtures/pilot/review-actions.yaml")["actions"]
     ledger = build_review_ledger(
         units,
         actions,
