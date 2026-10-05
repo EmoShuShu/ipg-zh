@@ -107,4 +107,106 @@ dist 只放两个最终文件。哈希和报告通过外部返回报告/命令�
 
 成功路径使用 `tests/fixtures/release-rehearsal/source.yaml` 和隔离临时仓库。
 不填真实缺译、不改真实许可或账本。没有远端、GitHub、PR、Release 或自动
-发布。后续人工修订、官方更新 diff/继承、长期快照与 CI/发布须另行批准。
+发布。官方更新 diff/继承与不可变证据已在 P5 接通；人工修订、当前版本提升、
+OmegaT 新版本协调及 CI/发布仍须另行批准。
+
+## 官方更新与快照（P5）
+
+三个动作不同：**检查**是取得官方资料并比较；**快照**是固化可核验的证据；
+**候选更新**是提出新版本源和身份映射。它们都不表示人工批准，更不等于正式
+dist 或 GitHub Release。当前版本仍只由 `current-release.txt` 决定。
+
+```powershell
+.venv\Scripts\ipg-check-official-update.exe
+.venv\Scripts\ipg-snapshot.exe
+.venv\Scripts\ipg-snapshot.exe --verify <快照目录>
+
+.venv\Scripts\python.exe scripts/check_official_update.py
+.venv\Scripts\python.exe scripts/snapshot.py --verify <快照目录>
+```
+
+`check-official-update` 访问 `https://wpn.wizards.com/en/rules-documents`，而
+`snapshot` 无参数时完全离线，使用当前指针的已有官方 PDF 生成加强证据。
+`snapshot --verify` 只核验已有 P5 快照。退出码 0 为检查/核验成功，1 为停止，
+不把 `no-update` 视为错误。网络超时、页面异常或未知 PDF 版式都会停止。
+
+### 发现与版本判定
+
+WPN 首屏可能只渲染最新 10 项，IPG 不一定可见。程序按已核验的 Nuxt 引用池
+读取规则页的完整 `downloadableDocuments.entries`，精确检查 IPG 标题、英文
+语言、文档类型、更新时间和关联 CTA；可见卡片存在时必须与完整集合一致。
+没有完整集合时仅接受唯一明确的可见 IPG 卡片；结构变化、重复条目、无效引用、
+无效日期或两个来源不一致均拒绝，不全文搜字符串、猜分页或回退到旧 PDF 地址。
+
+只接受 HTTPS 的 `wpn.wizards.com` 指定规则页及 `media.wizards.com` PDF；每个
+重定向在跟随前验证，最多 5 次。网页上限 5 MiB、PDF 上限 30 MiB；拒绝压缩
+响应、截断、非法地址和非 `%PDF-` 文件，计算完整文件 SHA-256。
+
+网页 `updated` 是 `pageUpdatedDate`，不是政策有效日期。政策有效日期必须来自
+PDF 唯一的 `Effective ...` 标题，并与全文解析交叉验证。文件名不参与判定。
+相同有效日期与哈希是 `no-update`；新日期新哈希是 `new-official-version`；相同
+日期不同哈希是 `same-day-repack`。PDF 日期回退直接拒绝，不自动回退当前版本。
+
+### 不可变证据与位置
+
+所有新增文件仅在 `outputs/official-update/`，不扩写原有 `snapshots/official/`。
+P5 快照路径：
+
+```text
+outputs/official-update/snapshots/official/<有效日期>/<完整 PDF 哈希>/
+  imports/<注解来源完整哈希>/<中文修订>/<完整上下文哈希>/
+    official/IPG_EN.pdf、rules-page.html（联网检查时）
+    parsed/official.json
+    inputs/base/…、inputs/update-overrides.json
+    implementation/ipg_pipeline/…
+    proposed/id-registry.yaml、mapping-overrides.yaml
+    reports/update.json、review.md、pdf-coverage.json、reconciliation.json
+    reports/unresolved-annotations.json、deleted-review-records.json
+    candidate/…（仅发现 PDF 变化时）
+    snapshot.json、SHA256SUMS
+```
+
+`snapshot.json` 保存三版本轴、来源/下载时间、实现及依赖版本、所有基础输入和
+registry/override 哈希；`SHA256SUMS` 包括 snapshot.json，但不对自身求哈希。
+上下文由基础版本/资料、目标官方版本、实现和 override 决定。复用同一上下文时
+保留首次下载时间，逐项验证而不覆盖；基础译文、账本、实现或人工映射改变会得到
+另一个快照。相同日期不同 PDF 哈希永远分开。哈希清单检测损坏，不是数字签名。
+
+为保证审阅包可独立核验，P5 隔离包包含 PDF 和实现/输入副本；它不是再次导入旧
+中文，也不提交重复大型工作文件。删除本地 outputs 会丢失这些未提交证据，请在
+需要时自行保存完整目录；旧基线快照、源、迁移证据及 Git 历史仍保持不变。
+
+### 保守协调与继承
+
+解析只给 extraction ID；独立 reconciliation 使用既有 registry、英文证据和
+IPG 父节点/角色上下文。编号、标题或数组位置不是身份。唯一匹配才继承 ID；
+插入新节点分配未使用编号，删除保留永久退役及历史。移动和重排做结构 diff。
+无法唯一确认身份时产生 finding 和隔离的临时拟议身份，旧候选 ID 不盲目退役。
+
+英文修改默认不自动猜身份：报告保存旧中文建议，新节点中文保持空白。人工明确
+确认身份后可通过 `--overrides <文件.json>` 重新生成另一快照。该文件符合
+`schema/update-overrides.schema.json`，绑定基础 release ID、目标日期/哈希以及
+全部旧/新节点的语义哈希；支持 continue、rename、renumber、move、split、merge。
+哈希改变或重复消费即拒绝。拆并默认不保留旧 ID、不批量复制旧译；如需连续性，
+必须明确选择 `preserveId` 与 `preserveExtractionId`。旧迁移 override 仅归档，
+不会当作新 PDF 的身份决策自动套用。合成示例见 `tests/test_official_update.py`。
+
+身份及英文未变：继承中文和仍有效的审校状态。英文变：旧译只作待修订候选，
+审校 stale；新单元缺译且 unreviewed；删除单元退出正文和新 ledger，旧审校记录
+单独归档。上下文改变也可令关联注解/译文 stale，不能把保留译文当作已审。
+
+发布注解保留四级 anchor、position、order、appliesTo 和多段内容；锚点/片段/
+引用丢失时整个注解进入 unresolved-annotations 报告，不丢弃、不改挂。英文段落
+改变后旧 readingSegments 不再套用，其旧译/划分进入 finding。翻译批注独立继承
+到新修订 notes store，源文或译文任一哈希不符都会 stale，删除单元的批注保留
+并报告；批注不混入内容或审校账本。
+
+候选的 `publishable` 永远为 false。其 `migrationLineage` 只说明旧源的历史覆盖，
+不是“新英文已经迁移、翻译或审完”的证明；全部更新未决同时记录为 candidate
+readiness 问题。提升前必须人工解决 finding、建立新版本来源/继承证据、核验版本
+轴和全部发布门槛，再另行批准源/指针与 OmegaT 协调。P5 不提供 `--apply`。
+
+与 MTR 一致：正式入口与 scripts 包装、安全发现、哈希快照、结构 diff、保守
+翻译继承。刻意不同：IPG 原生 parser、三版本轴、持久 ID 生命周期、处罚/附录
+交叉引用、三套审校数据隔离，以及只提出候选、不自动写入当前 release 或指针。
+P5 审阅包交付后停止，不开始翻译或配置远端发布。

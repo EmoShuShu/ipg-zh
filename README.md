@@ -1,10 +1,29 @@
 # ipg-zh
 
-This repository currently contains the approved work through P4.6: the complete
+This repository currently contains the approved work through P5: the complete
 2024-09-23 official English IPG structure, conservatively migrated legacy
 Chinese text, the bilingual AIPG publication annotations found in
 `AIPG_2025.md`, and a full-document OmegaT review workflow. It is a review
 candidate, not a publishable release.
+
+## P5 官方更新与不可变快照
+
+```powershell
+.venv\Scripts\ipg-check-official-update.exe
+.venv\Scripts\ipg-snapshot.exe
+.venv\Scripts\ipg-snapshot.exe --verify <快照目录>
+```
+
+提供 `scripts/check_official_update.py` / `scripts/snapshot.py`。更新检查读取 WPN
+规则页完整文档集合，精确匹配英文 IPG；网页更新时间与 PDF 的 Effective 日期
+分别记录，以 PDF 有效日期和完整 SHA-256 判断更新。同日换包不会被当作未更新。
+
+所有新证据都在忽略目录 `outputs/official-update/`。快照保存权威 PDF、完整解析
+与溯源、实现与输入哈希、registry/override、结构差异及三版本轴。已有快照仅验证
+并复用；新版本仅生成不可发布的隔离候选，不修改当前指针、源、账本、OmegaT 或
+dist。歧义、拆并和失锚需要人工确认，不能自动套用位置或丢弃注解。
+详见 [中文维护说明](README.zh-CN.md#官方更新与快照p5) 和
+[P5 审阅记录](docs/review/p5-official-update.md)。P5 不提供自动提升或发布入口。
 
 ## P4.6 本地生产入口
 

@@ -43,22 +43,24 @@
 <body>
 <main>
   <h1><code>ipg-zh</code> 调查与实施设计</h1>
-  <p class="meta">调查日期：2026-10-04 · 修订日期：2026-10-05 · 当前授权：P4.6 本地生产链路对齐 · P0–P4.5 的历史规划保留备查</p>
+  <p class="meta">调查日期：2026-10-04 · 修订日期：2026-10-05 · 当前授权：P5 官方更新、不可变快照与版本继承 · P0–P4.6 的历史规划保留备查</p>
   <p class="lede"><strong>北极星：</strong>建立一个与 <code>mtr-zh</code> 在可靠性和使用体验上对等、但以 IPG 自身语义为中心的维护系统。先用第 2 章、2.5 Game Rule Violation 和附录 A/B 小型夹具验证完整闭环；模型和阅读效果经人工确认后，才扩展到全文解析与迁移。官方英文、中文译文和最终发布注解必须可追溯、可确定性构建，任何缺译或未决内容都必须显式报告。</p>
 
   <div class="callout">
-    <strong>本轮修订记录（P4.6）。</strong>
+    <strong>本轮修订记录（P5）。</strong>
+    增加正式官方更新与快照入口、WPN 完整规则文档集合的精确发现、安全下载、PDF 有效日期与网页更新时间分离、同日换包、不可变证据、IPG 原生 reconciliation 与三套审校资料的保守继承。全部更新证据只在 outputs/official-update；不切换当前版本、不翻译、不升级 OmegaT、不发布。详见第 22 节和 P5 审阅记录。
+    <br><strong>早期修订记录（P4.6）。</strong>
     增加当前 release 指针、正式 validate/build/output-validate 入口、隔离发布演练、正式 dist 的两次构建及独立校验、审校助手正式收尾菜单。参见第 21 节和 P4.6 功能对照表。真实资料仍有 12 项缺译，注解授权/署名待定且 publishable 为 false；本阶段不修改这些事实，不进行人工审校或 GitHub 发布。
     <br><strong>早期修订记录（P0–P2）。</strong>
     已将实施顺序改为 vertical slice 优先；严格分离发布注解、OmegaT 翻译批注和审校账本；把注解锚点扩展到 section/component/group/block；增加官方、注解和中文修订三条版本轴；补全稳定 ID 注册、拆并与历史生命周期；定义 candidate/release 两级验证；修正官方 PDF 与旧源的覆盖关系；集中维护组件标签和处罚显示值；并把 P2 验收改为覆盖解析、迁移、构建、OmegaT、翻译批注、发布注解和审校状态的完整闭环。本次实施前补充三项约束：P0 初始化仅限本地的 Git 仓库并按五个里程碑提交；验证级别只能由命令行 <code>--profile</code> 选择；<code>rules.json</code> 的哈希只能写入外部构建报告、<code>SHA256SUMS</code> 和未来 Release 标签。
   </div>
 
-  <div class="callout warn"><strong>当前阶段边界。</strong>P2、P3、P4 已按后续授权完成，P4.5 全文审校闭环已接通。当前只对齐 P4.6 本地生产链路，不翻译、不新增内容判断、不处理用户未提交账本、不重建现有 OmegaT/候选工程，不配置远端、GitHub、Actions、PR 或 Release。下文 P0–P2 的停止点保留为历史契约，不代表当前实施停在 P2；当前约束以第 21 节为准。</div>
+  <div class="callout warn"><strong>当前阶段边界。</strong>P2–P4.6 已按后续授权完成。当前 P5 只建立本地官方发现、不可变更新证据与隔离继承候选，不翻译、不新增人工内容判断、不处理用户未提交账本、不重建现有 OmegaT/候选工程，不切换当前指针或正式源，不写 dist，不配置远端、GitHub、Actions、PR 或 Release。历史停止点保留备查；当前约束以第 22 节为准。</div>
 
   <h2>1. 范围、非目标与已确定约束</h2>
   <table>
     <tr><th>范围内</th><th>本阶段不做</th></tr>
-    <tr><td>当前 P4.6：基于既有全文源、原生 schema、稳定 ID 和审校闭环增加本地正式生产入口；早期 P0–P2 范围仅供追溯。</td><td>不新增翻译或审校、不更改许可/署名结论，不添加 GitHub 远端、Actions、自动 PR 或 Release，不修改 <code>D:\mtr-zh</code>，不改写 <code>AIPG_2025.md</code>。</td></tr>
+    <tr><td>当前 P5：基于 P4.6 当前 release 建立官方更新发现、不可变快照、原生结构 diff 和保守继承的隔离候选；早期范围仅供追溯。</td><td>不新增翻译或审校、不提升当前 release、不更改许可/署名结论，不添加 GitHub 远端、Actions、自动 PR 或 Release，不修改 <code>D:\mtr-zh</code>，不改写 <code>AIPG_2025.md</code>。</td></tr>
     <tr><td>把 <code>mtr-zh</code> 当作行为规范和已验证的控制流程来源。</td><td>不继承 MTR 的固定 10 章/6 附录、JSON 形状、PDF 版式或 <code>extras[0]</code> 假设。</td></tr>
   </table>
   <h3>已确定的项目决策</h3>
@@ -220,7 +222,7 @@ versions:
     revision: zh-r0001</pre>
   <p><code>candidate</code>/<code>release</code> 是验证命令显式传入的 profile，不是 manifest 中的内容字段。验证报告记录实际使用的 profile；未来正式发布命令必须强制 <code>--profile release</code>，不能由 manifest 自行选择或降级。</p>
   <p><code>rules.json</code> 顶层同时输出 <code>schema: "ipg-output-v1"</code>、三条版本轴与 <code>releaseId</code>，但绝不包含自身 SHA-256，该哈希也不得成为任何会参与 <code>rules.json</code> 构建的输入。构建完成后才计算哈希，并写入外部 <code>build-report.json</code>、<code>SHA256SUMS</code> 与未来 Release 标签。正式 Release 标签建议为 <code>&lt;releaseId&gt;-&lt;rulesSha256前12位&gt;</code>；GitHub 配置虽然延后，但标识规则现在冻结。</p>
-  <p>快照分两层：官方 PDF 存放于 <code>snapshots/official/&lt;date&gt;/&lt;pdf-hash&gt;/</code>；一次旧源迁移存放于其下的 <code>imports/&lt;annotation-source-hash&gt;/</code>，记录 annotation version、migration 实现哈希、ID registry/override 哈希和 candidate 报告。这样更新中文修订不会复制官方 PDF。</p>
+  <p>既有基线快照保留在 <code>snapshots/official/&lt;date&gt;/&lt;pdf-hash&gt;/</code>，不得覆盖。P5 的隔离审阅快照在 <code>outputs/official-update/</code> 使用官方日期/完整哈希、注解来源哈希、中文修订和上下文哈希分层；为独立审阅包含 PDF、实现及输入副本。它不是新的旧源迁移，也不提升正式快照或源。具体持久化契约见第 22 节，覆盖早期“不复制 PDF”的拟议实现。</p>
 
   <h2>9. 稳定 ID 的完整生命周期</h2>
   <p><code>src/ipg/id-registry.yaml</code> 是 ID 分配与历史查询的唯一持久事实源；<code>src/ipg/mapping-overrides.yaml</code> 保存版本间人工映射决策。二者的副本与 SHA-256 进入每个快照。</p>
@@ -367,7 +369,7 @@ tests/fixtures/pilot/ tests/*.py
   <p>实施从 P0 开始：初始化本地 Git，重新记录官方 PDF 下载时间和哈希，只制作第 2 章、2.5 与附录 A/B 小夹具；随后完成最小解析、迁移、构建和 P2 审校闭环。P2 审阅包交付后必须暂停，等待用户确认，再决定是否扩展全文。GitHub 远端、CI 和 Release 均不在本地试制范围。</p>
 
   <h2>20. 仍需用户决定且会阻碍试制的问题</h2>
-  <div class="callout ok"><strong>当前本地流程无新增内容决策。</strong>12 项缺译、正式人工审校、注解授权/署名仍须后续完成；不在 P4.6 自动处理。</div>
+  <div class="callout ok"><strong>当前本地流程无新增内容决策。</strong>12 项缺译、正式人工审校、注解授权/署名仍须后续完成；不在 P5 自动处理。新版本的身份歧义或注解失锚必须明确报告并等待人工批准。</div>
 
   <h2>21. P4.6 本地生产链路契约</h2>
   <p>功能调查见 <a href="../review/p4-6-functional-comparison.md">MTR/IPG 功能对照表</a>，日常操作见 <a href="../../README.zh-CN.md">中文使用说明</a>。统一命令和包装形式与 MTR 对齐，但不复用其 PDF 解析器、日期型版本号、内容节点或 JSON 字段形状。</p>
@@ -392,6 +394,24 @@ tests/fixtures/pilot/ tests/*.py
   <div class="callout warn"><strong>Windows 目录事务的实际保证。</strong>首次 dist 创建是单次目录重命名。已有非空 dist 采用写锁、旧目录可恢复备份、完整新目录提升和出错回滚，绝不逐文件混合更新；两次重命名间可能短暂不存在 dist 路径，并非内核级无间隙 rename-exchange。恢复失败保留完整旧目录并明确报告位置，遗留锁/备份阻止后续覆盖。若未来要求并发网站读者完全无间隙，应另行批准版本目录与读取指针方案；不能把本实现宣称为那种原子性。</div>
   <h3>证据、停止点及后续差异</h3>
   <p>自动测试在隔离目录证明 release 成功、版本说明双输出、独立 schema、确定性、整目录更新、失败保持旧文件、输出损坏/二次不一致/输入变化/锁冲突拒绝和恢复失败保留证据。真实工程仅执行只读 candidate/release 检查，现有用户账本、OmegaT、候选目录与快照保持原样。GitHub Release 是未来分发事件，不等于本地 release profile、rehearsal 或 dist。P4.6 审阅包完成后停止；官方更新自动化、全文人工审校和 GitHub 发布仍需单独授权。</p>
+  <h2>22. P5 官方更新、不可变快照与继承契约</h2>
+  <p>参照 MTR 的入口、下载限额、快照及 diff 思路，继续使用 IPG 完整解析器、三版本轴和稳定 registry；不复用 MTR 解析器，也不采用其检查后自动物化源/切换指针的行为。操作说明见 <a href="../../README.zh-CN.md">中文说明</a>，证据见 <a href="../review/p5-official-update.md">P5 审阅记录</a>。</p>
+  <table>
+    <tr><th>入口 / 数据</th><th>职责与边界</th></tr>
+    <tr><td><code>ipg-check-official-update</code><br><code>scripts/check_official_update.py</code></td><td>通过当前 release 指针读取基础资料；精确定位规则页 IPG，安全下载并核对 PDF；生成 no-update 报告或隔离候选，绝不自动提升。</td></tr>
+    <tr><td><code>ipg-snapshot</code><br><code>scripts/snapshot.py</code></td><td>无参数时离线固化当前 PDF 的加强证据；<code>--verify</code> 验证已有 P5 快照。不得追加或覆盖基线快照。</td></tr>
+    <tr><td><code>update-overrides.schema.json</code></td><td>映射绑定基础 release、目标 PDF 日期/哈希及全部参与节点的语义哈希；重复消费、身份退役、哈希变化或基数错误拒绝。不是历史旧源迁移 override 的自动复用。</td></tr>
+    <tr><td><code>outputs/official-update/snapshots/official/&lt;date&gt;/&lt;pdf-sha&gt;/imports/&lt;ann-sha&gt;/&lt;zh-revision&gt;/&lt;context-sha&gt;/</code></td><td>保存 PDF/规则页、完整解析和 provenance、覆盖、实现及依赖版本、基础源/审校数据、拟议 registry/override、diff、继承报告、失锚注解及删除审校记录。PDF 有变化才生成 candidate 源、账本、批注及预览。</td></tr>
+  </table>
+  <h3>权威日期、安全边界与不可变性</h3>
+  <p>网页首屏不等于完整文档集合。按已确认的 Nuxt 引用池路径读取规则页 downloadableDocuments.entries，精确核对英文 IPG 标题/类型/语言/CTA；可见卡片存在时要求一致。缺字段、重复条目、无效引用或未知结构必须停止，不能扫描任意字符串或猜旧地址。网页 updated 单独记为 pageUpdatedDate；官方有效日期只能来自 PDF 唯一 Effective 标题。实际 WPN 的页面更新时间可能与 PDF 有效日期不同，不混用，不从文件名推断。</p>
+  <p>HTTPS 主机限定 wpn.wizards.com 规则页及 media.wizards.com PDF，每次重定向预先检查、最多 5 次；网页 5 MiB、PDF 30 MiB，拒绝压缩响应、截断及非 PDF。日期回退拒绝；日期不变但 SHA-256 改变独立快照。同一基础资料、实现、目标与 override 上下文仅验证复用，保留首次下载时间；任何已固化文件差异均拒绝覆盖。SHA256SUMS 包含 snapshot.json，不包含自身；rules.json 不含自身哈希。校验和检测文件损坏，不提供签名真实性。</p>
+  <h3>身份、译文、注解与审校资料的继承</h3>
+  <p>PDF 解析仍只有 extraction identity；独立 reconciliation 使用 registry、唯一英文证据及父节点/组件角色。新增分配未使用 ID；删除永久退役，移动/重排不按数组位置换 ID。改名、改号可由唯一内容证据确认；英文修改或歧义不能强行继承，生成旧译建议和 finding，待人工 hash-bound override。split/merge 默认退役旧 ID、分配新 ID且不批量复制中文；明确选择 continuity 才保留一个指定身份。</p>
+  <p>相同身份/英文继承中文及有效状态；英文变保留旧译候选但 stale，新单元缺译/unreviewed，删除记录单独归档而不成为新 ledger 孤立项。发布注解保持 anchor/position/order/appliesTo 与多段内容；失锚/失片段/失引用完整隔离并报告，不丢弃、不改挂。上下文变更会令关联审校 stale。翻译批注独立迁入版本化 notes，源文或译文哈希改变均 stale；不进入内容或账本。</p>
+  <h3>候选、证据与人工批准之间的停止点</h3>
+  <p>候选 release 的三轴继承注解来源版本，更新官方日期/哈希，生成上下文绑定的中文 update 修订及组合 release ID，始终 publishable=false。migrationLineage 仅保留旧源历史覆盖，不证明新英文已迁移或审完；全部未决进入报告及 candidate readiness。提升还需要新版本来源/继承证据和完整发布门槛，P5 不提供 apply/指针切换或 OmegaT 升级命令。</p>
+  <p>合成测试先验证 unchanged、新日期、同日换包、回退、安全下载、结构变化、歧义 override、继承/stale、注解失锚、快照篡改、确定性及失败保护，再执行真实只读检查。既有用户账本字节及未提交状态必须保持，不提交该文件；现有 OmegaT、候选、dist、源、registry 和基线快照不得重建。P5 审阅包交付后停止，等待人工确认，不进入翻译、版本提升、GitHub、Actions、PR 或 Release。</p>
 </main>
 </body>
 </html>
