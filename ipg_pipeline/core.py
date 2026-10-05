@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+from functools import lru_cache
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -11,6 +12,7 @@ from referencing import Registry, Resource
 
 
 ROOT = Path(__file__).resolve().parents[1]
+SAFE_YAML_LOADER = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -23,7 +25,7 @@ def sha256_text(text: str) -> str:
 
 def load_yaml(path: Path) -> Any:
     with path.open("r", encoding="utf-8") as stream:
-        return yaml.safe_load(stream)
+        return yaml.load(stream, Loader=SAFE_YAML_LOADER)
 
 
 def dump_yaml(data: Any) -> str:
@@ -41,13 +43,20 @@ def load_json(path: Path) -> Any:
         return json.load(stream)
 
 
-def validate_schema(instance: Any, schema_path: Path) -> list[str]:
-    schemas = [load_json(path) for path in schema_path.parent.glob("*.schema.json")]
+@lru_cache(maxsize=32)
+def _schema_validator(schema_name: str, files: tuple[tuple[str, bytes], ...]) -> Draft202012Validator:
+    schemas = {name: json.loads(content) for name, content in files}
     registry = Registry()
-    for schema in schemas:
+    for schema in schemas.values():
         if "$id" in schema:
             registry = registry.with_resource(schema["$id"], Resource.from_contents(schema))
-    validator = Draft202012Validator(load_json(schema_path), registry=registry)
+    return Draft202012Validator(schemas[schema_name], registry=registry)
+
+
+def validate_schema(instance: Any, schema_path: Path) -> list[str]:
+    # Read all dependencies afresh: even same-size/same-mtime edits invalidate the cache.
+    files = tuple((path.name, path.read_bytes()) for path in sorted(schema_path.parent.glob("*.schema.json")))
+    validator = _schema_validator(schema_path.name, files)
     return [
         f"{'/'.join(str(part) for part in error.absolute_path) or '<root>'}: {error.message}"
         for error in sorted(validator.iter_errors(instance), key=lambda item: list(item.absolute_path))

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import shutil
 import subprocess
 import sys
@@ -39,17 +40,25 @@ PREVIEW_MARKDOWN = ROOT / "outputs/omegat-writeback-preview.md"
 
 
 def run_full_tests() -> dict[str, Any]:
-    result = subprocess.run(
-        [sys.executable, "-m", "pytest", "-q"],
+    output = []
+    with subprocess.Popen(
+        [sys.executable, "-u", "-m", "pytest", "-o", "addopts=", "-v"],
         cwd=ROOT,
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
-        check=False,
-    )
-    if result.returncode:
-        raise ValueError("完整测试失败：\n" + result.stdout)
-    return {"passed": True, "output": result.stdout.strip()}
+        env={**os.environ, "PYTHONUTF8": "1"},
+        encoding="utf-8",
+        errors="replace",
+    ) as process:
+        for line in process.stdout:
+            print(line, end="", flush=True)
+            output.append(line)
+        returncode = process.wait()
+    captured = "".join(output).strip()
+    if returncode:
+        raise ValueError("完整测试失败：\n" + captured)
+    return {"passed": True, "output": captured}
 
 
 def _write_preview_markdown(preview: dict[str, Any]) -> None:
@@ -102,6 +111,7 @@ def complete_review_batch(
     test_runner: Callable[[], dict[str, Any]] = run_full_tests,
 ) -> dict[str, Any]:
     reviewed_at = _now()
+    print("正在生成隔离回写预览并检查候选……", flush=True)
     with tempfile.TemporaryDirectory(prefix="ipg-review-writeback-") as temporary:
         candidate_root = Path(temporary) / "candidate"
         preview = preview_full_writeback(
@@ -118,11 +128,17 @@ def complete_review_batch(
         }
         mapping_before = MAPPING_PATH.read_bytes()
         try:
+            print("正在重新检查预览基线并最小写回……", flush=True)
             applied = apply_full_writeback(preview, candidate_root)
+            print("正在执行完整自动测试（逐项显示进度）……", flush=True)
             tests = test_runner()
+            print("正在验证内容及正式发布门槛……", flush=True)
             validation = validate_current_state()
+            print("正在生成非阻塞术语报告……", flush=True)
             terminology = run_nonblocking_terminology_audit()
+            print("正在连续构建两次并比较候选文件……", flush=True)
             candidate = build_current_candidate(validation)
+            print("正在归档翻译批注和本批审校记录……", flush=True)
             mapping = inspect_target_project()["mapping"]
             notes = extract_project_translation_notes(mapping, recorded_at=reviewed_at)
             ledger = record_review_completion(
@@ -132,6 +148,7 @@ def complete_review_batch(
                 reviewed_at=reviewed_at,
             )
             progress = refresh_progress_reports()
+            print("正在检查最终审校状态……", flush=True)
             validation = validate_current_state()
             candidate.update(validation)
             _write_json(CURRENT_CANDIDATE / "validation.json", candidate)

@@ -7,7 +7,7 @@ from typing import Any
 
 import yaml
 
-from .core import sha256_bytes, sha256_text
+from .core import SAFE_YAML_LOADER, sha256_bytes, sha256_text
 from .reading import reading_events
 
 
@@ -181,8 +181,9 @@ def _yaml_node_at_pointer(root: yaml.Node, pointer: list[Any]) -> yaml.Node:
 
 
 def minimal_yaml_update(path: Path, pointer: list[Any], expected: str, replacement: str) -> None:
-    text = path.read_text(encoding="utf-8")
-    root = yaml.compose(text)
+    with path.open("r", encoding="utf-8", newline="") as stream:
+        text = stream.read()
+    root = yaml.compose(text, Loader=SAFE_YAML_LOADER)
     if root is None:
         raise ValueError(f"empty YAML file: {path}")
     node = _yaml_node_at_pointer(root, pointer)

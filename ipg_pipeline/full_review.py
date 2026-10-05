@@ -162,13 +162,7 @@ def _source_file_hashes(units: list[dict[str, Any]]) -> dict[str, str]:
 
 def validate_repository_inputs() -> dict[str, Any]:
     manifest, documents, display = full_inputs()
-    errors = validate_schema(manifest, ROOT / "schema/ipg-manifest.schema.json")
-    for filename, document in documents:
-        errors.extend(
-            f"{filename}: {item}"
-            for item in validate_schema(document, ROOT / "schema/ipg-source.schema.json")
-        )
-    errors.extend(validate_registry(load_yaml(ROOT / "src/ipg/id-registry.yaml")))
+    errors = validate_registry(load_yaml(ROOT / "src/ipg/id-registry.yaml"))
     if errors:
         raise ValueError("repository validation failed: " + "; ".join(errors))
     structural = validate_release(
@@ -533,10 +527,6 @@ def _migration_gate_stub() -> dict[str, Any]:
 
 def _validate_candidate_overlay(candidate_root: Path) -> dict[str, Any]:
     manifest, documents, display = _overlay_inputs(candidate_root)
-    for filename, document in documents:
-        errors = validate_schema(document, ROOT / "schema/ipg-source.schema.json")
-        if errors:
-            raise ValueError(f"candidate schema failed for {filename}: {'; '.join(errors)}")
     candidate = validate_release(
         profile="candidate",
         manifest=manifest,
