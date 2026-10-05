@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "releaseId", "authority", "evidence", "coverage", "findings"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "releaseId": {"type": "string"},
+    "authority": {
+      "type": "object", "required": ["officialPdfSha256", "legacySourceSha256"], "additionalProperties": false,
+      "properties": {
+        "officialPdfSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "legacySourceSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "evidence": {
+      "type": "object", "required": ["path", "sha256"], "additionalProperties": false,
+      "properties": {"path": {"type": "string"}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+    },
+    "coverage": {
+      "type": "object", "required": ["rawUnitCount", "disposedUnitCount", "duplicateConsumption", "unresolved"], "additionalProperties": false,
+      "properties": {
+        "rawUnitCount": {"type": "integer", "minimum": 0},
+        "disposedUnitCount": {"type": "integer", "minimum": 0},
+        "duplicateConsumption": {"type": "integer", "minimum": 0},
+        "unresolved": {"type": "integer", "minimum": 0}
+      }
+    },
+    "findings": {"type": "array", "items": {"type": "object", "required": ["code"]}}
+  }
+}

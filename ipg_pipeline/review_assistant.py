@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from .core import ROOT
+from .production import build_project, describe_validation, validate_project
 from .full_review import (
     CURRENT_CANDIDATE,
     MAPPING_PATH,
@@ -231,13 +232,34 @@ def _pause() -> None:
     input("\n按回车键返回主菜单……")
 
 
+def check_formal_release() -> dict[str, Any]:
+    report = validate_project(ROOT, profile="release")
+    print("\n正式发布条件：\n" + describe_validation(report))
+    return report
+
+
+def finish_formal_release() -> dict[str, Any] | None:
+    if not check_formal_release()["valid"]:
+        print("不会创建或更新 dist；仍可使用选项 2 生成候选阅读文档。")
+        return None
+    print("正在临时构建、独立验证并比较两次结果……", flush=True)
+    report = build_project(ROOT, profile="release")
+    print(f"已生成最终文件：{ROOT / 'dist/IPG.md'}、{ROOT / 'dist/rules.json'}")
+    for name in ("IPG.md", "rules.json"):
+        print(f"  SHA-256 {name}：{report['hashes'][name]}")
+    print("这是本地正式产物，不是 GitHub Release。")
+    return report
+
+
 def main() -> None:
     while True:
-        print("\nIPG 全文审校助手（当前内容不可正式发布）")
+        print("\nIPG 全文审校助手（候选与正式产物分开）")
         print("1. 准备或继续 OmegaT 审校")
         print("2. 完成审校并生成候选阅读文档")
         print("3. 查看审校进度")
         print("4. 退出")
+        print("5. 检查正式发布条件（只读）")
+        print("6. 条件满足后生成最终文件（dist）")
         choice = input("> ").strip()
         try:
             if choice == "1":
@@ -261,8 +283,14 @@ def main() -> None:
                 _pause()
             elif choice == "4":
                 return
+            elif choice == "5":
+                check_formal_release()
+                _pause()
+            elif choice == "6":
+                finish_formal_release()
+                _pause()
             else:
-                print("请输入 1、2、3 或 4。")
+                print("请输入 1—6。")
         except Exception as error:
             print(f"\n操作已停止：{error}")
             print("必要检查未通过；不会登记为审校完成。")

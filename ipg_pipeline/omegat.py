@@ -9,11 +9,16 @@ import yaml
 
 from .core import SAFE_YAML_LOADER, sha256_bytes, sha256_text
 from .reading import reading_events
+from .release import current_release_dir
 
 
 def collect_units(
-    documents: list[tuple[str, dict[str, Any]]], display_values: dict[str, Any]
+    documents: list[tuple[str, dict[str, Any]]], display_values: dict[str, Any],
+    *, release_relative: str | None = None,
 ) -> list[dict[str, Any]]:
+    if release_relative is None:
+        from .core import ROOT
+        release_relative = current_release_dir(ROOT).relative_to(ROOT).as_posix()
     units: list[dict[str, Any]] = []
     for code, value in sorted(display_values["values"].items()):
         units.append(
@@ -27,7 +32,7 @@ def collect_units(
             }
         )
     for filename, document in documents:
-        relative = f"src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001/{filename}"
+        relative = f"{release_relative}/{filename}"
         def append_unit(node, pointer, prefix, kind, field="text"):
             units.append({"id": f"{prefix}:{node['id']}", "kind": kind,
                           "source": node[field]["en"], "target": node[field]["zh"],

@@ -1,21 +1,39 @@
 # ipg-zh
 
-This repository currently contains the approved work through P4.5: the complete
+This repository currently contains the approved work through P4.6: the complete
 2024-09-23 official English IPG structure, conservatively migrated legacy
 Chinese text, the bilingual AIPG publication annotations found in
 `AIPG_2025.md`, and a full-document OmegaT review workflow. It is a review
 candidate, not a publishable release.
 
+## P4.6 本地生产入口
+
+详见 [中文说明](README.zh-CN.md) 和 [MTR/IPG 功能对照](docs/review/p4-6-functional-comparison.md)。
+`src/ipg/current-release.txt` 指向完整 release ID；日常维护不依赖 pilot 或阶段命令。
+
+```powershell
+.venv\Scripts\ipg-validate.exe --profile candidate
+.venv\Scripts\ipg-validate.exe --profile release
+.venv\Scripts\ipg-build.exe --profile release
+.venv\Scripts\ipg-validate-output.exe
+```
+
+同时提供 `scripts/validate.py`、`scripts/build.py`、`scripts/validate_output.py`。
+正式构建只有 release 门槛、临时两次构建字节比较、独立输出 schema 检查均通过后，
+才事务更新仅含 `IPG.md` 与 `rules.json` 的 dist。候选/演练只在 outputs，
+GitHub Release 不在本阶段。当前真实资料仍被拦截，不会生成正式 dist。
+
 ## 全文 OmegaT 审校
 
 普通维护者请双击仓库根目录的 `审校助手.cmd`。中文菜单可以安全准备或继续唯一的
 全文 OmegaT 项目、完成一批审校并生成候选阅读文档，以及查看 1007 个翻译单元的
-进度。详细步骤见 `docs/omegat-review-guide.md`。
+进度。选项 5 检查发布条件，选项 6 在条件满足后生成本地正式文件，无需填写
+manifest 路径。详细步骤见 `docs/omegat-review-guide.md`。
 
 OmegaT 项目位于忽略目录 `outputs/omegat-ipg-full/`，包含 8 个 PO。项目直接使用
 `terminology/ipg-glossary.txt`，不会复制另一份词汇表。当前 12 项真实缺译保持为空，
 不得用英文或机器译文填充。候选阅读产物只写入 `outputs/current-candidate/`；正式
-`dist/` 仍然不生成。
+`dist/` 只有正式 release 检查通过后才生成；当前不会生成。
 
 正文与发布注解按阅读位置交错导出。被注解分隔的官方段落以稳定的双语阅读片段
 进入 OmegaT，同时保留完整官方 block 和 PDF 溯源。详见使用说明中的分段与备份规则。
@@ -53,14 +71,15 @@ under ignored `outputs/p4/`. Formal `dist/` remains untouched.
 Candidate validation succeeds with all 4,085 legacy raw units uniquely
 disposed and no unresolved mappings, duplicate consumption, orphan annotation,
 or deferred annotation. Release validation intentionally fails: 12 Appendix B
-entries have no legacy Chinese, full-document review is not completed,
+entries have no legacy Chinese,
 publication-annotation licensing/attribution is pending, and the manifest is
 `publishable: false`.
 
 P4.5 creates the ignored local project only when the review assistant prepares
 it. Translation notes and review state remain isolated under their versioned
-`review/` paths. The current real full-document ledger starts with all 1007 units
-unreviewed; the older P2 demonstration records live only in pilot fixtures.
+`review/` paths. A newly created ledger starts unreviewed; current status must be
+read from the versioned ledger, not inferred from this README. Older P2
+demonstration records live only in pilot fixtures.
 
 ## Historical P0-P2 pilot workflow
 
@@ -103,8 +122,8 @@ and penalty names are exported once per controlled display code.
 The validation profile is selected only on the command line:
 
 ```powershell
-ipg-pilot validate --profile candidate
-ipg-pilot validate --profile release
+ipg-validate --profile candidate
+ipg-validate --profile release
 ```
 
 The manifest never selects a validation profile. Any future publishing entry
@@ -114,6 +133,10 @@ structurally valid work. Release validation additionally requires exactly one
 current review record per OmegaT unit, no unreviewed or stale records, no orphan
 records, and matching source and target hashes. Annotation licensing and
 attribution remain an independent release gate.
+
+Historical `ipg-pilot validate/build` are compatibility aliases to the current
+production commands, not a second dist writer. Other phase commands reproduce
+past investigation/migration and are not daily maintenance entry points.
 
 Run all local regression tests with:
 

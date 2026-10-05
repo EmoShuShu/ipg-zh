@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+  "authority": {
+    "officialPdfSha256": "056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0",
+    "legacySourceSha256": "acce82ca7224d5d741609807a2d95697337e56110354efec370938dea51b75fb"
+  },
+  "evidence": {
+    "path": "docs/review/p4-migration-summary.json",
+    "sha256": "3612474d080bb62c9a05b2d4baaab4b02fd4564e9b5558d535ba6f2200518dbe"
+  },
+  "coverage": {
+    "rawUnitCount": 4085,
+    "disposedUnitCount": 4085,
+    "duplicateConsumption": 0,
+    "unresolved": 0
+  },
+  "findings": []
+}

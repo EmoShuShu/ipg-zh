@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "ipg-zh"
 version = "0.1.0"
-description = "Pilot pipeline for the Simplified Chinese Magic Infraction Procedure Guide"
+description = "Local maintenance pipeline for the Simplified Chinese Magic Infraction Procedure Guide"
 requires-python = ">=3.12"
 dependencies = [
   "jsonschema>=4.23,<5",
@@ -17,6 +17,9 @@ dependencies = [
 test = ["pytest>=8.3,<9"]
 
 [project.scripts]
+ipg-validate = "ipg_pipeline.production:validate_main"
+ipg-build = "ipg_pipeline.production:build_main"
+ipg-validate-output = "ipg_pipeline.production:output_main"
 ipg-pilot = "ipg_pipeline.cli:main"
 ipg-p3 = "ipg_pipeline.p3:main"
 ipg-p4 = "ipg_pipeline.p4:main"

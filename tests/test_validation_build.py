@@ -205,5 +205,6 @@ def test_build_is_byte_deterministic_and_rules_hash_is_external(tmp_path) -> Non
     assert validate_schema(rules, ROOT / "schema/ipg-output.schema.json") == []
     assert (first / "IPG.md").read_text(encoding="utf-8").startswith("<!-- CANDIDATE: NOT FOR RELEASE -->")
     notice = (first / "IPG.md").read_text(encoding="utf-8").splitlines()[1]
-    assert "全文迁移候选版" in notice and "尚未完成完整审校" in notice
+    assert "全文迁移候选版" in notice and "请以 release 检查结果为准" in notice
+    assert "尚未完成完整审校" not in notice
     assert "包含明确标记的缺译" not in notice

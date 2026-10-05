@@ -7,5 +7,6 @@ outputs/
 reports/
 work/
 omegat/
-dist/
+.ipg-build-*/
+.ipg-dist.lock
 

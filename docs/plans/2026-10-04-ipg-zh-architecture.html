@@ -43,20 +43,22 @@
 <body>
 <main>
   <h1><code>ipg-zh</code> 调查与实施设计</h1>
-  <p class="meta">调查日期：2026-10-04 · 修订日期：2026-10-04 · 阶段：P0–P2 本地 vertical slice 已获授权 · 项目实施：准备开始</p>
+  <p class="meta">调查日期：2026-10-04 · 修订日期：2026-10-05 · 当前授权：P4.6 本地生产链路对齐 · P0–P4.5 的历史规划保留备查</p>
   <p class="lede"><strong>北极星：</strong>建立一个与 <code>mtr-zh</code> 在可靠性和使用体验上对等、但以 IPG 自身语义为中心的维护系统。先用第 2 章、2.5 Game Rule Violation 和附录 A/B 小型夹具验证完整闭环；模型和阅读效果经人工确认后，才扩展到全文解析与迁移。官方英文、中文译文和最终发布注解必须可追溯、可确定性构建，任何缺译或未决内容都必须显式报告。</p>
 
   <div class="callout">
-    <strong>本轮修订记录。</strong>
+    <strong>本轮修订记录（P4.6）。</strong>
+    增加当前 release 指针、正式 validate/build/output-validate 入口、隔离发布演练、正式 dist 的两次构建及独立校验、审校助手正式收尾菜单。参见第 21 节和 P4.6 功能对照表。真实资料仍有 12 项缺译，注解授权/署名待定且 publishable 为 false；本阶段不修改这些事实，不进行人工审校或 GitHub 发布。
+    <br><strong>早期修订记录（P0–P2）。</strong>
     已将实施顺序改为 vertical slice 优先；严格分离发布注解、OmegaT 翻译批注和审校账本；把注解锚点扩展到 section/component/group/block；增加官方、注解和中文修订三条版本轴；补全稳定 ID 注册、拆并与历史生命周期；定义 candidate/release 两级验证；修正官方 PDF 与旧源的覆盖关系；集中维护组件标签和处罚显示值；并把 P2 验收改为覆盖解析、迁移、构建、OmegaT、翻译批注、发布注解和审校状态的完整闭环。本次实施前补充三项约束：P0 初始化仅限本地的 Git 仓库并按五个里程碑提交；验证级别只能由命令行 <code>--profile</code> 选择；<code>rules.json</code> 的哈希只能写入外部构建报告、<code>SHA256SUMS</code> 和未来 Release 标签。
   </div>
 
-  <div class="callout warn"><strong>阶段边界。</strong>P0–P2 已获准在本地实施。P0 初始化独立 Git 仓库，随后仅完成 vertical slice；不添加远端，不配置 GitHub Actions、自动 PR 或 Release，不迁移全文，也不在 P2 审阅包获确认前开发全文 PDF 解析器。</div>
+  <div class="callout warn"><strong>当前阶段边界。</strong>P2、P3、P4 已按后续授权完成，P4.5 全文审校闭环已接通。当前只对齐 P4.6 本地生产链路，不翻译、不新增内容判断、不处理用户未提交账本、不重建现有 OmegaT/候选工程，不配置远端、GitHub、Actions、PR 或 Release。下文 P0–P2 的停止点保留为历史契约，不代表当前实施停在 P2；当前约束以第 21 节为准。</div>
 
   <h2>1. 范围、非目标与已确定约束</h2>
   <table>
     <tr><th>范围内</th><th>本阶段不做</th></tr>
-    <tr><td>实施 P0–P2 的模型、夹具、最小解析迁移、构建、OmegaT 闭环、测试与审阅包，并用本地 Git 审查和回退。</td><td>不扩展到全文解析或全文迁移，不添加 GitHub 远端、Actions、自动 PR 或 Release，不修改 <code>D:\mtr-zh</code>，不改写 <code>AIPG_2025.md</code>。</td></tr>
+    <tr><td>当前 P4.6：基于既有全文源、原生 schema、稳定 ID 和审校闭环增加本地正式生产入口；早期 P0–P2 范围仅供追溯。</td><td>不新增翻译或审校、不更改许可/署名结论，不添加 GitHub 远端、Actions、自动 PR 或 Release，不修改 <code>D:\mtr-zh</code>，不改写 <code>AIPG_2025.md</code>。</td></tr>
     <tr><td>把 <code>mtr-zh</code> 当作行为规范和已验证的控制流程来源。</td><td>不继承 MTR 的固定 10 章/6 附录、JSON 形状、PDF 版式或 <code>extras[0]</code> 假设。</td></tr>
   </table>
   <h3>已确定的项目决策</h3>
@@ -265,6 +267,8 @@ versions:
     <tr><td><span class="seq">P2 顺序</span><br>完整审校闭环与人工门槛</td><td>在同一 slice 上完成 OmegaT 导出、最小回写、TMX 翻译批注独立归档、review ledger、状态报告、术语审计和发布注解渲染；形成审阅包供用户确认。</td><td>见第 13 节。未获得模型与阅读效果确认，不进入 P3。</td></tr>
     <tr><td><span class="seq">P3 顺序</span><br>模型冻结与全文解析扩展</td><td>根据 P2 反馈冻结 source/output schema v1；扩展 PDF 解析器到前置部分、第 1/3/4 章和完整附录，增加 TOC/正文/处罚/附录交叉验证。</td><td>全文官方英文重构与 PDF provenance 完整；未知版式 fail closed。</td></tr>
     <tr><td><span class="par">P4 可分章推进</span><br>全文旧源迁移</td><td>扩展迁移器，按前置部分、第 1、3、4 章和附录生成 candidate；逐章解决 overrides，不润色旧中文。</td><td>全文 raw unit 唯一处置；release 四个零门槛达成后才形成首个完整 release source。</td></tr>
+    <tr><td><span class="seq">P4.5 已接通</span><br>全文 OmegaT 闭环</td><td>全文 PO、阅读句段与交错注解、独立批注和版本化审校账本、预览与最小回写、候选构建及一键助手。</td><td>回写安全与三类审校数据隔离；接通不表示已完成全文人工审校。</td></tr>
+    <tr><td><span class="seq">P4.6 当前阶段</span><br>本地生产链路</td><td>当前 release 指针、正式命令、严格 release gates、隔离演练、两次构建、独立输出校验及整目录 dist 提升；普通中文收尾菜单。</td><td>成功/失败隔离测试；真实源仍被拦截，真实 dist 不生成；完成审阅后停止。</td></tr>
     <tr><td><span class="seq">P5 顺序</span><br>官方更新与快照</td><td>完成三版本轴快照、精确 diff、ID/译文/发布注解继承和同日换包处理；先本地合成更新测试。</td><td>新增、删除、改名、改号、拆分、合并、失锚均有测试和人工 override 路径。</td></tr>
     <tr><td><span class="seq">P6 顺序</span><br>GitHub、CI、Release、文档</td><td>仅在本地试制通过后添加 GitHub 远端并确定托管分支策略，加入 CI、定时检查、Draft PR、Release、README 和一键助手。</td><td>全新 checkout 可复现；Release 标识包含三版本轴和输出哈希；重复发布幂等。</td></tr>
   </table>
@@ -275,7 +279,7 @@ versions:
     <tr><td>解析</td><td>第 2 章/2.5 解析 JSON；附录 A/B 小夹具；每个 block 的 PDF 页码/bbox/SHA 溯源；黄金 fixture diff。</td><td>处罚框、组件角色、列表和附录结构正确；未解析内容显式报告。</td></tr>
     <tr><td>迁移</td><td>对应旧源 raw units、唯一处置账本、映射/缺译/未决/重复消费报告、已知 3246/3248 异常测试。</td><td>旧源覆盖公式成立；无旧译的官方 block 留空而非伪造来源。</td></tr>
     <tr><td>模型与版本</td><td>pilot manifest、display-values、ID registry/override 示例、三版本轴组合、candidate/release 报告。</td><td>模型不重复翻译标签；ID 生命周期与版本组合可人工理解。</td></tr>
-    <tr><td>构建与阅读</td><td>pilot <code>dist/IPG.md</code> 与 <code>dist/rules.json</code>、两次构建哈希、输出 schema 验证报告。</td><td>发布注解按 section/component/group/block 锚点及 position 正确渲染；阅读层级获用户确认。</td></tr>
+    <tr><td>构建与阅读</td><td>pilot/outputs 中的候选 <code>IPG.md</code> 与 <code>rules.json</code>、两次构建哈希、输出 schema 验证报告；不占用正式 dist。</td><td>发布注解按 section/component/group/block 锚点及 position 正确渲染；阅读层级获用户确认。</td></tr>
     <tr><td>OmegaT 回写</td><td>source/target PO、import preview、隔离 candidate、应用前后 YAML 最小 diff；受控显示值仅各出现一次。</td><td>仅选定 <code>zh</code> 标量改变；未知/缺失 ID、英文变化或预览后变化会阻止写回。</td></tr>
     <tr><td>翻译批注回写</td><td>含一条修改理由的 TMX、独立 <code>translation-notes</code> JSON、stale 示例。</td><td>批注与 unit/hash 关联；不进入内容 YAML、<code>IPG.md</code>、<code>rules.json</code> 或 review ledger。</td></tr>
     <tr><td>审校状态</td><td>独立 ledger 和状态报告，展示 unreviewed、reviewed-unchanged、reviewed-modified、stale。</td><td>账本没有 note/annotation 字段；译文变更会令记录 stale。</td></tr>
@@ -363,7 +367,31 @@ tests/fixtures/pilot/ tests/*.py
   <p>实施从 P0 开始：初始化本地 Git，重新记录官方 PDF 下载时间和哈希，只制作第 2 章、2.5 与附录 A/B 小夹具；随后完成最小解析、迁移、构建和 P2 审校闭环。P2 审阅包交付后必须暂停，等待用户确认，再决定是否扩展全文。GitHub 远端、CI 和 Release 均不在本地试制范围。</p>
 
   <h2>20. 仍需用户决定且会阻碍试制的问题</h2>
-  <div class="callout ok"><strong>无。</strong>本轮已获得 P0–P2 本地 vertical slice 的明确实施授权；P2 审阅包完成后必须停止并等待确认。</div>
+  <div class="callout ok"><strong>当前本地流程无新增内容决策。</strong>12 项缺译、正式人工审校、注解授权/署名仍须后续完成；不在 P4.6 自动处理。</div>
+
+  <h2>21. P4.6 本地生产链路契约</h2>
+  <p>功能调查见 <a href="../review/p4-6-functional-comparison.md">MTR/IPG 功能对照表</a>，日常操作见 <a href="../../README.zh-CN.md">中文使用说明</a>。统一命令和包装形式与 MTR 对齐，但不复用其 PDF 解析器、日期型版本号、内容节点或 JSON 字段形状。</p>
+  <h3>唯一版本入口与持久化事实源</h3>
+  <ul>
+    <li><code>src/ipg/current-release.txt</code> 指向三版本轴组合的完整 release ID。正式命令从该指针读取 manifest，不推测最新目录，不多处硬编码当前 release。</li>
+    <li><code>src/ipg/version-notes.md</code> 同时进入 Markdown 和 JSON；属于构建输入，也纳入构建期间输入变化检查。</li>
+    <li>审校状态只读取 <code>review/status/&lt;translation-revision&gt;.json</code>；修改理由保持在 <code>review/translation-notes/&lt;translation-revision&gt;.json</code>，动作在 <code>review/actions/&lt;translation-revision&gt;.yaml</code>。正式构建不改写这些文件。</li>
+    <li><code>review/migration/&lt;release-id&gt;.json</code> 保存可提交的迁移完成契约，绑定 PDF、旧源 SHA-256 和已有 P4 精简证据文件的路径/哈希；实际核对覆盖数而非假定迁移成功，不依赖可删除的 work 或临时报告。</li>
+  </ul>
+  <table>
+    <tr><th>入口</th><th>作用</th><th>产物范围</th></tr>
+    <tr><td><code>ipg-validate --profile candidate|release</code><br><code>scripts/validate.py</code></td><td>读取当前指针，核对 schema、引用、注册身份、权威快照、覆盖证据和审校账本；普通中文说明阻塞原因。</td><td>只读检查，无 dist 写入。</td></tr>
+    <tr><td><code>ipg-build --profile candidate</code></td><td>完整报告 readiness 问题，不伪装可发布；必须写入 outputs 的新目录。</td><td>candidate：显著不可发布标记，保留旧候选。</td></tr>
+    <tr><td><code>ipg-build --profile release --rehearsal</code></td><td>使用与正式构建相同门槛，但不提升到 dist；成功测试采用标明 TEST ONLY 的隔离合成工程。</td><td>release rehearsal：outputs，无正式发布含义。</td></tr>
+    <tr><td><code>ipg-build --profile release</code><br><code>scripts/build.py</code></td><td>通过全部 release 条件后，在临时目录构建两次，分别校验输出，逐字节比较，再整目录提升。</td><td>正式 dist：仅 IPG.md、rules.json。</td></tr>
+    <tr><td><code>ipg-validate-output --input &lt;rules.json&gt;</code><br><code>scripts/validate_output.py</code></td><td>从指针核对 releaseId，独立读取输出并按 ipg-output-v1 校验；不重复审校门槛，不假定 builder 正确。</td><td>只读，无内容迁移或重建。</td></tr>
+  </table>
+  <h3>发布硬门槛与失败保护</h3>
+  <p>release 只接受全文正文及全文发布注解范围、publishable=true；缺译、未决映射、重复消费、延期/孤立注解均须清零；许可与非空署名完成；每个当前翻译单元恰好一条有效审校记录，unreviewed/stale/孤立/重复记录为零且 sourceHash/targetHash 精确相符。术语词表缺失、解析失败或 finding 均仅报告，不成为发布门槛。候选验证成功不能代替 release 检查。</p>
+  <p>全部源检查、输出检查、两次确定性比较及构建期间输入变化检查发生在 dist 更新之前。构建哈希在外部报告/控制台/演练证据中，不写入 rules.json，也不作为它的输入。助手选项 5 只读检查，选项 6 调用 release 构建；条件不足列出中文原因，选项 2 的候选流程仍可用。</p>
+  <div class="callout warn"><strong>Windows 目录事务的实际保证。</strong>首次 dist 创建是单次目录重命名。已有非空 dist 采用写锁、旧目录可恢复备份、完整新目录提升和出错回滚，绝不逐文件混合更新；两次重命名间可能短暂不存在 dist 路径，并非内核级无间隙 rename-exchange。恢复失败保留完整旧目录并明确报告位置，遗留锁/备份阻止后续覆盖。若未来要求并发网站读者完全无间隙，应另行批准版本目录与读取指针方案；不能把本实现宣称为那种原子性。</div>
+  <h3>证据、停止点及后续差异</h3>
+  <p>自动测试在隔离目录证明 release 成功、版本说明双输出、独立 schema、确定性、整目录更新、失败保持旧文件、输出损坏/二次不一致/输入变化/锁冲突拒绝和恢复失败保留证据。真实工程仅执行只读 candidate/release 检查，现有用户账本、OmegaT、候选目录与快照保持原样。GitHub Release 是未来分发事件，不等于本地 release profile、rehearsal 或 dist。P4.6 审阅包完成后停止；官方更新自动化、全文人工审校和 GitHub 发布仍需单独授权。</p>
 </main>
 </body>
 </html>

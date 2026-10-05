@@ -1,0 +1,24 @@
+schemaVersion: 1
+documentId: ipg-test-rehearsal-only
+sections:
+- id: ipg-test-section
+  kind: front-matter
+  number: introduction
+  title: {en: 'TEST ONLY: synthetic rehearsal, not an IPG release', zh: '仅用于测试的合成演练，不是 IPG 发布'}
+  components:
+  - id: ipg-test-component
+    role: body
+    labelCode: component.body
+    groups:
+    - id: ipg-test-group
+      kind: paragraphs
+      blocks:
+      - id: ipg-test-block
+        type: paragraph
+        text: {en: 'Synthetic contract fixture only.', zh: '合成契约测试夹具。'}
+        officialPdfUnits:
+        - pdfSha256: '0000000000000000000000000000000000000000000000000000000000000000'
+          page: 1
+          bbox: [1, 2, 3, 4]
+          extractionUnit: test-only-extraction-1
+publicationAnnotations: []

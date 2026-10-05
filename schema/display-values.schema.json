@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schemaVersion", "values"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "values": {"type": "object", "additionalProperties": {"$ref": "https://example.invalid/ipg-source.schema.json#/$defs/localized"}}
+  }
+}

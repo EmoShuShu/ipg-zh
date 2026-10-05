@@ -25,6 +25,11 @@ def isolated_repo(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> tuple[Path
     root = tmp_path / "repo"
     for name in ("src", "schema", "terminology"):
         shutil.copytree(full_review.ROOT / name, root / name)
+    shutil.copytree(full_review.ROOT / "review/migration", root / "review/migration")
+    evidence = root / "docs/review/p4-migration-summary.json"
+    evidence.parent.mkdir(parents=True)
+    shutil.copyfile(full_review.ROOT / "docs/review/p4-migration-summary.json", evidence)
+    shutil.copytree(full_review.ROOT / "snapshots", root / "snapshots")
     release = root / "src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001"
     project = root / "outputs/omegat-ipg-full"
     monkeypatch.setattr(full_review, "ROOT", root)

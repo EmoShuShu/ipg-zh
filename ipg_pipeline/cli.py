@@ -6,7 +6,6 @@ import shutil
 from pathlib import Path
 from typing import Any
 
-from .builder import build_outputs
 from .core import ROOT, dump_yaml, load_json, load_yaml
 from .migration import migrate_pilot
 from .omegat import (
@@ -25,7 +24,6 @@ from .review import (
     terminology_audit,
 )
 from .review_pack import build_p2_review_pack
-from .validation import validate_release
 
 
 OFFICIAL_PDF = (
@@ -117,14 +115,6 @@ def command_migrate(_: argparse.Namespace) -> int:
     return 0
 
 
-def _release_inputs() -> tuple[dict[str, Any], list[dict[str, Any]], dict[str, Any], dict[str, Any]]:
-    manifest = load_yaml(RELEASE_DIR / "manifest.yaml")
-    documents = [load_yaml(RELEASE_DIR / filename) for filename in manifest["documents"]]
-    display_values = load_yaml(ROOT / "src/ipg/display-values.yaml")
-    migration_report = load_json(REPORTS_DIR / "migration-report.json")
-    return manifest, documents, display_values, migration_report
-
-
 def _document_tuples() -> tuple[list[tuple[str, dict[str, Any]]], dict[str, Any]]:
     manifest = load_yaml(RELEASE_DIR / "manifest.yaml")
     documents = [(filename, load_yaml(RELEASE_DIR / filename)) for filename in manifest["documents"]]
@@ -132,50 +122,14 @@ def _document_tuples() -> tuple[list[tuple[str, dict[str, Any]]], dict[str, Any]
 
 
 def command_validate(args: argparse.Namespace) -> int:
-    manifest, documents, display_values, migration_report = _release_inputs()
-    review_path = REVIEW_LEDGER
-    report = validate_release(
-        profile=args.profile,
-        manifest=manifest,
-        documents=documents,
-        display_values=display_values,
-        migration_report=migration_report,
-        review_ledger=load_json(review_path) if review_path.exists() else None,
-    )
-    path = REPORTS_DIR / f"validation-{args.profile}.json"
-    _write_json(path, report)
-    print(
-        f"{args.profile}: {'valid' if report['valid'] else 'failed'}; "
-        f"release gates={report['releaseGateCounts']}"
-    )
-    return 0 if report["valid"] else 1
+    from .production import validate_main
+    return validate_main(["--profile", args.profile])
 
 
 def command_build(args: argparse.Namespace) -> int:
-    manifest, documents, display_values, migration_report = _release_inputs()
-    review_path = REVIEW_LEDGER
-    report = validate_release(
-        profile=args.profile,
-        manifest=manifest,
-        documents=documents,
-        display_values=display_values,
-        migration_report=migration_report,
-        review_ledger=load_json(review_path) if review_path.exists() else None,
-    )
-    if not report["valid"]:
-        raise SystemExit(f"{args.profile} validation failed; build refused")
-    build = build_outputs(
-        ROOT / ("pilot/output" if args.profile == "candidate" else "dist"),
-        manifest,
-        documents,
-        display_values,
-        candidate=args.profile == "candidate",
-        profile=args.profile,
-    )
-    _write_json(REPORTS_DIR / f"validation-{args.profile}.json", report)
-    destination = "pilot/output" if build["candidate"] else "dist"
-    print(f"built {'candidate' if build['candidate'] else 'release'} outputs -> {destination}")
-    return 0
+    # Compatibility alias: never maintain a second, less-safe dist writer.
+    from .production import build_main
+    return build_main(["--profile", args.profile])
 
 
 def command_omegat_export(_: argparse.Namespace) -> int:

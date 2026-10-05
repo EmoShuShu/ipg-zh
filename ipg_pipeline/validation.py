@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from collections import Counter
+from pathlib import Path
 from typing import Any
 
 from .core import ROOT, anchor_position_is_legal, sha256_text, validate_schema, walk_nodes
@@ -9,7 +10,8 @@ from .omegat import collect_units
 
 def _review_units(documents: list[dict[str, Any]], display_values: dict[str, Any]) -> dict[str, tuple[str, str]]:
     return {unit["id"]: (unit["source"], unit["target"])
-            for unit in collect_units([(str(index), d) for index, d in enumerate(documents)], display_values)}
+            for unit in collect_units([(str(index), d) for index, d in enumerate(documents)], display_values,
+                                      release_relative="")}
 
 
 def validate_release(
@@ -20,18 +22,29 @@ def validate_release(
     display_values: dict[str, Any],
     migration_report: dict[str, Any],
     review_ledger: dict[str, Any] | None = None,
+    schema_dir: Path | None = None,
 ) -> dict[str, Any]:
     if profile not in {"candidate", "release"}:
         raise ValueError("profile must be candidate or release")
     structural: list[dict[str, Any]] = []
     readiness: list[dict[str, Any]] = []
+    schema_dir = schema_dir or ROOT / "schema"
 
-    for error in validate_schema(manifest, ROOT / "schema/ipg-manifest.schema.json"):
+    for error in validate_schema(manifest, schema_dir / "ipg-manifest.schema.json"):
         structural.append({"code": "manifest-schema", "detail": error})
 
     for document in documents:
-        for error in validate_schema(document, ROOT / "schema/ipg-source.schema.json"):
-            structural.append({"code": "source-schema", "documentId": document.get("documentId"), "detail": error})
+        for error in validate_schema(document, schema_dir / "ipg-source.schema.json"):
+            structural.append({"code": "source-schema", "documentId": document.get("documentId") if isinstance(document, dict) else None, "detail": error})
+
+    if structural:
+        return {
+            "schemaVersion": 1, "profile": profile, "valid": False,
+            "meaning": "validation-failed",
+            "structuralFindingCounts": dict(Counter(item["code"] for item in structural)),
+            "readinessFindingCounts": {}, "releaseGateCounts": {},
+            "structuralFindings": structural, "readinessFindings": [],
+        }
 
     nodes = [(kind, node) for document in documents for kind, node in walk_nodes([document])]
     annotations = [item for document in documents for item in document.get("publicationAnnotations", [])]
@@ -51,7 +64,7 @@ def validate_release(
                 structural.append({"code": "invalid-reading-range", "targetId": segment["id"]})
             cursor = end
             raw_ids.extend(segment["legacyRawUnits"])
-            if not segment["text"]["zh"]:
+            if not segment["text"]["zh"].strip():
                 readiness.append({"code": "missing-translation", "targetId": segment["id"]})
         if cursor != len(block["text"]["en"]) or raw_ids != block.get("legacyRawUnits"):
             structural.append({"code": "incomplete-reading-coverage", "targetId": block["id"]})
@@ -97,11 +110,11 @@ def validate_release(
                     {"code": "invalid-display-code", "targetId": node["id"], "field": field, "value": node[field]}
                 )
         localized = node.get("title") if kind == "section" else node.get("text") if kind == "block" else None
-        if localized is not None and not localized.get("zh", ""):
+        if localized is not None and not localized.get("zh", "").strip():
             readiness.append({"code": "missing-translation", "targetId": node["id"]})
 
     for code, value in sorted(display_values.get("values", {}).items()):
-        if not value.get("zh", ""):
+        if not value.get("zh", "").strip():
             readiness.append({"code": "missing-translation", "targetId": f"display:{code}"})
 
     for annotation in annotations:
@@ -132,7 +145,7 @@ def validate_release(
                 )
         for group in annotation["groups"]:
             for block in group["blocks"]:
-                if not block["text"]["zh"]:
+                if not block["text"]["zh"].strip():
                     readiness.append({"code": "missing-translation", "targetId": block["id"]})
 
     coverage = migration_report.get("coverage", {})
@@ -166,7 +179,8 @@ def validate_release(
     annotation_version = manifest.get("versions", {}).get("annotations", {})
     if (
         annotation_version.get("licenseStatus") != "complete"
-        or annotation_version.get("attribution") in {None, "", "pending-before-formal-release"}
+        or not annotation_version.get("attribution", "").strip()
+        or annotation_version.get("attribution") == "pending-before-formal-release"
     ):
         readiness.append({"code": "annotation-license-pending", "targetId": "versions.annotations"})
 
@@ -180,6 +194,8 @@ def validate_release(
     if profile == "release":
         if official_scope.get("mode") != "full-document":
             readiness.append({"code": "manifest-not-full-document", "targetId": "scope.officialContent.mode"})
+        if annotation_scope.get("mode") != "full-document":
+            readiness.append({"code": "manifest-not-full-document", "targetId": "scope.publicationAnnotations.mode"})
         if manifest.get("publishable") is not True:
             readiness.append({"code": "manifest-not-publishable", "targetId": "publishable"})
         deferred_groups = int(annotation_scope.get("deferredGroups", 0))

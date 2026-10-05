@@ -21,7 +21,8 @@ from .core import (
 )
 from .omegat import collect_units, parse_po, render_po, validate_target_entries
 from .omegat import minimal_yaml_update
-from .p4 import RELEASE_DIR
+from .release import current_release_dir
+from .production import candidate_destination, validate_project
 from .review import (
     extract_omegat_notes,
     record_reviewed_units,
@@ -33,6 +34,7 @@ from .validation import validate_release
 
 
 PROJECT_DIR = ROOT / "outputs/omegat-ipg-full"
+RELEASE_DIR = current_release_dir(ROOT)
 MAPPING_PATH = PROJECT_DIR / "omegat/full-review.mapping.json"
 GLOSSARY_PATH = ROOT / "terminology/ipg-glossary.txt"
 PO_ORDER = [
@@ -56,7 +58,7 @@ EXPECTED_PO_COUNTS = {
     "appendix-b.po": 18,
 }
 EXPECTED_UNIT_COUNT = 1007
-TRANSLATION_REVISION = "zh-r0001"
+TRANSLATION_REVISION = load_yaml(RELEASE_DIR / "manifest.yaml")["versions"]["translation"]["revision"]
 REVIEW_LEDGER_PATH = ROOT / f"review/status/{TRANSLATION_REVISION}.json"
 TRANSLATION_NOTES_PATH = ROOT / f"review/translation-notes/{TRANSLATION_REVISION}.json"
 REVIEW_ACTIONS_PATH = ROOT / f"review/actions/{TRANSLATION_REVISION}.yaml"
@@ -81,8 +83,9 @@ def _now() -> str:
 
 
 def full_inputs() -> tuple[dict[str, Any], list[tuple[str, dict[str, Any]]], dict[str, Any]]:
-    manifest = load_yaml(RELEASE_DIR / "manifest.yaml")
-    documents = [(filename, load_yaml(RELEASE_DIR / filename)) for filename in manifest["documents"]]
+    release = current_release_dir(ROOT)
+    manifest = load_yaml(release / "manifest.yaml")
+    documents = [(filename, load_yaml(release / filename)) for filename in manifest["documents"]]
     display = load_yaml(ROOT / "src/ipg/display-values.yaml")
     return manifest, documents, display
 
@@ -91,7 +94,7 @@ def units_by_po(
     documents: list[tuple[str, dict[str, Any]]], display: dict[str, Any]
 ) -> dict[str, list[dict[str, Any]]]:
     result = {name: [] for name in PO_ORDER}
-    for unit in collect_units(documents, display):
+    for unit in collect_units(documents, display, release_relative=current_release_dir(ROOT).relative_to(ROOT).as_posix()):
         po_name = (
             "display-values.po"
             if unit["kind"] == "display-value"
@@ -218,6 +221,9 @@ def _validate_existing_project(inputs: dict[str, Any]) -> dict[str, Any]:
     if not MAPPING_PATH.is_file():
         raise ValueError("OmegaT 项目缺少基线映射文件；请人工检查，不会自动覆盖。")
     mapping = load_json(MAPPING_PATH)
+    if (mapping["releaseId"] != inputs["manifest"]["releaseId"]
+            or mapping["translationRevision"] != inputs["manifest"]["versions"]["translation"]["revision"]):
+        raise ValueError("OmegaT 基线与当前 release / 中文修订不一致；请先进行版本协调。")
     actual_po = sorted(path.name for path in (PROJECT_DIR / "source").glob("*.po"))
     if actual_po != sorted(PO_ORDER):
         raise ValueError(f"source PO 集合不完整或多出文件：{actual_po}")
@@ -498,12 +504,13 @@ def _leaf_differences(before: Any, after: Any, path: tuple[Any, ...] = ()) -> se
 
 
 def _overlay_inputs(candidate_root: Path) -> tuple[dict[str, Any], list[tuple[str, dict[str, Any]]], dict[str, Any]]:
-    manifest = load_yaml(RELEASE_DIR / "manifest.yaml")
+    release = current_release_dir(ROOT)
+    manifest = load_yaml(release / "manifest.yaml")
     documents = [
         (
             filename,
             _load_overlay(
-                f"src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001/{filename}",
+                f"{release.relative_to(ROOT).as_posix()}/{filename}",
                 candidate_root,
             ),
         )
@@ -795,32 +802,15 @@ def record_review_completion(
 
 
 def validate_current_state() -> dict[str, Any]:
-    manifest, documents, display = full_inputs()
-    ledger = load_json(REVIEW_LEDGER_PATH) if REVIEW_LEDGER_PATH.exists() else None
-    candidate = validate_release(
-        profile="candidate",
-        manifest=manifest,
-        documents=[item[1] for item in documents],
-        display_values=display,
-        migration_report=_migration_gate_stub(),
-        review_ledger=ledger,
-    )
-    release = validate_release(
-        profile="release",
-        manifest=manifest,
-        documents=[item[1] for item in documents],
-        display_values=display,
-        migration_report=_migration_gate_stub(),
-        review_ledger=ledger,
-    )
+    candidate = validate_project(ROOT, profile="candidate")
+    release = validate_project(ROOT, profile="release")
     if not candidate["valid"]:
         raise ValueError("candidate validation failed")
-    if release["valid"]:
-        raise ValueError("nonpublishable P4.5 source unexpectedly passed release validation")
     return {"candidate": candidate, "release": release}
 
 
 def build_current_candidate(validation: dict[str, Any] | None = None) -> dict[str, Any]:
+    candidate_destination(ROOT, CURRENT_CANDIDATE)
     manifest, documents, display = full_inputs()
     validation = validation or validate_current_state()
     with tempfile.TemporaryDirectory(prefix="ipg-current-candidate-") as temporary:
