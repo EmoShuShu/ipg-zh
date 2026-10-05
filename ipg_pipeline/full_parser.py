@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import re
 from collections import Counter
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -49,6 +50,19 @@ class FullParseError(ValueError):
         super().__init__("; ".join(finding["code"] for finding in findings))
 
 
+def english_date(value: str) -> str:
+    months = "January February March April May June July August September October November December".split()
+    match = re.fullmatch(r"([A-Za-z]+)\s+(\d{1,2}),\s+(\d{4})", value.strip())
+    if match:
+        names = {name: i for i, name in enumerate(months, 1)}
+        names.update({name[:3]: i for i, name in enumerate(months, 1)})
+        try:
+            return date(int(match[3]), names[match[1]], int(match[2])).isoformat()
+        except (ValueError, KeyError):
+            pass
+    raise ValueError(f"Unrecognized English date: {value!r}")
+
+
 def _bbox(lines: list[dict[str, Any]]) -> list[float]:
     return [
         round(min(line["x0"] for line in lines), 2),
@@ -64,7 +78,7 @@ def _provenance(lines: list[dict[str, Any]]) -> list[dict[str, Any]]:
         page_lines = [line for line in lines if line["page"] == page]
         result.append(
             {
-                "pdfSha256": OFFICIAL_SHA256,
+                "pdfSha256": page_lines[0]["pdfSha256"],
                 "page": page,
                 "bbox": _bbox(page_lines),
                 "extractionUnit": f"{page_lines[0]['id']}..{page_lines[-1]['id']}",
@@ -73,15 +87,18 @@ def _provenance(lines: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return result
 
 
-def extract_full_pdf(pdf_path: Path) -> dict[str, Any]:
+def extract_full_pdf(pdf_path: Path, *, expected_sha256: str = OFFICIAL_SHA256) -> dict[str, Any]:
     data = pdf_path.read_bytes()
     digest = sha256_bytes(data)
-    if digest != OFFICIAL_SHA256:
-        raise FullParseError([{"code": "pdf-hash-mismatch", "expected": OFFICIAL_SHA256, "actual": digest}])
+    if digest != expected_sha256:
+        raise FullParseError([{"code": "pdf-hash-mismatch", "expected": expected_sha256, "actual": digest}])
+    if not data.startswith(b"%PDF-"):
+        raise FullParseError([{"code": "invalid-pdf-header"}])
     lines: list[dict[str, Any]] = []
     with pdfplumber.open(pdf_path) as pdf:
-        if len(pdf.pages) != 31:
-            raise FullParseError([{"code": "pdf-page-count", "expected": 31, "actual": len(pdf.pages)}])
+        pages = len(pdf.pages)
+        if not 1 <= pages <= 100:
+            raise FullParseError([{"code": "pdf-page-count", "actual": pages}])
         for page_number, page in enumerate(pdf.pages, 1):
             for index, line in enumerate(page.extract_text_lines(strip=True, return_chars=True), 1):
                 chars = line.get("chars", [])
@@ -104,7 +121,7 @@ def extract_full_pdf(pdf_path: Path) -> dict[str, Any]:
                         ),
                     }
                 )
-    return {"schemaVersion": 1, "pdf": {"sha256": digest, "pages": 31}, "lines": lines}
+    return {"schemaVersion": 1, "pdf": {"sha256": digest, "pages": pages}, "lines": lines}
 
 
 def _toc_key(title: str) -> tuple[str, str, str]:
@@ -137,7 +154,7 @@ def _parse_toc(lines: list[dict[str, Any]], mark) -> list[dict[str, Any]]:
             entries.append({"key": key, "title": name, "tocTitle": title, "kind": kind, "page": int(page), "lineId": line["id"]})
             mark(line, "toc-entry")
             continue
-        if text == "2" and line["top"] > 720:
+        if text == str(line["page"]) and line["top"] > 720:
             mark(line, "page-number")
             continue
         mark(line, "unclassified-toc")
@@ -363,13 +380,13 @@ def _parse_front(lines: list[dict[str, Any]], temp, mark, findings) -> list[dict
 
     for line in lines:
         text = line["text"]
-        if text in {"MAGIC INFRACTION PROCEDURE GUIDE", "Effective September 23, 2024"}:
+        if text == "MAGIC INFRACTION PROCEDURE GUIDE" or text.startswith("Effective "):
             mark(line, "document-metadata")
         elif text == "INTRODUCTION":
             finish(); current = {"id": temp("section"), "kind": "front-matter", "number": "introduction", "title": {"en": "Introduction", "zh": ""}, "components": []}; mark(line, "section-heading", current["id"])
         elif text == "FRAMEWORK OF THIS DOCUMENT":
             finish(); current = {"id": temp("section"), "kind": "front-matter", "number": "framework", "title": {"en": "Framework of this Document", "zh": ""}, "components": []}; mark(line, "section-heading", current["id"])
-        elif text == "1" and line["top"] > 720:
+        elif text == str(line["page"]) and line["top"] > 720:
             mark(line, "page-number")
         elif current is None:
             findings.append({"code": "unclassified-front-matter", "lineId": line["id"], "text": text}); mark(line, "unclassified-body")
@@ -389,7 +406,7 @@ def _parse_appendix_a(lines: list[dict[str, Any]], infraction_by_title: dict[str
             mark(line, "section-heading")
         elif text in {"Infraction Penalty", "Game Play Errors", "Tournament Errors", "Unsporting Conduct"}:
             mark(line, "appendix-table-heading")
-        elif text == "30" and line["top"] > 720:
+        elif text == str(line["page"]) and line["top"] > 720:
             mark(line, "page-number")
         else:
             penalty = next((name for name in sorted(PENALTIES, key=len, reverse=True) if text.endswith(f" {name}")), None)
@@ -447,10 +464,14 @@ def _parse_appendix_b(lines: list[dict[str, Any]], known_numbers: set[str], temp
             heading_count += 1
             mark(line, "section-heading")
         elif DATE_RE.match(text):
+            try:
+                english_date(text)
+            except ValueError:
+                findings.append({"code": "invalid-change-date", "text": text})
             finish_group(); current_date = text; mark(line, "appendix-b-date")
         elif re.match(r"^[1-4](?:\.\d+)?:", text):
             finish_entry(); current_lines = [line]
-        elif text == "31" and line["top"] > 720:
+        elif text == str(line["page"]) and line["top"] > 720:
             mark(line, "page-number")
         elif text.startswith("All trademarks are property"):
             finish_entry(); mark(line, "document-footer")
@@ -464,10 +485,23 @@ def _parse_appendix_b(lines: list[dict[str, Any]], known_numbers: set[str], temp
     return {"id": temp("section"), "kind": "appendix", "number": "B", "title": {"en": "Changes from Previous Versions", "zh": ""}, "components": [{"id": temp("component"), "role": "change-log", "labelCode": "component.change-log", "groups": groups}]}
 
 
-def parse_full_extraction(extraction: dict[str, Any]) -> dict[str, Any]:
+def parse_full_extraction(extraction: dict[str, Any], *, expected_sha256: str = OFFICIAL_SHA256,
+                          expected_date: str | None = None, frozen: bool = True) -> dict[str, Any]:
     findings: list[dict[str, Any]] = []
-    if extraction.get("pdf", {}).get("sha256") != OFFICIAL_SHA256:
-        raise FullParseError([{"code": "pdf-hash-mismatch", "expected": OFFICIAL_SHA256, "actual": extraction.get("pdf", {}).get("sha256")}])
+    if extraction.get("pdf", {}).get("sha256") != expected_sha256:
+        raise FullParseError([{"code": "pdf-hash-mismatch", "expected": expected_sha256, "actual": extraction.get("pdf", {}).get("sha256")}])
+    if frozen and extraction["pdf"]["pages"] != 31:
+        raise FullParseError([{"code": "pdf-page-count", "expected": 31, "actual": extraction["pdf"]["pages"]}])
+    extraction = {**extraction, "lines": [{**line, "pdfSha256": expected_sha256} for line in extraction["lines"]]}
+    metadata = [line["text"][10:] for line in extraction["lines"] if line["text"].startswith("Effective ")]
+    try:
+        if len(metadata) != 1:
+            raise ValueError("expected one Effective date")
+        effective = english_date(metadata[0])
+        if effective != (expected_date or ("2024-09-23" if frozen else effective)):
+            raise ValueError("page/PDF effective dates differ")
+    except ValueError as error:
+        raise FullParseError([{"code": "official-effective-date-invalid", "detail": str(error)}]) from error
     counters: Counter[str] = Counter()
     dispositions: dict[str, dict[str, Any]] = {}
 
@@ -480,19 +514,34 @@ def parse_full_extraction(extraction: dict[str, Any]) -> dict[str, Any]:
             raise FullParseError([{"code": "duplicate-line-consumption", "lineId": line["id"]}])
         dispositions[line["id"]] = {"lineId": line["id"], "page": line["page"], "text": line["text"], "disposition": disposition, "targetId": target}
 
-    by_page = {page: [line for line in extraction["lines"] if line["page"] == page] for page in range(1, 32)}
-    toc_entries = _parse_toc(by_page[2], mark)
+    lines = extraction["lines"]
+    toc_pages = {line["page"] for line in lines if line["text"] == "CONTENTS" or TOC_RE.match(line["text"])}
+    if sum(line["text"] == "CONTENTS" for line in lines) != 1 or not toc_pages:
+        raise FullParseError([{"code": "toc-region-unrecognized"}])
+    toc_entries = _parse_toc([line for line in lines if line["page"] in toc_pages], mark)
     toc_counts = Counter(item["key"] for item in toc_entries)
     for key, count in toc_counts.items():
         if count > 1:
             findings.append({"code": "duplicate-toc-section", "key": key, "count": count})
     toc = {item["key"]: item for item in toc_entries}
-    for key in sorted(EXPECTED_TOC_KEYS - set(toc)):
+    for key in sorted((EXPECTED_TOC_KEYS if frozen else {"introduction", "framework", "1", "2", "3", "4", "A", "B"}) - set(toc)):
         findings.append({"code": "toc-missing-expected-section", "key": key})
-    for key in sorted(set(toc) - EXPECTED_TOC_KEYS):
+    for key in sorted(set(toc) - EXPECTED_TOC_KEYS) if frozen else []:
         findings.append({"code": "toc-unexpected-section", "key": key})
-    front = _parse_front(by_page[1], temp, mark, findings)
-    main = _parse_main([line for page in range(3, 30) for line in by_page[page]], toc, temp, mark, findings)
+    def boundary(text):
+        matches = [i for i, line in enumerate(lines) if line["text"] == text]
+        if len(matches) != 1:
+            raise FullParseError([{"code": "appendix-heading-count", "text": text, "count": len(matches)}])
+        return matches[0]
+    a_start = boundary("APPENDIX A — PENALTY QUICK REFERENCE")
+    b_start = boundary("APPENDIX B — CHANGES FROM PREVIOUS VERSIONS")
+    main_starts = [i for i, line in enumerate(lines) if line["page"] not in toc_pages and re.match(r"^1\.\s+", line["text"])]
+    if len(main_starts) != 1 or not main_starts[0] < a_start < b_start:
+        raise FullParseError([{"code": "document-region-order-invalid"}])
+    main_page = lines[main_starts[0]]["page"]
+    main_start = next(i for i, line in enumerate(lines) if line["page"] == main_page)
+    front = _parse_front([line for line in lines[:main_start] if line["page"] not in toc_pages], temp, mark, findings)
+    main = _parse_main(lines[main_start:a_start], toc, temp, mark, findings)
     body_keys = [section["number"] for section in [*front, *main]]
     for key, count in Counter(body_keys).items():
         if count > 1:
@@ -509,19 +558,23 @@ def parse_full_extraction(extraction: dict[str, Any]) -> dict[str, Any]:
         if entry and (entry["title"] != section["title"]["en"] or entry["page"] != 1):
             findings.append({"code": "toc-body-front-matter-mismatch", "key": section["number"]})
     infractions = [section for section in main if section["kind"] == "infraction"]
-    if len(infractions) != 23:
+    if frozen and len(infractions) != 23:
         findings.append({"code": "infraction-count-cross-check", "expected": 23, "actual": len(infractions)})
     for section in infractions:
         if not section.get("penaltyCode"):
             findings.append({"code": "infraction-missing-base-penalty", "section": section["number"]})
     infraction_by_title = {section["title"]["en"].casefold(): section for section in infractions}
-    appendix_a = _parse_appendix_a(by_page[30], infraction_by_title, temp, mark, findings)
-    appendix_b = _parse_appendix_b(by_page[31], {section["number"] for section in [*front, *main]}, temp, mark, findings)
+    appendix_a = _parse_appendix_a(lines[a_start:b_start], infraction_by_title, temp, mark, findings)
+    appendix_b = _parse_appendix_b(lines[b_start:], {section["number"] for section in [*front, *main]}, temp, mark, findings)
+    rows = appendix_a["components"][0]["groups"][0]["blocks"]
+    references = Counter(row["referenceId"] for row in rows)
+    if references != Counter(section["id"] for section in infractions):
+        findings.append({"code": "appendix-a-infraction-coverage-mismatch"})
     if "A" not in toc:
         findings.append({"code": "body-heading-missing-from-toc", "key": "A"})
     if "B" not in toc:
         findings.append({"code": "body-heading-missing-from-toc", "key": "B"})
-    for key, page, title in (("A", 30, appendix_a["title"]["en"]), ("B", 31, appendix_b["title"]["en"])):
+    for key, page, title in (("A", lines[a_start]["page"], appendix_a["title"]["en"]), ("B", lines[b_start]["page"], appendix_b["title"]["en"])):
         entry = toc.get(key)
         if entry and (entry["title"] != title or entry["page"] != page):
             findings.append({"code": "toc-body-appendix-mismatch", "key": key})
@@ -553,5 +606,7 @@ def parse_full_extraction(extraction: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def parse_full_pdf(pdf_path: Path) -> dict[str, Any]:
-    return parse_full_extraction(extract_full_pdf(pdf_path))
+def parse_full_pdf(pdf_path: Path, *, expected_sha256: str = OFFICIAL_SHA256,
+                   expected_date: str | None = None, frozen: bool = True) -> dict[str, Any]:
+    return parse_full_extraction(extract_full_pdf(pdf_path, expected_sha256=expected_sha256),
+                                 expected_sha256=expected_sha256, expected_date=expected_date, frozen=frozen)

@@ -1,11 +1,206 @@
 from __future__ import annotations
 
 import copy
+import json
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from typing import Any
 
 from .core import sha256_text, walk_nodes
+
+
+def official_records(documents: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Flatten native nodes with structural context; order is evidence, never identity."""
+    records = []
+    sections = [s for d in documents for s in d["sections"]]
+    def visit(kind, node, parent, section, order):
+        records.append({"kind": kind, "node": node, "parent": parent, "section": section, "order": order})
+        children = {"section": ("components", "component"), "component": ("groups", "group"), "group": ("blocks", "block")}
+        if kind in children:
+            field, child_kind = children[kind]
+            for i, child in enumerate(node[field]):
+                visit(child_kind, child, node["id"], section, i)
+    for i, section in enumerate(sections):
+        visit("section", section, None, section["id"], i)
+    return records
+
+
+def node_identity_hash(kind: str, node: dict[str, Any]) -> str:
+    if kind == "block":
+        return identity_evidence(node["text"]["en"])
+    if kind == "section":
+        return identity_evidence(node["title"]["en"])
+    if kind == "component":
+        return sha256_text(node["role"] + ":" + node["labelCode"])
+    return sha256_text(node["kind"] + ":" + node.get("date", ""))
+
+
+def official_semantics(value: Any) -> Any:
+    if isinstance(value, dict):
+        excluded = {"id", "documentId", "zh", "officialPdfUnits", "legacyRawUnits", "sourceRawUnits", "readingSegments"}
+        return {k: official_semantics(v) for k, v in value.items() if k not in excluded}
+    return [official_semantics(v) for v in value] if isinstance(value, list) else value
+
+
+def override_evidence(node: dict[str, Any]) -> str:
+    return sha256_text(json.dumps(official_semantics(node), sort_keys=True, ensure_ascii=False, separators=(",", ":")))
+
+
+def reconcile_update_document(parsed: dict[str, Any], previous: list[dict[str, Any]],
+                              registry: dict[str, Any], *, version: str,
+                              overrides: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Conservative update coordination, separate from frozen P2/P3 reproduction.
+
+    Exact evidence and unique native parent/role context preserve identity. Modified
+    English requires a hash-bound override; old Chinese suggestions remain in findings.
+    No positional or fuzzy match is ever promoted into a stable inherited identity.
+    """
+    result, proposed = copy.deepcopy(parsed), copy.deepcopy(registry)
+    old = {r["node"]["id"]: r for r in official_records(previous)}
+    new_records = official_records([result["document"]])
+    new_by_extraction = {r["node"]["id"]: r for r in new_records}
+    entries = {e["id"]: e for e in proposed["entries"]}
+    if len(old) != len(official_records(previous)) or len(new_by_extraction) != len(new_records):
+        raise ValueError("duplicate official identity")
+    if any(i not in entries or entries[i]["status"] != "active" for i in old):
+        raise ValueError("prior official identity absent or retired in registry")
+    forced, reserved, operations = {}, set(), (overrides or {}).get("mappings", [])
+    for operation in operations:
+        sources, targets, kind = operation["fromIds"], operation["toExtractionIds"], operation["kind"]
+        name = operation["operation"]
+        if (name == "split" and not (len(sources) == 1 and len(targets) >= 2)
+                or name == "merge" and not (len(sources) >= 2 and len(targets) == 1)
+                or name not in {"split", "merge"} and not (len(sources) == len(targets) == 1)):
+            raise ValueError("invalid override cardinality")
+        if reserved.intersection(sources) or set(forced).intersection(targets):
+            raise ValueError("override repeats consumption")
+        if set(operation["sourceHashes"]) != set(sources) or set(operation["targetHashes"]) != set(targets):
+            raise ValueError("override must bind every source and target hash")
+        for source in sources:
+            if source not in old or old[source]["kind"] != kind or override_evidence(old[source]["node"]) != operation["sourceHashes"][source]:
+                raise ValueError("override source identity/hash changed")
+        for target in targets:
+            if target not in new_by_extraction or new_by_extraction[target]["kind"] != kind or override_evidence(new_by_extraction[target]["node"]) != operation["targetHashes"][target]:
+                raise ValueError("override target identity/hash changed")
+        preserve = operation.get("preserveId", sources[0] if name not in {"split", "merge"} else None)
+        preserved_target = operation.get("preserveExtractionId", targets[0] if len(targets) == 1 else None)
+        if preserve is not None and (preserve not in sources or preserved_target not in targets):
+            raise ValueError("split/merge continuity must be explicitly selected")
+        forced.update({t: preserve if t == preserved_target else None for t in targets})
+        reserved.update(sources)
+    mapping, used, uncertain, findings = {}, set(), set(), []
+
+    def child_hashes(kind, node):
+        if kind == "section":
+            blocks = [b for c in node["components"] for g in c["groups"] for b in g["blocks"]]
+        elif kind == "component":
+            blocks = [b for g in node["groups"] for b in g["blocks"]]
+        else:
+            blocks = node.get("blocks", [])
+        return Counter(identity_evidence(b["text"]["en"]) for b in blocks)
+
+    for record in new_records:
+        node, kind = record["node"], record["kind"]
+        extraction_id = node["id"]
+        parent = mapping.get(record["parent"])
+        eligible = [r for i, r in old.items() if r["kind"] == kind and i not in used and i not in reserved]
+        if extraction_id in forced:
+            chosen = forced[extraction_id]
+            candidates = []
+        else:
+            exact = [r for r in eligible if node_identity_hash(kind, r["node"]) == node_identity_hash(kind, node)]
+            local = [r for r in exact if r["parent"] == parent]
+            candidates = local or exact
+            if kind == "section" and not candidates:
+                evidence = child_hashes(kind, node)
+                candidates = [r for r in eligible if r["node"]["kind"] == node["kind"]
+                    and evidence and evidence == child_hashes(kind, r["node"])]
+            if kind in {"component", "group"} and len(candidates) > 1:
+                evidence = child_hashes(kind, node)
+                exact_children = [r for r in candidates if evidence and child_hashes(kind, r["node"]) == evidence]
+                if exact_children:
+                    candidates = exact_children
+            chosen = candidates[0]["node"]["id"] if len(candidates) == 1 else None
+        if len(candidates) > 1:
+            ids = sorted(r["node"]["id"] for r in candidates)
+            uncertain.update(ids)
+            findings.append({"code": "ambiguous-stable-identity", "kind": kind, "extractionId": extraction_id, "candidateIds": ids})
+        if chosen is None:
+            prefix = {"section": "ipg-s", "component": "ipg-c", "group": "ipg-g", "block": "ipg-b"}[kind]
+            chosen = _next_monotonic_id(proposed, prefix)
+            _register(proposed, entry_id=chosen, kind=kind, canonical_key=f"update:{kind}:{chosen}",
+                      version=version, label=node.get("title", node.get("text", {})).get("en", kind),
+                      evidence={"parent": parent, "englishHash": node_identity_hash(kind, node)})
+            entries[chosen] = proposed["entries"][-1]
+            if kind == "block" and extraction_id not in forced and not candidates:
+                possible = [r for r in eligible if r["parent"] == parent]
+                if possible:
+                    ids = sorted(r["node"]["id"] for r in possible)
+                    uncertain.update(ids)
+                    findings.append({"code": "modified-identity-needs-override", "extractionId": extraction_id,
+                        "provisionalId": chosen, "candidateIds": ids,
+                        "oldTranslations": [{"id": r["node"]["id"], "text": r["node"]["text"]} for r in possible]})
+        mapping[extraction_id] = chosen
+        node["id"] = chosen
+        used.add(chosen)
+        prior = old.get(chosen)
+        if prior:
+            previous_node = prior["node"]
+            if kind in {"section", "block"}:
+                field = "title" if kind == "section" else "text"
+                node[field]["zh"] = previous_node[field]["zh"]
+            if kind == "block":
+                if previous_node.get("legacyRawUnits"):
+                    node["legacyRawUnits"] = copy.deepcopy(previous_node["legacyRawUnits"])
+                if previous_node.get("readingSegments"):
+                    if previous_node["text"]["en"] == node["text"]["en"] and previous_node["type"] == node["type"]:
+                        node["readingSegments"] = copy.deepcopy(previous_node["readingSegments"])
+                    else:
+                        findings.append({"code": "reading-segmentation-stale", "id": chosen,
+                                         "priorSegments": copy.deepcopy(previous_node["readingSegments"])})
+            changes = {}
+            if kind == "section":
+                for field in ("number", "title"):
+                    if previous_node[field] != node[field]:
+                        changes[field] = {"from": previous_node[field], "to": node[field]}
+            if prior["parent"] != parent:
+                changes["parent"] = {"from": prior["parent"], "to": parent}
+            if node_identity_hash(kind, previous_node) != node_identity_hash(kind, node):
+                changes["englishHash"] = {"from": node_identity_hash(kind, previous_node), "to": node_identity_hash(kind, node)}
+            if changes:
+                entries[chosen].setdefault("history", []).append({"event": "updated", "atVersion": version, "changes": changes})
+    # A new paragraph before an unchanged paragraph is an insertion, not a guessed edit.
+    for finding in list(findings):
+        if finding["code"] == "modified-identity-needs-override":
+            finding["candidateIds"] = [i for i in finding["candidateIds"] if i not in used]
+            finding["oldTranslations"] = [item for item in finding["oldTranslations"] if item["id"] not in used]
+            if not finding["candidateIds"]:
+                findings.remove(finding)
+    uncertain = {i for f in findings for i in f.get("candidateIds", [])}
+    retired = []
+    for i in sorted(set(old) - used):
+        if i in uncertain:
+            findings.append({"code": "retirement-pending-identity", "id": i})
+            continue
+        entries[i]["status"] = "retired"
+        entries[i].setdefault("history", []).append({"event": "retired", "atVersion": version, "reason": "absent after official update; never reusable"})
+        retired.append(i)
+    for operation in operations:
+        if operation["operation"] in {"split", "merge"}:
+            targets = [mapping[t] for t in operation["toExtractionIds"]]
+            for source in operation["fromIds"]:
+                entries[source].setdefault("history", []).append({"event": operation["operation"], "atVersion": version,
+                    "successors": targets, "predecessors": operation["fromIds"], "reason": operation["reason"]})
+    for record in new_records:
+        node = record["node"]
+        if node.get("referenceId") in mapping:
+            node["referenceId"] = mapping[node["referenceId"]]
+    result["document"]["documentId"] = f"ipg-official-update-{version}"
+    result["registry"] = proposed
+    result["idStatus"] = "reconciled-update-candidate"
+    result["reconciliation"] = {"extractionToStableId": mapping, "preservedIds": sorted(set(old) & used),
+        "newIds": sorted(used - set(old)), "retiredIds": retired, "findings": findings}
+    return result
 
 
 def english_evidence(text: str) -> str:
