@@ -44,7 +44,7 @@ def test_edited_notes_reach_both_deterministic_outputs_without_altering_official
     markdown = (tmp_path / "first/IPG.md").read_text(encoding="utf-8")
     rules = json.loads((tmp_path / "first/rules.json").read_text(encoding="utf-8"))
     assert markdown.startswith("<!-- CANDIDATE: NOT FOR RELEASE -->")
-    assert markdown.index("# 版本说明") < markdown.index("# 万智牌违规处理方针")
+    assert markdown.index("# 版本说明") < markdown.index("# 目录") < markdown.index("# Magic: The Gathering Infraction Procedure Guide 万智牌违规处理方针")
     assert rules["versionNotes"] == {"id": "ipg-version-notes", "en": "", "zh": "# 版本说明\n\n本地修订说明。"}
     assert rules["sections"] == [section for _, document in documents for section in document["sections"]]
     assert validate_schema(rules, ROOT / "schema/ipg-output.schema.json") == []

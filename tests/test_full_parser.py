@@ -146,8 +146,8 @@ def test_front_matter_headings_never_expose_internal_keys(full_candidate: tuple[
     markdown, _ = full_candidate
     assert "### introduction" not in markdown.casefold()
     assert "### framework" not in markdown.casefold()
-    assert "## **[CANDIDATE 缺译]** Introduction" in markdown
-    assert "## **[CANDIDATE 缺译]** Framework of this Document" in markdown
+    assert "# Introduction **[CANDIDATE 缺译]**" in markdown
+    assert "# Framework of this Document **[CANDIDATE 缺译]**" in markdown
 
     translated = copy.deepcopy(reconciled["document"])
     translated["sections"][0]["title"]["zh"] = "引言"
@@ -157,12 +157,12 @@ def test_front_matter_headings_never_expose_internal_keys(full_candidate: tuple[
         load_yaml(ROOT / "src/ipg/display-values.yaml"),
         candidate=True,
     )
-    assert "## 引言 (Introduction)" in translated_markdown
+    assert "# Introduction 引言" in translated_markdown
     assert "## introduction" not in translated_markdown.casefold()
 
 
 def test_appendix_b_dates_render_in_persisted_order_with_entry_counts(full_candidate: tuple[str, dict]) -> None:
-    markdown, _ = full_candidate
+    markdown, rules = full_candidate
     expected = [
         ("September 23, 2024", 5),
         ("April 15, 2024", 6),
@@ -171,18 +171,22 @@ def test_appendix_b_dates_render_in_persisted_order_with_entry_counts(full_candi
         ("September 4, 2023", 3),
     ]
     lines = markdown.splitlines()
-    indices = [lines.index(f"### {date}") for date, _ in expected]
+    indices = [lines.index(f"## {date}") for date, _ in expected]
     assert indices == sorted(indices)
     appendix_end = len(lines)
+    appendix = next(section for section in rules["sections"] if section["number"] == "B")
+    groups = appendix["components"][0]["groups"]
     for index, ((_, expected_count), start) in enumerate(zip(expected, indices)):
         end = indices[index + 1] if index + 1 < len(indices) else appendix_end
-        assert sum(line.startswith("- ") for line in lines[start + 1 : end]) == expected_count
+        entries = [line for line in lines[start + 1 : end] if line.startswith("- ")]
+        assert len(entries) == expected_count * 2  # one English/Chinese pair per entry
+        assert entries[::2] == ["- " + block["text"]["en"] for block in groups[index]["blocks"]]
 
 
 def test_appendix_component_titles_are_not_repeated(full_candidate: tuple[str, dict]) -> None:
     markdown, _ = full_candidate
-    assert "#### 处罚快速查询" not in markdown
-    assert "#### 与之前版本的更动" not in markdown
+    assert "### Penalty Quick Reference" not in markdown
+    assert "### Changes from Previous Versions" not in markdown
 
 
 def test_rules_json_preserves_complete_appendix_date_groups(full_candidate: tuple[str, dict]) -> None:

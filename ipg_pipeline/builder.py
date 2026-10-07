@@ -22,21 +22,63 @@ def read_version_notes(source_root: Path = ROOT) -> str:
     return value
 
 
+def _translated(text: dict[str, str]) -> str:
+    return text["zh"] or "**[CANDIDATE 缺译]**"
+
+
+# The quote and heading-anchor helpers follow mtr-zh's Markdown builder.
+# Keep them local: the IPG pipeline must never depend on the reference checkout.
+def _quote_markdown(value: str) -> str:
+    return "\n".join(">" if line == "" else f">{line}" for line in value.splitlines())
+
+
+def _markdown_anchor(value: str) -> str:
+    normalized = "".join(
+        character for character in value.casefold()
+        if character.isalnum() or character in {" ", "-", "_"}
+    )
+    return re.sub(r"\s", "-", normalized).strip("-")
+
+
+def _section_heading(section: dict[str, Any]) -> str:
+    title = f"{section['title']['en']} {_translated(section['title'])}"
+    if section["kind"] == "front-matter":
+        return title
+    if section["kind"] == "appendix":
+        return f"Appendix {section['number']}—{title}"
+    number = section["number"] + ("." if section["kind"] == "chapter" else "")
+    return f"IPG {number} {title}"
+
+
+def _markdown_toc(documents: list[dict[str, Any]]) -> str:
+    lines = ["# 目录", "", "- [版本说明](#版本说明)", "- [目录](#目录)"]
+    for document in documents:
+        for section in document["sections"]:
+            heading = _section_heading(section)
+            indent = "  " if section["kind"] in {"policy", "infraction"} else ""
+            lines.append(f"{indent}- [{heading}](#{_markdown_anchor(heading)})")
+    return "\n".join(lines)
+
+
 def _annotation_markdown(annotation: dict[str, Any]) -> list[str]:
-    lines = ["> **AIPG 注解**"]
-    for group in annotation["groups"]:
-        for index, block in enumerate(group["blocks"], 1):
-            target = block["text"]["zh"] or f"**[CANDIDATE 缺译]** {block['text']['en']}"
-            if group["kind"] == "unordered-list":
-                lines.append(f"> - {target}")
-            elif group["kind"] == "ordered-list":
-                lines.append(f"> {index}. {target}")
-            else:
-                if len(lines) > 1:
-                    lines.append(">")
-                lines.append(f"> {target}")
-    lines.append("")
-    return lines
+    # Match MTR extras: English and Chinese in one quote, preserving paragraphs
+    # and lists. Annotations remain separate objects in IPG JSON/reading order.
+    languages = []
+    for language in ("en", "zh"):
+        groups = []
+        for group in annotation["groups"]:
+            blocks = []
+            for index, block in enumerate(group["blocks"], 1):
+                value = block["text"]["en"] if language == "en" else _translated(block["text"])
+                if group["kind"] == "unordered-list":
+                    value = f"- {value}"
+                elif group["kind"] == "ordered-list":
+                    value = f"{block.get('marker', index)}. {value}"
+                blocks.append(value)
+            separator = "\n" if group["kind"] in {"unordered-list", "ordered-list"} else "\n\n"
+            groups.append(separator.join(blocks))
+        languages.append(_quote_markdown("\n\n".join(groups)))
+    return [languages[0], ">", languages[1], ""]
 
 
 def render_markdown(
@@ -49,9 +91,6 @@ def render_markdown(
 ) -> str:
     version_notes = read_version_notes() if version_notes is None else version_notes
     values = display_values["values"]
-    def translated(text: dict[str, str]) -> str:
-        return text["zh"] or f"**[CANDIDATE 缺译]** {text['en']}"
-
     lines = ["<!-- CANDIDATE: NOT FOR RELEASE -->" if candidate else "<!-- LOCAL BUILD: NOT A PUBLICATION APPROVAL -->"]
     if candidate:
         full_scope = (
@@ -68,37 +107,41 @@ def render_markdown(
                 "",
             ]
         )
-    lines.extend([version_notes, "", "# 万智牌违规处理方针", "", f"版本：{manifest['releaseId']}", ""])
+    lines.extend([
+        version_notes, "", _markdown_toc(documents), "",
+        "# Magic: The Gathering Infraction Procedure Guide 万智牌违规处理方针", "",
+    ])
 
     for document in documents:
         for kind, node, _ in reading_events(document):
             if kind == "section":
                 section = node
-                level = 2 if section["kind"] in {"front-matter", "chapter", "appendix"} else 3
-                prefix = "" if section["kind"] == "front-matter" else f"{section['number']} "
-                heading = f"{'#' * level} {prefix}{translated(section['title'])}"
-                if section["title"]["zh"]:
-                    heading += f" ({section['title']['en']})"
+                level = 1 if section["kind"] in {"front-matter", "chapter", "appendix"} else 2
+                heading = f"{'#' * level} {_section_heading(section)}"
                 lines.extend([heading, ""])
                 if "penaltyCode" in section:
-                    lines.extend([f"**处罚：{values[section['penaltyCode']]['zh']}**", ""])
+                    penalty = values[section["penaltyCode"]]
+                    lines.extend([f"**Penalty: {penalty['en']} / 处罚：{_translated(penalty)}**", ""])
             elif kind == "component":
                 if node["role"] != "body" and section["kind"] != "appendix":
-                    lines.extend([f"#### {values[node['labelCode']]['zh']}", ""])
+                    label = values[node["labelCode"]]
+                    lines.extend([f"### {label['en']} {_translated(label)}", ""])
             elif kind == "group" and "date" in node:
-                lines.extend([f"### {node['date']}", ""])
+                lines.extend([f"## {node['date']}", ""])
             elif kind == "annotation":
                 lines.extend(_annotation_markdown(node))
             elif kind in {"block", "reading-segment"}:
-                value = translated(node["text"])
-                marker = node.get("marker")
-                if node["type"] == "appendix-row":
-                    value = f"{value} — {values[node['displayCode']]['zh']}"
-                if marker == "bullet" or node["type"] == "change-entry":
-                    value = f"- {value}"
-                elif marker:
-                    value = f"{marker}. {value}"
-                lines.extend([value, ""])
+                for language in ("en", "zh"):
+                    value = node["text"]["en"] if language == "en" else _translated(node["text"])
+                    marker = node.get("marker")
+                    if node["type"] == "appendix-row":
+                        penalty = values[node["displayCode"]]
+                        value = f"{value} — {penalty['en'] if language == 'en' else _translated(penalty)}"
+                    if marker == "bullet" or node["type"] == "change-entry":
+                        value = f"- {value}"
+                    elif marker:
+                        value = f"{marker}. {value}"
+                    lines.extend([value, ""])
     return "\n".join(lines).rstrip() + "\n"
 
 

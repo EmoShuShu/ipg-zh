@@ -43,6 +43,16 @@
 `src/ipg/version-notes.md`，不要改不可变旧源或输出。
 详见 [OmegaT 使用说明](docs/omegat-review-guide.md)。
 
+阅读格式参照 `mtr-zh`：版本说明之后自动生成目录；章为一级标题、小节为
+二级标题；标题英文在前、中文在后；每段正文先英文、后中文，紧接对应的
+中英注解引用框，不反复添加“AIPG 注解”标签。引用框内保留多段和列表；拆分
+句段仍按既有 reading segment/anchor/order 交错展示，不改变官方段落或稳定 ID。
+IPG 特有的组件使用三级中英标题，基础处罚使用受控中英显示值，附录日期读取
+持久化 date，附录 A 暂保留逐行显示。候选中文缺译位置显示标记，不冒充译文。
+`rules.json` 继续使用 IPG 原生结构，不套用 MTR 的 JSON；改阅读格式不会改变
+源、审校哈希或 JSON 内容。既有候选不自动重建；需要时使用选项 2，最终文件
+使用选项 6 重新生成。详见 [阅读格式修复记录](docs/review/2026-10-08-markdown-format.md)。
+
 旧使用说明及历史审阅包中“授权/署名或 publishable=false 会阻止本地构建”的
 约定已由本轮决策取代；本轮不改用户正在修订的旧使用说明文件。详情见
 [本地构建提醒化记录](docs/review/2026-10-08-local-build-advisories.md)。

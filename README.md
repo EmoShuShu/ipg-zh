@@ -50,6 +50,14 @@ dist。歧义、拆并和失锚需要人工确认，不能自动套用位置或�
 才事务更新仅含 `IPG.md` 与 `rules.json` 的 dist。候选/演练只在 outputs，
 GitHub Release 不在本阶段。是否可生成本地 dist，以当前技术检查结果为准。
 
+Markdown follows the reference MTR reader format: generated table of contents,
+English/Chinese chapter and subsection headings, English then Chinese for each
+body fragment, followed by its bilingual blockquoted annotation. IPG components,
+penalties, appendix date groups, persisted reading divisions and annotation
+anchors remain native to IPG; `rules.json` keeps its existing model and content.
+No runtime dependency on the MTR checkout is introduced. See the
+[format repair record](docs/review/2026-10-08-markdown-format.md).
+
 ## 全文 OmegaT 审校
 
 普通维护者请双击仓库根目录的 `审校助手.cmd`。中文菜单可以安全准备或继续唯一的
