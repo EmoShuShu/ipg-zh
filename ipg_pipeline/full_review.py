@@ -809,11 +809,36 @@ def validate_current_state() -> dict[str, Any]:
     return {"candidate": candidate, "release": release}
 
 
-def build_current_candidate(validation: dict[str, Any] | None = None) -> dict[str, Any]:
-    candidate_destination(ROOT, CURRENT_CANDIDATE)
+def _replace_candidate(staged: Path, destination: Path) -> None:
+    """Replace a complete candidate directory, retaining a recoverable old copy."""
+    candidate_destination(ROOT, destination)
+    backup = destination.with_name(f".{destination.name}-previous")
+    if backup.exists():
+        raise ValueError(f"候选恢复备份尚未处理，不会覆盖：{backup}")
+    if destination.exists():
+        destination.rename(backup)
+    try:
+        staged.rename(destination)
+    except BaseException:
+        if backup.exists():
+            try:
+                backup.rename(destination)
+            except OSError as error:
+                raise ValueError(f"旧候选完整保存在 {backup}，请人工恢复。") from error
+        raise
+    if backup.exists():
+        # A cleanup failure must not turn a successful commit into a rollback.
+        shutil.rmtree(backup, ignore_errors=True)
+
+
+def build_current_candidate(
+    validation: dict[str, Any] | None = None, *, destination: Path | None = None
+) -> dict[str, Any]:
+    destination = candidate_destination(ROOT, destination or CURRENT_CANDIDATE)
     manifest, documents, display = full_inputs()
     validation = validation or validate_current_state()
-    with tempfile.TemporaryDirectory(prefix="ipg-current-candidate-") as temporary:
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix=".ipg-current-candidate-", dir=destination.parent) as temporary:
         temporary_root = Path(temporary)
         first = temporary_root / "first"
         second = temporary_root / "second"
@@ -843,20 +868,14 @@ def build_current_candidate(validation: dict[str, Any] | None = None) -> dict[st
         )
         if output_errors:
             raise ValueError("candidate output schema failed: " + "; ".join(output_errors))
-        if CURRENT_CANDIDATE.exists():
-            shutil.rmtree(CURRENT_CANDIDATE)
-        CURRENT_CANDIDATE.mkdir(parents=True)
-        for name in names:
-            shutil.copyfile(first / name, CURRENT_CANDIDATE / name)
-    report = {
-        "schemaVersion": 1,
-        **validation,
-        "byteIdentical": True,
-        "files": {
-            name: sha256_bytes((CURRENT_CANDIDATE / name).read_bytes()) for name in names
-        },
-    }
-    _write_json(CURRENT_CANDIDATE / "validation.json", report)
+        report = {
+            "schemaVersion": 1,
+            **validation,
+            "byteIdentical": True,
+            "files": {name: sha256_bytes((first / name).read_bytes()) for name in names},
+        }
+        _write_json(first / "validation.json", report)
+        _replace_candidate(first, destination)
     return report
 
 

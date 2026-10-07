@@ -10,14 +10,12 @@ import ipg_pipeline.full_review as full_review
 import ipg_pipeline.review_assistant as review_assistant
 from ipg_pipeline.core import load_yaml
 from ipg_pipeline.omegat import parse_po, render_po
+from legacy_baseline import install_legacy_documents
 
 
 @pytest.fixture
-def project(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
-    path = tmp_path / "omegat-ipg-full"
-    monkeypatch.setattr(full_review, "PROJECT_DIR", path)
-    monkeypatch.setattr(full_review, "MAPPING_PATH", path / "omegat/full-review.mapping.json")
-    return path
+def project(isolated_repo: tuple[Path, Path]) -> Path:
+    return isolated_repo[1]
 
 
 @pytest.fixture
@@ -31,6 +29,7 @@ def isolated_repo(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> tuple[Path
     shutil.copyfile(full_review.ROOT / "docs/review/p4-migration-summary.json", evidence)
     shutil.copytree(full_review.ROOT / "snapshots", root / "snapshots")
     release = root / "src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001"
+    install_legacy_documents(release)
     project = root / "outputs/omegat-ipg-full"
     monkeypatch.setattr(full_review, "ROOT", root)
     monkeypatch.setattr(full_review, "RELEASE_DIR", release)

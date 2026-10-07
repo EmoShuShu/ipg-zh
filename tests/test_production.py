@@ -254,11 +254,14 @@ def test_real_project_and_helper_are_blocked_without_changing_user_ledger(monkey
     before = ledger.read_bytes()
     assert production.validate_project(ROOT, profile="candidate")["valid"]
     report = production.validate_project(ROOT, profile="release")
-    assert not report["valid"] and report["releaseGateCounts"]["missingTranslation"] == 12
+    project = production.load_project(ROOT)
+    missing = sum(not unit["target"] for unit in collect_units(project["documents"], project["display"]))
+    assert not report["valid"] and report["releaseGateCounts"]["missingTranslation"] == missing
     assert "annotation-license-pending" in report["readinessFindingCounts"]
     assert "manifest-not-publishable" in report["readinessFindingCounts"]
     assert review_assistant.finish_formal_release() is None
-    assert "缺译：12 项" in capsys.readouterr().out
+    output = capsys.readouterr().out
+    assert "注解" in output and "publishable: false" in output
     with pytest.raises(ValueError): production.build_project(ROOT, profile="release")
     assert ledger.read_bytes() == before and not (ROOT / "dist").exists()
 

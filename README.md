@@ -50,12 +50,17 @@ GitHub Release 不在本阶段。当前真实资料仍被拦截，不会生成�
 manifest 路径。详细步骤见 `docs/omegat-review-guide.md`。
 
 OmegaT 项目位于忽略目录 `outputs/omegat-ipg-full/`，包含 8 个 PO。项目直接使用
-`terminology/ipg-glossary.txt`，不会复制另一份词汇表。当前 12 项真实缺译保持为空，
-不得用英文或机器译文填充。候选阅读产物只写入 `outputs/current-candidate/`；正式
+`terminology/ipg-glossary.txt`，不会复制另一份词汇表。初次迁移有 12 项缺译；当前
+缺译数以检查报告为准，允许人工补齐，但不得复制英文或用机器译文填充。候选
+阅读产物只写入 `outputs/current-candidate/`；正式
 `dist/` 只有正式 release 检查通过后才生成；当前不会生成。
 
 正文与发布注解按阅读位置交错导出。被注解分隔的官方段落以稳定的双语阅读片段
 进入 OmegaT，同时保留完整官方 block 和 PDF 溯源。详见使用说明中的分段与备份规则。
+
+选项 2 的历史迁移测试使用独立基线，不要求当前中文保持旧样或永久缺译。
+本批任一检查失败会恢复源、映射及审校资料，并保留此前候选；新候选只有完整
+成功后才替换。详见 [回写修复记录](docs/review/2026-10-08-review-writeback-repair.md)。
 
 本地修订“版本说明”时，请直接编辑共用的 `src/ipg/version-notes.md`。这与
 `mtr-zh` 的维护方式一致：它不进入 OmegaT，构建时会位于 IPG 内容前部，同时以
@@ -89,8 +94,9 @@ under ignored `outputs/p4/`. Formal `dist/` remains untouched.
 
 Candidate validation succeeds with all 4,085 legacy raw units uniquely
 disposed and no unresolved mappings, duplicate consumption, orphan annotation,
-or deferred annotation. Release validation intentionally fails: 12 Appendix B
-entries have no legacy Chinese,
+or deferred annotation. The original P4 migration has 12 Appendix B
+entries with no legacy Chinese; that is a historical baseline, not a permanent
+constraint on subsequent manual translations. Release validation remains gated:
 publication-annotation licensing/attribution is pending, and the manifest is
 `publishable: false`.
 

@@ -27,7 +27,8 @@
 | 正式 dist | `--profile release`，仅 `dist/IPG.md` / `dist/rules.json` | 通过全部本地门槛的读者/网站文件，不手改 |
 | GitHub Release | 本阶段不做 | 远端标签、附件及公开发布，不能由本地 dist 推断 |
 
-真实资料仍有 12 项缺译、注解授权/署名待定与 `publishable: false`。
+初次迁移有 12 项缺译；当前缺译数和审校状态以检查报告为准，不要求修订后仍
+保留 12 项空译。注解授权/署名与 `publishable: false` 仍是独立发布门槛，
 程序不会代替维护者解决这些内容问题。
 
 ## 审校助手
@@ -40,6 +41,17 @@
 条件不满足时旧 dist 不变，候选流程仍可用。修订开头的版本说明请编辑
 `src/ipg/version-notes.md`，不要改不可变旧源或输出。
 详见 [OmegaT 使用说明](docs/omegat-review-guide.md)。
+
+选项 2 的历史迁移测试从不可变 PDF/旧源重建独立基线，不再把旧中文的内容哈希
+或初始缺译数当成当前中文必须遵守的条件。正常修订和缺译补齐仍须通过结构、
+稳定 ID、PDF 溯源、预览基线、最小改动及候选输出验证。
+
+新候选在隔离目录完成两次构建、批注归档和最终审校检查后，才整体替换
+`outputs/current-candidate/`。晋升前的检查失败或 Ctrl+C 时恢复本批源、工程映射、账本、
+批注和报告，不删除此前候选，也不触碰 OmegaT 的 source/target/TMX。
+若目录替换及自动恢复同时失败，旧候选保留在
+`outputs/.current-candidate-previous/`，程序会报告位置并阻止再次覆盖；应先
+人工恢复，不直接删除备份。详见 [修复记录](docs/review/2026-10-08-review-writeback-repair.md)。
 
 ## 安装与命令
 

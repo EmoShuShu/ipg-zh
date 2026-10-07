@@ -92,7 +92,8 @@ def test_all_reading_segments_preserve_official_text_ids_and_provenance():
 
 
 def test_segmentation_is_reproducible_and_does_not_reallocate_ids():
-    document = _chapter4()
+    from legacy_baseline import reconstructed_p4
+    document = copy.deepcopy(reconstructed_p4()[2]["documents"]["chapter-04.yaml"])
     original = copy.deepcopy(document)
     for _, block in walk_nodes([document]):
         block.pop("readingSegments", None)

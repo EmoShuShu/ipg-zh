@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import os
-import shutil
 import subprocess
 import sys
 import tempfile
@@ -9,6 +8,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from .core import ROOT
+from . import full_review
 from .production import build_project, describe_validation, validate_project
 from .full_review import (
     CURRENT_CANDIDATE,
@@ -113,7 +113,8 @@ def complete_review_batch(
 ) -> dict[str, Any]:
     reviewed_at = _now()
     print("正在生成隔离回写预览并检查候选……", flush=True)
-    with tempfile.TemporaryDirectory(prefix="ipg-review-writeback-") as temporary:
+    (ROOT / "outputs").mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix=".ipg-review-writeback-", dir=ROOT / "outputs") as temporary:
         candidate_root = Path(temporary) / "candidate"
         preview = preview_full_writeback(
             selected_po, candidate_root, recorded_at=reviewed_at
@@ -128,6 +129,14 @@ def complete_review_batch(
             for relative in preview["candidateFiles"]
         }
         mapping_before = MAPPING_PATH.read_bytes()
+        state_paths = (
+            full_review.REVIEW_LEDGER_PATH, full_review.TRANSLATION_NOTES_PATH,
+            full_review.REVIEW_ACTIONS_PATH, full_review.PROGRESS_JSON,
+            full_review.PROGRESS_MARKDOWN, full_review.TERMINOLOGY_JSON,
+            full_review.TERMINOLOGY_MARKDOWN,
+        )
+        state_before = {path: path.read_bytes() if path.exists() else None for path in state_paths}
+        staged_candidate = Path(temporary) / "reading"
         try:
             print("正在重新检查预览基线并最小写回……", flush=True)
             applied = apply_full_writeback(preview, candidate_root)
@@ -138,7 +147,7 @@ def complete_review_batch(
             print("正在生成非阻塞术语报告……", flush=True)
             terminology = run_nonblocking_terminology_audit()
             print("正在连续构建两次并比较候选文件……", flush=True)
-            candidate = build_current_candidate(validation)
+            candidate = build_current_candidate(validation, destination=staged_candidate)
             print("正在归档翻译批注和本批审校记录……", flush=True)
             mapping = inspect_target_project()["mapping"]
             notes = extract_project_translation_notes(mapping, recorded_at=reviewed_at)
@@ -152,11 +161,16 @@ def complete_review_batch(
             print("正在检查最终审校状态……", flush=True)
             validation = validate_current_state()
             candidate.update(validation)
-            _write_json(CURRENT_CANDIDATE / "validation.json", candidate)
-        except Exception:
+            _write_json(staged_candidate / "validation.json", candidate)
+            full_review._replace_candidate(staged_candidate, CURRENT_CANDIDATE)
+        except BaseException:
             rollback_applied_writeback(formal_before, mapping_before)
-            if CURRENT_CANDIDATE.exists():
-                shutil.rmtree(CURRENT_CANDIDATE)
+            for path, content in state_before.items():
+                if content is None:
+                    path.unlink(missing_ok=True)
+                else:
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.write_bytes(content)
             raise
     return {
         "cancelled": False,

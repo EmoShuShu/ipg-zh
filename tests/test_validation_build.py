@@ -10,6 +10,7 @@ from ipg_pipeline.core import ROOT, load_yaml, sha256_text, validate_schema
 from ipg_pipeline.omegat import collect_units
 from ipg_pipeline.review import build_review_ledger
 from ipg_pipeline.validation import validate_release
+from legacy_baseline import legacy_documents
 
 
 def _inputs() -> tuple[dict, list[dict], dict, dict]:
@@ -51,6 +52,7 @@ def test_validation_profile_is_required_by_cli_not_manifest() -> None:
 
 def test_candidate_succeeds_while_same_content_fails_release() -> None:
     manifest, documents, display, migration = _inputs()
+    documents = legacy_documents()
     candidate = validate_release(profile="candidate", manifest=manifest, documents=documents, display_values=display, migration_report=migration)
     release = validate_release(profile="release", manifest=manifest, documents=documents, display_values=display, migration_report=migration)
     assert candidate["valid"] is True and candidate["meaning"] == "reviewable-not-publishable"

@@ -3,7 +3,6 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
-from functools import lru_cache
 from pathlib import Path
 
 import pytest
@@ -14,13 +13,11 @@ from ipg_pipeline.full_migration import (
     _annotation_override_by_start,
     _dispose,
     _map_annotations,
-    migrate_full,
 )
-from ipg_pipeline.full_parser import extract_full_pdf, parse_full_extraction
 from ipg_pipeline.migration import tokenize_legacy
-from ipg_pipeline.p4 import DOCUMENTS, LEGACY_SOURCE, OFFICIAL_PDF, RELEASE_DIR, p4_manifest
-from ipg_pipeline.reconcile import reconcile_frozen_full_document
+from ipg_pipeline.p4 import LEGACY_SOURCE, RELEASE_DIR, p4_manifest
 from ipg_pipeline.validation import validate_release
+from legacy_baseline import legacy_documents, reconstructed_p4 as _p4
 
 
 def _canonical_hash(value: object) -> str:
@@ -28,18 +25,8 @@ def _canonical_hash(value: object) -> str:
     return hashlib.sha256(encoded).hexdigest()
 
 
-@lru_cache(maxsize=1)
-def _p4() -> tuple[dict, dict, dict]:
-    parsed = parse_full_extraction(extract_full_pdf(OFFICIAL_PDF))
-    registry = load_yaml(ROOT / "src/ipg/id-registry.yaml")
-    overrides = load_yaml(ROOT / "src/ipg/mapping-overrides.yaml")
-    reconciled = reconcile_frozen_full_document(parsed, registry, overrides)
-    result = migrate_full(reconciled, LEGACY_SOURCE, registry, overrides)
-    return parsed, reconciled, result
-
-
 def _documents() -> list[dict]:
-    return [load_yaml(RELEASE_DIR / filename) for filename in DOCUMENTS]
+    return legacy_documents()
 
 
 def _all_annotations(documents: list[dict]) -> list[dict]:
@@ -175,7 +162,7 @@ def test_p2_2_5_annotations_are_byte_semantically_unchanged() -> None:
         for item in overrides["applied"]
         if item.get("kind") == "publication-annotation-anchor"
     }
-    chapter = load_yaml(RELEASE_DIR / "chapter-02.yaml")
+    chapter = _p4()[2]["documents"]["chapter-02.yaml"]
     annotations = [item for item in chapter["publicationAnnotations"] if item["id"] in p2_ids]
     assert len(annotations) == golden["p2Annotations"]["annotations"] == 12
     assert sum(len(group["blocks"]) for item in annotations for group in item["groups"]) == 14
