@@ -150,7 +150,7 @@ def _validate_project(project: dict[str, Any], *, profile: str) -> dict[str, Any
     for name in ("structural", "readiness"):
         report[f"{name}FindingCounts"] = dict(sorted(Counter(item["code"] for item in report[f"{name}Findings"]).items()))
     report["valid"] = not report["structuralFindings"] and (profile == "candidate" or not report["readinessFindings"])
-    report["meaning"] = "publishable" if report["valid"] and profile == "release" else "reviewable-not-publishable" if report["valid"] else "validation-failed"
+    report["meaning"] = "local-build-ready" if report["valid"] and profile == "release" else "reviewable-not-publishable" if report["valid"] else "validation-failed"
     report["releaseId"] = manifest["releaseId"]
     _unchanged(project["hashes"])
     return report
@@ -268,7 +268,7 @@ REASONS = {
     "missing-review-record": "缺少审校记录", "unreviewed": "尚未审校", "stale-review": "审校记录已过期",
     "review-source-hash-mismatch": "审校原文哈希不一致", "review-target-hash-mismatch": "审校译文哈希不一致",
     "orphan-review-record": "存在已删除单元的孤立审校记录", "duplicate-review-record": "存在重复审校记录",
-    "annotation-license-pending": "注解授权或署名尚未完成", "manifest-not-publishable": "manifest 尚未允许发布（publishable: false）",
+    "annotation-license-pending": "注解授权或署名尚未完成", "manifest-not-publishable": "尚未声明可公开发布（publishable: false）",
     "manifest-not-full-document": "范围不是全文", "deferred-publication-annotations": "仍有延期发布注解",
     "review-ledger-invalid": "审校账本格式或版本不正确", "unresolved-mapping": "存在未决迁移映射",
 }
@@ -276,9 +276,16 @@ REASONS = {
 
 def describe_validation(report: dict[str, Any]) -> str:
     if report["valid"]:
-        return "正式发布条件已满足。" if report["profile"] == "release" else "候选结构检查通过；不表示可正式发布。"
-    counts = Counter(item["code"] for item in [*report["structuralFindings"], *report["readinessFindings"]])
-    return "\n".join(f"- {REASONS.get(code, '结构或来源检查失败 (' + code + ')')}：{count} 项" for code, count in sorted(counts.items()))
+        message = "本地最终文件生成条件已满足；不代表公开发布许可。" if report["profile"] == "release" else "候选结构检查通过；不表示已满足本地最终文件生成条件。"
+    else:
+        counts = Counter(item["code"] for item in [*report["structuralFindings"], *report["readinessFindings"]])
+        message = "\n".join(f"- {REASONS.get(code, '结构或来源检查失败 (' + code + ')')}：{count} 项" for code, count in sorted(counts.items()))
+    advisory = report.get("advisoryFindingCounts", {})
+    if advisory:
+        message += "\n非阻塞提醒（不影响本地构建）：\n" + "\n".join(
+            f"- {REASONS.get(code, code)}：{count} 项" for code, count in sorted(advisory.items())
+        )
+    return message
 
 
 def _parser(name: str) -> argparse.ArgumentParser:

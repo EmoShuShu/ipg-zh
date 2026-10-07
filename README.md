@@ -6,6 +6,14 @@ Chinese text, the bilingual AIPG publication annotations found in
 `AIPG_2025.md`, and a full-document OmegaT review workflow. It is a review
 candidate, not a publishable release.
 
+## 本地构建与公开发布（2026-10-08 决策）
+
+注解授权/署名状态与 `publishable` 保留为信息记录，改为非阻塞提醒；无需修改
+manifest 即可在缺译、审校、结构、溯源和确定性检查均通过后生成本地 dist。
+`--profile release` 表示严格的本地最终文件检查，不表示取得公开发布许可。
+详见 [本轮记录](docs/review/2026-10-08-local-build-advisories.md)。此约定取代历史
+P4.6/P5 记录中将这两项作为本地构建硬门槛的描述；不改变候选提升的人工批准边界。
+
 ## P5 官方更新与不可变快照
 
 ```powershell
@@ -40,20 +48,21 @@ dist。歧义、拆并和失锚需要人工确认，不能自动套用位置或�
 同时提供 `scripts/validate.py`、`scripts/build.py`、`scripts/validate_output.py`。
 正式构建只有 release 门槛、临时两次构建字节比较、独立输出 schema 检查均通过后，
 才事务更新仅含 `IPG.md` 与 `rules.json` 的 dist。候选/演练只在 outputs，
-GitHub Release 不在本阶段。当前真实资料仍被拦截，不会生成正式 dist。
+GitHub Release 不在本阶段。是否可生成本地 dist，以当前技术检查结果为准。
 
 ## 全文 OmegaT 审校
 
 普通维护者请双击仓库根目录的 `审校助手.cmd`。中文菜单可以安全准备或继续唯一的
 全文 OmegaT 项目、完成一批审校并生成候选阅读文档，以及查看 1007 个翻译单元的
-进度。选项 5 检查发布条件，选项 6 在条件满足后生成本地正式文件，无需填写
-manifest 路径。详细步骤见 `docs/omegat-review-guide.md`。
+进度。选项 5 检查本地最终文件生成条件，选项 6 在条件满足后生成最终阅读文件，
+无需填写 manifest 路径。最新收尾规则见 `README.zh-CN.md`；旧 OmegaT 使用说明
+中这两项硬门槛的描述已被上述决策取代。
 
 OmegaT 项目位于忽略目录 `outputs/omegat-ipg-full/`，包含 8 个 PO。项目直接使用
 `terminology/ipg-glossary.txt`，不会复制另一份词汇表。初次迁移有 12 项缺译；当前
 缺译数以检查报告为准，允许人工补齐，但不得复制英文或用机器译文填充。候选
 阅读产物只写入 `outputs/current-candidate/`；正式
-`dist/` 只有正式 release 检查通过后才生成；当前不会生成。
+`dist/` 只有严格的本地 release 检查通过后才生成，不自动公开发布。
 
 正文与发布注解按阅读位置交错导出。被注解分隔的官方段落以稳定的双语阅读片段
 进入 OmegaT，同时保留完整官方 block 和 PDF 溯源。详见使用说明中的分段与备份规则。
@@ -66,7 +75,7 @@ OmegaT 项目位于忽略目录 `outputs/omegat-ipg-full/`，包含 8 个 PO。�
 `mtr-zh` 的维护方式一致：它不进入 OmegaT，构建时会位于 IPG 内容前部，同时以
 独立的 `ipg-version-notes` 节点写入 `rules.json`。后续通过审校助手完成一批审校并
 生成候选文档时，会读取最新内容。编辑该文件不会自动改变 manifest 中的官方日期、
-注解版本或中文修订号，也不会解决注解授权门槛。
+注解版本或中文修订号，也不会修改注解授权记录。
 
 The authoritative English source is the immutable WPN PDF snapshot. The legacy
 `AIPG_2025.md` file is a migration input only and remains byte-for-byte
@@ -96,9 +105,9 @@ Candidate validation succeeds with all 4,085 legacy raw units uniquely
 disposed and no unresolved mappings, duplicate consumption, orphan annotation,
 or deferred annotation. The original P4 migration has 12 Appendix B
 entries with no legacy Chinese; that is a historical baseline, not a permanent
-constraint on subsequent manual translations. Release validation remains gated:
-publication-annotation licensing/attribution is pending, and the manifest is
-`publishable: false`.
+constraint on subsequent manual translations. The original administrative gates
+have since become local-build advisories; missing translations and missing or
+invalid review records still block release-profile builds.
 
 P4.5 creates the ignored local project only when the review assistant prepares
 it. Translation notes and review state remain isolated under their versioned
@@ -151,13 +160,15 @@ ipg-validate --profile candidate
 ipg-validate --profile release
 ```
 
-The manifest never selects a validation profile. Any future publishing entry
-point must invoke `--profile release` explicitly. Candidate validation reports
+The manifest never selects a validation profile. Local final builds must invoke
+`--profile release` explicitly. Candidate validation reports
 missing translations, unresolved mappings and review problems without blocking
 structurally valid work. Release validation additionally requires exactly one
 current review record per OmegaT unit, no unreviewed or stale records, no orphan
-records, and matching source and target hashes. Annotation licensing and
-attribution remain an independent release gate.
+records, and matching source and target hashes. Annotation licensing,
+attribution, and `publishable` are recorded as non-blocking `advisoryFindings`.
+Successful release validation means `local-build-ready`, not public-publication
+approval. Future public distribution must not treat local build success as permission.
 
 Historical `ipg-pilot validate/build` are compatibility aliases to the current
 production commands, not a second dist writer. Other phase commands reproduce

@@ -52,7 +52,7 @@ def render_markdown(
     def translated(text: dict[str, str]) -> str:
         return text["zh"] or f"**[CANDIDATE 缺译]** {text['en']}"
 
-    lines = ["<!-- CANDIDATE: NOT FOR RELEASE -->" if candidate else "<!-- RELEASE -->"]
+    lines = ["<!-- CANDIDATE: NOT FOR RELEASE -->" if candidate else "<!-- LOCAL BUILD: NOT A PUBLICATION APPROVAL -->"]
     if candidate:
         full_scope = (
             manifest["scope"]["officialContent"]["mode"] == "full-document"
@@ -61,7 +61,7 @@ def render_markdown(
         lines.extend(
             [
                 (
-                    "> **全文迁移候选版：不得发布。** candidate 检查不代表已完成审校或具备发布资格，请以 release 检查结果为准。"
+                    "> **全文迁移候选版：不得发布。** candidate 检查不代表已完成审校，请以 release 检查确认本地最终文件生成条件；公开发布许可需另行确认。"
                     if full_scope
                     else "> **候选试制版：不得发布。** 本文件范围尚不完整，且尚未完成完整审校。"
                 ),

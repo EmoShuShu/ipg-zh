@@ -231,8 +231,6 @@ def command_validate(_: argparse.Namespace) -> int:
     if release["valid"]:
         raise SystemExit("P4 nonpublishable candidate unexpectedly passed release validation")
     expected_release_failures = {
-        "annotation-license-pending",
-        "manifest-not-publishable",
         "missing-review-ledger",
         "missing-translation",
     }

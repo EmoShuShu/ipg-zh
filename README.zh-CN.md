@@ -23,24 +23,31 @@
 | 类别 | 验证与位置 | 含义 |
 |---|---|---|
 | candidate | `--profile candidate`，只在 `outputs/` | 可审阅，可报告缺译与审校问题，不能发布 |
-| release rehearsal | `--profile release --rehearsal`，只在 `outputs/` | 全部正式门槛的演练，不更新 dist、不发布 |
+| release rehearsal | `--profile release --rehearsal`，只在 `outputs/` | 全部本地最终文件门槛的演练，不更新 dist、不发布 |
 | 正式 dist | `--profile release`，仅 `dist/IPG.md` / `dist/rules.json` | 通过全部本地门槛的读者/网站文件，不手改 |
 | GitHub Release | 本阶段不做 | 远端标签、附件及公开发布，不能由本地 dist 推断 |
 
 初次迁移有 12 项缺译；当前缺译数和审校状态以检查报告为准，不要求修订后仍
-保留 12 项空译。注解授权/署名与 `publishable: false` 仍是独立发布门槛，
-程序不会代替维护者解决这些内容问题。
+保留 12 项空译。按 2026-10-08 的用户决策，注解授权/署名与 `publishable: false`
+改为非阻塞提醒，不再要求完成这两项才能生成本地 dist。程序不修改这些记录，
+不代替维护者确认许可，也不自动上传或公开发布。
 
 ## 审校助手
 
 双击 `审校助手.cmd`。选项 1—3 保留 OmegaT 准备、回写候选和进度查看，4 退出。
-新增 5 **检查正式发布条件**（只读，中文列出原因）和 6 **条件满足后生成最终
-文件**（再次验证、临时两次构建、独立校验、目录事务晋升）。无需填写 manifest
+新增 5 **检查本地最终文件生成条件**（只读，中文分别列出阻塞原因及非阻塞提醒）
+和 6 **条件满足后生成最终阅读文件**（再次验证、临时两次构建、独立校验、目录事务晋升）。无需填写 manifest
 路径，不改审校账本，不创建 GitHub Release。
 
 条件不满足时旧 dist 不变，候选流程仍可用。修订开头的版本说明请编辑
 `src/ipg/version-notes.md`，不要改不可变旧源或输出。
 详见 [OmegaT 使用说明](docs/omegat-review-guide.md)。
+
+旧使用说明及历史审阅包中“授权/署名或 publishable=false 会阻止本地构建”的
+约定已由本轮决策取代；本轮不改用户正在修订的旧使用说明文件。详情见
+[本地构建提醒化记录](docs/review/2026-10-08-local-build-advisories.md)。
+校对和回写完成后，选项 5 若显示本地生成条件已满足，选项 6 即可生成 dist；
+不需要填写许可记录或切换 publishable。程序不会把 false 或待定状态改成已批准。
 
 选项 2 的历史迁移测试从不可变 PDF/旧源重建独立基线，不再把旧中文的内容哈希
 或初始缺译数当成当前中文必须遵守的条件。正常修订和缺译补齐仍须通过结构、
@@ -85,20 +92,28 @@ ipg-build --profile candidate --output outputs/my-candidate
 ipg-build --profile release --rehearsal --output outputs/my-release-rehearsal
 ```
 
-选择新的独立目录，程序不清空已有证据。rehearsal 不放宽门槛，真实当前资料
-也会拒绝；使用相同的最终文件字节，以路径和 receipt 区分用途。测试夹具在
+选择新的独立目录，程序不清空已有证据。rehearsal 与 dist 使用同一本地技术门槛，
+是否通过取决于当前译文、审校和结构状态；使用相同的最终文件字节，以路径和 receipt 区分用途。测试夹具在
 release ID、正文、版本说明和快照中明确标识“合成测试”，不是 IPG 发布。
 
 ## 正式构建与回退
 
 从当前指针读取 source，核对 schema、registry、快照哈希、PDF 溯源版本、迁移
-证据、完整审校账本、缺译、许可署名、全文范围和 publishable。通过后在同一
+证据、完整审校账本、缺译与全文范围。许可署名和 publishable 只进非阻塞提醒。
+通过后在同一
 磁盘临时目录构建两次，各自独立读取验证 rules.json，比较 Markdown、JSON、
 SHA256SUMS 和 build-report 四文件。输入期间变化会拒绝更新。
 
 dist 只放两个最终文件。哈希和报告通过外部返回报告/命令输出提供；候选和
 演练目录还保存 SHA256SUMS、build-report、receipt。rules.json 不包含自身
 哈希；术语问题或审计程序错误只进报告，不阻塞构建。
+
+报告分为结构错误 `structuralFindings`、本地构建阻塞项 `readinessFindings` 和
+非阻塞提醒 `advisoryFindings`（另有各自计数）。release 成功的 `meaning` 为
+`local-build-ready`，不再称作 `publishable`。JSON 仍原样保存 publishable 与
+注解来源记录；`candidate: false` 和 `publishable: false` 可以同时存在，表示
+严格检查通过的本地最终阅读文件，但未声明可以公开发布。Markdown 的首行注释
+同样标识为 LOCAL BUILD，不充当许可结论；source/output v1 节点形状不变。
 
 晋升是应用级目录事务，不是逐个文件覆盖：构建锁串行化写入者，旧目录改名为
 恢复备份，再以一次重命名放入准备完整的新目录；晋升异常回退。Windows 不能
@@ -216,7 +231,8 @@ IPG 父节点/角色上下文。编号、标题或数组位置不是身份。唯
 候选的 `publishable` 永远为 false。其 `migrationLineage` 只说明旧源的历史覆盖，
 不是“新英文已经迁移、翻译或审完”的证明；全部更新未决同时记录为 candidate
 readiness 问题。提升前必须人工解决 finding、建立新版本来源/继承证据、核验版本
-轴和全部发布门槛，再另行批准源/指针与 OmegaT 协调。P5 不提供 `--apply`。
+轴和全部本地技术门槛，再另行批准源/指针与 OmegaT 协调。不能因为 publishable
+改为提醒，就把未批准的隔离更新候选直接提升。P5 不提供 `--apply`。
 
 与 MTR 一致：正式入口与 scripts 包装、安全发现、哈希快照、结构 diff、保守
 翻译继承。刻意不同：IPG 原生 parser、三版本轴、持久 ID 生命周期、处罚/附录

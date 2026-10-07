@@ -60,7 +60,7 @@ def test_candidate_succeeds_while_same_content_fails_release() -> None:
     assert release["releaseGateCounts"]["missingTranslation"] == 12
     assert release["releaseGateCounts"]["reviewLedgerMissing"] == 1
     assert "manifest-not-full-document" not in release["readinessFindingCounts"]
-    assert "manifest-not-publishable" in release["readinessFindingCounts"]
+    assert "manifest-not-publishable" in release["advisoryFindingCounts"]
     assert "deferred-publication-annotations" not in release["readinessFindingCounts"]
 
 
@@ -100,7 +100,7 @@ def test_clean_2_5_fixture_requires_and_passes_with_complete_ledger() -> None:
     clean_migration = {"coverage": {"rawUnitCount": 1, "disposedUnitCount": 1, "duplicateConsumption": 0}, "findings": []}
     ledger = _reviewed_ledger([chapter], display)
     report = validate_release(profile="release", manifest=_complete_manifest(manifest), documents=[chapter], display_values=display, migration_report=clean_migration, review_ledger=ledger)
-    assert report["valid"] is True and report["meaning"] == "publishable"
+    assert report["valid"] is True and report["meaning"] == "local-build-ready"
     assert all(value == 0 for value in report["releaseGateCounts"].values())
 
 
@@ -207,6 +207,7 @@ def test_build_is_byte_deterministic_and_rules_hash_is_external(tmp_path) -> Non
     assert validate_schema(rules, ROOT / "schema/ipg-output.schema.json") == []
     assert (first / "IPG.md").read_text(encoding="utf-8").startswith("<!-- CANDIDATE: NOT FOR RELEASE -->")
     notice = (first / "IPG.md").read_text(encoding="utf-8").splitlines()[1]
-    assert "全文迁移候选版" in notice and "请以 release 检查结果为准" in notice
+    assert "全文迁移候选版" in notice and "本地最终文件生成条件" in notice
+    assert "公开发布许可需另行确认" in notice
     assert "尚未完成完整审校" not in notice
     assert "包含明确标记的缺译" not in notice

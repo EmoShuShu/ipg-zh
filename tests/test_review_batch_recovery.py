@@ -110,10 +110,10 @@ def test_revised_body_annotation_and_filled_missing_targets_can_complete_batch(i
     }
     assert result["validation"]["candidate"]["valid"]
     release = result["validation"]["release"]
-    assert not release["valid"]
+    assert release["valid"] and release["meaning"] == "local-build-ready"
     assert release["releaseGateCounts"]["missingTranslation"] == 0
-    assert "annotation-license-pending" in release["readinessFindingCounts"]
-    assert "manifest-not-publishable" in release["readinessFindingCounts"]
+    assert "annotation-license-pending" in release["advisoryFindingCounts"]
+    assert "manifest-not-publishable" in release["advisoryFindingCounts"]
     assert result["candidate"]["byteIdentical"]
     assert (root / "outputs/current-candidate/IPG.md").is_file()
     rules = load_json(root / "outputs/current-candidate/rules.json")

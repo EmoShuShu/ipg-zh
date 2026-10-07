@@ -28,6 +28,7 @@ def validate_release(
         raise ValueError("profile must be candidate or release")
     structural: list[dict[str, Any]] = []
     readiness: list[dict[str, Any]] = []
+    advisory: list[dict[str, Any]] = []
     schema_dir = schema_dir or ROOT / "schema"
 
     for error in validate_schema(manifest, schema_dir / "ipg-manifest.schema.json"):
@@ -44,6 +45,7 @@ def validate_release(
             "structuralFindingCounts": dict(Counter(item["code"] for item in structural)),
             "readinessFindingCounts": {}, "releaseGateCounts": {},
             "structuralFindings": structural, "readinessFindings": [],
+            "advisoryFindingCounts": {}, "advisoryFindings": [],
         }
 
     nodes = [(kind, node) for document in documents for kind, node in walk_nodes([document])]
@@ -182,7 +184,9 @@ def validate_release(
         or not annotation_version.get("attribution", "").strip()
         or annotation_version.get("attribution") == "pending-before-formal-release"
     ):
-        readiness.append({"code": "annotation-license-pending", "targetId": "versions.annotations"})
+        advisory.append({"code": "annotation-license-pending", "targetId": "versions.annotations"})
+    if manifest.get("publishable") is not True:
+        advisory.append({"code": "manifest-not-publishable", "targetId": "publishable"})
 
     scope = manifest.get("scope", {})
     official_scope = scope.get("officialContent", {})
@@ -196,8 +200,6 @@ def validate_release(
             readiness.append({"code": "manifest-not-full-document", "targetId": "scope.officialContent.mode"})
         if annotation_scope.get("mode") != "full-document":
             readiness.append({"code": "manifest-not-full-document", "targetId": "scope.publicationAnnotations.mode"})
-        if manifest.get("publishable") is not True:
-            readiness.append({"code": "manifest-not-publishable", "targetId": "publishable"})
         deferred_groups = int(annotation_scope.get("deferredGroups", 0))
         deferred_raw_units = int(annotation_scope.get("deferredRawUnits", 0))
         if deferred_groups or deferred_raw_units:
@@ -269,13 +271,15 @@ def validate_release(
         "meaning": (
             "reviewable-not-publishable"
             if profile == "candidate" and valid
-            else "publishable"
+            else "local-build-ready"
             if valid
             else "validation-failed"
         ),
         "structuralFindingCounts": count_codes(structural),
         "readinessFindingCounts": count_codes(readiness),
+        "advisoryFindingCounts": count_codes(advisory),
         "releaseGateCounts": gate_counts,
         "structuralFindings": structural,
         "readinessFindings": readiness,
+        "advisoryFindings": advisory,
     }

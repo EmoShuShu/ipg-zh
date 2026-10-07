@@ -43,10 +43,12 @@
 <body>
 <main>
   <h1><code>ipg-zh</code> 调查与实施设计</h1>
-  <p class="meta">调查日期：2026-10-04 · 修订日期：2026-10-05 · 当前授权：P5 官方更新、不可变快照与版本继承 · P0–P4.6 的历史规划保留备查</p>
+  <p class="meta">调查日期：2026-10-04 · 修订日期：2026-10-08 · 当前授权：本地构建的两项行政门槛改为提醒 · P0–P5 的历史规划保留备查</p>
   <p class="lede"><strong>北极星：</strong>建立一个与 <code>mtr-zh</code> 在可靠性和使用体验上对等、但以 IPG 自身语义为中心的维护系统。先用第 2 章、2.5 Game Rule Violation 和附录 A/B 小型夹具验证完整闭环；模型和阅读效果经人工确认后，才扩展到全文解析与迁移。官方英文、中文译文和最终发布注解必须可追溯、可确定性构建，任何缺译或未决内容都必须显式报告。</p>
 
   <div class="callout">
+    <strong>本轮修订记录（2026-10-08）。</strong>按用户批准，注解授权/署名及 publishable 改为本地构建的非阻塞提醒；记录不自动改为已批准。缺译、审校、结构、溯源、全文范围与确定性门槛全部保留。只改程序、测试、文档，真实资料与产物不重建；详见第 23 节。该节取代历史记录中与本地构建有关的两项行政硬门槛，不表示公开发布许可或官方更新候选的提升批准。
+    <br>
     <strong>本轮修订记录（P5）。</strong>
     增加正式官方更新与快照入口、WPN 完整规则文档集合的精确发现、安全下载、PDF 有效日期与网页更新时间分离、同日换包、不可变证据、IPG 原生 reconciliation 与三套审校资料的保守继承。全部更新证据只在 outputs/official-update；不切换当前版本、不翻译、不升级 OmegaT、不发布。详见第 22 节和 P5 审阅记录。
     <br><strong>早期修订记录（P4.6）。</strong>
@@ -55,7 +57,7 @@
     已将实施顺序改为 vertical slice 优先；严格分离发布注解、OmegaT 翻译批注和审校账本；把注解锚点扩展到 section/component/group/block；增加官方、注解和中文修订三条版本轴；补全稳定 ID 注册、拆并与历史生命周期；定义 candidate/release 两级验证；修正官方 PDF 与旧源的覆盖关系；集中维护组件标签和处罚显示值；并把 P2 验收改为覆盖解析、迁移、构建、OmegaT、翻译批注、发布注解和审校状态的完整闭环。本次实施前补充三项约束：P0 初始化仅限本地的 Git 仓库并按五个里程碑提交；验证级别只能由命令行 <code>--profile</code> 选择；<code>rules.json</code> 的哈希只能写入外部构建报告、<code>SHA256SUMS</code> 和未来 Release 标签。
   </div>
 
-  <div class="callout warn"><strong>当前阶段边界。</strong>P2–P4.6 已按后续授权完成。当前 P5 只建立本地官方发现、不可变更新证据与隔离继承候选，不翻译、不新增人工内容判断、不处理用户未提交账本、不重建现有 OmegaT/候选工程，不切换当前指针或正式源，不写 dist，不配置远端、GitHub、Actions、PR 或 Release。历史停止点保留备查；当前约束以第 22 节为准。</div>
+  <div class="callout warn"><strong>当前阶段边界。</strong>P2–P5 已按后续授权完成。当前只将两项本地构建行政门槛改为提醒，不修改用户内容、许可状态、审校资料或指针，不重建现有 OmegaT/候选，不写真实 dist，不配置远端、GitHub、Actions、PR 或 Release。历史停止点保留备查；当前约束以第 23 节为准。</div>
 
   <h2>1. 范围、非目标与已确定约束</h2>
   <table>
@@ -412,6 +414,16 @@ tests/fixtures/pilot/ tests/*.py
   <h3>候选、证据与人工批准之间的停止点</h3>
   <p>候选 release 的三轴继承注解来源版本，更新官方日期/哈希，生成上下文绑定的中文 update 修订及组合 release ID，始终 publishable=false。migrationLineage 仅保留旧源历史覆盖，不证明新英文已迁移或审完；全部未决进入报告及 candidate readiness。提升还需要新版本来源/继承证据和完整发布门槛，P5 不提供 apply/指针切换或 OmegaT 升级命令。</p>
   <p>合成测试先验证 unchanged、新日期、同日换包、回退、安全下载、结构变化、歧义 override、继承/stale、注解失锚、快照篡改、确定性及失败保护，再执行真实只读检查。既有用户账本字节及未提交状态必须保持，不提交该文件；现有 OmegaT、候选、dist、源、registry 和基线快照不得重建。P5 审阅包交付后停止，等待人工确认，不进入翻译、版本提升、GitHub、Actions、PR 或 Release。</p>
+  <h2>23. 本地最终文件与公开发布分离（2026-10-08 用户批准）</h2>
+  <p>本地 dist 是通过技术检查的最终阅读文件，不等于公开发布、许可确认或 GitHub Release。无需为本地构建把 <code>versions.annotations.licenseStatus</code> 改成 complete、填写 attribution 或把 publishable 改成 true。真实 manifest 不改；这些字段和 JSON 中的同名记录原样保留。代码与证据见 <a href="../review/2026-10-08-local-build-advisories.md">本轮记录</a>。</p>
+  <table>
+    <tr><th>类别</th><th>约束及报告</th></tr>
+    <tr><td>非阻塞提醒</td><td>annotation-license-pending、manifest-not-publishable 移入 advisoryFindings/advisoryFindingCounts，控制台明确提示不影响本地构建；不参与 valid 判定。这里只调整本地程序检查，不产生授权结论。</td></tr>
+    <tr><td>保留硬门槛</td><td>全文范围、schema、ID/引用与 PDF 溯源、迁移证据、缺译/失锚/延期注解/未决映射/重复消费清零；完整且当前的唯一审校记录；两次构建、独立输出验证、输入变化检查和整目录事务不变。</td></tr>
+    <tr><td>接口及数据</td><td>仍显式使用 --profile release；成功含义为 local-build-ready，不再称 publishable。source/output v1 形状不变；candidate=false 可与 publishable=false 共存。候选和演练仍只在 outputs；新官方候选仍需独立人工批准后才能提升。</td></tr>
+    <tr><td>菜单及验证</td><td>选项 5 只读检查本地生成条件，选项 6 使用同一规则；隔离合成测试证明提醒存在时可生成 dist，以及技术失败时旧 dist 不变。当前真实资料只读检查，不替用户生成最终文件。</td></tr>
+  </table>
+  <p>README 和中文维护说明采用新约定；早期审阅包和用户正在修改的 OmegaT 使用说明作为历史资料保留，不覆盖用户改动。无需新增依赖、网络访问、schema 版本、发布自动化或许可调查。本轮完成完整测试及保护核对后，以独立修正提交保存并停止；没有新增待决定的实施问题。</p>
 </main>
 </body>
 </html>

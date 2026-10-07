@@ -248,7 +248,7 @@ def _pause() -> None:
 
 def check_formal_release() -> dict[str, Any]:
     report = validate_project(ROOT, profile="release")
-    print("\n正式发布条件：\n" + describe_validation(report))
+    print("\n本地最终文件生成条件：\n" + describe_validation(report))
     return report
 
 
@@ -261,19 +261,19 @@ def finish_formal_release() -> dict[str, Any] | None:
     print(f"已生成最终文件：{ROOT / 'dist/IPG.md'}、{ROOT / 'dist/rules.json'}")
     for name in ("IPG.md", "rules.json"):
         print(f"  SHA-256 {name}：{report['hashes'][name]}")
-    print("这是本地正式产物，不是 GitHub Release。")
+    print("这是本地最终阅读产物，不代表公开发布许可；不会上传或创建 GitHub Release。")
     return report
 
 
 def main() -> None:
     while True:
-        print("\nIPG 全文审校助手（候选与正式产物分开）")
+        print("\nIPG 全文审校助手（候选与本地最终产物分开）")
         print("1. 准备或继续 OmegaT 审校")
         print("2. 完成审校并生成候选阅读文档")
         print("3. 查看审校进度")
         print("4. 退出")
-        print("5. 检查正式发布条件（只读）")
-        print("6. 条件满足后生成最终文件（dist）")
+        print("5. 检查本地最终文件生成条件（只读）")
+        print("6. 条件满足后生成最终阅读文件（dist）")
         choice = input("> ").strip()
         try:
             if choice == "1":

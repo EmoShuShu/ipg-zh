@@ -25,7 +25,7 @@
         "publicationAnnotations": {"type": "object", "required": ["mode"]}
       }
     },
-    "publishable": {"type": "boolean"},
+    "publishable": {"type": "boolean", "description": "Recorded public-publication intent, copied without promotion. Not a local-build gate or proof of permission."},
     "candidate": {"type": "boolean"},
     "versionNotes": {
       "type": "object",

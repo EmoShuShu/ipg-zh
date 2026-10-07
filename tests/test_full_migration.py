@@ -229,10 +229,11 @@ def test_candidate_passes_and_release_fails_only_readiness_gates() -> None:
     assert candidate["valid"] is True
     assert release["valid"] is False and release["structuralFindings"] == []
     assert release["readinessFindingCounts"] == {
-        "annotation-license-pending": 1,
-        "manifest-not-publishable": 1,
         "missing-review-ledger": 1,
         "missing-translation": 12,
+    }
+    assert release["advisoryFindingCounts"] == {
+        "annotation-license-pending": 1, "manifest-not-publishable": 1,
     }
 
 

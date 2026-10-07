@@ -35,7 +35,7 @@
         }
       }
     },
-    "publishable": {"type": "boolean"},
+    "publishable": {"type": "boolean", "description": "Public-publication intent record; false is a non-blocking advisory for local release-profile builds."},
     "versions": {
       "type": "object",
       "required": ["official", "annotations", "translation"],

@@ -117,7 +117,7 @@ def test_release_success_updates_whole_dist_after_two_independent_checks(rehears
     assert not list(root.glob(".ipg-build-*")) and not (root / ".ipg-dist.lock").exists()
 
 
-@pytest.mark.parametrize("fault", ["translation", "ledger-missing", "record-missing", "unreviewed", "stale", "target-hash", "source-hash", "ledger-version", "ledger-shape", "orphan", "duplicate", "license", "attribution", "publishable", "annotation-scope", "registry", "migration-evidence", "pdf-hash", "source-schema"])
+@pytest.mark.parametrize("fault", ["translation", "ledger-missing", "record-missing", "unreviewed", "stale", "target-hash", "source-hash", "ledger-version", "ledger-shape", "orphan", "duplicate", "annotation-scope", "registry", "migration-evidence", "pdf-hash", "source-schema"])
 @pytest.mark.parametrize("existing", [False, True])
 def test_release_failure_preserves_absent_or_existing_dist(rehearsal_repo, fault, existing):
     root = rehearsal_repo
@@ -126,6 +126,10 @@ def test_release_failure_preserves_absent_or_existing_dist(rehearsal_repo, fault
     manifest_path = release / "manifest.yaml"
     ledger_path = root / "review/status/zh-test.json"
     manifest, ledger = load_yaml(manifest_path), load_json(ledger_path)
+    # Every technical failure must still block with both administrative checks disabled.
+    manifest["publishable"] = False
+    manifest["versions"]["annotations"].update(licenseStatus="pending", attribution="")
+    _yaml(manifest_path, manifest)
     if fault == "translation":
         source = load_yaml(release / "test-only.yaml")
         source["sections"][0]["title"]["zh"] = ""
@@ -140,11 +144,8 @@ def test_release_failure_preserves_absent_or_existing_dist(rehearsal_repo, fault
         elif fault in {"unreviewed", "stale"}: ledger["entries"][0]["status"] = fault
         else: ledger["entries"][0]["targetHash" if fault == "target-hash" else "sourceHash"] = "0" * 64
         _json(ledger_path, ledger)
-    elif fault in {"license", "attribution", "publishable", "annotation-scope"}:
-        if fault == "license": manifest["versions"]["annotations"]["licenseStatus"] = "pending"
-        elif fault == "attribution": manifest["versions"]["annotations"]["attribution"] = ""
-        elif fault == "publishable": manifest["publishable"] = False
-        else: manifest["scope"]["publicationAnnotations"]["mode"] = "pilot"
+    elif fault == "annotation-scope":
+        manifest["scope"]["publicationAnnotations"]["mode"] = "pilot"
         _yaml(manifest_path, manifest)
     elif fault == "registry": _yaml(root / "src/ipg/id-registry.yaml", {"entries": []})
     elif fault == "migration-evidence": (root / "tests/synthetic-migration-summary.json").write_bytes(b"{}")
@@ -249,21 +250,72 @@ def test_pointer_switch_not_hardcoded_and_menu_release_entry(rehearsal_repo, mon
     assert "已生成最终文件" in capsys.readouterr().out
 
 
-def test_real_project_and_helper_are_blocked_without_changing_user_ledger(monkeypatch, capsys):
+def test_real_project_and_helper_only_check_local_conditions_without_writing(monkeypatch, capsys):
     ledger = ROOT / "review/status/zh-r0001.json"
     before = ledger.read_bytes()
+    dist_before = _dist_bytes(ROOT)
     assert production.validate_project(ROOT, profile="candidate")["valid"]
     report = production.validate_project(ROOT, profile="release")
     project = production.load_project(ROOT)
     missing = sum(not unit["target"] for unit in collect_units(project["documents"], project["display"]))
-    assert not report["valid"] and report["releaseGateCounts"]["missingTranslation"] == missing
-    assert "annotation-license-pending" in report["readinessFindingCounts"]
-    assert "manifest-not-publishable" in report["readinessFindingCounts"]
-    assert review_assistant.finish_formal_release() is None
+    assert report["releaseGateCounts"]["missingTranslation"] == missing
+    assert report["valid"] == (not report["structuralFindings"] and not report["readinessFindings"])
+    assert review_assistant.check_formal_release()["valid"] == report["valid"]
     output = capsys.readouterr().out
-    assert "注解" in output and "publishable: false" in output
-    with pytest.raises(ValueError): production.build_project(ROOT, profile="release")
-    assert ledger.read_bytes() == before and not (ROOT / "dist").exists()
+    if report["advisoryFindings"]:
+        assert "非阻塞提醒" in output
+    if not project["manifest"]["publishable"]:
+        assert "publishable: false" in output
+    assert ledger.read_bytes() == before and _dist_bytes(ROOT) == dist_before
+
+
+@pytest.mark.parametrize("metadata", ["license", "attribution", "publishable", "both"])
+@pytest.mark.parametrize("existing", [False, True])
+def test_metadata_advisories_allow_local_dist_without_rewriting_status(rehearsal_repo, metadata, existing):
+    root = rehearsal_repo
+    _dist(root, existing)
+    manifest_path = current_release_dir(root) / "manifest.yaml"
+    manifest = load_yaml(manifest_path)
+    if metadata in {"license", "both"}:
+        manifest["versions"]["annotations"]["licenseStatus"] = "pending-before-formal-release"
+    if metadata in {"attribution", "both"}:
+        manifest["versions"]["annotations"]["attribution"] = ""
+    if metadata in {"publishable", "both"}:
+        manifest["publishable"] = False
+    _yaml(manifest_path, manifest)
+    before = manifest_path.read_bytes()
+    ledger = root / "review/status/zh-test.json"
+    ledger_before = ledger.read_bytes()
+    validation = production.validate_project(root, profile="release")
+    assert validation["valid"] and validation["meaning"] == "local-build-ready"
+    assert validation["readinessFindings"] == [] and validation["advisoryFindings"]
+    assert "非阻塞提醒" in production.describe_validation(validation)
+    result = production.build_project(root, profile="release")
+    assert result["byteIdentical"] and result["outputSchemaValid"]
+    assert result["validation"]["advisoryFindings"] == validation["advisoryFindings"]
+    rules = load_json(root / "dist/rules.json")
+    assert rules["publishable"] == manifest["publishable"]
+    assert rules["versions"]["annotations"] == manifest["versions"]["annotations"]
+    assert not rules["candidate"]
+    assert (root / "dist/IPG.md").read_text(encoding="utf-8").startswith(
+        "<!-- LOCAL BUILD: NOT A PUBLICATION APPROVAL -->"
+    )
+    assert manifest_path.read_bytes() == before and ledger.read_bytes() == ledger_before
+    assert set(_dist_bytes(root)) == set(production.FINAL_FILES)
+
+
+def test_menu_generates_local_final_files_with_advisories(rehearsal_repo, monkeypatch, capsys):
+    root = rehearsal_repo
+    path = current_release_dir(root) / "manifest.yaml"
+    manifest = load_yaml(path)
+    manifest["publishable"] = False
+    manifest["versions"]["annotations"].update(licenseStatus="pending", attribution="")
+    _yaml(path, manifest)
+    monkeypatch.setattr(review_assistant, "ROOT", root)
+    assert review_assistant.finish_formal_release()["byteIdentical"]
+    output = capsys.readouterr().out
+    assert "非阻塞提醒" in output and "已生成最终文件" in output
+    assert "不代表公开发布许可" in output
 
 
 @pytest.mark.parametrize("entry", ["validate.py", "build.py", "validate_output.py"])
