@@ -1,5 +1,2526 @@
 {
-  "notes": [],
+  "notes": [
+    {
+      "note": "as soon as it is possible 被译成“立刻”，应改为“在能够这样做时尽快”，否则与前面允许稍后道歉的说明冲突。\n\n把as soon as it is possible当成as soon as，我上初中的时候都干不出来\n\ntypically very understanding 被译成“通常情况下……总是……”\n\nafter the match is over 也应明确指这场对局结束，避免“比赛结束”被理解为整场赛事结束",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "f3386e1986599e621d4690da540e79883a2f520a52b2b0c640dc551efda43e15",
+      "stale": false,
+      "targetHash": "4b71d7fd837d6bd3ba4dc487753c3482bf2ef76129375977e80521ae6094e067",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-02ad37ae2dc0-g01-b03"
+    },
+    {
+      "note": "“一盘游戏决定这一盘的胜负”你自己读的时候能绷住吗\n\ngame又整成局",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "ac6abfb533811c87e609739a33feed87c89ca4e9f4b7c10e23cb03bded6e4945",
+      "stale": false,
+      "targetHash": "0fdc3ccbb0941ceb1262c83a0a017fe82c8225dbce5ae15722cf9643618a0a28",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-1-03f21073c447-g01-b01"
+    },
+    {
+      "note": "“记分员和被警告的牌手都应知道警告的内容。”纯纯增译",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "21fd5cf852fe20396220b33e4cc9a4c1447d3f5a8b7cb38221a4e9b124188e5d",
+      "stale": false,
+      "targetHash": "879067b1088fb7dd66c723d39d766e44361979e0ba217ee4c325a5b3004d6d58",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-1-450409569a25-g01-b01"
+    },
+    {
+      "note": "two or more Game Losses 被缩成“两个一盘负”",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "8bdc3241b2067dab64defd7e2b9f1dc655bc944e2934313a1277bdd5e1c6fef3",
+      "stale": false,
+      "targetHash": "f3c4c728da9b36d6a3c18fd0d2afc25100487fcd57d701e27b8af190b541ad0d",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-1-515a99e222be-g01-b01"
+    },
+    {
+      "note": "原文是没有正在进行的 game，不是没有正在进行的 match；适用于下一盘的是处罚，也不是违规本身。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "1dc2193750eb2fe855898c7d9e41e4a0e359bd2f29e83ded18b09da50d8561ac",
+      "stale": false,
+      "targetHash": "7655f0a4eb78c2a74d18e3b2b9b62c240abc75804f57922e30f5ae7d6c4b287c",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-1-949d90c79134-g01-b01"
+    },
+    {
+      "note": "Game Loss是“一局负”？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "25f8acb63c7128a6742f15a95f5f283d269ea2d68f9e6c2122c958f4446e7087",
+      "stale": false,
+      "targetHash": "06a52026d26b84896e5cb2125032c77165d5d23e66cb07f72d7fbba37c3697e7",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-1-c1cdae1c6e35-g01-b01"
+    },
+    {
+      "note": "旧译只写“为这桌补时”，漏掉了补时时长要求。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "74aa20dc626c2e93e9bec4d21461223168c3bef956492a5d9bbdb7d7b8ebb670",
+      "stale": false,
+      "targetHash": "186b161096ae9b6a70325dcf1a35b1ad4228b92523ef5f767409c544129fae81",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-1-c38960d00c01-g01-b01"
+    },
+    {
+      "note": "“对此并不需要对此”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "99aa5d0e1971cd02ac6eeaf92357bb286beba420b418120cb57a8c1932c59535",
+      "stale": false,
+      "targetHash": "ec74496f5fb1246bc19df83878d68a5c870f1e558475b3ca1758ab0bd8743b41",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-1-d9a997de0eff-g01-b01"
+    },
+    {
+      "note": "下面一句的bystander是路人，这里又是观众了",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "4d8f2171c37c71f4cfcdd19929ff611d23198b0b4b830ef62ed991a9b3c6b0ab",
+      "stale": false,
+      "targetHash": "83f0f2d1a476ea1e375a0693c7c8ada135c16ebaeee6753efe243f4c5ae5a58c",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-1-dfb1083b8e7b-g01-b01"
+    },
+    {
+      "note": "very little judgment involved 被译成“不需要很多信息”，混淆了裁量判断与所需信息。\n\ninstead of having to consult整成“替代”就没了？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "312b09adc04e9b94c38cebbf6a67ce1c6a3f7930df9b32e5023855cc23998ff7",
+      "stale": false,
+      "targetHash": "254b771acbd7b1b6a3852a6ecf205b17faa021d45e66e33e040d34a9e7b3a089",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-2-2b6a5e24a28f-g01-b01"
+    },
+    {
+      "note": "match record在mtr里是比分记录，到你这儿成对局状态了。原文的意思是你要是1：0的时候磨洋工那嫌疑就很大了",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "0fa7842288f2c51eaaefd229b4c7a2f85db5e6b143c8d38be67984f7db7cabc9",
+      "stale": false,
+      "targetHash": "355a4aac3d2777917d2196c5795cf090e281e92fdd7d95d92218edb2ad504e1a",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-2-37214a59aafa-g01-b01"
+    },
+    {
+      "note": "aggressively译成冒犯？acating是“言语”？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "a8bc3bbbd9a336facc1a9df6e0235da8c7a19674e069ee968dc7e41864b3c813",
+      "stale": false,
+      "targetHash": "0ee9210d4970adabb8472b857801008f841aef17d04cd197e634d48fae65d4a9",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-2-52fa4130f230-g01-b01"
+    },
+    {
+      "note": "原文只说牌手甲获得了罚则降级，而另一人没有。旧译自行确定成“甲得警告、我得一盘负”\n\n末句原文是“不要让自己成为网上抱怨的对象”，旧译却变成遵循方针就一定不会遭到攻击",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "3279e69a25123f5d33be33911db52cab3ab0e1533dd06b4a03aefebbf9654154",
+      "stale": false,
+      "targetHash": "2ff8a9539ed752f6f07109ccec74d95cb2aa9c7824997bd790da4da2c1be8f4d",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-2-87adf811ad40-g01-b01"
+    },
+    {
+      "note": "doesn’t fit well in the categories listed 被译成：\n没有被包含在这份IPG中的特殊情况\n\n原文也包括无法恰当归入既有类别的情况，不仅是完全没有包含。\n\njustifiable是“有正当理由的”。译者是看到半个词根就脑补出了“公正的”的意思吗\n\n“虽然主审虽然”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "360b9423dfee2adcd2022e17adda073eb9d2c47b4a727cd704ba45d180715b54",
+      "stale": false,
+      "targetHash": "14c055918ffee46052374bf466b608e873d8a2518d1a08c9242217ca7caa0436",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-2112e177a631-g01-b01"
+    },
+    {
+      "note": "no risk of giving advice直接译成“不给出建议”？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "725d885946463260ddafaa23db163cebd63b7a2f9286f24b74ba28fa34fb2aa5",
+      "stale": false,
+      "targetHash": "6aa18a82362c54707800f0ce281ba75179656e1ce5e6f2f27812d680bebf6af1",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-313697b6bb7c-g01-b01"
+    },
+    {
+      "note": "原文没有说牌被展示过，也没有评价其好坏；重点是它原本一直在手中，却可能因随机倒回而被移走。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "62ffdcf6168208d35ed361020fbf927f4774015e247c2cf4948f31e0920df3de",
+      "stale": false,
+      "targetHash": "9f238307e8ac2a5a5500739e98e043b6f6821829aac92d2be1c74765f54f1642",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-4-0bae61dd4232-g01-b01"
+    },
+    {
+      "note": "段末 we can get around that 指避免这种破坏性，不是“如何倒回洗牌”\n\nisn’t known to all players 是并非所有牌手知道是哪张牌，不是牌当前对所有牌手可见与否；曾公开后抓起的牌虽不再可见，但内容仍可能为双方所知。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "6b9274ea21473e7ff6f03e718edb35141c2476ce0dbc10f8bf0fc99316d66127",
+      "stale": false,
+      "targetHash": "9d68022bbee66a149abb214a9769f2cbdb8bb2d1917d43c36995ae33ea3b9ec5",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-4-137f7d8b77bc-g01-b01"
+    },
+    {
+      "note": "IPG 2.3 Hidden Card Error，译成额外抓牌？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "d4a167a59cb084f59c18aa0c6153e715ebc1b18e09e2b91ff890e5bb9b5c9a34",
+      "stale": false,
+      "targetHash": "69044aeb206f446e4d9862f2f330f8676bb0c3b7fe2ea9d6ff46d42319772de6",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-4-598b04c2db34-g01-b01"
+    },
+    {
+      "note": "原文是从手牌随机选择牌放回牌库。旧译一处方向相反，另一处又额外要求洗牌。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "ea303ac83688778b591421c68d81a8ce738e47c48f905b5245f4e0f725606891",
+      "stale": false,
+      "targetHash": "60ea334fbf02e0c66986f72d86c8053e6b22747c6cf7158486edefc82907004d",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-4-689e1ed1051c-g01-b01"
+    },
+    {
+      "note": "原文强调不知道当时横置了哪些地，而不是不知道某一张地目前的状态。\n\nin reverse order是“依原次序”，意译可以理解，这里不修订",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "b687bfd1df8bd20b0341004943a439c72dd9a97a17efdd1804a3ac97ea80b105",
+      "stale": false,
+      "targetHash": "0c4017dbe1fda6aea48c795bc71e75d623ed68db940196790b9b08d2e19ba800",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-4-b7ba53f7a121-g01-b01"
+    },
+    {
+      "note": "漏译“A GRV is a warning regardless of whether the player is new or a grizzled Pro”\n\n后面都知道infraction是违规，第一句又要译成判罚。哪怕是同一段话里面术语都不能一致吗\n\nhistory译成“身份”？怎么意译都不能这么搞啊\n\nmuch more是“一些”？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "b6cde39dac8f9813d9c99e25b43f93cbf5f7e17bb02591f580c4370eb19ce044",
+      "stale": false,
+      "targetHash": "235ef5f18ab73deb25473acade1f1379c269456a38f0cdf40e37b191358584a1",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-43efd295d505-g01-b01"
+    },
+    {
+      "note": "Just ask them被弱化成“但可以请求”",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "4f0497e9f3e09625c370dd6c96acd60d47bb103aa4eae19675536ed86e1fa43a",
+      "stale": false,
+      "targetHash": "5befe43f17f81765fcecf979f20b3ad23b4543e2e318b6012cdb08afdf6e339d",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-44bb9eb2da14-g01-b01"
+    },
+    {
+      "note": "这里又将违规认定换成了处罚。该段恰恰强调不能先选处罚再反推违规，应保留区别。\n\n我就说怎么读起来这么难受，原来不是我智力有问题是有些人荔枝有问题",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "d74cdd2f8e08a287330ed49106cd2c66707ab875e7cc8a1572091d80ba80c4d6",
+      "stale": false,
+      "targetHash": "329f0c1c96b2f720312559894d8a6567553048230bda487d3a4413266c18b0f8",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-4f9a8d59ee72-g01-b01"
+    },
+    {
+      "note": "A card or rule 漏掉了“规则”，但是又以回合抓牌为例，因此不能只限定为牌本身结算",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "11cf8d896d0837d12e850114a41be72b07d7ea99d76f68d1cf494aeff0491800",
+      "stale": false,
+      "targetHash": "bd62bb18715d428473d9e91e9f7c4cceec2d1d0a70aa01b4e50808a586569ad1",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-5-55dc591989c9-g01-b01"
+    },
+    {
+      "note": "这里的non疑似笔误",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "b7e778f22a72348765a442643d4b8c6b70fcd1404ea051a8450827082cd30ff2",
+      "stale": false,
+      "targetHash": "368636496778e3b9d790f9564326d0a703a647401b5ebfc31d435b3f03f4afe2",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-5-abc5e5ae8e4f-g01-b01"
+    },
+    {
+      "note": "修正笔误",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "0d9a3c8cac69a1d2415ff2a19640e832b9a6843d837909593605e978b9bf4513",
+      "stale": false,
+      "targetHash": "6c4045e915790802fe03ea747ec134daf3d0c8860dccbf2211954c0797288220",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-9ff99079c796-g01-b01"
+    },
+    {
+      "note": "漏译basic，而且原文只说了record，可没说只写数量",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "796c30b31dd7ef95ea8124875fe5cb1ddba0d2078652ee201eb06416936ef085",
+      "stale": false,
+      "targetHash": "48550a84ef9b99787166df28a33d89658d01798d22687776b0760ece68207d7b",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-9ff99079c796-g02-b02"
+    },
+    {
+      "note": "“上局”有点拗口且和原文不对应，微调",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "23b5ffdfd7a17c805e835ce8b93e0863b5ebf3542325b5bb3d02cdd3c8604112",
+      "stale": false,
+      "targetHash": "5c79def63c367e0b51e3142a9d52b7d7f38117d6fb0cb706d9da5ce8904c4c24",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-9ff99079c796-g02-b03"
+    },
+    {
+      "note": "tournament officials 不限于裁判，译ipg就可以完全不记得mtr是吧\n\n后半句强调牌手需要能够依据这些信息行动，旧译容易读成牌手有义务依照其行动",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "f30daab61497425bb5b9b740f59923a177f3726658039fbc545ba1a123164665",
+      "stale": false,
+      "targetHash": "657471b38a0d5215beca24865e6b687ec6388b7fd6335cce855333e95618f2ae",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-a82d9643de61-g01-b01"
+    },
+    {
+      "note": "stick around and watch；nothing odd；error compounding on itself\n旧译分别是“稍作停留”“没有更严重的事情发生”“同样的错误接连不断发生”。\n三者都改变了检查范围：原文没有指定只停留片刻；异常不一定更严重；错误累积扩大也不等于同一错误反复发生。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "cef4b0184c741e9fc709a0f4e9766eec4b0fc20d566d319da3838112506a7a0a",
+      "stale": false,
+      "targetHash": "02ea7cc4c18e96cf67c2f8abddba5025638172467f4a107418810f316ff74595",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-b3a62e9682b3-g01-b01"
+    },
+    {
+      "note": "in large part漏译\npolicy后面一句都知道是方针，这里又译成政策了",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "c42da26af34789a5e1aac9c5c81104d22a85ee3ab85a01cbb43d6047485d136b",
+      "stale": false,
+      "targetHash": "00c25ffc696fcf2dfda9c3fb4e5372c758d47a5c3eb78011cff2fca57888eaa4",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-ce79fc3a1e68-g01-b01"
+    },
+    {
+      "note": "原文没有“输掉比赛”或“重要比赛”的条件\n\n末句漏译",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "fa0fb360ab8eb089fde844b9062fc104ba586fc610a2881a06ba911ff745f3ff",
+      "stale": false,
+      "targetHash": "cd66832841d54b2339d0683a5a512992b8d975def3e6205e3c43b9e4674503f5",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-d88ef95e28e5-g01-b01"
+    },
+    {
+      "note": "warning翻译成“违规”？\n\n这里的reveal应按照对应章节的正文译文，译为“翻开”。说得明明白白是正文的引用，不去参照正文的翻译，反而把They revealed their opponent’s cards翻译成“看到了对手的牌库”？\n\n漏译and they are doing it only once",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "d5fc18d6595c9c8f05cc423ec9408dd025d490e9073b36100839cacc65ab57dd",
+      "stale": false,
+      "targetHash": "9e9d56a4d602d5765c4f876b21e808a4ee9cd8d20d5bb114a2511cc14b7b528e",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-d88ef95e28e5-g01-b02"
+    },
+    {
+      "note": "they are held to a stricter standard 被译成：\n他们会更加严格的遵守标准\n\n原文说他们受到更严格的要求，旧译却断言他们实际表现更好。（实际情况其实恰恰相反）",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "9913fdacbcf42065caad6e9b78be0e9e8d21e564f0e5ff539600355cb6729d8c",
+      "stale": false,
+      "targetHash": "2bf06cf9faad698df3e2ca2c4606edd725bfee3a4c0c9cbe83a5a2cbc263bc3a",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-e28523ebe0f7-g01-b01"
+    },
+    {
+      "note": "The primary purpose直接译成“目的”？这句话往下三段就是“处罚的效果也包括教育比赛中其他牌手并造成警惕，且会用来持续记录牌手的行为。”，你直接给人家整成“不是目的”了？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "58ce72164b5a17aecad45ef57b9a5cf1d28f5ac9fdbe3de44b620547cce0dce4",
+      "stale": false,
+      "targetHash": "b5bd8aa73f99b8bc8d608beac45779dcb5064ebdaad6b292991c97f820558dec",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-1-e646c43664c6-g01-b01"
+    },
+    {
+      "note": "原文：\n…performing a backup may be sensible.\n\n旧译：\n……那么执行倒回就是合理的。\n\n三个问题均回答“是”，只是说明倒回可能适当，不是保证倒回一定合理。原文下一句也明确保留不倒回的选项。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "85b0395cb735806a7018cea2cb038f455236b633d1bda7d855a00ce6296ab727",
+      "stale": false,
+      "targetHash": "dcc80e696bcdfcb53f1dccf3c65634460715aa37c9a1de9727fc016aa44d52eb",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-0c1945be01b0-g03-b01"
+    },
+    {
+      "note": "“与被未被”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "9577ca12fb096d0143791c5c6a0e387fa5659ff8d05c060478eae711a5eefc88",
+      "stale": false,
+      "targetHash": "a764a488bbcf27096488814c6364dcd6b5ec37965ff293bdb9543f59fc43af1d",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-0c1945be01b0-g05-b02"
+    },
+    {
+      "note": "“又造成的1点伤害”？？？“乙太闪光的触发是异能第一次产生作用的时点便是”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "ea24bc323c82e2f7b2d4ed7b61e9a5ddf9dee41b1ef9bcd109a59ad88529c880",
+      "stale": false,
+      "targetHash": "594ace97405123761c1270bcd7870e89137797d9194c74beb4de22c9357b68b2",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-18e1ec7170f3-g01-b01"
+    },
+    {
+      "note": "no later可不是“之前”",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "07a15ae76cc692b4fb0480c5d1f19571adf54e59eae7ac01ab191cc7bb496d12",
+      "stale": false,
+      "targetHash": "6559300723fb890a47268fffd4e5e4c85b61ccb4df1f1c893d6954f4c6ab8568",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-2bcf7510f31c-g01-b03"
+    },
+    {
+      "note": "原文：\nPlayers should not be punished for the inabilities or poor memories of their opponents.\n\n旧译：\n牌手不应因没有记住对手的触发式异能而受到惩罚。\n\n旧译把“对手未能记住自己的触发”改成了“自己未能记住对手的触发”，改变了责任关系。后者虽然与其他段落的方针一致，却不是这句英文所说的内容。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "d0f4a6613017d033f53d075286c3d89de5d56fe6154f7e9f06b8e1a3adf7bb3e",
+      "stale": false,
+      "targetHash": "5585261468a643584eb9bd275633d2b36bb522e1d82f51d53d87c9f9dd406b8f",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-35b462565d53-g01-b02"
+    },
+    {
+      "note": "原文：\n…you should consider the card associated with the trigger in a vacuum and not take into account any game-specific information…\n\n旧译：\n……你可以在不涉及任何具体游戏信息的情况下考虑这张牌……\n\n原文要求判断时排除具体游戏信息；“可以”却将其写成可选择使用的方法。\n\n原文：\n“If the trigger didn’t exist, would the card be played?” If the answer is no…\n\n旧译：\n“如果这个触发不存在，这张牌会变更好还是变更差？”……如果答案是“变更差”……\n\n“是否还会有人使用这张牌”和“牌会变好还是变差”并不是同一个判断标准。旧译改换了问题，也相应改换了答案条件。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "15ae12051dea7d6d357634bf29b90c7d95f29645c7ac9b5246c812e801d2cfc1",
+      "stale": false,
+      "targetHash": "2d74f626321bd6da8d2f3f92d144f55e27287823a281c501a2e76322137d126d",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-4dbe639fb8e9-g01-b02"
+    },
+    {
+      "note": "原文：\n…either detrimental or non-detrimental…\n\n旧译：\n……有利或不利的。\n\n“非不利”可以包括中性情况；“有利”不能覆盖这些情况。原文以是否不利作二分，旧译却变成了有利与不利的二分。\n\n后面的链接失效了也不改",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "a8a38bf73bab5c5bb95f328cdec311ed3bbcc2271ece38471b9a9b06a5fa7901",
+      "stale": false,
+      "targetHash": "f7e873555a833ee67cadb751aa8ee22ba780bd34102b5933e16b8a84c1673877",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-4dbe639fb8e9-g01-b03"
+    },
+    {
+      "note": "英文没有使用 casts 或限定为“传纪咒语”。旧译把一般的使用传纪限定成了咒语结算。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "3c677c9ce34d494b7044cd6a850cfaf005da7eeb6a8a89c448a373a1bd7b990a",
+      "stale": false,
+      "targetHash": "5bbc3dcaaaad90f3f106cb17b22d019578d3b6b507a75855299623ccddc00236",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-4fff80a4d71e-g01-b02"
+    },
+    {
+      "note": "原文：\n…are likely to trigger multiple times per game, triggering for different players…\n\n旧译：\n每盘游戏会触发多次，并对不同的牌手都会触发……\n\n原文描述的是很可能多次触发，不要求每盘实际都触发多次。旧译可能使读者按实际触发次数判断异能是否属于对等触发。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "bd81b5823c6948912218fdfbd54a551f6914330d8c7da3fa73b9a37d66dd6176",
+      "stale": false,
+      "targetHash": "a2fb28cf75ec811e7bfd7456e2cd42713e394e0f9f63c0c0fc0389b72ecf3652",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-5616e7959a29-g01-b02"
+    },
+    {
+      "note": "原文：\n…any opponent can ask the player to do the actions in the correct sequence…\n\n旧译：\n……任何对手都可以在任何时候要求牌手以正确顺序执行动作……\n\n原文的 any 修饰对手，没有赋予“任何时候”提出要求的权限。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "36fd3a8c7543075ae0d824a0de90ae37ec0f39fc847b42923d1375e1cafda4c8",
+      "stale": false,
+      "targetHash": "8d75782f11057f648882f7f7251aa968002d0823908bf1ff54b0aba08e0e3680",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-8eea1a81a563-g01-b03"
+    },
+    {
+      "note": "原文：\n…information which could reasonably affect decisions made later in that sequence.\n\n旧译：\n……可能影响后续行动决定的信息。\n\nreasonably 限定了影响的合理可能性，旧译扩大成任何可能的影响。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "7cc922702814109a62c7c8a27c09d6f37f84faf917ca500173858b2e8fe71652",
+      "stale": false,
+      "targetHash": "980fc4b56280c0b4a9a95c1fc63979539382c0d8919c36905f211244c18470a6",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-8eea1a81a563-g01-b04"
+    },
+    {
+      "note": "原文：\n…players may acknowledge a trigger as part of a block of actions…\n\n旧译：\n……牌手可以在一系列行动之后表达某个触发……\n\n原文要求表达触发属于这一组行动；旧译容易被理解为完成整组行动后仍可另外补充表达。这个区别与次序不当行事是否仍属于同一组行动有关。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "4eefe2494cec5077fbbdaa45acdbe8b875b35d04ef842e55da09c1ca07364890",
+      "stale": false,
+      "targetHash": "31b26aa2d0d8bef90bc2e28749d30b620475aaff865816440754dccb2d943578",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-8eea1a81a563-g01-b05"
+    },
+    {
+      "note": "“说“触发”是不够的。你需要清楚地表明这个触发是什么。”为没有根据的增译",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "7f2e5400b43635dc38cba61e607682141d2d2611be8cd3c7f1a697615a2de12d",
+      "stale": false,
+      "targetHash": "dc096018bcd84758d1e2a9945c113b90de85e514d8956749ed5ff6701933a673",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-906eca34cdf5-g01-b01"
+    },
+    {
+      "note": "原文：\nThe missed trigger policy was written to address the way that players already play the game and not the other way around.\n\n旧译：\n遗漏触发的方针是为了适应解决牌手实际打牌的方式而写的，而非严格按照CR。\n\n原文讨论的是方针与牌手习惯之间的适应方向，没有把方针与严格遵守CR作对比。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "93125366c6b8503e13c468baa34b6aeb829109817d660147c209ec111dba8102",
+      "stale": false,
+      "targetHash": "693a5fcea5aa77ac49bc7491b4c0bce6200225c9f2982a2655ed433342e4662c",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-be7edd5bbbee-g01-b03"
+    },
+    {
+      "note": "原文：\n…not that it’s obvious a choice wouldn’t be made.\n\n旧译：\n……并不是指没有做出一个显而易见的选择。\n\n原文说的是“显然不会作出某个选择”，不是“没有作出一个显而易见的选择”。它强调不能因为预计某人不会选择执行可选动作，就把触发视为对游戏没有影响。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "e3911ffbf22cfcfc10674b19fb43f9a3ca3dc677cd37c12f1cdf2e3660dc6c38",
+      "stale": false,
+      "targetHash": "722f18984f37949328faecff69dbfe94a0ca07c87747bc00a3f04fb50662ab68",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-beb77138e6e3-g01-b01"
+    },
+    {
+      "note": "call attention to 是提醒、指出。原文明确包括“已经注意到，却故意不提醒”的情况；“不注意”没有准确保留这层意思\n\n保持沉默的许可后，英文特意强调 even if the triggered ability would do something harmful to its controller，中文遗漏整个限定，读者无法从此处读到对操控者不利的触发同样适用。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "d672668e863c18951ac9a4fbdf5e709c2a8e3e2de6fb8a227eb1319fce9af8b4",
+      "stale": false,
+      "targetHash": "5cf34b6928156dab37a6bb754816525c2aa7bf325d3d3b88dc55d50ca258c87a",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-c01c14063472-g01-b01"
+    },
+    {
+      "note": "原文：\n…they usually have to go well out of their way to show that they’ve missed a trigger.\n\n旧译：\n……在这种情况下牌手要遗忘一个触发可是真心很不容易的。\n\n这里讲的是作出足以表明已遗漏触发的行为所需达到的程度，不是牌手在记忆上很难忘掉触发。旧译丢失了 show，改变了这一段关于判定标准的说明。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "8697c03d44ad000ba01aa41b48f2e83d68d825d93d287bac5aa66259c4b5c547",
+      "stale": false,
+      "targetHash": "41edc421c8f96dc9192ce9df12a4c911b43683da1192e105ce94cd28e726ba51",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-d00f70635b66-g01-b01"
+    },
+    {
+      "note": "原文允许牌手按触发已被遗忘的情形采取动作，同时承担被阻止的可能；它没有推翻后文“除非有相反迹象，否则视为记得触发”的默认假设。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "65ad326ff44936bad716eb4dc1ecb390f5b2db9e6b6ee1cfb3ac6d659e406c96",
+      "stale": false,
+      "targetHash": "b96e9f4f8b22478c0a847ee5e6e3e1a9081d631a667571a1afe7127821ab891f",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-fa2657c2275a-g01-b03"
+    },
+    {
+      "note": "“异形地窖”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "d5d82000773da2e34b66e72b03bc1cca119953389d7851e02c3ff718dcb0bfcd",
+      "stale": false,
+      "targetHash": "fd04925a51146c96d6e8424e35bb3605711bb0e36fb2872e9b471c4f8e6a9b1b",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-1-fa2657c2275a-g01-b04"
+    },
+    {
+      "note": "原文：\nwhen drawing a card, two cards may get stuck or picked up together\n\n旧译：\n在你抓牌时抓了一张或两张并看到了下一张的牌面\n\n原文说的是两张牌粘连或被一起拿起；旧译改成了抓牌后看到下一张牌，描述的是不同的动作。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "24a95229d1029207f28716768598a8b64d071f7d77cf00a998aaaf15b2e53df8",
+      "stale": false,
+      "targetHash": "d5d2efba6cbaf208771fa1e3b404398b0839ba6464c1cfccdcb4e2a1c1a78514",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-2-6de92d7c0531-g01-b01"
+    },
+    {
+      "note": "原文：\nreveal hidden information to their opponent that they are entitled to know\n\n旧译：\n展示自己知悉的隐藏信息给对手知道\n\nentitled to know 带有权限限制。旧译仅保留“知悉”，可能把牌手无权获取、但事实上已经知道的信息也包括进去。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "40b71aa58fafde54ab28837a46a5fee562ff8021220946b7ad85b398937ba2fc",
+      "stale": false,
+      "targetHash": "362b3574831b1dfd438d6a79b3dc86214fd0ac49eb8225a03a42a31e1decc5f6",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-2-6de92d7c0531-g01-b10"
+    },
+    {
+      "note": "旧译：\n……一定要询问他们此前有没收到同种判罚。注意这是同一个问题的第三次警告，而不是第三次判罚。\n\n这里的区别具有实际意义：**同类违规可以受到不同判罚，而升级条件统计的是该类别的警告次数。**后面的非公开牌张失误例子正是对此的说明。\n“同种判罚”容易使人按处罚种类询问；“同一个问题”也不如“同一违规类别”明确。“第三次判罚”则没有准确保留 third infraction。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "f5d580da625fd77c2c3303ac4285dd073c7f74314a0ec55b3853591166192418",
+      "stale": false,
+      "targetHash": "e8fc8bed87bc5d48d553f766a058fa8a6b821f4ce7944cac4c9a53d9dd076d73",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-24e2a860a3f7-g01-b01"
+    },
+    {
+      "note": "原文：\nRegarding the Failure to Maintain Game State infraction, be prepared for some players to not understand why they are getting a Warning.\n\n旧译：\n对于未维护游戏状态这个判罚，很多牌手不理解为什么他们要吃到警告……\n\n原文是在提醒裁判做好遇到这种反应的准备，不是直接陈述“很多牌手不理解”。some 也没有“很多”的数量含义。\n\nyou can talk about it after the match：可行做法变成要求\n\nalways 是“始终”，旧译“通常”？\n\nand I didn’t catch：漏掉自身未发现错误的条件",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "84b2e336fdd12990fc2909a0029a7fcbaad4d5286470baa30a6001734847ae66",
+      "stale": false,
+      "targetHash": "c01e931eb7dbd059f22c2f5c466916387d6fd5f264c0c7f08073f410bdf5458d",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-24e2a860a3f7-g01-b02"
+    },
+    {
+      "note": "原文列举的是两种可能的行为。“以及”未必会被理解为必须同时实施两者，但用“或”可以直接保留原文关系。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "121eebf6c4e0ba9e1c9b51339912be0b5317292f670fa212b014860dc52de99b",
+      "stale": false,
+      "targetHash": "103e79ff6c59c51e291c9a3357f2ee153e1d6093473c9cb2f65b4b95985e84b1",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-2c8bc9b604c3-g01-b01"
+    },
+    {
+      "note": "information has been lost 指抓牌后失去可核验的信息，中文两次作泄露，变成非公开信息被他人知晓。英文此段强调起初支付错误法术力仍对双方可见，而不是以信息泄露为根本原因。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "9b15ec7f5158748b082628b885d0ce14358e78d90711fc4aeb90324b67789e42",
+      "stale": false,
+      "targetHash": "c52c5df7e157b99183f6d0de53f8e6436603d74e6d4bf24efc9c3db488e4983b",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-3-0b2cbc38f0eb-g01-b01"
+    },
+    {
+      "note": "原文：\n“looting” instead of “rummaging”\n\n旧译：\n应当“掠夺”时却执行了“翻拣”\n\n原文说的是本应先弃后抓，却做成了先抓后弃。旧译把方向完全颠倒了，也与后面的例子矛盾。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "8222834d720d5ebacb7c1ebb78b575ff33887d2119136a600a7f7094cc4dfec9",
+      "stale": false,
+      "targetHash": "b29eb4d4cef532fab7fdded75fc04924c9fd1eb3615aa69b56dece423028b091",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-3-1df2b0db1609-g01-b01"
+    },
+    {
+      "note": "注解中的：\n又不会有牌手因此获得或失去利益\n\n对应 without advantage gained or lost unduly，也应保留 unduly。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "fef85dd144c734b6712380c1cfa15437d90c3b7561209a90eca9a17a30540707",
+      "stale": false,
+      "targetHash": "039ff8bcc5d53c9c15a6a0f6228ca49a1c86f24572daa8489d1b11c3c0decd7b",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-3-83a51061c3d7-g01-b01"
+    },
+    {
+      "note": "原文：\nthe affected set of cards has been lost by shuffling them away, and the set cannot reasonably be reconstructed\n\n旧译：\n受影响的牌叠已经被洗走而不存在，那么这个牌叠便无法还原\n\n原文要求同时满足“牌叠被洗散”和“无法合理重建”两个条件；旧译把第二个条件变成第一个条件的必然后果。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "ec1403bd960d3bfcdbf8043e19ea9be438abda6d3622e35fa912a24e901e4be3",
+      "stale": false,
+      "targetHash": "d26a43c4c871326cfea81b8d8fd662a1dbfbadcf8e4da9cc24beccaacd71a304",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-3-9e883a048753-g01-b01"
+    },
+    {
+      "note": "not exceptional 表示这些情况并不罕见，没有“非常容易发生”那么强；“不幸的是”也属于原文没有的评价。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "bd33b6e6a10ca0100740c7de7df38ae81728cb7ad7fc782bbed38f6369d1ab88",
+      "stale": false,
+      "targetHash": "cf81ddda4900ca54b8bcdfafdcabd6d8efd388836186e76d30b9d0f6d3ee7556",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-4c4a03e8c186-g01-b02"
+    },
+    {
+      "note": "“转换”是CR里的术语，指的是双面牌翻面。用在这里容易引起歧义。术语的翻译应该和通用词汇的翻译分开\n\n原文：\nSo, we look to see if any of the partial fixes apply, and if not, we either rewind or don’t.\n\n旧译：\n所以，我们先试图执行简易倒回；如果简易倒回不能适用，再看看是否有任何一个部分修正能够适用……\n\n原文此句没有再次加入简易倒回流程。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "402a6a90f3cf6f02508b7a21124a48b490d417f8ffd4f4adc98ed9b25b936ba0",
+      "stale": false,
+      "targetHash": "c26755e39393db56ad3ff1328af24cd4d19989cc110674f1cd296c815db81d3a",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-5-full-backup-g01-b01"
+    },
+    {
+      "note": "原文：\nThings disappearing from the battlefield mid-combat tends to be disruptive.\n\n旧译：\n在战斗阶段中让东西从战场消失往往会造成严重的干扰。\n\n“严重”属于程度上的增译，而这里的干扰程度直接影响部分修正是否适用。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "43bbc7c58df42776916ecfa9faff8648dfde83c57f222f30987531409bcbede3",
+      "stale": false,
+      "targetHash": "9572d1d8a039d37981b243b797db0053ad5cecab519223ecc64f4ee2551dab4f",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-5-wrong-zone-g01-b02"
+    },
+    {
+      "note": "原文：\nthere are some cases where both players have committed the same infraction\n\n旧译：\n其中某些例子是双方牌手同时犯下违规\n\n旧译漏掉“同一种”，并增加了同时发生的时间关系。这里是在提醒读者可能双方都构成 GRV。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "850319c2fa784f1d567d91141a16b15138c4a3c03791040b659f1416fa00c3db",
+      "stale": false,
+      "targetHash": "f35bd7ef8a47d4ede58b0ebae5a8a373be3c18db5a9ef3b6c4befa5b663028c5",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-6-2a45a36a4dd8-g01-b01"
+    },
+    {
+      "note": "Game Play Error：不应缩窄为“违反游戏规则”\n原文：\na player committing a Game Play Error can never earn Failure to Maintain Game State\n\n旧译：\n违反游戏规则的牌手永远不会获得未维护游戏状态处罚\n\n这里指游戏行动失误这一类别，不只是其中的“违反游戏规则”违规。\n\n原文：\nNed notices before any further actions are taken\n\n旧译：\nNed没有进行任何其他动作就立刻注意到了这点\n\n被动结构没有限定动作承担者，旧译却只看 Ned 是否进行了其他动作。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "1c9452eab6ff1cc06ecfe2a5aaaff1f2b75a4c0473e673a97a73c010411bff2d",
+      "stale": false,
+      "targetHash": "cbde7c5c01e0fba1d6f9c920726f644d4a716395a0e65c6d7b2dca6ba35ed24c",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-6-c06a5225ae2b-g01-b01"
+    },
+    {
+      "note": "of course 不能抵消 may 的限定：原文说故意犯下的错误可能属于作弊，旧译却直接判定其属于作弊。后文“先考虑……是否”也明确保留了判断步骤。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "21d5dc5525b9561db68d6c9387f0f78c2db5a0da1426374816e907a2653fcc5c",
+      "stale": false,
+      "targetHash": "8399fff81b21da05d3f23d049706bfa765c04198e2854dc7bc7a2421eb771ab5",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-2-acedf406bd07-g01-b01"
+    },
+    {
+      "note": "standard Tardiness upgrade 是标准的迟到升级，“标注的”误写。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "42723d88d1d82508880411f43241ebb46192c1db077cf8fe3ae327617d685a6b",
+      "stale": false,
+      "targetHash": "5264a5bce5ced46824b8f15ca711712c6712ed953696b77f63a8332aae88f902",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-1-5dc5f625525c-g01-b01"
+    },
+    {
+      "note": "“结束前10分钟前”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "ee6703bec14a4c9b306457e3a1af14a0ac2a3d0fbe756e4c28641f409f240a24",
+      "stale": false,
+      "targetHash": "b68e4be9282bddc5a2e9788cae9912c640541c603f6b8f033209255ea9182250",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-1-63c1d9ce45e5-g01-b01"
+    },
+    {
+      "note": "原文：\n…a player is expected to be on-time with their stuff.\n\n旧译：\n……还应该保管好自己的物品。\n\n原文要求牌手携带所需物品准时到场，旧译变成了妥善保管物品的要求，动作内容发生变化。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "9fcc054d774d320de1551b8845a5731f0d86a53fa7073c600d8b4051c15f84a6",
+      "stale": false,
+      "targetHash": "65b8392b998ad3b89d2244fd6967e55ee3c66fbcf57855d658b813e97c632582",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-1-b595d397a956-g01-b01"
+    },
+    {
+      "note": "“认为这为牌手”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "53467e4b04674476007512a36f74e28c6ba89e84c7997e6662c42ca82710ba04",
+      "stale": false,
+      "targetHash": "c3d234d545e7ea5c6f1c94f1dbbc28b13f74452928640e084f02325c2ff3095a",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-1-d8ec86aff95c-g01-b01"
+    },
+    {
+      "note": "原文：\n…prevents them offering advice or seeking suggestions from others.\n\n旧译：\n……提醒着他们不要寻求其他人的建议。\n\n漏掉了“向别人提供建议”，只保留了接受协助的一面。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "4eba88a3136f2bb0bd3b8ded14ea0a2745daa773d6f9bf0c39340b236a64365a",
+      "stale": false,
+      "targetHash": "06edee64d6cb9a82b99708c8904cc23d5f6743ac451ad4b0398fc6df06b7a18e",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-2-0a1f7ff967c9-g01-b01"
+    },
+    {
+      "note": "原文：\nIf a spectator commits this infraction and is not enrolled in the tournament, enroll them…\n\n旧译：\n如果一位旁观者犯下了外来协助，将他加入比赛……\n\n这是必须补回的条件。已登记参赛、只是暂时观看别人对局的牌手，也可能是旁观者；原文并不要求把他们再次加入比赛。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "7681576331302f64a2c6f502a83cd2c2e8b6eed5a2b4925f597cee62e604e827",
+      "stale": false,
+      "targetHash": "6aabb80e11e8ca40186a9a73752f1126858d29ead07ee9bc13d40d58cf3e94bb",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-2-0a1f7ff967c9-g01-b02"
+    },
+    {
+      "note": "“但比起......比起来”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "3a6d18e5b703d52a9a738af47c2891949ba28caaa66ccbff2506f95acdd2b901",
+      "stale": false,
+      "targetHash": "7ecb095e6c93a7d8d4a91d1a1c07fb5c5c0a0c47512d7b29a08de6da172c9664",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-2-34b6c26caf11-g01-b01"
+    },
+    {
+      "note": "原文：\nSeeks play advice or private information … from others…\n\n旧译：\n……寻求关于自己对局之游戏建议或私人信息。\n\ndecks they played against 指此前对抗过的套牌，不是牌手自己的套牌。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "8d52e50550ceb1e93f38b45d9f53027e667252f9ddf5de1c60ab77ed2309cad0",
+      "stale": false,
+      "targetHash": "bfb288283ab524f3f68f2f738a3b1ccae8780672deb76c07db73e88d9edae32c",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-2-67253bbe1d49-g01-b01"
+    },
+    {
+      "note": "13. Did you force White? / Team Tournaments\n原文：\n“Did you force White?”\n…Two-Headed Giant and Team Tournaments…\n\n旧译：\n“你要强行抓白么？”\n……双头巨人或者团队现开……\n\n第一处把对已经发生的轮抽行为的询问，改成了对未来选择的询问。\n\n第二处把一般的团队赛事缩窄为团队现开，原文没有这个限定。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "90ba54c1764036f59d4a549e1d6f1222da7de8d6bba1ee5c1e99305427d00dbf",
+      "stale": false,
+      "targetHash": "2855d2de25e0b328212604c74b76ca07a8f2636f78565e2ccbac86e8d284892f",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-2-828681ffe1f2-g01-b01"
+    },
+    {
+      "note": "原文：\n…even if that information is used to end the game.\n\n旧译：\n……即使这个信息会使得这盘游戏直接结束。\n\n原文说的是牌手使用该信息来结束游戏，旧译变成了信息直接造成游戏结束，改变了动作承担者和因果关系。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "f37377a109f3aa1fe9edcd276f09030361743ddee91fc6efe5556a38e96308dd",
+      "stale": false,
+      "targetHash": "4f004f17f8a546aadbeee68944b606d79ab20a7d8425339e1261bd7e5a05f3bd",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-2-aa497f48a617-g01-b02"
+    },
+    {
+      "note": "英文为 a Trinket Mage altered to be examining a specific artifact，即把琐物法师的图画加工为观察某个神器；中文变成在牌上写神器名字。相邻正文正在区分图样加工和详细文字笔记，这种变化会改变许可示例。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "2a9316aa27a003e0876e765f446f4795cb7ea031c3a937098e641dcd56056c41",
+      "stale": false,
+      "targetHash": "6cbd27e755d0cd0c77d034bb4b2f5bc2d2a2af83127630edeccf9839887dce8a",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-2-b988d07dafee-g01-b01"
+    },
+    {
+      "note": "原文：\nEspecially for players who are still in the tournament … the Match Loss should be issued.\n\n旧译：\n特别是这两位牌手都还在比赛中的时候……将获得一盘负的处罚。\n\n这里有两处实质问题：\n- Match Loss 应为“一局负”，不是“一盘负”。\n- 原文强调犯下该行为的人仍在比赛中，没有要求“这两位牌手都”仍在比赛中。\n\n前一句也漏掉了 spectator",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "ecc1535655b252c6716d9be9e1b29ff6417edf5f1755d6269b947846d3e154ca",
+      "stale": false,
+      "targetHash": "f37cb6d16a85cebd5e9c1e286761259642a48aa258b9632bf39cbbe999c14834",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-2-f3e037433dc9-g01-b01"
+    },
+    {
+      "note": "原文：\n…allows the match to conclude in the allowed time.\n\n旧译：\n……让比赛在合理的时间内结束。\n\nallowed time 指允许的、规定的对局时限；“合理的时间”变成了主观判断。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "a9b58316afdf778ddd1b6d0a0caefea4f476e96476dd7c4d32e79841249401de",
+      "stale": false,
+      "targetHash": "a8246770e111a033543a6dae3b67d9ad987de549e20db14066ad618d219700b4",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-3-0d347345bcf5-g01-b01"
+    },
+    {
+      "note": "There are many loops … where they will reach a certain condition “eventually.”\nThese loop end states are also not specific enough.\n\n旧译：\n也有很多循环有可以“最终”达成明确的结束状态。\n\n旧译无依据地加入“明确”，同时漏掉了下一句“结束状态也不够明确”，使论述方向发生变化。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "0430e55cb5ae427a1a121b54e9f78de9c35db86426516318dd84bcfddf35a88b",
+      "stale": false,
+      "targetHash": "ece4b3214c66fb0e9aaf63ef43f6f05f2fa1a024e6b10a508f322e0691310088",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-3-372892efcf9b-g01-b01"
+    },
+    {
+      "note": "原文：\nIf the player makes their play quickly and continues at a reasonable pace…\n\n旧译：\n如果那位牌手采取了行动，后面动作的进行也恢复到了正常步调……\n\n原文要求提醒之后迅速采取行动，不是最终作出了行动便足够。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "13b842ec149a8514f5f223ffbcddc7959261f7057bf6fbf895808778677107bf",
+      "stale": false,
+      "targetHash": "2fb75bc718617b3cea3960038c9bfeea5bfeab8ef058495233323c53e4f8e03c",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-3-597193eb0d5d-g01-b01"
+    },
+    {
+      "note": "always漏译\n\nrestroom break 指去洗手间，当前去厕所或者休息一下额外加入普通休息这一事由",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "44d97f8cb5c9562806f3b83b6fe7843d010fe0cacbaf2b6e5a7ac176918f9dda",
+      "stale": false,
+      "targetHash": "85a6bb7ba0dbd2deefc5d34c5a0f8866ad6401912ca895b7beada259ad01106e",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-3-b3abe29de704-g01-b01"
+    },
+    {
+      "note": "原文：\n…Temple of Malady in the B/R deck that physically runs Temple of Malice…\n\n旧译：\n在一套黑绿套牌里把疫病殿堂写成了恶意殿堂……\n\n原文是：黑红套牌实际使用恶意殿堂，却登记成疫病殿堂。旧译把套牌颜色和两张牌的位置都换了。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "089e3f65d51f19bd2f4e27451c087d9b7d0e51ea2db6cbc3a3e74d45b05bf28d",
+      "stale": false,
+      "targetHash": "dc0eaa3ce7f43bfcaba28dea30d8c7510f11670a6c8b3f54ef6446b63204318d",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-4-7bee0468065a-g01-b02"
+    },
+    {
+      "note": "写了……的牌手可能说明牌手在试图作弊？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "1284c94ff414f9e1cb973b4d331c8be7388bd829f35db35653f5d8972e8457ef",
+      "stale": false,
+      "targetHash": "a6a64f72af5a18a969d39379544457c0f43085af740abb45bc9c4e1921249ddc",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-4-7e69347d9ec1-g01-b01"
+    },
+    {
+      "note": "漏译may\n\n原文：\nThis may result in a “strategic decision”…\n\n旧译：\n虽然这会导致「战术讨论」……\n\n前一句已经允许讨论。这里说的是团队可以利用选择修改哪位牌手的牌表来作出策略性决定，并非讨论本身。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "60efc9c8c3e4074b84088b7434830ea2b775fc664a7396d9e1c0368747ab5ab6",
+      "stale": false,
+      "targetHash": "a87638e01ad490f403a380d7952c120718dc4a994019eb6f6fe224dedd5548d5",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-4-7f36807c31d9-g01-b01"
+    },
+    {
+      "note": "又不分局和盘了",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "a6edb59d095028e53815959f896fa2d41353ffdcfa0e953960717e2f98798210",
+      "stale": false,
+      "targetHash": "723bd06f400de65bfc73f3defdc9b73f4ad7f779349cef93d21aa312a7a59f2f",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-4-97cf0fc4bb00-g01-b01"
+    },
+    {
+      "note": "原文：\nDecklists are often a rushed last-minute job.\n\n旧译：\n交牌表总是一项匆匆进行、赶在最后才完成的任务。\n\n这是频率增强。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "ac902318cf1eb256b5a3c683b4f1995930d41189c51cfef88228003e3db37c5f",
+      "stale": false,
+      "targetHash": "9bec50a961715d557e43109a207dfffec6f3de70638b7e5fa356da86e5deb438",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-4-aed2431a2c67-g01-b01"
+    },
+    {
+      "note": "原文：\n…find a problem with 10 min remaining the the round…\n\n旧译：\n在一轮开始之后10分钟发现一个牌表有问题……\n\n这是明确的时间关系错译。原文虽有重复的 the，但意思是该轮还剩10分钟。\n\n原文：\nNow, this doesn’t apply if you feel the deck is illegal… You can inspect the library… If the deck is in fact illegal, go ahead and issue the infraction.\n\n旧译：\n但是，如果你觉得牌手的套牌是不合法的，那么可以立刻给出判罚……\n\n旧译提前加入了“可以立刻给出判罚”。原文接着要求检查，并在确认套牌确实非法后处理。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "eb1e5d7862e32eb7085d52f7b9aab32e428062df53ef6c2b5864d5275a0a0efb",
+      "stale": false,
+      "targetHash": "3ff56613ba785fac157a3cab8d74169fc5f17946aace30ab5e5919480492ba5d",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-4-dc6559ea7640-g01-b02"
+    },
+    {
+      "note": "如上一句的批注所述",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "fcceb1c575e796a06eca560fe7a79ffed09eb577c7399593edbe61f899842074",
+      "stale": false,
+      "targetHash": "c85a6b5d744aaddcce39d5e767971da41ca0de957b6ed151200770da2be037c8",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-5-12426d108459-g01-b01"
+    },
+    {
+      "note": "原文：\n…a penalty may be merited due to the potential for advantage.\n\n旧译：\n……所以我们应该给予判罚。\n\n原文表达可能有理由给予判罚，旧译变成了确定的处理要求。\n\n同段 may be added back into the deck 译成“可以考虑让他把这些牌加回去”，也额外加入了裁量意味。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "753cd8e5d2cf5f02714616e237d82b3b4e03bf665d713d14f059a2d9b1d6d9da",
+      "stale": false,
+      "targetHash": "550253254b35882889473d61df2ca43df39fe3b3a9305f1cb514330e51c866a5",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-5-1e9330481a49-g01-b02"
+    },
+    {
+      "note": "原文：\n…the sideboard is kept physically far enough away that it doesn’t become mixed with the player’s library.\n\n旧译：\n将备牌与主牌显著区分开是非常重要的。\n\n旧译漏掉了实际分隔距离及防止混入牌库的目的，还将 library 换成了“主牌”。视觉上能够区分，并不保证不会混入。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "ecbd32f3c0e4503f9c1bdde563611db9ffe9747821ced65b27d1ba6a2eb6bcca",
+      "stale": false,
+      "targetHash": "92ec68dd5d0ca05f14093425daa6c8fef38eb40c3ece3bb5553818ba81032ec9",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-5-da4268cedfe0-g01-b01"
+    },
+    {
+      "note": "match又变成游戏了",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "b404eda7660e8d64c50bbc7f8a4cde921adf7b1fa86a141e5c5ba2f485ffb2f4",
+      "stale": false,
+      "targetHash": "ad022dd9dcd1d5ec5002183d83b4f8b3983a6ba4f43547a82508babfa5e97b5e",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-5-da4268cedfe0-g01-b02"
+    },
+    {
+      "note": "末句英文的 causing more than 4 解释将双面牌洗入套牌造成的后果",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "c231fd7881716e69de6bdedecba1d40d99ef76412bd9a913529dd622f3246c11",
+      "stale": false,
+      "targetHash": "53d05ab221422462e41fc07888d583faad3e90652592973f05cac19589f49cc7",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-5-da4268cedfe0-g01-b03"
+    },
+    {
+      "note": "原文：\nthe opponent makes a choice regarding the discard spell\n\n旧译：\n对手……做出了施放弃牌咒语的动作\n\n原文说的是“与该弃牌咒语有关的选择”，不只指是否施放，也可能涉及该咒语的其他选择。虽然前面的示例提到施放，但这句说明没有将范围限定于施放动作。\n\n同段后面的：\n对手并没有因为他没有阻挡者而攻击\n\n还漏掉了 assuming，将错误的假定写成了事实。\n\n“在每个每个例子”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "60c7def9eb151b88da3c96da79e8d37e60d2eeff69dddf89046db22c51d9c6d2",
+      "stale": false,
+      "targetHash": "2cbe8772ee70dd81003c0d1576676f9fdef85b0b852afd059621f6a9aa969b7b",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-7-20317a744b66-g01-b01"
+    },
+    {
+      "note": "原文：\na backup … should be considered.\n\n旧译：\n在这种情况下可以考虑……将游戏倒回到宣告攻击者之前。\n\n这里要求的是应当考虑是否倒回，不是要求一定倒回。“可以考虑”只表达许可，弱于 should be considered。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "3e547ca4b277df1d98b9f415fbcdf07edc7689446346039a7d86262c9f827cba",
+      "stale": false,
+      "targetHash": "eb12b0418548590d50db6b7ffa321c91746e6d02297608322d80d8ff7b3ef850",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-7-60602d07adb5-g01-b01"
+    },
+    {
+      "note": "原文：\nThere is not a great argument for a land, a creature, and an instant being a pattern of marked cards.\n\n旧译：\n一张地，一个生物和一个瞬间，这个情形似乎并不是刻意做了记号的牌。\n\n这是明确的概念错误。pattern 指有记号的牌之间是否构成规律，原文没有判断记号是否故意制作。规律与意图直接关系到不同的判罚判断，不能混用。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "6901076966e52653b3793f3ab8dfa2415a7aa29aafdfb8a491e16af1d76eaf0e",
+      "stale": false,
+      "targetHash": "41c54798a004fda97fe0870d76a722cf7cab7969f058bd057f9b745215c55869",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-8-60b9c2363049-g01-b01"
+    },
+    {
+      "note": "you may opt to not tell them\n\n译成：\n可能不告诉他们更好\n\n加入了“更好”这一价值判断。原文仅授予选择空间",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "d90e3d0ee94cdf57ad251f3658cc5d8ec90cee01d206cdc7617bc6e3df4ce566",
+      "stale": false,
+      "targetHash": "49f9d1e828d64446818ff4e8d2c03b69c1cdda53eada537aa976fea9fdb8ed4f",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-8-6a8c42bbc1e8-g01-b01"
+    },
+    {
+      "note": "原文：\n11 cards have markings in the corner and 10 of them are land\n\n旧译：\n11个翘边的牌套里有10张是地\n\n原文是牌角有记号，未限定为翘边，也未限定为牌套上的记号。\n\n英文最后一个例子明确为 post sideboard deck",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "c7e892704c93fb9e61f5e20ce0a1cbf081b82a4e09622691a18f65e7a0a44b39",
+      "stale": false,
+      "targetHash": "9866b77aaa17f720dcbcfd99b738db5abc7b8fe5a84a40ac30dc89c15904fd39",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-8-6d6198463d9e-g01-b01"
+    },
+    {
+      "note": "原文：\nthere may be marked cards, necessitating changes, but it is unlikely to be serious.\n\n旧译：\n那么这种有记号的牌可能不会被认为很严重。\n\n原文说明：即使预先打乱牌套，仍可能出现有记号的牌，仍须作出更换，只是不太可能严重。旧译漏掉了必须处理的问题，也将问题本身不太严重改成了“可能不被认为严重”。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "24da3221b1d874b3894a5214f2d250f6175e8fe8758116ab20438694ff7edbdf",
+      "stale": false,
+      "targetHash": "0a53b27c9b5d5b33cb884820e9d4552af34bb929146eab6709b387cf5cc79a96",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-8-ba5ed5df9b91-g01-b02"
+    },
+    {
+      "note": "原文：\ngive them 10 minutes before assessing a Tardiness Penalty.\n\n旧译：\n给他们10分钟，超过时限则有可能得到迟到的判罚。\n\n原文指定的是判处迟到之前给予十分钟，旧译另加了“有可能”，将程序要求写成了不确定的处罚风险。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "eb76b5f39196ee224876f8bf38e7223b36dc399483520e820633be179b649f1f",
+      "stale": false,
+      "targetHash": "8415813169efc75f0f54bba09bc2b08a4c276c39dde6b40269b47e80295750e8",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-8-c7de3d00cd9f-g01-b01"
+    },
+    {
+      "note": "原文：\nnot all foils are marked, and not all bent cards are foils.\n\n旧译：\n并不是所有闪卡都是弯的，也并非所有弯卡都是闪的。\n\n第一分句说的不是所有闪卡都“有记号”，旧译改成了不是所有闪卡都“弯曲”。两者不能等同：弯曲未必构成可辨识的记号，记号也不只来自弯曲。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "3d8712a6d2c40260da83b7b202d7a67a74768d1f8f7bcf13d7c494d2a14355c7",
+      "stale": false,
+      "targetHash": "23a8a9f61558696e9c3b3673dce2bbf19233b4dd959c7022d992852aa35c0ba3",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-8-f02274527ee4-g01-b01"
+    },
+    {
+      "note": "原文：\ntheir position should be maintained if they weren’t supposed to be included within the shuffle.\n\n旧译：\n所以在修正的时候需要将它们保持原位置。\n\n这是另一处应优先修订的实质问题。原文只要求保留本来不应纳入这次洗牌的牌张的位置；旧译变成只要位置已知就应保留。\n在未充分洗牌的情况下，已知位置可能恰好就是应通过补救消除的信息，不能一概保留。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "182aa20fa0b28aa6aab355dcb5db236b5446eb2272111ead115f920bdadf74d5",
+      "stale": false,
+      "targetHash": "233efce1524939e30c950f11e97cc8949d285ff3773e5a3cb04cf8c9373cee77",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-9-cab8f6400c4a-g01-b02"
+    },
+    {
+      "note": "原文：\nsomeone doesn’t shuffle … a pile of cards that are required to be shuffled, either because they forget or because they don’t think they have to.\n\n旧译：\n牌手忘了洗一部分的牌库，或者忘了洗一小堆牌，这一般是因为牌手忘了或者认为这不是必须的。\n\n原文先说明未执行应执行的洗牌，再列出两种原因。旧译先将行为定为“忘了”，与后面的“认为不必洗”不一致；同时漏掉那叠牌必须洗牌的限定。\n\n同段的：\nthose who just give the library a quick one-two-cut\n\n在旧译中完全省略",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "524d5c891aeff2218a01f7a9ce554e8afaaf6e2dad74e3a6b34a75d2aadb58a2",
+      "stale": false,
+      "targetHash": "5495100ee66ad6ff1871f195edcaad51bcf551dbd6691a88fbe126b31a95e204",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-9-cc01c2343ef0-g01-b01"
+    },
+    {
+      "note": "原文 one or two cards’ general position，旧译“一两张牌……特定位置”。general position 是大致位置，不要求精确位置。\n\n原文 to reflect the potential for advantage，旧译“因为获利的可能性很高”。原文没有 high。\n\n原文 when the deck is presented，旧译“在他洗完牌之后”。原文指定的是套牌呈现给对手这一时点。\n\n原文 virtually eliminates，旧译“消除了”。virtually 保留了未必完全消除的余地。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "89c92310f6ec38f309444d36e6e669a95a6a8be24adb83eafa51df0963650eff",
+      "stale": false,
+      "targetHash": "79dfbe160c7e17027971edd7468b133072e77b29a114a5d55dd865e87b2326c8",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-9-dc7231020edb-g01-b01"
+    },
+    {
+      "note": "原文：\nTournament errors are typically more disruptive and less “easy to make” than Game Play Errors.\n\n旧译：\n比赛失误对比赛产生的破坏性，以及犯下此失误的难度都要高于游戏行动失误。\n\n漏掉了 typically，把通常情况写成了无条件判断。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "6baac324bd15ba06f0630ff8221aa8194aa872c552bfe66c9d6b5d316d79fc83",
+      "stale": false,
+      "targetHash": "ae4ecaec3600db1ce620555116e4bf05ce76267330b0ce0e5395e92ad60ac14b",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-917c2afc6035-g01-b01"
+    },
+    {
+      "note": "原文：\nThese violations can be quite disruptive … and/or can give a player a significant advantage.\n\n旧译：\n这类违规会扰乱比赛的整体流程……或会使牌手获得显著的优势。\n\n两处 can 表示可能造成的影响，旧译“会”将其写成了确定结果。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "e5d37f2df03dad328723f3bbcd15092d6a3a87ea9e92032502047a39e0b3ec7c",
+      "stale": false,
+      "targetHash": "74ece4800c4307bef3189fa0e668bd09a6586a89d016808840840c72652dbc01",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-3-b4af0936cff6-g01-b01"
+    },
+    {
+      "note": "原文：ask the player ... and issue no penalty\n旧译：“要求牌手……且无须给出判罚。”\n“无须”表示可以不给；原文在此处明确要求不给。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "fcd13b2dfe8b402cda1ed3a0fb1cf1fc4733219bcc0e0ba8f9bb8db64c036271",
+      "stale": false,
+      "targetHash": "a7820d6bdf700d9216666e2e8f29a4ff52e0df8e980ea1751f1d53eb2a57d9f7",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-1-432fd0e7f5bc-g01-b02"
+    },
+    {
+      "note": "match又沾游戏了",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "3651e6465ed0b0b99f489fdbb9bba21acf77ba4553a2a6aa98691a804528b844",
+      "stale": false,
+      "targetHash": "46b2e237ba5b3f8916d03ba3666044c18efcf335d6d52ae3ad8469ca80ff3ca6",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-1-512fcb781fc3-g01-b01"
+    },
+    {
+      "note": "原文：offensive statements are almost always disruptive\n旧译：“冒犯的言论一般都是干扰性的。”\n原文是“几乎总是”，旧译降低了频率。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "278dc3d0958a16fbaef7a7fe6400a0c9e3ecb3138fc053932fc3c9873fd22796",
+      "stale": false,
+      "targetHash": "a92399a7e9935af1ce8a88869d6d3fd52483b4a990aa360be8c12fe29b2fa6bb",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-1-cec71ab27515-g01-b01"
+    },
+    {
+      "note": "原文：... is highly encouraged\n旧译：“我们鼓励裁判……”。\n漏掉了强化程度。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "7f96297a9f28d76fd507d7787b7221a20d88a51e9f0d480d5b13d78334f6102e",
+      "stale": false,
+      "targetHash": "ec7e6d7279f122247c4709452ad817771a8328b3f95646a2fd7bafc696433faa",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-2-7b6b104c70ad-g01-b02"
+    },
+    {
+      "note": "原文：without knowing its definition or being aware of its vulgar nature\n旧译：“并不知道该词汇的含义，或者意识到它的粗俗性质”。\nwithout 同时管辖两项。旧译第二项漏掉了否定，意思相反。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "6a2131d6903b388218670130906996c8ca2aaf5bff7735b81a9a9ac26537ed54",
+      "stale": false,
+      "targetHash": "c2e3f21c51520206181787cd5094fb0ad29b1f4bf160dd6101a82dae94ad2763",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-2-7e8d01867103-g01-b01"
+    },
+    {
+      "note": "原文：continuing to not do so，回指 demonstrating sincere remorse\n旧译：“如果仍不进行道歉将导致……取消资格”。\n再次错误地把懊悔等同于道歉。\n\n同段的 regret and humility 也不是“后悔与羞愧”，不过原文feel humility本来也有点绕",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "de29fab93512dbef6f09abec014ac165359af791e63bd881c56f3f1db1f33745",
+      "stale": false,
+      "targetHash": "5f3526d77a5dafc3e2ae4d3e7f2333970b2eb2a9b6a5b8f150dbc7a77f510bd0",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-2-7e8d01867103-g01-b03"
+    },
+    {
+      "note": "原文：Among other things, penalties serve to educate\n旧译：“在其他情形中，判罚旨在教育”。\n这是列举处罚的功能，不是在划分适用情形。\n\n“以不同的处理”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "1324589e04040313ad6d06122b17ff74ef387e7853ed755048fda578324183c1",
+      "stale": false,
+      "targetHash": "7e1442ab133b88ef7946c97439394cddf05ab80389bb5cba8e8e14baea53ea2c",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-2-9a2a91daa1e1-g01-b04"
+    },
+    {
+      "note": "原文：Threats of violence\n旧译：“暴力挑衅”。\n威胁是表示将实施伤害；挑衅可以只是激怒对方。两者并不等价，会影响“严重”与“攻击性举止”的归类。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "a4664b011fc9f101c98e58d22cbbec4dd1453b77949c20a1c2a1cd6d3abdaa31",
+      "stale": false,
+      "targetHash": "8102094e2aefd0113eb76bc7461a8f75f8ccb56a1b68228f94a65edf96d6f040",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-2-a7d1b3aa95da-g01-b01"
+    },
+    {
+      "note": "原文：should be upgraded to a Disqualification\n旧译：“判罚应当如下详述的升级”。\n原文在此处已经明确是取消资格，旧译遗漏了这项信息。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "ac85f3babd5c47eef455b75f2dd5a0b2efdb23d66cbf6dfaa5cefcf2a183b77b",
+      "stale": false,
+      "targetHash": "5b5875e4c713fcebff7f321b56b2abf67dd42e5b9dad07d791b783255011f7fb",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-2-ba783d68be37-g01-b02"
+    },
+    {
+      "note": "英文列举 threatened，中文在同一列表写成危险，而前后文和其他相同列表均为受到威胁的感受。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "4a74e6dcc2e7f0332437156e8e5e481b6f797ca88db9338af72c89d137fea151",
+      "stale": false,
+      "targetHash": "c1b99e1c7e2eba03655fa8fbd9c403f6753b9191b6bbc95f9b43bdf199fa772f",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-2-d0f69da0f8d1-g01-b01"
+    },
+    {
+      "note": "原文：doesn’t actually hit any of them\n旧译：“实际上没有伤到任何人”。\n原文说椅子没有击中任何人；旧译允许击中但没有受伤的情况。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "9a74da384629f108696811d63f121670602f5a555de0b5b21936359ac401b88d",
+      "stale": false,
+      "targetHash": "827e5249bea78be327dc8b7e3b20d3a6c032d309441bace63d185e24ffc19fc9",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-2-dbee2d2b803b-g04-b01"
+    },
+    {
+      "note": "原文：with no reason to believe otherwise, assumes ... due to their gender\n旧译：“认为对手拒绝的唯一合理理由是因为她的性别”。\n原文描述对手的认定及其相信其他原因的理由，并没有断言性别是“唯一合理理由”。旧译提高了这一推断的证据地位，也擅自确定了性别。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "1ebb66eebb1eff68d03c00b94d26d129205d515c7322dff54f939d8f9bac04a1",
+      "stale": false,
+      "targetHash": "bca6461ca6434440889173fc6915392a0d214fe9d39f2b41ad39e4f6ce16370e",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-2-dbee2d2b803b-g06-b01"
+    },
+    {
+      "note": "原文：sure to offend some people；a lot less likely to cause feelings ...\n旧译：“很可能会冒犯一些人”；“不大可能会导致……感受”。\n第一处把确定性降低了。第二处将相对比较改成绝对的低概率判断。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "8ca08d60139e90628600efd32d339d62889acb8379d723f55619f50bf5a9fe3d",
+      "stale": false,
+      "targetHash": "0a98467e96dcd83b9c34dac5bc5ec503379f6b5649a7501a02a8019de7341f0b",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-2-dbee2d2b803b-g09-b01"
+    },
+    {
+      "note": "原文：even if they are not given the chance to deliver it\n旧译：“即使对手并不想接受致歉也是如此”。\n原文的条件是没有机会实际表达道歉，范围更广；旧译改成了对方是否接受。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "741a6c389413f391d3242de2fba81d77205be302104be28692423c0912aed820",
+      "stale": false,
+      "targetHash": "1fb18594956fc549104addbb35bfdeb5fdcfc5ff76d24802b21ca5cdaab279a4",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-2-eacede6eca1d-g01-b02"
+    },
+    {
+      "note": "round老问题\n\nrecorded 在这里描述已有的对局结果；through the normal course of play 说明这个结果来自正常打完游戏。牌手已经输掉对局，随后又违规，此时再把同一个对局判负，处罚便可能没有实际效果。这就是后文允许把处罚延后到下一轮的理由。\n\n盘！局！轮！",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "018420833e9ab408ab388c75e3f385f8e53b54343607d80a5da9b1c06759f7e6",
+      "stale": false,
+      "targetHash": "b5d0fdb77b2c9378872708bd689474fe83044f7d1f402404896a584085d25f0b",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-2-fee9b19661a7-g01-b03"
+    },
+    {
+      "note": "原文：an outside-the-game-method\n旧译：“一个比赛外方法”。\n这里指不属于当前万智牌游戏的方法。“比赛外”容易误读为赛事之外。\n\ngame这里又给翻译成比赛了",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "7e5e45c823e195105190df0930e2c393ad51782e86fd7df4b45acc0fa09f5c20",
+      "stale": false,
+      "targetHash": "c56a0cf9f18f63684563e917d878a7953592d5f600354f708fe6e61f7057e710",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-3-657c12fdf0dc-g01-b02"
+    },
+    {
+      "note": "“来觉得谁获胜”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "90b894d5f756c35347adbf95ec165d086e85ed07da25c6c00a35780f59c568a8",
+      "stale": false,
+      "targetHash": "148909ab551643963d64347ad87cf8009026999531e4d2d9a8a5410e853927ee",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-3-b8490451539d-g01-b01"
+    },
+    {
+      "note": "“占绝对优势更高”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "e0c8bebc5d11269e61604dba5b988d873e4727bd5ad3dd6ede7a1b5a33780fb1",
+      "stale": false,
+      "targetHash": "cd31ad70613f8243c9060214de8ec34ae84ae9172409a95a1cb4422693069a0b",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-3-cb1ccec4a295-g01-b02"
+    },
+    {
+      "note": "cannot consult those other matches 禁止向其他对局咨询",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "1915bc29c6be4b4a16dd6f19fdb1099d5e64e19555f27337f26e275be99eb362",
+      "stale": false,
+      "targetHash": "11e8f51c24e32d81216fe0c9f53db7b1b3b045827fe0d981dc4805722d8c146e",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-4-7fbe7fcc543c-g01-b04"
+    },
+    {
+      "note": "it’s rare ... without at least a few ... 译成“仍然总是会有一些……”也把高频变成了绝对发生",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "6f278609dc535658e561ce98f8d12fe8c5d68722b43c2d6c36fa4508e1650dc3",
+      "stale": false,
+      "targetHash": "cb20742ee625883e4dcef08528dfa5ae92fd61d79a59d5f3693dcf6ae77e6302",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-6-16b892909e5e-g01-b01"
+    },
+    {
+      "note": "原文：may provide players with incentive\n旧译：“都会鼓励牌手……”。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "e75437b5f4445d157c3fddbe2e48d861a074a9f638a2f955edd66cc957fc72a8",
+      "stale": false,
+      "targetHash": "6b9824aca9117b20baeba8e680056703c574a13d016ec17282dddd82740479c8",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-7-1589a26f2b4d-g01-b01"
+    },
+    {
+      "note": "修正笔误\n\n“他认为它”？？？对于裁判来说，我详细这种可能不是笔误是真情流露了",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "8a9f8fc48240da6e6e530eae7c7748f4a8cc6f086dddcd160dc4fe731823bd2e",
+      "stale": false,
+      "targetHash": "3c60fba4323bc1174a2c52356cf2708d334d2e8a385755c2732d513b6fce1489",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-7-1ac23e47eaeb-g01-b01"
+    },
+    {
+      "note": "原文：run the clock out in order to win or deny the opponent the time needed to play\n旧译：“试图消耗掉对手取胜所需要的时间”。\n漏掉了“耗尽时间以获胜”；同时把对手“进行游戏所需的时间”缩窄成“取胜所需的时间”。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "793de048a71e29d10201ed67cf8e45c520b8d1773318180ccd0572e57af54ce7",
+      "stale": false,
+      "targetHash": "4b17372afb1fc076792c81430764770cdfde7c70797c071e81ab94a22ea810b4",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-7-54ac2c19b95d-g01-b01"
+    },
+    {
+      "note": "原文：After splitting the match 1-1\n旧译：“双方在对局中打平后”。\n指双方各赢一盘、对局仍在进行，不是整个对局已经以平局结束。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "bdeb8ce8ee7a7258d06d0c54bab9c85a94c988048d4b3c9ecc549337242c6f12",
+      "stale": false,
+      "targetHash": "c199cc11f80b5358891e9d33856645dd7f0a92ea03669fbb14d0dd7bea421e9d",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-7-76f24e27fd23-g01-b01"
+    },
+    {
+      "note": "原文：each team advances in the tournament and earns prizes as a group\n旧译：“每个团队成员是一起参加比赛并获得奖励的”。\n漏掉了团队作为整体在比赛中晋级这一点，削弱了队友共同承担责任的解释。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "1839eec8fc61e120d4410deb205ec0a70ae5dbe8d2c69162e15743d3c2caf024",
+      "stale": false,
+      "targetHash": "d83de7982fbdeff3741ad1f422364a28bc379702aac9bc21462485606a825508",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-8-7265ca2f30ad-g01-b03"
+    },
+    {
+      "note": "原文：want to let Alex get in a hit\n旧译：“他想让Alex多打一点时间”。\n是让 Alex 成功攻击一次，不是延长游戏时间。\n\n同段“下回合击败Abe”应为“下回合击败Alex”；英文没有 Abe。\n\n原文：determine as much of the truth as possible\n旧译：“尽量根据事实来做决定”。\n原文强调尽可能查明真相，不只是判决时以事实为依据。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "2b7511d0e692fcf8bdc4c488cf09d93d6aa65420cdba117ffa945c029b60c199",
+      "stale": false,
+      "targetHash": "27a902cc32e40d7a2f5148950e4d4d8d34b665eb66f92ff9d7ca40eaf50d6caf",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-8-f008d884925f-g01-b02"
+    },
+    {
+      "note": "原文：prior to giving ...；the Head Judge should be the one giving it\n旧译：“在给予……处罚时，获得主审的授权或同意也是必要的”；“取消资格的判罚则必须由主审给出”。\n第一处没有明确保留“事先”；第二处把 should 加强成了“必须”。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "f4a2fc017308aaf982b90aa5ad53e3c23b3133f32e22df970f0b9ac21741a390",
+      "stale": false,
+      "targetHash": "23deffa0c2eb06728c8ef75742dfb906640889a689b84b3225b10c6c69d033de",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-a2b09b1caa1c-g01-b01"
+    },
+    {
+      "note": "原文：all these things are vital ... to ... a good tournament experience\n旧译：“这些方针的存在对于保持良好的比赛体验是至关重要的。”\n这里回指前文涉及的比赛体验要素，并不是“这些方针”。旧译改变了论述对象。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "23b3571222b93b0adb803d82d114726d1bfffb2908bd73d7520dcce4ba078fc0",
+      "stale": false,
+      "targetHash": "1abf0daf0b4fe83b9f2ee5001036f34587f3a32fb28589c3128e0e2188b839ea",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-4-d4fea234b84c-g01-b01"
+    },
+    {
+      "note": "原文：\nNewer judges will sometimes talk about how “mis-resolving a spell” is a Game Rule Violation.\n\n旧译：\n新裁判有时会讨论“错误地结算一个咒语”是否应当是违反游戏规则。\n\n原文是在举一种不准确的归类说法，然后予以纠正；旧译改成了对归类问题的讨论。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "1046dc6e68f3f2dacbe36c71a1486e980927ad4b70b3e66305bb6f3349a4235a",
+      "stale": false,
+      "targetHash": "4d7843baf82a98bf538fffb4dc832b50f1bd93703acb54d8ce87ba09d318dc9e",
+      "translationRevision": "zh-r0001",
+      "unitId": "annotation-block:ipg-ann-section-2-5-definition-context-g01-b01"
+    },
+    {
+      "note": "旧译：“由于记录和收集方式因软件而异，故取消此方面的特别说明。”\n漏掉了收集、保存的对象 penalties（处罚），使“此方面”指代不够明确。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "46d8d018f0432658322d96bc44243a2d314a36134e0fad80ce2c3d53d9af83f4",
+      "stale": false,
+      "targetHash": "cead1c7df16ec60f41701508e3eb456bd26544ea3ab870ac2772c696fa5aef65",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-app-b-change-01"
+    },
+    {
+      "note": "game又整成对局",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "256455c0020fbf2ac60600558b120715b83529ba57f4d6dafd436905c65752b9",
+      "stale": false,
+      "targetHash": "73a96761d399851dc7b8b1efef0a39c4bb46297f9c79b969a14839dbac9c507c",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-app-b-change-05"
+    },
+    {
+      "note": "misconduct 指“不当行为”，不能缩窄为“失误”。例如故意违规肯定是不当行为，但不是失误",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "ad9192c37b7a5715e0056058e9760bf51b84f92bd58ffc32e2648bee76948c08",
+      "stale": false,
+      "targetHash": "b582794fff1f6ac511b446e3d12af62a3bdda3607923fb6ffc3f626bcbf641d6",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000001"
+    },
+    {
+      "note": "改成大学院废墟链接",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "d79c428b380991c5925cb84d5ffdb43eae846490e43ecbe94cfe17c10c59a81e",
+      "stale": false,
+      "targetHash": "ea8bbd5cab67e4cec395e15b6bcd257986e2f67df4429d05ff021e4422f0087a",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000003"
+    },
+    {
+      "note": "MTR有些东西没来得及更新都算了，这个文件从24年9月后一个字都没动过，为什么链接还能不及时更新的？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "4206f826a8021e7806099bbd5d76d790c6f965eee5909fd5be16c0c92e6d3a42",
+      "stale": false,
+      "targetHash": "f0528b7fb8a797ac40f23cd8f4c1d6d0ad59aa385fabb3de5e8f88e7612f7264",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000005"
+    },
+    {
+      "note": "match翻译成盘，而且是和真正的盘并列在一句里面\n\nthey play没强调出来",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "cb3530effac018235b59134959549b470d7c26e5fc2f66b2b55b6e79fb74a03f",
+      "stale": false,
+      "targetHash": "62ca61bdfc9f1f3538b37ef36fcc3710f17fcdb86ff1b9cf32083e83bdfc236f",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000012"
+    },
+    {
+      "note": "sufficient是“明显的”？\n\nreflect this fact 指在报告中反映这一事实，‘反应’是对刺激作出回应。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "8e212e3b36639a51b77dd42524e1a99503e4b66bd9532ea1f90fc5bd37d78800",
+      "stale": false,
+      "targetHash": "29b44985c213a32600aca26620eecd66af9fa7ed6dc7dcd767ff9b0e273956ff",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000018"
+    },
+    {
+      "note": "should是必须，谁教你的",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "bdf7168c9d6ef3bba0a62bebb9c77f25458c6a64d3141a3f047125a8ed56af69",
+      "stale": false,
+      "targetHash": "2b059b7e8ed1a0dd9fd3293347d8204c14a715d5cb4a70b04c86a74a333a099e",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000022"
+    },
+    {
+      "note": "“立即”属于不必要增译",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "8460f6f53c04586553d9b8a0af0d0f78b95e59c4976b3a89c1dc105bfd3ed7d8",
+      "stale": false,
+      "targetHash": "3044148a3d96c7e7698c460594488971d9245553d9f42be4161106ef8d248d10",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000023"
+    },
+    {
+      "note": "“谨慎处之”漏掉了 extreme\n\n“极可能导致”则给 threaten to cause 添加了很高的概率门槛；原文只要求存在这种风险。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "f1d2e395d57968fd6b5c0bafb6e0c9a0b93cf79f2af567dc906c06f41c21d8fa",
+      "stale": false,
+      "targetHash": "ec4c1479f581bd610f68630c6a55c349aa457d85db1e794c5575d1dff75421dc",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000032"
+    },
+    {
+      "note": "正文旧译：\n除非新的牌叠也为非公开\n\n原文没有“也”，无需预设原牌叠同样非公开",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "d6dffb8c4d2395b9c0a4b2b4fb98562331add9a3b72ab367cb1f459fba1296eb",
+      "stale": false,
+      "targetHash": "83af9ffd83d9419135026863790d395e1917fa2b16478852d2301d91309a632f",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000035"
+    },
+    {
+      "note": "原文：\nIf, before or during a match…\nIf the player takes more than 10 minutes… Otherwise, no penalty will be applied…\n\n旧译：\n在对局开始或进行过程当中……\n如果少于10分钟，则没有处罚……\n\n这里有两处明确的范围变化：\n- before 是“开始前”，旧译没有准确覆盖这个时段。\n- Otherwise 包括恰好10分钟；“少于10分钟”把这个边界排除了。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "6e1d1d967800efb6c9022a6d33e36f486fe39fcc9763bfb1a51c2720ed217ed9",
+      "stale": false,
+      "targetHash": "5e527fc2eab6b81c1bb982e8f04897fc4a07daddf83093780021775a67a21486",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000040"
+    },
+    {
+      "note": "round老问题",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "ef1d98cebbe45a6863cf2597e5e7c4ae578a8efb4ce765fcbbc54aadc530a3d0",
+      "stale": false,
+      "targetHash": "52e484a48a0f72cd97866a3709f22565b6a8160daa8d41caf770cd4ea3a84620",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000041"
+    },
+    {
+      "note": "round老问题",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "3726326252637aeec1b6f64b5c08f49c82262077f20eef692c0aeccfb91f0c6e",
+      "stale": false,
+      "targetHash": "0afb8da059981f9462b41784caf1f8f71027cd9bfc75ccda6707ea9105a04bed",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000043"
+    },
+    {
+      "note": "原文：\nA player not in their seat 10 minutes into the round will receive a Match Loss…\n\n旧译：\n如果牌手在一局开始10分钟之后才入座，则将得到一局负的处罚……\n\n原文判断的是本轮开始10分钟时仍未入座，包括始终没有出现的牌手；旧译只写到了后来入座的人，缩窄了适用范围。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "e5b4cddd5358c0eb39c73c49fcf755220f03c403cacbaff97ab2dc4b29238d2f",
+      "stale": false,
+      "targetHash": "7ad50c2bfb10ec03012d4a706acb2aad9ff4a27165dd837484eb1b79e3eae887",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000047"
+    },
+    {
+      "note": "原文：\n…before 1 minute has elapsed in the round…\n\n旧译：\n……在一局比赛开始后1分钟内……\n\nbefore 明确要求尚未满一分钟。“1分钟内”对恰好一分钟的边界不够明确。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "ea8077b1e3572a172f016d846ed614268ec96877d9b98bf6cc360585c495e732",
+      "stale": false,
+      "targetHash": "ecde3d9a5171e420b16e36851aba20d795b16136c6142cf012f8c595e9d149aa",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000048"
+    },
+    {
+      "note": "原文：\nThose should be corrected at the discretion of the judge.\n\n旧译：\n此类错误应在征得裁判同意后修正。\n\n“由裁判酌情决定如何修正”被改成了“征得裁判同意后修正”，将裁量规定写成了批准程序。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "584ca2bc7555a31495668a3e6b6abc9cb87c0d5762c9d1d5e100e33ba1b2a1fc",
+      "stale": false,
+      "targetHash": "3ef847b6b19ceb9337d81a7165f1b9a0216ab7a1abeaba097fc2c6e8d17c44fc",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000070"
+    },
+    {
+      "note": "原文：\nCompanions affect what the player intended to play…\n…alter the deck and sideboard configuration…\n\n旧译：\n行侣牌会影响牌手的游戏计划……\n……可以让牌手更改套牌构成……\n\n“游戏计划”容易被理解为策略，而这里的 what the player intended to play 与两类违规的定义相衔接，指意图使用的套牌内容。后一处还漏掉了备牌。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "89d0e691f024a33ed856663b72688d27ee43dca66d4b126f72a7f457419f4866",
+      "stale": false,
+      "targetHash": "f0c9ee24ff4931d241fe839eff87d0dc4405c66c9dd8098be689eae0b976f08a",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000080"
+    },
+    {
+      "note": "原文：\n…it is discovered during the game…\n…the opponent may have made strategic decisions throughout the game based on the error, and that cannot be fully assessed or offset.\n\n旧译：\n……并在比赛过程中发现，对手可能会在整个比赛中都基于该错误做出决策，而这一错误是无法完全估量和弥补的。\n\n两处 game 被扩大成了“比赛”；may have made 也应保留已经作出决策的可能性。无法充分评估或抵消的是这些决策造成的影响，而非登记错误本身。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "0320b188bca788bb1c82436cd6581e556f1c6acf07bf61076b0f16d359fad9ce",
+      "stale": false,
+      "targetHash": "119a9451b82ef2444c85a4c8264dfdb5f875f38c386a1444d003c52f33481569",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000081"
+    },
+    {
+      "note": "原文：\nThese changes may be reverted without penalty if the player is subsequently able to locate identical replacements to legal original cards.\n\n旧译在“然后照此更改套牌登记表”处结束，完全遗漏了这一句。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "270dbfd5ea989f7e03f5666b1f1e65820cb1960d900e19fbf97d8917ff6b016c",
+      "stale": false,
+      "targetHash": "69597d7af48701d5ad24b0481b064c31b9d3201ea67ad400eb4417dc459e7f5f",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000084"
+    },
+    {
+      "note": "原文：\n…extra cards…that could conceivably be played in the player’s deck…\n\n旧译：\n……且明显的可以使用于该牌手的套牌中……\n\n原文采用可能性标准；“明显可以”将其收窄为明显适用的牌，可能使原本应计入备牌的额外牌被排除。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "68d4e01864f6f3f32ff49a511affacfd05bd7c67ca56891c251558fda6c1718e",
+      "stale": false,
+      "targetHash": "234f95c4e82e8138fcf4b90e24653183f30b322c0bfa3b437f7f0e9fea0ab7bc",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000086"
+    },
+    {
+      "note": "原文：\n…cards (or identical equivalents) from their main deck…\n\n旧译：\n……某些牌（或可用于替代的其他版次牌张）……\n\n原文没有要求替代牌必须来自其他版次；同版次的另一张也可以。“其他版次”是无必要的范围限制。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "d26325917c7e40ad8a414c547a6c9e1367a07fb2b13a593483c7fbfea863a45c",
+      "stale": false,
+      "targetHash": "cd4359e2d20a07f6bde052f91eca963ecde525a9ea8a127703fdfc3319cfdcb1",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000092"
+    },
+    {
+      "note": "原文：\nPlayers are expected to call attention to deck errors immediately…\n\n旧译：\n牌手在发现套牌错误时必须马上叫裁判……\n\n按照本次审校的强度保守原则，不宜把 are expected to 直接增强为“必须”。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "0d0cf4544bf5ca9e371217f64a516a7c1bdf8ec0da2cac231a93dc4026f91d0e",
+      "stale": false,
+      "targetHash": "0147a82dd3553f822bcc2c653245086045b33e10bf87abd78f913966e8ecb6fc",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000097"
+    },
+    {
+      "note": "原文：\nIf the error caused a violation of a companion restriction…\n\n旧译：\n如果失误是因违反了行侣牌使用限制所导致的……\n\n原文是失误导致违反限制；旧译变成了违反限制导致失误。\n\ngame又翻成对局了",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "8b4980bb0b3748813ef2742a27fd27b43dfeb2e5b3d70e6c36915962e6889dc0",
+      "stale": false,
+      "targetHash": "13dfbfaf1adc2b241dbe3081baf4aab537c7d09d5a024b9b25c1d392e80b031d",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000101"
+    },
+    {
+      "note": "game又变成对局了",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "2d1a40e4279826f37d00237ccc9db33e2b108add50e6e7e005c08290db4df56c",
+      "stale": false,
+      "targetHash": "6efc0eebae0053f0aa75b9eb742c461b860627fb5517d5b7c51c91a6d58d2934",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000103"
+    },
+    {
+      "note": "原文：\n…fewer cards than the format minimum…\n…more cards than the format maximum…\n\n旧译均使用：\n当前赛制限定的数量……\n\n原文分别规定下限和上限。“限定的数量”可能让读者误以为赛制要求一个固定数量。\n\ngame又整成对局了",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "441b7d3b43c7c6adac2aac0868839f4ad2ed225cb21a99277eae5144ed054df2",
+      "stale": false,
+      "targetHash": "aba201b6b389f4bb7d13aa8f69d01333487a38930fb5f19e3c8d283acbb1b75b",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000104"
+    },
+    {
+      "note": "原文：\nIf an opponent may have made strategic decisions…\n\n旧译：\n如果对手可能因备牌的存在而作出相应的游戏决策……\n\n旧译没有明确保留过去时，可能被理解为将来会作出的决定。这里的升级依据是对手可能已经受到影响。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "08a6ded9348e71191eaee76367d7ddb5907a88a830838b1f48b71177af174a55",
+      "stale": false,
+      "targetHash": "1696854863fb9f6da10ea644084b6bd40c591e2c02ce4119c28bc261d0a861e2",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000105"
+    },
+    {
+      "note": "原文：\nIf an error resulted in more copies of a main deck card being played than were registered or allowed by companion restriction…\n\n旧译：\n……且是在游戏开始之后才发现此失误……\n\n所贴英文没有这个条件。它会缩窄升级范围，尤其会影响起手及游戏开始前发现问题时的理解。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "af90f64b5e9008c8017c3b290581434e8c2261d9da5b8b0d3349afda9425e87d",
+      "stale": false,
+      "targetHash": "760b091c8fb500608cc692dd1fba0d2b761b56ca083b44f2e95c8c6a93ab9197",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000106"
+    },
+    {
+      "note": "as a result, they don’t：漏掉因果关系\n原文：\nforgets to remind their opponent … and, as a result, they don’t.\n\n旧译：\n忘记提醒对手……并且对手确实没有搜寻基本地。\n\n“并且……确实没有”只表达两件事同时发生，没有明确表达对手因未获提醒而没有搜寻。本节恰好要求错误交流影响对手的行动，因此这里的因果关系应保留。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "0c8d28e6a58527c3a7c16e0ce96b40e45501d23068c00f49d653636e6005b166",
+      "stale": false,
+      "targetHash": "fc3db69a034ad7269e98e1587f282ba63a3caf02631eca324baa489dcfee5590",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000116"
+    },
+    {
+      "note": "原文：\nThough many offenses will be intentional\n\n旧译：\n虽然这类违规多为蓄意\n\nmany 表示有许多，并不表示占多数；“多为”通常会被理解为大多数如此。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "62125df759ec1b309aa8e2f5c57d8233683312a4cc7628aba94b03791d094fa3",
+      "stale": false,
+      "targetHash": "38d3785ef41c685d4f38f8acfa4213cd1744158fa3c0d57898895f5a4eadf188",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000117"
+    },
+    {
+      "note": "原文：\nthe default interpretation applies in ambiguous situations\n\n旧译：\n默认的解释只适用于不明确的情况\n\n原文说明默认解释在不明确的情况下适用，没有排除其在其他情况下的适用。“只”增加了排他性限定。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "fa2a5fe88bc390580950f9316991cf2362b86784019678ac672d462328cb3de2",
+      "stale": false,
+      "targetHash": "0845f7e8dc1323ec4fabb8adec69936d6ef41ad6acb2a12b3511e7ad601ee60d",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000119"
+    },
+    {
+      "note": "原文：\nnotably lighter backs\n\n旧译：\n牌背颜色略淡\n\nnotably 表示明显可察觉；“略淡”只表示差异小，未保留明显程度。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "98fc7b6aeba6ce07aa3c576d5a460f8bbd3331ff17c7b16ff0843dc34de26deb",
+      "stale": false,
+      "targetHash": "2b0ef649d08c6130498ca923f2730e268029d186dc36556edbdde9d3e720e4f2",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000124"
+    },
+    {
+      "note": "原文：\na deck’s owner noticing the pattern of markings would be able to gain substantial advantage from this knowledge\n\n旧译：\n套牌的拥有者已经注意到记号的模式，且有可能利用此信息得到实质性优势\n\n原文判断的是：套牌拥有者若察觉该规律，是否能据此获得实质性优势。它没有要求主审认定牌手已经注意到规律。\n旧译增加“已经”，使升级条件变窄；主审可能因此错误地认为必须先证明牌手实际知情。\n\n这种错误都能犯出来，你们这群裁判简直就是一群裁判",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "2b2094cef175096f742923c639fe4b807d54b446b759ea9c4f7d410c86b3a0d0",
+      "stale": false,
+      "targetHash": "9c44541308c143acee91a646d42a9ec78348f27e539300b8446156a58f4cea97",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000129"
+    },
+    {
+      "note": "原文：\nPlayers are expected to take care in shuffling not to reveal cards …\n\n旧译：\n牌手在洗牌时必须注意不要将牌展示……\n\n又是应当的问题\n\n本句中的“包括洗牌之间”则是明显笔误",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "e97f796c851049cef2957dbc7d95696c70f79306ec64f160f41fdd19881aff9d",
+      "stale": false,
+      "targetHash": "f9f8db97f013bf9fae492e3a69953c5ea6ada3a975c913bd4af0687ee6c6fab5",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000135"
+    },
+    {
+      "note": "原文：Judges should inform ...；The player is expected to correct ...\n旧译：“裁判必须告知……”；“该牌手必须立刻改正……”。\n两处都加强了规范强度。另外，while ... is important 是承认告知严重性的重要性，再强调优先平息事态；“在确定……之同时”容易读成同时执行。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "86e288da4944d69aa6e39c6b1782e9f201cd9d3eb97c2ecdbe11051d3d251ea0",
+      "stale": false,
+      "targetHash": "20eb43742fa270b04a6c3820d1205e692590dde5f22ba8a2e4858a7d4c78298e",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000140"
+    },
+    {
+      "note": "原文：fails to follow the request ... to leave the play area\n旧译：“未遵从比赛工作人员的要求，例如请离比赛区域。”\nto leave the play area 修饰 request，不是举例。旧译把具体例子扩大成了未遵从任何工作人员要求。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "235f4819fa248d3b83dbb53ae9ded2ecbc88040dd7ac5bdde7666f9724f13188",
+      "stale": false,
+      "targetHash": "26b89d5b1cc304b05566d33662c372e4cb357ed731c9fabf8b3d6a2698c5b78d",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000147"
+    },
+    {
+      "note": "原文：a player needs to be made aware if their behavior is unacceptable\n旧译：“牌手在做出不被接受的行为时就要给于处罚”。\n这是明确错译：原文要求使牌手知道行为不可接受，并没有在这句话中直接规定给予处罚。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "e69d523b65654ab9522b3acc99d03c4e3f6c071fa23c8bce802840c5e81773be",
+      "stale": false,
+      "targetHash": "eb8504385fe533e4601ec19ad773a753db1d6b3a6eb48bb578ccdb743b20f336",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000148"
+    },
+    {
+      "note": "原文：without intending malice or harm to the subject of the harassment\n旧译：“主观上无意针对或伤害受骚扰者”。\n原文包括行为明确针对某人，但行为人并无恶意或伤害意图。“无意针对”改变了条件。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "f947d50e37014521599c332e4a29f23f4cc6a4402206a7e29e13f8b6a0d6e925",
+      "stale": false,
+      "targetHash": "82fb04f5d5559e6a37cf6ddbdd628e50a929ea5d6e45751d172e5c836b3a458d",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000151"
+    },
+    {
+      "note": "原文：A player intentionally misgenders their opponent.\n旧译：“牌手故意错判对手的性别。”\n“错判”偏向内在判断；这里描述的是故意以错误的性别称呼或指称对手。后文已有“错称性别”的译法。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "01ae58e7b43f08575d1f2dc451c6bac873e1d3e9ef2680aba2d5eaff33c7a6b0",
+      "stale": false,
+      "targetHash": "dfd1ce5f49139f5c83376b0f70b1fd594bd951bcadd082e3a265e4532a848403",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000153"
+    },
+    {
+      "note": "原文：takes inappropriate photos ... without express permission\n旧译：“未征得……明确同意……拍摄……不雅照片”。\n“不雅”容易限于裸露或色情内容；不适当照片还可能包括令人难堪、侵犯隐私等情形。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "a04894eccd358fce5b95e896a217501f23d0049c4ac6776aa82f8bebe391fd65",
+      "stale": false,
+      "targetHash": "fdbe1f3f9dff60f290713cadc48bf2e20964231bad8b38cfbfa2f7d3cfbee97f",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000154"
+    },
+    {
+      "note": "原文：with the intent of inducing physical contact\n旧译：“意图寻衅滋事”。\n原文明确的是造成身体接触的意图。旧译遗漏具体行为，并增加了滋事意图。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "68d9f430f599d2035b171f914da44b1436eb8fc7b849ab49e9237f78bccba9eb",
+      "stale": false,
+      "targetHash": "3fdeed2df81c91741a8cd1e93289d09604ea66fe26532b568bda27b2588e25c9",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000156"
+    },
+    {
+      "note": "原文：A spectator uses social media to bully another player.\n旧译：“牌手利用社交媒体欺侮其他牌手。”\n行为主体变了。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "fd25a51bea43c6fa2ba821d01788389d7586f1dce4bf50383f2976d228b40ebd",
+      "stale": false,
+      "targetHash": "4ee3283158a4ad1f6c6e5c30036210711fb79b9859cbbc8de8940747c6c57f73",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000157"
+    },
+    {
+      "note": "原文：the player displays no remorse\n旧译：“之后未有道歉之意”。\n这会改变取消资格的触发条件。\n将“之后未有道歉之意”改为“未表现出懊悔”。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "91e9fc2a8646927ac1a8de2c0a7cad603248a717603bd1709abe43f8825475cf",
+      "stale": false,
+      "targetHash": "3e37dc87e3d41a675063f71d45ad816f0ce5fccfa46d7eda9f2ee9b6b37105ce",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000162"
+    },
+    {
+      "note": "原文：someone who may not know it’s against the rules\n旧译：“不知悉此行为属于违规的某人”。\n漏掉 may，将可能的认知状态改成了确定条件。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "83f943f8297384dc514b8cbbc0de9f8884b8d3f285c4d809d985edaa98bae96c",
+      "stale": false,
+      "targetHash": "4d596e2879c46dbb9fb2efb8abe122df88f5b69ab1658d7fb1dae7b043358a30",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000163"
+    },
+    {
+      "note": "“可以对手的牌库中拿走”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "6fe77ae02f30952d43d43a9fec5d2069b51ff07abd05f3a7f5b6c650f614d0b9",
+      "stale": false,
+      "targetHash": "bb681182c188f92f88de9427c2dab7b54fb2b75479d49d2a868c2c519c4895e3",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000180"
+    },
+    {
+      "note": "ruling又变成规则解释了",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "6e8a803b8a84b3054528ab67e03a4a27210e19a7be4702d42edd98dde6d1ff68",
+      "stale": false,
+      "targetHash": "1217d82e93490e7d1405bb35f49d7fa98bab95b416b1d7993a5c9dda3dd9d0ca",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000186"
+    },
+    {
+      "note": "turns over a table 是翻倒桌子",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "7d1e73f248e5d776b77f1edafad86cabf36ceee25a670d0ea2404b2e9f04bf4d",
+      "stale": false,
+      "targetHash": "029a04f44a116beb4987b45a8e4c812114c51589714f9cf4a6355ba66cdf5438",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000188"
+    },
+    {
+      "note": "原文：The offender should be asked to leave the venue by the organizer.\n旧译：“比赛主办人必须要求该牌手离开赛场。”\n攻击性举止与窃取比赛用品两节均有此问题。原文是 should，不是 must；后面的注解还专门讨论了主办人的决定权限。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "002285f88e85155ce0ee7c7dff8f96e850741eafed973f6cf3dd510d95bc8b35",
+      "stale": false,
+      "targetHash": "729c444f72a1f1f65079535d823faf01c49cc76874fa2bc40e06c32ce46fe833",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000190"
+    },
+    {
+      "note": "should是必须？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "002285f88e85155ce0ee7c7dff8f96e850741eafed973f6cf3dd510d95bc8b35",
+      "stale": false,
+      "targetHash": "729c444f72a1f1f65079535d823faf01c49cc76874fa2bc40e06c32ce46fe833",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000196"
+    },
+    {
+      "note": "原文：appeals a warning\n旧译：“抗议他受到的警告判决”。\n这里明确指正式上诉程序，并非一般表达不满。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "92e3bc6f5445ae85e194390a92e3a5cf07daeb8a0752566e1e9a084e44e3ff00",
+      "stale": false,
+      "targetHash": "26e21513e81efacfd0889de30d2f2dfded7d7c2a091d980ba6e8b154194da2e6",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000200"
+    },
+    {
+      "note": "原文：alters the results on a match slip\n旧译：“更改对局的结果”。\n原文例子明确是更改成绩单上的记录，旧译遗漏了具体操作对象。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "1bd8e701f594a739537eb56bf6f348412fd7162c7b1befa09b6a0229a6fc473d",
+      "stale": false,
+      "targetHash": "7ba04f4f7740a0cfa3de2e25b391a7f5d90fe91ca8d8de7be8fb38d1c289d62d",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000208"
+    },
+    {
+      "note": "原文：to make their case stronger\n旧译：“以增强己方诉求的严重性”。\n指使己方陈述或主张更有说服力，并非使事情更严重。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "aab92310059676f7952e4a09eb0ff3dad5ffe58d2dbdfd5f8d0c99176d1568f3",
+      "stale": false,
+      "targetHash": "31fbd79cdaec01dc51a008d6c4e81ba5f5beb94b49ecb16fc871592df016b2f1",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-b000209"
+    },
+    {
+      "note": "原文：\ntakes an action that may have enabled them to see the faces of cards\n\n旧译：\n采取之行动让他们看到了……牌\n\n这里把“可能使其看到”译成了“实际看到了”，缩窄了违规定义的范围。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "8cd0859f065c753db1db64ea9ffb93f627c127d56319b8431ad82e1e1296da9a",
+      "stale": false,
+      "targetHash": "b4853623e0c209af222bd727b331b3fb6b13d730f57821af4257fe473ea4d127",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-s2-2-c-definition-g01-b001"
+    },
+    {
+      "note": "原文：\nthe infraction was immediately followed by moving a card …\n\n旧译：\n违规发生后会立即将牌张……\n\n“会立即”容易表达预期将发生的动作。这里适用简易倒回，是因为移牌动作已经紧接着违规发生了。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "13c80daef33c485c6000403baf1281a5e03f642002907d810c0d45162cd30a39",
+      "stale": false,
+      "targetHash": "814ab31785e067f5b4685ca02a0c921d2e7e6b8c69855adce160bb8a846e1746",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-s2-3-c-additional-remedy-g01-b001"
+    },
+    {
+      "note": "原文：\ndoes not have the relevant ability printed on the card\ncards with the same ability\nbefore an effect that would reveal it is played\n\n旧译：\n实际上不具相关异能\n相应具变身或伪装异能的牌\n在某个效应会将其展示之前自行上报该失误\n\n漏掉“印在牌上”这一限定。\n没有明确要求同一种异能。 \n上报期限被推迟。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "044c88dd092c3ce118b0a21c99163ffc678bdbb22fb50ebb751e9d01752cbace",
+      "stale": false,
+      "targetHash": "2ee1c028287912b7d7b70dbde6d9625c5648e9817ed92d7cf0bfb073a153998a",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-s2-3-c-additional-remedy-g01-b007"
+    },
+    {
+      "note": "原文：\nA player has more cards in their hand than can be accounted for.\n\n旧译：\n牌手的手牌数量比其应有的数量多。\n\n“应有数量”只表达数量不正确，没有保留 accounted for 所强调的核算、解释关系。这一例子的特点是现有手牌数量无法根据游戏过程解释。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "a26fd1439b30ef95210c8788cd079caea1f999c644b768aef3cb2c5a37fe50b4",
+      "stale": false,
+      "targetHash": "18e9596a90d97aa964a63adc2131ac4475e6e5774dd87bcb390da0a555ef425a",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-s2-3-c-examples-g01-b004"
+    },
+    {
+      "note": "原文：\ngiving the opponent sufficient knowledge and ability to offset the error\n\n旧译：\n让对手充分获取信息，依其意愿来减轻失误造成的影响\n\n原文并列的是“充分的信息”和“抵消失误的能力”。旧译漏掉后者，加入了“依其意愿”。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "1b01b35418a31638a2d4faccb9c2996d3863dcbb2f24a945b9ae6d661c8d2e92",
+      "stale": false,
+      "targetHash": "0843f8a9b67f50dc558bc18fd940da5137f3d7041b024730ae7f3f100d1e836c",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-s2-3-c-philosophy-g01-b001"
+    },
+    {
+      "note": "原文：\nAlways operate on the smallest set possible to remedy the error.\n\n旧译：\n修正失误时，应尽量从相关牌叠中牌张数量最少者入手。\n\n旧译既弱化了 Always，又容易让人理解为从几个既有牌叠中挑选最小者。原文允许把一个牌叠进一步缩小到能够修正失误的部分，紧接着的征召军伍例子就在说明这一点。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "681f5991b52da05f1d70a529e0e7c13feb454bffbac00b1551497c1d33c346a8",
+      "stale": false,
+      "targetHash": "dd444027b3016edd15e24d6785f9cde2bb4df05b0486ee141d598675f81af3d5",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-s2-3-c-philosophy-g01-b005"
+    },
+    {
+      "note": "原文：\nafter seeing their opponent choose to take a mulligan\n\n旧译：\n在看见对手再调度后\n\n原文的时间点是对手作出选择，旧译容易推迟到对手实际进行再调度之后。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "b141d19dd26d57f8e5a23c7daacd8ae67615049134acb05863fde69ee1d8b0ce",
+      "stale": false,
+      "targetHash": "97728ebe24e6cc6cbe62b8677edad88f7a42bcb0269ce180e36be6d6384bff7d",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-s2-4-c-examples-g01-b002"
+    },
+    {
+      "note": "原文：\nfailed to draw cards, discard cards, or return cards from their hand to another zone\n\n旧译：\n未能抓牌、弃牌或忘记将牌从手上移至其他区域\n\nfailed to 同时统摄三个动作，并未将第三种失误限定为遗忘造成。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "59a086fed04096673f213cf6e3af1b39f986d7b508bd5d7ee74e0c5adfd399ba",
+      "stale": false,
+      "targetHash": "4e12c17c17417e53c5abb71a4294172ba6e6f4bb12e0495054a9b7a3fc902d32",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-s2-5-c-additional-remedy-g02-b003"
+    },
+    {
+      "note": "原文：\nIf the game has proceeded past a point where an opponent could reasonably be expected to notice the error …\n\n旧译：\n如果对手没能在预期其能注意到失误的合理时间点前指出游戏行动失误……\n\n旧译只保留了对手没有及时指出，漏掉了游戏已经继续超过该时点的条件。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "367c6b1d014f22bf8d1a351113ebd34778acb8ec36f09b42164c750d5f0e8816",
+      "stale": false,
+      "targetHash": "9e35c8a7f19c7c1e63fbac6f1f541670fac297d2333393b1d4530eac8a3a3aa6",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-s2-5-c-additional-remedy-g03-b003"
+    },
+    {
+      "note": "原文：\nWhile Game Rule Violations can be attributed to one player …\nIt is tempting to try and “fix” these errors …\n\n旧译：\n虽然违反游戏规则通常是归咎于其中一位牌手……\n处理者应尝试去“修复”这些失误……\n\n第一处将“可以归咎”改成“通常归咎”，增加了频率判断。\n第二处更重要：It is tempting 描述的是处理者容易产生的冲动，并非要求尝试修复。旧译与后面强调按 IPG 一致处理的注解也不协调。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "4d4d3b0bd45e6ead51b38f42709a3e0156a3e8bcc555d10732eed237a6bf746a",
+      "stale": false,
+      "targetHash": "d8cfe55c2ad42ac856815f52f989254a80f393c2191da0b66c67708078e5ea50",
+      "translationRevision": "zh-r0001",
+      "unitId": "block:ipg-s2-5-c-philosophy-g01-b001"
+    },
+    {
+      "note": "可能有些语境下把or译成“和”无伤大雅，但这里不是",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "6a1fa1cdf3d5ab40045e1ab9bc1cef06ce996a03d98c0c7544dead4d72fd0202",
+      "stale": false,
+      "targetHash": "62c0c886c740219b9e76513389de48ae017646e98d1d13a0eb95fa165ae3cf72",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000006-rs-74c4f72a3c5c"
+    },
+    {
+      "note": "“裁判应及时介入”属于不必要增译。你可以说这句话能通过原句的意思推导出来，但还是那句话，有什么理解你可以写到译注里，没必要插进在正文里。更何况注解已经展开解释了，更用不着你自己在正文里弄",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "25e1f36bb333c84aacc845229dee2d52a5b66f683af7f9539420ed86349bbde2",
+      "stale": false,
+      "targetHash": "4c292b06b71e188d2d5706573b66acd3ca6f599810ce33dfbc51de5f799fa01f",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000006-rs-c4964b29a361"
+    },
+    {
+      "note": "漏译educate\n\n原来有些裁判不把教育当目的是有传承的，从这里就开始有意识了",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "851ed34947d9f3e46443f3aff3946fcf4349e584ba8a65e150f9a7dc56f0499d",
+      "stale": false,
+      "targetHash": "952b59b5d245054a30b9deda96462de34d99aa3517357aa4c7517dc86dc6680c",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000007-rs-c1a2cf3130ff"
+    },
+    {
+      "note": "原文明确列出两个共同发挥作用的手段：解释哪里违反规则，以及以处罚强化教育。旧译没有清楚保留这个并列关系。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "910e05dce40beacf22dd196de5f9c47a41069cd96299d70856535049057e279c",
+      "stale": false,
+      "targetHash": "190db567f69398eedece1f02bb3d3a003cde59fccb89fbc64d60d10870a0d042",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000007-rs-cacfcd9b3a22"
+    },
+    {
+      "note": "漏掉了“不要判定违规”。原文分别禁止判定违规和给予处罚，不能只保留后者。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "0bbe608f6f871a68b1e16fa0bbe0519c341946da54d9275d37e35c81c639fe9b",
+      "stale": false,
+      "targetHash": "33b8c9a69413f0cde1c98313e512a94f3ce1018c268f37a7566af30f4adee466",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000008-rs-7134797fc872"
+    },
+    {
+      "note": "这里又把round搞成“回合”\n\n“特别想教育该牌手”增添了程度限制",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "e024b3d9d54dac256cae7ed15b3060b37154953fd38b551e4d5a45235be588fd",
+      "stale": false,
+      "targetHash": "ef71f22aecb19e359c4c7e75a79b76b374ba5b27e3289299ccd81e37153d4708",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000009-rs-3c35f44388a1"
+    },
+    {
+      "note": "多余字造成断句错误",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "c87f6ab62827d32bcd6860902ecf82a7a25acd731459c6694b3e2bbf154b6b36",
+      "stale": false,
+      "targetHash": "e78e4c53e469254521392c95a3efe5bd052d51580440e6378a1d0fc761337b69",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000010-rs-41ce45c33c81"
+    },
+    {
+      "note": "ruling在其他地方是“裁定”，这里又是“解释规则”了。那你无敌了呀",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "8d567da5ac01f41583ef572393c27130c68e722e01d60dd746a9f59a7ac7b9b1",
+      "stale": false,
+      "targetHash": "cf537fa0b53f5f37c4b168013d52effb6646faedf43b1dbe1d9c8047df37869c",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000011-rs-1734ed0cfa49"
+    },
+    {
+      "note": "旧译只保留修正流程和处罚，漏掉了必须解释违规本身。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "2f0e5431f384416255a2acdf14440a6867f5cbb9ebede461ecb51c1ad2627750",
+      "stale": false,
+      "targetHash": "a61d871f74964e74981e4330b998c007f2eb05b56a1dcf94f078af7e20ae7b50",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000024-rs-64650058d68d"
+    },
+    {
+      "note": "原文的转折关系被误读了。它说试图修复局面很有诱惑力，但遗漏细节或偏袒的风险使这种做法不可取；不是说规定的流程“只是试图修复”。\n\nis tempting to被当成现在进行时？那理解理解为什么要while呢。原文的转折关系被误读了。它说试图修复局面很有诱惑力，但遗漏细节或偏袒的风险使这种做法不可取；不是说规定的流程“只是试图修复”。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "e404481d42859d0c941adbdbb027b9a16b33c0d08366e716d2e08fee1ffaa8ca",
+      "stale": false,
+      "targetHash": "f3d8dbd3e266ab183afb8b68f69a18abe45e4031898b72ea19cfdb886d44b946",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000025-rs-3fb90bae75d9"
+    },
+    {
+      "note": "the game being played是“游戏进行过的部份”？看到ed就是过去式吗？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "daf95c623193b8fcede78f0f2c6c01c12eaad1663b5a75aad0979ef62f19ef19",
+      "stale": false,
+      "targetHash": "2e286340cae179c39b2486873cc3833a79bf5b1aee6ae992370540fd8ce7097e",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000025-rs-41b7d38566f0"
+    },
+    {
+      "note": "ruling又成规则解释了\n\n“旁观者”是术语，不要给其他词随便套术语的翻译\n\n“包括额外叙述修正此犯规的流程的叙述”重复“叙述”且嵌套错接；本句是在说明基本处罚之外另有修正措施。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "5cdb940fa9c938ad30a11529c3917d530c8b611e4f6007bd40f33217135c219f",
+      "stale": false,
+      "targetHash": "0c1e00c338e03f06544c3a5c2453fe46fa4d0dcdad17c59e61b521dbb7a5c135",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000025-rs-d577b962ffd2"
+    },
+    {
+      "note": "substantially worse 被译成“更糟”，遗漏了明显程度要求。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "b08ea8f1c8fb16fb5363a4c8632f2935ccf40b654ada9cf7987ef5b0101a8d91",
+      "stale": false,
+      "targetHash": "4a2a5e5e6d08fb8b14b2dee7340434ec24690d5a691dcb6c87471e58ad04f449",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000029-rs-34f4da8af34f"
+    },
+    {
+      "note": "makes no difference 说的是信息不产生影响，不是信息没有变化。前面注解已经说了“每当一个错误发生时，总会有一位牌手从中获取某些额外信息”，这句话本身的注解也说明了关注点在于信息是否产生影响，而不是没获得过信息。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "bd50d6392fa5ab3c6aa8c6088340daf21c2b464f276c0b9b58ddaef79ce1f95e",
+      "stale": false,
+      "targetHash": "8d6ed9043159fa94d089bc67480df41ec6af8db4b8386dd75f14164ff13bd9ca",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000029-rs-432a1a194819"
+    },
+    {
+      "note": "they 指那些牌：例外条件是这些牌随后被抓起，不是得知信息的动作由抓牌造成",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "6a5d28905d64a23341bf5faf075c263e5e9f99bf8d6f2f8ae3dc6f36262115f9",
+      "stale": false,
+      "targetHash": "383e52b3e73a2b597557d5e2186a6bea93abe33ff97126f3934d46ddcc5657bf",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000031-rs-0c2ce457bbd9"
+    },
+    {
+      "note": "make … smoother 是让执行更顺畅，不是保证能够执行。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "f8456269a195858b8d3c23391ae06d577b4b947a9d3505a497e6ab95d37dfaef",
+      "stale": false,
+      "targetHash": "a5084215c066e14ff23423d5752512a0965b52475639d19da7864aa4de1e2455",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000033-rs-4670c5c95502"
+    },
+    {
+      "note": "physically distinct 被译成“有显著区隔”，没有明确区隔是在实体层面。\n\n这是牌叠的重要特征，这也要错翻吗",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "b653c094d4fb4aa4a800f601a422ea8fd0541eaa0bf779e729369a44700a7e44",
+      "stale": false,
+      "targetHash": "42f62aac236e9e050503c3928f9d7f3ad9c6eb769c3ec4ec3316777c78fb9a14",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000034-rs-b4a4c9acb125"
+    },
+    {
+      "note": "原文：\n…but not issue a penalty.\n\n旧译：\n但不需给予处罚。\n\n“不需”表示没有必要，仍可能允许处罚；原文要求裁判说明正确规程，但不作出处罚。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "fe947a9f6855689c9dfcd582557b8143177f8e8ecfdfc0c4c35f15ad091fce0b",
+      "stale": false,
+      "targetHash": "c9ae474afcd4c68835ec7c3086c1ced038ab0cd36210a32afbf034008257d237",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000037-rs-4dd03ebdd495"
+    },
+    {
+      "note": "round老问题",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "aeb3f6a1b17463e88dffed2be29b7eb9e48d267e8e7a95093214ba8417eeaabe",
+      "stale": false,
+      "targetHash": "39bef0d182aaab58e428a573b2ebbd1b1e050fa9d48be977ada30b4f17426594",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000039-rs-8c076574e3e7"
+    },
+    {
+      "note": "round老问题",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "2f613d4711bd39465865c0f9458d46cb2a7c29a9682c970f7316365436d15302",
+      "stale": false,
+      "targetHash": "eb98c6c7f885e4ed61f94a64812259ba0f35111839d2875ca08dd69b37599117",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000039-rs-d3f05e95c87b"
+    },
+    {
+      "note": "原文：\nOtherwise, the penalty is issued as soon as the round begins.\n\n旧译：\n否则，在此局开始的同时就要给予一盘负的处罚。\n\n原文没有在这里指定“一盘负”。本段后面另有不足一分钟到场时降为警告的规定，旧译把处罚等级写死了。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "ce5437f80c9e62ec9f67e12ee9227f2357d52b1e6f0d16cbf8c5855df102c5fe",
+      "stale": false,
+      "targetHash": "2ca4bd160151e47e9ff3ebbe3440a60e8fed7fd039ce9c5dab9d5e495bb44c8b",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000045-rs-ab48a2ae009e"
+    },
+    {
+      "note": "原文：\nVisual modifications to cards, including brief text, that provide minor strategic information or hints…\n\n旧译：\n牌上面的图样加工，包括间接地提供轻微策略信息的简短文字……\n\n原文的限制修饰整个“图样加工”，并未要求信息必须“间接”提供；or hints 也被漏掉了。后面的“用我踹”恰好就是直接的提示。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "de26797d4fa4efe2fe29413ef95c969380888159daf7895e04f90d1e720049d3",
+      "stale": false,
+      "targetHash": "2868fbb889b9d0feeefcb8654969b3c78a009592904abf840859e528d1e7272d",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000058-rs-9f406bb38508"
+    },
+    {
+      "note": "在：\nA comment of “I need you to play faster” is often appropriate and all that is needed.\n\n对应旧译末尾，额外出现了：\n再进一步的进行过慢就必须给予处罚。\n\n这句话在后文另有独立对应原文。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "bed6f8a17d3fad10d40283a4ad3f16b27b724c2f54dd8801f99b57751c27f40a",
+      "stale": false,
+      "targetHash": "e5533e2bbdcfcc4ea659475d32904fea7ab6bbeaeeabda54f4db34dd2af06ada",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000066-rs-c95b2b502999"
+    },
+    {
+      "note": "原文：\nFurther slow play should be penalized.\n\n旧译：\n再进一步的进行过慢就必须给予处罚。\n\n建议改为：\n再进一步的进行过慢应当给予处罚。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "c9e9316db7ad3793fc4d0a881581f32b6ff0819c7b91bbb586ee6b915eb2b7f9",
+      "stale": false,
+      "targetHash": "0a88ee77f021137d4d9cf2411915bbbb96f78ea04fa39057bd7aae93de329f76",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000066-rs-cb69b31867a9"
+    },
+    {
+      "note": "原文：\n…as long as they are the only representation of that character in the format…\n\n旧译：\n只要在此赛制中含有该名称的合法卡片只有一张……\n\n这里要求的是：赛制中只有一张牌代表该角色本人，并非只有一张牌的名称含有该角色名字。后面的 even if other cards begin with the same name 和乌力奇例子正是在说明这个区别。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "45a85924eeffc0dd7fcbf70f8e0e334e799c63146e85d86eab99b3bbfcdbb3ba",
+      "stale": false,
+      "targetHash": "c092ccacfd9c6626edab7d9f9bdb6b61c276a30401feddcf465bacb5edfb3124",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000078-rs-c0e8e9db2157"
+    },
+    {
+      "note": "原文：\nDuplicates of cards that begin in the main deck are more problematic…\n\n旧译：\n对于本来就在主牌中放入数张的牌而言……\n\ncards that begin in the main deck 包括原本只放一张的牌。旧译加入“数张”，会使读者误认为原本只有一张时不涉及这种升级理由。仅仅因为用了复数形式就翻译出数张是不对的",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "48e46162fb70d03e57edfb4b5317e272dab52f8af9ee5a7ea87bb726927e2d54",
+      "stale": false,
+      "targetHash": "427389e6c22e3edc9ef66d97da75c5e1421356c52aeb91d006989cd53e8bfe48",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000098-rs-3c7d1ce2f881"
+    },
+    {
+      "note": "原文：\n…without obvious cheating.\n…without being very obviously cheating…\n\n旧译：\n除非刻意作弊……\n……除非牌手在刻意作弊。\n\n“刻意”表示主观故意，“明显”表示作弊行为容易被识别。原文的论证是：试图利用这些错误获利，会使作弊行为明显暴露；旧译遗漏了这个理由。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "4839f24c28a9b6d4ea9fb6514a5ec6b4f1c5aded31e85bc52e504fcbf17f70ca",
+      "stale": false,
+      "targetHash": "a6e78c0090743abca3faa0a1360b23b9955acb545a8b3c2310e3e566581f076b",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000098-rs-d373f0154c02"
+    },
+    {
+      "note": "原文：\n…which of the missing cards replaces each incorrect card; any extras are shuffled into the random portion of the library.\n\n旧译：\n……用缺失的牌张与错误牌张一一对应进行替换；多余的牌张……\n\n“一一对应”容易暗示两类牌数量相等，但前后规定及例子明确允许数量不等。“多余的牌张”也应明确是剩余的缺失牌，而非待移除的错误牌。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "e64dc2988c7a6a0802961a01229b73c3038d26651c71673c9211793b33376855",
+      "stale": false,
+      "targetHash": "54e322e8e246bce6818e3aada0efc470fd9aa00e66e4ef3bd41dac80ce8b175d",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000100-rs-294d65776da4"
+    },
+    {
+      "note": "原文：\nA physically ambiguous board state … fix ambiguous placements\n\n旧译：\n桌面上出现迷惑的局面……让牌手改正迷惑的局面\n\n这里说的是实际摆放使场面含义不明确，不是一般意义上令人困惑的游戏局面。后半句尤其明确指定了要修正的是 placements。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "5ec230499c719f7ddd3dee28d6e54eb621b75126adff0349704bdc6495cc608f",
+      "stale": false,
+      "targetHash": "b2865a1c155e3e87fdc594836bc66e3ce397064bc1b678e0e7235216998346c9",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000118-rs-afe4c5a18a6c"
+    },
+    {
+      "note": "原文：\nshuffle their cards and sleeves before sleeving the cards\n\n旧译：\n在上牌套之前务必要先将牌洗过\n\n漏掉了“牌套”。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "18fb92b482dd59d884fcbb8c003511d44a1f2a75725f05a91689200880c62a3e",
+      "stale": false,
+      "targetHash": "43d5f6894a89de16ebdd88076a477419ab30a8f5c6186f102b63ac42b9fb0f38",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000125-rs-5e5e2750c8a8"
+    },
+    {
+      "note": "addressing the situation 是处理有记号的状况",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "c66259cfa0e702ccf8909cad07a388810f24332d37fd2b49e6fcc23cb280c8be",
+      "stale": false,
+      "targetHash": "39afb4e424308bee24341da8f4603051584ab9c9932e3d974e4818e7477e3cd0",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000125-rs-87abe8dea9e4"
+    },
+    {
+      "note": "“自己备牌是否上存在记号”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "f248f09e70670fc3c846e631f04c1c38aa1a2567b3689f38bb06d83b031b3f44",
+      "stale": false,
+      "targetHash": "de80b06700b1781b1aff152b6059867a2cd2e353107c24f6a5ae9da5477537d6",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000126-rs-c70c25a1383c"
+    },
+    {
+      "note": "原文：\nreplace the card(s) or sleeve(s) with an unmarked version\n\n旧译：\n必须将有记号的牌或是牌套换掉\n\n原文不只要求换掉，还明确要求替换品没有记号。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "6a25fda79d4f96637c857c0f097c218f0e95f8837dc50e03783810c44d59477c",
+      "stale": false,
+      "targetHash": "d73b998f3269fdcdff7cfdf7528b040a23189918a688c0a04f00cc4288ccbf8f",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000127-rs-04e587dec5c8"
+    },
+    {
+      "note": "“因游戏过程地磨损”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "38c05a3f42840e0f78f82115d8010f0793a7f65b04d3e601ca28cd5744ed669b",
+      "stale": false,
+      "targetHash": "a5be0ac140d80875ddb6f87d35f5bab1595bd3e4be743a104921b71395a09aaf",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000127-rs-9e8904f62cbc"
+    },
+    {
+      "note": "原文：\nPlayers are expected to shuffle their deck thoroughly when it is required\n\n旧译：\n牌手在有必要和被要求时，必须要彻底地将其套牌洗牌\n\n本句使用 are expected to，并非 must；同句后半部分也是 are expected to，却译为“应要”，两部分的规范强度不一致。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "c948f8bf1aea83b7bf5b6633fcd11bf9b1f5dcfbdf371d8cdc0e771d62c097e5",
+      "stale": false,
+      "targetHash": "4c4a55903a5bcbc4b96348acc12ef9fce32565465286b58445dd90d4b745c87a",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000134-rs-893caf8dfac5"
+    },
+    {
+      "note": "“举止是否举止”？原文把术语拆开的时候你反而复制粘贴个原版了？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "8072d3381eeb499f5318e8973912b63a965f355a28d7ec3b3871b5cbe3207a31",
+      "stale": false,
+      "targetHash": "56b57b85c8789fac953b27dd8e169270e0433c39acc0e0f002f7223b804d2fd6",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000139-rs-8dcd07836dc6"
+    },
+    {
+      "note": "“且是在发生在”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "006c17e2ec14b3a600895f778a2925e6aa1267223cdbe15dcf7797b6ceadd992",
+      "stale": false,
+      "targetHash": "45c77b25f6a0a11e346c04065950b4a1b30da147962837882b9ce947187186f0",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000149-rs-b19e160697ff"
+    },
+    {
+      "note": "原文：Threats of physical violence\n旧译：“肢体暴力挑衅”\n威胁是表示将实施伤害；挑衅可以只是激怒对方。两者并不等价，会影响“严重”与“攻击性举止”的归类。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "44eadb3dc6668ece592aba0084afffd2172807609611a9534b5f91e487f950de",
+      "stale": false,
+      "targetHash": "f55bda8fe3ee2882b3f56330326dd58580f2af2f9bfb77acef91634b100fadd0",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000150-rs-fc34b5015824"
+    },
+    {
+      "note": "原文：purposefully create harmful or unwelcoming situations；demonstrate remorse\n旧译：“故意寻衅惹事”；“改正并道歉”。\n“寻衅惹事”增加了挑衅、滋事的含义；“道歉”又把表现懊悔缩窄成了一个特定行为。后文明确说明通常不要求道歉。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "2bddb871c847b1e0d04a88d733621160d9c9058f26f0439cfd0f879164329475",
+      "stale": false,
+      "targetHash": "ced842039f5fdab117ea6028309f7e39f1c39c6ef6cb52e69be4175002fbd247",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000158-rs-db8a053d25ad"
+    },
+    {
+      "note": "原文：Apologizing is encouraged\n旧译：“虽然应促使双方谅解”。\n原文鼓励道歉，并未要求受骚扰方谅解或双方和解。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "d2d514ee2a06d2133a5b0e24bb73104218d6b42e5a20d9d1009d856c0b7c17df",
+      "stale": false,
+      "targetHash": "20ac7087fa0bdc797eb2a19047a623d307ee5a9ebf0f6ddbc7bd9b9caf7909b2",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000159-rs-7670258a1f76"
+    },
+    {
+      "note": "原文：end any match in progress and separate the players\n旧译：“终止正在进行的比赛，并将涉事双方牌手分开”。\n“比赛”可能指整个赛事。这里指涉事牌手正在进行的对局。\n\n“出现次违规”？？？",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "679f8e62f3cfb3b26e1fd88c9157dcd0c5cfe40e4bd383764fbf83e836dc79fc",
+      "stale": false,
+      "targetHash": "bf85d55717cee350fb0aa55caf79cc2fe3dc4ed348dccbc4432d09371c372815",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000159-rs-c7756e1bd45b"
+    },
+    {
+      "note": "原文：Officials must investigate ... as soon as ... brought to their attention\n旧译：“工作人员应尽快……进行调查”。\nmust 被弱化，“一经知悉便着手调查”的要求也不够明确。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "29c2abce218f871b2c051fb185de26cc438b76d8dfe15e20b28fec32cde2d0a1",
+      "stale": false,
+      "targetHash": "5b870650066e47071b34ec241b6b8fba4deb8c3c422839005f3391845e71afc6",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000160-rs-5b932732bac3"
+    },
+    {
+      "note": "at the end of a match：“一局游戏结束时”→“一局对局结束时”。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "e3e8c545d9eb246363aab9f93017d5e061fa27ee16d60f97914406919317766f",
+      "stale": false,
+      "targetHash": "ba4a044a9788e6a0b792ce102bfe6206a1091e98e26eb48a7404194dac4721ec",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000161-rs-d14dd392c9d0"
+    },
+    {
+      "note": "原文：they should expect to be able to retain ...\n旧译：“他们必须能够保有……”。\n原文描述牌手应有的合理预期；旧译加强为必须实现的结果。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "fc8b268b01a7d4a4d717ed054ffb960582abe68db8d1d1377e989065b594ab92",
+      "stale": false,
+      "targetHash": "d31540e33dbb95d6b8fc734f2ac43e696439e5a9537e4625daee60280cbadf4a",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000195-rs-95250eb486a4"
+    },
+    {
+      "note": "原文：judges are encouraged to help in any way possible\n旧译：“裁判也要尽量提供帮助”。\n“也要”增加了义务强度。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "fbec88648b7c5e9bce4d03dbb43e5d638474f85c80c4c9fb41c42346313e8ea7",
+      "stale": false,
+      "targetHash": "25e55f7c872bf1d9fd429fab3262e110aac031833f40b2415658eb39fc2f1c4f",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-b000195-rs-efb691cc346c"
+    },
+    {
+      "note": "原文：\n…objects that would not have been legal choices when the ability should have triggered.\n\n旧译：\n……于此异能原本应触发的时点尚不在相应区域当中的物件。\n\n“处于相应区域”并不等于“属于合法选择”。旧译只保留了区域这一项条件，遗漏了其他可能影响选择是否合法的限制。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "3616797c1fa89c404a65e79d37ce3a153bda291db9c688218973dda9cc1e29b5",
+      "stale": false,
+      "targetHash": "be7d8945263ee2189944424624d79a21f4f06959527b7502bf170e54c906259b",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-s2-1-c-additional-remedy-g01-b004-rs-da5f76ea3791"
+    },
+    {
+      "note": "demonstrate漏译",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "7bcb3e8a2e2042c5f8b60f672b70d4276ff569f92e8d3509ed17e7a7c03cfe44",
+      "stale": false,
+      "targetHash": "5a42dc883bbb220dfdf89e32c5b9b22c8702f5edd0c416ec24964af5fd0bd40b",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-s2-1-c-definition-g03-b005-rs-e3d8b3c3b0d4"
+    },
+    {
+      "note": "原文：\n…intentionally ignoring one may be Unsporting Conduct — Cheating…\n\n旧译：\n……蓄意忽略触发式异能的行为应视作“举止违背运动道德～作弊”……\n\n这是明确的情态错译，而且紧接着的英文注解专门强调了 may，并要求检查作弊的定义。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "ff57b25fcdc9205cc2699dff1493c2b9f446ee66d3c9785df8104bcd93f5b606",
+      "stale": false,
+      "targetHash": "f75c44b0def65819d991c8fdfd9dd3879459a4d0f099d694bde2c75da615f05f",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-s2-1-c-philosophy-g01-b001-rs-2a027a802380"
+    },
+    {
+      "note": "原文：\nEven if an opponent is involved in the announcement or resolution of the ability…\n\n旧译：\n就算在异能宣告或结算的时候，需要对手进行相应选择……\n\n对手参与宣告或结算，不一定涉及选择，也可能只是执行动作。旧译将范围缩成“需要对手选择”的情况。\n\n旧文：对手不需指出不由自己操控的遗漏触发……\n\n原文是 triggered abilities，并不限于已经遗漏的触发",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "e580af1eaadfc13b459f5498f476c0b8737c6aaa6aa6d977258247a979c50836",
+      "stale": false,
+      "targetHash": "2e1e16ffd847965b4695b0e8f4029acd5ba07056dcb5d162f8dd2623800d8714",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-s2-1-c-philosophy-g01-b001-rs-a4501dc191ea"
+    },
+    {
+      "note": "原文：\nshuffling in the revealed cards should not involve excessive effort\n\n旧译：\n将展示的牌洗回去并不会造成太大的影响\n\neffort 被译成了“影响”，同时把规范性的 should not 改成了事实判断。下一段讨论洗牌次数，也说明这里关心的是所需工夫。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "ba343ba923fde054a246c8f662e26adf0490543c171e91c26023589298d10bf8",
+      "stale": false,
+      "targetHash": "a0f5bdf7bd52e31ac2a0e3cf09673975c6b2fdb58ef3b02244a398b015d34990",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-s2-2-c-philosophy-g01-b002-rs-592edaac19aa"
+    },
+    {
+      "note": "原文：\nPlayers also are not allowed to use this penalty as a stalling mechanism.\n\n旧译：\n牌手也不应该将此处罚当做拖延的手段。\n\n原文表达的是禁止",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "847dc57d257b4fbab86efe7109f494f9699d0a8743d112ee74bfb3497e86bc37",
+      "stale": false,
+      "targetHash": "6ccb08e13cfc806d5afcac01ccf73defb1277f029f3be89f0181b14ae94bb1ff",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-s2-2-c-philosophy-g01-b002-rs-bd73f34011fc"
+    },
+    {
+      "note": "原文：\nthe dangers of the ongoing game state becoming corrupted are much lower\n\n旧译：\n对于接下来游戏状态的伤害就会减少许多\n\n原文讨论游戏状态进一步出问题的风险，旧译改成了损害程度。",
+      "recordedAt": "2026-10-08T04:05:19+08:00",
+      "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+      "sourceHash": "5f348236bf00032a1b3c29254a79175d72251e09f19c49a22855e56b02def817",
+      "stale": false,
+      "targetHash": "8ef41b20565c4ef98ee78491bbbdf07e7353dd189c0695153eea6f240063e408",
+      "translationRevision": "zh-r0001",
+      "unitId": "reading-segment:ipg-s2-6-c-philosophy-g01-b001-rs-f9c983665a49"
+    }
+  ],
   "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
   "schemaVersion": 1,
   "translationRevision": "zh-r0001"

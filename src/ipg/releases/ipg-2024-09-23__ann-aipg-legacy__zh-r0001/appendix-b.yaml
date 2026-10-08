@@ -21,7 +21,7 @@ sections:
         text:
           en: '1.2: Removed specific details of how penalties are collected and stored, as it varies depending
             on the software being used.'
-          zh: 1.2：由于记录和收集方式因软件而异，故取消此方面的特别说明。
+          zh: "1.2：由于处罚的收集和保存方式因软件而异，故取消此方面的特别说明。"
         ruleReferences:
         - '1.2'
         officialPdfUnits:
@@ -95,7 +95,7 @@ sections:
         text:
           en: '3.5: Wrong number of cards upgrade has been split into two paragraphs for clarity, as it
             has slightly different criteris for pre- and post-sideboard games.'
-          zh: 3.5：牌张数量错误的升级被分为两段内容，以厘清换备前与换备后对局两种不同情况之判断标准的区别。
+          zh: "3.5：牌张数量错误的升级被分为两段内容，以厘清换备前与换备后游戏两种不同情况之判断标准的区别。"
         ruleReferences:
         - '3.5'
         officialPdfUnits:
@@ -118,7 +118,7 @@ sections:
         text:
           en: '2.3: Made it clearer that a morph returned to hand without reveal is not part of the upgrade
             path.'
-          zh: ''
+          zh: "2.3：进一步明确，以变身异能施放的牌张未展示便返回手牌，不属于此处的处罚升级情形。"
         ruleReferences:
         - '2.3'
         officialPdfUnits:
@@ -135,7 +135,7 @@ sections:
         text:
           en: '2.3: Added a clarification that the player needs to identify a morph problem before it
             is about to be discovered by the opponent.'
-          zh: ''
+          zh: "2.3：新增说明，牌手须在对手即将发现变身相关问题之前自行发现该问题。"
         ruleReferences:
         - '2.3'
         officialPdfUnits:
@@ -151,7 +151,7 @@ sections:
         type: change-entry
         text:
           en: '3.4: Added wording to make presenting the wrong decklist to an opponent a Decklist Problem.'
-          zh: ''
+          zh: "3.4：新增措辞，将向对手出示错误的套牌登记表列为套牌登记表问题。"
         ruleReferences:
         - '3.4'
         officialPdfUnits:
@@ -167,7 +167,7 @@ sections:
         type: change-entry
         text:
           en: '3.5: Clarity on the order of when things happen once a problem has been discovered.'
-          zh: ''
+          zh: "3.5：厘清发现问题后各项处理的先后顺序。"
         ruleReferences:
         - '3.5'
         officialPdfUnits:
@@ -183,7 +183,7 @@ sections:
         type: change-entry
         text:
           en: '3.5: Companion restriction fix now parallels the normal error fix.'
-          zh: ''
+          zh: "3.5：违反行侣限制时的修正方式现与一般失误的修正方式一致。"
         ruleReferences:
         - '3.5'
         officialPdfUnits:
@@ -200,7 +200,7 @@ sections:
         text:
           en: '3.5: Removed the requirement that multiple copies of the card have to be discovered after
             the game has begun (can now happen during pregame procedures).'
-          zh: ''
+          zh: "3.5：取消必须在游戏开始后才发现同一牌张有多张的问题这一要求（现亦可在游戏前程序中发现）。"
         ruleReferences:
         - '3.5'
         officialPdfUnits:
@@ -220,7 +220,7 @@ sections:
         type: change-entry
         text:
           en: '2.3: Upgrade language changed to account for disguise ability.'
-          zh: ''
+          zh: "2.3：修改处罚升级的措辞，以涵盖伪装异能。"
         ruleReferences:
         - '2.3'
         officialPdfUnits:
@@ -240,7 +240,7 @@ sections:
         type: change-entry
         text:
           en: '3.5: Rephrased first sentences in the remedy to make the order of actions clearer.'
-          zh: ''
+          zh: "3.5：调整修正部分开头几句的措辞，以厘清处理顺序。"
         ruleReferences:
         - '3.5'
         officialPdfUnits:
@@ -256,7 +256,7 @@ sections:
         type: change-entry
         text:
           en: '4.2: Added intentional misgendering as an example of USC-Major.'
-          zh: ''
+          zh: "4.2：新增故意使用与对手性别认同不符的称谓作为举止违背运动道德～严重的例子。"
         ruleReferences:
         - '4.2'
         officialPdfUnits:
@@ -276,7 +276,7 @@ sections:
         type: change-entry
         text:
           en: '1.1: Added link to report disqualifications. Removed outdated link to additional DQ information.'
-          zh: ''
+          zh: "1.1：新增回报取消资格处罚的链接。移除提供取消资格相关补充信息的过时链接。"
         ruleReferences:
         - '1.1'
         officialPdfUnits:
@@ -292,7 +292,7 @@ sections:
         type: change-entry
         text:
           en: '2.1: Missed triggers can now do a simple backup in limited situations.'
-          zh: ''
+          zh: "2.1：现可在特定的有限情形下，对遗漏触发进行简易倒回。"
         ruleReferences:
         - '2.1'
         officialPdfUnits:
@@ -308,7 +308,7 @@ sections:
         type: change-entry
         text:
           en: '3.5: Opponent chooses the timing of when to return the cards to the deck.'
-          zh: ''
+          zh: "3.5：由对手选择将牌张移回套牌的时机。"
         ruleReferences:
         - '3.5'
         officialPdfUnits:

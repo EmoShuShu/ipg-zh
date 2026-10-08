@@ -16296,6 +16296,14 @@ entries:
     atVersion: aipg-legacy-full-p4
     label: Any backup should only go to when the opponent acted on the incorrect information, and not
       before then. Any backup shoul
+  - event: updated
+    atVersion: ipg-2024-09-23__ann-aipg-legacy__zh-r0001
+    recordedAt: '2026-10-06T21:23:52+08:00'
+    reason: Maintainer confirmed accidental duplicate during transcription, not an upstream annotation error
+    changes:
+      englishHash:
+        from: 8336bca2c2ce27804c73c1f049cd13cbdfdd8df3483a1d6f41bfc921c261f33a
+        to: 0bea8abd84edec78a75a34aeee51374c04f1fc5b1fca9092d8f2a3b2df0fb09a
   evidence:
     englishHash: 8336bca2c2ce27804c73c1f049cd13cbdfdd8df3483a1d6f41bfc921c261f33a
     legacyRawUnits:

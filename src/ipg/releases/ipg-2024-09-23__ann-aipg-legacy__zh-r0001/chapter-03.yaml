@@ -67,10 +67,7 @@ sections:
             infractions listed below, the judge should explain the appropriate procedure to the player,
             but not issue a penalty. Continued or willful disregard of these rules may require further
             investigation.
-          zh: '如果牌手违反了《万智牌比赛规则》，但又不符合下列各项违规之定义，则裁判应向该牌手说明正确的规程，但不需给予处罚。
-
-
-            如果牌手继续违反相关规则，或有意无视之，则可能需要进一步的调查。'
+          zh: "如果牌手违反了《万智牌比赛规则》，但又不符合下列各项违规之定义，则裁判应向该牌手说明正确的规程，但不应给予处罚。\n\n如果牌手继续违反相关规则，或有意无视之，则可能需要进一步的调查。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 15
@@ -94,7 +91,7 @@ sections:
             en: If a player violates the Magic Tournament Rules in a way that is not covered by one of the infractions
               listed below, the judge should explain the appropriate procedure to the player, but not issue a
               penalty.
-            zh: 如果牌手违反了《万智牌比赛规则》，但又不符合下列各项违规之定义，则裁判应向该牌手说明正确的规程，但不需给予处罚。
+            zh: "如果牌手违反了《万智牌比赛规则》，但又不符合下列各项违规之定义，则裁判应向该牌手说明正确的规程，但不应给予处罚。"
           legacyRawUnits:
           - raw-L001923
           - raw-L001925
@@ -175,10 +172,7 @@ sections:
             within the time allocated. If a round begins before the previous round would have ended (due
             to all players finishing early), tardiness does not apply until the scheduled end of the previous
             round.
-          zh: '牌手并未在一局比赛开始时坐在自己的座位上，或未能在规定的时间内完成指定的任务。
-
-
-            如果某局的开始时间早于前一局比赛原本预计结束的时间（由于所有牌手都提前完成对局），则要等到前一局比赛预计结束的时间之后，才会开始适用“迟到”违规。'
+          zh: "牌手并未在一轮比赛开始时坐在自己的座位上，或未能在规定的时间内完成指定的任务。\n\n如果某轮的开始时间早于前一轮比赛原本预计结束的时间（由于所有牌手都提前完成对局），则要等到前一轮比赛预计结束的时间之后，才会开始适用“迟到”违规。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 15
@@ -201,7 +195,7 @@ sections:
           text:
             en: A player is not in their seat at the beginning of a round, or has not completed tasks assigned
               within the time allocated.
-            zh: 牌手并未在一局比赛开始时坐在自己的座位上，或未能在规定的时间内完成指定的任务。
+            zh: "牌手并未在一轮比赛开始时坐在自己的座位上，或未能在规定的时间内完成指定的任务。"
           legacyRawUnits:
           - raw-L001961
           - raw-L001963
@@ -212,7 +206,7 @@ sections:
           text:
             en: If a round begins before the previous round would have ended (due to all players finishing early),
               tardiness does not apply until the scheduled end of the previous round.
-            zh: 如果某局的开始时间早于前一局比赛原本预计结束的时间（由于所有牌手都提前完成对局），则要等到前一局比赛预计结束的时间之后，才会开始适用“迟到”违规。
+            zh: "如果某轮的开始时间早于前一轮比赛原本预计结束的时间（由于所有牌手都提前完成对局），则要等到前一轮比赛预计结束的时间之后，才会开始适用“迟到”违规。"
           legacyRawUnits:
           - raw-L001969
           - raw-L001971
@@ -224,7 +218,7 @@ sections:
             cards, that player has up to 10 minutes to perform that task before they are considered tardy.
             If the player takes more than 10 minutes, a Match Loss will be applied. Otherwise, no penalty
             will be applied and a time extension given for the time taken.
-          zh: 如果，在对局开始或进行过程当中，牌手请求并得到裁判准许延时且行为合理（例如上洗手间、寻找遗失牌张的代用品），则该牌手有至多10分钟时间来执行相关请求，倘若超时便会视作迟到。如果该牌手花费超过10分钟的时间，则其会受到一局负。如果少于10分钟，则没有处罚，且会依照所用的时间给予相应补时。
+          zh: "如果，在对局开始前或进行过程当中，牌手请求并得到裁判准许延时且行为合理（例如上洗手间、寻找遗失牌张的代用品），则该牌手有至多10分钟时间来执行相关请求，倘若超时便会视作迟到。如果该牌手花费超过10分钟的时间，则其会受到一局负。如果不超过10分钟，则没有处罚，且会依照所用的时间给予相应补时。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 15
@@ -248,7 +242,7 @@ sections:
         type: list-item
         text:
           en: A player arrives to their seat 5 minutes after the round begins.
-          zh: 牌手在一局开始5分钟后才到他的座位。
+          zh: "牌手在一轮开始5分钟后才到他的座位。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 15
@@ -285,7 +279,7 @@ sections:
         text:
           en: A player loses their deck and cannot find replacement cards within the first 10 minutes
             of the round.
-          zh: 牌手遗失了他的套牌，且无法在本局比赛开始10分钟之内找到替换的牌。
+          zh: "牌手遗失了他的套牌，且无法在本轮比赛开始10分钟之内找到替换的牌。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 15
@@ -331,10 +325,7 @@ sections:
             for completing registrations in a timely manner. The Tournament Organizer may announce that
             they are giving the players some additional time before a penalty is issued. Otherwise, the
             penalty is issued as soon as the round begins.
-          zh: '牌手有责任准时抵达正确的对局桌，以及在规定的时间内完成登记。
-
-
-            比赛主办人可以自行决定判处“迟到”此违规的额外等待时限，并向参赛牌手宣布。否则，在此局开始的同时就要给予一盘负的处罚。'
+          zh: "牌手有责任准时抵达正确的对局桌，以及在规定的时间内完成登记。\n\n比赛主办人可以自行决定判处“迟到”此违规的额外等待时限，并向参赛牌手宣布。否则，在此轮开始的同时就要给予处罚。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 15
@@ -368,7 +359,7 @@ sections:
           text:
             en: The Tournament Organizer may announce that they are giving the players some additional time before
               a penalty is issued. Otherwise, the penalty is issued as soon as the round begins.
-            zh: 比赛主办人可以自行决定判处“迟到”此违规的额外等待时限，并向参赛牌手宣布。否则，在此局开始的同时就要给予一盘负的处罚。
+            zh: "比赛主办人可以自行决定判处“迟到”此违规的额外等待时限，并向参赛牌手宣布。否则，在此轮开始的同时就要给予处罚。"
           legacyRawUnits:
           - raw-L002037
           - raw-L002039
@@ -409,7 +400,7 @@ sections:
           en: A player not in their seat 10 minutes into the round will receive a Match Loss and will
             be dropped from the tournament unless they report to the Head Judge or Scorekeeper before
             the end of the round.
-          zh: 升级：如果牌手在一局开始10分钟之后才入座，则将得到一局负的处罚；且除非他在该局结束之前向主审或记分员报到，否则将视为从比赛中弃权。
+          zh: "升级：如果牌手在本轮开始10分钟时仍未入座，则将得到一局负的处罚；且除非他在该轮结束之前向主审或记分员报到，否则将视为从比赛中弃权。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 15
@@ -433,7 +424,7 @@ sections:
         type: paragraph
         text:
           en: A player who arrives at their seat before 1 minute has elapsed in the round receives a Warning.
-          zh: 降级：如果牌手在一局比赛开始后1分钟内到达座位则得到警告。
+          zh: "降级：如果牌手在本轮开始后未满1分钟时到达座位，则得到警告。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 16
@@ -487,7 +478,7 @@ sections:
         text:
           en: Seeks play advice or private information about their match from others once they have sat
             for their match.
-          zh: 牌手在已经入座准备开始对局之后，寻求关于自己对局之游戏建议或私人信息。
+          zh: "牌手在已经入座准备开始对局之后，向他人寻求关于自己对局之游戏建议或私人信息。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 16
@@ -655,10 +646,7 @@ sections:
             advice may not be written on cards. The Head Judge is the final arbiter on what cards and
             notes are acceptable for a tournament. Spectators who commit this infraction may be asked
             to leave the venue if they are not enrolled in the tournament.
-          zh: '牌上面的图样加工，包括间接地提供轻微策略信息的简短文字，均可以接受且不会认定为笔记。详细指示或复杂的策略建议不能写在牌上。在比赛中，主审是判定哪些牌与笔记可以接受的最终仲裁者。
-
-
-            没有参与比赛的旁观者若是犯下此违规，可以要求他离开会场。'
+          zh: "牌上面的图样加工，包括提供轻微策略信息或提示的简短文字，均可以接受且不会认定为笔记。详细指示或复杂的策略建议不能写在牌上。在比赛中，主审是判定哪些牌与笔记可以接受的最终仲裁者。\n\n没有参与比赛的旁观者若是犯下此违规，可以要求他离开会场。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 16
@@ -683,7 +671,7 @@ sections:
               or hints are acceptable and not considered notes. Detailed instructions or complex strategic advice
               may not be written on cards. The Head Judge is the final arbiter on what cards and notes are acceptable
               for a tournament.
-            zh: 牌上面的图样加工，包括间接地提供轻微策略信息的简短文字，均可以接受且不会认定为笔记。详细指示或复杂的策略建议不能写在牌上。在比赛中，主审是判定哪些牌与笔记可以接受的最终仲裁者。
+            zh: "牌上面的图样加工，包括提供轻微策略信息或提示的简短文字，均可以接受且不会认定为笔记。详细指示或复杂的策略建议不能写在牌上。在比赛中，主审是判定哪些牌与笔记可以接受的最终仲裁者。"
           legacyRawUnits:
           - raw-L002150
           - raw-L002152
@@ -899,13 +887,7 @@ sections:
             at a significant disadvantage because of the time limit. A player may be playing slowly without
             realizing it. A comment of “I need you to play faster” is often appropriate and all that is
             needed. Further slow play should be penalized.
-          zh: '所有牌手都有迅速进行游戏的责任，以让对手不会因为时间限制而有明显的不利。
-
-
-            牌手可能会无意间进行游戏过慢。对牌手说 “我希望你能进行的快速一点”通常就够了，而也只需要如此处理。再进一步的进行过慢就必须给予处罚。
-
-
-            再进一步的进行过慢就必须给予处罚。'
+          zh: "所有牌手都有迅速进行游戏的责任，以让对手不会因为时间限制而有明显的不利。\n\n牌手可能会无意间进行游戏过慢。对牌手说 “我希望你能进行得快速一点”通常就够了，而也只需要如此处理。\n\n再进一步的进行过慢就应当给予处罚。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 17
@@ -941,7 +923,7 @@ sections:
           text:
             en: A player may be playing slowly without realizing it. A comment of “I need you to play faster”
               is often appropriate and all that is needed.
-            zh: 牌手可能会无意间进行游戏过慢。对牌手说 “我希望你能进行的快速一点”通常就够了，而也只需要如此处理。再进一步的进行过慢就必须给予处罚。
+            zh: "牌手可能会无意间进行游戏过慢。对牌手说 “我希望你能进行得快速一点”通常就够了，而也只需要如此处理。"
           legacyRawUnits:
           - raw-L002248
           - raw-L002250
@@ -951,7 +933,7 @@ sections:
           - 325
           text:
             en: Further slow play should be penalized.
-            zh: 再进一步的进行过慢就必须给予处罚。
+            zh: "再进一步的进行过慢就应当给予处罚。"
           legacyRawUnits:
           - raw-L002256
           - raw-L002258
@@ -1067,7 +1049,7 @@ sections:
         text:
           en: This infraction does not cover errors in registration made by another participant prior
             to a sealed pool swap. Those should be corrected at the discretion of the judge.
-          zh: 此违规不包含现开牌池交换之前由其他牌手犯下的登记错误。此类错误应在征得裁判同意后修正。
+          zh: "此违规不包含现开牌池交换之前由其他牌手犯下的登记错误。此类错误应由裁判酌情修正。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 17
@@ -1256,7 +1238,7 @@ sections:
           en: Penalties for decklist errors discovered outside the context of the match and its procedures
             (such as those discovered through decklist counting) are issued at the start of the next match
             unless the judge believes there is strong evidence the deck itself is illegal.
-          zh: 在对局及其过程之外发现的套牌登记表错误（例如在清点套牌登记表时发现的），应等到下一局开始才执行，除非裁判相信有强烈的证据证明该套牌当前非法。
+          zh: "在对局及其过程之外发现的套牌登记表错误的处罚（例如在清点套牌登记表时发现的），应等到下一局开始才执行，除非裁判相信有强烈的证据证明该套牌当前非法。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 18
@@ -1277,10 +1259,7 @@ sections:
             on decklists (planeswalkers and other legendary permanents) are acceptable as long as they
             are the only representation of that character in the format and are treated as referring to
             that card, even if other cards begin with the same name.
-          zh: '登记表上模棱两可或是不明确的名称，会让牌手有机会在被发现之前操作他们的实际套牌内容。
-
-
-            对于套牌登记表上故事角色的名字（鹏洛客及其他传奇永久物），只要在此赛制中含有该名称的合法卡片只有一张，便可允许使用该角色名字之缩写。这类简写被视为指代前述之合法卡片，而非其他具有相同开头名称的牌张。'
+          zh: "登记表上模棱两可或是不明确的名称，会让牌手有机会在被发现之前操作他们的实际套牌内容。\n\n对于套牌登记表上故事角色的名字（鹏洛客及其他传奇永久物），只要在此赛制中含有该角色的合法卡片只有一张，便可允许使用该角色名字之缩写。这类简写被视为指代前述之合法卡片，而非其他具有相同开头名称的牌张。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 18
@@ -1315,7 +1294,7 @@ sections:
             en: Truncated names of storyline characters on decklists (planeswalkers and other legendary permanents)
               are acceptable as long as they are the only representation of that character in the format and are
               treated as referring to that card, even if other cards begin with the same name.
-            zh: 对于套牌登记表上故事角色的名字（鹏洛客及其他传奇永久物），只要在此赛制中含有该名称的合法卡片只有一张，便可允许使用该角色名字之缩写。这类简写被视为指代前述之合法卡片，而非其他具有相同开头名称的牌张。
+            zh: "对于套牌登记表上故事角色的名字（鹏洛客及其他传奇永久物），只要在此赛制中含有该角色的合法卡片只有一张，便可允许使用该角色名字之缩写。这类简写被视为指代前述之合法卡片，而非其他具有相同开头名称的牌张。"
           legacyRawUnits:
           - raw-L002392
           - raw-L002394
@@ -1347,7 +1326,7 @@ sections:
           en: Companions affect what the player intended to play, and may produce a situation in which
             the deck and decklist match, but violate the restriction on the intended companion. In these
             situations, it is acceptable to alter the deck and sideboard configuration to meet the restriction.
-          zh: 行侣牌会影响牌手的游戏计划，并且会出现一种情况，即套牌与套牌登记表相匹配，但违反了所使用行侣牌对套牌的限制。这种情况下，可以让牌手更改套牌构成以满足行侣牌的使用限制。
+          zh: "行侣牌会影响牌手意图使用的套牌内容，并且会出现一种情况，即套牌与套牌登记表相匹配，但违反了所使用行侣牌对套牌的限制。这种情况下，可以更改主牌与备牌的构成以满足行侣牌的使用限制。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 18
@@ -1366,7 +1345,7 @@ sections:
           en: In tournaments with open decklists, if the wrong decklist is provided to an opponent and
             it is discovered during the game, the opponent may have made strategic decisions throughout
             the game based on the error, and that cannot be fully assessed or offset.
-          zh: 在使用公开牌表的比赛中，如果牌手为对手提供了错误的套牌登记表，并在比赛过程中发现，对手可能会在整个比赛中都基于该错误做出决策，而这一错误是无法完全估量和弥补的。
+          zh: "在使用公开牌表的比赛中，如果牌手为对手提供了错误的套牌登记表，并在游戏过程中发现，对手可能已经在这盘游戏中基于该错误作出策略性决策，而其影响无法得到充分评估或抵消。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 18
@@ -1487,7 +1466,7 @@ sections:
             Plains, Island, Swamp, Mountain or Forest to reach the minimum number. Alter the decklist
             to reflect this. These changes may be reverted without penalty if the player is subsequently
             able to locate identical replacements to legal original cards.
-          zh: 如果套牌张数过少，该牌手选择加入任意组成且牌名为平原、海岛、沼泽、山脉、或树林的牌，直到满足张数下限为止。然后照此更改套牌登记表。
+          zh: "如果套牌张数过少，该牌手选择加入任意组成且牌名为平原、海岛、沼泽、山脉、或树林的牌，直到满足张数下限为止。然后照此更改套牌登记表。如果牌手稍后能够找到与原有合法牌张相同的替代牌，便可撤销上述更改，且不予处罚。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 18
@@ -1539,7 +1518,7 @@ sections:
         text:
           en: 'If there are extra cards stored with the sideboard that could conceivably be played in
             the player’s deck, they will be considered a part of the sideboard unless they are:'
-          zh: 如果有额外的牌和备牌摆放在一起，且明显的可以使用于该牌手的套牌中，则那些牌也会视为是备牌的一部份，但下列这些牌除外：
+          zh: "如果有额外的牌和备牌摆放在一起，且有可能用于该牌手的套牌中，则那些牌也会视为是备牌的一部份，但下列这些牌除外："
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 19
@@ -1655,7 +1634,7 @@ sections:
           en: If a player is unable to locate cards (or identical equivalents) from their main deck, treat
             it as a Decklist Problem instead. If sideboard cards are missing, make a note of this, but
             issue no penalty.
-          zh: 如果牌手无法找到其主牌当中的某些牌（或可用于替代的其他版次牌张），则应视作“套牌登记表问题”进行处理。如果备牌中出现牌张短少，则记录此事，但不予处罚。
+          zh: "如果牌手无法找到其主牌当中的某些牌（或与之相同的替代牌张），则应视作“套牌登记表问题”进行处理。如果备牌中出现牌张短少，则记录此事，但不予处罚。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 19
@@ -1760,7 +1739,7 @@ sections:
         text:
           en: Players are expected to call attention to deck errors immediately, and not gain any potential
             advantage from having the cards in their deck.
-          zh: 牌手在发现套牌错误时必须马上叫裁判，不得因套牌中有此类牌张而获得任何优势。
+          zh: "牌手在发现套牌错误时应当马上叫裁判，不得因套牌中有此类牌张而获得任何优势。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 19
@@ -1782,10 +1761,7 @@ sections:
             for the easily discovered situations. Duplicates of cards that begin in the main deck are
             more problematic, as they are not as easy to realize and catch, and thus mandate an upgraded
             penalty.
-          zh: '最常见的套牌问题包括未能还原备牌，以及套牌中出现不属于该套牌的牌张。除非刻意作弊，否则牌手很难从这两种情况当中获利。由对手来选择他们本应对局的牌张，就足以修正这种较易注意到的情况。
-
-
-            但对于本来就在主牌中放入数张的牌而言，如果这类牌发生前述失误，会较难发现并指出该牌在套牌中的数量是否增多，因此在此情况下便须升级处罚。'
+          zh: "最常见的套牌问题包括未能还原备牌，以及套牌中出现不属于该套牌的牌张。除非明显作弊，否则牌手很难从这两种情况当中获利。由对手来选择他们本应对局的牌张，就足以修正这种较易注意到的情况。\n\n对于原本就在主牌中的牌而言，如果这类牌发生前述失误，会较难发现并指出该牌在套牌中的数量是否增多，因此在此情况下便须升级处罚。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 19
@@ -1810,7 +1786,7 @@ sections:
               deck. Both of these are difficult to gain advantage from without obvious cheating. Allowing the
               opponent to choose which card they would otherwise be working with is sufficient to compensate for
               the easily discovered situations.
-            zh: 最常见的套牌问题包括未能还原备牌，以及套牌中出现不属于该套牌的牌张。除非刻意作弊，否则牌手很难从这两种情况当中获利。由对手来选择他们本应对局的牌张，就足以修正这种较易注意到的情况。
+            zh: "最常见的套牌问题包括未能还原备牌，以及套牌中出现不属于该套牌的牌张。除非明显作弊，否则牌手很难从这两种情况当中获利。由对手来选择他们本应对局的牌张，就足以修正这种较易注意到的情况。"
           legacyRawUnits:
           - raw-L002592
           - raw-L002594
@@ -1821,7 +1797,7 @@ sections:
           text:
             en: Duplicates of cards that begin in the main deck are more problematic, as they are not as easy
               to realize and catch, and thus mandate an upgraded penalty.
-            zh: 但对于本来就在主牌中放入数张的牌而言，如果这类牌发生前述失误，会较难发现并指出该牌在套牌中的数量是否增多，因此在此情况下便须升级处罚。
+            zh: "对于原本就在主牌中的牌而言，如果这类牌发生前述失误，会较难发现并指出该牌在套牌中的数量是否增多，因此在此情况下便须升级处罚。"
           legacyRawUnits:
           - raw-L002600
           - raw-L002602
@@ -1872,16 +1848,7 @@ sections:
             need replacing, they are replaced by cards from the random portion of the library. If the
             missing card(s) are with the sideboard and it isn’t the first game, choose the ones to be
             returned to the deck at random from main deck cards in the sideboard.
-          zh: '找到套牌中缺失的相应牌张，以及在各个游戏区域中的所有错误牌张。向对手展示这些牌。
-
-
-            如果当前游戏已经开始，由对手选择当前立刻修复该问题，或是等到下一次有牌手将获得优先权时再进行修复。接下来，在其所选择的时点，由对手选择用缺失的牌张与错误牌张一一对应进行替换；多余的牌张将被洗入牌库中的随机部分。
-
-
-            若需被移除的牌张多于需被加回的牌张，则优先替换不在牌库中的牌张。如果在此之后，仍有不在牌库中的牌张需被替换，则用牌库的随机部分中的牌张进行替换。
-
-
-            若缺失的牌与备牌放在一起，且当前并非第一盘游戏，则从备牌中原本属于主牌的牌张中随机选择相应数量的牌张加回套牌。'
+          zh: "找到套牌中缺失的相应牌张，以及在各个游戏区域中的所有错误牌张。向对手展示这些牌。\n\n如果当前游戏已经开始，由对手选择当前立刻修复该问题，或是等到下一次有牌手将获得优先权时再进行修复。接下来，在其所选择的时点，由对手指定每张错误牌张由哪张缺失的牌张替换；剩余的缺失牌张洗入牌库中的随机部分。\n\n若需被移除的牌张多于需被加回的牌张，则优先替换不在牌库中的牌张。如果在此之后，仍有不在牌库中的牌张需被替换，则用牌库的随机部分中的牌张进行替换。\n\n若缺失的牌与备牌放在一起，且当前并非第一盘游戏，则从备牌中原本属于主牌的牌张中随机选择相应数量的牌张加回套牌。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 20
@@ -1920,7 +1887,7 @@ sections:
             en: If the game has started, the opponent chooses whether to fix the problem now or when a player
               would next get priority. Then, at the appropriatre time, they specify which of the missing cards
               replaces each incorrect card; any extras are shuffled into the random portion of the library.
-            zh: 如果当前游戏已经开始，由对手选择当前立刻修复该问题，或是等到下一次有牌手将获得优先权时再进行修复。接下来，在其所选择的时点，由对手选择用缺失的牌张与错误牌张一一对应进行替换；多余的牌张将被洗入牌库中的随机部分。
+            zh: "如果当前游戏已经开始，由对手选择当前立刻修复该问题，或是等到下一次有牌手将获得优先权时再进行修复。接下来，在其所选择的时点，由对手指定每张错误牌张由哪张缺失的牌张替换；剩余的缺失牌张洗入牌库中的随机部分。"
           legacyRawUnits:
           - raw-L002630
           - raw-L002632
@@ -1956,7 +1923,7 @@ sections:
             Then, reveal all cards in the sideboard that meet the companion restriction. The opponent
             decides which of those cards replaces each illegal card. If making the deck match the companion
             condition is impossible, upgrade the penalty to a Game Loss.
-          zh: 如果失误是因违反了行侣牌使用限制所导致的，且当前游戏为换备后对局（或者当前游戏为换备前对局，牌手已展示使用行侣，且选择继续用当前违反了该行侣牌使用限制的套牌进行游戏的情况），先找出套牌中所有违反该行侣牌使用限制的牌张。然后，展示备牌中所有符合该行侣牌使用限制的牌张。由对手在这些已展示的牌张中选择用哪些来对应替换不符合限制的牌张。如果无法将套牌调整至能满足该行侣牌的使用限制，则将处罚升级为一盘负。
+          zh: "如果失误导致违反了行侣牌的使用限制，且当前游戏为换备后游戏（或者当前游戏为换备前游戏，牌手已展示使用行侣，且选择继续用当前违反了该行侣牌使用限制的套牌进行游戏的情况），先找出套牌中所有违反该行侣牌使用限制的牌张。然后，展示备牌中所有符合该行侣牌使用限制的牌张。由对手在这些已展示的牌张中选择用哪些来对应替换不符合限制的牌张。如果无法将套牌调整至能满足该行侣牌的使用限制，则将处罚升级为一盘负。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 20
@@ -2001,7 +1968,7 @@ sections:
             or during a deckcheck, if the deck contains fewer cards than registered (and any missing cards
             are not in the opponent’s deck) or the sideboard contains more cards than registered, the
             penalty is a Game Loss.
-          zh: 升级：在换备前的对局中，如果是在将套牌呈视给对手做游戏开始前洗牌时，或是在进行套牌检查的过程中，发现组成套牌的牌张总数少于登记的数量（且缺失的牌张不在当前对手的套牌中），或备牌的牌张总数多于登记的数量，则处罚为一盘负。
+          zh: "升级：在换备前的游戏中，如果是在将套牌呈视给对手做游戏开始前洗牌时，或是在进行套牌检查的过程中，发现组成套牌的牌张总数少于登记的数量（且缺失的牌张不在当前对手的套牌中），或备牌的牌张总数多于登记的数量，则处罚为一盘负。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 20
@@ -2021,7 +1988,7 @@ sections:
             or during a deckcheck, if the deck contains fewer cards than the format minimum (and any missing
             cards are not in the opponent’s deck) or the sideboard contains more cards than the format
             maximum, the penalty is a Game Loss.
-          zh: 在换备后的对局中，如果是在将套牌呈视给对手做游戏开始前洗牌时，或是在进行套牌检查的过程中，发现组成套牌的牌张总数少于当前赛制限定的数量（且缺失的牌张不在当前对手的套牌中），或备牌的牌张总数多于当前赛制限定的数量，则处罚为一盘负。
+          zh: "在换备后的游戏中，如果是在将套牌呈视给对手做游戏开始前洗牌时，或是在进行套牌检查的过程中，发现组成套牌的牌张总数少于当前赛制的张数下限（且缺失的牌张不在当前对手的套牌中），或备牌的牌张总数多于当前赛制的张数上限，则处罚为一盘负。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 20
@@ -2047,7 +2014,7 @@ sections:
           en: If an opponent may have made strategic decisions based on the presence of a sideboard card
             (such as having seen it in the hand or library during a search effect), the penalty is a Game
             Loss.
-          zh: 升级：如果对手可能因备牌的存在而作出相应的游戏决策（比如从手牌中看到，或通过搜寻效应在牌库中看到），则处罚为一盘负。
+          zh: "升级：如果对手可能已经因备牌的存在而作出相应的游戏决策（比如从手牌中看到，或通过搜寻效应在牌库中看到），则处罚为一盘负。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 20
@@ -2075,7 +2042,7 @@ sections:
             are still in the random portion of the library. For example if the decklist has two copies
             of Shock in the main deck and two in the sideboard, but a search finds two copies of Shock
             in the library with another already in the graveyard, the penalty is upgraded.
-          zh: 升级：如果失误导致原本即在主牌中使用之某牌数量，较原有登记或行侣牌的使用限制为多，且是在游戏开始之后才发现此失误，则除非所有这些牌依然处于牌库中的随机部分，否则处罚为一盘负。举例来说，如果套牌登记表上登记的是电震/Shock，此牌在主牌和备牌中各有两张，但搜寻牌库时发现牌库里有两张电震，且坟墓场中还有另一张，则需升级处罚。
+          zh: "升级：如果失误导致原本即在主牌中使用之某牌数量，较原有登记或行侣牌的使用限制为多，则除非所有这些牌依然处于牌库中的随机部分，否则处罚为一盘负。举例来说，如果套牌登记表上登记的是电震，此牌在主牌和备牌中各有两张，但搜寻牌库时发现牌库里有两张电震，且坟墓场中还有另一张，则需升级处罚。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 20
@@ -2339,7 +2306,7 @@ sections:
         text:
           en: A player casts Path to Exile, forgets to remind their opponent that they have the opportunity
             to search for a basic land and, as a result, they don’t.
-          zh: 牌手施放流放之径，并且忘记提醒对手有机会可以搜寻一张基本地，并且对手确实没有搜寻基本地。
+          zh: "牌手施放流放之径，并且忘记提醒对手有机会可以搜寻一张基本地，并因此导致对手没有搜寻基本地。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 21
@@ -2366,7 +2333,7 @@ sections:
           en: Clear communication is essential when playing Magic. Though many offenses will be intentional,
             it is possible for a player to make a genuine mistake that causes confusion and these should
             not be penalized harshly.
-          zh: 交流通畅是顺利进行万智牌游戏的关键要素。虽然这类违规多为蓄意，但仍有可能牌手犯下的是无心之失并使对手产生了迷惑；在这种状况下，便不该给予严厉的处罚。
+          zh: "交流通畅是顺利进行万智牌游戏的关键要素。虽然许多此类违规是蓄意的，但仍有可能牌手犯下的是无心之失并使对手产生了迷惑；在这种状况下，便不该给予严厉的处罚。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 21
@@ -2385,10 +2352,7 @@ sections:
           en: A player may commit this infraction in situations where they have not spoken. A physically
             ambiguous board state is not automatically a penalty, but judges are encouraged to tell players
             to fix ambiguous placements before they might become problematic.
-          zh: '牌手可能在没有讲话的情况下犯下此违规。
-
-
-            桌面上出现迷惑的局面并不会自动导致判罚，但是应鼓励裁判在可能出现问题之前，让牌手改正迷惑的局面。'
+          zh: "牌手可能在没有讲话的情况下犯下此违规。\n\n桌面上因摆放而产生不明确的局面并不会自动导致判罚，但是应鼓励裁判在可能出现问题之前，让牌手改正不明确的牌张摆放。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 21
@@ -2421,7 +2385,7 @@ sections:
           text:
             en: A physically ambiguous board state is not automatically a penalty, but judges are encouraged to
               tell players to fix ambiguous placements before they might become problematic.
-            zh: 桌面上出现迷惑的局面并不会自动导致判罚，但是应鼓励裁判在可能出现问题之前，让牌手改正迷惑的局面。
+            zh: "桌面上因摆放而产生不明确的局面并不会自动导致判罚，但是应鼓励裁判在可能出现问题之前，让牌手改正不明确的牌张摆放。"
           legacyRawUnits:
           - raw-L002846
           - raw-L002848
@@ -2431,7 +2395,7 @@ sections:
           en: Misapplication of a shortcut is usually not a Communication Policy Violation, as the default
             interpretation applies in ambiguous situations and the opponent is able to act on that shortcut.
             Any deviation from a tournament shortcut requires a clear explanation.
-          zh: 错误的使用简化一般不是违反交流原则，因为默认的解释只适用于不明确的情况，而此时对手可以针对该简化做出动作。任何偏离比赛规定的简化都必须有清晰的解释。
+          zh: "错误的使用简化一般不是违反交流原则，因为默认的解释适用于不明确的情况，而此时对手可以针对该简化做出动作。任何偏离比赛规定的简化都必须有清晰的解释。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 21
@@ -2551,7 +2515,7 @@ sections:
         type: list-item
         text:
           en: The basic lands in a player’s unsleeved deck are from a set with notably lighter backs.
-          zh: 在一副没有用牌套的套牌中，使用了牌背颜色略淡的基本地。
+          zh: "在一副没有用牌套的套牌中，使用了牌背颜色明显较淡的基本地。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 22
@@ -2580,10 +2544,7 @@ sections:
             in most cases. Note that almost all sleeves can be considered marked in some way; judges should
             keep this in mind when determining penalties. In cases of marked cards, educating players
             to shuffle their cards and sleeves before sleeving the cards is very important.
-          zh: '牌套与牌在比赛过程中经常会持续磨损，并且，只要牌手并不准备藉此获得优势，通常来说只要提醒有此现象便已足够。请注意，几乎所有的牌套都可能在某种标准下被判定为有记号；裁判决定作出处罚时务须谨慎行事。
-
-
-            遇到此类状况时，要教导牌手在上牌套之前务必要先将牌洗过。'
+          zh: "牌套与牌在比赛过程中经常会持续磨损，并且，只要牌手并不准备藉此获得优势，通常处理此状况便已足够。请注意，几乎所有的牌套都可能在某种标准下被判定为有记号；裁判决定作出处罚时务须谨慎行事。\n\n遇到有记号的牌时，教导牌手在上牌套前将牌和牌套洗过十分重要"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 22
@@ -2608,7 +2569,7 @@ sections:
               is not attempting to take advantage of this, addressing the situation is sufficient in most cases.
               Note that almost all sleeves can be considered marked in some way; judges should keep this in mind
               when determining penalties.
-            zh: 牌套与牌在比赛过程中经常会持续磨损，并且，只要牌手并不准备藉此获得优势，通常来说只要提醒有此现象便已足够。请注意，几乎所有的牌套都可能在某种标准下被判定为有记号；裁判决定作出处罚时务须谨慎行事。
+            zh: "牌套与牌在比赛过程中经常会持续磨损，并且，只要牌手并不准备藉此获得优势，通常处理此状况便已足够。请注意，几乎所有的牌套都可能在某种标准下被判定为有记号；裁判决定作出处罚时务须谨慎行事。"
           legacyRawUnits:
           - raw-L002922
           - raw-L002924
@@ -2619,7 +2580,7 @@ sections:
           text:
             en: In cases of marked cards, educating players to shuffle their cards and sleeves before sleeving
               the cards is very important.
-            zh: 遇到此类状况时，要教导牌手在上牌套之前务必要先将牌洗过。
+            zh: "遇到有记号的牌时，教导牌手在上牌套前将牌和牌套洗过十分重要"
           legacyRawUnits:
           - raw-L002930
           - raw-L002932
@@ -2630,10 +2591,7 @@ sections:
             the sideboard are not illegal unless they are put into the deck without being changed. Unless
             investigating, judges are encouraged to alert players about concerns with marked sideboard
             cards.
-          zh: '此违规只适用于牌手套牌中的牌。牌手备牌中的牌，就算牌套上有相异的记号也不会算作不合法，但倘若牌手在此种情况下不更换牌套即将之换入套牌则不然。
-
-
-            除了需进行调查的情况外，在此鼓励裁判提醒牌手注意自己备牌是否上存在记号。'
+          zh: "此违规只适用于牌手套牌中的牌。牌手备牌中的牌，就算牌套上有相异的记号也不会算作不合法，但倘若牌手在此种情况下不更换牌套即将之换入套牌则不然。\n\n除了需进行调查的情况外，在此鼓励裁判提醒牌手注意自己备牌上是否存在记号。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 22
@@ -2667,7 +2625,7 @@ sections:
           text:
             en: Unless investigating, judges are encouraged to alert players about concerns with marked sideboard
               cards.
-            zh: 除了需进行调查的情况外，在此鼓励裁判提醒牌手注意自己备牌是否上存在记号。
+            zh: "除了需进行调查的情况外，在此鼓励裁判提醒牌手注意自己备牌上是否存在记号。"
           legacyRawUnits:
           - raw-L002950
           - raw-L002952
@@ -2684,10 +2642,7 @@ sections:
           en: The player needs to replace the card(s) or sleeve(s) with an unmarked version or, if no
             sleeves are being used, use sleeves that conceal the markings. If the cards themselves have
             become marked through play in the tournament, the Head Judge may decide to issue a proxy.
-          zh: '牌手必须将有记号的牌或是牌套换掉；若是并未利用牌套，则上牌套来盖掉记号。
-
-
-            如果牌是在比赛中因游戏过程地磨损而有了记号，则主审可以决定给予代牌来使用。'
+          zh: "牌手必须将有记号的牌或牌套换成没有记号的；若是并未利用牌套，则上牌套来盖掉记号。\n\n如果牌是在比赛中因游戏过程中的磨损而有了记号，则主审可以决定给予代牌来使用。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 22
@@ -2710,7 +2665,7 @@ sections:
           text:
             en: The player needs to replace the card(s) or sleeve(s) with an unmarked version or, if no sleeves
               are being used, use sleeves that conceal the markings.
-            zh: 牌手必须将有记号的牌或是牌套换掉；若是并未利用牌套，则上牌套来盖掉记号。
+            zh: "牌手必须将有记号的牌或牌套换成没有记号的；若是并未利用牌套，则上牌套来盖掉记号。"
           legacyRawUnits:
           - raw-L002960
           - raw-L002962
@@ -2721,7 +2676,7 @@ sections:
           text:
             en: If the cards themselves have become marked through play in the tournament, the Head Judge may
               decide to issue a proxy.
-            zh: 如果牌是在比赛中因游戏过程地磨损而有了记号，则主审可以决定给予代牌来使用。
+            zh: "如果牌是在比赛中因游戏过程中的磨损而有了记号，则主审可以决定给予代牌来使用。"
           legacyRawUnits:
           - raw-L002968
           - raw-L002970
@@ -2765,7 +2720,7 @@ sections:
         text:
           en: If the Head Judge believes that a deck’s owner noticing the pattern of markings would be
             able to gain substantial advantage from this knowledge, the penalty is a Game Loss.
-          zh: 升级：如果主审相信套牌的拥有者已经注意到记号的模式，且有可能利用此信息得到实质性优势，则处罚为一盘负。
+          zh: "升级：如果主审相信套牌的拥有者若注意到记号的模式，便能够利用此信息得到实质性优势，则处罚为一盘负。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 22
@@ -2891,10 +2846,7 @@ sections:
             to have the skill and understanding of randomization to do so. However, as the opponent has
             the opportunity to shuffle after the player does, the potential for advantage is lowered if
             tournament policy is followed.
-          zh: '牌手在有必要和被要求时，必须要彻底地将其套牌洗牌；且应要有随机化的技术和对何谓“随机化”的认知。
-
-
-            由于对手在该牌手洗牌之后也有机会洗牌，若是能够确实遵守此项比赛方针，则牌手得到利益的可能性会降低。'
+          zh: "牌手在有必要和被要求时，应当彻底地将其套牌洗牌；且应要有随机化的技术和对何谓“随机化”的认知。\n\n由于对手在该牌手洗牌之后也有机会洗牌，若是能够确实遵守此项比赛方针，则牌手得到利益的可能性会降低。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 23
@@ -2917,7 +2869,7 @@ sections:
           text:
             en: Players are expected to shuffle their deck thoroughly when it is required and are expected to
               have the skill and understanding of randomization to do so.
-            zh: 牌手在有必要和被要求时，必须要彻底地将其套牌洗牌；且应要有随机化的技术和对何谓“随机化”的认知。
+            zh: "牌手在有必要和被要求时，应当彻底地将其套牌洗牌；且应要有随机化的技术和对何谓“随机化”的认知。"
           legacyRawUnits:
           - raw-L003034
           - raw-L003036
@@ -2938,7 +2890,7 @@ sections:
           en: Any time cards in a deck could be seen, including during shuffling, it is no longer shuffled,
             even if the player only knows the position of one or two cards. Players are expected to take
             care in shuffling not to reveal cards to themselves, their teammates, or their opponents.
-          zh: 只要可能看见套牌内容，包括洗牌之间，即使牌手只知道一两张牌的位置，该套牌都会不再是随机化。牌手在洗牌时必须注意不要将牌展示给自己、队友或是对手看。
+          zh: "只要可能看见套牌内容，包括洗牌期间，即使牌手只知道一两张牌的位置，该套牌都会不再是随机化。牌手在洗牌时应当注意不要将牌展示给自己、队友或是对手看。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 23
@@ -3086,7 +3038,7 @@ publicationAnnotations:
           and/or can give a player a significant advantage. If a violation to the Magic Tournament Rules
           is not considered detrimental to the overall flow of the event, then a penalty is not needed
           and the judge will simply educate the player on a corrective action.
-        zh: 只有较为严重的违反《万智牌比赛规则》的情形应当给予判罚。这类违规会扰乱比赛的整体流程，使得比赛所花费的时间增加，或会使牌手获得显著的优势。如果某种违反《万智牌比赛规则》的行为不会对比赛的整体流程产生负面影响，那么便无须给予判罚，裁判只需对牌手进行教育，并指导牌手如何做是正确的。
+        zh: "只有较为严重的违反《万智牌比赛规则》的情形应当给予判罚。这类违规可能会扰乱比赛的整体流程，使得比赛所花费的时间增加，或可能会使牌手获得显著的优势。如果某种违反《万智牌比赛规则》的行为不会对比赛的整体流程产生负面影响，那么便无须给予判罚，裁判只需对牌手进行教育，并指导牌手如何做是正确的。"
       sourceRawUnits:
       - raw-L001927
       - raw-L001929
@@ -3133,7 +3085,7 @@ publicationAnnotations:
           Errors where the first time a player receives it, it can be a warning OR a Game loss (Tardiness
           and Deck Problem are examples).  If the second instance of one of those penalties is supposed
           to be a Warning, it’s still a warning, despite receiving an earlier Game Loss.
-        zh: 比赛失误对比赛产生的破坏性，以及犯下此失误的难度都要高于游戏行动失误。因此第二次或更多次犯下同类型的比赛失误而受到警告，将被升级为一盘负。而后续犯下的同类型的比赛失误将继续是一盘负。我们将不会继续升级处罚直至取消资格。此外，有少数比赛失误在牌手初犯时，可能被判为警告，也可能被判为一盘负（例如迟到和套牌问题）。如果这类违规的第二次按规定本应是警告，那么即便该牌手在第一次被判过一盘负，这次判罚依然是警告。
+        zh: "比赛失误对比赛产生的破坏性，以及犯下此失误的难度通常都要高于游戏行动失误。因此第二次或更多次犯下同类型的比赛失误而受到警告，将被升级为一盘负。而后续犯下的同类型的比赛失误将继续是一盘负。我们将不会继续升级处罚直至取消资格。此外，有少数比赛失误在牌手初犯时，可能被判为警告，也可能被判为一盘负（例如迟到和套牌问题）。如果这类违规的第二次按规定本应是警告，那么即便该牌手在第一次被判过一盘负，这次判罚依然是警告。"
       sourceRawUnits:
       - raw-L001943
       - raw-L001945
@@ -3201,7 +3153,7 @@ publicationAnnotations:
           1:43 start time, but the penalty based on the 1:50 start time. This means that it’s possible
           that starting a round early won’t result in any actual saved time, but it’s still more likely
           to do so than not.
-        zh: 这种情况在竞争级的比赛中不太常见，但偶尔也会出现：在这轮结束前10分钟前所有桌都完成了比赛。比赛一点钟开始，在一点四十分的时候，所有桌都打完了。那么我们赶快开下一轮吧！但是问题是之前通知的结束时间是一点五十分，期望所有这轮打完跑去吃饭的牌手知道下轮提前开始是不切实际的。因此，即使你在一点四十三分开始下一轮，牌手在一点五十之前回来都不能算作迟到。他们回来之后，基于这轮的实际开始时间给他们适当的延长时间，同时，迟到的判定将从一点五十分开始。这意味着，提前开始下一轮可能并不能实际节省时间，但是这样做总比不做更有可能节省时间。
+        zh: "这种情况在竞争级的比赛中不太常见，但偶尔也会出现：在这轮结束前10分钟所有桌都完成了比赛。比赛一点钟开始，在一点四十分的时候，所有桌都打完了。那么我们赶快开下一轮吧！但是问题是之前通知的结束时间是一点五十分，期望所有这轮打完跑去吃饭的牌手知道下轮提前开始是不切实际的。因此，即使你在一点四十三分开始下一轮，牌手在一点五十之前回来都不能算作迟到。他们回来之后，基于这轮的实际开始时间给他们适当的延长时间，同时，迟到的判定将从一点五十分开始。这意味着，提前开始下一轮可能并不能实际节省时间，但是这样做总比不做更有可能节省时间。"
       sourceRawUnits:
       - raw-L001973
       - raw-L001975
@@ -3228,7 +3180,7 @@ publicationAnnotations:
           bound on how much time a player to perform the task.  Now, that doesn’t mean the player can
           wander off and do other things as well.  If they were given time to go to the bathroom, that
           doesn’t include stopping at the counter to buy a snack.
-        zh: 这一段自身就解释的相当清楚了。如果牌手有合理的理由去做一些事，请让他们去做。去抽烟、买零食、或完成交易并不算合理的理由。这也并不意味着他们有无限制的时间去做。事实上，他们需要毫无迟延地去做这些事。请让他们留意他们必须赶紧回来。他们有至多10分钟时间来完成这些事，如果超出这个时间，他们将会得到一局负并从比赛中退赛，这与标注的迟到升级判罚一致。这是为了减少对整场比赛的影响，因为过长的加时会影响比赛中的每一个人。这一条也制定了一个绝对的上限，限制牌手要在多少时间之内做完这些事。即使如此，这也不意味着牌手可以到处闲逛去做其他事情。如果给了牌手时间去洗手间，这并不包括允许他们在小卖部停下来买个零食吃。
+        zh: "这一段自身就解释的相当清楚了。如果牌手有合理的理由去做一些事，请让他们去做。去抽烟、买零食、或完成交易并不算合理的理由。这也并不意味着他们有无限制的时间去做。事实上，他们需要毫无迟延地去做这些事。请让他们留意他们必须赶紧回来。他们有至多10分钟时间来完成这些事，如果超出这个时间，他们将会得到一局负并从比赛中退赛，这与标准的迟到升级判罚一致。这是为了减少对整场比赛的影响，因为过长的加时会影响比赛中的每一个人。这一条也制定了一个绝对的上限，限制牌手要在多少时间之内做完这些事。即使如此，这也不意味着牌手可以到处闲逛去做其他事情。如果给了牌手时间去洗手间，这并不包括允许他们在小卖部停下来买个零食吃。"
       sourceRawUnits:
       - raw-L001981
       - raw-L001985
@@ -3297,7 +3249,7 @@ publicationAnnotations:
           do allow them time to go find replacements.  This is not a Game Loss at this time.  However,
           the player has a maximum of 10 minutes into the round to find replacements. If they exceed this
           time limit, give the player Tardiness with the upgraded penalty.
-        zh: 牌手除了应该准时进行对局以外，还应该保管好自己的物品。但是，如果牌手准时到场，却发现丢了套牌或者其中的某些牌，我们应当给他一些时间让他找到替代品。在此时还不是一盘负。但是，牌手最多有10分钟的时间（从本轮开始起计算）来找到替代品。若超过此时限，他将受到升级的迟到判罚（一局负）。
+        zh: "牌手除了应该准时进行对局以外，还应该携带所需物品准时到场。但是，如果牌手准时到场，却发现丢了套牌或者其中的某些牌，我们应当给他一些时间让他找到替代品。在此时还不是一盘负。但是，牌手最多有10分钟的时间（从本轮开始起计算）来找到替代品。若超过此时限，他将受到升级的迟到判罚（一局负）。"
       sourceRawUnits:
       - raw-L002011
       - raw-L002013
@@ -3417,8 +3369,7 @@ publicationAnnotations:
           is dropping on the match slip. It is best practice to let the player who got the win fill out
           the slip, with the judge marking “No Show” for the player who didn’t show up in the drop column,
           and putting the judge’s name on the line for the player’s signature who didn’t show up.
-        zh: 在一轮开始的10分钟后，迟到的牌手将得到另一个迟到判罚，这次的处罚是一局负。同时我们可以认为这为牌手不会回来了，所以在成绩条上的退赛一栏做上标记。最佳做法是：让赢得此局的牌手在成绩条上签字，然后裁判在迟到的牌手右面的“退赛”那栏写上“No
-          Show”，再在该牌手签名处签裁判自己的名字。
+        zh: "在一轮开始的10分钟后，迟到的牌手将得到另一个迟到判罚，这次的处罚是一局负。同时我们可以认为这位牌手不会回来了，所以在成绩条上的退赛一栏做上标记。最佳做法是：让赢得此局的牌手在成绩条上签字，然后裁判在迟到的牌手右面的“退赛”那栏写上“No Show”，再在该牌手签名处签裁判自己的名字。"
       sourceRawUnits:
       - raw-L002059
       - raw-L002063
@@ -3480,7 +3431,7 @@ publicationAnnotations:
           board or dealer booth, or outside while smoking. Players are going to chat about decks they
           played against or think they have to play against. We cannot control what they talk about in
           the restroom.
-        zh: 当一位牌手在对局中就座之后，从其他人那里获取有关对局的额外信息或指导便是不允许的。并不禁止闲聊，除非闲聊中包括有可能让这位牌手在对局中获益的信息。外来协助这一条并不包括在配对表前，摊位前以及走廊里抽烟时向其他人寻求建议。牌手们总是会讨论他的套牌以及他们可能即将对抗的套牌。我们控制不了牌手在厕所里聊什么。
+        zh: "当一位牌手在对局中就座之后，从其他人那里获取有关对局的额外信息或指导便是不允许的。并不禁止闲聊，除非闲聊中包括有可能让这位牌手在对局中获益的信息。外来协助这一条并不包括在配对表前，摊位前以及走廊里抽烟时向其他人寻求建议。牌手们总是会讨论他们此前对抗过的套牌以及他们可能即将对抗的套牌。我们控制不了牌手在厕所里聊什么。"
       sourceRawUnits:
       - raw-L002090
       - raw-L002092
@@ -3502,7 +3453,7 @@ publicationAnnotations:
           behavior should be punished and the Match Loss should be issued. Keep in mind we are talking
           about “play advice.” “Don’t forget to attack” is play advice; “Quit, so we can go get food”
           is not play advice — although both may result in the game ending.
-        zh: 这种情况多出现在一位牌手打完之后来围观朋友的时候。特别是这两位牌手都还在比赛中的时候，这种行为属于外来协助而且将获得一盘负的处罚。注意我们在讨论的是“游戏建议”，“别忘了踹”——这个是游戏建议；“你赶快投了，咱们吃饭去吧！”——这个不是，虽然这两句话可能都会导致游戏结束。
+        zh: "这种情况常发生在旁观者身上，或发生在刚结束自己的对局、正在观看朋友比赛的牌手身上。特别是对于仍在比赛中的牌手，这种行为属于外来协助而且将获得一局负的处罚。注意我们在讨论的是“游戏建议”，“别忘了踹”——这个是游戏建议；“你赶快投了，咱们吃饭去吧！”——这个不是，虽然这两句话可能都会导致游戏结束。"
       sourceRawUnits:
       - raw-L002098
       - raw-L002100
@@ -3547,7 +3498,7 @@ publicationAnnotations:
           many Forests should be played, or “Did you force White?” are examples. For some formats, such
           as Two-Headed Giant and Team Tournaments, team members can discuss decks and strategies between
           themselves, and Outside Assistance does not apply.
-        zh: 在限制赛事中，包括轮抽和现开，牌手在组牌或者轮抽过程中都将被视为在“对局中”，所有符合上面所述的违规的行为都将被视为“外来协助”。比如：询问抓什么，应该加多少树林，或者“你要强行抓白么？”。在某些赛制中，比如双头巨人或者团队现开，队伍成员之间可以讨论组牌和战术，这时“外来协助”就不再适用。
+        zh: "在限制赛事中，包括轮抽和现开，牌手在组牌或者轮抽过程中都将被视为在“对局中”，所有符合上面所述的违规的行为都将被视为“外来协助”。比如：询问抓什么，应该加多少树林，或者“你是强行抓白的吗？”。在某些赛制中，比如双头巨人或者团队赛事，队伍成员之间可以讨论组牌和战术，这时“外来协助”就不再适用。"
       sourceRawUnits:
       - raw-L002114
       - raw-L002116
@@ -3598,7 +3549,7 @@ publicationAnnotations:
       text:
         en: Keep in mind though that asking or telling a player the results of another match is not Outside
           Assistance, even if that information is used to end the game.
-        zh: 需要注意，询问或告诉对局中的牌手比赛中其他对局的结果并不属于外来协助，即使这个信息会使得这盘游戏直接结束。
+        zh: "需要注意，询问或告诉对局中的牌手比赛中其他对局的结果并不属于外来协助，即使牌手使用该信息来结束这盘游戏。"
       sourceRawUnits:
       - raw-L002144
       - raw-L002148
@@ -3621,7 +3572,7 @@ publicationAnnotations:
           on the face of sideboard cards, or “attack with me” on a Ball Lightning, or a Trinket Mage altered
           to be examining a specific artifact (the intended target). If you are not sure whether such
           visual modification is acceptable, ask the Head Judge.
-        zh: 一些牌手会在牌上写一些字，这有可能包括战术信息。牌面上的几个词，标记或者画是可以接受的，但是在牌上写上句话可能就不行了。例如在备牌的牌面上画几个点、写着“用我踹”的暴雷链球、或者写着某个神器名字的琐物法师。如果你不确定一张牌上的图样加工是否可以接受，请去问主审。
+        zh: "一些牌手会在牌上写一些字，这有可能包括战术信息。牌面上的几个词，标记或者画是可以接受的，但是在牌上写上句话可能就不行了。例如在备牌的牌面上画几个点、写着“用我踹”的暴雷链球、或者被加工为正在观察某个特定神器的琐物法师。如果你不确定一张牌上的图样加工是否可以接受，请去问主审。"
       sourceRawUnits:
       - raw-L002154
       - raw-L002156
@@ -3645,7 +3596,7 @@ publicationAnnotations:
           for a Match Loss to apply to. In these case, judges should ask the spectators to leave the venue
           politely; this provides a warning to other spectators who can’t help talking about the current
           match when they are watching others.
-        zh: 对于比赛中的牌手来说，“外来协助”这项就像悬在头顶的达摩克利斯之剑一样提醒着他们不要寻求其他人的建议。然而，旁观者显然没有这种顾虑，因为对于他们来说并没有比赛可以“一局负”。这种情况下，裁判应该礼貌的请他离开会场。这对于其他旁观者来说是一种警示，让他们不会犯下同样的错误。
+        zh: "对于比赛中的牌手来说，“外来协助”这项就像悬在头顶的达摩克利斯之剑一样提醒着他们不要向别人提供建议或寻求其他人的建议。然而，旁观者显然没有这种顾虑，因为对于他们来说并没有比赛可以“一局负”。这种情况下，裁判应该礼貌的请他离开会场。这对于其他旁观者来说是一种警示，让他们不会犯下同样的错误。"
       sourceRawUnits:
       - raw-L002162
       - raw-L002166
@@ -3655,7 +3606,7 @@ publicationAnnotations:
         en: Not being enrolled in the tournament doesn’t protect you from this infraction. If a spectator
           commits this infraction and is not enrolled in the tournament, enroll them, assign the infraction,
           then drop them from the event.
-        zh: 没有参加比赛并不能防止自己受到此判罚。如果一位旁观者犯下了外来协助，将他加入比赛，录入判罚，再将他退赛。
+        zh: "没有参加比赛并不能防止自己受到此判罚。如果一位旁观者犯下了外来协助，且未登记参加该比赛，将他加入比赛，录入判罚，再将他退赛。"
       sourceRawUnits:
       - raw-L002164
       - raw-L002168
@@ -3677,7 +3628,7 @@ publicationAnnotations:
           that you wouldn’t normally have access to between games. Looking at your notes on sideboarding
           is still likely to give you an advantage but not as much as asking a friend what your opponent
           sideboarded in and out this game.
-        zh: 这个降级反映了取得原本可在两盘之间合法取得之信息可能产生的获利，相较于取得原本不能在两盘之间合法取得之信息可能产生的获利是比较低的。查看换备笔记仍然很可能给你带来一定的获利，但比起问你的朋友对手这盘换出去什么牌、换进来什么牌比起来，程度要轻微许多。
+        zh: "这个降级反映了取得原本可在两盘之间合法取得之信息可能产生的获利，相较于取得原本不能在两盘之间合法取得之信息可能产生的获利是比较低的。查看换备笔记仍然很可能给你带来一定的获利，但比起问你的朋友对手这盘换出去什么牌、换进来什么牌，程度要轻微许多。"
       sourceRawUnits:
       - raw-L002174
       - raw-L002176
@@ -3775,7 +3726,7 @@ publicationAnnotations:
           failure is; if it’s there, you can’t loop.  Also, if the opponent wants to respond when you
           have milled both Emrakuls and both shuffle triggers are on the stack, how do you determine which
           state happens first?
-        zh: 这句话展开了写可以写出一大篇文章。大部分的循环都有一个有限的次数——我进行X动作十次，但是如果发生了Y事件的话就提前停止。但是MTR中的关于简化的规则表示，你必须同时能够说出明确的结束状态。也有很多循环有可以“最终”达成明确的结束状态。但是“最终”并不是一个准确数字。你不能进行这样的循环：“磨我自己的牌库，直到我牌库里只剩两张伊莫库”，因为你不能准确说出需要达成这个结果所需的次数。你可以说“来一百万次！”，但是这样仍有几率无法达成所说的状态。“好吧，再来1百万次！”但是状态未出现的可能性仍存在。不管无法达成状态的可能性有多小，只要有，你就不能进行这样的循环。而且，如果对手想要在你将两个伊莫库都磨进坟墓场、两个洗牌触发都在堆叠上时进行响应，你要怎么确定哪个游戏状态会先发生？
+        zh: "这句话展开了写可以写出一大篇文章。大部分的循环都有一个有限的次数——我进行X动作十次，但是如果发生了Y事件的话就提前停止。但是MTR中的关于简化的规则表示，你必须同时能够说出明确的结束状态。也有很多循环有可以“最终”达成的结束状态。但是“最终”并不是一个准确数字。这些循环的结束状态也不够明确。你不能进行这样的循环：“磨我自己的牌库，直到我牌库里只剩两张伊莫库”，因为你不能准确说出需要达成这个结果所需的次数。你可以说“来一百万次！”，但是这样仍有几率无法达成所说的状态。“好吧，再来1百万次！”但是状态未出现的可能性仍存在。不管无法达成状态的可能性有多小，只要有，你就不能进行这样的循环。而且，如果对手想要在你将两个伊莫库都磨进坟墓场、两个洗牌触发都在堆叠上时进行响应，你要怎么确定哪个游戏状态会先发生？"
       sourceRawUnits:
       - raw-L002212
       - raw-L002214
@@ -3797,7 +3748,7 @@ publicationAnnotations:
           seek permission from a judge. Upon return, a time extension will be issued. Keep in mind that
           you should always let the player go to the bathroom. The penalty is not because you went to
           the bathroom, it’s because you left your opponent and didn’t tell a judge.
-        zh: 例子A、B、C、D都是牌手进行了过多的、不必要的且不推动游戏进行的动作。在例子D中，如果牌手需要离开对局去厕所或者休息一下，那么他应该向裁判申请。等他回来的时候，为那桌补时。记住，裁判应该允许牌手去洗手间。判罚不是因为牌手去了洗手间，而是因为你离开座位而没有通知裁判。
+        zh: "例子A、B、C、D都是牌手进行了过多的、不必要的且不推动游戏进行的动作。在例子D中，如果牌手需要离开对局去厕所，那么他应该向裁判申请。等他回来的时候，为那桌补时。记住，裁判始终应该允许牌手去洗手间。判罚不是因为牌手去了洗手间，而是因为你离开座位而没有通知裁判。"
       sourceRawUnits:
       - raw-L002234
       - raw-L002236
@@ -3821,7 +3772,7 @@ publicationAnnotations:
           to complete their actions. Complex combos may require more time to perform actions because there
           are more actions to perform, however wasted time is taking time from the opponent. Both players
           are expected to play at a pace that allows the match to conclude in the allowed time.
-        zh: 在某些专业体育项目的规则中，利用时间来取得优势是符合规则的战术。但是在万智牌中，我们希望比赛的结果取决于万智牌的对战，而不是时间。时间是双方牌手共享的资源，我们不希望其中一位牌手占据超过合理范围的时间来进行游戏动作。复杂的组合技有很多动作需要完成，因而可能需要更多的时间，但在双方共享对局时间的游戏中，浪费时间就是从对手那里夺取时间。双方牌手都应该按照合理的步调进行游戏，让比赛在合理的时间内结束。
+        zh: "在某些专业体育项目的规则中，利用时间来取得优势是符合规则的战术。但是在万智牌中，我们希望比赛的结果取决于万智牌的对战，而不是时间。时间是双方牌手共享的资源，我们不希望其中一位牌手占据超过合理范围的时间来进行游戏动作。复杂的组合技有很多动作需要完成，因而可能需要更多的时间，但在双方共享对局时间的游戏中，浪费时间就是从对手那里夺取时间。双方牌手都应该按照合理的步调进行游戏，让比赛在规定的时间内结束。"
       sourceRawUnits:
       - raw-L002244
       - raw-L002246
@@ -3845,7 +3796,7 @@ publicationAnnotations:
           formal penalty or a Warning, it’s a ‘caution.’ If the player makes their play quickly and continues
           at a reasonable pace, everything is fine. It’s also worth noting that some judges don’t start
           with a Caution. This is also OK.
-        zh: 一位陷入沉思的牌手可能意识不到自己用了太多的时间。人们并不擅长计算时间，可能你以为过了10秒，其实已经是50秒了。在这个例子中你可以上前给他一点提醒让他进行的快一些。这个提醒并不是一个正式的处罚或者一个“警告”，而是一个“注意”。如果那位牌手采取了行动，后面动作的进行也恢复到了正常步调，那么就行了。值得一提的是有些裁判并不从“注意”开始，这也是可以的。
+        zh: "一位陷入沉思的牌手可能意识不到自己用了太多的时间。人们并不擅长计算时间，可能你以为过了10秒，其实已经是50秒了。在这个例子中你可以上前给他一点提醒让他进行的快一些。这个提醒并不是一个正式的处罚或者一个“警告”，而是一个“注意”。如果那位牌手迅速采取了行动，后面动作的进行也恢复到了正常步调，那么就行了。值得一提的是有些裁判并不从“注意”开始，这也是可以的。"
       sourceRawUnits:
       - raw-L002252
       - raw-L002254
@@ -4043,7 +3994,7 @@ publicationAnnotations:
           cards in your main deck and up to 15 cards in your sideboard”. Decklists are often a rushed
           last-minute job, so by providing an extra minute or two during a players meeting to check for
           last-minute issues many of these errors can be prevented.
-        zh: 在比赛开始时进行诸如“请检查你的牌表确保有60张以上的主牌，和最多15张的备牌”的公告，能够避免比赛中可能出现的很多错误。交牌表总是一项匆匆进行、赶在最后才完成的任务，因此在牌手会议中留出一两分钟时间来提醒牌手检查一下牌表能够避免出现很多牌表问题。
+        zh: "在比赛开始时进行诸如“请检查你的牌表确保有60张以上的主牌，和最多15张的备牌”的公告，能够避免比赛中可能出现的很多错误。交牌表往往是一项匆匆进行、赶在最后才完成的任务，因此在牌手会议中留出一两分钟时间来提醒牌手检查一下牌表能够避免出现很多牌表问题。"
       sourceRawUnits:
       - raw-L002360
       - raw-L002362
@@ -4104,7 +4055,7 @@ publicationAnnotations:
           Mental Misstep. You can inspect the library of the player. If the deck is in fact illegal, go
           ahead and issue the infraction. Otherwise, issue the penalty and resolve the fix between rounds,
           with the infraction taking effect at the beginning of the next match.
-        zh: 在比赛中，裁判在套牌检查之外也会偶尔检查牌表。如果在套牌检查之外的牌表中发现了问题，那么判罚将在下一局开始时给出。这主要是为了保持判罚的一致性。如果你在一轮开始之后10分钟发现一个牌表有问题，那么现在这一桌对局可能在进行，也可能已经结束。如果对局还在进行，那么你给出的一盘负的判罚将有可能直接结束这一局游戏。这意味着，牌手吃到这个判罚的严重程度取决于他牌表在一摞牌表中的位置。为了平衡这点，我们将这个判罚延后至下一轮开始的时候再给出。但是，如果你觉得牌手的套牌是不合法的，那么可以立刻给出判罚；比如说，一张近代赛的牌表中出现了心灵失足。你可以检查该牌手的牌库。如果套牌确实是非法的，接下来请给出判罚。反之，如果套牌是合法的，在两轮之间给出判罚并执行修正，此判罚将在下一局开始时生效。
+        zh: "在比赛中，裁判在套牌检查之外也会偶尔检查牌表。如果在套牌检查之外的牌表中发现了问题，那么判罚将在下一局开始时给出。这主要是为了保持判罚的一致性。如果你在一轮还剩10分钟时发现一个牌表有问题，那么现在这一桌对局可能在进行，也可能已经结束。如果对局还在进行，那么你给出的一盘负处罚很可能直接结束这场对局。这意味着，牌手吃到这个判罚的严重程度取决于他牌表在一摞牌表中的位置。为了平衡这点，我们将这个判罚延后至下一轮开始的时候再给出。但是，如果你觉得牌手的套牌是不合法的，则不适用上述做法；比如说，一张近代赛的牌表中出现了心灵失足。你可以检查该牌手的牌库。如果套牌确实是非法的，接下来请给出判罚。反之，如果套牌是合法的，在两轮之间给出判罚并执行修正，此判罚将在下一局开始时生效。"
       sourceRawUnits:
       - raw-L002378
       - raw-L002382
@@ -4125,7 +4076,7 @@ publicationAnnotations:
         en: Writing down ambiguous or incorrect card names can be a player attempting to cheat. They could
           be attempting to give themselves some flexibility to modify their deck to match the field, while
           claiming they just took a shortcut writing down the name.
-        zh: 写了模糊的或错的牌名的牌手可能说明牌手在试图作弊。他们可能是在尝试给自己的套牌留出一定的调整空间以应对环境，同时声称自己只是图方便写的简称。
+        zh: "写了模糊的或错的牌名可能说明牌手在试图作弊。他们可能是在尝试给自己的套牌留出一定的调整空间以应对环境，同时声称自己只是图方便写的简称。"
       sourceRawUnits:
       - raw-L002388
       - raw-L002390
@@ -4193,7 +4144,7 @@ publicationAnnotations:
           of Malady in the B/R deck that physically runs Temple of Malice, and it is caught during a deck
           check. Is it a clerical error? Probably. Is it obvious that they meant Temple of Malice? Not
           by looking solely at the decklist. So this scenario would not be eligible for a downgrade.
-        zh: 写错牌名的情况也是会有的，比如在一套黑绿套牌里把疫病殿堂写成了恶意殿堂，然后在套牌检查的时候被发现了。这是笔误么？有可能。但是能够明显看出应该是疫病殿堂么？只看牌表的话无法断定。因此这个情况下不能降级处罚。
+        zh: "写错牌名的情况也是会有的，比如一套实际使用恶意殿堂的黑红套牌，却在牌表上登记了疫病殿堂，然后在套牌检查的时候被发现了。这是笔误么？有可能。但是能够明显看出应该是恶意殿堂么？只看牌表的话无法断定。因此这个情况下不能降级处罚。"
       sourceRawUnits:
       - raw-L002406
       - raw-L002412
@@ -4225,7 +4176,7 @@ publicationAnnotations:
           violate the restriction. In this case we exchange cards between the main deck and the sideboard
           until the companion restriction is satisfied for game 1. The Game Loss Penalty is still utilized
           as we are still modifying the decklist.
-        zh: 牌手难免会犯错。当出现以下情况时：牌手的套牌与牌表是相符的，但由于套牌内未满足构筑限制条件导致行侣不合法，我们将允许牌手按原计划继续使用该行侣。然而，要合法地做到这一点，唯一的办法是修改主牌和备牌，使其不再违反该限制条件。在这种情况下，我们在主牌和备牌之间交换牌张，直到满足第一局游戏的行侣限制条件。由于我们实际上是在修改牌表，因此仍然适用一盘负的判罚。
+        zh: "牌手难免会犯错。当出现以下情况时：牌手的套牌与牌表是相符的，但由于套牌内未满足构筑限制条件导致行侣不合法，我们将允许牌手按原计划继续使用该行侣。然而，要合法地做到这一点，唯一的办法是修改主牌和备牌，使其不再违反该限制条件。在这种情况下，我们在主牌和备牌之间交换牌张，直到满足第一盘游戏的行侣限制条件。由于我们实际上是在修改牌表，因此仍然适用一盘负的判罚。"
       sourceRawUnits:
       - raw-L002420
       - raw-L002422
@@ -4331,7 +4282,7 @@ publicationAnnotations:
           is, the player whose decklist changes gets the Game Loss. The players may discuss this, but
           they may not take too long.  This may result in a “strategic decision”, but that’s an acceptable
           consequence.
-        zh: 在这种情形下，你需要从牌手的套牌中移除牌张。牌手可以决定移除哪些牌，使得套牌的张数合法。在联合构组团队赛制中，团队可以决定哪位牌手需要修改其牌表，结果就是修改牌表的那位牌手获得一盘负。牌手可以进行讨论，但不能花费过多的时间。虽然这会导致「战术讨论」，但也算是可接受的结果。
+        zh: "在这种情形下，你需要从牌手的套牌中移除牌张。牌手可以决定移除哪些牌，使得套牌的张数合法。在联合构组团队赛制中，团队可以决定哪位牌手需要修改其牌表，结果就是修改牌表的那位牌手获得一盘负。牌手可以进行讨论，但不能花费过多的时间。虽然这可能会导致「策略性决定」，但也算是可接受的结果。"
       sourceRawUnits:
       - raw-L002462
       - raw-L002464
@@ -4422,7 +4373,7 @@ publicationAnnotations:
           to be part of the sideboard unless explicitly called out as an exception. It can be a good idea
           for a supplementary announcement involving cards in deckboxes to be issued so that we can curb
           this behavior.
-        zh: 将备牌与主牌显著区分开是非常重要的。同时，在牌盒里面的可用牌是很可疑的，这给了牌手作弊的机会，他们可以在两盘中间方便的把这些牌换进套牌里。我们想要杜绝这种可能性，所以除非明确声明为例外情况，这些牌也会视为是备牌的一部份。做主审宣告的时候可以强调一下盒内不要放无关的牌，可以减少这种事情的发生。
+        zh: "将备牌与牌库保持足够的实际距离，以免两者混在一起，是非常重要的。同时，在牌盒里面的可用牌是很可疑的，这给了牌手作弊的机会，他们可以在两盘中间方便的把这些牌换进套牌里。我们想要杜绝这种可能性，所以除非明确声明为例外情况，这些牌也会视为是备牌的一部份。做主审宣告的时候可以强调一下盒内不要放无关的牌，可以减少这种事情的发生。"
       sourceRawUnits:
       - raw-L002516
       - raw-L002522
@@ -4433,7 +4384,7 @@ publicationAnnotations:
           to the opponent at the start of the match should not receive this penalty, even if there are
           other cards remaining in the deck box that don’t fit one of the above exceptions. Players should
           be encouraged to get into this habit.
-        zh: 如果牌手在游戏开始时将自己的备牌拿出牌盒，并告知对手这是备牌，那么即使他牌盒里还有其他不符合以上例外的牌也不应受到判罚。应该鼓励牌手养成这样的习惯。
+        zh: "如果牌手在对局开始时将自己的备牌拿出牌盒，并告知对手这是备牌，那么即使他牌盒里还有其他不符合以上例外的牌也不应受到判罚。应该鼓励牌手养成这样的习惯。"
       sourceRawUnits:
       - raw-L002518
       - raw-L002524
@@ -4447,7 +4398,7 @@ publicationAnnotations:
           else are you supposed to keep them if you are using substitute cards? Those DFCs need to be
           in different sleeves to lower the risk that they be accidentally or intentionally shuffled into
           the deck itself, causing more than 4 of the card to be present.
-        zh: 比赛中发放的纪念牌属于例外之一，否则我们将会在区域冠军赛中每一次查套牌都判罚一个一盘负。这一例外同样适用于同一区域冠军赛期间的其他比赛，例如在参加RC 10K赛时，牌盒中放有RC的赠卡。双面牌属于例外之一是因为......如果你用了辅助牌的话，那么双面牌本身还能放在什么地方呢？这些双面牌应当套上不同的牌套，这样可以降低将其不小心或故意洗进套牌的风险，导致套牌中有某张牌超过4张。
+        zh: "比赛中发放的纪念牌属于例外之一，否则我们将会在区域冠军赛中每一次查套牌都判罚一个一盘负。这一例外同样适用于同一区域冠军赛期间的其他比赛，例如在参加RC 10K赛时，牌盒中放有RC的赠卡。双面牌属于例外之一是因为......如果你用了辅助牌的话，那么双面牌本身还能放在什么地方呢？这些双面牌应当套上不同的牌套，这样可以降低将其不小心或故意洗进套牌、导致套牌中某张牌超过4张的风险。"
       sourceRawUnits:
       - raw-L002520
       - raw-L002526
@@ -4504,7 +4455,7 @@ publicationAnnotations:
           Players can’t spend unreasonable amounts of time searching for replacement sideboard cards,
           but “found” sideboard cards after this measure has been implemented may be added back into the
           deck.
-        zh: 如果备牌与牌表上填写的不符，那么因为这会带来潜在的获利可能性，所以我们应该给予判罚。相反的，备牌丢失并不能带来优势，事实上带来的是劣势。所以我们不必给他们雪上加霜的处罚。牌手不能花费不合理的时间去搜寻自己备牌的替代品，但是在如上处理之后找回自己的备牌时是可以考虑让他把这些牌加回去的。
+        zh: "如果备牌与牌表上填写的不符，那么因为这会带来潜在的获利可能性，因此可能有必要予以判罚。相反的，备牌丢失并不能带来优势，事实上带来的是劣势。所以我们不必给他们雪上加霜的处罚。牌手不能花费不合理的时间去搜寻自己备牌的替代品，但是在如上处理之后找回自己的备牌时可以将这些牌加回套牌。"
       sourceRawUnits:
       - raw-L002542
       - raw-L002548
@@ -4614,7 +4565,7 @@ publicationAnnotations:
           without being very obviously cheating, the penalty of a warning should be enough to educate
           the players to not repeat the infraction. Alongside the fix of removing the errant cards, this
           should combine to be enough of a deterrent.
-        zh: 正因为这两类失误非常常见，并且如上所述，难以从中获利，除非牌手在刻意作弊。警告对于牌手应当足够起到教育作用，使其不要再犯。此外再加之以移除错误牌张的修正手段，应该对牌手构成足够的威慑。
+        zh: "正因为这两类失误非常常见，并且如上所述，难以从中获利，除非作弊行为十分明显。警告对于牌手应当足够起到教育作用，使其不要再犯。此外再加之以移除错误牌张的修正手段，应该对牌手构成足够的威慑。"
       sourceRawUnits:
       - raw-L002596
       - raw-L002598
@@ -4992,7 +4943,7 @@ publicationAnnotations:
           This means that we have some serious time constraints to complete the draft within. Technical
           errors like this cause delays, and at something like a Pro Tour draft, will cause the entire
           room to be held up.
-        zh: 技术性的失误指的是任何在轮抽过程中出现的错误。这个违规通常是（但并不是所有都）在计时的轮抽比赛中，这意味着我们对于完成那场轮抽有着严格的时间限制。这样的技术性失误会造成整个轮抽进程被拖慢，或者类似的情形在专业赛的第二天，这将让整个比赛中的所有人的时间被耽误。
+        zh: "技术性的失误指的是任何在轮抽过程中出现的错误。这个违规通常是（但并不是所有都）在计时的轮抽比赛中，这意味着我们对于完成那场轮抽有着严格的时间限制。这样的技术性失误会造成整个轮抽进程被拖慢，或者类似的情形在专业赛轮抽这样的场合，会耽误整个会场的比赛进度。"
       sourceRawUnits:
       - raw-L002740
       - raw-L002742
@@ -5172,7 +5123,7 @@ publicationAnnotations:
           on the illegal information. If a player keeps their Llanowar Elf with their lands, but the opponent
           doesn’t make an attack assuming that the player has no blockers, then no infraction has occurred.
           However, judges should step in to clarify the board state before an infraction occurs.
-        zh: 在这些例子中，由于不合法的交流产生的影响，牌手因此要么做出了一些游戏动作，要么是未能做出一些游戏动作。在第一个例子中，对手认为牌手手中有三张牌而做出了施放弃牌咒语的动作，但他手中实际有四张牌，在第二个例子中，牌手违反了MTR4.7节，将生物与地牌放在一起，使得对手以为他没有生物可用来阻挡。在第三个例子中，牌手默认对手选择不找地，这违反了MTR4.2节。在每个每个例子中，并非是不合法的信息导致了违规，而是因为对手根据不合法的信息而做出了动作。如果牌手将罗堰妖精和地放在一起，但对手并没有因为他没有阻挡者而攻击，那么就没有违规发生。但是，裁判应当介入，在违规发生之前就厘清场面状态。
+        zh: "在这些例子中，由于不合法的交流产生的影响，牌手因此要么做出了一些游戏动作，要么是未能做出一些游戏动作。在第一个例子中，对手认为牌手手中有三张牌而作出了与该弃牌咒语有关的选择，但他手中实际有四张牌，在第二个例子中，牌手违反了MTR4.7节，将生物与地牌放在一起，使得对手以为他没有生物可用来阻挡。在第三个例子中，牌手默认对手选择不找地，这违反了MTR4.2节。在每个例子中，并非是不合法的信息导致了违规，而是因为对手根据不合法的信息而做出了动作。如果牌手将罗堰妖精和地放在一起，但对手并没有基于他没有阻挡者的假定而攻击，那么就没有违规发生。但是，裁判应当介入，在违规发生之前就厘清场面状态。"
       sourceRawUnits:
       - raw-L002824
       - raw-L002826
@@ -5282,17 +5233,14 @@ publicationAnnotations:
           and if a judge is being called, it is clear that a player took actions based upon that incorrect
           information. In this instance a backup to before attackers have been declared, as outlined in
           section IPG 1.4 Backing Up, should be considered.
-        zh: 有些违反交流方针的行为并不会有影响，但是也有另一些会有影响。通常来说，裁判只会在交流问题会影响局面的时候才会被叫过去。这时裁判需要考虑倒回是否合适。如果问一位牌手某个生物是几几的，回答说“2/3”，对手可能就放心的拿3/3人宣攻了。但是如果在宣告阻挡者时才发现这个生物其实是3/4的，那么对手可能原本就会做出不同的选择。这不属于犯包或者策略失误，如果此时叫来裁判，很清楚就能知道一位牌手根据错误的信息做出了动作。在这种情况下可以考虑根据IPG的1.4的内容，将游戏倒回到宣告攻击者之前。
+        zh: "有些违反交流方针的行为并不会有影响，但是也有另一些会有影响。通常来说，裁判只会在交流问题会影响局面的时候才会被叫过去。这时裁判需要考虑倒回是否合适。如果问一位牌手某个生物是几几的，回答说“2/3”，对手可能就放心的拿3/3人宣攻了。但是如果在宣告阻挡者时才发现这个生物其实是3/4的，那么对手可能原本就会做出不同的选择。这不属于犯包或者策略失误，如果此时叫来裁判，很清楚就能知道一位牌手根据错误的信息做出了动作。在这种情况下应当考虑根据IPG的1.4的内容，将游戏倒回到宣告攻击者之前。"
       sourceRawUnits:
       - raw-L002868
       - raw-L002872
     - id: ipg-ann-3-7-60602d07adb5-g01-b02
       type: paragraph
       text:
-        en: Any backup should only go to when the opponent acted on the incorrect information, and not
-          before then. Any backup should only go to when the opponent acted on the incorrect information,
-          and not before then. If a Llanowar Elves were with a player’s lands since turn 1, but the opponent
-          only attacked into them on turn 10, the backup isn’t to turn 1.
+        en: "Any backup should only go to when the opponent acted on the incorrect information, and not before then. If a Llanowar Elves were with a player’s lands since turn 1, but the opponent only attacked into them on turn 10, the backup isn’t to turn 1."
         zh: 任何倒回都只能倒回到对手根据错误信息做出动作的时间点，且不能比此时间点更早。如果一个罗堰妖精在第一回合开始就跟牌手的地混在一起，但对手在第十回合才宣告攻击，倒回不能直接倒到第一回合。
       sourceRawUnits:
       - raw-L002870
@@ -5352,7 +5300,7 @@ publicationAnnotations:
           player notices these markings, that player can make an assumption that “this card in my 60 card
           deck is a mountain, a Loxodon Hierarch, or a Lightning Helix,” giving the player undue knowledge
           about what that card might be.
-        zh: 一张地，一个生物和一个瞬间，这个情形似乎并不是刻意做了记号的牌。然而，这样的单张有记号的牌仍旧是个问题。如果牌手意识到了这个标记，那么他看到这个记号的时候就知道这张牌可能是山脉/象族大主教/闪电螺旋，这给了牌手本不应知道的牌库信息。
+        zh: "一张地、一张生物和一张瞬间，并不足以有力说明这些有记号的牌构成某种规律。然而，这样的单张有记号的牌仍旧是个问题。如果牌手意识到了这个标记，那么他看到这个记号的时候就知道这张牌可能是山脉/象族大主教/闪电螺旋，这给了牌手本不应知道的牌库信息。"
       sourceRawUnits:
       - raw-L002900
       - raw-L002902
@@ -5375,7 +5323,7 @@ publicationAnnotations:
           It should be noted that not all foils are marked, and not all bent cards are foils. Let’s be
           very clear here, the fact that your deck contains foils in a specific pattern (all lands, for
           example) does not mean the deck is marked; the markings arise from the bends (if they exist).
-        zh: 闪卡经常会出现弯曲。如果不妥善保管，这种弯曲可能会严重到在牌库中也能看出来的程度。牌手知道自己套牌中哪张牌是闪的，他就获知了额外的牌库信息。但是需要注意并不是所有闪卡都是弯的，也并非所有弯卡都是闪的。举例的来说，就算你套牌中特定部分都用的闪牌（比如全部都用闪地）也不一定意味着你套牌是带记号的，造成记号的原因是牌弯。
+        zh: "闪卡经常会出现弯曲。如果不妥善保管，这种弯曲可能会严重到在牌库中也能看出来的程度。牌手知道自己套牌中哪张牌是闪的，他就获知了额外的牌库信息。但是需要注意并不是所有闪卡都有记号，也并非所有弯卡都是闪的。举例来说，就算你套牌中特定部分都用的闪牌（比如全部都用闪地）也不一定意味着你套牌是带记号的，造成记号的原因是牌弯。"
       sourceRawUnits:
       - raw-L002908
       - raw-L002910
@@ -5454,7 +5402,7 @@ publicationAnnotations:
           cards, necessitating changes, but it is unlikely to be serious. If the player does not shuffle
           the sleeves first, it could be that the deck is in one size of sleeves and the sideboard in
           a different size — a much bigger problem (see below).
-        zh: 牌手给套牌上牌套的时候应有一些额外的步骤。比如，牌手应该把他的牌套和套牌都洗一下，因为有的时候牌套的长度会有差异（这可能因为这些牌套出自不同的包里，即使这两包牌套是同一种）。如果牌手在上牌套之前就洗过套牌和牌套，那么这种有记号的牌可能不会被认为很严重。如果没洗过，可能最后你的备牌的牌套会跟主牌有区别，这就是个大问题了（见下文）。
+        zh: "牌手给套牌上牌套的时候应有一些额外的步骤。比如，牌手应该把他的牌套和套牌都洗一下，因为有的时候牌套的长度会有差异（这可能因为这些牌套出自不同的包里，即使这两包牌套是同一种）。如果牌手在上牌套之前就洗过套牌和牌套，仍可能出现有记号的牌而需要更换，但问题不太可能很严重。如果没洗过，可能最后你的备牌的牌套会跟主牌有区别，这就是个大问题了（见下文）。"
       sourceRawUnits:
       - raw-L002936
       - raw-L002940
@@ -5501,7 +5449,7 @@ publicationAnnotations:
           if they put those cards into the deck and then jump in with a penalty.  Tell them beforehand.  The
           exception to this is: Investigating.  If you are investigating cheats, you may opt to not tell
           them so that you can gather more information for your investigation.'
-        zh: 在套牌检查时，如果你看到一些备牌上有记号，请提醒牌手他应当在换备牌时，也将主牌中的牌套一并换上。不要默不作声地等待直到牌手把有记号的牌换进套牌，然后跳出来给他判罚。请事先告诉他们。有一个例外是：调查。如果你在调查作弊，可能不告诉他们更好，这样你可以为调查收集更多的信息。
+        zh: "在套牌检查时，如果你看到一些备牌上有记号，请提醒牌手他应当在换备牌时，也将主牌中的牌套一并换上。不要默不作声地等待直到牌手把有记号的牌换进套牌，然后跳出来给他判罚。请事先告诉他们。有一个例外是：调查。如果你在调查作弊，你可以选择不告诉他们，这样你可以为调查收集更多的信息。"
       sourceRawUnits:
       - raw-L002954
       - raw-L002956
@@ -5576,7 +5524,7 @@ publicationAnnotations:
           a Game Loss because of the changed decklist which means they also won’t receive a Decklist Problem
           penalty if they receive a deck check later. If the player ends up finding replacements for any
           reason, we can reverse this change, this time without any penalty.
-        zh: 如果牌手套牌中的有些牌不能在接下来的比赛中使用了（比如有四张闪堕者猎师弯了，把它们剔出去之后套牌变成了56张。），那位牌手可以使用同名牌来替代他们，或者拿任意组合且名称为平原、海岛、沼泽、山脉、或树林的牌来替代。如果他们决定去找替代品，请要求他们尽快并给他们10分钟，超过时限则有可能得到迟到的判罚。如果那位牌手决定加入几张以上名字的基本地，那么他的套牌登记表也应该被相应的修改。由于修改了牌表，我们判罚牌手一盘负，这也意味着他们如果稍后在比赛中遇到套牌抽查的话不会受到套牌登记表问题的处罚。如果不论什么原因，牌手最终找到了替代品，我们可以将变更复原，并且这一次不再给予任何判罚。
+        zh: "如果牌手套牌中的有些牌不能在接下来的比赛中使用了（比如有四张闪堕者猎师弯了，把它们剔出去之后套牌变成了56张），那位牌手可以使用同名牌来替代他们，或者拿任意组合且名称为平原、海岛、沼泽、山脉、或树林的牌来替代。如果他们决定去找替代品，请要求他们尽快并在判处迟到之前给予他们10分钟。如果那位牌手决定加入几张以上名字的基本地，那么他的套牌登记表也应该被相应的修改。由于修改了牌表，我们判罚牌手一盘负，这也意味着他们如果稍后在比赛中遇到套牌抽查的话不会受到套牌登记表问题的处罚。如果不论什么原因，牌手最终找到了替代品，我们可以将变更复原，并且这一次不再给予任何判罚。"
       sourceRawUnits:
       - raw-L002980
       - raw-L002982
@@ -5600,7 +5548,7 @@ publicationAnnotations:
           path on this. Other examples include: 11 cards have markings in the corner and 10 of them are
           land; all reanimation targets in a deck are slightly bent; in a post sideboard deck, sideboard
           cards are noticeably less scuffed.'
-        zh: 一个有规律的记号牌通常情况下要比普通的牌套磨损要严重的多。比如，一位牌手的牌套并不是完全不透明的，看背面便可以识别出牌套里的堕者猎师。因为他所有的堕者猎师都可以这样被分辨出来，所以可以考虑将罚则升级。其他的例子包括：11个翘边的牌套里有10张是地；一套牌里所有的掘坟目标都轻微的弯曲了；在套牌中所有备牌的牌套都显得更新一些。
+        zh: "一个有规律的记号牌通常情况下要比普通的牌套磨损要严重的多。比如，一位牌手的牌套并不是完全不透明的，看背面便可以识别出牌套里的堕者猎师。因为他所有的堕者猎师都可以这样被分辨出来，所以可以考虑将罚则升级。其他的例子包括：11张牌的牌角有记号，其中10张是地；一套牌里所有的掘坟目标都轻微的弯曲了；换备后的套牌中，换入的备牌牌套显得更新。"
       sourceRawUnits:
       - raw-L002988
       - raw-L002992
@@ -5681,7 +5629,7 @@ publicationAnnotations:
           who just give the library a quick one-two-cut. The third example is just an extension of the
           first, where someone doesn’t shuffle a portion of the deck, or a pile of cards that are required
           to be shuffled, either because they forget or because they don’t think they have to.
-        zh: 第一个例子很简单，“诶？我忘了洗牌。”你可能认为这事儿是不可能发生的，但是如果游戏中发生了很多事情，这确实是有可能发生的。第二个例子更多的是出现在比赛经验不足的牌手身上，或者打牌很着急的牌手。第三个例子算是第一个例子的延伸，牌手忘了洗一部分的牌库，或者忘了洗一小堆牌，这一般是因为牌手忘了或者认为这不是必须的。
+        zh: "第一个例子很简单，“诶？我忘了洗牌。”你可能认为这事儿是不可能发生的，但是如果游戏中发生了很多事情，这确实是有可能发生的。第二个例子更多的是出现在比赛经验不足的牌手身上，或者打牌很着急的牌手——他们只是匆匆切一两次牌。第三个例子算是第一个例子的延伸，牌手没有洗一部分套牌，或者没有洗一叠必须洗牌的牌，原因可能是忘记了，也可能是认为不必洗。"
       sourceRawUnits:
       - raw-L003028
       - raw-L003030
@@ -5726,7 +5674,7 @@ publicationAnnotations:
           better/didn’t think shuffling was a big deal. However, now, the opponent is required to shuffle
           the library when the deck is presented. This virtually eliminates the potential for advantage.
           With that rule in place, we are comfortable with the standard penalty now being a Warning.
-        zh: 试图不充分洗牌以获利是一件很容易的事情，比如操纵牌库里的法术力分布，或者把一两张牌放到牌库里的特定位置。因为获利的可能性很高，曾经这种判罚是一盘负。但是这就意味着很多新手或者犯懒的牌手将得到一盘负，只是因为他们不知道/不认为洗牌是一件很重要的事情。然而现在，每位牌手的对手需要在他洗完牌之后再洗一次牌。这样就消除了获利的可能性。在这条规则出现后，我们很高兴的看到这个违规的标准处罚变成了警告。
+        zh: "试图不充分洗牌以获利是一件很容易的事情，比如操纵牌库里的法术力分布，或者把一两张牌放到牌库里的大致位置。考虑到获利的可能性，曾经这种判罚是一盘负。但是这就意味着很多新手或者犯懒的牌手将得到一盘负，只是因为他们不知道/不认为洗牌是一件很重要的事情。然而现在，每位牌手的对手需要在套牌呈现给他时再洗一次牌。这样就几乎消除了获利的可能性。在这条规则出现后，我们很高兴的看到这个违规的标准处罚变成了警告。"
       sourceRawUnits:
       - raw-L003046
       - raw-L003048
@@ -5819,7 +5767,7 @@ publicationAnnotations:
           the shuffle, players do. This prevents the judges from getting involved if sleeves become broken
           during the shuffle, or if a card falls out. It also prevents the judge from getting blamed if
           the player draws poorly following the shuffle.
-        zh: 补救措施很简单——洗牌就好了。你应该简略快速的解释一下哪种洗牌方式是必须的，为什么是必须的，同时提醒另一位牌手也要好好洗其对手的套牌。通常来讲，请让牌手洗牌，裁判不要执行洗牌。这样能够防止出现牌套破损或者牌掉出来时，会涉及到帮他洗过牌的裁判。同样这也可以防止牌手指责裁判“你帮我洗完之后我掏的就好烂。”。
+        zh: "补救措施很简单——洗牌就好了。你应该简略快速的解释一下哪种洗牌方式是必须的，为什么是必须的，同时提醒另一位牌手也要好好洗其对手的套牌。通常来讲，请让牌手洗牌，裁判不要执行洗牌。这样能够防止出现牌套破损或者牌掉出来时，会涉及到帮他洗过牌的裁判。同样这也可以防止牌手指责裁判“你帮我洗完之后我掏的就好烂。”"
       sourceRawUnits:
       - raw-L003080
       - raw-L003084
@@ -5832,7 +5780,7 @@ publicationAnnotations:
           as well as the permanents on the battlefield. Asking questions about the known cards in the
           library is also necessary. Try to take that into consideration whenever you’re dealing with
           shuffling.
-        zh: 要注意的是，可能在牌库中某些牌的位置是已知的，所以在修正的时候需要将它们保持原位置。当你要修正不充分洗牌时，先看看两位牌手的坟墓场与场上的永久物是个非常好的习惯。询问牌手牌库中是否有已知部分同样是必要的。当你处理洗牌的时候，记得将这些因素考虑进去。
+        zh: "要注意的是，可能在牌库中某些牌的位置是已知的，如果这些牌本来不应纳入此次洗牌，则在修正时应保持它们的原位置。当你要修正不充分洗牌时，先看看两位牌手的坟墓场与场上的永久物是个非常好的习惯。询问牌手牌库中是否有已知部分同样是必要的。当你处理洗牌的时候，记得将这些因素考虑进去。"
       sourceRawUnits:
       - raw-L003082
       - raw-L003086

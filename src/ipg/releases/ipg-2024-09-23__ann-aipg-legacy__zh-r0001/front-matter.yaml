@@ -24,7 +24,7 @@ sections:
             that guides their implementation. It exists to protect players from potential misconduct and
             to protect the integrity of the tournament itself. Rules violations usually require a penalty
             or they are unenforceable. Tournaments run at Regular REL use the Judging at Regular REL document.'
-          zh: 《万智牌违规处理方针》此份文档，是用来在执法严格度（REL）为“竞争”或“专业”级别的比赛中发生违反规则事件时，为提供裁判适当的罚则与处理程序，并阐述其背后的原则。这是用来保护牌手免于犯下潜在的失误，也保护比赛本身的公正性。违反规则的行为通常应受处罚，否则规则将无法执行。执法严格度为一般等级的比赛使用《一般级别执法严格度执法指南》。
+          zh: "《万智牌违规处理方针》此份文档，是用来在执法严格度（REL）为“竞争”或“专业”级别的比赛中发生违反规则事件时，为提供裁判适当的罚则与处理程序，并阐述其背后的原则。这是用来保护牌手免于犯下潜在的不当行为，也保护比赛本身的公正性。违反规则的行为通常应受处罚，否则规则将无法执行。执法严格度为一般等级的比赛使用《一般级别执法严格度执法指南》。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 1
@@ -75,8 +75,7 @@ sections:
         type: paragraph
         text:
           en: See the Magic Tournament Rules for further definitions of terms in this document.
-          zh: 欲知本文件中一些特别用语的定义，请参见《万智牌比赛规则》。最新版本的《万智牌比赛规则》可于此处获得：http://wpn.wizards.com/zh-hans/document/magic-gathering-tournament-rules
-            。
+          zh: "欲知本文件中一些特别用语的定义，请参见[《万智牌比赛规则》](https://mtgch.com/mtr)。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 1
@@ -113,8 +112,7 @@ sections:
         type: paragraph
         text:
           en: This document is updated periodically. Please obtain the most current version at https://wpn.wizards.com/en/rules-documents.
-          zh: 此文件系定期更新。欲知最新版本，请参见这个网页:http://wpn.wizards.com/en/document/magic-infraction-procedure-guide
-            。
+          zh: "此文件系定期更新。欲知最新版本，请参见这个网页:https://wpn.wizards.com/en/rules-documents。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 1

@@ -26,19 +26,7 @@ sections:
             diplomacy. Judges may intervene to prevent or preempt errors occurring outside of a game.
             Knowledge of a player’s history or skill does not alter an infraction, but it may be taken
             into account during an investigation.
-          zh: '裁判是中立的裁决者，也是政策与规则的执法者。
-
-
-            通常情况下，裁判不应干预游戏的进行，但在此数类情况下，裁判应及时介入：裁判认为已有人违反规则，抱有顾虑或疑问的牌手请求协助，或裁判希望防止局势恶化。
-
-
-            裁判并不会阻止游戏失误的发生，而是会去解决已发生之失误，处罚违反规则和政策的牌手，并以身体力行和交际手腕来宣导公平的比赛和运动道德。
-
-
-            为避免或预防游戏之外的失误发生，裁判可以介入。
-
-
-            对某牌手过去作为与游戏技巧的认知不会影响违规的认定，但在调查过程中或会将这些方面考虑在内。'
+          zh: "裁判是中立的裁决者，也是政策与规则的执法者。\n\n通常情况下，裁判不应干预游戏的进行，除非是此数类情况：裁判认为已有人违反规则，抱有顾虑或疑问的牌手请求协助，或裁判希望防止局势恶化。\n\n裁判并不会阻止游戏失误的发生，而是会去解决已发生之失误，处罚违反规则或政策的牌手，并以身体力行和交际手腕来宣导公平的比赛和运动道德。\n\n为避免或预防游戏之外的失误发生，裁判可以介入。\n\n对某牌手过去作为与游戏技巧的认知不会影响违规的认定，但在调查过程中或会将这些方面考虑在内。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 3
@@ -78,7 +66,7 @@ sections:
             en: A judge shouldn’t intervene in a game unless they believe a rules violation has occurred, a player
               with a concern or question requests assistance, or the judge wishes to prevent a situation from
               escalating.
-            zh: 通常情况下，裁判不应干预游戏的进行，但在此数类情况下，裁判应及时介入：裁判认为已有人违反规则，抱有顾虑或疑问的牌手请求协助，或裁判希望防止局势恶化。
+            zh: "通常情况下，裁判不应干预游戏的进行，除非是此数类情况：裁判认为已有人违反规则，抱有顾虑或疑问的牌手请求协助，或裁判希望防止局势恶化。"
           legacyRawUnits:
           - raw-L000105
           - raw-L000107
@@ -90,7 +78,7 @@ sections:
             en: Judges don’t stop play errors from occurring, but instead deal with errors that have occurred,
               penalize those who violate rules or policy, and promote fair play and sporting conduct by example
               and diplomacy.
-            zh: 裁判并不会阻止游戏失误的发生，而是会去解决已发生之失误，处罚违反规则和政策的牌手，并以身体力行和交际手腕来宣导公平的比赛和运动道德。
+            zh: "裁判并不会阻止游戏失误的发生，而是会去解决已发生之失误，处罚违反规则或政策的牌手，并以身体力行和交际手腕来宣导公平的比赛和运动道德。"
           legacyRawUnits:
           - raw-L000113
           - raw-L000115
@@ -122,13 +110,7 @@ sections:
             This is done through both an explanation of where the rules or policies were violated and
             a penalty to reinforce the education. Penalties are also for the deterrence and education
             of every other player in the event and are also used to track player behavior over time.
-          zh: '处罚的目的是为了避免牌手在往后犯下类似的失误。
-
-
-            为达成此目标，必须向该牌手解释所违反之规则或政策，使处罚有其教育意义。
-
-
-            处罚的效果也包括教育比赛中其他牌手并造成警惕，且会用来持续记录牌手的行为。'
+          zh: "处罚的目的是为了教育牌手，使其往后不再犯下类似的失误。\n\n为达成此目标，应向牌手解释违反了哪些规则或政策，并以处罚强化教育。\n\n处罚的效果也包括教育比赛中其他牌手并造成警惕，且会用来持续记录牌手的行为。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 3
@@ -152,7 +134,7 @@ sections:
           - 94
           text:
             en: The purpose of a penalty is to educate the player not to make similar mistakes in the future.
-            zh: 处罚的目的是为了避免牌手在往后犯下类似的失误。
+            zh: "处罚的目的是为了教育牌手，使其往后不再犯下类似的失误。"
           legacyRawUnits:
           - raw-L000157
           - raw-L000159
@@ -163,7 +145,7 @@ sections:
           text:
             en: This is done through both an explanation of where the rules or policies were violated and a penalty
               to reinforce the education.
-            zh: 为达成此目标，必须向该牌手解释所违反之规则或政策，使处罚有其教育意义。
+            zh: "为达成此目标，应向牌手解释违反了哪些规则或政策，并以处罚强化教育。"
           legacyRawUnits:
           - raw-L000165
           - raw-L000167
@@ -188,16 +170,7 @@ sections:
             these situations, the judge should ensure that the game progresses normally. More significant
             violations are addressed by first identifying what infraction applies, then proceeding with
             the corresponding instructions.
-          zh: '如果违反规则的情况较为轻微，且牌手已以双方均满意的方式进行了快速处理，则裁判无需干预。
-
-
-            如果游戏的进行方式虽对双方牌手足够明晰，但在旁观者看来或会混淆不清，则建议裁判去要求牌手让情况更加清楚，而不要给予任何处罚。
-
-
-            在上述两种情况中，裁判应确保游戏正常进行。
-
-
-            对于较为严重之违反规则情况而言，裁判应先确定适用何种违规，然后再根据相应的处理方式进行处理。'
+          zh: "如果违反规则的情况较为轻微，且牌手已以双方均满意的方式进行了快速处理，则裁判无需干预。\n\n如果游戏的进行方式虽对双方牌手足够明晰，但在旁观者看来或会混淆不清，则建议裁判去要求牌手让情况更加清楚，而不要判定违规或给予任何处罚。\n\n在上述两种情况中，裁判应确保游戏正常进行。\n\n对于较为严重之违反规则情况而言，裁判应先确定适用何种违规，然后再根据相应的处理方式进行处理。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 3
@@ -236,7 +209,7 @@ sections:
             en: If the players are playing in a way that is clear to both players, but might cause confusion to
               an external observer, judges are encouraged to request that the players make the situation clear,
               but not assess an infraction or issue any penalty.
-            zh: 如果游戏的进行方式虽对双方牌手足够明晰，但在旁观者看来或会混淆不清，则建议裁判去要求牌手让情况更加清楚，而不要给予任何处罚。
+            zh: "如果游戏的进行方式虽对双方牌手足够明晰，但在旁观者看来或会混淆不清，则建议裁判去要求牌手让情况更加清楚，而不要判定违规或给予任何处罚。"
           legacyRawUnits:
           - raw-L000193
           - raw-L000195
@@ -272,19 +245,7 @@ sections:
             the player, desire to educate the player, and certification level of the judge are NOT exceptional
             circumstances. If another judge feels deviation is appropriate, they must consult with the
             Head Judge.
-          zh: '只有主审才有权力不依此方针来作处罚。
-
-
-            除非在重大且特殊的状况中，或是没有可供运用的指导原则，否则主审都不该背离此方针的处理流程。
-
-
-            重大且特殊的状况很少见～桌子垮掉、补充包内含其他系列的牌等等。
-
-
-            执法严格度、比赛的回合、牌手的经验高低和年龄、特别想教育该牌手，以及裁判的等级，均不算是特殊状况。
-
-
-            如果其他裁判认为有理由不遵循罚则方针，则必须请示主审。'
+          zh: "只有主审才有权力不依此方针来作处罚。\n\n除非在重大且特殊的状况中，或是没有可供运用的指导原则，否则主审都不该背离此方针的处理流程。\n\n重大且特殊的状况很少见～桌子垮掉、补充包内含其他系列的牌等等。\n\n执法严格度、比赛的轮次、牌手的经验高低和年龄、想教育该牌手，以及裁判的等级，均不算是特殊状况。\n\n如果其他裁判认为有理由不遵循罚则方针，则必须请示主审。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 3
@@ -345,7 +306,7 @@ sections:
           text:
             en: The Rules Enforcement Level, round of the tournament, age or experience-level of the player, desire
               to educate the player, and certification level of the judge are NOT exceptional circumstances.
-            zh: 执法严格度、比赛的回合、牌手的经验高低和年龄、特别想教育该牌手，以及裁判的等级，均不算是特殊状况。
+            zh: "执法严格度、比赛的轮次、牌手的经验高低和年龄、想教育该牌手，以及裁判的等级，均不算是特殊状况。"
           legacyRawUnits:
           - raw-L000241
           - raw-L000243
@@ -372,16 +333,7 @@ sections:
             judge. If a player clearly acts on erroneous information provided by a judge during the game,
             the Head Judge may consider a backup to the point of the action taken, even if that action
             did not lead to a violation.
-          zh: '裁判也是常人，也会犯下错误。若裁判确实出现了失误，他应承认错误，向牌手致歉，且如果发现尚属及时，还应该进行修正。
-
-
-            如果牌手是因比赛工作人员提供的错误信息而犯下违规，主审有权将罚则降级。
-
-
-            举例来说，某牌手询问裁判某张牌是否在该赛制中合法时，裁判回答他说“是”；此后当该牌手的套牌因为这张牌之故被判为非法套牌时，主审应依照正常的规程来修正套牌登记表，但由于是裁判的失误直接导致了此违规行为的发生，他可以将罚则降级为“警告”。
-
-
-            如果牌手明显是根据裁判提供的错误信息而在游戏中行动，在主审可以考虑倒回至实际行动前之时点，即便相关行动并未违规也可如此操作。'
+          zh: "裁判也是常人，也会犯下错误。若裁判确实出现了失误，他应承认错误，向牌手致歉，且如果发现尚属及时，还应该进行修正。\n\n如果牌手是因比赛工作人员提供的错误信息而犯下违规，主审有权将罚则降级。\n\n举例来说，某牌手询问裁判某张牌是否在该赛制中合法时，裁判回答他说“是”；此后当该牌手的套牌因为这张牌之故被判为非法套牌时，主审应依照正常的规程来修正套牌登记表，但由于是裁判的失误直接导致了此违规行为的发生，他可以将罚则降级为“警告”。\n\n如果牌手明显是根据裁判提供的错误信息而在游戏中行动，主审可以考虑倒回至实际行动前之时点，即便相关行动并未违规也可如此操作。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 3
@@ -444,7 +396,7 @@ sections:
             en: If a player clearly acts on erroneous information provided by a judge during the game, the Head
               Judge may consider a backup to the point of the action taken, even if that action did not lead to
               a violation.
-            zh: 如果牌手明显是根据裁判提供的错误信息而在游戏中行动，在主审可以考虑倒回至实际行动前之时点，即便相关行动并未违规也可如此操作。
+            zh: "如果牌手明显是根据裁判提供的错误信息而在游戏中行动，主审可以考虑倒回至实际行动前之时点，即便相关行动并未违规也可如此操作。"
           legacyRawUnits:
           - raw-L000297
           - raw-L000299
@@ -469,13 +421,7 @@ sections:
             to implement the corrective procedure. The purpose of a Warning is to alert judges and players
             involved that a problem has occurred and to keep a permanent record of the infraction. A time
             extension should be issued if the ruling has taken more than a minute.
-          zh: '警告使用于不正确的行动，且需要些许时间来执行修正的流程。
-
-
-            其目的是用来针对已产生的问题，警示相关裁判和牌手，并将此违规永久记录。
-
-
-            如果解释规则花费超过一分钟的时间，则要给予延长时间。'
+          zh: "警告使用于不正确的行动，且需要些许时间来执行修正的流程。\n\n其目的是用来针对已产生的问题，警示相关裁判和牌手，并将此违规永久记录。\n\n如果裁定花费超过一分钟的时间，则要给予延长时间。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 3
@@ -521,7 +467,7 @@ sections:
           - 347
           text:
             en: A time extension should be issued if the ruling has taken more than a minute.
-            zh: 如果解释规则花费超过一分钟的时间，则要给予延长时间。
+            zh: "如果裁定花费超过一分钟的时间，则要给予延长时间。"
           legacyRawUnits:
           - raw-L000325
           - raw-L000327
@@ -540,7 +486,7 @@ sections:
             a Game Loss chooses whether to play or draw in the next game of that match, if applicable.
             If a Game Loss is issued before the match begins, neither player in that match may use sideboards
             (if the tournament uses them) for the first game they play.
-          zh: 一盘负处罚会立刻结束目前这一盘游戏，犯下此违规的牌手在对局纪录上会视为是输掉一盘。如果还有下一盘，则得到一盘负处罚的牌手选择下一盘是否要先手。如果在对局开始之前就得到一盘负处罚，则本盘游戏之所有牌手在第一盘开始之前都不能使用备牌（如果该比赛使用备牌的话）。
+          zh: "一盘负处罚会立刻结束目前这一盘游戏，犯下此违规的牌手在对局纪录上会视为是输掉一盘。如果还有下一盘，则得到一盘负处罚的牌手选择下一盘是否要先手。如果在对局开始之前就得到一盘负处罚，该对局的双方牌手均不得在实际进行第一盘游戏之前更换备牌（如果该比赛使用备牌的话）。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 4
@@ -707,7 +653,7 @@ sections:
           en: Disqualification can occur without proof of action so long as the Head Judge determines
             sufficient information exists to believe the tournament’s integrity may have been compromised.
             It is recommended that the Head Judge’s report reflect this fact.
-          zh: 给予取消资格的处罚可以不需要行为上的证据，只要主审研判有明显的信息，足以相信此比赛的公正性可能受到损害即可。建议主审在报告中反应这个事实。
+          zh: "给予取消资格的处罚可以不需要行为上的证据，只要主审研判有足够的信息，足以相信此比赛的公正性可能受到损害即可。建议主审在报告中反映这个事实。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 4
@@ -802,7 +748,7 @@ sections:
           en: Any penalty of Game Loss or higher should be reported to the Head Judge, and it is recommended
             that only the Head Judge issue penalties of this nature (with the exception of Tardiness (3.1)
             and Decklist Problems (3.4)).
-          zh: 任何级别高于“一盘负”处罚（含“一盘负”）都必须回报给主审，并建议仅由主审来作这类的判罚（迟到（3.1）和套牌登记表问题（3.4）此两项违规除外）。
+          zh: "任何级别高于“一盘负”处罚（含“一盘负”）都应当回报给主审，并建议仅由主审来作这类的判罚（迟到（3.1）和套牌登记表问题（3.4）此两项违规除外）。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 5
@@ -822,7 +768,7 @@ sections:
             guidelines refer to players, other people in the venue, such as spectators, staff, or judges
             may be enrolled into (and dropped from) the tournament in order to receive a penalty. Penalties
             are still issued even if a player drops from the tournament before it would take effect.
-          zh: 并非只有参赛牌手才可能会得到处罚。此处罚方针虽然只提及牌手，但是赛场内的其他人，例如观众、工作人员或是裁判皆可能会被加入比赛（并立即退赛）以得到处罚。即使牌手在罚则生效之前选择退出比赛，该牌手依然会受到相应的处罚。
+          zh: "并非只有参赛牌手才可能会得到处罚。此处罚方针虽然只提及牌手，但是赛场内的其他人，例如观众、工作人员或是裁判皆可能会被加入比赛（并退赛）以得到处罚。即使牌手在罚则生效之前选择退出比赛，该牌手依然会受到相应的处罚。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 5
@@ -842,10 +788,7 @@ sections:
             the situation, and the penalty to all players involved. If the Head Judge chooses to deviate
             from the Infraction Procedure Guide, the Head Judge is expected to explain the standard penalty
             and the reason for deviation.
-          zh: '作出任何处罚时，裁判都必须对涉及该违规的牌手们解释修正状况的流程，以及其处罚。
-
-
-            如果主审选择不遵循违规处理方针，则主审应解释标准的罚则，以及不遵循的理由。'
+          zh: "作出任何处罚时，裁判都必须对涉及该违规的所有牌手解释该违规、修正状况的流程，以及其处罚。\n\n如果主审选择不遵循违规处理方针，则主审应解释标准的罚则，以及不遵循的理由。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 5
@@ -868,7 +811,7 @@ sections:
           text:
             en: Any time a penalty is issued, the judge must explain the infraction, the procedure for fixing
               the situation, and the penalty to all players involved.
-            zh: 作出任何处罚时，裁判都必须对涉及该违规的牌手们解释修正状况的流程，以及其处罚。
+            zh: "作出任何处罚时，裁判都必须对涉及该违规的所有牌手解释该违规、修正状况的流程，以及其处罚。"
           legacyRawUnits:
           - raw-L000457
           - raw-L000459
@@ -896,13 +839,7 @@ sections:
             from the procedure associated with a penalty. While it is tempting to try to “fix” game situations,
             the danger of missing a subtle detail or showing favoritism to a player (even unintentionally)
             makes it a bad idea.
-          zh: '有些罚则会在基本的处罚之外，包括额外叙述修正此犯规的流程的叙述。这些流程是用以保护工作人员免于不公正、偏见或是偏袒的指控。如果裁判的规则解释和引用的内容一致，而牌手还有所抱怨，则“指控该裁判不公”此事会转变成“指控方针不公”。裁判若不遵循这些流程，可能会引来相关牌手或是旁观者对裁判的指控。
-
-
-            这些流程不会也不该考虑游戏进行过的部份、游戏目前的状况，或是谁会因此流程与所连带的处罚而得到策略上的好处。
-
-
-            此流程只是试图要“修复”游戏的状况，遗漏一个小细节或是表现出对某牌手的偏袒（即使不是有意的），都不是好主意。'
+          zh: "有些罚则会在基本的处罚之外，包括额外修正此犯规的流程的叙述。这些流程是用以保护工作人员免于不公正、偏见或是偏袒的指控。如果裁判的裁定和引用的内容一致，而牌手还有所抱怨，则“指控该裁判不公”此事会转变成“指控方针不公”。裁判若不遵循这些流程，可能会引来相关牌手或是听闻此事的人对裁判的指控。\n\n这些流程不会也不该考虑正在进行的游戏、游戏目前的状况，或是谁会因此流程与所连带的处罚而得到策略上的好处。\n\n虽然试图“修复”游戏状况很有诱惑力，但遗漏细微之处或偏袒牌手（即使无意）的风险，使这种做法不可取。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 5
@@ -930,7 +867,7 @@ sections:
               a ruling that is consistent with quoted text, then the complaints of a player shift from accusation
               of unfairness by the judge to accusations of unfair policy. Deviations from these procedures may
               raise accusations against the judge from the player(s) involved, or from those who hear about it.
-            zh: 有些罚则会在基本的处罚之外，包括额外叙述修正此犯规的流程的叙述。这些流程是用以保护工作人员免于不公正、偏见或是偏袒的指控。如果裁判的规则解释和引用的内容一致，而牌手还有所抱怨，则“指控该裁判不公”此事会转变成“指控方针不公”。裁判若不遵循这些流程，可能会引来相关牌手或是旁观者对裁判的指控。
+            zh: "有些罚则会在基本的处罚之外，包括额外修正此犯规的流程的叙述。这些流程是用以保护工作人员免于不公正、偏见或是偏袒的指控。如果裁判的裁定和引用的内容一致，而牌手还有所抱怨，则“指控该裁判不公”此事会转变成“指控方针不公”。裁判若不遵循这些流程，可能会引来相关牌手或是听闻此事的人对裁判的指控。"
           legacyRawUnits:
           - raw-L000473
           - raw-L000475
@@ -942,7 +879,7 @@ sections:
             en: These procedures do not, and should not, take into account the game being played, the current
               situation that the game is in, or who will benefit strategically from the procedure associated with
               a penalty.
-            zh: 这些流程不会也不该考虑游戏进行过的部份、游戏目前的状况，或是谁会因此流程与所连带的处罚而得到策略上的好处。
+            zh: "这些流程不会也不该考虑正在进行的游戏、游戏目前的状况，或是谁会因此流程与所连带的处罚而得到策略上的好处。"
           legacyRawUnits:
           - raw-L000481
           - raw-L000483
@@ -953,7 +890,7 @@ sections:
           text:
             en: While it is tempting to try to “fix” game situations, the danger of missing a subtle detail or
               showing favoritism to a player (even unintentionally) makes it a bad idea.
-            zh: 此流程只是试图要“修复”游戏的状况，遗漏一个小细节或是表现出对某牌手的偏袒（即使不是有意的），都不是好主意。
+            zh: "虽然试图“修复”游戏状况很有诱惑力，但遗漏细微之处或偏袒牌手（即使无意）的风险，使这种做法不可取。"
           legacyRawUnits:
           - raw-L000489
           - raw-L000491
@@ -1096,13 +1033,7 @@ sections:
             result in a situation where the gained information makes no difference and the line of play
             remains the same (excepting the error, which has been fixed). This means limiting backups
             to situations with minimal decision trees.
-          zh: '本文档中的某些违规允许裁判考虑进行倒回。
-
-
-            由于此举可能会向牌手透露信息，且牌手可能由此改变游戏行动，因此“倒回”应作为最后的处理手段，仅适用于“保留当前游戏状态反而结果更糟”的情形。
-
-
-            良好的倒回结果应是：双方牌手获得的信息与此前一致，游戏进行的过程没有区别（错误已被修正）。这意味着倒回仅适用于存在最小决策树之情形。'
+          zh: "本文档中的某些违规允许裁判考虑进行倒回。\n\n由于此举可能会向牌手透露信息，且牌手可能由此改变游戏行动，因此“倒回”应作为最后的处理手段，仅适用于“保留当前游戏状态反而是明显更糟的处理方式”的情形。\n\n良好的倒回结果应是：双方牌手获得的信息不产生影响，游戏进行的过程没有区别（错误已被修正）。这意味着倒回仅适用于存在最小决策树之情形。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 5
@@ -1138,7 +1069,7 @@ sections:
             en: Due to the amount of information that may become available to players and might affect their play,
               backups are regarded as a solution of last resort, only applied in situations where leaving the
               game in the current state is a substantially worse solution.
-            zh: 由于此举可能会向牌手透露信息，且牌手可能由此改变游戏行动，因此“倒回”应作为最后的处理手段，仅适用于“保留当前游戏状态反而结果更糟”的情形。
+            zh: "由于此举可能会向牌手透露信息，且牌手可能由此改变游戏行动，因此“倒回”应作为最后的处理手段，仅适用于“保留当前游戏状态反而是明显更糟的处理方式”的情形。"
           legacyRawUnits:
           - raw-L000553
           - raw-L000555
@@ -1150,7 +1081,7 @@ sections:
             en: A good backup will result in a situation where the gained information makes no difference and
               the line of play remains the same (excepting the error, which has been fixed). This means limiting
               backups to situations with minimal decision trees.
-            zh: 良好的倒回结果应是：双方牌手获得的信息与此前一致，游戏进行的过程没有区别（错误已被修正）。这意味着倒回仅适用于存在最小决策树之情形。
+            zh: "良好的倒回结果应是：双方牌手获得的信息不产生影响，游戏进行的过程没有区别（错误已被修正）。这意味着倒回仅适用于存在最小决策树之情形。"
           legacyRawUnits:
           - raw-L000561
           - raw-L000563
@@ -1184,13 +1115,7 @@ sections:
             random portion of the library unless they were subsequently drawn; cards being returned to
             the library as part of the backup should not be shuffled at that stage if their identity was
             known to only one player.
-          zh: '执行倒回的流程如下：从最近的行动开始逐步回退，还原做过的所有行动，直到游戏来到发生失误的时间点为止。所有的行动都必须还原；不得省略或重排一连串行动当中的若干步骤。
-
-
-            如果在还原行动时，涉及到有牌手无法辨认之牌张（通常是因为该牌被抓上手），则从可能的牌张中随机选择一张。
-
-
-            让牌手得知某一张牌在牌库中具体位置的动作，除非是在之后抓起导致的，否则以将这些牌洗进牌库中随机部分的方式进行倒回；由于倒回而回到牌库的牌如果之前只有一位牌手知道内容，则在此步骤中不将它们洗牌。'
+          zh: "执行倒回的流程如下：从最近的行动开始逐步回退，还原做过的所有行动，直到游戏来到发生失误的时间点为止。所有的行动都必须还原；不得省略或重排一连串行动当中的若干步骤。\n\n如果在还原行动时，涉及到有牌手无法辨认之牌张（通常是因为该牌被抓上手），则从可能的牌张中随机选择一张。\n\n让牌手得知某一张牌在牌库中具体位置的动作，除非这些牌随后被抓起，否则以将这些牌洗进牌库中随机部分的方式进行倒回；由于倒回而回到牌库的牌如果之前只有一位牌手知道内容，则在此步骤中不将它们洗牌。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 6
@@ -1240,7 +1165,7 @@ sections:
               are reversed by shuffling those cards into the random portion of the library unless they were subsequently
               drawn; cards being returned to the library as part of the backup should not be shuffled at that
               stage if their identity was known to only one player.
-            zh: 让牌手得知某一张牌在牌库中具体位置的动作，除非是在之后抓起导致的，否则以将这些牌洗进牌库中随机部分的方式进行倒回；由于倒回而回到牌库的牌如果之前只有一位牌手知道内容，则在此步骤中不将它们洗牌。
+            zh: "让牌手得知某一张牌在牌库中具体位置的动作，除非这些牌随后被抓起，否则以将这些牌洗进牌库中随机部分的方式进行倒回；由于倒回而回到牌库的牌如果之前只有一位牌手知道内容，则在此步骤中不将它们洗牌。"
           legacyRawUnits:
           - raw-L000593
           - raw-L000595
@@ -1252,7 +1177,7 @@ sections:
             cards than they would once they have correctly drawn those cards. For example, returning cards
             to the library when a player has the ability to shuffle their library is not something that
             should be done except in extreme situations.
-          zh: 涉及随机／未知元素之倒回应谨慎处之，在进行倒回会导致或极可能导致牌手最终手牌内容与正常完成抓牌动作之结果不同的情形下尤甚。举例来说，除极特殊情况外，在牌手能够将牌库洗牌的情况下，不应将牌放回牌库中。
+          zh: "涉及随机／未知元素之倒回应极其谨慎地处理，在进行倒回会导致或有导致牌手最终手牌内容与正常完成抓牌动作之结果不同的风险之情形下尤甚。举例来说，除极特殊情况外，在牌手能够将牌库洗牌的情况下，不应将牌放回牌库中。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 6
@@ -1271,10 +1196,7 @@ sections:
           en: Some remedies state a simple backup may be performed. A simple backup is backing up the
             last action completed (or one currently in progress) and is sometimes used to make another
             portion of the prescribed remedy smoother. A simple backup should not involve any random elements.
-          zh: '某些修正方式注明“可进行简易倒回”。简易倒回是指倒回最后完成（或正在执行）的一个游戏动作，有时用于保证列明之修正方式的其他部分能够顺利执行。
-
-
-            简易倒回不应涉及任何随机元素。'
+          zh: "某些修正方式注明“可进行简易倒回”。简易倒回是指倒回最后完成（或正在执行）的一个游戏动作，有时用于使列明之修正方式的其他部分执行得更顺畅。\n\n简易倒回不应涉及任何随机元素。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 6
@@ -1298,7 +1220,7 @@ sections:
             en: Some remedies state a simple backup may be performed. A simple backup is backing up the last action
               completed (or one currently in progress) and is sometimes used to make another portion of the prescribed
               remedy smoother.
-            zh: 某些修正方式注明“可进行简易倒回”。简易倒回是指倒回最后完成（或正在执行）的一个游戏动作，有时用于保证列明之修正方式的其他部分能够顺利执行。
+            zh: "某些修正方式注明“可进行简易倒回”。简易倒回是指倒回最后完成（或正在执行）的一个游戏动作，有时用于使列明之修正方式的其他部分执行得更顺畅。"
           legacyRawUnits:
           - raw-L000609
           - raw-L000611
@@ -1332,10 +1254,7 @@ sections:
           en: Some infractions in this document refer to “sets” of cards. A set is a physically distinct
             group of cards defined by a game rule or effect. It may correspond to a specific zone, or
             may only represent a part of a zone. A set may consist of a single card.
-          zh: '本文档中的某些违规会提及“牌叠”之概念。
-
-
-            所谓牌叠，是指由游戏规则或效应规定，有显著区隔的牌张组合。牌叠此概念可能对应某一特定区域，也可能只包含某一区域当中的一部分。一张牌也可构成牌叠。'
+          zh: "本文档中的某些违规会提及“牌叠”之概念。\n\n所谓牌叠，是指由游戏规则或效应规定，在实体上有区隔的牌张组合。牌叠此概念可能对应某一特定区域，也可能只包含某一区域当中的一部分。一张牌也可构成牌叠。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 6
@@ -1368,7 +1287,7 @@ sections:
           text:
             en: A set is a physically distinct group of cards defined by a game rule or effect. It may correspond
               to a specific zone, or may only represent a part of a zone. A set may consist of a single card.
-            zh: 所谓牌叠，是指由游戏规则或效应规定，有显著区隔的牌张组合。牌叠此概念可能对应某一特定区域，也可能只包含某一区域当中的一部分。一张牌也可构成牌叠。
+            zh: "所谓牌叠，是指由游戏规则或效应规定，在实体上有区隔的牌张组合。牌叠此概念可能对应某一特定区域，也可能只包含某一区域当中的一部分。一张牌也可构成牌叠。"
           legacyRawUnits:
           - raw-L000635
           - raw-L000637
@@ -1378,7 +1297,7 @@ sections:
           en: Cards are considered to be part of a set until they join another set. There is no in-between
             state and any card that has not yet been seen is part of the previous set (unless the new
             set is hidden).
-          zh: 牌张在移入新的牌叠之前，视为在原来的牌叠之中。牌张不存在“移动中”之状态，任何还没有被看到的牌都属于之前的牌叠（除非新的牌叠也为非公开）。
+          zh: "牌张在移入新的牌叠之前，视为在原来的牌叠之中。牌张不存在“移动中”之状态，任何还没有被看到的牌都属于之前的牌叠（除非新的牌叠为非公开）。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 6
@@ -1413,7 +1332,7 @@ publicationAnnotations:
           a fundamental concept in the Magic Judge Code of Conduct. Judges are viewed with respect, in
           large part, because they are neutral and because they enforce the policy equally. It should
           also be unimaginable that a judge creates rules or rulings without policy guidance.
-        zh: 这可能是这份文件中最重要的概念。每当问题发生时，裁判应当毫无偏袒地评估情况，并依照规则和方针文件进行处理。我们无法想象一位裁判在做出判断时会偏向某位牌手，只是因为他们是朋友或者裁判更喜欢这位牌手。公正是《万智牌裁判行为守则》中规定的裁判行为基础。正因为裁判总是能公正的执行政策，所以大家才会对裁判怀有敬意。裁判在没有方针指导下自行创造规则或做出判决也是无法想象的。
+        zh: "这可能是这份文件中最重要的概念。每当问题发生时，裁判应当毫无偏袒地评估情况，并依照规则和方针文件进行处理。我们无法想象一位裁判在做出判断时会偏向某位牌手，只是因为他们是朋友或者裁判更喜欢这位牌手。公正是《万智牌裁判行为守则》中规定的裁判行为基础。大家对裁判怀有敬意，很大程度上是因为裁判保持中立，并平等地执行方针。裁判在没有方针指导下自行创造规则或做出判决也是无法想象的。"
       sourceRawUnits:
       - raw-L000101
       - raw-L000103
@@ -1438,7 +1357,7 @@ publicationAnnotations:
           of the player’s concentration. Let players play. Keep in mind this doesn’t mean you have to
           be a robot. You can still chat with players, and joke around with them, just don’t interrupt
           their games.
-        zh: 裁判的存在是为了服务牌手们。当有规则被违反，有牌手需要帮助或有特殊情况发生（比如产生了争吵，需要安抚牌手），裁判就该出动了。当不需要裁判的时候，裁判不应该干扰比赛。也就是说不评论牌手的游戏行动，不给出建议，不打断牌手的思考。让牌手玩自己的。但是注意这并不是让你成为一个规则自动答复机。你依然可以跟牌手闲聊、开玩笑，只是不要打断他们的对局。
+        zh: "裁判的存在是为了服务牌手们。当有规则被违反，有牌手需要帮助或有特殊情况发生（比如产生了争吵，需要安抚牌手），裁判就该出动了。当不需要裁判的时候，裁判不应该干扰比赛。也就是说不评论牌手的游戏行动，不做可能向牌手提供建议的事，不打断牌手的思考。让牌手玩自己的。但是注意这并不是让你成为一个规则自动答复机。你依然可以跟牌手闲聊、开玩笑，只是不要打断他们的对局。"
       sourceRawUnits:
       - raw-L000109
       - raw-L000111
@@ -1499,7 +1418,7 @@ publicationAnnotations:
           have the choice of whether to intervene and prevent these types of errors. Outside of a game,
           judges should always intervene to prevent infractions, but we accept that they sometimes won’t
           notice that an infraction is about to happen. Here are a few examples:'
-        zh: 虽然发现一个游戏内的违规事件的征兆是几乎不可能的，但是有时可以看出游戏外违规事件的征兆。在这种情况下，裁判应该上前阻止这个违规的发生。IPG原文中这句话中的“可以”并不是指“裁判可以选择是否阻止”，而是“IPG/MTR允许才裁判上前阻止”。这强调了服务牌手的重要性，同时明确的说明裁判并不能选择是否要在此时干预并防止此类违规。在游戏外，裁判应该阻止这些违规的出现，但是我们承认有的时候裁判并不能意识到这种违规的征兆。下面是几个例子：
+        zh: "虽然发现一个游戏内的违规事件的征兆是几乎不可能的，但是有时可以看出游戏外违规事件的征兆。在这种情况下，裁判应该上前阻止这个违规的发生。IPG原文中这句话中的“可以”并不是指“裁判可以选择是否阻止”，而是“IPG/MTR允许裁判上前阻止”。这强调了服务牌手的重要性，同时明确的说明裁判并不能选择是否要在此时干预并防止此类违规。在游戏外，裁判应该阻止这些违规的出现，但是我们承认有的时候裁判并不能意识到这种违规的征兆。下面是几个例子："
       sourceRawUnits:
       - raw-L000129
       - raw-L000139
@@ -1513,7 +1432,7 @@ publicationAnnotations:
           is a previously exiled creature on the table, and realizes that the player forgot to return
           it to their deck; the judge steps in and tell the player that they’re forgetting to shuffle
           a card.
-        zh: 一位裁判看到牌手在第一局与第二局之间洗牌，然而有一张被放逐的生物牌还在桌子上，意识到那位牌手忘记了把它洗进去。裁判上前告诉那位牌手他忘了把那张生物牌洗回去。
+        zh: "一位裁判看到牌手在第一盘结束后洗牌，然而有一张被放逐的生物牌还在桌子上，意识到那位牌手忘记了把它洗进去。裁判上前告诉那位牌手他忘了把那张生物牌洗回去。"
       sourceRawUnits:
       - raw-L000131
       - raw-L000141
@@ -1524,7 +1443,7 @@ publicationAnnotations:
         en: In a Sealed Deck tournament, a player gives a decklist to a judge, and the judge notices that
           the player forgot to write down her basic lands; the judge asks the player to record the basic
           lands they’re playing.
-        zh: 在一场现开比赛中，一位牌手将他的套牌登记表交给裁判，裁判发现该牌手忘了填他基本地的使用量；裁判让该牌手将他的地牌的数量写上。
+        zh: "在一场现开比赛中，一位牌手将他的套牌登记表交给裁判，裁判发现该牌手忘了填他基本地的使用量；裁判让该牌手将他所使用的基本地登记清楚。"
       sourceRawUnits:
       - raw-L000133
       - raw-L000143
@@ -1536,7 +1455,7 @@ publicationAnnotations:
           (like Pacifism) that belongs to her previous opponent; the judges makes an effort to find where
           the owner of that card is playing this round, so that they can return it before the game starts
           with an illegal deck.
-        zh: 在一轮比赛马上要开始的时候，一位牌手到主席台处把一张属于他上局对手的牌（比如和平主义）交给裁判。裁判尽力寻找那张牌的拥有者并把牌还给他，以防他用一套不合法的套牌进行下轮比赛。
+        zh: "在一轮比赛马上要开始的时候，一位牌手到主席台处把一张属于他的上一位对手的牌（比如和平主义）交给裁判。裁判尽力寻找那张牌的拥有者并把牌还给他，以防他用一套不合法的套牌进行下轮比赛。"
       sourceRawUnits:
       - raw-L000135
       - raw-L000145
@@ -1575,7 +1494,7 @@ publicationAnnotations:
           how trample works is much more believable than an experienced player, with whom you have discussed
           Trample before on multiple occasions. It’s still possible for legitimate errors to be made,
           but the questions asked in the investigation will be influenced by this knowledge.
-        zh: 我们不应根据牌手的能力或对牌手的印象来改变判罚。当你确定了违规所属的类别，你的处罚应该不掺杂任何先入为主的偏见。不应该因为牌手本应"了解地更多"而进行更严厉的处罚。一位声名狼藉的牌手和一位参加比赛的3级裁判犯下违反游戏规则后进行的修正应当遵循相同的方式。一旦明确了违规是什么，牌手是谁并不会有任何影响。然而，在确定究竟是什么违规的时候，牌手的身份可能会影响调查。例如，一位跟你数次讨论过践踏的老玩家和一位新手都说他自己误解了践踏的规则，显然后者的可信度要高一些。这依然有可能是老牌手犯下的一个正常的错误，但是这些前期的判断将影响你在调查的时候的提问。
+        zh: "我们不应根据牌手的能力或对牌手的印象来改变违规的认定。无论牌手是新手还是经验丰富的职业牌手，违反游戏规则的处罚都是警告。当你确定了违规所属的类别，你的处罚应该不掺杂任何先入为主的偏见。不应该因为牌手本应\"了解地更多\"而进行更严厉的处罚。一位声名狼藉的牌手和一位参加比赛的3级裁判犯下违反游戏规则后进行的修正应当遵循相同的方式。一旦明确了违规是什么，牌手是谁并不会有任何影响。然而，在确定究竟是什么违规的时候，牌手的过往可能会影响调查。例如，一位跟你数次讨论过践踏的老玩家和一位新手都说他自己误解了践踏的规则，显然后者的可信度要高得多。这依然有可能是老牌手犯下的一个正常的错误，但是这些前期的判断将影响你在调查的时候的提问。"
       sourceRawUnits:
       - raw-L000153
       - raw-L000155
@@ -1600,7 +1519,7 @@ publicationAnnotations:
           don’t want to lose another game for something I can easily avoid, I will count to 60 every time
           I write a decklist”. The primary purpose of a penalty is not tracking; although that is a convenient
           and useful byproduct, the purpose is education.
-        zh: 处罚的存在并不是为了让虐待狂裁判去伤害毫无防备的牌手，处罚的存在是为了减少错误再次出现的几率。牌手受到了处罚之后他再次犯下同样错误的可能会减少。通常这意味着给他们上了印象深刻的一课“我因为这个失误而获得一盘负，我不想再因为这个可以轻松避免的问题再输一盘。我以后交牌表之前会数一下到没到60张”。处罚的目的并不是持续记录一位牌手的比赛行为（虽然那是个方便的副产物），处罚的目的在于教育。
+        zh: "处罚的存在并不是为了让虐待狂裁判去伤害毫无防备的牌手，处罚的存在是为了减少错误再次出现的几率。牌手受到了处罚之后他再次犯下同样错误的可能会减少。通常这意味着给他们上了印象深刻的一课“我因为这个失误而获得一盘负，我不想再因为这个可以轻松避免的问题再输一盘。我以后交牌表之前会数一下到没到60张”。处罚的首要目的并不是持续记录一位牌手的比赛行为（虽然那是个方便的副产物），处罚的目的在于教育。"
       sourceRawUnits:
       - raw-L000161
       - raw-L000163
@@ -1642,7 +1561,7 @@ publicationAnnotations:
         en: We should also note that you don’t have to receive a penalty to recognize that you don’t want
           to receive one. Hearing about a friend getting a penalty for an action helps reinforce that
           you don’t want one either. We learn from our friend’s mistakes as well as from our own.
-        zh: 我们也要记住，有时并不用以获得判罚为代价来认识错误。如果一位朋友因为一个处罚输掉了一场重要的比赛，我们肯定不希望自己不小心干了同样的事情而受到处罚。对我们朋友的处罚同样能使我们防止自己犯错误。
+        zh: "我们也要记住，有时并不用以获得判罚为代价来认识错误。听说朋友因某个行为受到处罚，也会强化我们不愿因同样行为受罚的想法。我们既从朋友的错误中学习，也从自己的错误中学习。"
       sourceRawUnits:
       - raw-L000177
       - raw-L000181
@@ -1656,7 +1575,7 @@ publicationAnnotations:
           for twenty times in twenty consecutive tournaments, well, wouldn’t you believe that they are
           doing it on purpose and they are doing it only once just because they knows that “the first
           time is just a warning.”
-        zh: 正如有一个档案（公开的）保存着所有的比赛结果一样，同样有一个档案（非公开的）保存着所有的判罚记录。当一位牌手重复出现了同一个违规的时候，这个档案会非常有用。当一个牌手在20个连续的比赛中受到了20次“额外看牌——在比赛前洗牌时，看到了对手的牌库”的处罚，难道你不认为是因为他知道这样做“第一次只是警告”所以故意这样做的么？
+        zh: "正如有一个档案（公开的）保存着所有的比赛结果一样，同样有一个档案（非公开的）保存着所有的判罚记录。当一位牌手重复出现了同一个违规的时候，这个档案会非常有用。当一个牌手在20个连续的比赛中受到了20次“额外看牌——在比赛前洗牌时，翻开了对手的牌”的警告，难道你不会认为他是故意这样做，而且每场只做一次，正是因为他知道“第一次只是警告”吗？"
       sourceRawUnits:
       - raw-L000179
       - raw-L000183
@@ -1703,7 +1622,7 @@ publicationAnnotations:
           ask them to play in a way that’s clearer. Often we get spectators coming to us with problems
           that aren’t really problems. For this reason we must push the players to not only be clear with
           each other but also to ensure that their actions are clear to anyone who is watching their game.
-        zh: 牌手可能会采用一些简化流程、使用意义不明的物体来表示某些东西、或使用错误的衍生物等。这些做法也许对于双方牌手均很清楚，但对旁观者（包括裁判）可能就不那么清楚了。如果双方牌手均清楚发生了什么，双方也都能接受，则不要给予判罚，但可以请求牌手用更为清楚的方式进行游戏。我们经常会遇到旁观者叫来裁判报告问题，但最后发现实际上并不是问题，而是理解错误。因此我们必须促使牌手不仅要对对手表达清楚，也要对旁观他们游戏的其他人表达清楚。
+        zh: "牌手可能会采用一些简化流程、使用意义不明的物体来表示某些东西、或使用错误的衍生物等。这些做法也许对于双方牌手均很清楚，但对旁观者（包括裁判）可能就不那么清楚了。如果双方牌手均清楚发生了什么，双方也都能接受，则不要给予判罚，只需请求牌手用更为清楚的方式进行游戏。我们经常会遇到旁观者叫来裁判报告问题，但最后发现实际上并不是问题，而是理解错误。因此我们必须促使牌手不仅要对对手表达清楚，也要对旁观他们游戏的其他人表达清楚。"
       sourceRawUnits:
       - raw-L000197
       - raw-L000199
@@ -1724,7 +1643,7 @@ publicationAnnotations:
         en: If the players fix a tiny error themselves or are playing in a way that is clear to them,
           but not clear to bystanders, stick around and watch and make sure nothing odd is happening,  We
           don’t want a player taking advantage of the confusion, or the error compounding on itself.
-        zh: 如果牌手自行修正了一个轻微错误，或使用只有牌手双方知道但对旁观者混淆不清的表达方式，裁判应该在桌前稍作停留，并确认没有更严重的事情发生。我们不希望牌手利用混淆不清的表达获利、或同样的错误接连不断发生。
+        zh: "如果牌手自行修正了一个轻微错误，或使用只有牌手双方知道但对旁观者混淆不清的表达方式，裁判应该留在现场观察，确认没有异常情况发生。我们不希望牌手利用混淆不清的表达获利，或错误进一步累积扩大。"
       sourceRawUnits:
       - raw-L000205
       - raw-L000207
@@ -1746,7 +1665,7 @@ publicationAnnotations:
           than “tiny” and that we do not start with the penalty and work backwards to the infraction.
           We identify what actions occurred, what the infraction is, and then determine the penalty. We
           do not give people Game Losses because their error seems worth a game loss.
-        zh: 这句话确定了两项责任。首先，我们的确需要对任何比“轻微”违规严重的情况给出判罚；其次，我们不能先确定判罚是什么，再回头找适用的违规。我们应当先判定牌手做了哪些行动，导致了什么违规，再确定判罚。我们不能因为某个错误看起来应该一盘负就给一盘负。
+        zh: "这句话确定了两项责任。首先，我们的确需要对任何比“轻微”违规严重的情况判定相应的违规；其次，我们不能先确定处罚是什么，再回头找适用的违规。我们应当先判定牌手做了哪些行动，导致了什么违规，再确定处罚。我们不能因为某个错误看起来应该一盘负就给一盘负。"
       sourceRawUnits:
       - raw-L000213
       - raw-L000215
@@ -1791,7 +1710,7 @@ publicationAnnotations:
           is when a specific situation doesn’t fit well in the categories listed in the twenty pages of
           the IPG. The only case where a deviation is justifiable is when the situation is both significant
           and exceptional.
-        zh: 当然，虽然主审虽然任何时候都有不依照方针处理的权利，他同样也应该知道什么时候适合自行决定处罚。不依照方针的常见原因是出现了某些没有被包含在这份IPG中的特殊情况。只有在出现了重大且特殊的状况时，不依照方针才是公正的处理方法。
+        zh: "当然，虽然主审任何时候都有不依照方针处理的权利，他同样也应该知道什么时候适合自行决定处罚。不依照方针的常见原因是某一具体情况无法恰当地归入IPG列出的类别。只有在出现了重大且特殊的状况时，才有正当理由不依照方针处理。"
       sourceRawUnits:
       - raw-L000229
       - raw-L000231
@@ -1839,7 +1758,7 @@ publicationAnnotations:
           penalty regardless of whether you think it is ‘fair’ or not. And finally, being a Level 3 Judge
           does not bestow upon that judge the right to deviate. In truth, they are held to a stricter
           standard, as lower level judges are watching and learning from their actions.
-        zh: 一些情况下，不依照方针行事看上去是合理的，但其实不是。你应该严格的依照方针执行，不管这是不是最后一轮，不管这是1号桌还是101号桌。对手可能是非常年轻的孩子，但是年龄对于执行方针并没有什么影响。牌手可能是刚刚接触万智牌的新人，他并不知道扔骰子决定胜负是被禁止的，他仍然会获得相应的判罚，不管你觉得这是否“公平”。另外，成为一个L3裁判并不会给你更多不依方针行事的权利。事实上，他们会更加严格的遵守标准，因为低级的裁判都以他们为榜样在学习。
+        zh: "一些情况下，不依照方针行事看上去是合理的，但其实不是。你应该严格的依照方针执行，不管这是不是最后一轮，不管这是1号桌还是101号桌。对手可能是非常年轻的孩子，但是年龄对于执行方针并没有什么影响。牌手可能是刚刚接触万智牌的新人，他并不知道扔骰子决定胜负是被禁止的，他仍然会获得相应的判罚，不管你觉得这是否“公平”。另外，成为一个L3裁判并不会给你更多不依方针行事的权利。对他们的要求实际上更严格，因为低级的裁判都以他们为榜样在学习。"
       sourceRawUnits:
       - raw-L000245
       - raw-L000247
@@ -1901,7 +1820,7 @@ publicationAnnotations:
           do it after the match is over. But apologize to both players as soon as it is possible, and
           correct the situation. Players are typically very understanding, even when they were on the
           receiving end of an incorrect call.
-        zh: 人总是会犯错，这是人生中一定会出现的。没有人可以总是保证自己100%的正确，同时对于他人来说也是个不切实际的期望。然而，当你犯了错误，你需要负起责任尽最大努力去修正他。不可以让牌手认为裁判说的错误信息是对的。在任何情况下，你需要因为你犯的错误向牌手道歉。有时需要立刻这么做，但是有的时候在比赛结束之后再这么做可能更好。但是立刻向双方牌手道歉，并且修正这个错误，通常情况下牌手们总是会表示理解，即使他们是直接接收到了你错误判罚的人。
+        zh: "人总是会犯错，这是人生中一定会出现的。没有人可以总是保证自己100%的正确，同时对于他人来说也是个不切实际的期望。然而，当你犯了错误，你需要负起责任尽最大努力去修正它。不可以让牌手认为裁判说的错误信息是对的。在任何情况下，你需要因为你犯的错误向牌手道歉。有时需要立刻这么做，但是有的时候在对局结束之后再这么做可能更好。但是尽快向双方牌手道歉，并且修正这个错误，通常情况下牌手们会表示理解，即使他们是直接接收到了你错误判罚的人。"
       sourceRawUnits:
       - raw-L000265
       - raw-L000271
@@ -1924,7 +1843,7 @@ publicationAnnotations:
           the people they are supposed to be able to trust. However, this downgrade decision still rests
           with the HJ. For this clause we need two things 1) the Judge to provide erroneous information
           and 2) A violation be the direct result from the faulty information.
-        zh: 我们希望牌手们能够信任他们比赛的裁判，牌手也需要依照我们给出的指示或者信息来行动。因为信任他们应该信任的人而导致自己受到处罚是不公平的。然而这个降级的决定权仍然在主审的手里。这个条款的执行需要两个条件：（1）裁判提供了错误信息；（2）违规是收到错误信息的直接结果。
+        zh: "我们希望牌手们能够信任他们的比赛工作人员，牌手也需要能够依据我们提供的指示或信息行动。因为信任他们应该信任的人而导致自己受到处罚是不公平的。然而这个降级的决定权仍然在主审的手里。这个条款的执行需要两个条件：（1）裁判提供了错误信息；（2）违规是收到错误信息的直接结果。"
       sourceRawUnits:
       - raw-L000277
       - raw-L000279
@@ -2032,7 +1951,7 @@ publicationAnnotations:
           (if you are using them). The Scorekeeper will input the warning penalty into the tournament
           software to track the infraction. Scorekeepers can notify you when a player is close to an upgrade,
           and players need to be aware of how many penalties they have.
-        zh: “警告”需要被记录，裁判也应该将它写在成绩条的背面（如果使用成绩条的话）。记分员将会将这个警告处罚记录在比赛软件内以追踪违规。记分员和被警告的牌手都应知道警告的内容。记分员可以在该牌手的判罚接近升级次数的时候提醒裁判，同时该牌手也需要知晓自己已经受到了几个判罚。
+        zh: "“警告”需要被记录，裁判也应该将它写在成绩条的背面（如果使用成绩条的话）。记分员将会将这个警告处罚记录在比赛软件内以追踪违规。记分员可以在该牌手的判罚接近升级次数的时候提醒裁判，同时该牌手也需要知晓自己已经受到了几个判罚。"
       sourceRawUnits:
       - raw-L000321
       - raw-L000323
@@ -2053,7 +1972,7 @@ publicationAnnotations:
         en: If fixing the game state has taken more than one minute, give a time extension equal to the
           time taken, unless the match is in extra turns. You did look at the clock before walking up
           to the table, right?
-        zh: 如果现在不是额外回合，且修正问题的时候用了一分钟以上的时间时，你需要为这桌补时。你在走向叫裁判的桌子的时候会看一眼时间，对吧？
+        zh: "如果现在不是额外回合，且修正问题的时候用了一分钟以上的时间时，你需要给予与所花费时间相等的补时。你在走向叫裁判的桌子的时候会看一眼时间，对吧？"
       sourceRawUnits:
       - raw-L000329
       - raw-L000331
@@ -2097,7 +2016,7 @@ publicationAnnotations:
           apply the penalty to the next game that you can, even if its in a different match. However,
           there are a few infractions where the penalty specifically tells you to apply the penalty at
           a specific time.  Mostly this is for a Decklist Problem discovered through decklist counting.
-        zh: 默认情况下，一盘负在适用时会立即发生。如果当前没有进行对局，则该违规会适用到下一盘中，即使这一盘发生在另一局中。然而，有一些违规明确说明了判罚应在何时发生。这种情况最常见的就是在清点牌表上的张数时发现的套牌登记表问题。
+        zh: "默认情况下，一盘负在适用时会立即发生。如果当前没有正在进行的游戏，则将该处罚适用于下一盘游戏，即使这一盘发生在另一局中。然而，有一些违规明确说明了判罚应在何时发生。这种情况最常见的就是在清点牌表上的张数时发现的套牌登记表问题。"
       sourceRawUnits:
       - raw-L000347
       - raw-L000349
@@ -2124,7 +2043,7 @@ publicationAnnotations:
           the penalty into a match loss which doesn’t fit the infractions. Although it may feel like the
           player is getting away with no penalty for the other infraction or infractions, they are still
           receiving the same penalty they would have for that infraction and they are all being recorded.
-        zh: 这些违规不一定非要在同时发生；只要你将在成绩条上一次写下两个一盘负，你就只会给出一个实际的一盘负处罚。虽然这种情况相对而言比较罕见，最可能的情况之一是在一次套牌检查时发生了多种不同的违规。另一种情形是牌表提交晚了，然后在一轮开始前因为填写的地数量不对又需要修改登记表。一盘负是较重的处罚，因同时发现的不同违规而一次获得2个或更多一盘负会导致判罚实际变成一局负，这与违规并不相称。虽然这可能让你感觉牌手的某些违规没有得到惩罚，牌手实际还是会得到与其违规相称的处罚，且都会被记录在案。
+        zh: "这些违规不一定非要在同时发生；只要你将在成绩条上一次写下两个或更多一盘负，你就只会给出一个实际的一盘负处罚。虽然这种情况相对而言比较罕见，最可能的情况之一是在一次套牌检查时发生了多种不同的违规。另一种情形是牌表提交晚了，然后在一轮开始前因为填写的地数量不对又需要修改登记表。一盘负是较重的处罚，因同时发现的不同违规而一次获得2个或更多一盘负会导致判罚实际变成一局负，这与违规并不相称。虽然这可能让你感觉牌手的某些违规没有得到惩罚，牌手实际还是会得到与其违规相称的处罚，且都会被记录在案。"
       sourceRawUnits:
       - raw-L000355
       - raw-L000357
@@ -2148,7 +2067,7 @@ publicationAnnotations:
           you record both penalties, end the current game (if it is still being played) and both players
           continue to the next game. For the purpose of reporting the score, that specific game didn’t
           happen.
-        zh: 这适用于两位牌手套牌都不合法等其他的情况。如果我们直接给出一人一个一盘负，那么一盘游戏就会决定这一盘的胜负，但对于两位牌手而言打完一个完整的对局总是更好的。为不让这种事情发生，你需要记录这两个判罚，结束当前这一盘游戏（如果问题出现的时候游戏还在进行的话），然后这两位牌手继续进行下一局。在录入成绩时，刚才那一盘视同不存在。
+        zh: "这适用于两位牌手套牌都不合法等其他的情况。如果我们直接给出一人一个一盘负，那么一盘游戏就会决定这一局的胜负，但对于两位牌手而言打完一个完整的对局总是更好的。为不让这种事情发生，你需要记录这两个判罚，结束当前这一盘游戏（如果问题出现的时候游戏还在进行的话），然后这两位牌手继续进行下一盘。在录入成绩时，刚才那一盘视同不存在。"
       sourceRawUnits:
       - raw-L000363
       - raw-L000365
@@ -2168,7 +2087,7 @@ publicationAnnotations:
         en: The infractions associated with this penalty, are all things that cannot be “undone” even
           with a Game Loss.  For example, if you offer a bribe to your opponent, a Game Loss cannot unmake
           that offer.
-        zh: 导致这种处罚的犯规，都有一个共同点：它们是不可逆的，就算判决一局负也无法补救。举个例子，如果你试图贿赂对手，那么判你一局负并不能消除你提出过贿赂这个事实。
+        zh: "导致这种处罚的犯规，都有一个共同点：它们是不可逆的，就算判决一盘负也无法补救。举个例子，如果你试图贿赂对手，那么判你一盘负并不能消除你提出过贿赂这个事实。"
       sourceRawUnits:
       - raw-L000373
       - raw-L000377
@@ -2214,7 +2133,7 @@ publicationAnnotations:
       text:
         en: Disqualifications are for the most severe infractions. Don’t feel bad about these. Remember,
           you don’t give penalties. Players earn them.
-        zh: 取消资格用来处理最严重的违规。你对此并不需要对此感到愧疚。记住，并不是因为你他们才得到判罚，而是他们自作自受。
+        zh: "取消资格用来处理最严重的违规。你并不需要对此感到愧疚。记住，并不是因为你他们才得到判罚，而是他们自作自受。"
       sourceRawUnits:
       - raw-L000395
       - raw-L000397
@@ -2235,7 +2154,7 @@ publicationAnnotations:
           and the information can be used by the Investigations Committee. Get the person’s name and Wizards
           Account email address, even if you have to ask around. Remember to collect statements and enter
           an investigation report.
-        zh: 将旁观者或路人录入赛事，能确保对取消资格的判罚有档可查，并且相关信息可供调查委员会使用。即便需要多方打听，也务必获取到此人的姓名和威世智账户的电子邮箱地址。切记要收集陈述并提交调查报告。
+        zh: "将旁观者或观众录入赛事，能确保对取消资格的判罚有档可查，并且相关信息可供调查委员会使用。即便需要多方打听，也务必获取到此人的姓名和威世智账户的电子邮箱地址。切记要收集陈述并提交调查报告。"
       sourceRawUnits:
       - raw-L000403
       - raw-L000405
@@ -2345,8 +2264,7 @@ publicationAnnotations:
           competitive REL events is that a Level 3 judge can issue Game Losses instead of having to consult
           the Head Judge. At some events like StarCityGames Opens it is not uncommon for Team Leaders
           to have the authority to issue Game Losses.
-        zh: 一盘负是个比较大的判罚，而且如果判错了很难修正。所以我们建议你在给出一盘负或一局负之前请先去咨询主审。同时，只有主审能给出取消资格的判罚。迟到和套牌登记表问题是两个例外，因为相对于其他一盘负的问题而言，判断这两个情况不需要很多信息，并且这些判罚也非常普遍。然而，如果裁判是成小组工作的，那么建议通过小组的组长来向主审反映。在某些比赛中，主审可以更改这条规定。常见的变更是在一场大型竞争级别赛事中，L3裁判可以代替主审给出一盘负的判罚。在一些例如星城公开赛（SCG
-          Opens）的比赛中，组长可以给一盘负的情况也并不少见。
+        zh: "一盘负是个比较大的判罚，而且如果判错了很难修正。所以我们建议你在给出一盘负或一局负之前请先去咨询主审。同时，只有主审能给出取消资格的判罚。迟到和套牌登记表问题是两个例外，因为相对于其他一盘负的问题而言，这类判罚涉及的裁量判断很少，并且这些判罚也非常普遍。然而，如果裁判是成小组工作的，那么建议通过小组的组长来向主审反映。在某些比赛中，主审可以更改这条规定。常见的变更是在一场大型竞争级别赛事中，L3裁判可以无需事先咨询主审给出一盘负的判罚。在一些例如星城公开赛（SCG Opens）的比赛中，组长可以给一盘负的情况也并不少见。"
       sourceRawUnits:
       - raw-L000445
       - raw-L000447
@@ -2370,7 +2288,7 @@ publicationAnnotations:
           the appropriate penalty. If a spectator is acting aggressively, then that is something that
           needs to be tracked. You can do something ban-worthy at an event you aren’t enrolled in. If
           a spectator is giving outside assistance for example, we need to keep track of it.
-        zh: 这句话的主要目的是告诉大家：“如果有人并不是我这场比赛中的参赛者，却犯下了这些违规，我该怎么办？”当谈及判罚时，我们并不区别对待任何比赛的参与者。如果你在没有参赛的情况下犯下了违规，你将被通过比赛报告软件加入比赛、并给予相应的判罚。如果有一个旁观者言行冒犯他人，这便属于一件需要被记录在案的事情。你甚至可以在没有参赛的情况下犯下值得被禁赛的事情。例如，一个旁观者给予他人外来协助，我们就应该将其记录在案。
+        zh: "这句话的主要目的是告诉大家：“如果有人并不是我这场比赛中的参赛者，却犯下了这些违规，我该怎么办？”当谈及判罚时，我们并不区别对待任何比赛的参与者。如果你在没有参赛的情况下犯下了违规，你将被通过比赛报告软件加入比赛、并给予相应的判罚。如果有一个旁观者表现出攻击性行为，这便属于一件需要被记录在案的事情。你甚至可以在没有参赛的情况下犯下值得被禁赛的事情。例如，一个旁观者给予他人外来协助，我们就应该将其记录在案。"
       sourceRawUnits:
       - raw-L000453
       - raw-L000455
@@ -2446,7 +2364,7 @@ publicationAnnotations:
           they open themselves up to rumors: “Abe got a downgrade for extra cards in his deckbox, but
           I didn’t because the judge always lets Abe get away with things.” The short story is: don’t
           deviate. Don’t end up the subject of some forum rant.'
-        zh: 一些判罚附带了额外的修正及补救措施。它们一般是列在这些判罚的原则部分后面，不要忘记使用它们。它们能够尽最大可能的修复游戏状态，也需要在各种比赛中始终如一的执行。这不仅能够保持竞争级赛事的判罚的一致性，还能保护裁判。如果裁判严格遵循方针，牌手就不能（合理的）控诉裁判对他们不公，或者裁判更改规则以让他们的对手获利。如果裁判不依照方针行事，牌手可能就会开始私下说：“牌手甲在他盒子里放了跟比赛无关的牌吃了一个警告，但是我放了就一盘负，这都是因为裁判偏袒牌手甲。”简单来说：依照方针行事，就不会成为喷子们在网上群起而攻之的对象。
+        zh: "一些判罚附带了额外的修正及补救措施。它们一般是列在这些判罚的原则部分后面，不要忘记使用它们。它们能够尽最大可能的修复游戏状态，也需要在各种比赛中始终如一的执行。这不仅能够保持竞争级赛事的判罚的一致性，还能保护裁判。如果裁判严格遵循方针，牌手就不能（合理的）控诉裁判对他们不公，或者裁判更改规则以让他们的对手获利。如果裁判不依照方针行事，牌手可能就会开始私下说：“牌手甲因牌盒中额外的牌获得了罚则降级，但我却没有，因为裁判总是放过牌手甲的问题。”简单来说：不要不依照方针行事，也不要使自己成为网上抱怨的对象。"
       sourceRawUnits:
       - raw-L000477
       - raw-L000479
@@ -2473,7 +2391,7 @@ publicationAnnotations:
           decides the game or if it allows a player to benefit strategically from an error. Any time there
           is an error, someone is going to gain some information from it. We do not ask judges to make
           assessments of exactly what that will be, as this definitely cannot be done with any consistency.
-        zh: 经常会有裁判对这一条有疑问：当我们被叫到桌前，我们不用考虑游戏状态么？答案是：有时候用，有时候不用。我们在判断是否违规、违规是什么的时候可以将游戏状态列入考虑。这能够帮助我们明白应该问牌手什么问题。例如，调查某人是否拖延时，当前对局的状态就非常重要。然而，当你确定了违规是什么，修正问题时就不再考虑这些因素。当你进行修正时，一位牌手是否能从判罚中获得利益就并不重要了。每当一个错误发生时，总会有一位牌手从中获取某些额外信息。我们不要求裁判详细评估谁因为错误获利，因为这样做显然无法保证判罚的一致性。
+        zh: "经常会有裁判对这一条有疑问：当我们被叫到桌前，我们不用考虑游戏状态么？答案是：有时候用，有时候不用。我们在判断是否违规、违规是什么的时候可以将游戏状态列入考虑。这能够帮助我们明白应该问牌手什么问题。例如，调查某人是否拖延时，当前对局的胜负记录就非常重要。然而，当你确定了违规是什么，修正问题时就不再考虑这些因素。当你进行修正时，该修正是否决定本盘胜负、一位牌手是否能从判罚中获得利益就并不重要了。每当一个错误发生时，总会有一位牌手从中获取某些额外信息。我们不要求裁判详细评估谁因为错误获利，因为这样做显然无法保证判罚的一致性。"
       sourceRawUnits:
       - raw-L000485
       - raw-L000487
@@ -2633,7 +2551,7 @@ publicationAnnotations:
       text:
         en: These infractions are IPG 2.5 Game Rule Violation, IPG 2.3 Hidden Card Error, and IPG 3.7
           Communication Policy Violation.
-        zh: 允许倒回的违规是IPG 2.5违反游戏规则、IPG 2.3额外抓牌、以及IPG 3.7违反交流原则。
+        zh: "允许倒回的违规是IPG 2.5违反游戏规则、IPG 2.3非公开牌张失误、以及IPG 3.7违反交流原则。"
       sourceRawUnits:
       - raw-L000549
       - raw-L000551
@@ -2658,7 +2576,7 @@ publicationAnnotations:
           things alone unless it’s really really worse than backing up.” Remember, both players are responsible
           for the game state. No matter how messed up things have gotten, both players had opportunities
           to prevent it.
-        zh: 这句话可以展开写一整篇文章了。幸运的是，已经有人[写过了一篇](http://blogs.magicjudges.org/articles/2013/08/20/backups-embracing-the-rewind/)。简短来说，不要贸然决定倒回。裁判需要考虑牌手已经执行的动作、哪些信息已经泄露、以及倒回会不会让问题更糟。裁判不是一定要执行倒回。并不是“能倒就倒，倒不了才保持原样”，而是“如果保持这样的话实在糟糕了，所以只能倒回”。注意，双方牌手都应该尽力保持游戏状态正确。不管场面变得多么乱，两位牌手都有机会来避免错误发生。
+        zh: "这句话可以展开写一整篇文章了。幸运的是，已经有人[写过了一篇](http://blogs.magicjudges.org/articles/2013/08/20/backups-embracing-the-rewind/)。简短来说，不要贸然决定倒回。裁判需要考虑牌手已经执行的动作、哪些信息已经泄露、以及倒回会不会让问题更糟。裁判不是一定要执行倒回。并不是“能倒就倒，倒不了才保持原样”，而是“如果保持这样的话实在糟糕了，所以只能倒回”。注意，双方牌手都对游戏状态负有责任。不管场面变得多么乱，两位牌手都有机会来避免错误发生。"
       sourceRawUnits:
       - raw-L000557
       - raw-L000559
@@ -2733,7 +2651,7 @@ publicationAnnotations:
           return exactly to the point of error, exactly the way it happened. This is to protect you as
           much as the players. If you rewind everything in reverse order, the players can see and understand
           what is going on.
-        zh: 向牌手询问发生了什么。在倒回前，你应该让自己清楚的理解你需要倒回的每一个动作。不能出现“我不确定这个地是横着的还是竖着的”或“我忘了这个生物是启动异能横的还是进攻横的了”的情况。依次倒回每一个动作。不能略过任何一个或者打乱顺序。你必须精确的倒回至错误发生的时点。这将同样保护你和牌手。如果你依原次序倒回，牌手将会看到并理解发生了什么。
+        zh: "向牌手询问发生了什么。在倒回前，你应该让自己清楚的理解你需要倒回的每一个动作。不能出现“我不确定当时横置了哪些地”或“我忘了这个生物是启动异能横的还是进攻横的了”的情况。依次倒回每一个动作。不能略过任何一个或者打乱顺序。你必须精确的倒回至错误发生的时点。这将同样保护你和牌手。如果你依原次序倒回，牌手将会看到并理解发生了什么。"
       sourceRawUnits:
       - raw-L000581
       - raw-L000583
@@ -2758,7 +2676,7 @@ publicationAnnotations:
           a player’s hand as part of a rewind, you are probably doing more harm than good at this point
           with the rewind. Shuffling away a random card from a player’s hand is pretty much the definition
           of “disruptive”, but we will see below we can get around that.
-        zh: 倒回抓牌动作可能会让人很紧张。虽然倒回抓牌并不是很复杂，但仍然不能轻易对待。如果在抓过牌之后进行倒回，那么把那张牌放回原处。如果那张牌并不是对所有牌手可见的，那么将一张随机的牌放回去。注意，如果在此之后，你发现在把牌放到牌库顶后还需要洗那位牌手的牌库，那么你遇到的情况可能并不适合倒回。把牌手的一张手牌洗回牌库实在是对游戏非常有破坏性；下面会介绍如何倒回洗牌。
+        zh: "倒回抓牌动作可能会让人很紧张。虽然倒回抓牌并不是很复杂，但仍然不能轻易对待。如果在抓过牌之后进行倒回，那么把那张牌放回原处。如果并非所有牌手都知道那张牌的内容，那么将一张随机的牌放回去。注意，如果在此之后，你发现在把牌放到牌库顶后还需要洗那位牌手的牌库，那么你遇到的情况可能并不适合倒回。把牌手的一张手牌洗回牌库实在是对游戏非常有破坏性；下面会介绍如何避免这一问题。"
       sourceRawUnits:
       - raw-L000589
       - raw-L000591
@@ -2845,7 +2763,7 @@ publicationAnnotations:
       text:
         en: If you are backing up through a shuffle or returning random cards from the hand to the library
           or anything of the sort, we are no longer in the realm of “simple”. Stop.
-        zh: 如果倒回涉及到洗牌、将随机的牌移回手牌或洗回牌库这样的情形，这就不再属于“简易”的范畴。不要使用简易倒回。
+        zh: "如果倒回涉及到洗牌、将随机的手牌放回牌库这样的情形，这就不再属于“简易”的范畴。不要使用简易倒回。"
       sourceRawUnits:
       - raw-L000621
       - raw-L000623
@@ -2888,7 +2806,7 @@ publicationAnnotations:
           you flipped over the top 3 cards of your library to reveal them, that’s a set.  Other sets simply
           exist naturally in the game, such as your Library, Graveyard, Exile, and Hand. Just to be as
           clear as possible, it is also directly spelled out that a single card may be a set.
-        zh: 有些牌可能在其结算过程中临时创造牌叠（例如真伪莫辨，征召军伍，甚至是你这回合抓的牌）。如果你拿着一张或几张牌，这些牌就构成一个牌叠。如果你翻开你牌库顶的三张牌来展示它们，这些牌就构成一个牌叠。另一些牌叠自然地存在于游戏中，例如你的牌库、坟墓场、放逐区、或手牌。为了特地澄清，这里还直接说明了即使只有一张牌也可能构成一个牌叠。
+        zh: "有些牌或规则可能在其结算过程中临时创造牌叠（例如真伪莫辨，征召军伍，甚至是你这回合抓的牌）。如果你拿着一张或几张牌，这些牌就构成一个牌叠。如果你翻开你牌库顶的三张牌来展示它们，这些牌就构成一个牌叠。另一些牌叠自然地存在于游戏中，例如你的牌库、坟墓场、放逐区、或手牌。为了特地澄清，这里还直接说明了即使只有一张牌也可能构成一个牌叠。"
       sourceRawUnits:
       - raw-L000639
       - raw-L000641

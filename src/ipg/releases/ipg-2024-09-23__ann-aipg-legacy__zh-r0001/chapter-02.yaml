@@ -457,13 +457,7 @@ sections:
             to demonstrate awareness of the ability. Similarly, a player demonstrating awareness of an
             optional trigger with no visible effect is assumed to have made the affirmative choice unless
             the opponent responds.
-          zh: '如果某个触发式异能不会对游戏造成影响，则就算牌手没有认识到此触发的存在，也不会算作违规。
-
-
-            举例来说，若某触发式异能的效应要求此异能的操控者牺牲一个生物，则未操控生物的牌手并不需要特别指出该触发的存在。
-
-
-            类似地，如果某牌手表明自己认识到无可见效应之非强制性触发的存在，则除非对手有回应，否则便应视为其已选择依可选项行事。'
+          zh: "如果某个触发式异能不会对游戏造成影响，则就算牌手没有表明自己认识到此触发的存在，也不会算作违规。\n\n举例来说，若某触发式异能的效应要求此异能的操控者牺牲一个生物，则未操控生物的牌手并不需要特别指出该触发的存在。\n\n类似地，如果某牌手表明自己认识到无可见效应之非强制性触发的存在，则除非对手有回应，否则便应视为其已选择依可选项行事。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 8
@@ -488,7 +482,7 @@ sections:
           text:
             en: If a triggered ability would have no impact on the game, it’s not an infraction to fail to demonstrate
               awareness of it.
-            zh: 如果某个触发式异能不会对游戏造成影响，则就算牌手没有认识到此触发的存在，也不会算作违规。
+            zh: "如果某个触发式异能不会对游戏造成影响，则就算牌手没有表明自己认识到此触发的存在，也不会算作违规。"
           legacyRawUnits:
           - raw-L000876
           - raw-L000878
@@ -650,13 +644,7 @@ sections:
             or resolution of the ability, the controller is still responsible for ensuring the opponents
             make the appropriate choices and take the appropriate actions. Opponents are not required
             to point out triggered abilities that they do not control, though they may do so if they wish.
-          zh: '触发式异能属于常见异能，且其机制较为隐蔽，因此不应在牌手忘记处理该类异能时即对其采取严厉的惩罚措施。
-
-
-            牌手应记得属于自己的触发式异能；蓄意忽略触发式异能的行为应视作“举止违背运动道德～作弊”（除非该异能如上文所述，对游戏没有任何影响）。
-
-
-            就算在异能宣告或结算的时候，需要对手进行相应选择，该异能的操控者也应对此负责，确保对手作出恰当的决定或执行了合适的动作。对手不需指出不由自己操控的遗漏触发，不过如果他们希望指出的话，也可以如此作。'
+          zh: "触发式异能属于常见异能，且其机制较为隐蔽，因此不应在牌手忘记处理该类异能时即对其采取严厉的惩罚措施。\n\n牌手应记得属于自己的触发式异能；蓄意忽略触发式异能的行为可能构成“举止违背运动道德～作弊”（除非该异能如上文所述，对游戏没有任何影响）。\n\n就算对手参与异能的宣告或结算，该异能的操控者仍有责任确保对手作出恰当的决定并执行合适的动作。对手不需指出不由自己操控的触发式异能，不过如果他们希望指出的话，也可以如此作。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 8
@@ -693,7 +681,7 @@ sections:
             en: Players are expected to remember their own triggered abilities; intentionally ignoring one may
               be Unsporting Conduct — Cheating (unless the ability would have no impact on the game as described
               above).
-            zh: 牌手应记得属于自己的触发式异能；蓄意忽略触发式异能的行为应视作“举止违背运动道德～作弊”（除非该异能如上文所述，对游戏没有任何影响）。
+            zh: "牌手应记得属于自己的触发式异能；蓄意忽略触发式异能的行为可能构成“举止违背运动道德～作弊”（除非该异能如上文所述，对游戏没有任何影响）。"
           legacyRawUnits:
           - raw-L000964
           - raw-L000966
@@ -706,7 +694,7 @@ sections:
               is still responsible for ensuring the opponents make the appropriate choices and take the appropriate
               actions. Opponents are not required to point out triggered abilities that they do not control, though
               they may do so if they wish.
-            zh: 就算在异能宣告或结算的时候，需要对手进行相应选择，该异能的操控者也应对此负责，确保对手作出恰当的决定或执行了合适的动作。对手不需指出不由自己操控的遗漏触发，不过如果他们希望指出的话，也可以如此作。
+            zh: "就算对手参与异能的宣告或结算，该异能的操控者仍有责任确保对手作出恰当的决定并执行合适的动作。对手不需指出不由自己操控的触发式异能，不过如果他们希望指出的话，也可以如此作。"
           legacyRawUnits:
           - raw-L000972
           - raw-L000974
@@ -995,16 +983,7 @@ sections:
             should have triggered. For example, if the ability instructs a player to sacrifice a creature,
             that player can't sacrifice a creature that wasn't on the battlefield when the ability should
             have triggered.
-          zh: '如果该触发式异能不属于前面段落所述之情况，则由对手选择是否要将该触发式异能加入堆叠。
-
-
-            如果要将异能加入堆叠，则将该异能插入堆叠中其原本应处的位置（若能如此作）或是堆叠底。
-
-
-            牌手在为该触发式异能作选择时，不得涉及于此异能原本应触发的时点尚不在相应区域当中的物件。
-
-
-            举例来说，如果该异能令牌手牺牲一个生物，则该牌手不得牺牲于此异能本应触发之时点尚不在战场上的生物。'
+          zh: "如果该触发式异能不属于前面段落所述之情况，则由对手选择是否要将该触发式异能加入堆叠。\n\n如果要将异能加入堆叠，则将该异能插入堆叠中其原本应处的位置（若能如此作）或是堆叠底。\n\n牌手在为该触发式异能作选择时，不得选择于此异能本应触发时不属于合法选择的物件。\n\n举例来说，如果该异能令牌手牺牲一个生物，则该牌手不得牺牲于此异能本应触发之时点尚不在战场上的生物。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 9
@@ -1053,7 +1032,7 @@ sections:
           text:
             en: No player may make choices for the triggered ability involving objects that would not have been
               legal choices when the ability should have triggered.
-            zh: 牌手在为该触发式异能作选择时，不得涉及于此异能原本应触发的时点尚不在相应区域当中的物件。
+            zh: "牌手在为该触发式异能作选择时，不得选择于此异能本应触发时不属于合法选择的物件。"
           legacyRawUnits:
           - raw-L001186
           - raw-L001188
@@ -1163,7 +1142,7 @@ sections:
         text:
           en: A player takes an action that may have enabled them to see the faces of cards that they
             were not entitled to see.
-          zh: 牌手采取之行动让他们看到了本不应能检视的牌。
+          zh: "牌手采取之行动可能让他们看到了本不应能检视的牌面。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 10
@@ -1319,13 +1298,7 @@ sections:
             cards they don’t want to draw; doing so may be Unsporting Conduct — Cheating. Players also
             are not allowed to use this penalty as a stalling mechanism. The library is already randomized,
             so shuffling in the revealed cards should not involve excessive effort.
-          zh: '牌手不应该利用此处罚来得到“免费洗牌”，或是企图将不想抓的牌洗到别处去；如此会被视为是“举止违背运动道德~作弊”。
-
-
-            牌手也不应该将此处罚当做拖延的手段。
-
-
-            由于牌库都已经充分随机化，所以将展示的牌洗回去并不会造成太大的影响。'
+          zh: "牌手不应该利用此处罚来得到“免费洗牌”，或是企图将不想抓的牌洗到别处去；如此可能构成“举止违背运动道德~作弊”。\n\n牌手也不得将此处罚当做拖延的手段。\n\n由于牌库都已经充分随机化，所以将展示的牌洗回去不应需要过多工夫。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 10
@@ -1350,7 +1323,7 @@ sections:
           text:
             en: Players should not use this penalty to get a “free shuffle” or to attempt to shuffle away cards
               they don’t want to draw; doing so may be Unsporting Conduct — Cheating.
-            zh: 牌手不应该利用此处罚来得到“免费洗牌”，或是企图将不想抓的牌洗到别处去；如此会被视为是“举止违背运动道德~作弊”。
+            zh: "牌手不应该利用此处罚来得到“免费洗牌”，或是企图将不想抓的牌洗到别处去；如此可能构成“举止违背运动道德~作弊”。"
           legacyRawUnits:
           - raw-L001404
           - raw-L001406
@@ -1360,7 +1333,7 @@ sections:
           - 242
           text:
             en: Players also are not allowed to use this penalty as a stalling mechanism.
-            zh: 牌手也不应该将此处罚当做拖延的手段。
+            zh: "牌手也不得将此处罚当做拖延的手段。"
           legacyRawUnits:
           - raw-L001412
           - raw-L001414
@@ -1371,7 +1344,7 @@ sections:
           text:
             en: The library is already randomized, so shuffling in the revealed cards should not involve excessive
               effort.
-            zh: 由于牌库都已经充分随机化，所以将展示的牌洗回去并不会造成太大的影响。
+            zh: "由于牌库都已经充分随机化，所以将展示的牌洗回去不应需要过多工夫。"
           legacyRawUnits:
           - raw-L001420
           - raw-L001422
@@ -1628,7 +1601,7 @@ sections:
           en: Though the game state cannot be reversed to the ‘correct’ state, this error can be mitigated
             by giving the opponent sufficient knowledge and ability to offset the error so that it is
             less likely to generate advantage.
-          zh: 虽然犯下此失误之后，没有办法将游戏状态倒回至“正确”的状态，但此类失误也有弥补之法，即是让对手充分获取信息，依其意愿来减轻失误造成的影响，从而使牌手较难从中渔利。
+          zh: "虽然犯下此失误之后，没有办法将游戏状态倒回至“正确”的状态，但此类失误也有弥补之法，即是让对手充分获取信息，并赋予其抵消失误影响的能力，从而使牌手较难从中渔利。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 11
@@ -1735,7 +1708,7 @@ sections:
             Collected Company, picks up three cards with one hand and then four cards with the other,
             the last drawn set of four cards should be used for the remedy, instead of the full set of
             seven cards..
-          zh: 修正失误时,应尽量从相关牌叠中牌张数量最少者入手。这可能意味着仅对叙述规定之牌叠中的某一部分适用修正。举例来说,如果某牌手在结算征召军伍/Collected Company时用一只手拿起了三张牌，再用另一只手拿起了四张牌，则应对后抓起的这四张牌进行修正，而不是对全部七张。
+          zh: "修正失误时，始终应对能够修正该失误的最小牌叠进行操作。这可能意味着仅对叙述规定之牌叠中的某一部分适用修正。举例来说,如果某牌手在结算征召军伍/Collected Company时用一只手拿起了三张牌，再用另一只手拿起了四张牌，则应对后抓起的这四张牌进行修正，而不是对全部七张。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 11
@@ -1761,7 +1734,7 @@ sections:
           en: In cases where the infraction was immediately followed by moving a card from the affected
             set to a known location, such as by discarding, putting cards on top of the library, or playing
             a land, a simple backup to the point just after the error may be performed.
-          zh: 如果属于违规发生后会立即将牌张从相关牌叠移至已知位置，例如弃牌、将牌置于牌库顶或是使用地，则可以简易倒回至错误刚发生的时点。
+          zh: "如果属于违规发生后立即将牌张从相关牌叠移至已知位置的情形，例如弃牌、将牌置于牌库顶或是使用地，则可以简易倒回至错误刚发生的时点。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 11
@@ -1881,7 +1854,7 @@ sections:
             unknown cards to their hand since casting the card found in violation, and has self-reported
             the error before an effect that would reveal it is played, the upgrade does not apply and
             they may swap the card for a card with the appropriate ability in hand.
-          zh: 升级：如果曾以变身或伪装异能施放之牌面朝下的牌张在游戏过程中发现实际上不具相关异能，则处罚为一盘负。如果牌手手上有一张或数张相应具变身或伪装异能的牌，自施放引致违规之牌张后未曾将其他之前未知的牌张加入手牌，且又是在某个效应会将其展示之前自行上报该失误，则不适用此升级，可将手上任一此类牌张与此引致违规之牌张交换。
+          zh: "升级：如果曾以变身或伪装异能施放之牌面朝下的牌张在游戏过程中发现牌上未印有相关异能，则处罚为一盘负。如果牌手手上有一张或数张具有同一种异能的牌，自施放引致违规之牌张后未曾将其他之前未知的牌张加入手牌，且又是在会将该牌展示的效应被使用之前自行上报该失误，则不适用此升级，可将手上任一此类牌张与此引致违规之牌张交换。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 12
@@ -1977,7 +1950,7 @@ sections:
         text:
           en: A player chooses to not take a mulligan then takes a mulligan after seeing their opponent
             choose to take a mulligan.
-          zh: 牌手先选择不进行再调度，后在看见对手再调度后也进行再调度。
+          zh: "牌手先选择不进行再调度，后在看见对手选择再调度后也进行再调度。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 12
@@ -2187,7 +2160,7 @@ sections:
             and both players are expected to be mindful of what is happening in the game. It is tempting
             to try and “fix” these errors, but it is important that they be handled consistently, regardless
             of their impact on the game.
-          zh: 虽然违反游戏规则通常是归咎于其中一位牌手，但此类情况通常是公开地发生，且双方牌手都应留意游戏中所发生的事情。处理者应尝试去“修复”这些失误，但很重要的是：不论这些失误对游戏有多少影响，处理方式都必须一致。
+          zh: "虽然违反游戏规则可以归咎于其中一位牌手，但此类情况通常是公开地发生，且双方牌手都应留意游戏中所发生的事情。处理者很容易想要尝试去“修复”这些失误，但很重要的是：不论这些失误对游戏有多少影响，处理方式都必须一致。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 13
@@ -2288,7 +2261,7 @@ sections:
         text:
           en: If a player failed to draw cards, discard cards, or return cards from their hand to another
             zone, that player does so.
-          zh: 如果某牌手未能抓牌、弃牌或忘记将牌从手上移至其他区域，则该牌手如此作。
+          zh: "如果某牌手未能抓牌、弃牌，或未将牌从手上移至其他区域，则该牌手如此作。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 13
@@ -2392,8 +2365,7 @@ sections:
             a Game Play Error — Game Rule Violation. For example, if a player casts Path to Exile on an
             opponent’s creature and the opponent puts the creature into the graveyard, once the game has
             continued both players will have committed a Game Rule Violation.
-          zh: 如果对手没能在预期其能注意到失误的合理时间点前指出游戏行动失误，则对手也犯下违规。大多数情况下是“游戏行动失误～未维护游戏状态”。然而如果裁判认为双方牌手在本次违反游戏规则的过程中均有责任，例如是由于对手操控的改变游戏规则的持续性效应导致的，或是某位牌手根据另一位牌手的指示执行行动，则对手也犯下了“游戏行动失误～违反游戏规则”违规。例如，如果牌手向对手的生物施放流放之径/Path
-            to Exile，且该对手将此生物放进坟墓场，一旦游戏继续进行则双方牌手均犯下“游戏行动失误～违反游戏规则”违规。
+          zh: "如果游戏已继续进行，超过可合理预期对手会注意到失误的时点，而对手仍未指出该失误，则对手也犯下违规。大多数情况下是“游戏行动失误～未维护游戏状态”。然而如果裁判认为双方牌手在本次违反游戏规则的过程中均有责任，例如是由于对手操控的改变游戏规则的持续性效应导致的，或是某位牌手根据另一位牌手的指示执行行动，则对手也犯下了“游戏行动失误～违反游戏规则”违规。例如，如果牌手向对手的生物施放流放之径，且该对手将此生物放进坟墓场，一旦游戏继续进行则双方牌手均犯下“游戏行动失误～违反游戏规则”违规。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 14
@@ -2547,10 +2519,7 @@ sections:
           en: If an error is caught before a player could gain advantage, then the dangers of the ongoing
             game state becoming corrupted are much lower. If the error is allowed to persist, at least
             some of the fault lies with the opponent, who has also failed to notice the error.
-          zh: '如果失误能在有牌手能够藉此获得优势之前发现，则对于接下来游戏状态的伤害就会减少许多。
-
-
-            如果失误持续下去，对手必然也有错，因为他也没有去注意到该失误。'
+          zh: "如果失误能在有牌手能够藉此获得优势之前发现，接下来游戏状态受到破坏的风险就会降低许多。\n\n如果失误持续下去，对手必然也有错，因为他也没有去注意到该失误。"
         officialPdfUnits:
         - pdfSha256: 056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0
           page: 14
@@ -2573,7 +2542,7 @@ sections:
           text:
             en: If an error is caught before a player could gain advantage, then the dangers of the ongoing game
               state becoming corrupted are much lower.
-            zh: 如果失误能在有牌手能够藉此获得优势之前发现，则对于接下来游戏状态的伤害就会减少许多。
+            zh: "如果失误能在有牌手能够藉此获得优势之前发现，接下来游戏状态受到破坏的风险就会降低许多。"
           legacyRawUnits:
           - raw-L001889
           - raw-L001891
@@ -2610,7 +2579,7 @@ publicationAnnotations:
           improperly could result in one of several different infractions, such as Looking at Extra Cards
           (e.g. forgetting that Courser of Kruphix left the battlefield) to Hidden Card Error (e.g. mis-reading
           Divination and drawing three cards).
-        zh: “违反游戏规则”不指代任何特定类型的错误。然而，违反游戏规则明确定义为所有不能归类为其他违规的错误。新裁判有时会讨论“错误地结算一个咒语”是否应当是违反游戏规则。事实上，不正确的结算咒语可能会导致另一些违规，像是额外看牌（如忘记了克罗芬斯的骏马已经离开战场）及非公开牌张失误（看错了卜卦的叙述而抓了3张牌）等。
+        zh: "“违反游戏规则”不指代任何特定类型的错误。然而，违反游戏规则明确定义为所有不能归类为其他违规的错误。新裁判有时会说，“错误地结算一个咒语”属于违反游戏规则。事实上，不正确的结算咒语可能会导致另一些违规，像是额外看牌（如忘记了克罗芬斯的骏马已经离开战场）及非公开牌张失误（看错了卜卦的叙述而抓了3张牌）等。"
       sourceRawUnits:
       - raw-L001717
       - raw-L001719
@@ -2656,7 +2625,7 @@ publicationAnnotations:
           to do a back up or leave alone. If the error fits more than one of these categories, it’s ok
           to partial fix, but be careful that the error only fits into those categories. If there are
           multiple fixes within the same bullet point, you’re still fine to use that partial fix.
-        zh: 以下是部分修正的列表。首先试着进行简易倒回（关于倒回，详见一节）；如果简易倒回不够，你可以试着执行部分修正。如果你既不能进行简易倒回、也不能执行部分修正，那么你可以考虑倒回或者保留当前状态不修正。如果失误属于一种类别以上，可以使用部分修正，但必须小心注意该失误只属于这些类别。如果在同一条目中满足了多个修正条件，你仍然可以使用这种部分修正。
+        zh: "以下是部分修正的列表。首先试着进行简易倒回（关于倒回，详见IPG 1.4。）；如果简易倒回不够，你可以试着执行部分修正。如果你既不能进行简易倒回、也不能执行部分修正，那么你可以考虑倒回或者保留当前状态不修正。如果失误属于一种类别以上，可以使用部分修正，但必须小心注意该失误只属于这些类别。如果在同一条目中满足了多个修正条件，你仍然可以使用这种部分修正。"
       sourceRawUnits:
       - raw-L001763
       - raw-L001765
@@ -2760,7 +2729,7 @@ publicationAnnotations:
           from the battlefield mid-combat tends to be disruptive. Same with things disappearing from the
           GY while certain spells are on the stack. Be sure to look at what decisions and actions are
           currently being made based on that card being where it is.'
-        zh: ——“移动此物件仅会对游戏当前状态造成轻微影响”：在战斗阶段中让东西从战场消失往往会造成严重的干扰。当堆叠上有特定咒语时，让东西从坟墓场消失也是如此。务必审视当前正在做出的决定和动作是否基于该牌当前所处的位置。
+        zh: "——“移动此物件仅会对游戏当前状态造成轻微影响”：在战斗阶段中让东西从战场消失往往会造成干扰。当堆叠上有特定咒语时，让东西从坟墓场消失也是如此。务必审视当前正在做出的决定和动作是否基于该牌当前所处的位置。"
       sourceRawUnits:
       - raw-L001797
       - raw-L001801
@@ -2822,7 +2791,7 @@ publicationAnnotations:
           players missed a Day/Night change in the game, it may make since to back up to the point of
           day/night transformation. However, if a full backup is ill advised, the day/night state will
           remain as it is.
-        zh: 所以，我们先试图执行简易倒回；如果简易倒回不能适用，再看看是否有任何一个部分修正能够适用，如果没有，我们可以选择是否倒回。关于如何确定倒回是否恰当的信息，请参阅IPG 1.4节。例如，如果牌手遗漏了游戏中的白昼/黑夜转换，那么倒回到转换发生的那个时间点可能是合理的。然而，如果不建议进行完全倒回，那么白昼/黑夜状态将保持现状。
+        zh: "所以，我们看看是否有任何一个部分修正能够适用；如果没有，可以选择倒回或不倒回。关于如何确定倒回是否恰当的信息，请参阅IPG 1.4节。例如，如果牌手遗漏了游戏中的白昼/黑夜变换，那么倒回到变换发生的那个时间点可能是合理的。然而，如果不建议进行完全倒回，那么白昼/黑夜状态将保持现状。"
       sourceRawUnits:
       - raw-L001823
       - raw-L001825
@@ -2910,7 +2879,7 @@ publicationAnnotations:
           play too fast, or don’t know the cards or the rules that apply to a complex situation well enough.
           These situations are not exceptional, which is why Game Play Errors are a common category of
           error.
-        zh: 这些失误是由于至少一位牌手在比赛中无意违反《万智牌完整规则》中的某一条而造成的。游戏行动失误发生的原因可能有很多：牌手累了，分心了，打得太快，不熟悉牌或不够了解某些复杂情况下的适用的规则等。不幸的是，这些情况非常容易发生，这就是为什么游戏行动失误这类失误十分常见。
+        zh: "这些失误是由于至少一位牌手在比赛中无意违反《万智牌完整规则》中的某一条而造成的。游戏行动失误发生的原因可能有很多：牌手累了，分心了，打得太快，不熟悉牌或不够了解某些复杂情况下的适用的规则等。这些情况并不罕见，这就是为什么游戏行动失误这类失误十分常见。"
       sourceRawUnits:
       - raw-L000659
       - raw-L000663
@@ -2933,7 +2902,7 @@ publicationAnnotations:
           learnable. If we list everything and handle all special cases, this document would be hundreds
           of pages long and unusable. Instead, we divide these errors into general categories, known as
           the 5 Game Play Errors defined by the IPG.
-        zh: 鉴于万智牌游戏的复杂性，将所有可能发生的错误之类型一一列举是不可能的。所以我们作为裁判，也不打算尝试去列举。我们希望这份文件是可以被理解和学习的。如果我们列举了所有东西、顾及了所有特殊情形，这份文件就可能有几百页长，无法使用。因此，我们将这些错误进行大致的分类，也就是IPG中定义的5种游戏行动失误。
+        zh: "鉴于万智牌游戏的复杂性，将所有可能发生的错误之类型一一列举是不可能的。所以我们作为裁判，也不打算尝试去列举。我们希望这份文件是可以被理解和学习的。如果我们列举了所有东西、顾及了所有特殊情形，这份文件就可能有几百页长，无法使用。因此，我们将这些错误进行大致的分类，也就是IPG中定义的5种游戏行动失误。（译注：IPG现在定义了不止5种，原文的更新遗漏了这一句。）"
       sourceRawUnits:
       - raw-L000669
       - raw-L000671
@@ -2975,7 +2944,7 @@ publicationAnnotations:
         en: 'Errors committed intentionally, of course, may fall into a different category altogether:
           Unsporting Conduct — Cheating. However, it’s important to notice that not all game errors are
           cheating. In fact, very few actually are.'
-        zh: 故意犯下的违规，显然属于另一种违规：举止违背运动道德～作弊。很重要的一点，是记住并非所有游戏错误都是作弊。事实上，只有极少部分才是作弊。
+        zh: "故意犯下的违规，当然可能属于另一种违规：举止违背运动道德～作弊。很重要的一点，是记住并非所有游戏错误都是作弊。事实上，只有极少部分才是作弊。"
       sourceRawUnits:
       - raw-L000685
       - raw-L000689
@@ -3007,7 +2976,7 @@ publicationAnnotations:
           we must never forget that they can lie or cheat to get an advantage. The experience and advice
           of more experienced judges can help to frame the situation correctly and to find out if a player
           was aware of committing an offense or not.
-        zh: 如同硬币的另一面，即使帮助牌手是裁判的任务，我们也决不能忘记他们可能会通过撒谎以及作弊来获取优势。来自经验更加丰富裁判的经验和建议有助于正确分析情形，并推断出牌手的违规是否明知故犯。
+        zh: "如同硬币的另一面，即使帮助牌手是裁判的任务，我们也决不能忘记他们可能会通过撒谎或作弊来获取优势。来自经验更加丰富裁判的经验和建议有助于正确分析情形，并推断出牌手的违规是否明知故犯。"
       sourceRawUnits:
       - raw-L000697
       - raw-L000699
@@ -3033,7 +3002,7 @@ publicationAnnotations:
           received 2 Hidden Card Errors that have been upgraded to Game Losses, and they commit a third
           Hidden Card Error that does not meet the upgrade criteria, that warning is not upgraded to a
           Game Loss.
-        zh: 我们希望牌手从错误中学到教训并在未来小心不再犯。如果一个牌手重复犯错，警告已经不足以加强教训，因此我们必须增加判罚的严厉程度到一盘负。当我们给予一个牌手游戏行动失误判罚时，一定要询问他们此前有没收到同种判罚。注意这是同一个问题的第三次警告，而不是第三次判罚。如果一个牌手已经两次因非公开牌张失误的升级判罚而获得过一盘负，之后犯下了第三次非公开牌张失误但并没有达到升级的标准，那么该警告不会被升级为一盘负。
+        zh: "我们希望牌手从错误中学到教训并在未来小心不再犯。如果一个牌手重复犯错，警告已经不足以加强教训，因此我们必须增加判罚的严厉程度到一盘负。当我们给予一个牌手游戏行动失误判罚时，一定要询问他们此前是否曾被判过同类违规。注意这是同一违规类别的第三次警告，而不是第三次违规。如果一个牌手已经两次因非公开牌张失误的升级判罚而获得过一盘负，之后犯下了第三次非公开牌张失误但并没有达到升级的标准，那么该警告不会被升级为一盘负。"
       sourceRawUnits:
       - raw-L000705
       - raw-L000709
@@ -3055,7 +3024,7 @@ publicationAnnotations:
           If a player tends to get Failure to Maintain Game State a lot, and the related error is always
           in their favor, this gives judges the ability to track these infractions — and when added to
           the larger infraction database, we can track across events too.'
-        zh: 对于未维护游戏状态这个判罚，很多牌手不理解为什么他们要吃到警告：“裁判，我没做错啥啊？”请花费一点时间跟牌手解释一下为什么他们会得到这个判罚，如果牌手仍然想要讨论这个问题，请让他们在对局结束后再讨论。虽然他们吃了警告，但与其他很多判罚不同，我们不会将这个判罚升级。这是因为我们不想让牌手对叫裁判产生恐惧感。因为对手犯下游戏错误却自己吃到一盘负是不合理的。假如未维护游戏状态要升级的话，我可能会在第三次对手犯错而我没能立刻发现的时候不愿意主动叫裁判，为了避免我的判罚被升级，我还不如假装自己没看到这个错误。这样做如同鼓励作弊，而我们并不想让方针鼓励作弊。从另一方面讲，如果我们不升级判罚，那为什么还要给这个判罚呢？有两个原因：一是警告判罚通常足以引起玩家的注意，让他们进行游戏时多加小心。二是我们可以追踪这些判罚。如果某牌手总是获得一大堆未维护游戏状态，而相关的错误又通常是对他有利的，这让裁判能追踪该牌手的行为。并且，把这些判罚加入判罚数据库之后，我们也可以在多场赛事中持续追踪牌手的行为。
+        zh: "对于未维护游戏状态这类违规，要做好有些牌手不理解自己为何得到警告的准备：“裁判，我没做错啥啊？”请花费一点时间跟牌手解释一下为什么他们会得到这个判罚，如果牌手仍然想要讨论这个问题，你可以在对局结束后继续讨论。虽然他们吃了警告，但与其他很多判罚不同，我们不会将这个判罚升级。这是因为我们不想让牌手对叫裁判产生恐惧感。自己因未能发现对手的游戏错误而被判一盘负，这并不合理。假如未维护游戏状态要升级的话，我可能会在第三次对手犯错而我没能立刻发现的时候不愿意主动叫裁判，为了避免我的判罚被升级，我还不如假装自己没看到这个错误。这样做如同鼓励作弊，而我们并不想让方针鼓励作弊。从另一方面讲，如果我们不升级判罚，那为什么还要给这个判罚呢？有两个原因：一是警告判罚通常足以引起玩家的注意，让他们进行游戏时多加小心。二是我们可以追踪这些判罚。如果某牌手总是获得一大堆未维护游戏状态，而相关的错误又总是对他有利的，这让裁判能追踪该牌手的行为。并且，把这些判罚加入判罚数据库之后，我们也可以在多场赛事中持续追踪牌手的行为。"
       sourceRawUnits:
       - raw-L000707
       - raw-L000711
@@ -3116,7 +3085,7 @@ publicationAnnotations:
         en: Generally speaking, the point at which a player needs to demonstrate awareness of a triggered
           ability is after it has triggered, but no later than when that ability would “first matter.”
           The finer details of when things “first matter” will be covered throughout this definition.
-        zh: 通常来说，牌手需要表明自己认识触发存在的时点是在其触发后、且在该触发式异能将要“第一次产生作用”之前。关于何为“第一次产生作用”，我们将在这一部分中进行详解。
+        zh: "通常来说，牌手需要表明自己认识触发存在的时点是在其触发后、且不晚于该触发式异能将要“第一次产生作用”的时点。关于何为“第一次产生作用”，我们将在这一部分中进行详解。"
       sourceRawUnits:
       - raw-L000735
       - raw-L000741
@@ -3202,7 +3171,7 @@ publicationAnnotations:
           action when the trigger would resolve (or prompt the opponent to do so). The player may also
           avoid missing the trigger by making it clear to the opponent what outcome will be taken when
           the trigger resolves.
-        zh: 这些是结算时第一次产生作用的触发式异能。其操控者必须记住在这些异能将要结算时做出选择或作出实际动作（或提示对手如此做），才能避免忘记这些异能。牌手也可以向对手清楚地表示该触发式异能结算会产生什么样的结果，来避免遗漏这个触发。说“触发”是不够的。你需要清楚地表明这个触发是什么。
+        zh: "这些是结算时第一次产生作用的触发式异能。其操控者必须记住在这些异能将要结算时做出选择或作出实际动作（或提示对手如此做），才能避免忘记这些异能。牌手也可以向对手清楚地表示该触发式异能结算会产生什么样的结果，来避免遗漏这个触发。"
       sourceRawUnits:
       - raw-L000771
       - raw-L000777
@@ -3244,7 +3213,7 @@ publicationAnnotations:
           have to go well out of their way to show that they’ve missed a trigger. For example, if a player
           casts a spell during upkeep, it is assumed that upkeep triggers are still on the stack, not
           missed.
-        zh: 在确定是否是此种情况时，牌手通常会得到很多疑点利益（即假定牌手是没有忘记的）——在这种情况下牌手要遗忘一个触发可是真心很不容易的。例如，如果牌手在维持施放一个咒语，我们会假定维持的触发仍在堆叠上，而非被遗忘。
+        zh: "在确定是否是此种情况时，牌手通常会得到很多疑点利益（即假定牌手是没有忘记的）——通常要有相当明确的行为，才足以表明牌手已遗漏触发。例如，如果牌手在维持施放一个咒语，我们会假定维持的触发仍在堆叠上，而非被遗忘。"
       sourceRawUnits:
       - raw-L000787
       - raw-L000789
@@ -3282,7 +3251,7 @@ publicationAnnotations:
       text:
         en: If an opponent hasn’t acknowledged the trigger then players are welcome to behave as if it
           was forgotten, but they must expect to be stopped by that opponent.
-        zh: 如果对手没有声明触发，牌手可以假设这个触发被遗忘了，但他们必须意识到自己的动作可能会被对手阻止。
+        zh: "如果对手没有声明触发，牌手可以按这个触发已被遗忘的情形行事，但他们必须意识到自己的动作可能会被对手阻止。"
       sourceRawUnits:
       - raw-L000799
       - raw-L000807
@@ -3298,7 +3267,7 @@ publicationAnnotations:
           forgotten trigger of this type may lock themself into a play they would otherwise not want to
           take.In the above example, if Alex prevents Nat from blocking with Mutavault alone, Nat wouldn’t
           get to undo the activation of Mutavault.
-        zh: 例如，循环了一张牌后，Alex使用狡黠遗民攻击Nat，但没有立即提到其触发式异能。我们允许Nat将他的易形地窖变成生物，并试图宣告单独阻挡。如果Alex在此时不表明这次阻挡非法，而继续采取其他动作、或进行下一个战斗步骤，Alex就遗忘了这个触发。如果牌手想要“赌”对手忘了异能，他们便需要冒着一些风险，诸如暴露其手牌内容或游戏意图。更糟的是，他们可能需要做出一些原本不想做的游戏动作。例如上面的例子中，如果Alex阻止了Nat用易形地窖单独阻挡，Nat将无法撤销将异形地窖变生物的操作。
+        zh: "例如，循环了一张牌后，Alex使用狡黠遗民攻击Nat，但没有立即提到其触发式异能。我们允许Nat将他的易形地窖变成生物，并试图宣告单独阻挡。如果Alex在此时不表明这次阻挡非法，而继续采取其他动作、或进行下一个战斗步骤，Alex就遗忘了这个触发。如果牌手想要“赌”对手忘了异能，他们便需要冒着一些风险，诸如暴露其手牌内容或游戏意图。更糟的是，他们可能需要做出一些原本不想做的游戏动作。例如上面的例子中，如果Alex阻止了Nat用易形地窖单独阻挡，Nat将无法撤销将易形地窖变生物的操作。"
       sourceRawUnits:
       - raw-L000801
       - raw-L000809
@@ -3324,7 +3293,7 @@ publicationAnnotations:
           not missed the Aether Flash trigger if they prompt Alex to put their creature into the graveyard
           at that time. In this case, Aether Flash’s trigger first matters at the point when Alex’s creature
           receives lethal damage.
-        zh: 这些触发式异能不会立即产生可见影响，但会在结算后的某个时间点第一次产生作用。例子包括使生物获得某些异能、给生物力量/防御力修正（而非被放上指示物或被目标）。但是，这些效应的结果可能接下来会导致游戏状态的可见变化。例如，Nat操控乙太闪光（每当一个生物进入战场时，乙太闪光对其造成2点伤害。）Alex施放了3/3的山丘巨人，两位牌手都没有提及触发。如果在该回合中，稍后Nat对Alex的生物又造成的1点伤害，若Nat提示Alex将该生物放进坟墓场，Nat便没有遗漏乙太闪光的触发。在这个例子中，乙太闪光的触发是异能第一次产生作用的时点便是Alex的生物获得致命伤害之时。
+        zh: "这些触发式异能不会立即产生可见影响，但会在结算后的某个时间点第一次产生作用。例子包括使生物获得某些异能、给生物力量/防御力修正（而非被放上指示物或被目标）。但是，这些效应的结果可能接下来会导致游戏状态的可见变化。例如，Nat操控乙太闪光（每当一个生物进入战场时，乙太闪光对其造成2点伤害。）Alex施放了3/3的山丘巨人，两位牌手都没有提及触发。如果在该回合中，稍后Nat对Alex的生物又造成了1点伤害，若Nat提示Alex将该生物放进坟墓场，Nat便没有遗漏乙太闪光的触发。在这个例子中，乙太闪光的触发第一次产生作用的时点便是Alex的生物获得致命伤害之时。"
       sourceRawUnits:
       - raw-L000815
       - raw-L000821
@@ -3405,7 +3374,7 @@ publicationAnnotations:
       text:
         en: Note that this does not apply in the rare case where a player plays a Saga and doesn’t put
           the first lore counter on it. That’s still a Game Rule Violation.
-        zh: 请注意：这不适用于牌手在结算一个传纪咒语进场时，忘记放置第一个学问指示物的罕见情况。那种情况依然属于违反游戏规则。
+        zh: "请注意：这不适用于牌手使用一个传纪，却没有在其上放置第一个学问指示物的罕见情况。那种情况依然属于违反游戏规则。"
       sourceRawUnits:
       - raw-L000846
       - raw-L000850
@@ -3454,7 +3423,7 @@ publicationAnnotations:
           the spell. However, if that player then forgets to put the additional Goblins onto the battlefield
           before moving on with their turn, the storm trigger would be considered missed. Again, this
           is a concession to the way players actually play Magic.
-        zh: 例如，即使净空繁殖地的操控者在施放咒语并让过优先权之前没有宣告其风暴异能，我们也不认为牌手遗漏了这个触发。但是，如果该牌手忘记将多产生的鬼怪放进战场就继续进行其他行动，我们便认为牌手遗漏了这个风暴触发。这也是我们对牌手游戏方式妥协的结果。
+        zh: "例如，即使净空繁殖地的操控者在施放咒语后、让过优先权之前没有宣告其风暴异能，我们也不认为牌手遗漏了这个触发。但是，如果该牌手忘记将多产生的鬼怪放进战场就继续进行其他行动，我们便认为牌手遗漏了这个风暴触发。这也是我们对牌手游戏方式妥协的结果。"
       sourceRawUnits:
       - raw-L000864
       - raw-L000866
@@ -3496,7 +3465,7 @@ publicationAnnotations:
           by the ability. For example, a tapped Desecration Demon should still have its triggered ability
           acknowledged and the opponent should be prompted for choice of a sacrifice even though Desecration
           Demon is already tapped.
-        zh: 此处指的是不会对游戏造成影响的触发，并不是指没有做出一个显而易见的选择。你不应考虑对手采取该异能允许对手所做的一些可选项的可能性。例如，对于一个已横置的渎圣恶魔，其操控者仍应表明它的触发式异能，并提示对手是否选择牺牲生物。
+        zh: "此处指的是不会对游戏造成影响的触发，并不是指显然不会作出某个选择。你不应考虑对手采取该异能允许对手所做的一些可选项的可能性。例如，对于一个已横置的渎圣恶魔，其操控者仍应表明它的触发式异能，并提示对手是否选择牺牲生物。"
       sourceRawUnits:
       - raw-L000880
       - raw-L000882
@@ -3761,7 +3730,7 @@ publicationAnnotations:
       text:
         en: One of the many skills tested in Magic is the ability of players to remember their own triggered
           abilities. Players should not be punished for the inabilities or poor memories of their opponents.
-        zh: 万智牌游戏考验牌手的很多技能之一便是记住自己的触发式异能。牌手不应因没有记住对手的触发式异能而受到惩罚。
+        zh: "万智牌游戏考验牌手的很多技能之一便是记住自己的触发式异能。牌手不应因对手的能力不足或记性不好而受到惩罚。"
       sourceRawUnits:
       - raw-L000978
       - raw-L000984
@@ -3840,7 +3809,7 @@ publicationAnnotations:
           Game Play Error — Failure to Maintain Game State, etc., for either accidentally or intentionally
           not calling attention to an opponent’s missed trigger. Players do not have to help their opponents
           beat them; however, they cannot trick their opponents into missing triggers.
-        zh: 重复刚才的一段注解，牌手永远没有责任记住对手的触发。我们允许牌手在对手的触发被遗漏时保持沉默。无论是举止违背运动道德～作弊、还是游戏行动失误～未维护游戏状态，还是什么其他判罚也好，牌手永远不应该因为无意或故意地不注意对手的遗漏触发而吃到这些判罚。牌手没有理由帮助对手击败自己；但牌手不允许诱导对手遗漏触发。
+        zh: "重复刚才的一段注解，牌手永远没有责任记住对手的触发。我们允许牌手在对手的触发被遗漏时保持沉默，即使该异能会对其操控者产生不利影响。无论是举止违背运动道德～作弊、还是游戏行动失误～未维护游戏状态，还是什么其他判罚也好，牌手永远不应该因为无意或故意地没有指出对手的遗漏触发而吃到这些判罚。牌手没有理由帮助对手击败自己；但牌手不允许诱导对手遗漏触发。"
       sourceRawUnits:
       - raw-L001008
       - raw-L001010
@@ -3966,7 +3935,7 @@ publicationAnnotations:
       text:
         en: The missed trigger policy was written to address the way that players already play the game
           and not the other way around.
-        zh: 遗漏触发的方针是为了适应解决牌手实际打牌的方式而写的，而非严格按照CR。
+        zh: "遗漏触发的方针是为了适应牌手实际打牌的方式而写的，而不是反过来要求牌手改变打牌方式以适应方针。"
       sourceRawUnits:
       - raw-L001048
       - raw-L001056
@@ -4039,7 +4008,7 @@ publicationAnnotations:
         en: All actions taken must be legal if they were executed in the correct order, and any opponent
           can ask the player to do the actions in the correct sequence so that they can respond at the
           appropriate time (at which point players will not be held to any still-pending actions).
-        zh: 所有动作在其以正确顺序执行的情况下必须都是合法的，并且任何对手都可以在任何时候要求牌手以正确顺序执行动作，以便他可以在合适的时间响应（此时不要求牌手继续执行先前尚待执行的动作）。
+        zh: "所有动作在其以正确顺序执行的情况下必须都是合法的，并且任何对手都可以要求牌手以正确顺序执行动作，以便他可以在合适的时间响应（此时不要求牌手继续执行先前尚待执行的动作）。"
       sourceRawUnits:
       - raw-L001076
       - raw-L001090
@@ -4048,7 +4017,7 @@ publicationAnnotations:
       text:
         en: An out-of-order sequence must not result in a player prematurely gaining information which
           could reasonably affect decisions made later in that sequence.
-        zh: 次序不当的行事顺序不能导致牌手提前获得可能影响后续行动决定的信息。
+        zh: "次序不当的行事顺序不得导致牌手提前获得有合理可能影响其在该系列行动中后续决定的信息。"
       sourceRawUnits:
       - raw-L001078
       - raw-L001092
@@ -4058,7 +4027,7 @@ publicationAnnotations:
         en: This means that, in certain situations, players may acknowledge a trigger as part of a block
           of actions, some of which may technically be later than the point at which the trigger would
           first matter, without the trigger being missed.
-        zh: 这意味着在一些情况下，牌手可以在一系列行动之后表达某个触发，且这系列行动中的一部分严格来说本应在触发第一次产生影响之后才会发生，而不会被视为遗漏触发。
+        zh: "这意味着在一些情况下，牌手可以作为一系列行动的一部分，表达某个触发，且这系列行动中的一部分严格来说本应在触发第一次产生影响之后才会发生，而不会被视为遗漏触发。"
       sourceRawUnits:
       - raw-L001080
       - raw-L001094
@@ -4340,7 +4309,7 @@ publicationAnnotations:
           on placing missed triggers on the stack, it’s unlikely that many permanents have moved around
           in the interim. For this reason, remembering which objects were in which zones shouldn’t be
           too taxing to either player’s memory.
-        zh: 在将遗漏的触发放进堆叠时，牌手只能做出如果该堆叠没有遗漏的情况下可以做出的选择。因为将异能放回堆叠只有一回合的时效，通常不太可能在这段时间内有很多永久物改变区域。因此，记住哪个物件在哪个区域应该不会耗费双方牌手过多的记忆。
+        zh: "在将遗漏的触发放进堆叠时，牌手只能做出如果该触发没有被遗漏的情况下可以做出的选择。因为将异能放回堆叠只有一回合的时效，通常不太可能在这段时间内有很多永久物改变区域。因此，记住哪个物件在哪个区域应该不会耗费双方牌手过多的记忆。"
       sourceRawUnits:
       - raw-L001190
       - raw-L001192
@@ -4440,9 +4409,7 @@ publicationAnnotations:
           Zenith for X=0 tutoring up a Dryad Arbor immediately after fetching for a green source to cast
           it. Before Austin takes their next action, Nevil says, “Hey, X=0 means the spell should have
           been countered by your Chalice on 1.” then calls a judge.
-        zh: 只要你对所有这些问题的回答都是“是”，那么执行倒回就是合理的。当然，不进行倒回仍然是一个选项，这就是为什么当你让牌手选择是否将触发放入堆叠时，如果你同时也提供简易倒回作为方案，你应该告知他们。让我们看一个例子：Artemis在施放
-          X=0 的绿阳当空时遗漏了他操控的虚空圣杯的触发。为了施放它，他先掰找地地找了一个绿色法术力源，然后结算绿阳当空找出了树灵乔木。在Artemis采取下一个行动之前，Nevil说：“嘿，X=0
-          意味着这咒语应该被你的一豆圣杯反击才对。”然后叫了裁判。
+        zh: "只要你对所有这些问题的回答都是“是”，那么执行倒回可能是合理的。当然，不进行倒回仍然是一个选项，这就是为什么当你让牌手选择是否将触发放入堆叠时，如果你同时也提供简易倒回作为方案，你应该告知他们。让我们看一个例子：Artemis在施放 X=0 的绿阳当空时遗漏了他操控的虚空圣杯的触发。为了施放它，他先掰找地地找了一个绿色法术力源，然后结算绿阳当空找出了树灵乔木。在Artemis采取下一个行动之前，Nevil说：“嘿，X=0 意味着这咒语应该被你的一豆圣杯反击才对。”然后叫了裁判。"
       sourceRawUnits:
       - raw-L001215
       - raw-L001217
@@ -4520,7 +4487,7 @@ publicationAnnotations:
           #2. A missed Dictate of Kruphix trigger ends up with the same outcome as a recognized trigger
           even if you are giving a warning–the player who didn’t get to draw a card at the correct time
           draws one now.'
-        zh: '同样，大多数触发式异能不需要这种回溯，因为它们不符合问题 #2。遗漏克罗芬斯的旨意触发的结果与被未被遗漏的触发结果相同，即使你发出了警告——原本没能在正确时间抓牌的牌手现在抓一张即可。'
+        zh: "同样，大多数触发式异能不需要这种回溯，因为它们不符合问题 #2。遗漏克罗芬斯的旨意触发的结果与未被遗漏的触发结果相同，即使你发出了警告——原本没能在正确时间抓牌的牌手现在抓一张即可。"
       sourceRawUnits:
       - raw-L001228
       - raw-L001256
@@ -4577,7 +4544,7 @@ publicationAnnotations:
           determine whether or not a trigger is detrimental. Toby Elliott once said (on his blog) that
           one guideline for making this determination is to ask yourself: “If the trigger didn’t exist,
           would the card be played?” If the answer is no, then the ability is probably not detrimental.'
-        zh: 进一步说明，你可以在不涉及任何具体游戏信息的情况下考虑这张牌，来判断一个异能是否是“通常认为对其操控牌手不利”。Toby Elliott曾（在其[博客](http://blogs.magicjudges.org/telliott/2012/09/17/missed-triggers-2/)上）说明了如何进行这种判断：“如果这个触发不存在，这张牌会变更好还是变更差？”问问自己这个问题，如果答案是“变更差”，那这个异能一般不是不利的异能。
+        zh: "进一步说明，你应当在不涉及任何具体游戏信息的情况下考虑这张牌，来判断一个异能是否是“通常认为对其操控牌手不利”。Toby Elliott曾（在其[博客](http://blogs.magicjudges.org/telliott/2012/09/17/missed-triggers-2/)上）说明了如何进行这种判断：“如果这个触发不存在，这张牌还会有人使用吗？”问问自己这个问题，如果答案是否定的，那这个异能可能不是不利的异能。"
       sourceRawUnits:
       - raw-L001268
       - raw-L001278
@@ -4587,7 +4554,7 @@ publicationAnnotations:
         en: In theory, all triggered abilities in Magic could be classified as either detrimental or non-detrimental
           — in fact, a small group of judges are endeavoring to accomplish this very thing with the Missed
           Trigger Guides project.
-        zh: 理论上，万智牌中所有的触发式异能都可以分成有利或不利的。有一群裁判致力于这件事情，你可以在这里查看他们的成果：http://wiki.magicjudges.org/en/w/Missed_Trigger_Guides|遗漏触发指南
+        zh: "理论上，万智牌中所有的触发式异能都可以分成非不利或不利的。有一群裁判致力于这件事情，你可以在这里查看他们的成果：https://blogs.magicjudges.org/rules/mtg/"
       sourceRawUnits:
       - raw-L001270
       - raw-L001280
@@ -4640,7 +4607,7 @@ publicationAnnotations:
           What exactly is a symmetrical ability? Symmetrical abilities are triggered abilities that meet
           two conditions. They: 1. are likely to trigger multiple times per game, triggering for different
           players 2. have the same effect on both players.'
-        zh: 但是，我们可以根据所影响的牌手来判断对等触发的异能是否是通常不利的。什么是对等触发？对等触发需要满足两个条件：1. 每盘游戏会触发多次，并对不同的牌手都会触发；2. 对于每位牌手会产生同样的效应。
+        zh: "但是，我们可以根据所影响的牌手来判断对等触发的异能是否是通常不利的。什么是对等触发？对等触发需要满足两个条件：1. 每盘游戏中可能触发多次，并为不同的牌手触发；2. 对于每位牌手会产生同样的效应。"
       sourceRawUnits:
       - raw-L001292
       - raw-L001300
@@ -4683,7 +4650,7 @@ publicationAnnotations:
           that a card will be dropped, or flipped over; or when drawing a card, two cards may get stuck
           or picked up together. Additionally mistakes aren’t limited to cards seen from the deck. Sideboard
           cards and facedown cards can count as well.
-        zh: 这种违规是相当容易犯的。当你接触牌库时，你有可能会碰掉一张牌，或者翻开一张牌；又或者在你抓牌时抓了一张或两张并看到了下一张的牌面。此外，这类错误并不仅限于看到牌库里的牌。备牌和面朝下的牌也算在内。
+        zh: "这种违规是相当容易犯的。当你接触牌库时，你有可能会碰掉一张牌，或者翻开一张牌；又或者在你抓牌时，两张牌可能粘在一起或被一同拿起。此外，这类错误并不仅限于看到牌库里的牌。备牌和面朝下的牌也算在内。"
       sourceRawUnits:
       - raw-L001316
       - raw-L001338
@@ -4789,7 +4756,7 @@ publicationAnnotations:
           Cards. There are two reasons for this: 1) If a player could drop a card and get their opponent
           a Warning, they are going to messy-shuffle their way into a top 8. 2) MTR 3.13 allows players
           to reveal hidden information to their opponent that they are entitled to know.'
-        zh: 观察到你对手掉落或者翻开的牌面同样也不是额外看牌。原因有两点：1）如果牌手可以掉落一张牌而使对手获得警告，他就可以胡乱洗牌将自己送入8强。2）MTR3.13允许牌手展示自己知悉的隐藏信息给对手知道。
+        zh: "观察到你对手掉落或者翻开的牌面同样也不是额外看牌。原因有两点：1）如果牌手可以掉落一张牌而使对手获得警告，他就可以胡乱洗牌将自己送入8强。2）MTR3.13允许牌手展示自己有权知悉的隐藏信息给对手知道。"
       sourceRawUnits:
       - raw-L001334
       - raw-L001356
@@ -5247,7 +5214,7 @@ publicationAnnotations:
           for UU, and then the player draws a card when the enters the battlefield trigger resolves. Once
           that card is drawn, that information is lost, but the original problem was the casting of the
           spell incorrectly and visible to both players.
-        zh: 寻找根本原因。即使现在信息已经泄露，也并不意味着问题的原因是由信息的泄露造成的。另一个例子是使用UU施放了妖精幻视师，然后牌手因其进战场触发抓了一张牌。一旦这张牌抓起来了，信息便泄露了，但造成问题的原因是不正确地施放了咒语，而这个原因是双方牌手都可见的。
+        zh: "寻找根本原因。即使现在信息已经丢失，也并不意味着问题的原因是由信息的丢失造成的。另一个例子是使用UU施放了妖精幻视师，然后牌手因其进战场触发抓了一张牌。一旦这张牌抓起来了，信息便丢失了，但造成问题的原因是不正确地施放了咒语，而这个原因是双方牌手都可见的。"
       sourceRawUnits:
       - raw-L001560
       - raw-L001562
@@ -5295,7 +5262,7 @@ publicationAnnotations:
           versus seven) without advantage gained or lost unduly. Be sure to gain a full understanding
           of the actions taken with the cards in question before determining if a smaller set will be
           appropriate (ensure sets didn’t touch or mingle).
-        zh: 这一部分再次强调了我们应该使用常识判断力来尽量恢复游戏状态，减少对游戏的干扰。在上述的例子中，牌手在结算时应该检视六张牌却检视了七张。但是，由于牌手执行该指示使用了这样的动作，我们可以明确前三张牌是正确的、且与其他四张牌保持了清晰的距离。因此我们可以对一个较小的牌叠执行修正，又不会有牌手因此获得或失去利益。请确保你在决定是否对较小的牌叠执行修正前，完全理解牌手使用的动作（保证牌叠之间没有接触或混淆）。
+        zh: "这一部分再次强调了我们应该使用常识判断力来尽量恢复游戏状态，减少对游戏的干扰。在上述的例子中，牌手在结算时应该检视六张牌却检视了七张。但是，由于牌手执行该指示使用了这样的动作，我们可以明确前三张牌是正确的、且与其他四张牌保持了清晰的距离。因此我们可以对一个较小的牌叠执行修正，又不会有牌手因此不当地获得或失去优势。请确保你在决定是否对较小的牌叠执行修正前，完全理解牌手使用的动作（保证牌叠之间没有接触或混淆）。"
       sourceRawUnits:
       - raw-L001576
       - raw-L001578
@@ -5351,7 +5318,7 @@ publicationAnnotations:
         en: If, during a series of game actions, the affected set of cards has been lost by shuffling
           them away, and the set cannot reasonably be reconstructed, then there is no set left to which
           we can apply the remedy. The infraction still exists in this case, and a penalty issued.
-        zh: 如果，在一系列的游戏动作之中，受影响的牌叠已经被洗走而不存在，那么这个牌叠便无法还原，因此便不再存在可以应用修正的牌叠。尽管如此，违规仍然存在，我们仍然要给予判罚。
+        zh: "如果，在一系列的游戏动作之中，受影响的牌叠已经被洗散，且无法合理重建，那么便不再存在可以应用修正的牌叠。尽管如此，违规仍然存在，我们仍然要给予判罚。"
       sourceRawUnits:
       - raw-L001598
       - raw-L001600
@@ -5375,7 +5342,7 @@ publicationAnnotations:
           one route to advantage here is the ability to discard the card just drawn, we allow the opponent
           to identify the card “to be drawn,” and set it aside before applying the remedy. Then, once
           the remedy has been applied, we return the card to the hand/set, and continue from there.'
-        zh: 这句话是告诉你如何解决诸如应当“掠夺”时却执行了“翻拣”这种复杂的问题。如果一张牌指示牌手“弃一张牌：抓一张牌”，但牌手结算的是“抓一张牌，然后弃一张牌”，我们就应该使用这种修正方式，因为手牌中现在包含了一张不应在其中的牌，但我们仍然要弃一张牌。因为如果让牌手现在弃掉刚抓的牌可能就会带来优势，我们现在让对手来确认哪张牌是“应当抓起来的”，然后在执行修正之前将其放在一旁。等修正完成之后，我们将这张牌放回原来的手牌/牌叠，然后从此继续。
+        zh: "这句话是告诉你如何解决诸如应当“翻拣”时却执行了“掠夺”这种复杂的问题。如果一张牌指示牌手“弃一张牌：抓一张牌”，但牌手结算的是“抓一张牌，然后弃一张牌”，我们就应该使用这种修正方式，因为手牌中现在包含了一张不应在其中的牌，但我们仍然要弃一张牌。因为如果让牌手现在弃掉刚抓的牌可能就会带来优势，我们现在让对手来确认哪张牌是“应当抓起来的”，然后在执行修正之前将其放在一旁。等修正完成之后，我们将这张牌放回原来的手牌/牌叠，然后从此继续。"
       sourceRawUnits:
       - raw-L001606
       - raw-L001608
@@ -5610,7 +5577,7 @@ publicationAnnotations:
           error right away, they do not earn this infraction. For example, if Abe casts Wrath of God for
           RRRW and Ned notices before any further actions are taken, Ned will not receive Failure to Maintain
           Game State.
-        zh: 这句话实际上包含几方面内容。首先就是违反游戏规则的牌手永远不会获得未维护游戏状态处罚。唯一可能获得未维护游戏状态处罚的是他的对手。牌手在未发现其对手违反规则时获得未维护游戏状态。另外请注意，如果牌手立刻指出了对手的错误则不会获得此违规。例如，如果Abe支付RRRW施放神之愤怒，Ned没有进行任何其他动作就立刻注意到了这点，那么Ned不会获得未维护游戏状态。
+        zh: "这句话实际上包含几方面内容。首先就是犯下游戏行动失误的牌手永远不会获得未维护游戏状态处罚。唯一可能获得未维护游戏状态处罚的是他的对手。牌手在未发现其对手违反规则时获得未维护游戏状态。另外请注意，如果牌手立刻指出了对手的错误则不会获得此违规。例如，如果Abe支付RRRW施放神之愤怒，Ned在任何进一步动作发生之前就注意到了这点，那么Ned不会获得未维护游戏状态。"
       sourceRawUnits:
       - raw-L001853
       - raw-L001855
@@ -5719,7 +5686,7 @@ publicationAnnotations:
           one player controls the effect, and the other player takes the action, but did so in a way that
           caused an error. In this case, please refer to the Game Rule Violation section, as there are
           some cases where both players have committed the same infraction.
-        zh: 这里的关键点在于，双方牌手都要为游戏状态负责。如果对手足够敏锐，他可以在错误变的更严重前发现它。谁从中获得优势并不重要。请注意在某些情况下一个牌手操控效应，而另一个牌手采取行动，却以错误的方式采取了这些行动。在这种情况下，请参阅违反游戏规则部分，其中某些例子是双方牌手同时犯下违规。
+        zh: "这里的关键点在于，双方牌手都要为游戏状态负责。如果对手足够敏锐，他可以在错误变得更严重前发现它。谁从中获得优势并不重要。请注意在某些情况下一个牌手操控效应，而另一个牌手采取行动，却以错误的方式采取了这些行动。在这种情况下，请参阅违反游戏规则部分，其中某些情形下，双方牌手均犯下同一种违规。"
       sourceRawUnits:
       - raw-L001901
       - raw-L001903

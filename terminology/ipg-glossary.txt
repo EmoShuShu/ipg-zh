@@ -1,5 +1,41 @@
-Game Rule Violation	违反游戏规则	IPG infraction name
-Warning	警告	Penalty name
-No Penalty	无	Penalty display value
-Comprehensive Rules	《万智牌完整规则》	Rules document name
-
+General Philosophy	一般原则	第一章大标题
+policy	方针	很容易误译成“政策”。采取变通翻译时需谨慎
+infraction	违规
+penalty	处罚	按理说要么译成“处罚”，要么“判罚”，奈何旧译本经常混用两者，自己看着办吧。两者在文件中分别有140多处和180多处，暂时不进行如此大规模的一致性修订。但是至少同一段里面注意一下统一
+warning	警告
+round	轮
+tournament official	比赛工作人员
+Definition of Penalties	各式处罚之定义	第一章小标题
+Applying Penalties	应用处罚	第一章小标题
+Randomizing a Library	随机化牌库	第一章小标题
+Backing Up	倒回	第一章小标题
+backup	倒回
+Set	牌叠	注意这个词也有一般概念，不一定是术语
+ruling	裁定
+spectator	旁观者
+Game Play Error	游戏行动失误
+Missed Trigger	遗漏触发
+partial fix	部分修正
+Failure to Maintain Game State	未维护游戏状态
+Hidden Card Error	非公开牌张失误
+Looking at Extra Cards	额外看牌
+Mulligan Procedure Error	再调度失误
+Failure to Maintain Game State	未维护游戏状态
+Tournament Error	比赛失误
+Tardiness	迟到
+Outside Assistance	外来协助
+Slow Play	游戏进行过慢
+Decklist Problem	套牌登记表问题
+Deck Problem	套牌问题
+Limited Procedure Violation	违反限制赛流程
+Communication Policy Violation	违反交流原则
+Marked Cards	有记号的牌
+Insufficient Shuffling	未充分洗牌
+Unsporting Conduct — Minor	举止违背运动道德～轻微
+Unsporting Conduct — Major	举止违背运动道德～严重
+Improperly Determining a Winner	不当决定胜方
+Bribery and Wagering	贿赂与赌博
+Aggressive Behavior	攻击性举止
+Theft of Tournament Material	窃取比赛用品
+Stalling	拖延
+Cheating	作弊
