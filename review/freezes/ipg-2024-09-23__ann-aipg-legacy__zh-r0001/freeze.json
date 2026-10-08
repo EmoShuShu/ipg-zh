@@ -1,0 +1,131 @@
+{
+  "frozenAt": "2026-10-08T20:41:41+08:00",
+  "hashSemantics": "workingFileHashes preserve original local bytes; Git may normalize source line endings. outputs use LF enforced by .gitattributes. Source archive replay checks semantic inputs and final bytes.",
+  "kind": "local-reviewed-freeze",
+  "localArchives": {
+    "outputs/local-freeze/ipg-2024-09-23__ann-aipg-legacy__zh-r0001/omegat-project.zip": {
+      "bytes": 3125863,
+      "sha256": "9e03d3e0e72e3e24850548728c16763b1ec24d2f85d86d20f491c1263a856c86"
+    },
+    "outputs/local-freeze/ipg-2024-09-23__ann-aipg-legacy__zh-r0001/source-commit.zip": {
+      "bytes": 1596881,
+      "sha256": "288efa7602a89a7139b7ae02b82b08c1b2053fd6d506f9abb5e3275e72971ee0"
+    }
+  },
+  "localTag": "local-freeze/ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+  "officialSnapshot": {
+    "contextHash": "6b79367a4cd43815e4f0cee4b165f3554fe29c131e75438f59aaf99dfa143566",
+    "manifestSha256": "413a7e6a38aaa4f1150bce63ea46a976bf180ff0d0c29f9c2fbe472814201e7f",
+    "notALiveOfficialUpdateCheck": true,
+    "offline": true,
+    "path": "outputs/official-update/snapshots/official/2024-09-23/056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0/imports/acce82ca7224d5d741609807a2d95697337e56110354efec370938dea51b75fb/zh-r0001/6b79367a4cd43815e4f0cee4b165f3554fe29c131e75438f59aaf99dfa143566"
+  },
+  "outputSchema": "ipg-output-v1",
+  "outputs": {
+    "dist/IPG.md": {
+      "bytes": 532036,
+      "sha256": "2ad3f897dd4f9d5ac9dd85d5b2a9fc7efcad58cacfd01b2a238a951fc843371f"
+    },
+    "dist/rules.json": {
+      "bytes": 1299108,
+      "sha256": "1a0d1cd4bdf8660339e2fd57f201e68ffa764fc3c12e0bd238e3c7645c4749bf"
+    }
+  },
+  "publicReleaseCreated": false,
+  "publishable": false,
+  "recordVersion": 1,
+  "releaseId": "ipg-2024-09-23__ann-aipg-legacy__zh-r0001",
+  "reproducibility": {
+    "doubleBuildByteIdentical": true,
+    "existingDistUnmodified": true,
+    "independentOutputSchemaValid": true,
+    "sourceCommitArchiveBuildMatchesDist": true
+  },
+  "review": {
+    "reviewed-modified": 273,
+    "reviewed-unchanged": 734
+  },
+  "scope": {
+    "officialContent": {
+      "included": [
+        "full-official-ipg-2024-09-23"
+      ],
+      "mode": "full-document"
+    },
+    "publicationAnnotations": {
+      "deferredGroups": 0,
+      "deferredRawUnits": 0,
+      "includedSections": [
+        "full-document"
+      ],
+      "mode": "full-document"
+    }
+  },
+  "sourceCommit": "d0b79f3150442b3529a901d762f0ebd5a5e4259f",
+  "tests": {
+    "command": ".venv/Scripts/python.exe -m pytest",
+    "failed": 0,
+    "passed": 344,
+    "seconds": 320.73
+  },
+  "translationNotes": {
+    "count": 252,
+    "stale": 0
+  },
+  "validation": {
+    "advisoryFindingCounts": {
+      "annotation-license-pending": 1,
+      "manifest-not-publishable": 1
+    },
+    "releaseGateCounts": {
+      "duplicateConsumption": 0,
+      "missingTranslation": 0,
+      "orphanPublicationAnnotation": 0,
+      "orphanReviewRecord": 0,
+      "reviewLedgerMissing": 0,
+      "stale": 0,
+      "unresolvedMapping": 0,
+      "unreviewed": 0
+    },
+    "valid": true
+  },
+  "validationProfile": "release",
+  "versions": {
+    "annotations": {
+      "attribution": "pending-before-formal-release",
+      "licenseStatus": "pending-before-formal-release",
+      "sourceId": "AIPG_2025.md",
+      "sourceSha256": "acce82ca7224d5d741609807a2d95697337e56110354efec370938dea51b75fb",
+      "version": "aipg-legacy-full"
+    },
+    "official": {
+      "downloadedAt": "2026-10-04T11:08:31.068Z",
+      "effectiveDate": "2024-09-23",
+      "pdfSha256": "056b1687bae4a6c5d7bc4fe4e15d66613e725197cc2a45e18084c2eaf1b5aae0",
+      "url": "https://media.wizards.com/ContentResources/WPN/MTG_IPG_2024Sep23_EN.pdf"
+    },
+    "translation": {
+      "locale": "zh-CN",
+      "revision": "zh-r0001"
+    }
+  },
+  "workingFileHashes": {
+    "review/actions/zh-r0001.yaml": "2c8a34649d0f7548f113c54ba8ed7a94287b06284048f449818ee826d8609ae3",
+    "review/status/zh-r0001.json": "64eb408656ff789942745fa1e12bc7ae851f180137198c1bab3b8b23e8463847",
+    "review/translation-notes/zh-r0001.json": "8cdaeca0c2d58963bdb86b275a6e2bd355639903adfdd954772f28d90952a324",
+    "src/ipg/current-release.txt": "70fae1f90e56aa64728b240820da7cf0721b27804c887e2bc028bb9ff0237205",
+    "src/ipg/display-values.yaml": "f5b1d8862e9577f4f65dd31f6498b908395e503e77340182aa34d779518ab60f",
+    "src/ipg/id-registry.yaml": "a40221553c2f40f80170e819e90812eb6d0e4496108fce0cdbb6c5c5d4b4f350",
+    "src/ipg/mapping-overrides.yaml": "56658eab7448d6949fd49f21e6de060587b630a78eabebf156da3ec713fd9c9e",
+    "src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001/appendix-a.yaml": "ad1415e5539246b89fe9ef0097f0e562a4a6926ef3b20b3593070f7c7e3d534c",
+    "src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001/appendix-b.yaml": "2ba1a9675244681bce50cff40cfed905f96602feb33a2da720aacfdd636726db",
+    "src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001/chapter-01.yaml": "81364e160a43c29949394c3c455fbacb50ca3042744c40f2f544d29a1ec9f03a",
+    "src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001/chapter-02.yaml": "1fe3f4b17aa9b31f0d921564dd5a84de0c923eec2db4b54c91dec8ce94fb5cc4",
+    "src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001/chapter-03.yaml": "64e1d08c6fd65a660c08eebab43e3c90bd3e254ada66b3620c960a4b1fbd082c",
+    "src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001/chapter-04.yaml": "1b6255f2c0712d2f16f348a9ac600fb7cbe968717d74f6ba2ed5ad0c922da76e",
+    "src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001/front-matter.yaml": "bc107958d3ecee452a2dc057c4672349b17f9f4aeab90f383b969eef70d9e60f",
+    "src/ipg/releases/ipg-2024-09-23__ann-aipg-legacy__zh-r0001/manifest.yaml": "7362ac274c6317b1a6db8565dd0eb078c86f0285b97b7a1af5392ad2506a30f0",
+    "src/ipg/version-notes.md": "8d831c900a98ef93cc050342ec30e4bdfcf3933059ffeff2a48eb0022c0a1df6",
+    "terminology/ipg-glossary.txt": "d99721159d4a0f63d32e20193388f180023a13c4f8d631e5e4662da51edc2d24"
+  }
+}

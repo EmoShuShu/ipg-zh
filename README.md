@@ -3,8 +3,11 @@
 This repository currently contains the approved work through P5: the complete
 2024-09-23 official English IPG structure, conservatively migrated legacy
 Chinese text, the bilingual AIPG publication annotations found in
-`AIPG_2025.md`, and a full-document OmegaT review workflow. It is a review
-candidate, not a publishable release.
+`AIPG_2025.md`, and a full-document OmegaT review workflow. The
+maintainer-reviewed `zh-r0001` local baseline has now been frozen with a local
+Git marker, verified reading outputs,
+and separately retained source/OmegaT backups; no public release was created.
+See the [local freeze record](docs/review/2026-10-08-zh-r0001-local-freeze.md).
 
 ## 本地构建与公开发布（2026-10-08 决策）
 
