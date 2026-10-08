@@ -6,7 +6,8 @@ Chinese text, the bilingual AIPG publication annotations found in
 `AIPG_2025.md`, and a full-document OmegaT review workflow. The
 maintainer-reviewed `zh-r0001` local baseline has now been frozen with a local
 Git marker, verified reading outputs,
-and separately retained source/OmegaT backups; no public release was created.
+and separately retained source/OmegaT backups. The local freeze itself did not
+create a public release; the subsequently approved publication workflow is below.
 See the [local freeze record](docs/review/2026-10-08-zh-r0001-local-freeze.md).
 
 ## 本地构建与公开发布（2026-10-08 决策）
@@ -51,7 +52,8 @@ dist。歧义、拆并和失锚需要人工确认，不能自动套用位置或�
 同时提供 `scripts/validate.py`、`scripts/build.py`、`scripts/validate_output.py`。
 正式构建只有 release 门槛、临时两次构建字节比较、独立输出 schema 检查均通过后，
 才事务更新仅含 `IPG.md` 与 `rules.json` 的 dist。候选/演练只在 outputs，
-GitHub Release 不在本阶段。是否可生成本地 dist，以当前技术检查结果为准。
+P4.6 当时不做 GitHub Release；后续批准的公开发布入口见下文。
+是否可生成本地 dist，以当前技术检查结果为准。
 
 Markdown follows the reference MTR reader format: generated table of contents,
 English/Chinese chapter and subsection headings, English then Chinese for each
@@ -73,7 +75,8 @@ OmegaT 项目位于忽略目录 `outputs/omegat-ipg-full/`，包含 8 个 PO。�
 `terminology/ipg-glossary.txt`，不会复制另一份词汇表。初次迁移有 12 项缺译；当前
 缺译数以检查报告为准，允许人工补齐，但不得复制英文或用机器译文填充。候选
 阅读产物只写入 `outputs/current-candidate/`；正式
-`dist/` 只有严格的本地 release 检查通过后才生成，不自动公开发布。
+`dist/` 只有严格的本地 release 检查通过后才生成；本地助手不上传，
+后续提交到 main 的最终产物由下述独立发布工作流检查并发布。
 
 正文与发布注解按阅读位置交错导出。被注解分隔的官方段落以稳定的双语阅读片段
 进入 OmegaT，同时保留完整官方 block 和 PDF 溯源。详见使用说明中的分段与备份规则。
@@ -174,6 +177,30 @@ checks for official updates, or creates a GitHub Release. Test reports and
 rehearsal artifacts are downloadable for 14 days. See the
 [Chinese CI instructions](README.zh-CN.md#github-自动检查).
 
+## GitHub Release
+
+Following MTR, [Publish IPG release](.github/workflows/release.yml) runs when
+`main` receives final assets, the current-release pointer, version notes, or
+publication configuration changes. It also supports **Actions → Publish IPG
+release → Run workflow** on `main`. Ordinary README updates do not publish.
+
+Before publication it strictly validates source and review records, runs all
+tests, builds deterministic isolated assets, independently validates JSON and
+compares both files with committed `dist`. The tag is the native three-axis
+release ID followed by the first 12 characters of the full `rules.json` SHA-256.
+Release notes include all three versions, source commit, full hash and current
+version notes. Assets match MTR: **IPG.md, rules.json, SHA256SUMS**.
+
+The workflow uses GitHub's built-in token; no personal token/Secret is needed.
+It uploads a draft, downloads and byte-verifies all assets, then makes it public.
+An identical published release is only verified, never overwritten; an incomplete
+same-commit draft can resume without overwriting existing assets. Publication
+errors stop safely and retain draft/evidence for inspection. Source, review data,
+OmegaT, current pointer and local `dist` are never changed by the publisher.
+Administrative source flags remain advisory under the maintainer's decision;
+the automatic workflow does not rewrite them or constitute a license judgment.
+See the [Chinese publication guide](README.zh-CN.md#github-自动发布).
+
 The validation profile is selected only on the command line:
 
 ```powershell
@@ -189,7 +216,8 @@ current review record per OmegaT unit, no unreviewed or stale records, no orphan
 records, and matching source and target hashes. Annotation licensing,
 attribution, and `publishable` are recorded as non-blocking `advisoryFindings`.
 Successful release validation means `local-build-ready`, not public-publication
-approval. Future public distribution must not treat local build success as permission.
+approval. Public distribution is separately authorized by the maintainer's
+decision to enable the publication workflow, not inferred from local build success.
 
 Historical `ipg-pilot validate/build` are compatibility aliases to the current
 production commands, not a second dist writer. Other phase commands reproduce
