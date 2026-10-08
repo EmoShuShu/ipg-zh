@@ -157,9 +157,40 @@ dist 只放两个最终文件。哈希和报告通过外部返回报告/命令�
 ```
 
 成功路径使用 `tests/fixtures/release-rehearsal/source.yaml` 和隔离临时仓库。
-不填真实缺译、不改真实许可或账本。没有远端、GitHub、PR、Release 或自动
-发布。官方更新 diff/继承与不可变证据已在 P5 接通；人工修订、当前版本提升、
-OmegaT 新版本协调及 CI/发布仍须另行批准。
+不填真实缺译、不改真实许可或账本。P5 交付时没有配置远端或自动发布；随后经
+维护者批准，已上传公开仓库并增加下述只读 CI。人工修订、当前版本提升、
+OmegaT 新版本协调和 GitHub Release 不由 CI 自动执行。
+
+## GitHub 自动检查
+
+配置文件为 `.github/workflows/validate.yml`。上传到 `main`、提出合并请求、
+进入合并队列时自动运行；也可以打开仓库 **Actions → Validate IPG → Run workflow**
+手动运行。不需要添加令牌或其他 Secrets；工作流只有仓库读取权限，不自动
+提交、改译文、修改账本、更新 dist、检查官方新版本或发布 Release。
+
+与 `mtr-zh/.github/workflows/validate.yml` 保持相同的质量检查顺序：
+
+1. 解析当前版本指针并用 release profile 严格验证源。
+2. 运行全部自动测试。
+3. 构建隔离的 release rehearsal，并独立验证 JSON schema。
+4. 再构建一次，逐字节比较 `IPG.md` 和 `rules.json`。
+5. 将生成文件与已提交的 dist 比较，拒绝过期产物。
+6. 保存校验值、演练产物和测试报告，供下载核验，保留 14 天。
+
+有意差异：使用 IPG 的完整 `current-release.txt` 和原生生产入口，安装
+`.[test]`，使用已在本地核验的 Python 3.12；演练只写 `outputs/ci-artifacts/`
+及 `outputs/ci-repeat/`。与 MTR 一样使用 Ubuntu runner；Windows 原生 CMD
+启动测试在 Ubuntu 上跳过，其他检查照常运行。本地 Windows 完整测试仍覆盖启动器。
+额外启用 main 的 push 检查，适配当前直接上传的维护方式；不要求先创建 PR。
+外部 SHA256SUMS 由现有 IPG builder 生成，CI 直接核验，不重写已记录在
+构建 receipt 中的校验文件，也不将 rules.json 的自身哈希嵌入正文。
+
+日常仍在本地完成 OmegaT 审校、回写和审校助手选项 6 的最终构建，再提交并上传。
+Actions 的绿色结果表示技术检查通过，不代替语义审校或公开使用许可判断。
+若提示 `dist ... is stale`，请本地重新构建并同时提交两个 dist 文件，不手改输出。
+其他失败可点击具体步骤查看日志；有测试报告或演练产物时可在运行页面下载。
+CI 失败不会撤销已上传的提交，也不会替你修改内容。未配置分支保护时，检查
+不会强制阻止上传；是否启用保护规则及 GitHub Release 工作流须另行决定。
 
 ## 官方更新与快照（P5）
 

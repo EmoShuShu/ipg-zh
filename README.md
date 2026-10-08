@@ -164,6 +164,16 @@ and penalty names are exported once per controlled display code.
 
 ## Validation and tests
 
+GitHub runs [Validate IPG](.github/workflows/validate.yml) on pushes to `main`,
+pull requests, merge queues, and manual dispatch. Following MTR's validation
+workflow, it strictly validates the current release, runs the full test suite,
+builds isolated release rehearsals, independently validates JSON, checks
+determinism, and compares both generated files with committed `dist`.
+It has read-only repository permissions and never commits, updates `dist`,
+checks for official updates, or creates a GitHub Release. Test reports and
+rehearsal artifacts are downloadable for 14 days. See the
+[Chinese CI instructions](README.zh-CN.md#github-自动检查).
+
 The validation profile is selected only on the command line:
 
 ```powershell
