@@ -97,10 +97,24 @@ def _release(root: Path, repo: str, tag: str) -> dict | None:
     header = re.match(r"HTTP/\S+ (\d{3})[^\n]*\n", text)
     status = int(header[1]) if header else None
     if status == 404:
-        return None
-    if result.returncode or status != 200:
+        # REST's tag endpoint only finds published releases. Authenticated listing
+        # includes drafts; do not mistake a pending tag for a missing release.
+        pages = json.loads(_checked(root, "gh", "api", f"repos/{repo}/releases", "--paginate", "--slurp"))
+        if not isinstance(pages, list) or any(not isinstance(page, list) for page in pages):
+            raise ValueError("GitHub 草稿查询响应结构不合法。")
+        releases = [item for page in pages for item in page]
+        if any(not isinstance(item, dict) or not isinstance(item.get("tag_name"), str) for item in releases):
+            raise ValueError("GitHub 草稿查询条目不合法。")
+        matches = [item for item in releases if item["tag_name"] == tag]
+        if not matches:
+            return None
+        if len(matches) != 1:
+            raise ValueError("GitHub 返回重复的同标签 Release，不会选择或覆盖。")
+        release = matches[0]
+    elif result.returncode or status != 200:
         raise ValueError("GitHub 查询失败，不会视为版本不存在：" + result.stderr.strip())
-    release = json.loads(text.split("\n\n", 1)[1])
+    else:
+        release = json.loads(text.split("\n\n", 1)[1])
     if (not isinstance(release, dict) or release.get("tag_name") != tag
             or type(release.get("draft")) is not bool or not isinstance(release.get("assets"), list)):
         raise ValueError("GitHub Release 响应结构不合法。")
@@ -157,13 +171,14 @@ def publish_release(root: Path, artifacts: Path, commit: str, repo: str) -> dict
             if existing != set(ASSETS):
                 raise ValueError("已公开 Release 缺少附件，不会自动改写。")
             _unchanged(hashes)
-            return {**metadata, "status": "verified-existing", "url": release.get("html_url")}
+            return {**metadata, "releaseSourceCommit": target,
+                    "status": "verified-existing", "url": release.get("html_url")}
     else:
         existing = set()
     # Only current main can create/publish. Old published releases can be verified read-only.
     if _checked(root, "git", "ls-remote", "origin", "refs/heads/main").split() != [commit, "refs/heads/main"]:
         raise ValueError("main 已变化或当前检出不是 main；不会发布旧运行。")
-    if target is not None and target != commit:
+    if target is not None and target != commit and (release is None or existing != set(ASSETS)):
         raise ValueError("标签指向不同提交；不会移动标签或接管旧草稿。")
     _unchanged(hashes)
     if release is None:
@@ -178,8 +193,9 @@ def publish_release(root: Path, artifacts: Path, commit: str, repo: str) -> dict
     elif missing := sorted(set(ASSETS) - existing):
         _checked(root, "gh", "release", "upload", tag, *(str(artifacts / name) for name in missing), "--repo", repo)
     release = _release(root, repo, tag)
-    if (release is None or not release["draft"] or f"- 来源提交：`{commit}`" not in release.get("body", "")
-            or _tag_commit(root, tag) != commit
+    release_commit = target or commit
+    if (release is None or not release["draft"] or f"- 来源提交：`{release_commit}`" not in release.get("body", "")
+            or _tag_commit(root, tag) != release_commit
             or _verify_assets(root, repo, tag, artifacts, release) != set(ASSETS)):
         raise ValueError("草稿或附件核验失败，未公开发布。")
     _unchanged(hashes)
@@ -189,7 +205,8 @@ def publish_release(root: Path, artifacts: Path, commit: str, repo: str) -> dict
     published = _release(root, repo, tag)
     if published is None or published["draft"]:
         raise ValueError("无法确认公开发布结果；请查看运行记录，不会重新覆盖。")
-    return {**metadata, "status": "published", "url": published.get("html_url")}
+    return {**metadata, "releaseSourceCommit": release_commit,
+            "status": "published", "url": published.get("html_url")}
 
 
 def main(argv: list[str] | None = None) -> int:

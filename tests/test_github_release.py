@@ -29,6 +29,7 @@ class FakeCLI:
         self.http_failure = None
         self.download_hook = None
         self.upload_failure = False
+        self.list_response = None
 
     def seed(self, *, draft=False, commit=COMMIT):
         self.remote_tag = commit
@@ -61,9 +62,13 @@ class FakeCLI:
                 assert args[args.index("--method") + 1] == "POST"
                 self.remote_tag = COMMIT
                 return result("{}")
+            if "--slurp" in args:
+                if self.list_response is not None:
+                    return result(*self.list_response)
+                return result(json.dumps([[self.release] if self.release else []]))
             if self.http_failure:
                 return result(*self.http_failure)
-            if self.release is None:
+            if self.release is None or self.release["draft"]:
                 return result('HTTP/2.0 404 Not Found\r\n\r\n{"message":"Not Found"}', 1)
             return result("HTTP/2.0 200 OK\r\n\r\n" + json.dumps(self.release))
         if args[:2] == ("gh", "release"):
@@ -224,6 +229,40 @@ def test_draft_can_resume_missing_assets_but_never_overwrites(package):
     assert report["status"] == "published"
     actions = [args[2] for args in cli.writes if args[:2] == ("gh", "release")]
     assert actions == ["upload", "edit"]
+
+
+def test_complete_ancestor_draft_can_be_verified_without_moving_its_tag(package):
+    root, artifacts, _, cli = package
+    cli.seed(draft=True, commit=OLDER)
+    report = publishing.publish_release(root, artifacts, COMMIT, REPO)
+    assert report["status"] == "published" and report["releaseSourceCommit"] == OLDER
+    assert cli.remote_tag == OLDER and f"`{OLDER}`" in cli.release["body"]
+    assert [args[2] for args in cli.writes if args[:2] == ("gh", "release")] == ["edit"]
+
+
+def test_incomplete_ancestor_draft_cannot_be_taken_over(package):
+    root, artifacts, _, cli = package
+    cli.seed(draft=True, commit=OLDER)
+    cli.files.pop("IPG.md")
+    cli.refresh()
+    with pytest.raises(ValueError, match="不同提交"):
+        publishing.publish_release(root, artifacts, COMMIT, REPO)
+    assert not cli.writes and cli.release["draft"] is True
+
+
+@pytest.mark.parametrize("fault", ["network", "shape", "duplicate"])
+def test_draft_discovery_errors_stop_without_creating_another_release(package, fault):
+    root, artifacts, _, cli = package
+    cli.seed(draft=True)
+    if fault == "network":
+        cli.list_response = ("", 1, "network failed")
+    elif fault == "shape":
+        cli.list_response = ('{}', 0, "")
+    else:
+        cli.list_response = (json.dumps([[cli.release], [cli.release]]), 0, "")
+    with pytest.raises(ValueError):
+        publishing.publish_release(root, artifacts, COMMIT, REPO)
+    assert not cli.writes
 
 
 def test_failed_upload_leaves_only_a_draft_and_retry_can_finish(package):

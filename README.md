@@ -194,8 +194,12 @@ version notes. Assets match MTR: **IPG.md, rules.json, SHA256SUMS**.
 The workflow uses GitHub's built-in token; no personal token/Secret is needed.
 It uploads a draft, downloads and byte-verifies all assets, then makes it public.
 An identical published release is only verified, never overwritten; an incomplete
-same-commit draft can resume without overwriting existing assets. Publication
-errors stop safely and retain draft/evidence for inspection. Source, review data,
+same-commit draft can resume without overwriting existing assets.
+An older complete draft can only be published after checking its ancestor
+commit, unchanged tag/source record and all three byte-identical assets; an
+incomplete older draft is refused. Draft discovery uses authenticated listing,
+since GitHub's REST tag lookup does not return drafts. Publication errors stop
+safely and retain draft/evidence for inspection. Source, review data,
 OmegaT, current pointer and local `dist` are never changed by the publisher.
 Administrative source flags remain advisory under the maintainer's decision;
 the automatic workflow does not rewrite them or constitute a license judgment.
