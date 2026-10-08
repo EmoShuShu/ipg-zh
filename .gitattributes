@@ -1,4 +1,6 @@
 *.cmd text eol=crlf
+AIPG_2025.md -text -diff -merge
+*.pdf -text
 docs/review/p4-migration-summary.json text eol=lf
 dist/* text eol=lf
 review/freezes/** text eol=lf

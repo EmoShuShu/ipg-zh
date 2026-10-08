@@ -2,7 +2,7 @@
 
 import yaml
 
-from ipg_pipeline.core import ROOT
+from ipg_pipeline.core import ROOT, sha256_bytes
 
 
 def _workflow():
@@ -54,3 +54,12 @@ def test_ci_checks_both_final_files_and_retains_isolated_evidence():
         assert "always()" in step["if"] and "hashFiles(" in step["if"]
         assert step["with"]["path"] == path and step["with"]["retention-days"] == "14"
         assert step["with"]["if-no-files-found"] == "error"
+
+
+def test_immutable_snapshots_have_exact_hashes_and_no_git_newline_conversion():
+    attributes = (ROOT / ".gitattributes").read_text(encoding="utf-8").splitlines()
+    assert "AIPG_2025.md -text -diff -merge" in attributes and "*.pdf -text" in attributes
+    for path in (ROOT / "snapshots/legacy").glob("*/AIPG_2025.md"):
+        assert sha256_bytes(path.read_bytes()) == path.parent.name
+    for path in (ROOT / "snapshots/official").glob("*/*/*.pdf"):
+        assert sha256_bytes(path.read_bytes()) == path.parent.name

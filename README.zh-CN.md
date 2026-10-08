@@ -184,6 +184,8 @@ OmegaT 新版本协调和 GitHub Release 不由 CI 自动执行。
 额外启用 main 的 push 检查，适配当前直接上传的维护方式；不要求先创建 PR。
 外部 SHA256SUMS 由现有 IPG builder 生成，CI 直接核验，不重写已记录在
 构建 receipt 中的校验文件，也不将 rules.json 的自身哈希嵌入正文。
+不可变 PDF 和 `AIPG_2025.md` 通过 `.gitattributes` 禁止 Git 换行转换，
+确保 Windows、Ubuntu 检出的原始字节与来源 SHA-256 一致，不用平台设置掩盖哈希问题。
 
 日常仍在本地完成 OmegaT 审校、回写和审校助手选项 6 的最终构建，再提交并上传。
 Actions 的绿色结果表示技术检查通过，不代替语义审校或公开使用许可判断。
