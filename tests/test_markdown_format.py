@@ -59,6 +59,8 @@ def test_both_languages_follow_exact_reading_order_without_losing_annotation_blo
     for document in documents:
         for kind, node, _ in reading_events(document):
             if kind in {"block", "reading-segment"}:
+                if node["type"] == "appendix-row":
+                    continue  # Appendix A has bilingual cells, not paragraph pairs.
                 for language in ("en", "zh"):
                     text = node["text"][language]
                     if text:
@@ -128,10 +130,58 @@ def test_bilingual_appendices_keep_dates_entries_penalties_and_native_json(input
         for kind, node, _ in reading_events(document):
             if kind == "block" and node["type"] == "appendix-row":
                 penalty = display["values"][node["displayCode"]]
-                for language in ("en", "zh"):
-                    assert f"{node['text'][language]} — {penalty[language]}" in markdown
+                assert f"| {node['text']['zh']} | {node['text']['en']} | {penalty['zh']} |" in markdown
     assert "### Penalty Quick Reference" not in markdown
     assert "### Changes from Previous Versions" not in markdown
     assert rules["sections"] == [section for doc in documents for section in doc["sections"]]
     assert rules["publicationAnnotations"] == [a for doc in documents for a in doc["publicationAnnotations"]]
     assert documents == before
+
+
+def test_appendix_a_is_one_three_column_table_with_all_rows_and_categories(inputs):
+    manifest, documents, display = inputs
+    markdown = render_markdown(manifest, documents, display, candidate=False)
+    appendix = markdown.split("# Appendix A—", 1)[1].split("# Appendix B—", 1)[0]
+    lines = [line for line in appendix.splitlines() if line.startswith("|")]
+    assert lines[:2] == ["| 违规 | Infraction | 处罚 |", "| --- | --- | --- |"]
+    assert appendix.count("| 违规 | Infraction | 处罚 |") == 1
+    chapters = [section for doc in documents for section in doc["sections"] if section["kind"] == "chapter" and section["number"] in {"2", "3", "4"}]
+    categories = [f"| ***{chapter['title']['zh']}*** | ***{chapter['title']['en']}*** | |" for chapter in chapters]
+    positions = [lines.index(category) for category in categories]
+    assert positions == sorted(positions)
+    assert [positions[1] - positions[0] - 1, positions[2] - positions[1] - 1, len(lines) - positions[2] - 1] == [6, 9, 8]
+    assert len(lines) == 2 + 3 + 23
+
+
+def test_table_escapes_pipes_and_line_breaks_without_changing_source(inputs):
+    manifest, documents, display = inputs
+    documents = copy.deepcopy(documents)
+    row = next(node for doc in documents for kind, node, _ in reading_events(doc) if kind == "block" and node["type"] == "appendix-row")
+    row["text"] = {"en": "Name | continuation\nnext", "zh": "名称 | 补充\r\n下一行"}
+    before = copy.deepcopy(documents)
+    markdown = render_markdown(manifest, documents, display, candidate=True)
+    assert "| 名称 \\| 补充<br>下一行 | Name \\| continuation<br>next |" in markdown
+    assert documents == before
+
+
+@pytest.mark.parametrize("position", ["before", "after"])
+def test_table_row_annotation_stays_next_to_its_row(inputs, position):
+    manifest, documents, display = inputs
+    documents = copy.deepcopy(documents)
+    appendix = next(doc for doc in documents if doc["documentId"] == "ipg-appendix-a")
+    rows = appendix["sections"][0]["components"][0]["groups"][0]["blocks"]
+    appendix["publicationAnnotations"] = [{
+        "id": "ipg-ann-table-test", "anchor": {"type": "block", "id": rows[1]["id"]},
+        "position": position, "order": 1, "groups": [{"kind": "paragraphs", "blocks": [
+            {"text": {"en": "Table row annotation", "zh": "表格行注解"}},
+        ]}],
+    }]
+    markdown = render_markdown(manifest, documents, display, candidate=True)
+    start = markdown.index("# Appendix A—")
+    row_text = "| " + rows[1]["text"]["zh"] + " |"
+    previous = markdown.index("| " + rows[0]["text"]["zh"] + " |", start)
+    target = markdown.index(row_text, start)
+    following = markdown.index("| " + rows[2]["text"]["zh"] + " |", start)
+    note = markdown.index(">Table row annotation", start)
+    assert previous < note < target < following if position == "before" else previous < target < note < following
+    assert markdown[note:following].count("| 违规 | Infraction | 处罚 |") == 1

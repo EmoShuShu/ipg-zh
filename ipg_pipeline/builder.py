@@ -60,6 +60,10 @@ def _markdown_toc(documents: list[dict[str, Any]]) -> str:
     return "\n".join(lines)
 
 
+def _table_cell(value: str) -> str:
+    return value.replace("|", r"\|").replace("\r\n", "\n").replace("\r", "\n").replace("\n", "<br>")
+
+
 def _annotation_markdown(annotation: dict[str, Any]) -> list[str]:
     # Match MTR extras: English and Chinese in one quote, preserving paragraphs
     # and lists. Annotations remain separate objects in IPG JSON/reading order.
@@ -112,8 +116,17 @@ def render_markdown(
         "# Magic: The Gathering Infraction Procedure Guide 万智牌违规处理方针", "",
     ])
 
+    sections = {node["id"]: node for document in documents for node in document["sections"]}
+    chapters = {node["number"]: node for node in sections.values() if node["kind"] == "chapter"}
+    table_open, table_category = False, None
     for document in documents:
         for kind, node, _ in reading_events(document):
+            is_table_row = kind == "block" and node["type"] == "appendix-row"
+            if table_open and not is_table_row:
+                # Close before an anchored annotation; resume the table afterward,
+                # rather than collecting rows and moving their annotations away.
+                lines.append("")
+                table_open, table_category = False, None
             if kind == "section":
                 section = node
                 level = 1 if section["kind"] in {"front-matter", "chapter", "appendix"} else 2
@@ -130,13 +143,22 @@ def render_markdown(
                 lines.extend([f"## {node['date']}", ""])
             elif kind == "annotation":
                 lines.extend(_annotation_markdown(node))
+            elif is_table_row:
+                if not table_open:
+                    lines.extend(["| 违规 | Infraction | 处罚 |", "| --- | --- | --- |"])
+                    table_open = True
+                reference = sections[node["referenceId"]]
+                chapter = chapters[reference["number"].split(".", 1)[0]]
+                if table_category != chapter["id"]:
+                    title = chapter["title"]
+                    lines.append(f"| ***{_table_cell(_translated(title))}*** | ***{_table_cell(title['en'])}*** | |")
+                    table_category = chapter["id"]
+                penalty = values[node["displayCode"]]
+                lines.append(f"| {_table_cell(_translated(node['text']))} | {_table_cell(node['text']['en'])} | {_table_cell(_translated(penalty))} |")
             elif kind in {"block", "reading-segment"}:
                 for language in ("en", "zh"):
                     value = node["text"]["en"] if language == "en" else _translated(node["text"])
                     marker = node.get("marker")
-                    if node["type"] == "appendix-row":
-                        penalty = values[node["displayCode"]]
-                        value = f"{value} — {penalty['en'] if language == 'en' else _translated(penalty)}"
                     if marker == "bullet" or node["type"] == "change-entry":
                         value = f"- {value}"
                     elif marker:

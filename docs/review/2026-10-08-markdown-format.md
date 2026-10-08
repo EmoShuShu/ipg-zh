@@ -72,3 +72,31 @@ OmegaT 工程）。MTR 工作树仍干净。用户已有/新生成 dist 和用�
 
 代码提交主题：`Align IPG reader Markdown with reference MTR format`；以本地 Git
 记录定位提交，不把提交自身哈希写进会参与该提交的文件。
+
+## 后续补正：附录 A 表格
+
+按用户指定的 `D:/MTG_Tools/AIPG/创作者资源/AIPG_2025.md` 附录 A 阅读格式，
+将前述“逐行呈现”改为“违规／Infraction／处罚”三列表格。保留三个分类行和
+6/9/8 条违规，共 23 条。参照文件只用于确定展示形式；所有名称、章节分类、
+引用和处罚仍读取当前结构化源，不重新导入旧译。
+
+只改共用 Markdown 渲染器；正文/注解、schema、registry、稳定 ID、处罚 code
+和 JSON 模型不变。对单元格竖线/换行作转义，行上的 before/after 注解仍在
+原位置显示，必要时中断并续接表格，不移到整张表之后。新增四项回归覆盖这些
+行为，并同步调整两项旧断言。
+
+- 修正前格式测试：11 passed。
+- 最终格式/完整解析/版本说明/生产链路相关回归：121 passed，21.13 秒。
+- candidate/release 门槛及契约测试：23 passed，16.96 秒。本轮共 144 项相关回归通过。
+- 隔离演练：`outputs/appendix-a-table-preview-20261008/`；两次输出字节相同，独立 schema 校验通过。
+- Markdown SHA-256：`2ad3f897dd4f9d5ac9dd85d5b2a9fc7efcad58cacfd01b2a238a951fc843371f`。
+- JSON SHA-256：`1a0d1cd4bdf8660339e2fd57f201e68ffa764fc3c12e0bd238e3c7645c4749bf`。
+
+JSON 与上一轮 dist 的差异仅为 versionNotes：用户在本轮开始前已经于源中增加
+一段精解鸣谢，本次正常构建带入该已有修改，源文件原样保留。sections 和
+publicationAnnotations 与旧 dist 完全相同。
+
+旧 dist 已原样备份至 `outputs/appendix-a-table-backup-20261008/`；正式构建
+再次通过双次字节比较及独立 schema 验证后事务更新 dist。未重建旧候选或
+OmegaT，未修改/提交用户源文件和审校资料。补正提交主题：
+`Render Appendix A as the legacy three-column table`。
