@@ -142,7 +142,11 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     try:
         if args.verify:
-            path = update_output(args.project_root, args.project_root / args.verify)
+            root = args.project_root.resolve()
+            path = root / args.verify
+            if not any(path.resolve().is_relative_to(root / base)
+                       for base in ("outputs/official-update", "snapshots/updates")):
+                raise ValueError("只能核验隔离输出或 PR 中的官方更新快照")
             manifest = verify_snapshot(path)
             print(f"快照校验通过：{manifest['official']['effectiveDate']} / {manifest['official']['pdfSha256']}")
         else:

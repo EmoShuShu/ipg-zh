@@ -315,7 +315,7 @@ def test_menu_generates_local_final_files_with_advisories(rehearsal_repo, monkey
     assert review_assistant.finish_formal_release()["byteIdentical"]
     output = capsys.readouterr().out
     assert "非阻塞提醒" in output and "已生成最终文件" in output
-    assert "不代表公开发布许可" in output
+    assert "GitHub 会执行独立的验证与发布" in output
 
 
 @pytest.mark.parametrize("entry", ["validate.py", "build.py", "validate_output.py"])
@@ -332,7 +332,7 @@ def test_cli_profiles_output_validation_and_release_rehearsal(rehearsal_repo, ca
     assert production.validate_main(["--project-root", str(root), "--profile", "release"]) == 0
     assert production.build_main(["--project-root", str(root), "--profile", "release", "--rehearsal"]) == 0
     assert not (root / "dist").exists()
-    assert production.output_main(["--project-root", str(root), "--input", str(root / "outputs/p4-6/release-rehearsal/rules.json")]) == 0
+    assert production.output_main(["--project-root", str(root), "--input", str(root / "outputs/release-rehearsal/rules.json")]) == 0
     assert production.output_main(["--project-root", str(root)]) == 1
     assert "输出检查已停止" in capsys.readouterr().out
 

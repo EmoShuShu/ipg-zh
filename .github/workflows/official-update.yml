@@ -2,13 +2,13 @@ name: Check official IPG update
 
 on:
   schedule:
-    - cron: "17 6 * * *"
+    - cron: "0 6 * * *"
       timezone: "Asia/Shanghai"
   workflow_dispatch:
 
 permissions:
-  contents: read
-  issues: write
+  contents: write
+  pull-requests: write
 
 concurrency:
   group: official-ipg-update
@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   check:
-    name: Detect official PDF and save review evidence
+    name: Detect official PDF and open review PR
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
@@ -26,17 +26,16 @@ jobs:
         uses: actions/checkout@v7
         with:
           ref: main
-          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v7
         with:
-          python-version: "3.12"
+          python-version: "3.13"
           cache: pip
           cache-dependency-path: pyproject.toml
 
       - name: Install project
-        run: python -m pip install -e ".[test]"
+        run: python -m pip install -e ".[dev]"
 
       - name: Check official update and notify once
         env:
@@ -52,6 +51,9 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: ipg-official-update-${{ github.run_id }}-${{ github.run_attempt }}
-          path: outputs/official-update/
+          path: |
+            outputs/official-update/
+            tmp/official-update-diagnostics/
+            tmp/official-update-result.json
           if-no-files-found: warn
           retention-days: 30

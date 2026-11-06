@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import argparse
 import subprocess
 import sys
 import tempfile
@@ -36,8 +37,8 @@ from .full_review import (
 )
 
 
-PREVIEW_JSON = ROOT / "outputs/omegat-writeback-preview.json"
-PREVIEW_MARKDOWN = ROOT / "outputs/omegat-writeback-preview.md"
+PREVIEW_JSON = PROJECT_DIR / "import-preview.json"
+PREVIEW_MARKDOWN = PROJECT_DIR / "import-preview.md"
 
 
 def run_full_tests() -> dict[str, Any]:
@@ -72,7 +73,6 @@ def _write_preview_markdown(preview: dict[str, Any]) -> None:
         f"- 同步汇总中文：{len(preview.get('derivedChanges', []))}",
         f"- 确认保留旧译：{preview['reviewedUnchangedCount']}",
         f"- 含句段批注的单元：{preview['noteUnitCount']}",
-        f"- 12 项初始缺译中尚余：{preview['initialMissingRemaining']}",
         "",
         "## 修改明细",
         "",
@@ -110,6 +110,7 @@ def complete_review_batch(
     confirm: Callable[[dict[str, Any]], bool],
     *,
     test_runner: Callable[[], dict[str, Any]] = run_full_tests,
+    finalize: bool = False,
 ) -> dict[str, Any]:
     reviewed_at = _now()
     print("正在生成隔离回写预览并检查候选……", flush=True)
@@ -142,7 +143,7 @@ def complete_review_batch(
             applied = apply_full_writeback(preview, candidate_root)
             print("正在执行完整自动测试（逐项显示进度）……", flush=True)
             tests = test_runner()
-            print("正在验证内容及正式发布门槛……", flush=True)
+            print("正在验证内容及最终文件生成条件……", flush=True)
             validation = validate_current_state()
             print("正在生成非阻塞术语报告……", flush=True)
             terminology = run_nonblocking_terminology_audit()
@@ -162,7 +163,15 @@ def complete_review_batch(
             validation = validate_current_state()
             candidate.update(validation)
             _write_json(staged_candidate / "validation.json", candidate)
-            full_review._replace_candidate(staged_candidate, CURRENT_CANDIDATE)
+            final = None
+            if finalize and validation["release"]["valid"]:
+                # This is the last fallible publication step. The native builder
+                # restores the old dist on failure; the outer handler restores
+                # source and review state. Do not publish a candidate afterward.
+                print("正在生成最终阅读文档……", flush=True)
+                final = build_project(ROOT, profile="release")
+            else:
+                full_review._replace_candidate(staged_candidate, CURRENT_CANDIDATE)
         except BaseException:
             rollback_applied_writeback(formal_before, mapping_before)
             for path, content in state_before.items():
@@ -183,7 +192,25 @@ def complete_review_batch(
         "notes": notes,
         "ledger": ledger,
         "progress": progress,
+        "final": final,
     }
+
+
+def parse_file_selection(answer: str, filenames: list[str]) -> list[str]:
+    normalized = answer.strip().casefold()
+    if normalized in {"q", "quit", "退出", "c", "cancel", "取消"}:
+        return []
+    if normalized in {"a", "all", "全部"}:
+        return list(filenames)
+    selected = []
+    for token in normalized.replace("，", ",").split(","):
+        token = token.strip()
+        if not token.isdigit() or not 1 <= int(token) <= len(filenames):
+            raise ValueError(f"请输入 1—{len(filenames)} 的编号、a 或 q。")
+        name = filenames[int(token) - 1]
+        if name not in selected:
+            selected.append(name)
+    return selected
 
 
 def _choose_po() -> list[str] | None:
@@ -195,24 +222,15 @@ def _choose_po() -> list[str] | None:
     for index, name in enumerate(PO_ORDER, 1):
         marker = "（有修改）" if name in modified else ""
         print(f"  {index}. {name}{marker}")
-    print("直接回车采用自动检测结果；输入 all 选择全部；输入逗号分隔的编号；输入 c 取消。")
-    raw = input("> ").strip().casefold()
-    if raw in {"c", "cancel", "取消"}:
-        return None
-    if not raw:
-        if not modified:
-            print("没有自动检测到修改；请明确选择已逐条审完的文件。")
-            return None
-        return modified
-    if raw in {"all", "全部"}:
-        return PO_ORDER.copy()
-    try:
-        indexes = {int(item.strip()) for item in raw.replace("，", ",").split(",")}
-    except ValueError as error:
-        raise ValueError("请输入 1—8 的编号、all 或 c。") from error
-    if not indexes or min(indexes) < 1 or max(indexes) > len(PO_ORDER):
-        raise ValueError("文件编号超出 1—8。")
-    return [name for index, name in enumerate(PO_ORDER, 1) if index in indexes]
+    print("直接回车采用自动检测结果；输入 a 选择全部；输入逗号分隔的编号；输入 q 取消。")
+    while True:
+        raw = input("\n请输入编号：").strip()
+        if not raw and modified:
+            return modified
+        try:
+            return parse_file_selection(raw, PO_ORDER) or None
+        except ValueError as error:
+            print(f"输入错误：{error}")
 
 
 def _confirm(preview: dict[str, Any]) -> bool:
@@ -223,9 +241,8 @@ def _confirm(preview: dict[str, Any]) -> bool:
     print(f"  同步汇总中文：{len(preview.get('derivedChanges', []))}")
     print(f"  确认保留旧译：{preview['reviewedUnchangedCount']}")
     print(f"  含句段批注的单元：{preview['noteUnitCount']}")
-    print(f"  12 项初始缺译中尚余：{preview['initialMissingRemaining']}")
     print(f"  差异报告：{PREVIEW_MARKDOWN}")
-    return input("确认写回并执行全部检查？请输入 yes：").strip().casefold() == "yes"
+    return input("\n确认以上文件已完整审校并继续？[y/N]：").strip().casefold() in {"y", "yes"}
 
 
 def _show_progress() -> None:
@@ -235,15 +252,11 @@ def _show_progress() -> None:
     print(f"  总单元：{report['total']}")
     print(f"  已审未改：{counts['reviewed-unchanged']}")
     print(f"  已审有改：{counts['reviewed-modified']}")
-    print(f"  stale：{counts['stale']}")
+    print(f"  失效：{counts['stale']}")
     print(f"  未审：{counts['unreviewed']}")
-    print(f"  12 项初始缺译中尚余：{report['initialMissingRemaining']}")
     print(f"  详细报告：{PROGRESS_MARKDOWN}；{PROGRESS_JSON}")
     print(f"  术语报告：{TERMINOLOGY_MARKDOWN}；{TERMINOLOGY_JSON}")
 
-
-def _pause() -> None:
-    input("\n按回车键返回主菜单……")
 
 
 def check_formal_release() -> dict[str, Any]:
@@ -261,55 +274,77 @@ def finish_formal_release() -> dict[str, Any] | None:
     print(f"已生成最终文件：{ROOT / 'dist/IPG.md'}、{ROOT / 'dist/rules.json'}")
     for name in ("IPG.md", "rules.json"):
         print(f"  SHA-256 {name}：{report['hashes'][name]}")
-    print("这是本地最终阅读产物，不代表公开发布许可；不会上传或创建 GitHub Release。")
+    print("请检查并提交源、审校记录和最终文件；GitHub 会执行独立的验证与发布。")
     return report
 
 
-def main() -> None:
+def run_menu(*, candidate_only: bool = False, test_runner=run_full_tests) -> int:
+    print("IPG 中文翻译工作流")
+    print("  1. 准备或继续 OmegaT 审校")
+    print("  2. 完成审校并生成最终文档")
+    print("  3. 查看审校进度")
+    print("  q. 退出")
     while True:
-        print("\nIPG 全文审校助手（候选与本地最终产物分开）")
-        print("1. 准备或继续 OmegaT 审校")
-        print("2. 完成审校并生成候选阅读文档")
-        print("3. 查看审校进度")
-        print("4. 退出")
-        print("5. 检查本地最终文件生成条件（只读）")
-        print("6. 条件满足后生成最终阅读文件（dist）")
-        choice = input("> ").strip()
-        try:
-            if choice == "1":
-                result = prepare_or_continue()
-                action = "已创建" if result["project"]["created"] else "已验证，可继续使用"
-                print(f"\nOmegaT 项目{action}：{PROJECT_DIR / 'omegat.project'}")
-                print("完成一批审校后，请在 OmegaT 中选择“项目 → 创建已译文档”。")
-                _pause()
-            elif choice == "2":
-                selected = _choose_po()
-                if selected is not None:
-                    result = complete_review_batch(selected, _confirm)
-                    if result["cancelled"]:
-                        print("已取消；正式 YAML、审校账本和候选输出均未改变。")
-                    else:
-                        print(f"候选阅读文档已生成：{CURRENT_CANDIDATE}")
-                        print("这是不可发布的 candidate，不是正式发布文件。")
-                _pause()
-            elif choice == "3":
-                _show_progress()
-                _pause()
-            elif choice == "4":
-                return
-            elif choice == "5":
-                check_formal_release()
-                _pause()
-            elif choice == "6":
-                finish_formal_release()
-                _pause()
+        choice = input("\n请选择：").strip().casefold()
+        if choice == "1":
+            result = prepare_or_continue()
+            action = "已创建" if result["project"]["created"] else "已验证，可继续使用"
+            print(f"\nOmegaT 项目{action}：{PROJECT_DIR / 'omegat.project'}")
+            print("完成一批审校后，请在 OmegaT 中选择“项目 → 创建已译文档”。")
+            return 0
+        if choice == "2":
+            selected = _choose_po()
+            if selected is None:
+                return 2
+            result = complete_review_batch(selected, _confirm, test_runner=test_runner, finalize=not candidate_only)
+            if result["cancelled"]:
+                print("已取消；正式 YAML、审校账本和输出均未改变。")
+                return 2
+            if result["final"] is not None:
+                print(f"已生成：{ROOT / 'dist/IPG.md'}、{ROOT / 'dist/rules.json'}")
             else:
-                print("请输入 1—6。")
-        except Exception as error:
-            print(f"\n操作已停止：{error}")
-            print("必要检查未通过；不会登记为审校完成。")
-            _pause()
+                print(f"本批审校已保存，候选阅读文档：{CURRENT_CANDIDATE}")
+                if not candidate_only:
+                    print("全文尚未满足最终文件生成条件，旧 dist 保持不变：")
+                    print(describe_validation(result["validation"]["release"]))
+            print("请用 git diff 检查并提交 YAML、术语库和审校记录；不要手工修改 dist。")
+            return 0
+        if choice == "3":
+            _show_progress()
+            return 0
+        if choice in {"q", "quit", "退出", "4"}:
+            print("已退出；没有修改任何文件。")
+            return 0
+        # Keep the old final-build shortcuts usable without crowding the menu.
+        if choice == "5":
+            check_formal_release()
+            return 0
+        if choice == "6":
+            return 0 if finish_formal_release() is not None else 1
+        print("输入错误：请输入 1、2、3 或 q。")
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="交互式完成 IPG OmegaT 审校回写流程")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--candidate-only", action="store_true", help="仅保留候选阅读文档，不生成 dist")
+    mode.add_argument("--check-release", action="store_true", help="只读检查最终文件生成条件")
+    mode.add_argument("--build-release", action="store_true", help="从已审源生成最终文件")
+    args = parser.parse_args(argv)
+    try:
+        if args.check_release:
+            return 0 if check_formal_release()["valid"] else 1
+        if args.build_release:
+            return 0 if finish_formal_release() is not None else 1
+        return run_menu(candidate_only=args.candidate_only)
+    except KeyboardInterrupt:
+        print("\n已取消。")
+        return 130
+    except (OSError, ValueError, KeyError) as error:
+        print(f"\n审校助手停止：{error}")
+        return 1
+
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

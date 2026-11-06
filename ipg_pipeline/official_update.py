@@ -7,6 +7,8 @@ import io
 import json
 import re
 import tempfile
+import time
+import sys
 import urllib.parse
 import urllib.request
 from datetime import date, datetime, timezone
@@ -234,8 +236,37 @@ def download(url: str, kind: str) -> tuple[bytes, str, list[str]]:
     return payload, final, handler.hops
 
 
-def discover() -> tuple[dict, bytes]:
+def _retry_official_request(operation, *, stage: str, diagnostics_dir: Path | None = None):
+    """Retry acquisition only; candidate preparation remains a single transaction."""
+    for attempt in range(1, 4):
+        evidence = {"stage": stage, "attempt": attempt,
+                    "checkedAt": datetime.now(timezone.utc).isoformat()}
+        try:
+            result = operation(attempt, evidence)
+        except (OSError, ValueError) as error:
+            evidence.update(status="failure", error=str(error))
+            if attempt == 3:
+                raise
+            print(f"{stage} attempt {attempt}/3 failed: {error}; retrying", file=sys.stderr, flush=True)
+        else:
+            evidence["status"] = "success"
+            return result
+        finally:
+            if diagnostics_dir is not None:
+                diagnostics_dir.mkdir(parents=True, exist_ok=True)
+                (diagnostics_dir / f"{stage}-attempt-{attempt}.json").write_text(
+                    json.dumps(evidence, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        time.sleep(5 if attempt == 1 else 15)
+
+
+def discover(*, diagnostics_dir: Path | None = None, attempt: int = 1,
+             evidence: dict | None = None) -> tuple[dict, bytes]:
     page, final, hops = download(RULES_PAGE, "page")
+    if evidence is not None:
+        evidence.update(url=final, bytes=len(page), sha256=sha256_bytes(page))
+    if diagnostics_dir is not None:
+        diagnostics_dir.mkdir(parents=True, exist_ok=True)
+        (diagnostics_dir / f"rules-page-attempt-{attempt}.html").write_bytes(page)
     official = parse_rules_page(page.decode("utf-8-sig"), final)
     official["pageRedirects"] = hops
     return official, page
@@ -363,15 +394,31 @@ def _prepare(root: Path, project: dict, notes: dict | None, overrides: dict | No
 
 def check_official_update(root: Path = ROOT, *, override_path: Path | None = None,
                           discover_release=discover, downloader=download, parser=parse_full_pdf,
-                          downloaded_at: str | None = None, date_reader=pdf_effective_date) -> dict:
+                          downloaded_at: str | None = None, date_reader=pdf_effective_date,
+                          diagnostics_dir: Path | None = None) -> dict:
     root = root.resolve()
+    if diagnostics_dir is not None:
+        diagnostics_dir = (root / diagnostics_dir).resolve()
+        if not diagnostics_dir.is_relative_to(root):
+            raise ValueError("诊断目录必须位于项目内")
     project, notes, overrides, implementation = _inputs(root, override_path)
-    official, page = discover_release()
+    def acquire_page(attempt, evidence):
+        evidence["url"] = RULES_PAGE
+        result, page = (discover(diagnostics_dir=diagnostics_dir, attempt=attempt, evidence=evidence)
+                        if discover_release is discover else discover_release())
+        evidence.update(bytes=len(page), sha256=sha256_bytes(page))
+        return result, page
+    official, page = _retry_official_request(acquire_page, stage="rules-page", diagnostics_dir=diagnostics_dir)
     validate_url(official["pageUrl"], "page")
-    pdf, final, redirects = downloader(official["url"], "pdf")
-    validate_url(final, "pdf")
-    if len(pdf) > MAX_PDF_BYTES or not pdf.startswith(b"%PDF-"):
-        raise ValueError("官方 PDF 非法或超限")
+    def acquire_pdf(attempt, evidence):
+        evidence["url"] = official["url"]
+        pdf, final, redirects = downloader(official["url"], "pdf")
+        validate_url(final, "pdf")
+        if len(pdf) > MAX_PDF_BYTES or not pdf.startswith(b"%PDF-"):
+            raise ValueError("官方 PDF 非法或超限")
+        evidence.update(bytes=len(pdf), sha256=sha256_bytes(pdf))
+        return pdf, final, redirects
+    pdf, final, redirects = _retry_official_request(acquire_pdf, stage="official-pdf", diagnostics_dir=diagnostics_dir)
     official.update(url=final, pdfRedirects=redirects, pdfSha256=sha256_bytes(pdf),
         effectiveDate=date_reader(pdf),
         downloadedAt=downloaded_at or datetime.now(timezone.utc).isoformat(timespec="seconds"))
@@ -394,9 +441,18 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="ipg-check-official-update")
     parser.add_argument("--project-root", type=Path, default=ROOT)
     parser.add_argument("--overrides", type=Path)
+    parser.add_argument("--result", type=Path, default=Path("tmp/official-update-result.json"))
+    parser.add_argument("--diagnostics-dir", type=Path, default=Path("tmp/official-update-diagnostics"))
     args = parser.parse_args(argv)
     try:
-        report = check_official_update(args.project_root, override_path=args.project_root / args.overrides if args.overrides else None)
+        root = args.project_root.resolve()
+        result = (root / args.result).resolve()
+        if not result.is_relative_to(root):
+            raise ValueError("结果文件必须位于项目内")
+        report = check_official_update(root, override_path=root / args.overrides if args.overrides else None,
+                                      diagnostics_dir=args.diagnostics_dir)
+        result.parent.mkdir(parents=True, exist_ok=True)
+        result.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(json.dumps(report, ensure_ascii=False, indent=2))
         return 0
     except (OSError, ValueError, KeyError) as error:
