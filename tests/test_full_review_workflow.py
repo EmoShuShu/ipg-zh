@@ -172,7 +172,7 @@ def test_missing_or_extra_target_po_blocks_preview(isolated_repo: tuple[Path, Pa
     _, project = isolated_repo
     full_review.prepare_full_project(); _create_target(project)
     (project / "target/appendix-a.po").unlink()
-    with pytest.raises(ValueError, match="恰好包含 8 个文件"):
+    with pytest.raises(ValueError, match="完整对应当前版本的文件集合"):
         full_review.inspect_target_project()
 
 

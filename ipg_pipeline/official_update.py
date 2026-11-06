@@ -314,7 +314,12 @@ def _prepare(root: Path, project: dict, notes: dict | None, overrides: dict | No
         "targetOfficial": {k: target[k] for k in ("effectiveDate", "pdfSha256")}, "mappings": []}
     if override["baseReleaseId"] != base["releaseId"] or override["targetOfficial"] != {k: target[k] for k in ("effectiveDate", "pdfSha256")}:
         raise ValueError("更新 override 绑定的版本不一致")
-    relative_hashes = {Path(p).relative_to(root).as_posix(): h for p, h in project["hashes"].items() if Path(p).is_relative_to(root)}
+    # Previous update archives are already immutable. Keep checking their hashes
+    # for races, but carry forward their lineage reference rather than recursively
+    # nesting entire archives inside every later candidate's inputs/base.
+    def base_input(path):
+        return path.is_relative_to(root) and not path.is_relative_to(root / "snapshots/updates")
+    relative_hashes = {Path(p).relative_to(root).as_posix(): h for p, h in project["hashes"].items() if base_input(Path(p))}
     context = {"baseReleaseId": base["releaseId"], "baseFiles": relative_hashes, "targetOfficial": target,
         "implementation": implementation, "updateOverridesSha256": sha256_bytes(json_bytes(override)),
         "dependencies": {name: version(name) for name in ("pdfplumber", "pdfminer.six", "PyYAML", "jsonschema")}}
@@ -364,7 +369,7 @@ def _prepare(root: Path, project: dict, notes: dict | None, overrides: dict | No
             payloads["official/rules-page.html"] = page
         for path_text, digest in project["hashes"].items():
             path = Path(path_text)
-            if digest is not None and path.is_relative_to(root):
+            if digest is not None and base_input(path):
                 payloads["inputs/base/" + path.relative_to(root).as_posix()] = path.read_bytes()
         payloads.update({"implementation/" + name: (Path(__file__).parent / Path(name).name).read_bytes() for name in implementation})
         if changed:
