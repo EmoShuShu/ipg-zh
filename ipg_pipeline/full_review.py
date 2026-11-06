@@ -37,27 +37,15 @@ PROJECT_DIR = ROOT / "outputs/omegat-ipg-full"
 RELEASE_DIR = current_release_dir(ROOT)
 MAPPING_PATH = PROJECT_DIR / "omegat/full-review.mapping.json"
 GLOSSARY_PATH = ROOT / "terminology/ipg-glossary.txt"
-PO_ORDER = [
-    "display-values.po",
-    "front-matter.po",
-    "chapter-01.po",
-    "chapter-02.po",
-    "chapter-03.po",
-    "chapter-04.po",
-    "appendix-a.po",
-    "appendix-b.po",
-]
-EXPECTED_PO_COUNTS = {
-    "display-values.po": 15,
-    "front-matter.po": 7,
-    "chapter-01.po": 140,
-    "chapter-02.po": 302,
-    "chapter-03.po": 278,
-    "chapter-04.po": 223,
-    "appendix-a.po": 24,
-    "appendix-b.po": 18,
-}
-EXPECTED_UNIT_COUNT = 1007
+def po_order() -> list[str]:
+    manifest = load_yaml(current_release_dir(ROOT) / "manifest.yaml")
+    names = ["display-values.po", *(Path(name).with_suffix(".po").name for name in manifest["documents"])]
+    if len(names) != len(set(names)):
+        raise ValueError("当前版本含重复 PO 文件名")
+    return names
+
+
+PO_ORDER = po_order()  # Compatibility view; operational code resolves the current version.
 TRANSLATION_REVISION = load_yaml(RELEASE_DIR / "manifest.yaml")["versions"]["translation"]["revision"]
 REVIEW_LEDGER_PATH = ROOT / f"review/status/{TRANSLATION_REVISION}.json"
 TRANSLATION_NOTES_PATH = ROOT / f"review/translation-notes/{TRANSLATION_REVISION}.json"
@@ -93,7 +81,7 @@ def full_inputs() -> tuple[dict[str, Any], list[tuple[str, dict[str, Any]]], dic
 def units_by_po(
     documents: list[tuple[str, dict[str, Any]]], display: dict[str, Any]
 ) -> dict[str, list[dict[str, Any]]]:
-    result = {name: [] for name in PO_ORDER}
+    result = {name: [] for name in ["display-values.po", *(Path(name).with_suffix(".po").name for name, _ in documents)]}
     for unit in collect_units(documents, display, release_relative=current_release_dir(ROOT).relative_to(ROOT).as_posix()):
         po_name = (
             "display-values.po"
@@ -101,9 +89,9 @@ def units_by_po(
             else Path(unit["file"]).name.replace(".yaml", ".po")
         )
         result[po_name].append(unit)
-    counts = {name: len(units) for name, units in result.items()}
-    if counts != EXPECTED_PO_COUNTS or sum(counts.values()) != EXPECTED_UNIT_COUNT:
-        raise ValueError(f"full OmegaT unit contract changed: {counts}")
+    ids = [unit["id"] for units in result.values() for unit in units]
+    if len(ids) != len(set(ids)):
+        raise ValueError("全文 OmegaT 稳定 ID 重复")
     return result
 
 
@@ -145,7 +133,7 @@ def _filters_xml() -> str:
 def _project_readme() -> str:
     return """# IPG 全文 OmegaT 审校项目
 
-本目录由“审校助手”管理。请双击 `omegat.project` 打开同一个项目，8 个 PO
+本目录由“审校助手”管理。请双击 `omegat.project` 打开同一个项目，当前版本的全部 PO
 文件会在一次全文搜索中共同参与检索。项目关闭句子分段，以段落为审校单位。
 
 完成一批审校后，请在 OmegaT 中选择“项目 → 创建已译文档”，再回到审校助手
@@ -175,7 +163,7 @@ def validate_repository_inputs() -> dict[str, Any]:
     if not structural["valid"]:
         raise ValueError("repository structural validation failed: " + json.dumps(structural["structuralFindings"], ensure_ascii=False))
     grouped = units_by_po(documents, display)
-    units = [unit for name in PO_ORDER for unit in grouped[name]]
+    units = [unit for name in po_order() for unit in grouped[name]]
     with tempfile.TemporaryDirectory(prefix="ipg-review-output-") as temporary:
         output = Path(temporary)
         build_outputs(output, manifest, [item[1] for item in documents], display, candidate=True, profile="candidate", source_root=ROOT)
@@ -192,8 +180,8 @@ def _new_mapping(inputs: dict[str, Any]) -> dict[str, Any]:
         "schemaVersion": 1,
         "releaseId": inputs["manifest"]["releaseId"],
         "translationRevision": inputs["manifest"]["versions"]["translation"]["revision"],
-        "poOrder": PO_ORDER,
-        "poCounts": EXPECTED_PO_COUNTS,
+        "poOrder": list(inputs["grouped"]),
+        "poCounts": {name: len(units) for name, units in inputs["grouped"].items()},
         "initialMissingUnitIds": initial_missing,
         "units": [
             {
@@ -202,13 +190,13 @@ def _new_mapping(inputs: dict[str, Any]) -> dict[str, Any]:
                 "sourceHash": sha256_text(unit["source"]),
                 "targetHash": sha256_text(unit["target"]),
             }
-            for po_name in PO_ORDER
+            for po_name in po_order()
             for unit in inputs["grouped"][po_name]
         ],
         "sourceFiles": _source_file_hashes(inputs["units"]),
         "sourcePoHashes": {
             po_name: sha256_text(render_po(inputs["grouped"][po_name]))
-            for po_name in PO_ORDER
+            for po_name in po_order()
         },
     }
 
@@ -224,12 +212,15 @@ def _validate_existing_project(inputs: dict[str, Any]) -> dict[str, Any]:
     if (mapping["releaseId"] != inputs["manifest"]["releaseId"]
             or mapping["translationRevision"] != inputs["manifest"]["versions"]["translation"]["revision"]):
         raise ValueError("OmegaT 基线与当前 release / 中文修订不一致；请先进行版本协调。")
+    if (mapping["poOrder"] != list(inputs["grouped"])
+            or mapping["poCounts"] != {name: len(units) for name, units in inputs["grouped"].items()}):
+        raise ValueError("OmegaT 文件或单元计数与版本基线不一致")
     actual_po = sorted(path.name for path in (PROJECT_DIR / "source").glob("*.po"))
-    if actual_po != sorted(PO_ORDER):
+    if actual_po != sorted(po_order()):
         raise ValueError(f"source PO 集合不完整或多出文件：{actual_po}")
     expected_by_id = {unit["id"]: unit for unit in mapping["units"]}
     current_by_id = {unit["id"]: unit for unit in inputs["units"]}
-    if set(expected_by_id) != set(current_by_id) or len(expected_by_id) != EXPECTED_UNIT_COUNT:
+    if set(expected_by_id) != set(current_by_id) or len(expected_by_id) != len(mapping["units"]):
         raise ValueError("正式 source 与 OmegaT 稳定 ID 集合不兼容；不会重新导出覆盖。")
     for unit_id, current in current_by_id.items():
         baseline = expected_by_id[unit_id]
@@ -240,7 +231,7 @@ def _validate_existing_project(inputs: dict[str, Any]) -> dict[str, Any]:
     for relative, expected_hash in mapping["sourceFiles"].items():
         if sha256_bytes((ROOT / relative).read_bytes()) != expected_hash:
             raise ValueError(f"正式 YAML 在 OmegaT 基线之外发生变化：{relative}")
-    for po_name in PO_ORDER:
+    for po_name in po_order():
         source_path = PROJECT_DIR / "source" / po_name
         if sha256_bytes(source_path.read_bytes()) != mapping["sourcePoHashes"][po_name]:
             raise ValueError(f"source PO 已变化：{po_name}；不会自动覆盖。")
@@ -268,7 +259,7 @@ def prepare_full_project() -> dict[str, Any]:
     for name in ("source", "target", "tm", "dictionary", "omegat"):
         (PROJECT_DIR / name).mkdir(parents=True, exist_ok=True)
     mapping = _new_mapping(inputs)
-    for po_name in PO_ORDER:
+    for po_name in po_order():
         _write_text(PROJECT_DIR / "source" / po_name, render_po(inputs["grouped"][po_name]))
     _write_text(PROJECT_DIR / "omegat.project", _project_xml())
     _write_text(PROJECT_DIR / "omegat/filters.xml", _filters_xml())
@@ -392,12 +383,12 @@ def _write_progress_markdown(report: dict[str, Any]) -> None:
         f"- 已审有改：{counts['reviewed-modified']}",
         f"- 已过期：{counts['stale']}",
         f"- 未审：{counts['unreviewed']}",
-        f"- 12 项初始缺译中尚余：{report['initialMissingRemaining']}",
+        f"- 初始缺译中尚余：{report['initialMissingRemaining']}",
         "",
         "| PO 文件 | 总数 | 已审未改 | 已审有改 | stale | 未审 |",
         "|---|---:|---:|---:|---:|---:|",
     ]
-    for po_name in PO_ORDER:
+    for po_name in po_order():
         item = report["byPo"][po_name]
         lines.append(
             f"| {po_name} | {item['total']} | {item['reviewed-unchanged']} | "
@@ -417,7 +408,7 @@ def refresh_progress_reports() -> dict[str, Any]:
     status = review_status_report(ledger)
     po_for_id = {unit["id"]: unit["po"] for unit in mapping["units"]}
     by_po = {}
-    for po_name in PO_ORDER:
+    for po_name in po_order():
         entries = [entry for entry in ledger["entries"] if po_for_id[entry["unitId"]] == po_name]
         counts = Counter(entry["status"] for entry in entries)
         by_po[po_name] = {
@@ -447,12 +438,12 @@ def refresh_progress_reports() -> dict[str, Any]:
 def _target_entries(mapping: dict[str, Any]) -> dict[str, list[dict[str, str]]]:
     target_dir = PROJECT_DIR / "target"
     actual = sorted(path.name for path in target_dir.iterdir() if path.is_file())
-    if actual != sorted(PO_ORDER):
+    if actual != sorted(po_order()):
         raise ValueError(
-            f"target PO 必须恰好包含 8 个文件；当前为 {actual}。请在 OmegaT 中创建已译文档。"
+            f"target PO 必须完整对应当前版本的文件集合；当前为 {actual}。请在 OmegaT 中创建已译文档。"
         )
     result = {}
-    for po_name in PO_ORDER:
+    for po_name in po_order():
         entries = parse_po(target_dir / po_name)
         expected = {"units": [unit for unit in mapping["units"] if unit["po"] == po_name]}
         errors = validate_target_entries(expected, entries)
@@ -466,7 +457,7 @@ def modified_po_files(mapping: dict[str, Any], entries: dict[str, list[dict[str,
     baseline = {unit["id"]: unit["target"] for unit in mapping["units"]}
     return [
         po_name
-        for po_name in PO_ORDER
+        for po_name in po_order()
         if any(item["target"] != baseline[item["id"]] for item in entries[po_name])
     ]
 
@@ -620,10 +611,10 @@ def preview_full_writeback(
     mapping = inspection["mapping"]
     entries = inspection["entries"]
     version_notes_hash = sha256_bytes((ROOT / VERSION_NOTES_PATH).read_bytes())
-    selected = [name for name in PO_ORDER if name in set(selected_po)]
+    selected = [name for name in po_order() if name in set(selected_po)]
     if not selected:
         raise ValueError("没有选择任何已经逐条审完的 PO")
-    unknown = sorted(set(selected_po) - set(PO_ORDER))
+    unknown = sorted(set(selected_po) - set(po_order()))
     if unknown:
         raise ValueError(f"未知 PO：{unknown}")
     unselected_modified = [name for name in inspection["modifiedPo"] if name not in selected]
@@ -634,7 +625,7 @@ def preview_full_writeback(
         shutil.rmtree(candidate_root)
     candidate_root.mkdir(parents=True)
     baseline = {unit["id"]: unit for unit in mapping["units"]}
-    target = {item["id"]: item for po_name in PO_ORDER for item in entries[po_name]}
+    target = {item["id"]: item for po_name in po_order() for item in entries[po_name]}
     changes = []
     derived_changes = {}
     allowed_differences: dict[str, set[tuple[Any, ...]]] = {}
@@ -689,7 +680,7 @@ def preview_full_writeback(
     if sha256_bytes((ROOT / VERSION_NOTES_PATH).read_bytes()) != version_notes_hash:
         raise ValueError("版本说明在预览构建期间发生变化；请重新预览。")
     target_hashes = {
-        name: sha256_bytes((PROJECT_DIR / "target" / name).read_bytes()) for name in PO_ORDER
+        name: sha256_bytes((PROJECT_DIR / "target" / name).read_bytes()) for name in po_order()
     }
     selected_ids = {
         unit["id"] for unit in mapping["units"] if unit["po"] in selected
@@ -885,3 +876,7 @@ def rollback_applied_writeback(
     for relative, content in formal_files.items():
         (ROOT / relative).write_bytes(content)
     MAPPING_PATH.write_bytes(mapping_bytes)
+
+
+EXPECTED_PO_COUNTS = {name: len(units) for name, units in units_by_po(*full_inputs()[1:]).items()}
+EXPECTED_UNIT_COUNT = sum(EXPECTED_PO_COUNTS.values())

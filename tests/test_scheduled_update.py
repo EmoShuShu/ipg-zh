@@ -39,7 +39,7 @@ def test_changed_pdf_notifies_once_including_closed_prs(monkeypatch, tmp_path, r
             return SimpleNamespace(returncode=0, stdout="")
         if args[2] == "list":
             assert args[args.index("--state") + 1] == "all"
-            issues = [{"body": body.read_text(), "url": "https://github.com/owner/repo/pull/1"}] if existing else []
+            issues = [{"state": "CLOSED", "number": 1, "body": body.read_text(), "url": "https://github.com/owner/repo/pull/1"}] if existing else []
             return SimpleNamespace(stdout=json.dumps(issues))
         assert args[2] == "create"
         assert args[args.index("--body-file") + 1] == str(body)

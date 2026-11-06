@@ -219,7 +219,7 @@ def _choose_po() -> list[str] | None:
     print("\n检测到尚未回写修改的文件：")
     print("  " + ("、".join(modified) if modified else "无"))
     print("\n请选择已经逐条审完的文件：")
-    for index, name in enumerate(PO_ORDER, 1):
+    for index, name in enumerate(full_review.po_order(), 1):
         marker = "（有修改）" if name in modified else ""
         print(f"  {index}. {name}{marker}")
     print("直接回车采用自动检测结果；输入 a 选择全部；输入逗号分隔的编号；输入 q 取消。")
@@ -228,7 +228,7 @@ def _choose_po() -> list[str] | None:
         if not raw and modified:
             return modified
         try:
-            return parse_file_selection(raw, PO_ORDER) or None
+            return parse_file_selection(raw, full_review.po_order()) or None
         except ValueError as error:
             print(f"输入错误：{error}")
 
@@ -326,17 +326,20 @@ def run_menu(*, candidate_only: bool = False, test_runner=run_full_tests) -> int
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="交互式完成 IPG OmegaT 审校回写流程")
+    parser.add_argument("--project-root", type=Path, default=ROOT)
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--candidate-only", action="store_true", help="仅保留候选阅读文档，不生成 dist")
     mode.add_argument("--check-release", action="store_true", help="只读检查最终文件生成条件")
     mode.add_argument("--build-release", action="store_true", help="从已审源生成最终文件")
     args = parser.parse_args(argv)
     try:
-        if args.check_release:
-            return 0 if check_formal_release()["valid"] else 1
-        if args.build_release:
-            return 0 if finish_formal_release() is not None else 1
-        return run_menu(candidate_only=args.candidate_only)
+        from .project_context import project_context
+        with project_context(args.project_root):
+            if args.check_release:
+                return 0 if check_formal_release()["valid"] else 1
+            if args.build_release:
+                return 0 if finish_formal_release() is not None else 1
+            return run_menu(candidate_only=args.candidate_only)
     except KeyboardInterrupt:
         print("\n已取消。")
         return 130

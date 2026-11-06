@@ -9,6 +9,7 @@ import shutil
 import re
 
 from .core import ROOT
+from .update_pr import previous_review
 from .official_update import check_official_update
 from .snapshot import verify_snapshot
 
@@ -66,14 +67,13 @@ def notify_update(report: dict, body: Path, repo: str) -> str | None:
     if not re.fullmatch(r"[0-9a-f]{64}", digest) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
         raise ValueError("官方更新身份无效")
     branch = f"automation/ipg-{date}-{digest[:12]}"
-    # Include closed PRs so declining a candidate does not create daily duplicates.
-    result = subprocess.run(
-        ["gh", "pr", "list", "--repo", repo, "--head", branch, "--state", "all",
-         "--json", "url"], check=True, stdout=subprocess.PIPE, text=True,
-    )
-    existing = json.loads(result.stdout)
+    existing = previous_review(ROOT, repo, branch, retry_closed=os.environ.get("RETRY_CLOSED") == "true")
     if existing:
-        return existing[0]["url"]
+        print(f"Review status: {existing['status']}", flush=True)
+        if os.environ.get("GITHUB_STEP_SUMMARY"):
+            with Path(os.environ["GITHUB_STEP_SUMMARY"]).open("a", encoding="utf-8") as stream:
+                stream.write(f"\n更新审阅：{existing['status']} — {existing['url']}\n")
+        return existing["url"]
     remote = subprocess.run(["git", "ls-remote", "--exit-code", "--heads", "origin", branch],
                             cwd=ROOT, stdout=subprocess.PIPE, text=True)
     if remote.returncode != 2:

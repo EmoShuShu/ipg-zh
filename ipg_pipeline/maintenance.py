@@ -3,19 +3,66 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
+import uuid
+from pathlib import Path
+from .core import ROOT
+from .project_context import project_context
 
 from . import full_review
 from .review_assistant import prepare_or_continue
+from .transaction import restore_on_failure
+
+
+def prepare_new_version(confirm=input):
+    """Archive the complete old engineering directory, preserving all user files."""
+    project = full_review.PROJECT_DIR
+    if not project.exists():
+        return prepare_or_continue()
+    if not full_review.MAPPING_PATH.is_file():
+        raise ValueError("旧工程缺少版本映射，请先人工确认其身份；不会移动未知工程")
+    mapping = json.loads(full_review.MAPPING_PATH.read_text(encoding="utf-8"))
+    manifest = full_review.full_inputs()[0]
+    if mapping["releaseId"] == manifest["releaseId"]:
+        return prepare_or_continue()
+    archive = full_review.ROOT / "outputs/omegat-archive" / ("ipg-" + uuid.uuid4().hex)
+    answer = confirm(f"将旧 OmegaT 工程完整归档到 {archive}，并准备新版本工程？[y/N]：")
+    if answer.strip().casefold() not in {"y", "yes"}:
+        return {"cancelled": True}
+    paths = [full_review.REVIEW_LEDGER_PATH, full_review.TRANSLATION_NOTES_PATH,
+             full_review.REVIEW_ACTIONS_PATH, full_review.PROGRESS_JSON, full_review.PROGRESS_MARKDOWN,
+             full_review.TERMINOLOGY_JSON, full_review.TERMINOLOGY_MARKDOWN]
+    archive.parent.mkdir(parents=True, exist_ok=True)
+    project.rename(archive)
+    try:
+        with restore_on_failure(paths):
+            result = prepare_or_continue()
+    except BaseException:
+        if project.exists():
+            shutil.rmtree(project)
+        archive.rename(project)
+        raise
+    return {**result, "archivedProject": str(archive)}
 
 
 def _run(name, description, operation, argv=None):
     parser = argparse.ArgumentParser(prog=name, description=description)
     if name == "ipg-review-status":
         parser.add_argument("action", choices=["status"], nargs="?", default="status")
-    parser.parse_args(argv)
+    if name == "ipg-export-omegat":
+        parser.add_argument("--new-version", action="store_true", help="确认后完整归档旧版本工程，再创建新工程")
+    parser.add_argument("--project-root", type=Path, default=ROOT)
+    args = parser.parse_args(argv)
     try:
-        print(json.dumps(operation(), ensure_ascii=False, indent=2))
+        with project_context(args.project_root):
+            result = prepare_new_version() if getattr(args, "new_version", False) else operation()
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+            if result.get("cancelled"):
+                return 2
         return 0
+    except KeyboardInterrupt:
+        print("\n已取消。")
+        return 130
     except (OSError, ValueError, KeyError) as error:
         print(f"操作已停止：{error}")
         return 1

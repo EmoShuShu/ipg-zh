@@ -5,6 +5,11 @@ on:
     - cron: "0 6 * * *"
       timezone: "Asia/Shanghai"
   workflow_dispatch:
+    inputs:
+      retry_closed:
+        description: "重新打开已关闭的同一更新 PR（默认暂缓）"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -40,6 +45,7 @@ jobs:
       - name: Check official update and notify once
         env:
           GH_TOKEN: ${{ github.token }}
+          RETRY_CLOSED: ${{ inputs.retry_closed || false }}
         shell: bash
         run: |
           mkdir -p outputs/official-update

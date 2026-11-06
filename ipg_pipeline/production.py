@@ -79,6 +79,8 @@ def load_project(root: Path = ROOT) -> dict[str, Any]:
     if (sha256_bytes(evidence_path.read_bytes()) != migration["evidence"]["sha256"]
             or evidence["authority"] != expected_authority or expected_coverage != migration["coverage"]):
         raise ValueError("迁移完成证据哈希、来源或覆盖计数不一致。")
+    from .promotion import validate_lineage
+    lineage_paths = validate_lineage(root, evidence, manifest)
     official = authority["official"]
     pdf_dir = _contained(root, f"snapshots/official/{official['effectiveDate']}/{official['pdfSha256']}")
     pdfs = list(pdf_dir.glob("*.pdf"))
@@ -90,7 +92,7 @@ def load_project(root: Path = ROOT) -> dict[str, Any]:
     paths = [root / "src/ipg/current-release.txt", manifest_path, display_path, registry_path,
              ledger_path, migration_path, evidence_path, pdfs[0], legacy, root / VERSION_NOTES_PATH,
              *(release / name for name in names), *sorted((root / "schema").glob("*.schema.json"))]
-    hashes = _hashes(paths)
+    hashes = _hashes([*paths, *lineage_paths])
     # Re-read identity after capturing inputs, so a pointer/manifest race is fail-closed.
     if current_release_dir(root) != release or load_yaml(manifest_path) != manifest:
         raise ValueError("读取过程中当前版本身份发生变化。")

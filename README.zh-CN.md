@@ -109,7 +109,7 @@ python -m venv .venv
 
 ### 项目与报告位置
 
-- OmegaT 工程：`outputs/omegat-ipg-full/`，共 8 个 PO；
+- OmegaT 工程：`outputs/omegat-ipg-full/`，文件集合和单元数量由当前版本决定（目前 8 个 PO）；
 - 回写预览：工程内 `import-preview.json`、`import-preview.md`；
 - 审校进度：`outputs/review-status.json`、`outputs/review-status.md`；
 - 术语审计：`outputs/terminology-audit.json`、`outputs/terminology-audit.md`；
@@ -168,3 +168,22 @@ IPG 的完整版本标识、`releases/`、批注库、ID registry、PDF 解析�
 [维护约定](docs/maintenance-conventions.md)。
 早期 P0—P5 命令和首版冻结记录仅用于追溯，不是第二套日常入口。
 旧说明存档见 [对齐前维护记录](docs/review/2026-11-06-before-maintenance-alignment.md)。
+
+## 接入新的官方版本
+
+在更新 Draft PR 分支上先阅读 `snapshots/updates/.../reports/review.md` 和 `update.json`，
+然后运行（把 `<候选目录>` 替换为实际快照路径）：
+
+```powershell
+python scripts/promote_official_update.py --snapshot <候选目录>
+python scripts/promote_official_update.py --snapshot <候选目录> --apply
+python scripts/export_omegat.py --new-version
+```
+
+第一条只检查与预览；第二条在 `[y/N]` 确认后切换新审校基线；第三条确认后完整归档
+旧 OmegaT 工程并创建新工程。若有身份、注解锚点或批注丢失问题，先修正更新 override，
+重新生成候选，不能跳过。英文变化和新增内容仍需人工审校。
+
+新旧 release 和账本并存，迁移证据记录继承关系。切换失败恢复当前指针、注册表和本次新增文件；
+旧 dist 保持不变，等全文审校满足发布条件后才重新生成。
+检查、准备和助手命令都可通过 `--project-root` 明确指定仓库。
