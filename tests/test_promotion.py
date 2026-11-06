@@ -113,3 +113,25 @@ def test_new_engineering_failure_restores_old_directory(repo, monkeypatch):
     with project_context(repo), pytest.raises(KeyboardInterrupt):
         maintenance.prepare_new_version(lambda prompt: "y")
     assert {p.relative_to(old): p.read_bytes() for p in old.rglob("*") if p.is_file()} == before
+
+
+def test_ambiguous_identity_blocks_promotion(repo):
+    def change(parsed):
+        parsed["document"]["sections"][0]["components"][0]["groups"][0]["blocks"][0]["text"]["en"] = "TEST ONLY changed authoritative English"
+    report = _check(repo, payload=PDF + b"AMBI GUOUS", mutate=change)
+    before = protected(repo)
+    with pytest.raises(ValueError, match="未决问题"):
+        promotion.promote(repo, repo / report["snapshot"], confirm=lambda report: True)
+    assert protected(repo) == before
+
+
+def test_second_update_keeps_lineage_without_recursively_embedding_archives(repo):
+    first = promotion.promote(repo, snapshot(repo), confirm=lambda report: True)
+    report = _check(repo, payload=PDF + b"SECOND UPDATE")
+    source = repo / report["snapshot"]
+    evidence = promotion.verify_snapshot(source)
+    assert not any(name.startswith("snapshots/updates/") for name in evidence["context"]["baseFiles"])
+    second = promotion.promote(repo, source, confirm=lambda report: True)
+    assert second["baseReleaseId"] == first["releaseId"]
+    assert validate_project(repo, profile="candidate")["valid"]
+    assert not validate_project(repo, profile="release")["valid"]
