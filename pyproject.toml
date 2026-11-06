@@ -14,6 +14,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+dev = ["pytest>=8.3,<9"]
 test = ["pytest>=8.3,<9"]
 
 [project.scripts]
@@ -26,6 +27,10 @@ ipg-pilot = "ipg_pipeline.cli:main"
 ipg-p3 = "ipg_pipeline.p3:main"
 ipg-p4 = "ipg_pipeline.p4:main"
 ipg-review = "ipg_pipeline.review_assistant:main"
+ipg-review-workflow = "ipg_pipeline.review_assistant:main"
+ipg-export-omegat = "ipg_pipeline.maintenance:export_main"
+ipg-review-status = "ipg_pipeline.maintenance:status_main"
+ipg-audit-terminology = "ipg_pipeline.maintenance:terminology_main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["ipg_pipeline"]

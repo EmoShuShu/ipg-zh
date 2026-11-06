@@ -208,7 +208,7 @@ def build_project(root: Path = ROOT, *, profile: str, rehearsal: bool = False,
     if profile == "release" and not rehearsal and output is not None:
         raise ValueError("正式构建固定写入 dist；自定义输出仅限 candidate / rehearsal。")
     destination = root / "dist" if profile == "release" and not rehearsal else candidate_destination(
-        root, output or root / "outputs/p4-6" / ("release-rehearsal" if rehearsal else "candidate"))
+        root, output or root / "outputs" / ("release-rehearsal" if rehearsal else "candidate"))
     project = load_project(root)
     validation = _validate_project(project, profile=profile)
     if not validation["valid"]:

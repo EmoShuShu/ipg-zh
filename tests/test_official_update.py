@@ -23,6 +23,11 @@ PDF_URL = "https://media.wizards.com/ContentResources/WPN/test-only.pdf"
 PDF = b"%PDF-1.7\nTEST ONLY synthetic downloader fixture, parser explicitly injected"
 
 
+@pytest.fixture(autouse=True)
+def no_retry_delays(monkeypatch):
+    monkeypatch.setattr(update.time, "sleep", lambda seconds: None)
+
+
 def _write(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

@@ -39,9 +39,9 @@ def test_launcher_has_crlf_and_works_outside_project(tmp_path):
     if os.name != "nt":
         pytest.skip("native CMD launch is Windows-only")
     result = subprocess.run(["cmd.exe", "/d", "/c", str(ROOT / "审校助手.cmd")], cwd=tmp_path,
-                            input="4\n", encoding="utf-8", capture_output=True, timeout=30)
+                            input="q\n\n", encoding="utf-8", capture_output=True, timeout=30)
     assert result.returncode == 0
-    assert "IPG 全文审校助手" in result.stdout
+    assert "IPG 中文翻译工作流" in result.stdout
     assert not result.stderr
 
 

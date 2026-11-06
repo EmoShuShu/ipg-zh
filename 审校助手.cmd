@@ -1,13 +1,26 @@
 @echo off
 chcp 65001 >nul
-cd /d "%~dp0"
 set "PYTHONUTF8=1"
-set "IPG_PYTHON=%~dp0.venv\Scripts\python.exe"
-if not exist "%IPG_PYTHON%" (
-  echo Project Python environment not found: %IPG_PYTHON%
-  echo Please follow README to install the local environment.
+cd /d "%~dp0"
+
+if not exist ".venv\Scripts\python.exe" (
+  echo Python environment not found: .venv\Scripts\python.exe
+  echo Please follow the local setup instructions in README.zh-CN.md.
+  echo.
   pause
   exit /b 1
 )
-"%IPG_PYTHON%" -m ipg_pipeline.review_assistant
-if errorlevel 1 pause
+
+".venv\Scripts\python.exe" scripts\review_workflow.py
+set "REVIEW_RESULT=%ERRORLEVEL%"
+
+echo.
+if "%REVIEW_RESULT%"=="0" (
+  echo Review workflow completed.
+) else if "%REVIEW_RESULT%"=="2" (
+  echo No formal changes were made.
+) else (
+  echo Review workflow did not complete. See the message above.
+)
+pause
+exit /b %REVIEW_RESULT%
