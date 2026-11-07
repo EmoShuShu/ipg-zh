@@ -146,7 +146,7 @@ python -m venv .venv
 ```
 
 普通候选默认在 `outputs/candidate/`，正式演练在 `outputs/release-rehearsal/`；
-不再使用含开发阶段编号的默认目录。已有旧输出不会被移动或删除。
+不再使用含开发阶段编号的默认目录。已有冻结证据保留；重复生成行为见文末说明。
 
 ## GitHub 自动检查与发布
 
@@ -196,3 +196,20 @@ python scripts/export_omegat.py --new-version
 `validate.py`、`build.py` 省略参数时默认正式校验/构建；未满足全文条件时停止并保留旧 dist。
 `build.py --output-dir` 与原 `--output` 等价，仅用于候选或演练输出。
 `validate_output.py` 默认检查 dist；显式相对输入路径也以 `--project-root` 为基准。
+
+
+## 重复运行与结果确认
+
+导出工程、查看进度、术语检查及构建命令默认显示简短结果；需要完整机器可读结果时加 `--json`。
+进度报告保留原生数据，并增加共同的 `maintenance` 字段，含当前版本、已审/待审/缺译数量和工程状态。
+官方检查的 Actions 摘要也采用相同格式；运行的网页诊断附件保留 30 天。
+
+候选和正式演练可以重复运行：内容相同保留原文件和时间戳；变化时完整归档旧结果到
+`outputs/build-history/` 后生成新结果。若要严格保留指定目录，可加 `--keep-existing`；
+目录含用户额外文件时会停止，不会清空。相同内容的正式构建也不会重写 dist。
+
+`validate_output.py` 默认检查结构和当前版本；检查历史文件须明确使用
+`python scripts/validate_output.py --input <历史文件> --schema-only`，这不等于通过正式发布检查。
+术语检查默认只供参考；需要严格返回失败状态时，可显式加 `--fail-on-errors`。
+准备或回写失败、Ctrl+C 会恢复本批状态；确认期间输入发生变化则要求重新预览。
+完整约定和保留差异见 [配套维护约定](docs/maintenance-conventions.md)。

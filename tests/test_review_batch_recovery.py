@@ -30,11 +30,14 @@ def test_batch_failure_preserves_old_candidate_and_all_review_state(
     _write_po(project / "target/appendix-b.po", entries)
     candidate = root / "outputs/current-candidate"
     if existing_candidate:
-        candidate.mkdir()
-        (candidate / "IPG.md").write_bytes(b"previous reader document\r\n")
-        (candidate / "rules.json").write_bytes(b"previous rules\n")
-        (candidate / "evidence").mkdir()
-        (candidate / "evidence/user.txt").write_bytes(b"keep this too")
+        if failure == "publish":
+            full_review.build_current_candidate()
+        else:
+            candidate.mkdir()
+            (candidate / "IPG.md").write_bytes(b"previous reader document\r\n")
+            (candidate / "rules.json").write_bytes(b"previous rules\n")
+            (candidate / "evidence").mkdir()
+            (candidate / "evidence/user.txt").write_bytes(b"keep this too")
     directories = [root / "src", root / "review", project, candidate]
     before = {path: _files(path) for path in directories}
     reports = [full_review.PROGRESS_JSON, full_review.PROGRESS_MARKDOWN,
@@ -66,12 +69,13 @@ def test_batch_failure_preserves_old_candidate_and_all_review_state(
             return original()
         monkeypatch.setattr(review_assistant, "validate_current_state", fail_final)
     elif failure == "publish":
-        original = Path.rename
+        from ipg_pipeline import candidate_publication
+        original = candidate_publication.os.replace
         def fail_publish(path, target):
             if path.name == "reading" and target == candidate:
                 raise OSError("injected directory publication failure")
             return original(path, target)
-        monkeypatch.setattr(Path, "rename", fail_publish)
+        monkeypatch.setattr(candidate_publication.os, "replace", fail_publish)
     with pytest.raises((ValueError, OSError, KeyboardInterrupt), match="injected"):
         review_assistant.complete_review_batch(
             ["appendix-b.po"], lambda preview: True,
@@ -126,21 +130,23 @@ def test_revised_body_annotation_and_filled_missing_targets_can_complete_batch(i
 
 
 def test_failed_directory_restore_keeps_recoverable_old_candidate(isolated_repo, monkeypatch):
+    from ipg_pipeline import candidate_publication
     root, _ = isolated_repo
     destination = root / "outputs/current-candidate"
     staged = root / "outputs/staged"
     destination.mkdir(parents=True)
     staged.mkdir()
     (destination / "IPG.md").write_bytes(b"original reader output")
+    (staged / "IPG.md").write_bytes(b"new reader output")
     original = Path.rename
     def fail_rename(path, target):
         if target == destination:
-            raise OSError("injected publish and restore failure")
+            raise OSError("injected restore failure")
         return original(path, target)
     monkeypatch.setattr(Path, "rename", fail_rename)
+    monkeypatch.setattr(candidate_publication.os, "replace", lambda *args: (_ for _ in ()).throw(OSError("injected publish failure")))
     with pytest.raises(ValueError, match="人工恢复"):
         full_review._replace_candidate(staged, destination)
-    backup = destination.with_name(".current-candidate-previous")
+    backup = next((root / 'outputs/build-history').iterdir())
     assert (backup / "IPG.md").read_bytes() == b"original reader output"
-    with pytest.raises(ValueError, match="不会覆盖"):
-        full_review._replace_candidate(staged, destination)
+    assert not destination.exists()

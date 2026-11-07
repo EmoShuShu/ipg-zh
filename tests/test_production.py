@@ -202,8 +202,11 @@ def test_nonformal_build_never_writes_dist_and_preserves_existing_outputs(rehear
     report = production.build_project(root, **kwargs, output=destination)
     assert report["kind"] == ("release-rehearsal" if kind == "rehearsal" else "candidate")
     original = {p.name: p.read_bytes() for p in destination.iterdir()}
+    times = {p.name: p.stat().st_mtime_ns for p in destination.iterdir()}
+    assert production.build_project(root, **kwargs, output=destination)["publication"]["status"] == "unchanged"
+    assert {p.name: p.stat().st_mtime_ns for p in destination.iterdir()} == times
     with pytest.raises(ValueError, match="目录已存在"):
-        production.build_project(root, **kwargs, output=destination)
+        production.build_project(root, **kwargs, output=destination, keep_existing=True)
     assert {p.name: p.read_bytes() for p in destination.iterdir()} == original
     assert _dist_bytes(root) == before
 
@@ -408,3 +411,36 @@ def test_output_command_resolves_current_manifest_without_requiring_review_ledge
     assert production.validate_output(output, root)["valid"]
     assert production.output_main(["--project-root", str(root)]) == 1
     assert "输出 releaseId 与当前 release 指针不一致" in capsys.readouterr().out
+
+
+def test_identical_formal_build_preserves_file_timestamps(rehearsal_repo):
+    root = rehearsal_repo
+    production.build_project(root, profile='release')
+    before = {p.name: (p.read_bytes(), p.stat().st_mtime_ns) for p in (root / 'dist').iterdir()}
+    assert production.build_project(root, profile='release')['publication']['status'] == 'unchanged'
+    assert {p.name: (p.read_bytes(), p.stat().st_mtime_ns) for p in (root / 'dist').iterdir()} == before
+
+
+def test_changed_candidate_archives_previous_receipt_and_artifacts(rehearsal_repo):
+    root = rehearsal_repo
+    production.build_project(root, profile='candidate')
+    destination = root / 'outputs/candidate'
+    before = {p.name: p.read_bytes() for p in destination.iterdir()}
+    notes = root / 'src/ipg/version-notes.md'
+    notes.write_text(notes.read_text() + '\nSynthetic new notes\n')
+    result = production.build_project(root, profile='candidate')
+    archive = Path(result['publication']['archived'])
+    assert {p.name: p.read_bytes() for p in archive.iterdir()} == before
+    assert 'Synthetic new notes' in (destination / 'IPG.md').read_text()
+    assert not (root / 'dist').exists()
+
+
+def test_historical_output_validation_requires_explicit_schema_only(rehearsal_repo):
+    root = rehearsal_repo
+    production.build_project(root, profile='candidate')
+    path = root / 'outputs/candidate/rules.json'
+    data = load_json(path); data['releaseId'] = 'ipg-other__ann-fixture__zh-test'
+    path.write_text(json.dumps(data))
+    args = ['--project-root',str(root),'--input',str(path)]
+    assert production.output_main(args) == 1
+    assert production.output_main(args + ['--schema-only']) == 0
