@@ -255,6 +255,8 @@ def _show_progress() -> None:
     print(f"  失效：{counts['stale']}")
     print(f"  未审：{counts['unreviewed']}")
     print(f"  详细报告：{PROGRESS_MARKDOWN}；{PROGRESS_JSON}")
+    if report.get("engineering", {}).get("status") == "needs-attention":
+        print("  工程需处理：" + report["engineering"]["message"])
     print(f"  术语报告：{TERMINOLOGY_MARKDOWN}；{TERMINOLOGY_JSON}")
 
 
@@ -287,7 +289,10 @@ def run_menu(*, candidate_only: bool = False, test_runner=run_full_tests) -> int
     while True:
         choice = input("\n请选择：").strip().casefold()
         if choice == "1":
-            result = prepare_or_continue()
+            from .maintenance import prepare_new_version
+            result = prepare_new_version(confirm=input)
+            if result.get("cancelled"):
+                return 2
             action = "已创建" if result["project"]["created"] else "已验证，可继续使用"
             print(f"\nOmegaT 项目{action}：{PROJECT_DIR / 'omegat.project'}")
             print("完成一批审校后，请在 OmegaT 中选择“项目 → 创建已译文档”。")
