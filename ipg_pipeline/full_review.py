@@ -388,6 +388,9 @@ def _write_progress_markdown(report: dict[str, Any]) -> None:
         "| PO 文件 | 总数 | 已审未改 | 已审有改 | stale | 未审 |",
         "|---|---:|---:|---:|---:|---:|",
     ]
+    engineering = report.get("engineering", {})
+    if engineering.get("status") != "ready":
+        lines[8:8] = ["- OmegaT 工程：" + engineering.get("message", "尚未准备；进度按当前源与账本计算"), ""]
     for po_name in po_order():
         item = report["byPo"][po_name]
         lines.append(
@@ -398,10 +401,27 @@ def _write_progress_markdown(report: dict[str, Any]) -> None:
 
 
 def refresh_progress_reports() -> dict[str, Any]:
-    mapping = _validate_existing_project(validate_repository_inputs())
+    inputs = validate_repository_inputs()
+    mapping = _new_mapping(inputs)
+    engineering = {"status": "not-prepared"}
+    if PROJECT_DIR.exists():
+        try:
+            baseline = _validate_existing_project(inputs)
+            mapping["initialMissingUnitIds"] = baseline["initialMissingUnitIds"]
+            engineering = {"status": "ready"}
+        except (ValueError, OSError, KeyError) as error:
+            engineering = {"status": "needs-attention", "message": str(error)}
+    existing = load_json(REVIEW_LEDGER_PATH) if REVIEW_LEDGER_PATH.exists() else None
+    if existing is not None:
+        errors = validate_schema(existing, ROOT / "schema/review-ledger.schema.json")
+        ids = [entry["unitId"] for entry in existing.get("entries", [])]
+        if (errors or len(ids) != len(set(ids)) or set(ids) != {unit["id"] for unit in mapping["units"]}
+                or existing.get("releaseId") != mapping["releaseId"]
+                or existing.get("translationRevision") != mapping["translationRevision"]):
+            raise ValueError("现有审校账本与当前源不兼容；未修改账本，请先处理版本或单元差异。")
     ledger = refresh_review_ledger(
         _current_units(mapping),
-        load_json(REVIEW_LEDGER_PATH) if REVIEW_LEDGER_PATH.exists() else None,
+        existing,
         release_id=mapping["releaseId"],
         translation_revision=mapping["translationRevision"],
     )
@@ -422,6 +442,7 @@ def refresh_progress_reports() -> dict[str, Any]:
         **status,
         "releaseId": mapping["releaseId"],
         "translationRevision": mapping["translationRevision"],
+        "engineering": engineering,
         "initialMissingTotal": len(mapping["initialMissingUnitIds"]),
         "initialMissingRemaining": sum(
             not unit["target"]

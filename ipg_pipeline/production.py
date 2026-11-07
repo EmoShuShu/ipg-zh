@@ -298,7 +298,7 @@ def _parser(name: str) -> argparse.ArgumentParser:
 
 def validate_main(argv: list[str] | None = None) -> int:
     parser = _parser("ipg-validate")
-    parser.add_argument("--profile", required=True, choices=("candidate", "release"))
+    parser.add_argument("--profile", default="release", choices=("candidate", "release"))
     args = parser.parse_args(argv)
     try:
         report = validate_project(args.project_root, profile=args.profile)
@@ -311,9 +311,9 @@ def validate_main(argv: list[str] | None = None) -> int:
 
 def build_main(argv: list[str] | None = None) -> int:
     parser = _parser("ipg-build")
-    parser.add_argument("--profile", required=True, choices=("candidate", "release"))
+    parser.add_argument("--profile", default="release", choices=("candidate", "release"))
     parser.add_argument("--rehearsal", action="store_true")
-    parser.add_argument("--output", type=Path)
+    parser.add_argument("--output", "--output-dir", dest="output", type=Path)
     args = parser.parse_args(argv)
     try:
         output = args.project_root / args.output if args.output else None
@@ -331,7 +331,7 @@ def output_main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     try:
         _, manifest = _current_manifest(args.project_root)
-        path = args.input or args.project_root / "dist/rules.json"
+        path = args.project_root / (args.input or Path("dist/rules.json"))
         report = validate_output(path, args.project_root)
         if report["valid"] and load_json(path)["releaseId"] != manifest["releaseId"]:
             report["valid"] = False

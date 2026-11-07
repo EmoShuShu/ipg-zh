@@ -14,8 +14,9 @@ from .review_assistant import prepare_or_continue
 from .transaction import restore_on_failure
 
 
-def prepare_new_version(confirm=input):
+def prepare_new_version(confirm=None):
     """Archive the complete old engineering directory, preserving all user files."""
+    confirm = input if confirm is None else confirm
     project = full_review.PROJECT_DIR
     if not project.exists():
         return prepare_or_continue()
@@ -25,22 +26,32 @@ def prepare_new_version(confirm=input):
     manifest = full_review.full_inputs()[0]
     if mapping["releaseId"] == manifest["releaseId"]:
         return prepare_or_continue()
+    if project.is_symlink() or project.is_junction():
+        raise ValueError("旧工程不能是链接")
     archive = full_review.ROOT / "outputs/omegat-archive" / ("ipg-" + uuid.uuid4().hex)
+    # Recheck the source identity and bytes after the user confirms.
+    protected = {p: p.read_bytes() for name in ("src", "schema")
+                 for p in (full_review.ROOT / name).rglob("*") if p.is_file()}
     answer = confirm(f"将旧 OmegaT 工程完整归档到 {archive}，并准备新版本工程？[y/N]：")
     if answer.strip().casefold() not in {"y", "yes"}:
         return {"cancelled": True}
+    fresh = {p: p.read_bytes() for name in ("src", "schema")
+             for p in (full_review.ROOT / name).rglob("*") if p.is_file()}
+    if fresh != protected:
+        raise ValueError("确认期间版本或源文件发生变化，未移动旧工程")
     paths = [full_review.REVIEW_LEDGER_PATH, full_review.TRANSLATION_NOTES_PATH,
              full_review.REVIEW_ACTIONS_PATH, full_review.PROGRESS_JSON, full_review.PROGRESS_MARKDOWN,
              full_review.TERMINOLOGY_JSON, full_review.TERMINOLOGY_MARKDOWN]
     archive.parent.mkdir(parents=True, exist_ok=True)
-    project.rename(archive)
     try:
+        project.rename(archive)
         with restore_on_failure(paths):
             result = prepare_or_continue()
     except BaseException:
-        if project.exists():
-            shutil.rmtree(project)
-        archive.rename(project)
+        if archive.exists():
+            if project.exists():
+                shutil.rmtree(project)
+            archive.rename(project)
         raise
     return {**result, "archivedProject": str(archive)}
 

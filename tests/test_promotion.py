@@ -135,3 +135,21 @@ def test_second_update_keeps_lineage_without_recursively_embedding_archives(repo
     assert second["baseReleaseId"] == first["releaseId"]
     assert validate_project(repo, profile="candidate")["valid"]
     assert not validate_project(repo, profile="release")["valid"]
+
+
+
+def test_interrupt_immediately_after_archiving_restores_old_engineering(repo, monkeypatch):
+    old = repo / "outputs/omegat-ipg-full"
+    (old / "omegat").mkdir()
+    (old / "omegat/full-review.mapping.json").write_text('{"releaseId":"old-version"}')
+    before = {p.relative_to(old): p.read_bytes() for p in old.rglob("*") if p.is_file()}
+    original = Path.rename
+    def rename(path, destination):
+        result = original(path, destination)
+        if path == old:
+            raise KeyboardInterrupt()
+        return result
+    monkeypatch.setattr(Path, "rename", rename)
+    with project_context(repo), pytest.raises(KeyboardInterrupt):
+        maintenance.prepare_new_version(lambda _: "y")
+    assert {p.relative_to(old): p.read_bytes() for p in old.rglob("*") if p.is_file()} == before

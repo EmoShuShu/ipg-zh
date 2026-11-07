@@ -327,14 +327,15 @@ def test_scripts_are_usable_from_outside_repository(entry, tmp_path):
 
 def test_cli_profiles_output_validation_and_release_rehearsal(rehearsal_repo, capsys):
     root = rehearsal_repo
-    for function in (production.validate_main, production.build_main):
-        with pytest.raises(SystemExit): function(["--project-root", str(root)])
+    assert production.validate_main(["--project-root", str(root)]) == 0
     assert production.validate_main(["--project-root", str(root), "--profile", "release"]) == 0
     assert production.build_main(["--project-root", str(root), "--profile", "release", "--rehearsal"]) == 0
     assert not (root / "dist").exists()
     assert production.output_main(["--project-root", str(root), "--input", str(root / "outputs/release-rehearsal/rules.json")]) == 0
     assert production.output_main(["--project-root", str(root)]) == 1
     assert "输出检查已停止" in capsys.readouterr().out
+    assert production.build_main(["--project-root", str(root)]) == 0
+    assert production.output_main(["--project-root", str(root)]) == 0
 
 
 def test_publication_never_exposes_partly_updated_files(rehearsal_repo, monkeypatch):

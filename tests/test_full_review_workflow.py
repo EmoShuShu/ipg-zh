@@ -379,3 +379,67 @@ def test_failed_post_writeback_check_rolls_back_yaml_and_does_not_update_ledger(
     assert formal.read_bytes() == before
     ledger = json.loads((root / "review/status/zh-r0001.json").read_text(encoding="utf-8"))
     assert {entry["status"] for entry in ledger["entries"]} == {"unreviewed"}
+
+
+def test_progress_before_engineering_uses_source_without_creating_state(isolated_repo):
+    root, project = isolated_repo
+    before = {p: p.read_bytes() for p in (root / 'src').rglob('*') if p.is_file()}
+    report = full_review.refresh_progress_reports()
+    assert report['total'] == 1007 and report['engineering']['status'] == 'not-prepared'
+    assert report['counts']['unreviewed'] == 1007
+    assert not project.exists() and not full_review.REVIEW_LEDGER_PATH.exists()
+    assert all(p.read_bytes() == data for p, data in before.items())
+
+
+def test_progress_with_old_engineering_reports_current_ledger_without_overwrite(isolated_repo):
+    root, project = isolated_repo
+    full_review.prepare_full_project(); full_review.initialize_full_review_state()
+    mapping = json.loads(full_review.MAPPING_PATH.read_text())
+    mapping['releaseId'] = 'old-version'
+    full_review.MAPPING_PATH.write_text(json.dumps(mapping))
+    before = {p: p.read_bytes() for name in ('src', 'review', 'outputs/omegat-ipg-full') for p in (root / name).rglob('*') if p.is_file()}
+    report = full_review.refresh_progress_reports()
+    assert report['total'] == 1007 and report['engineering']['status'] == 'needs-attention'
+    assert all(p.read_bytes() == data for p, data in before.items())
+
+
+def test_progress_rejects_incompatible_ledger_without_repair(isolated_repo):
+    full_review.prepare_full_project(); full_review.initialize_full_review_state()
+    ledger = json.loads(full_review.REVIEW_LEDGER_PATH.read_text())
+    ledger['entries'][0]['unitId'] = 'unknown-id'
+    full_review.REVIEW_LEDGER_PATH.write_text(json.dumps(ledger))
+    before = full_review.REVIEW_LEDGER_PATH.read_bytes()
+    with pytest.raises(ValueError, match='不兼容'):
+        full_review.refresh_progress_reports()
+    assert full_review.REVIEW_LEDGER_PATH.read_bytes() == before
+
+
+def test_menu_new_engineering_cancel_preserves_user_files(isolated_repo, monkeypatch):
+    root, project = isolated_repo
+    full_review.prepare_full_project(); full_review.initialize_full_review_state()
+    mapping = json.loads(full_review.MAPPING_PATH.read_text())
+    mapping['releaseId'] = 'old-version'
+    full_review.MAPPING_PATH.write_text(json.dumps(mapping))
+    before = {p: p.read_bytes() for p in project.rglob('*') if p.is_file()}
+    answers = iter(['1', 'n'])
+    monkeypatch.setattr('builtins.input', lambda _: next(answers))
+    assert review_assistant.run_menu() == 2
+    assert all(p.read_bytes() == data for p, data in before.items())
+    assert not (root / 'outputs/omegat-archive').exists()
+
+
+def test_archive_rejects_source_changes_during_confirmation(isolated_repo):
+    from ipg_pipeline import maintenance
+    root, project = isolated_repo
+    full_review.prepare_full_project(); full_review.initialize_full_review_state()
+    mapping = json.loads(full_review.MAPPING_PATH.read_text()); mapping['releaseId'] = 'old-version'
+    full_review.MAPPING_PATH.write_text(json.dumps(mapping))
+    before = {p: p.read_bytes() for p in project.rglob('*') if p.is_file()}
+    def confirm(_):
+        path = root / 'src/ipg/version-notes.md'
+        path.write_text(path.read_text() + '\nUSER EDIT\n')
+        return 'y'
+    with pytest.raises(ValueError, match='确认期间'):
+        maintenance.prepare_new_version(confirm)
+    assert all(p.read_bytes() == data for p, data in before.items())
+    assert not (root / 'outputs/omegat-archive').exists()
