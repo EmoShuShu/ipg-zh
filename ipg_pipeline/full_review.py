@@ -58,6 +58,8 @@ TERMINOLOGY_MARKDOWN = ROOT / "outputs/terminology-audit.md"
 
 
 def _write_text(path: Path, content: str) -> None:
+    if path.is_file() and path.read_bytes() == content.encode("utf-8"):
+        return
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(content, encoding="utf-8", newline="\n")
 
@@ -287,6 +289,12 @@ def _current_units(mapping: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def initialize_full_review_state() -> dict[str, Any]:
+    from .transaction import restore_on_failure
+    with restore_on_failure([REVIEW_LEDGER_PATH, TRANSLATION_NOTES_PATH, REVIEW_ACTIONS_PATH]):
+        return _initialize_full_review_state()
+
+
+def _initialize_full_review_state() -> dict[str, Any]:
     """Create current review state without importing P2 demonstration data."""
     mapping = _validate_existing_project(validate_repository_inputs())
     existing = load_json(REVIEW_LEDGER_PATH) if REVIEW_LEDGER_PATH.exists() else None
@@ -451,6 +459,9 @@ def refresh_progress_reports() -> dict[str, Any]:
         ),
         "byPo": by_po,
     }
+    from .maintenance_report import progress
+    report["maintenance"] = progress("IPG", mapping["releaseId"], report["counts"], by_po,
+                                     sum(not unit["target"].strip() for unit in mapping["units"]), engineering)
     _write_json(PROGRESS_JSON, report)
     _write_progress_markdown(report)
     return report
@@ -821,26 +832,14 @@ def validate_current_state() -> dict[str, Any]:
     return {"candidate": candidate, "release": release}
 
 
-def _replace_candidate(staged: Path, destination: Path) -> None:
+def _replace_candidate(staged: Path, destination: Path) -> dict[str, Any]:
     """Replace a complete candidate directory, retaining a recoverable old copy."""
     candidate_destination(ROOT, destination)
     backup = destination.with_name(f".{destination.name}-previous")
     if backup.exists():
         raise ValueError(f"候选恢复备份尚未处理，不会覆盖：{backup}")
-    if destination.exists():
-        destination.rename(backup)
-    try:
-        staged.rename(destination)
-    except BaseException:
-        if backup.exists():
-            try:
-                backup.rename(destination)
-            except OSError as error:
-                raise ValueError(f"旧候选完整保存在 {backup}，请人工恢复。") from error
-        raise
-    if backup.exists():
-        # A cleanup failure must not turn a successful commit into a rollback.
-        shutil.rmtree(backup, ignore_errors=True)
+    from .candidate_publication import publish_candidate
+    return publish_candidate(staged, destination, ROOT / "outputs/build-history")
 
 
 def build_current_candidate(

@@ -98,10 +98,22 @@ def _write_preview_markdown(preview: dict[str, Any]) -> None:
 
 
 def prepare_or_continue() -> dict[str, Any]:
-    project = prepare_full_project()
-    initialize_full_review_state()
-    progress = refresh_progress_reports()
-    terminology = run_nonblocking_terminology_audit()
+    from .transaction import restore_on_failure
+    import shutil
+    existed = PROJECT_DIR.exists()
+    paths = [full_review.REVIEW_LEDGER_PATH, full_review.TRANSLATION_NOTES_PATH,
+             full_review.REVIEW_ACTIONS_PATH, full_review.PROGRESS_JSON, full_review.PROGRESS_MARKDOWN,
+             full_review.TERMINOLOGY_JSON, full_review.TERMINOLOGY_MARKDOWN]
+    try:
+        with restore_on_failure(paths):
+            project = prepare_full_project()
+            initialize_full_review_state()
+            progress = refresh_progress_reports()
+            terminology = run_nonblocking_terminology_audit()
+    except BaseException:
+        if not existed and PROJECT_DIR.exists():
+            shutil.rmtree(PROJECT_DIR)
+        raise
     return {"project": project, "progress": progress, "terminology": terminology}
 
 
@@ -247,17 +259,8 @@ def _confirm(preview: dict[str, Any]) -> bool:
 
 def _show_progress() -> None:
     report = refresh_progress_reports()
-    counts = report["counts"]
-    print("\n当前审校进度：")
-    print(f"  总单元：{report['total']}")
-    print(f"  已审未改：{counts['reviewed-unchanged']}")
-    print(f"  已审有改：{counts['reviewed-modified']}")
-    print(f"  失效：{counts['stale']}")
-    print(f"  未审：{counts['unreviewed']}")
-    print(f"  详细报告：{PROGRESS_MARKDOWN}；{PROGRESS_JSON}")
-    if report.get("engineering", {}).get("status") == "needs-attention":
-        print("  工程需处理：" + report["engineering"]["message"])
-    print(f"  术语报告：{TERMINOLOGY_MARKDOWN}；{TERMINOLOGY_JSON}")
+    from .maintenance_report import print_progress
+    print_progress(report["maintenance"], PROGRESS_MARKDOWN)
 
 
 

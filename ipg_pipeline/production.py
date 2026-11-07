@@ -179,6 +179,9 @@ def _publish_directory(staged: Path, destination: Path, temporary: Path) -> dict
             (not destination.is_dir() or {p.name for p in destination.iterdir()} != set(FINAL_FILES)
              or any(not p.is_file() or p.is_symlink() for p in destination.iterdir()))):
         raise ValueError("dist 含非预期文件或链接；不会覆盖，请人工检查。")
+    if destination.exists() and all((destination / file).read_bytes() == (staged / file).read_bytes() for file in FINAL_FILES):
+        return {"unit": "whole-directory", "status": "unchanged", "rollbackOnError": True,
+                "kernelRenameExchange": False, "briefAbsentPathWindow": False}
     # A failed restore must survive TemporaryDirectory cleanup and process exit.
     backup = temporary.with_name(temporary.name + "-previous-dist")
     if destination.exists():
@@ -203,7 +206,7 @@ def _publish_directory(staged: Path, destination: Path, temporary: Path) -> dict
 
 
 def build_project(root: Path = ROOT, *, profile: str, rehearsal: bool = False,
-                  output: Path | None = None) -> dict[str, Any]:
+                  output: Path | None = None, keep_existing: bool = False) -> dict[str, Any]:
     root = root.resolve()
     if profile not in {"candidate", "release"} or (rehearsal and profile != "release"):
         raise ValueError("正式构建/演练必须明确使用 --profile release。")
@@ -211,6 +214,8 @@ def build_project(root: Path = ROOT, *, profile: str, rehearsal: bool = False,
         raise ValueError("正式构建固定写入 dist；自定义输出仅限 candidate / rehearsal。")
     destination = root / "dist" if profile == "release" and not rehearsal else candidate_destination(
         root, output or root / "outputs" / ("release-rehearsal" if rehearsal else "candidate"))
+    if keep_existing and profile == "release" and not rehearsal:
+        raise ValueError("--keep-existing 仅用于候选或演练")
     project = load_project(root)
     validation = _validate_project(project, profile=profile)
     if not validation["valid"]:
@@ -256,11 +261,9 @@ def build_project(root: Path = ROOT, *, profile: str, rehearsal: bool = False,
                 except OSError as error:
                     report["lockCleanupWarning"] = str(error)
         else:
-            if destination.exists():
-                raise ValueError("候选/演练输出目录已存在；请选择新目录，不会清空旧证据。")
-            destination.parent.mkdir(parents=True, exist_ok=True)
-            os.replace(first, destination)
-            (destination / "receipt.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            from .candidate_publication import publish_candidate
+            (first / "receipt.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            report["publication"] = publish_candidate(first, destination, root / "outputs/build-history", keep_existing=keep_existing)
         # Formal dist contains only the two final files; hashes are returned externally.
         return report
 
@@ -311,14 +314,21 @@ def validate_main(argv: list[str] | None = None) -> int:
 
 def build_main(argv: list[str] | None = None) -> int:
     parser = _parser("ipg-build")
+    parser.add_argument("--json", action="store_true", help="输出机器可读结果")
     parser.add_argument("--profile", default="release", choices=("candidate", "release"))
     parser.add_argument("--rehearsal", action="store_true")
+    parser.add_argument("--keep-existing", action="store_true", help="已有候选或演练目录时停止，保留冻结证据")
     parser.add_argument("--output", "--output-dir", dest="output", type=Path)
     args = parser.parse_args(argv)
     try:
         output = args.project_root / args.output if args.output else None
-        report = build_project(args.project_root, profile=args.profile, rehearsal=args.rehearsal, output=output)
-        print(json.dumps(report, ensure_ascii=False, indent=2))
+        report = build_project(args.project_root, profile=args.profile, rehearsal=args.rehearsal, output=output, keep_existing=args.keep_existing)
+        if args.json:
+            print(json.dumps(report, ensure_ascii=False, indent=2))
+        else:
+            print("已生成或验证：" + report["destination"])
+            if report.get("publication", {}).get("archived"):
+                print("旧候选已保留：" + report["publication"]["archived"])
         return 0
     except (ValueError, OSError, KeyError) as error:
         print(f"构建已停止：{error}")
@@ -328,12 +338,13 @@ def build_main(argv: list[str] | None = None) -> int:
 def output_main(argv: list[str] | None = None) -> int:
     parser = _parser("ipg-validate-output")
     parser.add_argument("--input", type=Path)
+    parser.add_argument("--schema-only", action="store_true", help="只检查结构，用于明确核验历史产物")
     args = parser.parse_args(argv)
     try:
-        _, manifest = _current_manifest(args.project_root)
         path = args.project_root / (args.input or Path("dist/rules.json"))
         report = validate_output(path, args.project_root)
-        if report["valid"] and load_json(path)["releaseId"] != manifest["releaseId"]:
+        manifest = _current_manifest(args.project_root)[1] if not args.schema_only else None
+        if report["valid"] and manifest is not None and load_json(path)["releaseId"] != manifest["releaseId"]:
             report["valid"] = False
             report["errors"].append("输出 releaseId 与当前 release 指针不一致。")
         print("输出 schema 验证通过。" if report["valid"] else "输出 schema 验证失败：\n" + "\n".join(report["errors"]))

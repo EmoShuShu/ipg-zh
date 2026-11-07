@@ -456,6 +456,8 @@ def main(argv: list[str] | None = None) -> int:
             raise ValueError("结果文件必须位于项目内")
         report = check_official_update(root, override_path=root / args.overrides if args.overrides else None,
                                       diagnostics_dir=args.diagnostics_dir)
+        from .maintenance_report import official_record
+        report["maintenance"] = official_record("IPG", report["official"]["effectiveDate"], report["official"]["pdfSha256"], report["changed"], report.get("snapshot"))
         result.parent.mkdir(parents=True, exist_ok=True)
         result.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(json.dumps(report, ensure_ascii=False, indent=2))

@@ -62,12 +62,30 @@ def _run(name, description, operation, argv=None):
         parser.add_argument("action", choices=["status"], nargs="?", default="status")
     if name == "ipg-export-omegat":
         parser.add_argument("--new-version", action="store_true", help="确认后完整归档旧版本工程，再创建新工程")
+    parser.add_argument("--json", action="store_true", help="输出机器可读结果")
+    if name == "ipg-audit-terminology":
+        parser.add_argument("--fail-on-errors", action="store_true", help="显式启用严格术语检查")
     parser.add_argument("--project-root", type=Path, default=ROOT)
     args = parser.parse_args(argv)
+    if args.json and getattr(args, "new_version", False):
+        parser.error("--json 仅用于无需交互的准备/继续；接入新版本请使用 --new-version")
     try:
         with project_context(args.project_root):
             result = prepare_new_version() if getattr(args, "new_version", False) else operation()
-            print(json.dumps(result, ensure_ascii=False, indent=2))
+            if args.json:
+                print(json.dumps(result, ensure_ascii=False, indent=2))
+            elif name == "ipg-review-status":
+                from .maintenance_report import print_progress
+                print_progress(result["maintenance"], full_review.PROGRESS_MARKDOWN)
+            elif name == "ipg-audit-terminology":
+                print(f"术语检查完成（仅供参考）：{result.get('findingCount', 0)} 条提示，{result.get('glossaryIssueCount', 0)} 个词汇表问题。")
+                if result.get("error"): print("术语检查未完成：" + result["error"])
+                print(f"详细报告：{full_review.TERMINOLOGY_MARKDOWN}")
+            elif not result.get("cancelled"):
+                print(f"OmegaT 工程已准备或继续：{full_review.PROJECT_DIR}（{result['project']['unitCount']} 个单元）")
+                if result.get("archivedProject"): print("旧工程已保留：" + result["archivedProject"])
+            if getattr(args, "fail_on_errors", False) and (result.get("error") or result.get("glossaryIssueCount", 0)):
+                return 1
             if result.get("cancelled"):
                 return 2
         return 0

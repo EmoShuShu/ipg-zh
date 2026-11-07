@@ -443,3 +443,51 @@ def test_archive_rejects_source_changes_during_confirmation(isolated_repo):
         maintenance.prepare_new_version(confirm)
     assert all(p.read_bytes() == data for p, data in before.items())
     assert not (root / 'outputs/omegat-archive').exists()
+
+
+@pytest.mark.parametrize('stage', ['notes', 'progress', 'interrupt'])
+def test_prepare_failure_restores_all_state_without_touching_user_engineering(isolated_repo, monkeypatch, stage):
+    root, project = isolated_repo
+    full_review.prepare_full_project(); full_review.initialize_full_review_state()
+    ledger = json.loads(full_review.REVIEW_LEDGER_PATH.read_text())
+    ledger['entries'][0].update(status='reviewed-unchanged', reviewedAt='2026-11-07T00:00:00Z', sourceHash='0'*64)
+    full_review.REVIEW_LEDGER_PATH.write_text(json.dumps(ledger))
+    if stage == 'notes': full_review.TRANSLATION_NOTES_PATH.write_text('{}')
+    before = {p: p.read_bytes() for name in ('src','review','outputs') for p in (root / name).rglob('*') if p.is_file()}
+    if stage != 'notes':
+        def fail():
+            full_review.PROGRESS_JSON.parent.mkdir(exist_ok=True)
+            full_review.PROGRESS_JSON.write_text('partial')
+            if stage == 'interrupt': raise KeyboardInterrupt()
+            raise ValueError('progress failed')
+        monkeypatch.setattr(review_assistant, 'refresh_progress_reports', fail)
+    with pytest.raises((ValueError, KeyboardInterrupt)):
+        review_assistant.prepare_or_continue()
+    after = {p: p.read_bytes() for name in ('src','review','outputs') for p in (root / name).rglob('*') if p.is_file()}
+    assert after == before
+
+
+def test_failed_initial_preparation_removes_only_new_engineering(isolated_repo, monkeypatch):
+    root, project = isolated_repo
+    before = {p: p.read_bytes() for p in (root / 'review').rglob('*') if p.is_file()}
+    monkeypatch.setattr(review_assistant, 'refresh_progress_reports', lambda: (_ for _ in ()).throw(KeyboardInterrupt()))
+    with pytest.raises(KeyboardInterrupt): review_assistant.prepare_or_continue()
+    assert not project.exists()
+    assert {p: p.read_bytes() for p in (root / 'review').rglob('*') if p.is_file()} == before
+
+
+def test_current_candidate_refresh_archives_complete_previous_evidence(isolated_repo):
+    root, project = isolated_repo
+    review_assistant.prepare_or_continue()
+    full_review.build_current_candidate()
+    destination = full_review.CURRENT_CANDIDATE
+    before = {p.name: (p.read_bytes(), p.stat().st_mtime_ns) for p in destination.iterdir()}
+    full_review.build_current_candidate()
+    assert {p.name: (p.read_bytes(), p.stat().st_mtime_ns) for p in destination.iterdir()} == before
+    notes = root / 'src/ipg/version-notes.md'
+    notes.write_text(notes.read_text() + '\nSynthetic changed notes\n')
+    full_review.build_current_candidate()
+    archive = next((root / 'outputs/build-history').iterdir())
+    assert {p.name: p.read_bytes() for p in archive.iterdir()} == {k: v[0] for k,v in before.items()}
+    assert 'Synthetic changed notes' in (destination / 'IPG.md').read_text()
+    assert not (root / 'dist').exists()

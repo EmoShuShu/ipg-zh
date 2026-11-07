@@ -16,18 +16,17 @@ from .snapshot import verify_snapshot
 
 def write_report(report: dict, output: Path, run_url: str) -> Path:
     official = report["official"]
+    from .maintenance_report import official_record, official_summary
+    report["maintenance"] = official_record("IPG", official["effectiveDate"], official["pdfSha256"], report["changed"], report.get("snapshot"))
     output.mkdir(parents=True, exist_ok=True)
     (output / "result.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
     body = (
         f"<!-- ipg-official-sha256:{official['pdfSha256']} -->\n"
-        f"## 官方 IPG 检查：{report['status']}\n\n"
-        f"- PDF 有效日期：{official['effectiveDate']}\n"
+        + official_summary(report["maintenance"]) + "\n"
         f"- 官方文件：{official['url']}\n"
-        f"- SHA-256：`{official['pdfSha256']}`\n"
         f"- 当前版本：`{report['baseReleaseId']}`\n"
-        f"- 快照：`{report['snapshot']}`\n"
         f"- 检查运行与证据附件：{run_url}\n\n"
         "证据附件保留 30 天，请及时下载。过期后可手动重新运行检查取得新附件。\n\n"
         "检测到变化时，请下载附件中的审阅报告与候选快照，完成英文差异、中文译文及注解复核。"
@@ -111,6 +110,8 @@ def main() -> int:
     repo = os.environ["GITHUB_REPOSITORY"]
     run_url = f"{os.environ['GITHUB_SERVER_URL']}/{repo}/actions/runs/{os.environ['GITHUB_RUN_ID']}"
     report = check_official_update(ROOT, diagnostics_dir=Path("tmp/official-update-diagnostics"))
+    from .maintenance_report import official_record
+    report["maintenance"] = official_record("IPG", report["official"]["effectiveDate"], report["official"]["pdfSha256"], report["changed"], report.get("snapshot"))
     result = ROOT / "tmp/official-update-result.json"
     result.parent.mkdir(parents=True, exist_ok=True)
     result.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
