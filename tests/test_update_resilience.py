@@ -7,6 +7,11 @@ from ipg_pipeline.snapshot import main as snapshot_main
 from tests.test_official_update import repo, _check, PDF
 
 
+@pytest.fixture(autouse=True)
+def isolated_actions_summary(monkeypatch):
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+
+
 def test_failed_html_is_retained_before_retry(monkeypatch, tmp_path):
     payloads = iter([b"<html>temporarily empty</html>", b"<html>still empty</html>", b"<html>unavailable</html>"])
     monkeypatch.setattr(update, "download", lambda *args: (next(payloads), update.RULES_PAGE, []))
@@ -16,7 +21,7 @@ def test_failed_html_is_retained_before_retry(monkeypatch, tmp_path):
         update._retry_official_request(
             lambda attempt, evidence: update.discover(diagnostics_dir=tmp_path, attempt=attempt),
             stage="rules-page", diagnostics_dir=tmp_path)
-    assert sleeps == [5, 15]
+    assert sleeps == [60, 180]
     assert len(list(tmp_path.glob("*.html"))) == 3
     assert len(list(tmp_path.glob("*.json"))) == 3
     assert all(json.loads(path.read_text())["status"] == "failure" for path in tmp_path.glob("*.json"))

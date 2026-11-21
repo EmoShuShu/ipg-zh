@@ -25,6 +25,7 @@ PDF = b"%PDF-1.7\nTEST ONLY synthetic downloader fixture, parser explicitly inje
 
 @pytest.fixture(autouse=True)
 def no_retry_delays(monkeypatch):
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
     monkeypatch.setattr(update.time, "sleep", lambda seconds: None)
 
 
@@ -582,3 +583,17 @@ def test_page_updated_date_is_not_official_pdf_effective_date(repo):
 def test_effective_date_comes_from_pdf_not_filename_or_webpage():
     from ipg_pipeline.p3 import OFFICIAL_PDF
     assert update.pdf_effective_date(OFFICIAL_PDF.read_bytes()) == "2024-09-23"
+
+
+def test_page_exhaustion_preserves_stores_and_never_downloads_pdf_or_prepares_candidate(repo, monkeypatch):
+    before = _protected(repo)
+    calls = []
+    def missing_page():
+        calls.append(1)
+        return update.parse_rules_page(_nuxt_page('missing')), b'no usable page'
+    monkeypatch.setattr(update, '_prepare', lambda *a, **k: pytest.fail('must not prepare a candidate'))
+    with pytest.raises(ValueError, match='缺少'):
+        update.check_official_update(repo, discover_release=missing_page,
+            downloader=lambda *a: pytest.fail('must not download PDF after page failure'))
+    assert len(calls) == 3 and _protected(repo) == before
+    assert not list((repo/'outputs/official-update').rglob('snapshot.json'))

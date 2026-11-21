@@ -24,7 +24,10 @@ https://github.com/EmoShuShu/ipg-zh/releases/latest/download/rules.json
 在 [官方更新检查记录](https://github.com/EmoShuShu/ipg-zh/actions/workflows/official-update.yml)
 查看当天是否出现绿色成功记录；也可选择 Run workflow 手动检查。
 
-网页读取或识别失败、PDF 下载失败时最多尝试 3 次，间隔为 5 秒和 15 秒。
+网页读取或识别失败、PDF 下载失败时最多尝试 3 次，间隔为 1 分钟和 3 分钟。
+每个获取阶段的重试覆盖约 4 分钟，成功后立即继续。
+最终失败时，Actions 摘要和诊断记录会区分官网服务异常、资料缺失、页面结构/校验异常、下载失败、PDF 校验异常和程序异常。
+无法核实更新时仍明确失败，不会报告“无变化”。
 重试仅限取得官方资料，候选生成不会重复执行；全部失败仍会使任务报错。
 每次取得的网页和错误记录都会留档，成功恢复也保留先前失败证据。
 
